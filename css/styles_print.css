@@ -1,0 +1,427 @@
+/*@page land{
+	size:landscape;
+}
+*/
+/*.land{filter: progid:DXImageTransform.Microsoft.BasicImage(rotat ion=1)}*/
+
+.land{
+	/*writing-mode: tb-rl;*/
+	height: 80%;
+	margin: 10% 0%;
+}
+
+html{
+	margin:0cm;
+	size:landscape;
+}
+
+.pagebreak{
+	page-break-before: always;
+
+	font-size:8pt;
+}
+
+.pagebreak_right{
+	page-break-before: always;
+	float:right;
+	font-size:8pt;
+}
+
+.pagenum_right{
+	float:right;
+	font-size:8pt;
+}
+
+.pagebreak_after{
+	page-break-after: always;
+}
+
+.page_border{
+	display:none;
+}
+
+.show_on_screen{
+	display:none;
+}
+
+.show_on_print{
+	border:1px solid #999999;
+	background-color:white;
+	width:80%;
+}
+
+
+.address_box{
+	font-size:8pt;
+}
+
+.address_box input{
+	border:0 none white;
+	font-size:8pt;
+}
+
+.address_box select{
+	border:0 none white;
+	font-size:8pt;
+}
+
+#tab_parcel {
+	display:none;
+}
+#activetab_parcel {
+	display:none;
+}
+
+
+/*DIV footer*/
+#footer{
+	display:none;
+}
+
+.clock{
+	display:none;
+}
+
+body {
+	font-size:11pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color:#FFFFFF;
+}
+
+/*********************************************************/
+/* STYLES FOR BODY                                       */
+/*********************************************************/
+
+div#content{
+	background-color:#FFFFFF;
+	font-size:11pt;
+}
+
+table.form{
+	display:none;
+}
+
+div#content h1{
+	text-align:center;
+	font-size:14pt;
+}
+
+div#content h2{
+	text-align:center;
+	font-size:14pt;
+}
+
+div#interaction{
+	display:none;
+}
+
+div#interaction{
+	display:none;
+}
+
+div#wrapper{
+	margin:0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+div#submenu{
+	display:none;	
+}
+
+
+
+/*********************************************************/
+/* STYLES FOR HEADER                                     */
+/*********************************************************/
+div#title{
+	display:none;	
+}
+div#logopic{
+	display:none;	
+}
+div#stopblogopic{
+	display:none;	
+}
+
+
+/*********************************************************/
+/* STYLES FOR MENU                                       */
+/*********************************************************/
+#interm{
+	display:none;
+}
+
+#tab {
+	display:none;
+}
+#activetab {
+	display:none;
+}
+#tab2 {
+	display:none;
+}
+#activetab2 {
+	display:none;
+}
+
+/*********************************************************/
+/* STYLES FOR INVOICE  / JOB                             */
+/*********************************************************/
+
+div#job_header{
+	font-weight:bold;
+}
+
+div#edit_job_details{
+	display:none;
+}
+
+div#job_add_route{
+	position:absolute;
+	left:5em;
+	top:43ex;
+	margin-right:3em;
+}
+
+div#job_alter_route{
+	display:none;
+}
+
+div#job_show_table{
+	position:absolute;
+	margin-left:3em;
+	left:26em;
+	top:43ex;
+	width:60em;
+}
+
+div#invoice{
+	margin-left:10em;
+	margin-right:3em;
+	padding-top:3em;
+}
+
+table#invoice{
+	background-color: #DE724E;
+}
+
+table#invoice h1{
+	background-color: #DE724E;
+}
+
+
+table#job{
+	background-color: #DDDDDD;
+}
+
+th#addjob_header{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:1.1em;
+	background-color:#999999;
+}
+
+/*********************************************************/
+/* STYLES FOR JOBLISTS ON index.php                      */
+/*********************************************************/
+
+.joblist_head{
+	background-color: #00CC33;
+	text-align:center;
+	font-size:12pt;
+}
+
+.job_header{
+	font-size:11pt;
+	padding:0 0 0 0;
+}
+
+.job_comments{
+	font-size:8pt;
+}
+
+/*********************************************************/
+/* STYLES FOR LABELS ON index.php                        */
+/*********************************************************/
+
+div#labels{
+}
+
+.a4labels{
+	font-size:11pt;
+	width:290mm;
+	height: 205mm;
+	
+	/*margin-top: 10cm;*/
+}
+
+.a4label_coural_address{
+	font-size:12pt;
+	line-height:13pt;	
+	font-style:italic;
+	text-align:right;
+}
+
+.a4label_title{
+	font-weight:bold;
+	font-size:17pt;	
+	text-align: center;
+	line-height:31pt;	
+}
+
+.a4label_head{
+	font-weight:bold;
+	font-size:26pt;
+	text-align: center;
+	line-height:27pt;	
+}
+
+.a4label_job_info{
+	font-weight:bold;
+	font-size:19pt;
+	line-height:20pt;		
+	text-align: center;
+}
+
+.a4label_job_info_small{
+	font-size:16pt;
+	line-height:17pt;	
+}
+
+.a4label_job_info_qty{
+	font-weight:bold;
+	font-size:17pt;
+	line-height:18pt;		
+	text-align:right;
+}
+
+.a4label_job_pub{
+	font-weight:bold;
+	font-size:11pt;
+	line-height:12pt;		
+	text-align:right;
+	text-decoration:underline;
+}
+
+.labels{
+	background-color:#FFFFFF;
+	font-size:11pt;
+	height:6cm;
+	widows:7cm;
+}
+
+.label_coural_address{
+	font-size:5pt;
+	line-height:7pt;	
+	font-style:italic;
+	text-align:right;
+}
+
+.label_title{
+	font-weight:bold;
+	font-size:14pt;	
+	text-align: center;
+	line-height:14pt;	
+}
+
+.label_head{
+	font-weight:bold;
+	font-size:11pt;
+	text-align: center;
+	line-height:11pt;	
+}
+
+.label_job_info{
+	font-size:7pt;
+	line-height:9pt;		
+	text-align:right;
+}
+
+.label_job_pub{
+	font-size:10pt;
+	line-height:11pt;		
+	text-align:right;
+	text-decoration:underline;
+}
+
+/*********************************************************/
+/* STYLES FOR LABELS IN reports.php                      */
+/*********************************************************/
+
+.weekly_logo{
+	float:right;
+}
+
+.weekly_head{
+	background-color:#FFFFFF; 
+	padding:0.2em 0em 0.2em 0em ;
+	margin:0 0 0 0;
+	font-size:12px;
+}
+
+.weekly_dist_table{	
+}
+
+.weekly_head p{
+	font-size:8pt;
+}
+.weekly_head h2{
+	display:none;
+}
+
+.weekly_head h3{
+	font-size:12px;
+	background-color:#FFFFFF; 
+	text-align:center;
+}
+
+.weekly_head h4{
+	text-align:center;
+	font-size:8pt;
+}
+
+/****************************************************/
+/* Style for extra line manually set in reports.php */
+/****************************************************/
+
+.sql_extra_line_number{
+	font-weight:bold;
+	text-align:right;
+}
+
+.sql_extra_line_text{
+	font-weight:bold;
+	text-align:left;
+}
+
+.sql_extra_line_text12{
+	font-size:12pt;
+	font-weight:bold;
+	text-align:left;
+}
+
+.sql_extra_line_text10{
+	font-size:10pt;
+	font-weight:bold;
+	text-align:left;
+}
+
+
+.edit_job_details_button{
+	display:none;
+}
+
+.sql_select{
+	font-size:12px;
+}
+
+.input_button{
+	display:none;
+}
+
+div#envelope{
+	background-color:#FFFFFF; 
+}
+
+div#env_job_no{
+	display:none;
+}

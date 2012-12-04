@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Coural/!svn/ver/18/includes/phpMailer/examples
+END
+contents.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Coural/!svn/ver/18/includes/phpMailer/examples/contents.html
+END
+test_sendmail.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Coural/!svn/ver/18/includes/phpMailer/examples/test_sendmail.php
+END
+test_mail.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Coural/!svn/ver/18/includes/phpMailer/examples/test_mail.php
+END
+test_smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Coural/!svn/ver/18/includes/phpMailer/examples/test_smtp.php
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Coural/!svn/ver/18/includes/phpMailer/examples/index.html
+END
+pop3_before_smtp_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Coural/!svn/ver/18/includes/phpMailer/examples/pop3_before_smtp_test.php
+END
+test_gmail.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Coural/!svn/ver/18/includes/phpMailer/examples/test_gmail.php
+END

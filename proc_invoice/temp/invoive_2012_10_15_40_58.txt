@@ -1,0 +1,75 @@
+ContactName,InvoiceNo,Reference,InvoiceDate,DueDate,Description,Quantity,UnitAmount,Discount,AccountType,TaxType,TrackingName,TrackingOption1
+PMP Catalogues,C83271,2448050,2012-10-01,2012-10-09,Awareness Planners - Job 73304 - Delivery 09 Oct 2012 - 57 grams.    Includes Linehaul.,0.665,79,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83272,2447365,2012-09-21,2012-10-01,Barfoot West Auckland - Job 73173 - Delivery 01 Oct 2012 - 10 grams.    Includes Linehaul.,4.871,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83273,2448212,2012-10-04,2012-10-09,Big Save  - Job 73344 - Delivery 09 Oct 2012 - 10 grams.    Includes Linehaul.,5.954,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83274,2447720,2012-09-27,2012-10-09,Big Save Hamilton - Job 73267 - Delivery 09 Oct 2012 - 10 grams.    Includes Linehaul.,10.176,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83275,2447719,2012-09-27,2012-10-09,Big Save Whangarei - Job 73260 - Delivery 09 Oct 2012 - 10 grams.    Includes Linehaul.,20.187,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83276,2447806,2012-09-27,2012-10-09,BOP Residents Guide - Job 73272 - Delivery 09 Oct 2012 - 10 grams.    Includes Linehaul.,1.01,52,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83277,2447536,2012-09-25,2012-10-08,Bracken Hall - Job 73217 - Delivery 08 Oct 2012 - 10 grams.    Includes Linehaul.,1.403,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83278,2447972,2012-09-26,2012-10-08,Briscoes - Job 73241 - Delivery 08 Oct 2012 - 25 grams.    Includes Linehaul.,36.501,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83279,2447595,2012-09-26,2012-10-08,Carpet One October - Job 73231 - Delivery 08 Oct 2012 - 10 grams.    Includes Linehaul.,45.765,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83280,2448207,2012-10-02,2012-10-10,CDM City and Districts Mowing - Job 73321 - Delivery 10 Oct 2012 - 10 grams.    ,5.479,52,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83281,2448056,2012-10-02,2012-10-09,Comtool Hastings - Job 73322 - Delivery 09 Oct 2012 - 10 grams.    Includes Linehaul.,4.072,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83282,2447820,2012-09-28,2012-10-09,Comtool Napier October - Job 73276 - Delivery 09 Oct 2012 - 10 grams.    Includes Linehaul.,2.379,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83283,2448006,2012-10-01,2012-10-09,Comtool Tauranga - Job 73299 - Delivery 09 Oct 2012 - 25 grams.    Includes Linehaul.,5.479,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83284,2447681,2012-09-27,2012-10-09,Curtain Studio - Job 73256 - Delivery 09 Oct 2012 - 10 grams.    Includes Linehaul.,20.399,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83285,2007646,2012-09-27,2012-10-08,DTR Wanganui - Job 73271 - Delivery 08 Oct 2012 - 10 grams.    Includes Linehaul.,0.145,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83286,2447919,2012-10-01,2012-10-09,Electronics Plus Te Puke Jaycar - Job 73293 - Delivery 09 Oct 2012 - 16 grams.    Includes Linehaul.,2.64,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83287,2448211,2012-10-04,2012-10-09,Flooring Xtra - Job 73341 - Delivery 09 Oct 2012 - 10 grams.    Includes Linehaul.,2.42,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83288,2447952,2012-10-01,2012-10-09,Folders Electronics Jaycar Mailer - Job 73295 - Delivery 09 Oct 2012 - 16 grams.    Includes Linehaul.,2.94,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83289,2447968,2012-09-27,2012-10-13,Four Square Northern - Job 73249 - Delivery 13 Oct 2012 - 20 grams.    Includes Linehaul.,55.156,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83290,2448002,2012-09-27,2012-10-13,Four Square Southern - Job 73262 - Delivery 13 Oct 2012 - 25 grams.    Includes Linehaul.,41.942,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83291,2447825,2012-09-28,2012-10-08,Germinal Seeds Edgecumbe/Tokoroa - Job 73277 - Delivery 08 Oct 2012 - 10 grams.    Includes Linehaul.,2.632,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83292,2448038,2012-10-01,2012-10-09,Heathcote Appliances - Job 73301 - Delivery IOA - 20 grams.    Includes Linehaul.,15.132,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83293,2447920,2012-10-01,2012-10-09,Hunters Furniture October - Job 73296 - Delivery IOA - 10 grams.    Includes Linehaul.,11.87,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83294,2448127,2012-10-04,2012-10-09,Insight Traders Gisborne - Job 73340 - Delivery 09 Oct 2012 - 10 grams.    Includes Linehaul.,2.207,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83295,2447544,2012-09-25,2012-10-06,New World Northern - Job 73216 - Delivery 06 Oct 2012 - 25 grams.    Includes Linehaul.,81.309,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83296,2447578,2012-09-25,2012-10-13,New World Northern - Job 73220 - Delivery 13 Oct 2012 - 25 grams.    Includes Linehaul.,81.309,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83297,2447604,2012-09-25,2012-10-06,New World Southern - Job 73223 - Delivery 06 Oct 2012 - 20 grams.    Includes Linehaul.,56.968,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83298,2448008,2012-10-05,2012-10-13,New World Southern - Job 73356 - Delivery 13 Oct 2012 - 20 grams.    Includes Linehaul.,56.968,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83299,2444308,2012-10-04,2012-10-09,Noel Leeming - Job 73339 - Delivery 09 Oct 2012 - 25 grams.    Includes Linehaul.,97.133,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83300,2447514,2012-09-25,2012-10-08,Rural Direct - Job 73203 - Delivery 08 Oct 2012 - 20 grams.    Includes Linehaul.,46.335,5.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83301,2447435,2012-09-24,2012-10-08,Specsavers Whakatane Soft Comparison - Job 73184 - Delivery 08 Oct 2012 - 10 grams.    Includes Linehaul.,4.46,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83302,2447897,2012-09-28,2012-10-08,Trico Electronics Jaycar Mailer - Job 73286 - Delivery 08 Oct 2012 - 10 grams.    Includes Linehaul.,3.015,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83303,2448007,2012-10-01,2012-10-13,Tyrepower - Job 73294 - Delivery 13 Oct 2012 - 25 grams.    Includes Linehaul.,10.252,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83304,2447840,2012-09-04,2012-10-09,Versatile Tauranga - Job 72942 - Delivery 09 Oct 2012 - 10 grams.    Includes Linehaul.,10.748,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83305,2447729,2012-09-27,2012-10-09,West Auckland Trust Services - Job 73270 - Delivery 09 Oct 2012 - 10 grams.    Includes Linehaul.,4.107,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83306,2447635,2012-09-28,2012-10-08,Westfield Albany The Hobbit - Job 73281 - Delivery 08 Oct 2012 - 10 grams.    Includes Linehaul.,9.102,55.6,1,100,15% GST on income,Division,Circulars
+
+PMP Catalogues,C83307,2447850,2012-09-28,2012-10-08,WestField Manukau The Hobbit - Job 73282 - Delivery 08 Oct 2012 - 10 grams.    Includes Linehaul.,8.944,55.6,1,100,15% GST on income,Division,Circulars
+

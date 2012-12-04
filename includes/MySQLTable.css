@@ -1,0 +1,62 @@
+th.sqltabhead{
+	text-align:center;
+	background-color:#999999;
+}
+
+th.side_header{
+	background-color:#DDDDDD;
+}
+
+
+
+.sqltable{
+	width:100%;
+}
+
+.sqllist{
+	
+}
+
+.sqllistelementcaption{
+	font-weight:bold;
+	font-size:1.3em;
+	text-align:center;
+	padding-bottom:1em;
+}
+
+.sqlbutton{
+	width:6em;
+}
+
+.sqlsumline{
+	font-weight:bold;
+	text-align:right;
+}
+
+.sqltabhead{
+	text-align:left;
+}
+.sqldevider{
+	color:#FF0000;
+/*	background-color:#FF0000;*/
+	height:1px;	
+}
+
+.sqltabevenline{
+	background-color:#FFFFFF;
+}
+
+.sqltabunevenline{
+	background-color:#DDDDDD;
+}
+
+.sqltabevenaddline{
+	background-color:#FFFFFF;
+	font-weight:bold;
+}
+
+.sqltabunevenaddline{
+	background-color:#DDDDDD;
+	font-weight:bold;	
+}
+	

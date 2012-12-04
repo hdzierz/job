@@ -1,0 +1,82 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Total_GST_Inc	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C82989	16/09/2012	2115202	I	CI/1	1438.000	AA Palmerston North - Job 72755 - Delivery 10 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	79.95	91.94	AA Palmerston North	S	11.99	I	PMP Distribution Lim
+
+C82990	16/09/2012	2445468	I	CI/1	6746.000	Big Save Gisborne and Rotorua - Job 72806 - Delivery 11 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	375.08	431.34	Big Save Gisborne and Rotorua	S	56.26	I	PMP Distribution Lim
+
+C82991	16/09/2012	2445379	I	CI/1	23669.000	Big Save Whangarei - Job 72814 - Delivery 11 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	1316.00	1513.40	Big Save Whangarei	S	197.40	I	PMP Distribution Lim
+
+C82992	16/09/2012	2445775	I	CI/1	2434.000	Bream A2 Wall Planner - Job 72876 - Delivery 10 Sep 2012 - 39 grams.   Includes Linehaul.	0.0000	0.0000	0.00	0.00	Bream A2 Wall Planner	S	0.00	I	PMP Distribution Lim
+
+C82993	16/09/2012	2444803	I	CI/1	41925.000	Briscoes - Job 72696 - Delivery 10 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	2331.03	2680.68	Briscoes	S	349.65	I	PMP Distribution Lim
+
+C82994	16/09/2012	2445147	I	CI/1	141633.000	Carpet One September - Job 72802 - Delivery 10 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	7874.79	9056.01	Carpet One September	S	1181.22	I	PMP Distribution Lim
+
+C82995	16/09/2012	2445124	I	CI/1	25078.000	Curtain Studio - Job 72716 - Delivery 11 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	1394.34	1603.49	Curtain Studio	S	209.15	I	PMP Distribution Lim
+
+C82996	16/09/2012	2446090	I	CI/1	144.000	DOC Newsletter - Job 72943 - Delivery 12 Sep 2012 - 25 grams.   	0.0000	0.0000	0.00	0.00	DOC Newsletter	S	0.00	I	PMP Distribution Lim
+
+C82997	16/09/2012	2443892	I	CI/1	55687.000	Four Square Northern - Job 72636 - Delivery 08 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	3096.20	3560.63	Four Square Northern	S	464.43	I	PMP Distribution Lim
+
+C82998	16/09/2012	2443894	I	CI/1	55687.000	Four Square Northern - Job 72955 - Delivery 15 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	3096.20	3560.63	Four Square Northern	S	464.43	I	PMP Distribution Lim
+
+C82999	16/09/2012	2444925	I	CI/1	47347.000	Four Square Southern - Job 72781 - Delivery 08 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	2632.49	3027.36	Four Square Southern	S	394.87	I	PMP Distribution Lim
+
+C83000	16/09/2012	2444926	I	CI/1	47347.000	Four Square Southern - Job 72782 - Delivery 15 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	2632.49	3027.36	Four Square Southern	S	394.87	I	PMP Distribution Lim
+
+C83001	16/09/2012	2446014	I	CI/1	10704.000	Freeview Sept 2012 - Job 72934 - Delivery 10 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	595.14	684.41	Freeview Sept 2012	S	89.27	I	PMP Distribution Lim
+
+C83002	16/09/2012	2445177	I	CI/1	18485.000	Heathcote Appliances - Job 72758 - Delivery 11 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	1027.77	1181.94	Heathcote Appliances	S	154.17	I	PMP Distribution Lim
+
+C83003	16/09/2012	2445175	I	CI/1	13610.000	Hunters Furniture Sept 2012 - Job 72852 - Delivery 11 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	756.72	870.23	Hunters Furniture Sept 2012	S	113.51	I	PMP Distribution Lim
+
+C83004	16/09/2012	2446258	I	CI/1	4575.000	Insight Traders Whakatane Sept 2012 - Job 73039 - Delivery 11 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	254.37	292.53	Insight Traders Whakatane Sept 2012	S	38.16	I	PMP Distribution Lim
+
+C83005	16/09/2012	2445777	I	CI/1	483.000	KFC Te Awamutu - Job 72862 - Delivery 05 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	26.85	30.88	KFC Te Awamutu	S	4.03	I	PMP Distribution Lim
+
+C83006	16/09/2012	24452352	I	CI/1	262.000	Lewis Home Fabrics Art and Soul - Job 72768 - Delivery 14 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	14.57	16.76	Lewis Home Fabrics Art and Soul	S	2.19	I	PMP Distribution Lim
+
+C83007	16/09/2012	2445347	I	CI/1	4993.000	Lewis Home Fabrics Bexley and Architella - Job 72767 - Delivery IOA - 20 grams.   Includes Linehaul.	0.0556	0.0639	277.61	319.25	Lewis Home Fabrics Bexley and Architella	S	41.64	I	PMP Distribution Lim
+
+C83008	16/09/2012	2444632	I	CI/1	6170.000	Millers Sale Product Mailer Sept 2012 - Job 72667 - Delivery 10 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	343.05	394.51	Millers Sale Product Mailer Sept 2012	S	51.46	I	PMP Distribution Lim
+
+C83009	16/09/2012	2444949	I	CI/1	94773.000	New World Northern - Job 72634 - Delivery 08 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	5269.38	6059.79	New World Northern	S	790.41	I	PMP Distribution Lim
+
+C83010	16/09/2012	2444950	I	CI/1	94773.000	New World Northern - Job 72778 - Delivery 15 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	5269.38	6059.79	New World Northern	S	790.41	I	PMP Distribution Lim
+
+C83011	16/09/2012	2444929	I	CI/1	64806.000	New World Southern - Job 72783 - Delivery 08 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	3603.21	4143.69	New World Southern	S	540.48	I	PMP Distribution Lim
+C83011	16/09/2012	2444929	I	CI/2	64806.000	New World Southern - Job 72784 - Delivery 15 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	3603.21	4143.69	New World Southern	S	540.48	I	PMP Distribution Lim
+
+C83012	16/09/2012	2443508	I	CI/1	111902.000	Noel Leeming - Job 72855 - Delivery 11 Sep 2012 - 30 grams.   	0.0000	0.0000	0.00	0.00	Noel Leeming	S	0.00	I	PMP Distribution Lim
+
+C83013	16/09/2012	2444603	I	CI/1	12037.000	North West Valley Voice - Job 72663 - Delivery 10 Sep 2012 - 62 grams.   Includes Linehaul.	0.0790	0.0909	950.92	1093.56	North West Valley Voice	S	142.64	I	PMP Distribution Lim
+
+C83014	16/09/2012	2445298	I	CI/1	26271.000	Numat  - Job 72744 - Delivery 10 Sep 2012 - 19 grams.   	0.0556	0.0639	1460.67	1679.77	Numat 	S	219.10	I	PMP Distribution Lim
+
+C83015	16/09/2012	2446103	I	CI/1	2868.000	Plunket Electrical Flyer - Job 73031 - Delivery 13 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	159.46	183.38	Plunket Electrical Flyer	S	23.92	I	PMP Distribution Lim
+
+C83016	16/09/2012	2445481	I	CI/1	125.000	Postie Plus Kilbernie - Job 72807 - Delivery 11 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	6.95	7.99	Postie Plus Kilbernie	S	1.04	I	PMP Distribution Lim
+
+C83017	16/09/2012	2445655	I	CI/1	5356.000	Pukekohe Civil Defence - Job 72849 - Delivery 10 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	297.79	342.46	Pukekohe Civil Defence	S	44.67	I	PMP Distribution Lim
+
+C83018	16/09/2012	2443943	I	CI/1	5860.000	Raeward Nelson Sept Flyer - Job 72624 - Delivery 10 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	325.82	374.69	Raeward Nelson Sept Flyer	S	48.87	I	PMP Distribution Lim
+
+C83019	16/09/2012	2445208	I	CI/1	5373.000	Spec Savers Whakatane Hot Offer - Job 72754 - Delivery 11 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	298.74	343.55	Spec Savers Whakatane Hot Offer	S	44.81	I	PMP Distribution Lim
+
+C83020	16/09/2012	2445207	I	CI/1	3174.000	Specsavers Gisborne Free Sight Test - Job 72753 - Delivery 11 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	176.47	202.94	Specsavers Gisborne Free Sight Test	S	26.47	I	PMP Distribution Lim
+
+C83021	16/09/2012	2445607	I	CI/1	2053.000	Target 4pg Mailer Sept 2012 - Job 72818 - Delivery 11 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	114.15	131.27	Target 4pg Mailer Sept 2012	S	17.12	I	PMP Distribution Lim
+
+C83022	16/09/2012	2445605	I	CI/1	33.000	Target Furniture Christchurch - Job 72817 - Delivery 11 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	1.83	2.10	Target Furniture Christchurch	S	0.27	I	PMP Distribution Lim
+
+C83023	16/09/2012	2445408	I	CI/1	6071.000	Tyrepower - Job 72930 - Delivery 11 Sep 2012 - 25 grams.   	0.0000	0.0000	0.00	0.00	Tyrepower	S	0.00	I	PMP Distribution Lim
+
+C83024	16/09/2012	2444868	I	CI/1	4336.000	Ven Lu Ree Rotorua - Job 72772 - Delivery 11 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	241.08	277.24	Ven Lu Ree Rotorua	S	36.16	I	PMP Distribution Lim
+
+C83025	16/09/2012	2444869	I	CI/1	1662.000	Ven Lu Ree Taupo - Job 72773 - Delivery 11 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	92.41	106.27	Ven Lu Ree Taupo	S	13.86	I	PMP Distribution Lim
+
+C83026	16/09/2012	2444864	I	CI/1	589.000	Ven Lu Ree Wellington - Job 72734 - Delivery 11 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	32.75	37.66	Ven Lu Ree Wellington	S	4.91	I	PMP Distribution Lim
+
+C83027	16/09/2012	2445574	I	CI/1	2738.000	Waitomo A-Z Business Directory - Job 72811 - Delivery 10 Sep 2012 - 115 grams.   Includes Linehaul.	0.0000	0.0000	0.00	0.00	Waitomo A-Z Business Directory	S	0.00	I	PMP Distribution Lim
+
+C83028	16/09/2012	2444915	I	CI/1	4882.000	West Auckland Trust Services - Job 72787 - Delivery 11 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	271.44	312.16	West Auckland Trust Services	S	40.72	I	PMP Distribution Lim
+

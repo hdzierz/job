@@ -1,0 +1,5 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Total_GST_Inc	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C81801	31/01/2012		I	CI/1	1925.000	Cambridge Property Guide - Job 70592 - Delivery 11 Jan 2012 - 75 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	184.03	211.63	Cambridge Property Guide	S	27.60	I	106
+C81801	31/01/2012		I	CI/2	1925.000	Cambridge Property Guide - Job 70593 - Delivery 18 Jan 2012 - 75 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	184.03	211.63	Cambridge Property Guide	S	27.60	I	106
+C81801	31/01/2012		I	CI/3	1925.000	Cambridge Property Guide - Job 70594 - Delivery 25 Jan 2012 - 75 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	184.03	211.63	Cambridge Property Guide	S	27.60	I	106
+

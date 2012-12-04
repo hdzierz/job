@@ -1,0 +1,46 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Total_GST_Inc	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C83247	07/10/2012	2447491	I	CI/1	9704.000	AA Service - Job 73194 - Delivery 02 Oct 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	539.54	620.47	AA Service	S	80.93	I	PMP Distribution Lim
+
+C83248	07/10/2012	2447503	I	CI/1	11292.000	Animal Health Board Mailer - Job 73193 - Delivery 04 Oct 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	627.84	722.02	Animal Health Board Mailer	S	94.18	I	PMP Distribution Lim
+
+C83249	07/10/2012	2447725	I	CI/1	10003.000	ATS In Season Catalogue - Job 73268 - Delivery 04 Oct 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	556.17	639.60	ATS In Season Catalogue	S	83.43	I	PMP Distribution Lim
+
+C83250	07/10/2012	2447499	I	CI/1	5670.000	Bond and Bond - Job 73196 - Delivery 02 Oct 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	315.25	362.54	Bond and Bond	S	47.29	I	PMP Distribution Lim
+
+C83251	07/10/2012	2445204	I	CI/1	41925.000	Briscoes - Job 72756 - Delivery 01 Oct 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	2331.03	2680.68	Briscoes	S	349.65	I	PMP Distribution Lim
+
+C83252	07/10/2012	2447554	I	CI/1	1000.000	Caci Clinic Pukekohe - Job 73219 - Delivery 01 Oct 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	55.60	63.94	Caci Clinic Pukekohe	S	8.34	I	PMP Distribution Lim
+
+C83253	07/10/2012	2447487	I	CI/1	11926.000	Curtain Studio 2pp - Job 73192 - Delivery 02 Oct 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	663.09	762.55	Curtain Studio 2pp	S	99.46	I	PMP Distribution Lim
+
+C83254	07/10/2012	2447346	I	CI/1	2215.000	eLocal - Job 73167 - Delivery 01 Oct 2012 - 130 grams.   Includes Linehaul.	0.0919	0.1057	203.56	234.09	eLocal	S	30.53	I	PMP Distribution Lim
+C83254	07/10/2012	2447346	I	CI/2	4115.000	eLocal - Job 73168 - Delivery 01 Oct 2012 - 130 grams.   Includes Linehaul.	0.0919	0.1057	378.17	434.90	eLocal	S	56.73	I	PMP Distribution Lim
+
+C83255	07/10/2012	2447606	I	CI/1	55156.000	Four Square Northern - Job 73248 - Delivery 06 Oct 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	3066.67	3526.67	Four Square Northern	S	460.00	I	PMP Distribution Lim
+
+C83256	07/10/2012	2447610	I	CI/1	41942.000	Four Square Southern - Job 73261 - Delivery 06 Oct 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	2331.98	2681.78	Four Square Southern	S	349.80	I	PMP Distribution Lim
+
+C83257	07/10/2012	2447760	I	CI/1	3658.000	Insight Traders Wanganui - Job 73269 - Delivery 02 Oct 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	203.38	233.89	Insight Traders Wanganui	S	30.51	I	PMP Distribution Lim
+
+C83258	07/10/2012	2447468	I	CI/1	2335.000	JB Hi Fi October 2012 - Job 73189 - Delivery 02 Oct 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	129.83	149.30	JB Hi Fi October 2012	S	19.47	I	PMP Distribution Lim
+
+C83259	07/10/2012	2445620	I	CI/1	4107.000	Kings Plant Barn - Job 72846 - Delivery 02 Oct 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	228.35	262.60	Kings Plant Barn	S	34.25	I	PMP Distribution Lim
+
+C83260	07/10/2012	2447553	I	CI/1	4169.000	Lewis Home Fabrics Architella  - Job 73218 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0556	0.0639	231.80	266.57	Lewis Home Fabrics Architella 	S	34.77	I	PMP Distribution Lim
+
+C83261	07/10/2012	2447510	I	CI/1	5105.000	Noel Leeming Whangarei Mighty Sale - Job 73201 - Delivery 02 Oct 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	283.84	326.42	Noel Leeming Whangarei Mighty Sale	S	42.58	I	PMP Distribution Lim
+
+C83262	07/10/2012	2447479	I	CI/1	110696.000	Postie Plus - Job 72944 - Delivery 02 Oct 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	6154.70	7077.91	Postie Plus	S	923.21	I	PMP Distribution Lim
+
+C83263	07/10/2012	2447467	I	CI/1	107727.000	Rebel Sports - Job 73186 - Delivery 01 Oct 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	5989.62	6888.06	Rebel Sports	S	898.44	I	PMP Distribution Lim
+
+C83264	07/10/2012	2447508	I	CI/1	183171.000	Repco October Catalogue - Job 73195 - Delivery 03 Oct 2012 - 38 grams.   Includes Linehaul.	0.0597	0.0687	10935.31	12575.61	Repco October Catalogue	S	1640.30	I	PMP Distribution Lim
+
+C83265	07/10/2012	2447257	I	CI/1	3525.000	Rotorua Dining Guide - Job 73163 - Delivery 03 Oct 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	195.99	225.39	Rotorua Dining Guide	S	29.40	I	PMP Distribution Lim
+
+C83266	07/10/2012	2445206	I	CI/1	3174.000	Specsavers Gisborne Free Sight Test - Job 72752 - Delivery 01 Oct 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	176.47	202.94	Specsavers Gisborne Free Sight Test	S	26.47	I	PMP Distribution Lim
+
+C83267	07/10/2012	2447377	I	CI/1	4569.000	Specsavers Whangaporoa - Job 73179 - Delivery 01 Oct 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	254.04	292.15	Specsavers Whangaporoa	S	38.11	I	PMP Distribution Lim
+
+C83268	07/10/2012	2447521	I	CI/1	3895.000	Uncle Bills Wholesale Club Masterton - Job 73183 - Delivery 02 Oct 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	216.56	249.04	Uncle Bills Wholesale Club Masterton	S	32.48	I	PMP Distribution Lim
+

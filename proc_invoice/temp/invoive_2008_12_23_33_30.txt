@@ -1,0 +1,6 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Total	Inc-GST Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C10862	30/11/2008		I	CI/1	7752.000	Property Xpress - Kaitaia - Job 8481 - Delivery 04 Nov 2008 - 84 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	741.091	Property Xpress - Kaitaia	S	92.64	I	246
+C10862	30/11/2008		I	CI/2	7752.000	Property Xpress - Kaitaia - Job 8482 - Delivery 11 Nov 2008 - 84 grams. Includes folding fee 0.0100 cents. 	0.1063	0.1196	824.038	Property Xpress - Kaitaia	S	103.01	I	246
+C10862	30/11/2008		I	CI/3	7752.000	Property Xpress - Kaitaia - Job 8483 - Delivery 18 Nov 2008 - 84 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	741.091	Property Xpress - Kaitaia	S	92.64	I	246
+C10862	30/11/2008		I	CI/4	7752.000	Property Xpress - Kaitaia - Job 8484 - Delivery 25 Nov 2008 - 84 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	741.091	Property Xpress - Kaitaia	S	92.64	I	246
+

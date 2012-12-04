@@ -1,0 +1,481 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Total	Inc-GST Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C10691	30/11/2008		I	CI/1	2991.000	Cambridge Property Guide - Job 8521 - Delivery 05 Nov 2008 - 80 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C10691	30/11/2008		I	CI/2	2991.000	Cambridge Property Guide - Job 8522 - Delivery 12 Nov 2008 - 80 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C10691	30/11/2008		I	CI/3	2991.000	Cambridge Property Guide - Job 8523 - Delivery 19 Nov 2008 - 80 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C10691	30/11/2008		I	CI/4	2991.000	Cambridge Property Guide - Job 8524 - Delivery 26 Nov 2008 - 80 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+
+C10692	30/11/2008		I	CI/1	2000.000	Eastside Community News - Job 8219 - Delivery 27 Nov 2008 - 50 grams.  	0.0749	0.0843	149.800	Eastside Community News	S	18.72	I	106
+
+C10693	30/11/2008	Gay Hubbard	I	CI/1	6000.000	Hamilton This Week - Job 8529 - Delivery 06 Nov 2008 - 65 grams. Includes folding fee 0.0100 cents. 	0.0858	0.0965	514.800	Hamilton This Week	S	64.35	I	106
+C10693	30/11/2008	Gay Hubbard	I	CI/2	6000.000	Hamilton This Week - Job 8530 - Delivery 13 Nov 2008 - 120 grams. Includes folding fee 0.0100 cents. 	0.0959	0.1079	575.400	Hamilton This Week	S	71.93	I	106
+C10693	30/11/2008	Gay Hubbard	I	CI/3	6000.000	Hamilton This Week - Job 8531 - Delivery 20 Nov 2008 - 65 grams. Includes folding fee 0.0100 cents. 	0.0858	0.0965	514.800	Hamilton This Week	S	64.35	I	106
+C10693	30/11/2008	Gay Hubbard	I	CI/4	6000.000	Hamilton This Week - Job 8532 - Delivery 27 Nov 2008 - 55 grams. Includes folding fee 0.0100 cents. 	0.0858	0.0965	514.800	Hamilton This Week	S	64.35	I	106
+
+C10694	30/11/2008	10423	I	CI/1	1722.000	Rural Advocate - Job 8706 - Delivery 21 Nov 2008 - 175 grams. Includes folding fee 0.0100 cents. 	0.1170	0.1316	201.474	Rural Advocate	S	25.18	I	106
+
+C10695	30/11/2008		I	CI/1	3505.000	Te Puke Times - Job 8525 - Delivery 05 Nov 2008 - 90 grams.  	0.0856	0.0963	300.028	Te Puke Times	S	37.50	I	106
+C10695	30/11/2008		I	CI/2	3505.000	Te Puke Times - Job 8526 - Delivery 12 Nov 2008 - 85 grams.  	0.0856	0.0963	300.028	Te Puke Times	S	37.50	I	106
+C10695	30/11/2008		I	CI/3	3505.000	Te Puke Times - Job 8527 - Delivery 19 Nov 2008 - 90 grams.  	0.0856	0.0963	300.028	Te Puke Times	S	37.50	I	106
+C10695	30/11/2008		I	CI/4	3505.000	Te Puke Times - Job 8528 - Delivery 26 Nov 2008 - 90 grams.  	0.0856	0.0963	300.028	Te Puke Times	S	37.50	I	106
+
+C10696	30/11/2008		I	CI/1	2975.000	FLM Matamata-Piako Maps - Job 8034 - Delivery IOA - 100 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	284.410	FLM Matamata-Piako Maps	S	35.55	I	107
+C10696	30/11/2008		I	CI/2	2827.000	Rangiora Reply Paid Cards - Job 8673 - Delivery 11 Nov 2008 - 10 grams.  	0.0749	0.0843	211.742	Rangiora Reply Paid Cards	S	26.47	I	107
+C10696	30/11/2008		I	CI/3	1908.000	Wairarapa Maps - Job 7784 - Delivery IOA - 100 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	182.405	Wairarapa Maps	S	22.80	I	107
+
+C10697	30/11/2008		I	CI/1	16235.000	Bayleys Quarterly LNI - Job 8421 - Delivery IOA - 133 grams.  	0.1605	0.1806	2605.718	Bayleys Quarterly LNI	S	325.72	I	111
+
+C10698	30/11/2008		I	CI/1	1936.000	Field day flyer - Job 8679 - Delivery IOA - 25 grams.  	0.0883	0.0993	170.949	Field day flyer	S	21.37	I	113
+
+C10699	30/11/2008		I	CI/1	41481.000	Rural Living - Job 8701 - Delivery 12 Nov 2008 - 125 grams.  	0.1605	0.1806	6657.701	Rural Living	S	832.21	I	256
+
+C10700	30/11/2008		I	CI/1	25020.000	C-Dax Mid November Dairy Flyer - Job 8496 - Delivery IOA - 10 grams.  	0.0642	0.0722	1606.284	C-Dax Mid November Dairy Flyer	S	200.79	I	116
+C10700	30/11/2008		I	CI/2	79883.000	C-Dax November Flyer - Job 8414 - Delivery IOA - 10 grams.  	0.0642	0.0722	5128.489	C-Dax November Flyer	S	641.06	I	116
+
+C10701	30/11/2008		I	CI/1	762.000	Central Excavations Nov FLyer - Job 8618 - Delivery IOA - 10 grams.  	0.1053	0.1185	80.239	Central Excavations Nov FLyer	S	10.03	I	118
+C10701	30/11/2008		I	CI/2	1043.000	Dairy Farmer Flyer - Job 8731 - Delivery IOA - 10 grams.  	0.0769	0.0865	80.207	Dairy Farmer Flyer	S	10.03	I	118
+
+C10702	30/11/2008		I	CI/1	3110.000	Andrew Shearer - Job 8627 - Delivery IOA - 25 grams.  	0.0910	0.1024	283.010	Andrew Shearer	S	35.38	I	250
+C10702	30/11/2008		I	CI/2	2282.000	Cameron  Miller - Job 8674 - Delivery IOA - 25 grams.  	0.0910	0.1024	207.662	Cameron  Miller	S	25.96	I	250
+C10702	30/11/2008		I	CI/3	3826.000	Chris McKay - Job 8644 - Delivery IOA - 25 grams.  	0.0910	0.1024	348.166	Chris McKay	S	43.52	I	250
+C10702	30/11/2008		I	CI/4	2100.000	Garth Mitchell - Job 8633 - Delivery IOA - 25 grams.  	0.0910	0.1024	191.100	Garth Mitchell	S	23.89	I	250
+C10702	30/11/2008		I	CI/5	2282.000	Geoff Wright  - Job 8621 - Delivery IOA - 25 grams.  	0.0910	0.1024	207.662	Geoff Wright 	S	25.96	I	250
+C10702	30/11/2008		I	CI/6	4241.000	Ian Vessey - Job 8620 - Delivery IOA - 25 grams.  	0.0910	0.1024	385.931	Ian Vessey	S	48.24	I	250
+C10702	30/11/2008		I	CI/7	1942.000	James Westgarth - Job 8632 - Delivery IOA - 25 grams.  	0.0910	0.1024	176.722	James Westgarth	S	22.09	I	250
+C10702	30/11/2008		I	CI/8	2431.000	John Costello - Job 8630 - Delivery IOA - 25 grams.  	0.0910	0.1024	221.221	John Costello	S	27.65	I	250
+C10702	30/11/2008		I	CI/9	1364.000	John Hopkins - Job 8624 - Delivery IOA - 25 grams.  	0.0910	0.1024	124.124	John Hopkins	S	15.52	I	250
+C10702	30/11/2008		I	CI/10	3787.000	Ken Chamberlain - Job 8631 - Delivery IOA - 25 grams.  	0.0910	0.1024	344.617	Ken Chamberlain	S	43.08	I	250
+C10702	30/11/2008		I	CI/11	1351.000	Kevin Croad - Job 8626 - Delivery IOA - 25 grams.  	0.0910	0.1024	122.941	Kevin Croad	S	15.37	I	250
+C10702	30/11/2008		I	CI/12	610.000	Maclane Dixon - Job 8628 - Delivery IOA - 25 grams.  	0.0910	0.1024	55.510	Maclane Dixon	S	6.94	I	250
+C10702	30/11/2008		I	CI/13	1774.000	Munro Tait - Job 8623 - Delivery IOA - 25 grams.  	0.0910	0.1024	161.434	Munro Tait	S	20.18	I	250
+C10702	30/11/2008		I	CI/14	1783.000	Murray Walker - Job 8622 - Delivery IOA - 25 grams.  	0.0910	0.1024	162.253	Murray Walker	S	20.28	I	250
+C10702	30/11/2008		I	CI/15	3965.000	Paul Bowley - Job 8641 - Delivery IOA - 25 grams.  	0.0910	0.1024	360.815	Paul Bowley	S	45.10	I	250
+C10702	30/11/2008		I	CI/16	5507.000	Peter May - Job 8629 - Delivery IOA - 25 grams.  	0.0910	0.1024	501.137	Peter May	S	62.64	I	250
+C10702	30/11/2008		I	CI/17	5284.000	Richard Pratt - Job 8643 - Delivery IOA - 25 grams.  	0.0910	0.1024	480.844	Richard Pratt	S	60.11	I	250
+C10702	30/11/2008		I	CI/18	1549.000	Steve Cormack - Job 8625 - Delivery IOA - 25 grams.  	0.0910	0.1024	140.959	Steve Cormack	S	17.62	I	250
+C10702	30/11/2008		I	CI/19	2269.000	Tim Rutherford - Job 8619 - Delivery IOA - 25 grams.  	0.0910	0.1024	206.479	Tim Rutherford	S	25.81	I	250
+C10702	30/11/2008		I	CI/20	2097.000	Warren Day - Job 8642 - Delivery IOA - 25 grams.  	0.0910	0.1024	190.827	Warren Day	S	23.85	I	250
+C10702	30/11/2008		I	CI/21	8570.000	Warwick Street - Job 8640 - Delivery IOA - 25 grams.  	0.0910	0.1024	779.870	Warwick Street	S	97.48	I	250
+
+C10703	30/11/2008	RL10508_Mates	I	CI/1	2754.000	Mates Rates CW - Job 8681 - Delivery 17 Nov 2008 - 20 grams.  	0.0850	0.0956	234.090	Mates Rates CW	S	29.26	I	124
+
+C10704	30/11/2008		I	CI/1	81307.000	NZ Farmers Weekly  - Job 8473 - Delivery 03 Nov 2008 - 140 grams. Includes folding fee 0.0100 cents. 	0.1570	0.1766	12765.199	NZ Farmers Weekly 	S	1595.65	I	124
+C10704	30/11/2008		I	CI/2	87484.000	NZ Farmers Weekly  - Job 8474 - Delivery 10 Nov 2008 - 140 grams. Includes folding fee 0.0100 cents. 	0.1570	0.1766	13734.988	NZ Farmers Weekly 	S	1716.87	I	124
+C10704	30/11/2008		I	CI/3	87484.000	NZ Farmers Weekly  - Job 8475 - Delivery 17 Nov 2008 - 130 grams. Includes folding fee 0.0100 cents. 	0.1570	0.1766	13734.988	NZ Farmers Weekly 	S	1716.87	I	124
+C10704	30/11/2008		I	CI/4	87484.000	NZ Farmers Weekly  - Job 8476 - Delivery 24 Nov 2008 - 133 grams. Includes folding fee 0.0100 cents. 	0.1570	0.1766	13734.988	NZ Farmers Weekly 	S	1716.87	I	124
+
+C10705	30/11/2008	111895	I	CI/1	2415.000	Dairy Industry Awards Launch - Job 8652 - Delivery IOA - 10 grams.  	0.0749	0.0843	180.884	Dairy Industry Awards Launch	S	22.61	I	233
+
+C10706	30/11/2008	111959	I	CI/1	1910.000	Healthy Hoof - Job 8684 - Delivery 21 Nov 2008 - 10 grams.  	0.0749	0.0843	143.059	Healthy Hoof	S	17.88	I	233
+
+C10707	30/11/2008	111729	I	CI/1	620.000	Local Link - Dan Hinton - Job 8579 - Delivery 01 Nov 2008 - 25 grams.  	0.0749	0.0843	46.438	Local Link - Dan Hinton	S	5.81	I	233
+
+C10708	30/11/2008	111733	I	CI/1	1053.000	Local Link - Denis Collins - Job 8582 - Delivery 01 Nov 2008 - 25 grams.  	0.0749	0.0843	78.870	Local Link - Denis Collins	S	9.86	I	233
+
+C10709	30/11/2008	111717	I	CI/1	1215.000	Local Link - Murray Holt - Job 8573 - Delivery 01 Nov 2008 - 5 grams.  	0.0749	0.0843	91.003	Local Link - Murray Holt	S	11.38	I	233
+
+C10710	30/11/2008	111732	I	CI/1	1750.000	Local Link - Phil Irvine - Job 8581 - Delivery 01 Nov 2008 - 25 grams.  	0.0749	0.0843	131.075	Local Link - Phil Irvine	S	16.38	I	233
+
+C10711	30/11/2008	111730	I	CI/1	1223.000	Local Link - Tai Chekazhe - Job 8580 - Delivery 01 Nov 2008 - 25 grams.  	0.0749	0.0843	91.603	Local Link - Tai Chekazhe	S	11.45	I	233
+
+C10712	30/11/2008	111720	I	CI/1	1910.000	Local Link - Wayne Berry - Job 8572 - Delivery 01 Nov 2008 - 5 grams.  	0.0749	0.0843	143.059	Local Link - Wayne Berry	S	17.88	I	233
+
+C10713	30/11/2008	111728	I	CI/1	860.000	Local Link- Richard Snell - Job 8574 - Delivery 01 Nov 2008 - 5 grams.  	0.0749	0.0843	64.414	Local Link- Richard Snell	S	8.05	I	233
+
+C10714	30/11/2008	111843	I	CI/1	1689.000	More Milk From Grass Field Day - Job 8649 - Delivery IOA - 25 grams.  	0.0749	0.0843	126.506	More Milk From Grass Field Day	S	15.81	I	233
+
+C10715	30/11/2008	111874	I	CI/1	708.000	NZ Dairying, now and into the future - Job 8650 - Delivery IOA - 25 grams.  	0.0749	0.0843	53.029	NZ Dairying, now and into the future	S	6.63	I	233
+
+C10716	30/11/2008	37197	I	CI/1	68717.000	Dow Agro 123 Brew DM - Job 8354 - Delivery 24 Nov 2008 - 25 grams.  	0.0749	0.0843	5146.903	Dow Agro 123 Brew DM	S	643.36	I	132
+
+C10717	30/11/2008	37198	I	CI/1	68717.000	Dow Agro Tordon MAX Postcard - Job 8355 - Delivery 10 Nov 2008 - 25 grams.  	0.0749	0.0843	5146.903	Dow Agro Tordon MAX Postcard	S	643.36	I	132
+
+C10718	30/11/2008		I	CI/1	2090.000	Aust NZ Rural Recovery - Job 8723 - Delivery 17 Nov 2008 - 20 grams.  	0.0749	0.0843	156.541	Aust NZ Rural Recovery	S	19.57	I	135
+C10718	30/11/2008		I	CI/2	3030.000	Elders Booklet - Job 8708 - Delivery 12 Nov 2008 - 120 grams.  	0.0963	0.1083	291.789	Elders Booklet	S	36.47	I	135
+
+C10719	30/11/2008	198893 Oct - Dec 08	I	CI/1	4047.000	Cambridge Edition - Job 8434 - Delivery 05 Nov 2008 - 338 grams. Includes folding fee 0.0100 cents. 	0.1331	0.1497	538.656	Cambridge Edition	S	67.33	I	141
+C10719	30/11/2008	198893 Oct - Dec 08	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C10719	30/11/2008	198893 Oct - Dec 08	I	CI/2	4047.000	Cambridge Edition - Job 8435 - Delivery 12 Nov 2008 - 183 grams. Includes folding fee 0.0100 cents. 	0.1010	0.1136	408.747	Cambridge Edition	S	51.09	I	141
+C10719	30/11/2008	198893 Oct - Dec 08	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C10719	30/11/2008	198893 Oct - Dec 08	I	CI/3	4047.000	Cambridge Edition - Job 8436 - Delivery 19 Nov 2008 - 298 grams. Includes folding fee 0.0100 cents. 	0.1224	0.1377	495.353	Cambridge Edition	S	61.92	I	141
+C10719	30/11/2008	198893 Oct - Dec 08	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C10719	30/11/2008	198893 Oct - Dec 08	I	CI/4	4047.000	Cambridge Edition - Job 8437 - Delivery 26 Nov 2008 - 190 grams. Includes folding fee 0.0100 cents. 	0.1010	0.1136	408.747	Cambridge Edition	S	51.09	I	141
+C10719	30/11/2008	198893 Oct - Dec 08	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+
+C10720	30/11/2008	199354 Oct - Dec	I	CI/1	2975.000	Dargaville District News - Job 8430 - Delivery 05 Nov 2008 - 126 grams.  	0.0963	0.1083	286.493	Dargaville District News	S	35.81	I	141
+C10720	30/11/2008	199354 Oct - Dec	I	CI/2	2975.000	Dargaville District News - Job 8431 - Delivery 12 Nov 2008 - 78 grams.  	0.0856	0.0963	254.660	Dargaville District News	S	31.83	I	141
+C10720	30/11/2008	199354 Oct - Dec	I	CI/3	2975.000	Dargaville District News - Job 8432 - Delivery 19 Nov 2008 - 51 grams.  	0.0856	0.0963	254.660	Dargaville District News	S	31.83	I	141
+C10720	30/11/2008	199354 Oct - Dec	I	CI/4	2975.000	Dargaville District News - Job 8433 - Delivery 26 Nov 2008 - 30 grams.  	0.0856	0.0963	254.660	Dargaville District News	S	31.83	I	141
+
+C10721	30/11/2008	200769 Oct - Dec	I	CI/1	11345.000	FCN - Thursday - Job 8442 - Delivery 06 Nov 2008 - 255 grams.  	0.0963	0.1083	1092.524	FCN - Thursday	S	136.57	I	141
+C10721	30/11/2008	200769 Oct - Dec	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C10721	30/11/2008	200769 Oct - Dec	I	CI/2	11345.000	FCN - Thursday - Job 8443 - Delivery 13 Nov 2008 - 245 grams.  	0.0963	0.1083	1092.524	FCN - Thursday	S	136.57	I	141
+C10721	30/11/2008	200769 Oct - Dec	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C10721	30/11/2008	200769 Oct - Dec	I	CI/3	11345.000	FCN - Thursday - Job 8444 - Delivery 20 Nov 2008 - 235 grams.  	0.0963	0.1083	1092.524	FCN - Thursday	S	136.57	I	141
+C10721	30/11/2008	200769 Oct - Dec	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C10721	30/11/2008	200769 Oct - Dec	I	CI/4	11345.000	FCN - Thursday - Job 8445 - Delivery 27 Nov 2008 - 215 grams.  	0.0963	0.1083	1092.524	FCN - Thursday	S	136.57	I	141
+C10721	30/11/2008	200769 Oct - Dec	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+
+C10722	30/11/2008	200769 Oct - Dec	I	CI/1	11345.000	FCN - Tuesday - Job 8438 - Delivery 04 Nov 2008 - 130 grams.  	0.0963	0.1083	1092.524	FCN - Tuesday	S	136.57	I	141
+C10722	30/11/2008	200769 Oct - Dec	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C10722	30/11/2008	200769 Oct - Dec	I	CI/2	11345.000	FCN - Tuesday - Job 8439 - Delivery 11 Nov 2008 - 75 grams.  	0.0963	0.1083	1092.524	FCN - Tuesday	S	136.57	I	141
+C10722	30/11/2008	200769 Oct - Dec	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C10722	30/11/2008	200769 Oct - Dec	I	CI/3	11345.000	FCN - Tuesday - Job 8440 - Delivery 18 Nov 2008 - 90 grams.  	0.0963	0.1083	1092.524	FCN - Tuesday	S	136.57	I	141
+C10722	30/11/2008	200769 Oct - Dec	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C10722	30/11/2008	200769 Oct - Dec	I	CI/4	11345.000	FCN - Tuesday - Job 8441 - Delivery 25 Nov 2008 - 105 grams.  	0.0963	0.1083	1092.524	FCN - Tuesday	S	136.57	I	141
+C10722	30/11/2008	200769 Oct - Dec	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+
+C10723	30/11/2008	199294 Oct - Dec	I	CI/1	2216.000	Matamata Chronicle - Job 8446 - Delivery 04 Nov 2008 - 335 grams. Includes folding fee 0.0100 cents. 	0.1331	0.1497	294.950	Matamata Chronicle	S	36.87	I	141
+C10723	30/11/2008	199294 Oct - Dec	I	CI/2	2216.000	Matamata Chronicle - Job 8447 - Delivery 11 Nov 2008 - 196 grams. Includes folding fee 0.0100 cents. 	0.1010	0.1136	223.816	Matamata Chronicle	S	27.98	I	141
+C10723	30/11/2008	199294 Oct - Dec	I	CI/3	2216.000	Matamata Chronicle - Job 8448 - Delivery 18 Nov 2008 - 282 grams. Includes folding fee 0.0100 cents. 	0.1224	0.1377	271.238	Matamata Chronicle	S	33.90	I	141
+C10723	30/11/2008	199294 Oct - Dec	I	CI/4	2216.000	Matamata Chronicle - Job 8449 - Delivery 25 Nov 2008 - 185 grams. Includes folding fee 0.0100 cents. 	0.1010	0.1136	223.816	Matamata Chronicle	S	27.98	I	141
+
+C10724	30/11/2008	202426 Oct - Dec	I	CI/1	3076.000	Nth Waikato News - Job 8450 - Delivery 05 Nov 2008 - 100 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	294.066	Nth Waikato News	S	36.76	I	141
+C10724	30/11/2008	202426 Oct - Dec	I	CI/2	3076.000	Nth Waikato News - Job 8451 - Delivery 12 Nov 2008 - 30 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C10724	30/11/2008	202426 Oct - Dec	I	CI/3	3076.000	Nth Waikato News - Job 8452 - Delivery 19 Nov 2008 - 35 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C10724	30/11/2008	202426 Oct - Dec	I	CI/4	3076.000	Nth Waikato News - Job 8453 - Delivery 26 Nov 2008 - 40 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+
+C10725	30/11/2008	203198 Oct - Mar	I	CI/1	3792.000	Piako Post - Job 8454 - Delivery 05 Nov 2008 - 290 grams.  	0.1230	0.1384	466.416	Piako Post	S	58.30	I	141
+C10725	30/11/2008	203198 Oct - Mar	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C10725	30/11/2008	203198 Oct - Mar	I	CI/2	3792.000	Piako Post - Job 8455 - Delivery 12 Nov 2008 - 240 grams.  	0.1230	0.1384	466.416	Piako Post	S	58.30	I	141
+C10725	30/11/2008	203198 Oct - Mar	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C10725	30/11/2008	203198 Oct - Mar	I	CI/3	3792.000	Piako Post - Job 8456 - Delivery 19 Nov 2008 - 320 grams.  	0.1230	0.1384	466.416	Piako Post	S	58.30	I	141
+C10725	30/11/2008	203198 Oct - Mar	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C10725	30/11/2008	203198 Oct - Mar	I	CI/4	3792.000	Piako Post - Job 8457 - Delivery 26 Nov 2008 - 167 grams.  	0.1230	0.1384	466.416	Piako Post	S	58.30	I	141
+C10725	30/11/2008	203198 Oct - Mar	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+
+C10726	30/11/2008	0000211903 OCT-DEC	I	CI/1	3195.000	Rotorua Review - Job 8458 - Delivery 04 Nov 2008 - 94 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	271.256	Rotorua Review	S	33.91	I	141
+C10726	30/11/2008	0000211903 OCT-DEC	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C10726	30/11/2008	0000211903 OCT-DEC	I	CI/2	3195.000	Rotorua Review - Job 8459 - Delivery 11 Nov 2008 - 108 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	305.442	Rotorua Review	S	38.18	I	141
+C10726	30/11/2008	0000211903 OCT-DEC	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C10726	30/11/2008	0000211903 OCT-DEC	I	CI/3	3195.000	Rotorua Review - Job 8460 - Delivery 18 Nov 2008 - 84 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	271.256	Rotorua Review	S	33.91	I	141
+C10726	30/11/2008	0000211903 OCT-DEC	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C10726	30/11/2008	0000211903 OCT-DEC	I	CI/4	3195.000	Rotorua Review - Job 8461 - Delivery 25 Nov 2008 - 75 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	271.256	Rotorua Review	S	33.91	I	141
+C10726	30/11/2008	0000211903 OCT-DEC	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+
+C10727	30/11/2008	199348 Oct - Dec	I	CI/1	2382.000	Sth Waikato News - Job 8462 - Delivery 05 Nov 2008 - 330 grams. Includes folding fee 0.0100 cents. 	0.1331	0.1497	317.044	Sth Waikato News	S	39.63	I	141
+C10727	30/11/2008	199348 Oct - Dec	I	CI/2	2382.000	Sth Waikato News - Job 8463 - Delivery 12 Nov 2008 - 111 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	227.719	Sth Waikato News	S	28.47	I	141
+C10727	30/11/2008	199348 Oct - Dec	I	CI/3	2382.000	Sth Waikato News - Job 8464 - Delivery 19 Nov 2008 - 292 grams. Includes folding fee 0.0100 cents. 	0.1224	0.1377	291.557	Sth Waikato News	S	36.44	I	141
+C10727	30/11/2008	199348 Oct - Dec	I	CI/4	2382.000	Sth Waikato News - Job 8465 - Delivery 26 Nov 2008 - 78 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	202.232	Sth Waikato News	S	25.28	I	141
+
+C10728	30/11/2008		I	CI/1	11656.000	Waikato Farmers Newspaper - Job 8472 - Delivery 13 Nov 2008 - 125 grams. Includes folding fee 0.0100 cents. 	0.1491	0.1677	1737.910	Waikato Farmers Newspaper	S	217.24	I	141
+
+C10729	30/11/2008	199449 Oct-Dec	I	CI/1	7950.000	Whangarei Leader - Job 8466 - Delivery 04 Nov 2008 - 60 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	674.955	Whangarei Leader	S	84.37	I	141
+C10729	30/11/2008	199449 Oct - Dec	I	CI/2	7950.000	Whangarei Leader - Job 8467 - Delivery 11 Nov 2008 - 60 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	674.955	Whangarei Leader	S	84.37	I	141
+C10729	30/11/2008	199449 Oct - Dec	I	CI/3	7950.000	Whangarei Leader - Job 8468 - Delivery 18 Nov 2008 - 60 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	674.955	Whangarei Leader	S	84.37	I	141
+C10729	30/11/2008	199449 Oct - Dec	I	CI/4	7950.000	Whangarei Leader - Job 8469 - Delivery 25 Nov 2008 - 60 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	674.955	Whangarei Leader	S	84.37	I	141
+
+C10730	30/11/2008	2	I	CI/1	4041.000	Dairy Farm Circular - Job 8725 - Delivery 21 Nov 2008 - 10 grams.  	0.0883	0.0993	356.820	Dairy Farm Circular	S	44.60	I	142
+
+C10731	30/11/2008		I	CI/1	836.000	Flyer Dec - Job 8702 - Delivery 21 Nov 2008 - 10 grams.  	0.0960	0.1080	80.256	Flyer Dec	S	10.03	I	259
+
+C10732	30/11/2008		I	CI/1	20330.000	Blue Book - Job 8328 - Delivery 06 Nov 2008 - 90 grams.  	0.1231	0.1385	2502.623	Blue Book	S	312.83	I	152
+
+C10733	30/11/2008	Gary M	I	CI/1	9104.000	Hynds Summer Specials - Job 8751 - Delivery IOA - 10 grams.  	0.0883	0.0993	803.883	Hynds Summer Specials	S	100.49	I	158
+
+C10734	30/11/2008	Sumita	I	CI/1	19409.000	Whangarei Tanks Flyer - Job 8737 - Delivery 25 Nov 2008 - 10 grams.  	0.0749	0.0843	1453.734	Whangarei Tanks Flyer	S	181.72	I	158
+
+C10735	30/11/2008	S-1001	I	CI/1	3872.000	Dairycool Refreigeration - Job 8588 - Delivery 03 Nov 2008 - 25 grams.  	0.0749	0.0843	290.013	Dairycool Refreigeration	S	36.25	I	159
+
+C10736	30/11/2008		I	CI/1	5053.000	Budget Ear Tags - Job 8732 - Delivery 24 Nov 2008 - 14 grams.  	0.0883	0.0993	446.180	Budget Ear Tags	S	55.77	I	165
+C10736	30/11/2008	Cliff 7 Nov	I	CI/2	1904.000	Product Catalogue - Job 8686 - Delivery 12 Nov 2008 - 385 grams.  	0.3745	0.4213	713.048	Product Catalogue	S	89.13	I	165
+
+C10737	30/11/2008		I	CI/1	4168.000	Livestock Exchange - Job 8612 - Delivery IOA - 25 grams.  	0.0749	0.0843	312.183	Livestock Exchange	S	39.02	I	252
+
+C10738	30/11/2008		I	CI/1	830.000	Hibiscus Matters - Job 8535 - Delivery 05 Nov 2008 - 50 grams.  	0.0803	0.0903	66.649	Hibiscus Matters	S	8.33	I	240
+C10738	30/11/2008		I	CI/2	830.000	Hibiscus Matters - Job 8536 - Delivery 19 Nov 2008 - 50 grams.  	0.0803	0.0903	66.649	Hibiscus Matters	S	8.33	I	240
+
+C10739	30/11/2008	2810270	I	CI/1	7833.000	AA Express - Job 8611 - Delivery 01 Nov 2008 - 12 grams.  	0.0508	0.0572	397.916	AA Express	S	49.74	I	169
+
+C10740	30/11/2008	2810275	I	CI/1	1041.000	Adam Ants Electrical - Job 8615 - Delivery 04 Nov 2008 - 10 grams.  	0.0508	0.0572	52.883	Adam Ants Electrical	S	6.61	I	169
+
+C10741	30/11/2008	2811220	I	CI/1	4324.000	Agribusiness Flyer - Job 8748 - Delivery 29 Nov 2008 - 20 grams.  	0.0508	0.0572	219.659	Agribusiness Flyer	S	27.46	I	169
+
+C10742	30/11/2008	2811070	I	CI/1	1731.000	At Beta Electrical - Job 8398 - Delivery 11 Nov 2008 - 20 grams.  	0.0475	0.0534	82.223	At Beta Electrical	S	10.28	I	169
+C10742	30/11/2008	2811070	I	FS	82.223	Fuel Surcharge	0.0700	0.0788	5.756	At Beta Electrical	S	0.72	I	169
+
+C10743	30/11/2008	2810290	I	CI/1	6114.000	Auto Select - Job 8648 - Delivery 04 Nov 2008 - 22 grams.  	0.0508	0.0572	310.591	Auto Select	S	38.82	I	169
+
+C10744	30/11/2008	2811090	I	CI/1	12003.000	Babycity - Job 8665 - Delivery 11 Nov 2008 - 24 grams.  	0.0508	0.0572	609.752	Babycity	S	76.22	I	169
+
+C10745	30/11/2008	2811176	I	CI/1	3401.000	Bayleys Magazine - Job 8715 - Delivery 22 Nov 2008 - 250 grams.  	0.1204	0.1354	409.480	Bayleys Magazine	S	51.19	I	169
+
+C10746	30/11/2008	2811072	I	CI/1	18512.000	Bayleys Preview Magazine - Job 8586 - Delivery 08 Nov 2008 - 300 grams.  	0.1338	0.1505	2476.906	Bayleys Preview Magazine	S	309.61	I	169
+
+C10747	30/11/2008	2811116	I	CI/1	5251.000	Body of Christ - Job 8669 - Delivery 11 Nov 2008 - 20 grams.  	0.0508	0.0572	266.751	Body of Christ	S	33.34	I	169
+
+C10748	30/11/2008	2811127	I	CI/1	108356.000	Bunnings  - Job 8697 - Delivery 18 Nov 2008 - 76 grams.  	0.0776	0.0873	8408.426	Bunnings 	S	1051.05	I	169
+
+C10749	30/11/2008	2811136	I	CI/1	5166.000	Cambridge News - Job 8533 - Delivery 07 Nov 2008 - 75 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	452.542	Cambridge News	S	56.57	I	169
+C10749	30/11/2008	2811136	I	CI/2	4056.000	Cambridge News - Job 8745 - Delivery 20 Nov 2008 - 75 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	355.306	Cambridge News	S	44.41	I	169
+
+C10750	30/11/2008	2811295	I	CI/1	984.000	Cartridge World Q/Town - Job 8719 - Delivery 14 Nov 2008 - 20 grams.  	0.0508	0.0572	49.987	Cartridge World Q/Town	S	6.25	I	169
+
+C10751	30/11/2008	2810272	I	CI/1	860.000	Cholmondley Childrens Home - Job 8613 - Delivery 01 Nov 2008 - 10 grams.  	0.0508	0.0572	43.688	Cholmondley Childrens Home	S	5.46	I	169
+
+C10752	30/11/2008	2811074	I	CI/1	6175.000	Chris Auchinvole for West Coast - Tasman - Job 8593 - Delivery 01 Nov 2008 - 25 grams.  	0.0508	0.0572	313.690	Chris Auchinvole for West Coast - Tasman	S	39.21	I	169
+
+C10753	30/11/2008	2811216	I	CI/1	3175.000	Comtool Timaru - Job 8744 - Delivery 25 Nov 2008 - 25 grams.  	0.0508	0.0572	161.290	Comtool Timaru	S	20.16	I	169
+
+C10754	30/11/2008	2810254	I	CI/1	3548.000	Coromandel A - Z - Job 8592 - Delivery 01 Nov 2008 - 99 grams.  	0.0776	0.0873	275.325	Coromandel A - Z	S	34.42	I	169
+
+C10755	30/11/2008	2811076	I	CI/1	25639.000	Dairying Today - Job 8598 - Delivery 10 Nov 2008 - 176 grams.  	0.1070	0.1204	2743.373	Dairying Today	S	342.92	I	169
+C10755	30/11/2008	2811077	I	CI/2	25639.000	Dairying Today - Job 8599 - Delivery 24 Nov 2008 - 176 grams.  	0.1070	0.1204	2743.373	Dairying Today	S	342.92	I	169
+
+C10756	30/11/2008	2810267	I	CI/1	3777.000	Destination Rotorua - Job 8609 - Delivery 01 Nov 2008 - 67 grams.  	0.0776	0.0873	293.095	Destination Rotorua	S	36.64	I	169
+
+C10757	30/11/2008	2810157	I	CI/1	34337.000	Dick Smith Drop 2 - Job 8571 - Delivery 01 Nov 2008 - 25 grams.  	0.0508	0.0572	1744.320	Dick Smith Drop 2	S	218.04	I	169
+
+C10758	30/11/2008	2811232	I	CI/1	61605.000	Digital Mobile Nov - Job 8975 - Delivery 29 Nov 2008 - 25 grams.  	0.0508	0.0572	3129.534	Digital Mobile Nov	S	391.19	I	169
+
+C10759	30/11/2008	2811114	I	CI/1	5070.000	Dr Bobs Veterinary - Job 8670 - Delivery 11 Nov 2008 - 10 grams.  	0.0508	0.0572	257.556	Dr Bobs Veterinary	S	32.19	I	169
+
+C10760	30/11/2008	2811140	I	CI/1	23910.000	Ecan Living Here - Job 8690 - Delivery 15 Nov 2008 - 16 grams.  	0.0508	0.0572	1214.628	Ecan Living Here	S	151.83	I	169
+
+C10761	30/11/2008	2811155	I	CI/1	4158.000	Flight Centre SI - Job 8699 - Delivery 21 Nov 2008 - 0 grams.  	0.0508	0.0572	211.226	Flight Centre SI	S	26.40	I	169
+
+C10762	30/11/2008	2811146	I	CI/1	557.000	Forestry Event - Job 8693 - Delivery 14 Nov 2008 - 10 grams.  	0.0508	0.0572	28.296	Forestry Event	S	3.54	I	169
+
+C10763	30/11/2008		I	CI/1	61866.000	Four Square Northern - Job 8491 - Delivery 01 Nov 2008 - 10 grams.  	0.0508	0.0572	3142.793	Four Square Northern	S	392.85	I	169
+C10763	30/11/2008		I	CI/2	61866.000	Four Square Northern - Job 8492 - Delivery 08 Nov 2008 - 10 grams.  	0.0508	0.0572	3142.793	Four Square Northern	S	392.85	I	169
+C10763	30/11/2008		I	CI/3	61866.000	Four Square Northern - Job 8493 - Delivery 15 Nov 2008 - 10 grams.  	0.0508	0.0572	3142.793	Four Square Northern	S	392.85	I	169
+C10763	30/11/2008		I	CI/4	61866.000	Four Square Northern - Job 8494 - Delivery 22 Nov 2008 - 10 grams.  	0.0508	0.0572	3142.793	Four Square Northern	S	392.85	I	169
+C10763	30/11/2008		I	CI/5	61866.000	Four Square Northern - Job 8495 - Delivery 29 Nov 2008 - 10 grams.  	0.0508	0.0572	3142.793	Four Square Northern	S	392.85	I	169
+
+C10764	30/11/2008	2811092	I	CI/1	38755.000	Freedom Furniture - Job 8655 - Delivery 08 Nov 2008 - 112 grams.  	0.0915	0.1029	3546.083	Freedom Furniture	S	443.26	I	169
+
+C10765	30/11/2008	2811145	I	CI/1	8667.000	Furniture City Whangarei - Job 8692 - Delivery 15 Nov 2008 - 22 grams.  	0.0508	0.0572	440.284	Furniture City Whangarei	S	55.04	I	169
+
+C10766	30/11/2008	2811188	I	CI/1	5513.000	Furniture to Go Warkworth - Job 8720 - Delivery 18 Nov 2008 - 25 grams.  	0.0508	0.0572	280.060	Furniture to Go Warkworth	S	35.01	I	169
+
+C10767	30/11/2008	2811212	I	CI/1	2550.000	FurnitureTo Go: Te Puke - Job 8742 - Delivery 25 Nov 2008 - 25 grams.  	0.0508	0.0572	129.540	FurnitureTo Go: Te Puke	S	16.19	I	169
+
+C10768	30/11/2008	2811099	I	CI/1	7734.000	Get Your House Ready - Job 8659 - Delivery 11 Nov 2008 - 22 grams.  	0.0508	0.0572	392.887	Get Your House Ready	S	49.11	I	169
+
+C10769	30/11/2008	2810263	I	CI/1	550.000	Harcourts - Plaskett RD - Job 8601 - Delivery 01 Nov 2008 - 10 grams.  	0.0508	0.0572	27.940	Harcourts - Plaskett RD	S	3.49	I	169
+
+C10770	30/11/2008	2811198	I	CI/1	18765.000	HEALTHFIRST Nov - Job 8734 - Delivery 29 Nov 2008 - 50 grams.  	0.0589	0.0663	1105.259	HEALTHFIRST Nov	S	138.16	I	169
+
+C10771	30/11/2008		I	CI/1	3771.000	Herald - Mid Canterbury Herald - Job 8505 - Delivery 05 Nov 2008 - 135 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	382.757	Herald - Mid Canterbury Herald	S	47.84	I	169
+C10771	30/11/2008		I	CI/2	3771.000	Herald - Mid Canterbury Herald - Job 8506 - Delivery 12 Nov 2008 - 135 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	382.757	Herald - Mid Canterbury Herald	S	47.84	I	169
+C10771	30/11/2008		I	CI/3	3771.000	Herald - Mid Canterbury Herald - Job 8507 - Delivery 19 Nov 2008 - 135 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	382.757	Herald - Mid Canterbury Herald	S	47.84	I	169
+C10771	30/11/2008		I	CI/4	3771.000	Herald - Mid Canterbury Herald - Job 8508 - Delivery 26 Nov 2008 - 135 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	382.757	Herald - Mid Canterbury Herald	S	47.84	I	169
+
+C10772	30/11/2008		I	CI/1	5234.000	Herald - The High Country Herald - Job 8509 - Delivery 05 Nov 2008 - 135 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	531.251	Herald - The High Country Herald	S	66.41	I	169
+C10772	30/11/2008		I	CI/2	5234.000	Herald - The High Country Herald - Job 8510 - Delivery 12 Nov 2008 - 135 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	531.251	Herald - The High Country Herald	S	66.41	I	169
+C10772	30/11/2008		I	CI/3	5234.000	Herald - The High Country Herald - Job 8511 - Delivery 19 Nov 2008 - 135 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	531.251	Herald - The High Country Herald	S	66.41	I	169
+C10772	30/11/2008		I	CI/4	5234.000	Herald - The High Country Herald - Job 8512 - Delivery 26 Nov 2008 - 135 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	531.251	Herald - The High Country Herald	S	66.41	I	169
+
+C10773	30/11/2008		I	CI/1	2413.000	Herald - The Waitaki Herald - Job 8513 - Delivery 05 Nov 2008 - 135 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	Herald - The Waitaki Herald	S	30.62	I	169
+C10773	30/11/2008		I	CI/2	2413.000	Herald - The Waitaki Herald - Job 8514 - Delivery 12 Nov 2008 - 135 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	Herald - The Waitaki Herald	S	30.62	I	169
+C10773	30/11/2008		I	CI/3	2413.000	Herald - The Waitaki Herald - Job 8515 - Delivery 19 Nov 2008 - 135 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	Herald - The Waitaki Herald	S	30.62	I	169
+C10773	30/11/2008		I	CI/4	2413.000	Herald - The Waitaki Herald - Job 8516 - Delivery 26 Nov 2008 - 135 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	Herald - The Waitaki Herald	S	30.62	I	169
+
+C10774	30/11/2008	2811071	I	CI/1	6996.000	Hornby Christmas Catalogue - Job 8417 - Delivery 22 Nov 2008 - 23 grams.  	0.0508	0.0572	355.397	Hornby Christmas Catalogue	S	44.43	I	169
+
+C10775	30/11/2008	2811112	I	CI/1	2102.000	James Jewellers - A Moment in Time  - Job 8653 - Delivery 11 Nov 2008 - 12 grams.  	0.0508	0.0572	106.782	James Jewellers - A Moment in Time 	S	13.35	I	169
+
+C10776	30/11/2008	2811174	I	CI/1	2313.000	Jamies Jewellers - Job 8713 - Delivery 14 Nov 2008 - 26 grams.  	0.0589	0.0663	136.236	Jamies Jewellers	S	17.03	I	169
+
+C10777	30/11/2008	2811113	I	CI/1	89622.000	Kiwi Camping - Job 8668 - Delivery 11 Nov 2008 - 20 grams.  	0.0508	0.0572	4552.798	Kiwi Camping	S	569.10	I	169
+
+C10778	30/11/2008	2811236	I	CI/1	3413.000	Landscape Depot - Job 8978 - Delivery 30 Nov 2008 - 10 grams.  	0.0508	0.0572	173.380	Landscape Depot	S	21.67	I	169
+
+C10779	30/11/2008	2811001	I	CI/1	1980.000	Laservision - Job 8397 - Delivery 04 Nov 2008 - 20 grams.  	0.0508	0.0572	100.584	Laservision	S	12.57	I	169
+
+C10780	30/11/2008	2810236	I	CI/1	3690.000	Lockwood Smith MP # 2 - Job 8425 - Delivery 01 Nov 2008 - 10 grams.  	0.0508	0.0572	187.452	Lockwood Smith MP # 2	S	23.43	I	169
+
+C10781	30/11/2008	2811080a	I	CI/1	612.000	Mammouth Christmas Drop 1 - Job 8635 - Delivery 11 Nov 2008 - 22 grams.  	0.0508	0.0572	31.090	Mammouth Christmas Drop 1	S	3.89	I	169
+
+C10782	30/11/2008	2811080b	I	CI/1	1814.000	Mammouth Christmas Drop 2 - Job 8636 - Delivery 18 Nov 2008 - 22 grams.  	0.0508	0.0572	92.151	Mammouth Christmas Drop 2	S	11.52	I	169
+
+C10783	30/11/2008	2811081c	I	CI/1	7956.000	Mammouth Christmas Drop 3 - Job 8637 - Delivery 25 Nov 2008 - 22 grams.  	0.0508	0.0572	404.165	Mammouth Christmas Drop 3	S	50.52	I	169
+
+C10784	30/11/2008	2811082d	I	CI/1	3976.000	Mammouth Christmas Drop 4 - Job 8638 - Delivery 25 Nov 2008 - 22 grams.  	0.0508	0.0572	201.981	Mammouth Christmas Drop 4	S	25.25	I	169
+
+C10785	30/11/2008	2811083e	I	CI/1	5851.000	Mammouth Christmas Drop 5 - Job 8639 - Delivery 18 Nov 2008 - 22 grams.  	0.0508	0.0572	297.231	Mammouth Christmas Drop 5	S	37.15	I	169
+
+C10786	30/11/2008	2811115	I	CI/1	6056.000	Mega M10 8pg - Job 8671 - Delivery 11 Nov 2008 - 20 grams.  	0.0508	0.0572	307.645	Mega M10 8pg	S	38.46	I	169
+
+C10787	30/11/2008	2810268	I	CI/1	6056.000	Mega Mitre 10 - Job 8610 - Delivery 01 Nov 2008 - 20 grams.  	0.0508	0.0572	307.645	Mega Mitre 10	S	38.46	I	169
+
+C10788	30/11/2008	2811142	I	CI/1	12979.000	Mega Mitre 10 4pg - Job 8714 - Delivery 22 Nov 2008 - 10 grams.  	0.0508	0.0572	659.333	Mega Mitre 10 4pg	S	82.42	I	169
+
+C10789	30/11/2008	2811142	I	CI/1	6968.000	Mega Mitre10 - Job 8688 - Delivery 21 Nov 2008 - 10 grams.  	0.0508	0.0572	353.974	Mega Mitre10	S	44.25	I	169
+
+C10790	30/11/2008	2811104	I	CI/1	8464.000	Metlifecare Somervale - Job 8662 - Delivery 11 Nov 2008 - 22 grams.  	0.0508	0.0572	429.971	Metlifecare Somervale	S	53.75	I	169
+
+C10791	30/11/2008	2811103	I	CI/1	4965.000	Metlifecare Wairarapa - Job 8663 - Delivery 11 Nov 2008 - 22 grams.  	0.0508	0.0572	252.222	Metlifecare Wairarapa	S	31.53	I	169
+
+C10792	30/11/2008	2810255	I	CI/1	10511.000	MTC Rentals - Job 8591 - Delivery 01 Nov 2008 - 25 grams.  	0.0508	0.0572	533.959	MTC Rentals	S	66.75	I	169
+
+C10793	30/11/2008		I	CI/1	63778.000	New World Northern  - Job 8486 - Delivery 01 Nov 2008 - 36 grams.  	0.0508	0.0572	3239.922	New World Northern 	S	404.99	I	169
+C10793	30/11/2008		I	CI/2	63778.000	New World Northern  - Job 8487 - Delivery 08 Nov 2008 - 36 grams.  	0.0508	0.0572	3239.922	New World Northern 	S	404.99	I	169
+C10793	30/11/2008		I	CI/3	63778.000	New World Northern  - Job 8488 - Delivery 15 Nov 2008 - 36 grams.  	0.0508	0.0572	3239.922	New World Northern 	S	404.99	I	169
+C10793	30/11/2008		I	CI/4	63778.000	New World Northern  - Job 8489 - Delivery 22 Nov 2008 - 40 grams.  	0.0508	0.0572	3239.922	New World Northern 	S	404.99	I	169
+C10793	30/11/2008		I	CI/5	63778.000	New World Northern  - Job 8490 - Delivery 29 Nov 2008 - 40 grams.  	0.0508	0.0572	3239.922	New World Northern 	S	404.99	I	169
+
+C10794	30/11/2008	2811094	I	CI/1	970.000	New World Westend - Job 8657 - Delivery 08 Nov 2008 - 22 grams.  	0.0508	0.0572	49.276	New World Westend	S	6.16	I	169
+
+C10795	30/11/2008		I	CI/1	7133.000	North Canterbury News - Job 8501 - Delivery 04 Nov 2008 - 60 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	624.851	North Canterbury News	S	78.11	I	169
+C10795	30/11/2008		I	CI/2	7133.000	North Canterbury News - Job 8502 - Delivery 11 Nov 2008 - 60 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	624.851	North Canterbury News	S	78.11	I	169
+C10795	30/11/2008		I	CI/3	7133.000	North Canterbury News - Job 8503 - Delivery 18 Nov 2008 - 60 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	624.851	North Canterbury News	S	78.11	I	169
+C10795	30/11/2008		I	CI/4	7133.000	North Canterbury News - Job 8504 - Delivery 25 Nov 2008 - 60 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	624.851	North Canterbury News	S	78.11	I	169
+
+C10796	30/11/2008	2811141	I	CI/1	11135.000	Northpower - Job 8689 - Delivery 10 Nov 2008 - 25 grams.  	0.0508	0.0572	565.658	Northpower	S	70.71	I	169
+
+C10797	30/11/2008	2811158	I	CI/1	25642.000	Numat-Agrimat Natuarl Rubber Matting - Job 8700 - Delivery 22 Nov 2008 - 20 grams.  	0.0508	0.0572	1302.614	Numat-Agrimat Natuarl Rubber Matting	S	162.83	I	169
+
+C10798	30/11/2008		I	CI/1	5311.000	NZ Fishing & Shooting - Job 8682 - Delivery 29 Nov 2008 - 60 grams.  	0.0776	0.0873	412.134	NZ Fishing & Shooting	S	51.52	I	169
+C10798	30/11/2008	2811137	I	CI/2	5311.000	NZ Fishing & Shooting - Job 8683 - Delivery 29 Nov 2008 - 60 grams.  	0.0776	0.0873	412.134	NZ Fishing & Shooting	S	51.52	I	169
+
+C10799	30/11/2008	2811213	I	CI/1	9657.000	OMC Power Tools - Job 8743 - Delivery 25 Nov 2008 - 20 grams.  	0.0508	0.0572	490.576	OMC Power Tools	S	61.32	I	169
+
+C10800	30/11/2008	2811205	I	CI/1	860.000	Pain Management Nov - Job 8733 - Delivery 22 Nov 2008 - 20 grams.  	0.0508	0.0572	43.688	Pain Management Nov	S	5.46	I	169
+
+C10801	30/11/2008	2811079	I	CI/1	3940.000	Para Rubber - Job 8634 - Delivery 11 Nov 2008 - 20 grams.  	0.0508	0.0572	200.152	Para Rubber	S	25.02	I	169
+
+C10802	30/11/2008	2810289	I	CI/1	1616.000	Peninsula Betta Elec Nov - Job 8647 - Delivery 04 Nov 2008 - 40 grams.  	0.0589	0.0663	95.182	Peninsula Betta Elec Nov	S	11.90	I	169
+
+C10803	30/11/2008	2811153	I	CI/1	13935.000	Pharmacy Wholesalers - Job 8696 - Delivery 15 Nov 2008 - 20 grams.  	0.0508	0.0572	707.898	Pharmacy Wholesalers	S	88.49	I	169
+
+C10804	30/11/2008	2811135	I	CI/1	3260.000	Placemakers Albany - Job 8680 - Delivery 18 Nov 2008 - 22 grams.  	0.0508	0.0572	165.608	Placemakers Albany	S	20.70	I	169
+
+C10805	30/11/2008	2810257	I	CI/1	2387.000	Plant Sale - Job 8596 - Delivery 01 Nov 2008 - 10 grams.  	0.0508	0.0572	121.260	Plant Sale	S	15.16	I	169
+
+C10806	30/11/2008	2811166	I	CI/1	15252.000	Plastic Box - Job 8716 - Delivery 25 Nov 2008 - 25 grams.  	0.0508	0.0572	774.802	Plastic Box	S	96.85	I	169
+
+C10807	30/11/2008	28102661b	I	CI/1	3378.000	Possum Control  - Job 8605 - Delivery 02 Nov 2008 - 10 grams.  	0.0508	0.0572	171.602	Possum Control 	S	21.45	I	169
+
+C10808	30/11/2008	2810266a	I	CI/1	673.000	Possum Control Farmer  - Job 8606 - Delivery 02 Nov 2008 - 10 grams.  	0.0508	0.0572	34.188	Possum Control Farmer 	S	4.27	I	169
+
+C10809	30/11/2008	2811097	I	CI/1	84867.000	Postie Plus - Job 8660 - Delivery 11 Nov 2008 - 24 grams.  	0.0508	0.0572	4311.244	Postie Plus	S	538.91	I	169
+
+C10810	30/11/2008	90847	I	CI/1	850.000	Property to View - Job 8666 - Delivery 11 Nov 2008 - 78 grams.  	0.0776	0.0873	65.960	Property to View	S	8.25	I	169
+
+C10811	30/11/2008	2810264	I	CI/1	4883.000	Raeward Fresh - Job 8603 - Delivery 01 Nov 2008 - 16 grams.  	0.0508	0.0572	248.056	Raeward Fresh	S	31.01	I	169
+
+C10812	30/11/2008	2810189	I	CI/1	550.000	Richard Whiteside Flyer - Job 8392 - Delivery 01 Nov 2008 - 10 grams.  	0.0508	0.0572	27.940	Richard Whiteside Flyer	S	3.49	I	169
+
+C10813	30/11/2008	2811221	I	CI/1	4696.000	Riverside Horticulture - Job 8749 - Delivery 21 Nov 2008 - 24 grams.  	0.0508	0.0572	238.557	Riverside Horticulture	S	29.82	I	169
+
+C10814	30/11/2008	2811073	I	CI/1	29335.000	Rural Direct - Job 8585 - Delivery 01 Nov 2008 - 10 grams.  	0.0508	0.0572	1490.218	Rural Direct	S	186.28	I	169
+
+C10815	30/11/2008		I	CI/1	73285.000	Rural News  - Job 8471 - Delivery 04 Nov 2008 - 145 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	7438.428	Rural News 	S	929.80	I	169
+C10815	30/11/2008		I	CI/2	73285.000	Rural News  - Job 8470 - Delivery 18 Nov 2008 - 145 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	7438.428	Rural News 	S	929.80	I	169
+
+C10816	30/11/2008	2810248	I	CI/1	8070.000	Scene Magazine - Job 8565 - Delivery 01 Nov 2008 - 150 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	819.105	Scene Magazine	S	102.39	I	169
+
+C10817	30/11/2008	2811196	I	CI/1	3404.000	Seifrieds Restaurant - Job 8727 - Delivery 25 Nov 2008 - 20 grams.  	0.0508	0.0572	172.923	Seifrieds Restaurant	S	21.62	I	169
+
+C10818	30/11/2008	2810273	I	CI/1	1145.000	Selwyn Labour Party - Job 8614 - Delivery 04 Nov 2008 - 8 grams.  	0.0508	0.0572	58.166	Selwyn Labour Party	S	7.27	I	169
+
+C10819	30/11/2008		I	CI/1	6396.000	Selwyn Times - Job 8497 - Delivery 04 Nov 2008 - 80 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	560.290	Selwyn Times	S	70.04	I	169
+C10819	30/11/2008		I	CI/2	6396.000	Selwyn Times - Job 8498 - Delivery 11 Nov 2008 - 80 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	560.290	Selwyn Times	S	70.04	I	169
+C10819	30/11/2008		I	CI/3	6396.000	Selwyn Times - Job 8499 - Delivery 18 Nov 2008 - 80 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	560.290	Selwyn Times	S	70.04	I	169
+C10819	30/11/2008		I	CI/4	6396.000	Selwyn Times - Job 8500 - Delivery 25 Nov 2008 - 80 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	560.290	Selwyn Times	S	70.04	I	169
+
+C10820	30/11/2008	2811102	I	CI/1	71017.000	Smith City 25% - Job 8664 - Delivery 11 Nov 2008 - 22 grams.  	0.0508	0.0572	3607.664	Smith City 25%	S	450.96	I	169
+
+C10821	30/11/2008	2811200	I	CI/1	15375.000	Smith City November - Job 8730 - Delivery 24 Nov 2008 - 24 grams.  	0.0508	0.0572	781.050	Smith City November	S	97.63	I	169
+
+C10822	30/11/2008	2810285	I	CI/1	15375.000	Smiths City Cat - Job 8617 - Delivery 04 Nov 2008 - 12 grams.  	0.0508	0.0572	781.050	Smiths City Cat	S	97.63	I	169
+
+C10823	30/11/2008	2811143	I	CI/1	15501.000	Smiths City November - Job 8687 - Delivery 18 Nov 2008 - 58 grams.  	0.0776	0.0873	1202.878	Smiths City November	S	150.36	I	169
+
+C10824	30/11/2008	2811208	I	CI/1	3620.000	Sola 60 Tauranga - Job 8736 - Delivery 22 Nov 2008 - 10 grams.  	0.0508	0.0572	183.896	Sola 60 Tauranga	S	22.99	I	169
+
+C10825	30/11/2008	2810274	I	CI/1	5632.000	Spirited Studio 19 - Job 8616 - Delivery 04 Nov 2008 - 20 grams.  	0.0508	0.0572	286.106	Spirited Studio 19	S	35.76	I	169
+
+C10826	30/11/2008	2811126	I	CI/1	4522.000	Spirited Studio 19 Drop 2 - Job 8678 - Delivery 11 Nov 2008 - 20 grams.  	0.0508	0.0572	229.718	Spirited Studio 19 Drop 2	S	28.72	I	169
+
+C10827	30/11/2008	2811101	I	CI/1	187883.000	Steelfort MTD Mailer - Job 8672 - Delivery 11 Nov 2008 - 14 grams.  	0.0508	0.0572	9544.456	Steelfort MTD Mailer	S	1193.06	I	169
+
+C10828	30/11/2008	2811091	I	CI/1	3929.000	Sterling Cottages - Job 8656 - Delivery 08 Nov 2008 - 10 grams.  	0.0508	0.0572	199.593	Sterling Cottages	S	24.95	I	169
+
+C10829	30/11/2008	2801036	I	CI/1	120398.000	Stihl - Job 8691 - Delivery 25 Nov 2008 - 38 grams.  	0.0589	0.0663	7091.442	Stihl	S	886.43	I	169
+
+C10830	30/11/2008	2811095	I	CI/1	970.000	Street Talkers-Harcourts - Job 8667 - Delivery 15 Nov 2008 - 10 grams.  	0.0508	0.0572	49.276	Street Talkers-Harcourts	S	6.16	I	169
+
+C10831	30/11/2008	2811175	I	CI/1	2400.000	Studio 19 - Job 8711 - Delivery 18 Nov 2008 - 25 grams.  	0.0508	0.0572	121.920	Studio 19	S	15.24	I	169
+
+C10832	30/11/2008	2811093	I	CI/1	398.000	Style Settler - Job 8658 - Delivery 08 Nov 2008 - 30 grams.  	0.0589	0.0663	23.442	Style Settler	S	2.93	I	169
+
+C10833	30/11/2008	2810237	I	CI/1	3873.000	TC Jacksons Flooring - Job 8426 - Delivery 02 Nov 2008 - 10 grams.  	0.0508	0.0572	196.748	TC Jacksons Flooring	S	24.59	I	169
+
+C10834	30/11/2008	2811165	I	CI/1	7929.000	Tree Waste Grinding - Job 8712 - Delivery 22 Nov 2008 - 10 grams.  	0.0508	0.0572	402.793	Tree Waste Grinding	S	50.35	I	169
+
+C10835	30/11/2008	2811075	I	CI/1	13749.000	Tumu Rural - Job 8594 - Delivery 04 Nov 2008 - 10 grams.  	0.0508	0.0572	698.449	Tumu Rural	S	87.31	I	169
+
+C10836	30/11/2008	2810220	I	CI/1	13920.000	Valley Voice - Job 8413 - Delivery 01 Nov 2008 - 80 grams.  	0.0776	0.0873	1080.192	Valley Voice	S	135.02	I	169
+
+C10837	30/11/2008	2811106	I	CI/1	15213.000	Vantage Pharmacy - Job 8654 - Delivery 08 Nov 2008 - 22 grams.  	0.0508	0.0572	772.820	Vantage Pharmacy	S	96.60	I	169
+
+C10838	30/11/2008	2811164	I	CI/1	2040.000	Waste Management Drop 1 - Job 8709 - Delivery 15 Nov 2008 - 20 grams.  	0.0508	0.0572	103.632	Waste Management Drop 1	S	12.95	I	169
+
+C10839	30/11/2008	2811164	I	CI/1	2040.000	Waste Management Drop 2 - Job 8710 - Delivery 18 Nov 2008 - 20 grams.  	0.0508	0.0572	103.632	Waste Management Drop 2	S	12.95	I	169
+
+C10840	30/11/2008	2811210	I	CI/1	2040.000	Waste Management Nov - Job 8738 - Delivery 25 Nov 2008 - 25 grams.  	0.0508	0.0572	103.632	Waste Management Nov	S	12.95	I	169
+
+C10841	30/11/2008		I	CI/1	8930.000	Whangarei Report - Job 8517 - Delivery 06 Nov 2008 - 60 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	782.268	Whangarei Report	S	97.78	I	169
+C10841	30/11/2008		I	CI/2	8930.000	Whangarei Report - Job 8518 - Delivery 13 Nov 2008 - 60 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	782.268	Whangarei Report	S	97.78	I	169
+C10841	30/11/2008		I	CI/3	8930.000	Whangarei Report - Job 8519 - Delivery 20 Nov 2008 - 60 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	782.268	Whangarei Report	S	97.78	I	169
+C10841	30/11/2008		I	CI/4	8930.000	Whangarei Report - Job 8520 - Delivery 27 Nov 2008 - 60 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	782.268	Whangarei Report	S	97.78	I	169
+
+C10842	30/11/2008		I	CI/1	12000.000	Romney Stud Flyer - Job 8607 - Delivery 03 Nov 2008 - 15 grams.  	0.0883	0.0993	1059.600	Romney Stud Flyer	S	132.45	I	175
+
+C10843	30/11/2008		I	CI/1	79909.000	Ham Mailer - Job 8480 - Delivery 11 Nov 2008 - 25 grams.  	0.0910	0.1024	7271.719	Ham Mailer	S	908.97	I	178
+
+C10844	30/11/2008	131108	I	CI/1	4220.000	Kaipara Lifestyler - Job 8694 - Delivery 13 Nov 2008 - 75 grams.  	0.1124	0.1265	474.328	Kaipara Lifestyler	S	59.29	I	257
+C10844	30/11/2008	131108	I	CI/2	4220.000	Kaipara Lifestyler - Job 8752 - Delivery 29 Nov 2008 - 75 grams.  	0.1124	0.1265	474.328	Kaipara Lifestyler	S	59.29	I	257
+
+C10845	30/11/2008	Matira farms	I	CI/1	7871.000	Matira Farms - Job 8735 - Delivery 26 Nov 2008 - 170 grams.  	0.1124	0.1265	884.700	Matira Farms	S	110.59	I	194
+
+C10846	30/11/2008		I	CI/1	895.000	Bay News - Job 8548 - Delivery 05 Nov 2008 - 128 grams.  	0.1070	0.1204	95.765	Bay News	S	11.97	I	201
+C10846	30/11/2008		I	CI/2	895.000	Bay News - Job 8549 - Delivery 12 Nov 2008 - 111 grams. Includes folding fee 0.0100 cents. 	0.1170	0.1316	104.715	Bay News	S	13.09	I	201
+C10846	30/11/2008		I	CI/3	895.000	Bay News - Job 8550 - Delivery 19 Nov 2008 - 117 grams.  	0.1070	0.1204	95.765	Bay News	S	11.97	I	201
+C10846	30/11/2008		I	CI/4	895.000	Bay News - Job 8551 - Delivery 26 Nov 2008 - 117 grams.  	0.1070	0.1204	95.765	Bay News	S	11.97	I	201
+
+C10847	30/11/2008	2300824	I	CI/1	8841.000	Guardian Country - Job 8595 - Delivery 13 Nov 2008 - 25 grams.  	0.0536	0.0603	473.878	Guardian Country	S	59.24	I	201
+
+C10848	30/11/2008	2297407	I	CI/1	3670.000	Guardian Newspaper - Job 8552 - Delivery 06 Nov 2008 - 166 grams.  	0.1284	0.1445	471.228	Guardian Newspaper	S	58.90	I	201
+C10848	30/11/2008	2297407	I	CI/2	3670.000	Guardian Newspaper - Job 8553 - Delivery 13 Nov 2008 - 85 grams.  	0.0808	0.0909	296.536	Guardian Newspaper	S	37.07	I	201
+C10848	30/11/2008	2297407	I	CI/3	3670.000	Guardian Newspaper - Job 8554 - Delivery 20 Nov 2008 - 139 grams.  	0.1177	0.1324	431.959	Guardian Newspaper	S	54.00	I	201
+C10848	30/11/2008	2297407	I	CI/4	3670.000	Guardian Newspaper - Job 8555 - Delivery 27 Nov 2008 - 130 grams.  	0.1070	0.1204	392.690	Guardian Newspaper	S	49.09	I	201
+
+C10849	30/11/2008	2300817	I	CI/1	6440.000	Hawkesbay Country Scene - Job 8566 - Delivery 12 Nov 2008 - 64 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	584.752	Hawkesbay Country Scene	S	73.09	I	201
+
+C10850	30/11/2008	2300758	I	CI/1	1315.000	Metropol - Job 8563 - Delivery 07 Nov 2008 - 164 grams. Includes folding fee 0.0100 cents. 	0.1384	0.1557	181.996	Metropol	S	22.75	I	201
+C10850	30/11/2008	2300758	I	CI/2	1315.000	Metropol - Job 8564 - Delivery 21 Nov 2008 - 164 grams. Includes folding fee 0.0100 cents. 	0.1384	0.1557	181.996	Metropol	S	22.75	I	201
+
+C10851	30/11/2008	2300839	I	CI/1	1530.000	Napier Mail - Job 8544 - Delivery 05 Nov 2008 - 86 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+C10851	30/11/2008	2300839	I	CI/2	1530.000	Napier Mail - Job 8545 - Delivery 12 Nov 2008 - 94 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+C10851	30/11/2008	2300839	I	CI/3	1530.000	Napier Mail - Job 8546 - Delivery 19 Nov 2008 - 86 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+C10851	30/11/2008	2305070	I	CI/4	1530.000	Napier Mail - Job 8547 - Delivery 26 Nov 2008 - 86 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+
+C10852	30/11/2008	2300819	I	CI/1	3670.000	PN City Council Booklet - Job 8728 - Delivery 20 Nov 2008 - 22 grams.  	0.0536	0.0603	196.712	PN City Council Booklet	S	24.59	I	201
+
+C10853	30/11/2008	2300822	I	CI/1	3135.000	Property Outlook - Job 8538 - Delivery 06 Nov 2008 - 20 grams.  	0.0536	0.0603	168.036	Property Outlook	S	21.00	I	201
+
+C10854	30/11/2008	2300842	I	CI/1	770.000	Rangitikei Mail - Job 8540 - Delivery 04 Nov 2008 - 103 grams. Includes folding fee 0.0100 cents. 	0.1170	0.1316	90.090	Rangitikei Mail	S	11.26	I	201
+C10854	30/11/2008	2300842	I	CI/2	770.000	Rangitikei Mail - Job 8541 - Delivery 11 Nov 2008 - 65 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+C10854	30/11/2008	2300842	I	CI/3	770.000	Rangitikei Mail - Job 8542 - Delivery 18 Nov 2008 - 85 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+C10854	30/11/2008	2305067	I	CI/4	770.000	Rangitikei Mail - Job 8543 - Delivery 25 Nov 2008 - 85 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+
+C10855	30/11/2008	2297139	I	CI/1	2280.000	Scene Matamata - Job 8560 - Delivery 27 Nov 2008 - 90 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	207.024	Scene Matamata	S	25.88	I	201
+
+C10856	30/11/2008	2301938	I	CI/1	1320.000	Taupo Real Estate - Job 8561 - Delivery 06 Nov 2008 - 175 grams. Includes folding fee 0.0100 cents. 	0.1384	0.1557	182.688	Taupo Real Estate	S	22.84	I	201
+C10856	30/11/2008	2301938	I	CI/2	1320.000	Taupo Real Estate - Job 8562 - Delivery 20 Nov 2008 - 162 grams. Includes folding fee 0.0100 cents. 	0.1384	0.1557	182.688	Taupo Real Estate	S	22.84	I	201
+
+C10857	30/11/2008	2301667	I	CI/1	9986.000	Weekend Sun - Job 8556 - Delivery 07 Nov 2008 - 180 grams. Includes folding fee 0.0100 cents. 	0.1384	0.1557	1382.062	Weekend Sun	S	172.76	I	201
+C10857	30/11/2008	2301667	I	CI/2	9986.000	Weekend Sun - Job 8557 - Delivery 14 Nov 2008 - 144 grams. Includes folding fee 0.0100 cents. 	0.1170	0.1316	1168.362	Weekend Sun	S	146.04	I	201
+C10857	30/11/2008	2301667	I	CI/3	9986.000	Weekend Sun - Job 8558 - Delivery 21 Nov 2008 - 170 grams. Includes folding fee 0.0100 cents. 	0.1384	0.1557	1382.062	Weekend Sun	S	172.76	I	201
+C10857	30/11/2008	2305066	I	CI/4	9986.000	Weekend Sun - Job 8559 - Delivery 28 Nov 2008 - 192 grams. Includes folding fee 0.0100 cents. 	0.1384	0.1557	1382.062	Weekend Sun	S	172.76	I	201
+
+C10858	30/11/2008		I	CI/1	15078.000	Rural Outlook - Job 8608 - Delivery 03 Nov 2008 - 113 grams.  	0.1605	0.1806	2420.019	Rural Outlook	S	302.50	I	251
+
+C10859	30/11/2008		I	CI/1	28478.000	Coast N Country - Job 7908 - Delivery 07 Nov 2008 - 160 grams. Includes folding fee 0.0100 cents. 	0.0917	0.1032	2611.433	Coast N Country	S	326.43	I	217
+
+C10860	30/11/2008		I	CI/1	20627.000	November Flier - Job 8695 - Delivery 20 Nov 2008 - 15 grams.  	0.0883	0.0993	1821.364	November Flier	S	227.67	I	223
+
+C10861	30/11/2008		I	CI/1	5560.000	Election 2008 - Job 8428 - Delivery 03 Nov 2008 - 20 grams.  	0.0749	0.0843	416.444	Election 2008	S	52.06	I	249
+

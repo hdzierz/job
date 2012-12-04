@@ -1,0 +1,6 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C11421	06/03/2009		I	CI/1	2975.000	Dargaville District News - Job 9314 - Delivery 04 Feb 2009 - 25 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+C11421	06/03/2009		I	CI/2	2975.000	Dargaville District News - Job 9315 - Delivery 11 Feb 2009 - 25 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+C11421	06/03/2009		I	CI/3	2975.000	Dargaville District News - Job 9316 - Delivery 18 Feb 2009 - 45 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+C11421	06/03/2009		I	CI/4	2975.000	Dargaville District News - Job 9317 - Delivery 25 Feb 2009 - 35 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+

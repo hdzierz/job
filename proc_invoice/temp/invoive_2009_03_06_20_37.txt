@@ -1,0 +1,38 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C11416	06/03/2009		I	CI/1	2975.000	Dargaville District News - Job 9314 - Delivery 04 Feb 2009 - 25 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	284.410	Dargaville District News	S	35.55	I	141
+C11416	06/03/2009		I	CI/2	2975.000	Dargaville District News - Job 9315 - Delivery 11 Feb 2009 - 25 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+C11416	06/03/2009		I	CI/3	2975.000	Dargaville District News - Job 9316 - Delivery 18 Feb 2009 - 45 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+C11416	06/03/2009		I	CI/4	2975.000	Dargaville District News - Job 9317 - Delivery 25 Feb 2009 - 35 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+
+C11417	06/03/2009		I	CI/1	11345.000	FCN - Thursday - Job 9318 - Delivery 05 Feb 2009 - 190 grams.  	0.0910	0.1024	1032.395	FCN - Thursday	S	129.05	I	141
+C11417	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C11417	06/03/2009		I	CI/2	11345.000	FCN - Thursday - Job 9319 - Delivery 12 Feb 2009 - 200 grams.  	0.0910	0.1024	1032.395	FCN - Thursday	S	129.05	I	141
+C11417	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C11417	06/03/2009		I	CI/3	11345.000	FCN - Thursday - Job 9320 - Delivery 19 Feb 2009 - 201 grams.  	0.1017	0.1144	1153.787	FCN - Thursday	S	144.22	I	141
+C11417	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C11417	06/03/2009		I	CI/4	11345.000	FCN - Thursday - Job 9321 - Delivery 26 Feb 2009 - 185 grams.  	0.0910	0.1024	1032.395	FCN - Thursday	S	129.05	I	141
+C11417	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+
+C11418	06/03/2009		I	CI/1	11345.000	FCN - Tuesday - Job 9322 - Delivery 03 Feb 2009 - 95 grams.  	0.0749	0.0843	849.740	FCN - Tuesday	S	106.22	I	141
+C11418	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C11418	06/03/2009		I	CI/2	11345.000	FCN - Tuesday - Job 9323 - Delivery 10 Feb 2009 - 45 grams.  	0.0749	0.0843	849.740	FCN - Tuesday	S	106.22	I	141
+C11418	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C11418	06/03/2009		I	CI/3	11345.000	FCN - Tuesday - Job 9324 - Delivery 17 Feb 2009 - 90 grams.  	0.0749	0.0843	849.740	FCN - Tuesday	S	106.22	I	141
+C11418	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C11418	06/03/2009		I	CI/4	11345.000	FCN - Tuesday - Job 9325 - Delivery 24 Feb 2009 - 90 grams.  	0.0749	0.0843	849.740	FCN - Tuesday	S	106.22	I	141
+C11418	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+
+C11419	06/03/2009	203198 Oct - Mar	I	CI/1	3792.000	Piako Post - Job 9330 - Delivery 04 Feb 2009 - 115 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	362.515	Piako Post	S	45.31	I	141
+C11419	06/03/2009	203198 Oct - Mar	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C11419	06/03/2009	203198 Oct - Mar	I	CI/2	3792.000	Piako Post - Job 9331 - Delivery 11 Feb 2009 - 210 grams. Includes folding fee 0.0100 cents. 	0.1117	0.1257	423.566	Piako Post	S	52.95	I	141
+C11419	06/03/2009	203198 Oct - Mar	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C11419	06/03/2009	203198 Oct - Mar	I	CI/3	3792.000	Piako Post - Job 9332 - Delivery 18 Feb 2009 - 154 grams. Includes folding fee 0.0100 cents. 	0.1010	0.1136	382.992	Piako Post	S	47.87	I	141
+C11419	06/03/2009	203198 Oct - Mar	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C11419	06/03/2009	203198 Oct - Mar	I	CI/4	3792.000	Piako Post - Job 9333 - Delivery 25 Feb 2009 - 254 grams. Includes folding fee 0.0100 cents. 	0.1224	0.1377	464.141	Piako Post	S	58.02	I	141
+C11419	06/03/2009	203198 Oct - Mar	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+
+C11420	06/03/2009		I	CI/1	2382.000	Sth Waikato News - Job 9338 - Delivery 04 Feb 2009 - 141 grams.  	0.0856	0.0963	203.899	Sth Waikato News	S	25.49	I	141
+C11420	06/03/2009		I	CI/2	2382.000	Sth Waikato News - Job 9339 - Delivery 11 Feb 2009 - 212 grams.  	0.1017	0.1144	242.249	Sth Waikato News	S	30.28	I	141
+C11420	06/03/2009		I	CI/3	2382.000	Sth Waikato News - Job 9340 - Delivery 18 Feb 2009 - 73 grams.  	0.0749	0.0843	178.412	Sth Waikato News	S	22.30	I	141
+C11420	06/03/2009		I	CI/4	2382.000	Sth Waikato News - Job 9341 - Delivery 25 Feb 2009 - 90 grams.  	0.0749	0.0843	178.412	Sth Waikato News	S	22.30	I	141
+

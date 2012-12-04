@@ -1,0 +1,392 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C10983	31/01/2009		I	CI/1	2991.000	Cambridge Property Guide - Job 8887 - Delivery 14 Jan 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C10983	31/01/2009		I		0.000	Cambridge Property Guide - Job 8887 - Delivery 14 Jan 2009 - 80 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Cambridge Property Guide	S	0.00	I	106
+C10983	31/01/2009		I	CI/2	2991.000	Cambridge Property Guide - Job 9132 - Delivery 21 Jan 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C10983	31/01/2009		I		0.000	Cambridge Property Guide - Job 9132 - Delivery 21 Jan 2009 - 80 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Cambridge Property Guide	S	0.00	I	106
+C10983	31/01/2009		I	CI/3	2991.000	Cambridge Property Guide - Job 9133 - Delivery 28 Jan 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C10983	31/01/2009		I		0.000	Cambridge Property Guide - Job 9133 - Delivery 28 Jan 2009 - 80 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Cambridge Property Guide	S	0.00	I	106
+
+C10984	31/01/2009		I	CI/1	2000.000	Eastside Community News - Job 9346 - Delivery 29 Jan 2009 - 30 grams. Includes folding fee 0.0100 cents. 	0.0756	0.0851	151.200	Eastside Community News	S	18.90	I	106
+C10984	31/01/2009		I		0.000	Eastside Community News - Job 9346 - Delivery 29 Jan 2009 - 30 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Eastside Community News	S	0.00	I	106
+
+C10985	31/01/2009	Gay Hubbard	I	CI/1	6000.000	Hamilton This Week - Job 8900 - Delivery 08 Jan 2009 - 35 grams. Includes folding fee 0.0100 cents. 	0.0756	0.0851	453.600	Hamilton This Week	S	56.70	I	106
+C10985	31/01/2009	Gay Hubbard	I		0.000	Hamilton This Week - Job 8900 - Delivery 08 Jan 2009 - 35 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Hamilton This Week	S	0.00	I	106
+C10985	31/01/2009	Gay Hubbard	I	CI/2	6000.000	Hamilton This Week - Job 8901 - Delivery 15 Jan 2009 - 40 grams. Includes folding fee 0.0100 cents. 	0.0756	0.0851	453.600	Hamilton This Week	S	56.70	I	106
+C10985	31/01/2009	Gay Hubbard	I		0.000	Hamilton This Week - Job 8901 - Delivery 15 Jan 2009 - 40 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Hamilton This Week	S	0.00	I	106
+C10985	31/01/2009	Gay Hubbard	I	CI/3	6000.000	Hamilton This Week - Job 9114 - Delivery 22 Jan 2009 - 65 grams. Includes folding fee 0.0100 cents. 	0.0858	0.0965	514.800	Hamilton This Week	S	64.35	I	106
+C10985	31/01/2009	Gay Hubbard	I		0.000	Hamilton This Week - Job 9114 - Delivery 22 Jan 2009 - 65 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Hamilton This Week	S	0.00	I	106
+C10985	31/01/2009	Gay Hubbard	I	CI/4	6000.000	Hamilton This Week - Job 9115 - Delivery 29 Jan 2009 - 100 grams. Includes folding fee 0.0100 cents. 	0.0858	0.0965	514.800	Hamilton This Week	S	64.35	I	106
+C10985	31/01/2009	Gay Hubbard	I		0.000	Hamilton This Week - Job 9115 - Delivery 29 Jan 2009 - 100 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Hamilton This Week	S	0.00	I	106
+
+C10986	31/01/2009	10434	I	CI/1	1922.000	Rural Advocate - Job 9170 - Delivery 20 Jan 2009 - 175 grams.  	0.0910	0.1024	174.902	Rural Advocate	S	21.86	I	106
+C10986	31/01/2009	10434	I		0.000	Rural Advocate - Job 9170 - Delivery 20 Jan 2009 - 175 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Rural Advocate	S	0.00	I	106
+
+C10987	31/01/2009		I	CI/1	3505.000	Te Puke Times - Job 8893 - Delivery 07 Jan 2009 - 65 grams.  	0.0749	0.0843	262.525	Te Puke Times	S	32.82	I	106
+C10987	31/01/2009		I		0.000	Te Puke Times - Job 8893 - Delivery 07 Jan 2009 - 65 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Te Puke Times	S	0.00	I	106
+C10987	31/01/2009		I	CI/2	3505.000	Te Puke Times - Job 8894 - Delivery 14 Jan 2009 - 70 grams.  	0.0749	0.0843	262.525	Te Puke Times	S	32.82	I	106
+C10987	31/01/2009		I		0.000	Te Puke Times - Job 8894 - Delivery 14 Jan 2009 - 70 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Te Puke Times	S	0.00	I	106
+C10987	31/01/2009		I	CI/3	3505.000	Te Puke Times - Job 9134 - Delivery 21 Jan 2009 - 50 grams.  	0.0749	0.0843	262.525	Te Puke Times	S	32.82	I	106
+C10987	31/01/2009		I		0.000	Te Puke Times - Job 9134 - Delivery 21 Jan 2009 - 50 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Te Puke Times	S	0.00	I	106
+C10987	31/01/2009		I	CI/4	3505.000	Te Puke Times - Job 9135 - Delivery 28 Jan 2009 - 75 grams.  	0.0749	0.0843	262.525	Te Puke Times	S	32.82	I	106
+C10987	31/01/2009		I		0.000	Te Puke Times - Job 9135 - Delivery 28 Jan 2009 - 75 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Te Puke Times	S	0.00	I	106
+
+C10988	31/01/2009	Whakatane/Opotiki	I	CI/1	1929.000	Cards - Arcadia Mkting - Job 9167 - Delivery 14 Jan 2009 - 10 grams.  	0.0749	0.0843	144.482	Cards - Arcadia Mkting	S	18.06	I	107
+C10988	31/01/2009	Whakatane/Opotiki	I		0.000	Cards - Arcadia Mkting - Job 9167 - Delivery 14 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Cards - Arcadia Mkting	S	0.00	I	107
+
+C10989	31/01/2009		I	CI/1	41481.000	Rural Living - Job 8766 - Delivery 19 Jan 2009 - 106 grams.  	0.1103	0.1241	4575.354	Rural Living	S	571.92	I	256
+C10989	31/01/2009		I		0.000	Rural Living - Job 8766 - Delivery 19 Jan 2009 - 106 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Rural Living	S	0.00	I	256
+
+C10990	31/01/2009		I	CI/1	81296.000	NZ Farmers Weekly - Job 9001 - Delivery 12 Jan 2009 - 85 grams. Includes folding fee 0.0100 cents. 	0.1195	0.1344	9714.872	NZ Farmers Weekly	S	1214.36	I	124
+C10990	31/01/2009		I		6198.000	NZ Farmers Weekly - Job 9001 - Delivery 12 Jan 2009 - 85 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	NZ Farmers Weekly	S	0.00	I	124
+C10990	31/01/2009		I	CI/2	81296.000	NZ Farmers Weekly - Job 9156 - Delivery 19 Jan 2009 - 102 grams. Includes folding fee 0.0100 cents. 	0.1480	0.1665	12031.808	NZ Farmers Weekly	S	1503.98	I	124
+C10990	31/01/2009		I		6198.000	NZ Farmers Weekly - Job 9156 - Delivery 19 Jan 2009 - 102 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	NZ Farmers Weekly	S	0.00	I	124
+C10990	31/01/2009		I	CI/3	81296.000	NZ Farmers Weekly - Job 9157 - Delivery 26 Jan 2009 - 95 grams. Includes folding fee 0.0100 cents. 	0.1195	0.1344	9714.872	NZ Farmers Weekly	S	1214.36	I	124
+C10990	31/01/2009		I		6198.000	NZ Farmers Weekly - Job 9157 - Delivery 26 Jan 2009 - 95 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	NZ Farmers Weekly	S	0.00	I	124
+
+C10991	31/01/2009	AD #25670	I	CI/1	19155.000	NZFW CW Great NZ Trek Charitable Trust - Job 9060 - Delivery 12 Jan 2009 - 20 grams.  	0.0910	0.1024	1743.105	NZFW CW Great NZ Trek Charitable Trust	S	217.89	I	124
+C10991	31/01/2009	AD #25670	I		0.000	NZFW CW Great NZ Trek Charitable Trust - Job 9060 - Delivery 12 Jan 2009 - 20 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	NZFW CW Great NZ Trek Charitable Trust	S	0.00	I	124
+
+C10992	31/01/2009	112689	I	CI/1	1099.000	Louise Local Link Jan 2009 - Job 9214 - Delivery 28 Jan 2009 - 10 grams.  	0.0883	0.0993	97.042	Louise Local Link Jan 2009	S	12.13	I	233
+C10992	31/01/2009	112689	I		0.000	Louise Local Link Jan 2009 - Job 9214 - Delivery 28 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Louise Local Link Jan 2009	S	0.00	I	233
+
+C10993	31/01/2009	112568	I	CI/1	1053.000	Practical Effluent Field Day - Job 9120 - Delivery IOA - 10 grams.  	0.0749	0.0843	78.870	Practical Effluent Field Day	S	9.86	I	233
+C10993	31/01/2009	112568	I		0.000	Practical Effluent Field Day - Job 9120 - Delivery IOA - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Practical Effluent Field Day	S	0.00	I	233
+
+C10994	31/01/2009		I	CI/1	996.000	Elders Livestock - Job 9190 - Delivery IOA - 5 grams.  	0.0856	0.0963	85.258	Elders Livestock	S	10.66	I	269
+C10994	31/01/2009		I		0.000	Elders Livestock - Job 9190 - Delivery IOA - 5 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Elders Livestock	S	0.00	I	269
+
+C10995	31/01/2009	services	I	CI/1	525.000	Effluent & Irrigation - Job 9068 - Delivery 07 Jan 2009 - 5 grams.  	0.1529	0.1720	80.273	Effluent & Irrigation	S	10.03	I	267
+C10995	31/01/2009	services	I		0.000	Effluent & Irrigation - Job 9068 - Delivery 07 Jan 2009 - 5 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Effluent & Irrigation	S	0.00	I	267
+C10995	31/01/2009	services	I	CI/2	960.000	Effluent & Irrigation Services - Job 9177 - Delivery 15 Jan 2009 - 10 grams.  	0.0836	0.0941	80.256	Effluent & Irrigation Services	S	10.03	I	267
+C10995	31/01/2009	services	I		0.000	Effluent & Irrigation Services - Job 9177 - Delivery 15 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Effluent & Irrigation Services	S	0.00	I	267
+C10995	31/01/2009	services	I	CI/3	0.000	Effluent & Irrigation Services - Job 9178 - Delivery 22 Jan 2009 - 10 grams.  	0.0000	0.0000	0.000	Effluent & Irrigation Services	S	0.00	I	267
+C10995	31/01/2009	services	I		0.000	Effluent & Irrigation Services - Job 9178 - Delivery 22 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Effluent & Irrigation Services	S	0.00	I	267
+C10995	31/01/2009	services	I	CI/4	650.000	Effluent & Irrigation Services - Job 9212 - Delivery 29 Jan 2009 - 10 grams.  	0.1235	0.1389	80.275	Effluent & Irrigation Services	S	10.03	I	267
+C10995	31/01/2009	services	I		0.000	Effluent & Irrigation Services - Job 9212 - Delivery 29 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Effluent & Irrigation Services	S	0.00	I	267
+
+C10996	31/01/2009		I	CI/1	4047.000	Cambridge Edition - Job 8781 - Delivery 07 Jan 2009 - 50 grams.  	0.0749	0.0843	303.120	Cambridge Edition	S	37.89	I	141
+C10996	31/01/2009		I		0.000	Cambridge Edition - Job 8781 - Delivery 07 Jan 2009 - 50 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Cambridge Edition	S	0.00	I	141
+C10996	31/01/2009		I	CI/2	4047.000	Cambridge Edition - Job 8787 - Delivery 14 Jan 2009 - 156 grams.  	0.0910	0.1024	368.277	Cambridge Edition	S	46.04	I	141
+C10996	31/01/2009		I		0.000	Cambridge Edition - Job 8787 - Delivery 14 Jan 2009 - 156 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Cambridge Edition	S	0.00	I	141
+C10996	31/01/2009		I	CI/3	4047.000	Cambridge Edition - Job 9112 - Delivery 21 Jan 2009 - 177 grams.  	0.0910	0.1024	368.277	Cambridge Edition	S	46.04	I	141
+C10996	31/01/2009		I		0.000	Cambridge Edition - Job 9112 - Delivery 21 Jan 2009 - 177 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Cambridge Edition	S	0.00	I	141
+C10996	31/01/2009		I	CI/4	4047.000	Cambridge Edition - Job 9113 - Delivery 28 Jan 2009 - 196 grams.  	0.0910	0.1024	368.277	Cambridge Edition	S	46.04	I	141
+C10996	31/01/2009		I		0.000	Cambridge Edition - Job 9113 - Delivery 28 Jan 2009 - 196 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Cambridge Edition	S	0.00	I	141
+
+C10997	31/01/2009	199354 Oct - Dec	I	CI/1	2975.000	Dargaville District News - Job 8786 - Delivery 14 Jan 2009 - 95 grams.  	0.0749	0.0843	222.828	Dargaville District News	S	27.85	I	141
+C10997	31/01/2009	199354 Oct - Dec	I		0.000	Dargaville District News - Job 8786 - Delivery 14 Jan 2009 - 95 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Dargaville District News	S	0.00	I	141
+C10997	31/01/2009		I	CI/2	2975.000	Dargaville District News - Job 9122 - Delivery 21 Jan 2009 - 35 grams.  	0.0749	0.0843	222.828	Dargaville District News	S	27.85	I	141
+C10997	31/01/2009		I		0.000	Dargaville District News - Job 9122 - Delivery 21 Jan 2009 - 35 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Dargaville District News	S	0.00	I	141
+C10997	31/01/2009		I	CI/3	2975.000	Dargaville District News - Job 9123 - Delivery 28 Jan 2009 - 40 grams.  	0.0749	0.0843	222.828	Dargaville District News	S	27.85	I	141
+C10997	31/01/2009		I		0.000	Dargaville District News - Job 9123 - Delivery 28 Jan 2009 - 40 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Dargaville District News	S	0.00	I	141
+
+C10998	31/01/2009		I	CI/1	11345.000	FCN - Thursday - Job 8796 - Delivery 15 Jan 2009 - 170 grams.  	0.0910	0.1024	1032.395	FCN - Thursday	S	129.05	I	141
+C10998	31/01/2009		I		0.000	FCN - Thursday - Job 8796 - Delivery 15 Jan 2009 - 170 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	FCN - Thursday	S	0.00	I	141
+C10998	31/01/2009		I	CI/2	11345.000	FCN - Thursday - Job 9116 - Delivery 22 Jan 2009 - 137 grams.  	0.0856	0.0963	971.132	FCN - Thursday	S	121.39	I	141
+C10998	31/01/2009		I		0.000	FCN - Thursday - Job 9116 - Delivery 22 Jan 2009 - 137 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	FCN - Thursday	S	0.00	I	141
+C10998	31/01/2009		I	CI/3	11345.000	FCN - Thursday - Job 9117 - Delivery 29 Jan 2009 - 175 grams.  	0.0910	0.1024	1032.395	FCN - Thursday	S	129.05	I	141
+C10998	31/01/2009		I		0.000	FCN - Thursday - Job 9117 - Delivery 29 Jan 2009 - 175 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	FCN - Thursday	S	0.00	I	141
+
+C10999	31/01/2009		I	CI/1	11345.000	FCN - Tuesday - Job 8792 - Delivery 13 Jan 2009 - 65 grams.  	0.0749	0.0843	849.740	FCN - Tuesday	S	106.22	I	141
+C10999	31/01/2009		I		0.000	FCN - Tuesday - Job 8792 - Delivery 13 Jan 2009 - 65 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	FCN - Tuesday	S	0.00	I	141
+C10999	31/01/2009		I	CI/2	11345.000	FCN - Tuesday - Job 9108 - Delivery 20 Jan 2009 - 95 grams.  	0.0749	0.0843	849.740	FCN - Tuesday	S	106.22	I	141
+C10999	31/01/2009		I		0.000	FCN - Tuesday - Job 9108 - Delivery 20 Jan 2009 - 95 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	FCN - Tuesday	S	0.00	I	141
+C10999	31/01/2009		I	CI/3	11345.000	FCN - Tuesday - Job 9109 - Delivery 27 Jan 2009 - 70 grams.  	0.0749	0.0843	849.740	FCN - Tuesday	S	106.22	I	141
+C10999	31/01/2009		I		0.000	FCN - Tuesday - Job 9109 - Delivery 27 Jan 2009 - 70 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	FCN - Tuesday	S	0.00	I	141
+
+C11000	31/01/2009		I	CI/1	2216.000	Matamata Chronicle - Job 8801 - Delivery 13 Jan 2009 - 211 grams. Includes folding fee 0.0100 cents. 	0.1117	0.1257	247.527	Matamata Chronicle	S	30.94	I	141
+C11000	31/01/2009		I		0.000	Matamata Chronicle - Job 8801 - Delivery 13 Jan 2009 - 211 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Matamata Chronicle	S	0.00	I	141
+C11000	31/01/2009		I	CI/2	2216.000	Matamata Chronicle - Job 9124 - Delivery 20 Jan 2009 - 185 grams. Includes folding fee 0.0100 cents. 	0.1010	0.1136	223.816	Matamata Chronicle	S	27.98	I	141
+C11000	31/01/2009		I		0.000	Matamata Chronicle - Job 9124 - Delivery 20 Jan 2009 - 185 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Matamata Chronicle	S	0.00	I	141
+C11000	31/01/2009		I	CI/3	2230.000	Matamata Chronicle - Job 9125 - Delivery 27 Jan 2009 - 256 grams. Includes folding fee 0.0100 cents. 	0.1224	0.1377	272.952	Matamata Chronicle	S	34.12	I	141
+C11000	31/01/2009		I		0.000	Matamata Chronicle - Job 9125 - Delivery 27 Jan 2009 - 256 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Matamata Chronicle	S	0.00	I	141
+
+C11001	31/01/2009		I	CI/1	3076.000	Nth Waikato News - Job 8807 - Delivery 07 Jan 2009 - 25 grams.  	0.0749	0.0843	230.392	Nth Waikato News	S	28.80	I	141
+C11001	31/01/2009		I		0.000	Nth Waikato News - Job 8807 - Delivery 07 Jan 2009 - 25 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Nth Waikato News	S	0.00	I	141
+C11001	31/01/2009		I	CI/2	3076.000	Nth Waikato News - Job 8808 - Delivery 14 Jan 2009 - 40 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C11001	31/01/2009		I		0.000	Nth Waikato News - Job 8808 - Delivery 14 Jan 2009 - 40 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Nth Waikato News	S	0.00	I	141
+C11001	31/01/2009		I	CI/3	3076.000	Nth Waikato News - Job 9118 - Delivery 21 Jan 2009 - 35 grams.  	0.0749	0.0843	230.392	Nth Waikato News	S	28.80	I	141
+C11001	31/01/2009		I		0.000	Nth Waikato News - Job 9118 - Delivery 21 Jan 2009 - 35 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Nth Waikato News	S	0.00	I	141
+C11001	31/01/2009		I	CI/4	3076.000	Nth Waikato News - Job 9119 - Delivery 28 Jan 2009 - 25 grams.  	0.0749	0.0843	230.392	Nth Waikato News	S	28.80	I	141
+C11001	31/01/2009		I		0.000	Nth Waikato News - Job 9119 - Delivery 28 Jan 2009 - 25 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Nth Waikato News	S	0.00	I	141
+
+C11002	31/01/2009	203198 Oct - Mar	I	CI/1	3792.000	Piako Post - Job 8814 - Delivery 07 Jan 2009 - 120 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	362.515	Piako Post	S	45.31	I	141
+C11002	31/01/2009	203198 Oct - Mar	I		0.000	Piako Post - Job 8814 - Delivery 07 Jan 2009 - 120 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Piako Post	S	0.00	I	141
+C11002	31/01/2009	203198 Oct - Mar	I	CI/2	3792.000	Piako Post - Job 8815 - Delivery 14 Jan 2009 - 181 grams. Includes folding fee 0.0100 cents. 	0.1010	0.1136	382.992	Piako Post	S	47.87	I	141
+C11002	31/01/2009	203198 Oct - Mar	I		0.000	Piako Post - Job 8815 - Delivery 14 Jan 2009 - 181 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Piako Post	S	0.00	I	141
+C11002	31/01/2009	203198 Oct - Mar	I	CI/3	3792.000	Piako Post - Job 9126 - Delivery 21 Jan 2009 - 188 grams. Includes folding fee 0.0100 cents. 	0.1010	0.1136	382.992	Piako Post	S	47.87	I	141
+C11002	31/01/2009	203198 Oct - Mar	I		0.000	Piako Post - Job 9126 - Delivery 21 Jan 2009 - 188 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Piako Post	S	0.00	I	141
+C11002	31/01/2009	203198 Oct - Mar	I	CI/4	3792.000	Piako Post - Job 9127 - Delivery 28 Jan 2009 - 222 grams. Includes folding fee 0.0100 cents. 	0.1117	0.1257	423.566	Piako Post	S	52.95	I	141
+C11002	31/01/2009	203198 Oct - Mar	I		0.000	Piako Post - Job 9127 - Delivery 28 Jan 2009 - 222 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Piako Post	S	0.00	I	141
+
+C11003	31/01/2009	0000215990JAN-MAR	I	CI/1	3195.000	Rotorua Review - Job 8821 - Delivery 13 Jan 2009 - 98 grams.  	0.0749	0.0843	239.306	Rotorua Review	S	29.91	I	141
+C11003	31/01/2009	0000215990JAN-MAR	I		0.000	Rotorua Review - Job 8821 - Delivery 13 Jan 2009 - 98 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Rotorua Review	S	0.00	I	141
+C11003	31/01/2009	0000215990JAN-MAR	I	CI/2	3195.000	Rotorua Review - Job 9110 - Delivery 20 Jan 2009 - 78 grams.  	0.0749	0.0843	239.306	Rotorua Review	S	29.91	I	141
+C11003	31/01/2009	0000215990JAN-MAR	I		0.000	Rotorua Review - Job 9110 - Delivery 20 Jan 2009 - 78 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Rotorua Review	S	0.00	I	141
+C11003	31/01/2009	0000215990JAN-MAR	I	CI/3	3195.000	Rotorua Review - Job 9111 - Delivery 27 Jan 2009 - 50 grams.  	0.0749	0.0843	239.306	Rotorua Review	S	29.91	I	141
+C11003	31/01/2009	0000215990JAN-MAR	I		0.000	Rotorua Review - Job 9111 - Delivery 27 Jan 2009 - 50 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Rotorua Review	S	0.00	I	141
+
+C11004	31/01/2009	199348 Oct - Dec	I	CI/1	2382.000	Sth Waikato News - Job 8824 - Delivery 07 Jan 2009 - 82 grams.  	0.0749	0.0843	178.412	Sth Waikato News	S	22.30	I	141
+C11004	31/01/2009	199348 Oct - Dec	I		0.000	Sth Waikato News - Job 8824 - Delivery 07 Jan 2009 - 82 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Sth Waikato News	S	0.00	I	141
+C11004	31/01/2009	199348 Oct - Dec	I	CI/2	2382.000	Sth Waikato News - Job 8825 - Delivery 14 Jan 2009 - 145 grams.  	0.0856	0.0963	203.899	Sth Waikato News	S	25.49	I	141
+C11004	31/01/2009	199348 Oct - Dec	I		0.000	Sth Waikato News - Job 8825 - Delivery 14 Jan 2009 - 145 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Sth Waikato News	S	0.00	I	141
+C11004	31/01/2009	199348 Oct - Dec	I	CI/3	2382.000	Sth Waikato News - Job 9128 - Delivery 21 Jan 2009 - 121 grams.  	0.0856	0.0963	203.899	Sth Waikato News	S	25.49	I	141
+C11004	31/01/2009	199348 Oct - Dec	I		0.000	Sth Waikato News - Job 9128 - Delivery 21 Jan 2009 - 121 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Sth Waikato News	S	0.00	I	141
+C11004	31/01/2009	199348 Oct - Dec	I	CI/4	2382.000	Sth Waikato News - Job 9129 - Delivery 28 Jan 2009 - 181 grams.  	0.0910	0.1024	216.762	Sth Waikato News	S	27.10	I	141
+C11004	31/01/2009	199348 Oct - Dec	I		0.000	Sth Waikato News - Job 9129 - Delivery 28 Jan 2009 - 181 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Sth Waikato News	S	0.00	I	141
+
+C11005	31/01/2009		I	CI/1	11656.000	Waikato Farmers Newspaper - Job 9186 - Delivery IOA - 98 grams. Includes folding fee 0.0100 cents. 	0.1491	0.1677	1737.910	Waikato Farmers Newspaper	S	217.24	I	141
+C11005	31/01/2009		I		0.000	Waikato Farmers Newspaper - Job 9186 - Delivery IOA - 98 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Waikato Farmers Newspaper	S	0.00	I	141
+
+C11006	31/01/2009		I	CI/1	7950.000	Whangarei Leader - Job 8830 - Delivery 13 Jan 2009 - 61 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	674.955	Whangarei Leader	S	84.37	I	141
+C11006	31/01/2009		I		0.000	Whangarei Leader - Job 8830 - Delivery 13 Jan 2009 - 61 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Whangarei Leader	S	0.00	I	141
+C11006	31/01/2009		I	CI/2	7950.000	Whangarei Leader - Job 9130 - Delivery 20 Jan 2009 - 78 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	674.955	Whangarei Leader	S	84.37	I	141
+C11006	31/01/2009		I		0.000	Whangarei Leader - Job 9130 - Delivery 20 Jan 2009 - 78 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Whangarei Leader	S	0.00	I	141
+C11006	31/01/2009		I	CI/3	7950.000	Whangarei Leader - Job 9131 - Delivery 27 Jan 2009 - 61 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	674.955	Whangarei Leader	S	84.37	I	141
+C11006	31/01/2009		I		0.000	Whangarei Leader - Job 9131 - Delivery 27 Jan 2009 - 61 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Whangarei Leader	S	0.00	I	141
+
+C11007	31/01/2009	112	I	CI/1	2471.000	AW Malloy Contracting - Job 9188 - Delivery 19 Jan 2009 - 10 grams.  	0.0749	0.0843	185.078	AW Malloy Contracting	S	23.13	I	159
+C11007	31/01/2009	112	I		0.000	AW Malloy Contracting - Job 9188 - Delivery 19 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	AW Malloy Contracting	S	0.00	I	159
+
+C11008	31/01/2009	January Flyer	I	CI/1	4184.000	Livestock Exchange  - Job 9180 - Delivery 17 Jan 2009 - 5 grams.  	0.0749	0.0843	313.382	Livestock Exchange 	S	39.17	I	252
+C11008	31/01/2009	January Flyer	I		0.000	Livestock Exchange  - Job 9180 - Delivery 17 Jan 2009 - 5 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Livestock Exchange 	S	0.00	I	252
+
+C11009	31/01/2009		I	CI/1	4184.000	Livestock Exchange Newslette - Job 9218 - Delivery 27 Jan 2009 - 10 grams.  	0.0749	0.0843	313.382	Livestock Exchange Newslette	S	39.17	I	252
+C11009	31/01/2009		I		0.000	Livestock Exchange Newslette - Job 9218 - Delivery 27 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Livestock Exchange Newslette	S	0.00	I	252
+
+C11010	31/01/2009	2801035	I	CI/1	25639.000	Dairying Today - Job 9182 - Delivery 27 Jan 2009 - 110 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	2602.359	Dairying Today	S	325.30	I	169
+C11010	31/01/2009	2801035	I		0.000	Dairying Today - Job 9182 - Delivery 27 Jan 2009 - 110 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Dairying Today	S	0.00	I	169
+
+C11011	31/01/2009		I	CI/1	62120.000	Four Square Northern - Job 8920 - Delivery 03 Jan 2009 - 10 grams.  	0.0508	0.0572	3155.696	Four Square Northern	S	394.46	I	169
+C11011	31/01/2009		I		0.000	Four Square Northern - Job 8920 - Delivery 03 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Four Square Northern	S	0.00	I	169
+C11011	31/01/2009		I	CI/2	62120.000	Four Square Northern - Job 9099 - Delivery 10 Jan 2009 - 10 grams.  	0.0508	0.0572	3155.696	Four Square Northern	S	394.46	I	169
+C11011	31/01/2009		I		0.000	Four Square Northern - Job 9099 - Delivery 10 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Four Square Northern	S	0.00	I	169
+C11011	31/01/2009		I	CI/3	62120.000	Four Square Northern - Job 9100 - Delivery 17 Jan 2009 - 10 grams.  	0.0508	0.0572	3155.696	Four Square Northern	S	394.46	I	169
+C11011	31/01/2009		I		0.000	Four Square Northern - Job 9100 - Delivery 17 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Four Square Northern	S	0.00	I	169
+C11011	31/01/2009		I	CI/4	62120.000	Four Square Northern - Job 9101 - Delivery 24 Jan 2009 - 10 grams.  	0.0508	0.0572	3155.696	Four Square Northern	S	394.46	I	169
+C11011	31/01/2009		I		0.000	Four Square Northern - Job 9101 - Delivery 24 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Four Square Northern	S	0.00	I	169
+C11011	31/01/2009		I	CI/5	62120.000	Four Square Northern - Job 9102 - Delivery 31 Jan 2009 - 10 grams.  	0.0508	0.0572	3155.696	Four Square Northern	S	394.46	I	169
+C11011	31/01/2009		I		0.000	Four Square Northern - Job 9102 - Delivery 31 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Four Square Northern	S	0.00	I	169
+
+C11012	31/01/2009	2812159	I	CI/1	25639.000	Getting the Basics Right - Job 9074 - Delivery 10 Jan 2009 - 198 grams. Includes folding fee 0.0100 cents. 	0.1170	0.1316	2999.763	Getting the Basics Right	S	374.97	I	169
+C11012	31/01/2009	2812159	I		0.000	Getting the Basics Right - Job 9074 - Delivery 10 Jan 2009 - 198 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Getting the Basics Right	S	0.00	I	169
+
+C11013	31/01/2009		I	CI/1	63780.000	New World Northern  - Job 8912 - Delivery 03 Jan 2009 - 25 grams.  	0.0475	0.0534	3029.550	New World Northern 	S	378.69	I	169
+C11013	31/01/2009		I		0.000	New World Northern  - Job 8912 - Delivery 03 Jan 2009 - 25 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	New World Northern 	S	0.00	I	169
+C11013	31/01/2009		I	CI/2	63780.000	New World Northern  - Job 9163 - Delivery 10 Jan 2009 - 40 grams.  	0.0589	0.0663	3756.642	New World Northern 	S	469.58	I	169
+C11013	31/01/2009		I		0.000	New World Northern  - Job 9163 - Delivery 10 Jan 2009 - 40 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	New World Northern 	S	0.00	I	169
+C11013	31/01/2009		I	CI/3	63780.000	New World Northern  - Job 9164 - Delivery 17 Jan 2009 - 30 grams.  	0.0589	0.0663	3756.642	New World Northern 	S	469.58	I	169
+C11013	31/01/2009		I		0.000	New World Northern  - Job 9164 - Delivery 17 Jan 2009 - 30 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	New World Northern 	S	0.00	I	169
+C11013	31/01/2009		I	CI/4	63780.000	New World Northern  - Job 9165 - Delivery 24 Jan 2009 - 30 grams.  	0.0589	0.0663	3756.642	New World Northern 	S	469.58	I	169
+C11013	31/01/2009		I		0.000	New World Northern  - Job 9165 - Delivery 24 Jan 2009 - 30 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	New World Northern 	S	0.00	I	169
+C11013	31/01/2009		I	CI/5	63780.000	New World Northern  - Job 9166 - Delivery 31 Jan 2009 - 30 grams.  	0.0589	0.0663	3756.642	New World Northern 	S	469.58	I	169
+C11013	31/01/2009		I		0.000	New World Northern  - Job 9166 - Delivery 31 Jan 2009 - 30 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	New World Northern 	S	0.00	I	169
+
+C11014	31/01/2009		I	CI/1	73285.000	Rural News  - Job 9185 - Delivery 20 Jan 2009 - 101 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	7438.428	Rural News 	S	929.80	I	169
+C11014	31/01/2009		I		0.000	Rural News  - Job 9185 - Delivery 20 Jan 2009 - 101 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Rural News 	S	0.00	I	169
+
+C11015	31/01/2009	2901033	I	CI/1	134769.000	Steelfort MTD Jan - Job 9103 - Delivery 20 Jan 2009 - 20 grams.  	0.0508	0.0572	6846.265	Steelfort MTD Jan	S	855.78	I	169
+C11015	31/01/2009	2901033	I		0.000	Steelfort MTD Jan - Job 9103 - Delivery 20 Jan 2009 - 20 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Steelfort MTD Jan	S	0.00	I	169
+
+C11016	31/01/2009		I	CI/1	2413.000	Waitaki Weekender 13/12/08 - Job 9209 - Delivery 01 Jan 2009 - 110 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	Waitaki Weekender 13/12/08	S	30.62	I	169
+C11016	31/01/2009		I		0.000	Waitaki Weekender 13/12/08 - Job 9209 - Delivery 01 Jan 2009 - 110 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Waitaki Weekender 13/12/08	S	0.00	I	169
+
+C11017	31/01/2009		I	CI/1	2413.000	Waitaki Weekender 20/12/08 - Job 9210 - Delivery 01 Jan 2009 - 100 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	211.379	Waitaki Weekender 20/12/08	S	26.42	I	169
+C11017	31/01/2009		I		0.000	Waitaki Weekender 20/12/08 - Job 9210 - Delivery 01 Jan 2009 - 100 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Waitaki Weekender 20/12/08	S	0.00	I	169
+
+C11018	31/01/2009		I	CI/1	2413.000	Waitaki Weekender 6/12/08 - Job 9208 - Delivery 01 Jan 2009 - 110 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	Waitaki Weekender 6/12/08	S	30.62	I	169
+C11018	31/01/2009		I		0.000	Waitaki Weekender 6/12/08 - Job 9208 - Delivery 01 Jan 2009 - 110 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Waitaki Weekender 6/12/08	S	0.00	I	169
+
+C11019	31/01/2009		I	CI/1	2610.000	Bay Vets Lifestyle Mailer - Job 9054 - Delivery 05 Jan 2009 - 10 grams.  	0.0856	0.0963	223.416	Bay Vets Lifestyle Mailer	S	27.93	I	178
+C11019	31/01/2009		I		0.000	Bay Vets Lifestyle Mailer - Job 9054 - Delivery 05 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Bay Vets Lifestyle Mailer	S	0.00	I	178
+
+C11020	31/01/2009	23717	I	CI/1	37495.000	Merial Ancare Sheep Farmer - Job 9179 - Delivery 28 Jan 2009 - 10 grams.  	0.0910	0.1024	3412.045	Merial Ancare Sheep Farmer	S	426.51	I	178
+C11020	31/01/2009	23717	I		0.000	Merial Ancare Sheep Farmer - Job 9179 - Delivery 28 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Merial Ancare Sheep Farmer	S	0.00	I	178
+
+C11021	31/01/2009		I	CI/1	2340.000	TGA Kati Lifestyle Block - Job 9193 - Delivery 24 Jan 2009 - 10 grams.  	0.0856	0.0963	200.304	TGA Kati Lifestyle Block	S	25.04	I	178
+C11021	31/01/2009		I		0.000	TGA Kati Lifestyle Block - Job 9193 - Delivery 24 Jan 2009 - 10 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	TGA Kati Lifestyle Block	S	0.00	I	178
+
+C11022	31/01/2009	131108	I	CI/1	3620.000	Kaipara Lifestyler - Job 8757 - Delivery 15 Jan 2009 - 75 grams.  	0.0927	0.1043	335.574	Kaipara Lifestyler	S	41.95	I	257
+C11022	31/01/2009	131108	I		0.000	Kaipara Lifestyler - Job 8757 - Delivery 15 Jan 2009 - 75 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Kaipara Lifestyler	S	0.00	I	257
+C11022	31/01/2009	131108	I	CI/2	3620.000	Kaipara Lifestyler - Job 8758 - Delivery 29 Jan 2009 - 85 grams.  	0.0927	0.1043	335.574	Kaipara Lifestyler	S	41.95	I	257
+C11022	31/01/2009	131108	I		0.000	Kaipara Lifestyler - Job 8758 - Delivery 29 Jan 2009 - 85 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Kaipara Lifestyler	S	0.00	I	257
+
+C11023	31/01/2009		I	CI/1	25658.000	Dairyman - Job 9202 - Delivery 31 Jan 2009 - 95 grams. Includes folding fee 0.0100 cents. 	0.1260	0.1417	3232.908	Dairyman	S	404.11	I	261
+C11023	31/01/2009		I		0.000	Dairyman - Job 9202 - Delivery 31 Jan 2009 - 95 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Dairyman	S	0.00	I	261
+
+C11024	31/01/2009		I	CI/1	10793.000	Rural Waikato - Job 9217 - Delivery IOA - 33 grams. Includes folding fee 0.0100 cents. 	0.0934	0.1051	1008.066	Rural Waikato	S	126.01	I	261
+C11024	31/01/2009		I		0.000	Rural Waikato - Job 9217 - Delivery IOA - 33 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Rural Waikato	S	0.00	I	261
+
+C11025	31/01/2009		I	CI/1	7381.000	SF cw Homewood Building - Job 9158 - Delivery 13 Jan 2009 - 247 grams. Includes folding fee 0.0100 cents. 	0.2060	0.2318	1520.486	SF cw Homewood Building	S	190.06	I	261
+C11025	31/01/2009		I		0.000	SF cw Homewood Building - Job 9158 - Delivery 13 Jan 2009 - 247 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	SF cw Homewood Building	S	0.00	I	261
+C11025	31/01/2009		I	CI/2	11745.000	SFurrow/ Rural Waikato - Job 9194 - Delivery 27 Jan 2009 - 120 grams. Includes folding fee 0.0100 cents. 	0.1500	0.1687	1761.750	SFurrow/ Rural Waikato	S	220.22	I	261
+C11025	31/01/2009		I		0.000	SFurrow/ Rural Waikato - Job 9194 - Delivery 27 Jan 2009 - 120 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	SFurrow/ Rural Waikato	S	0.00	I	261
+C11025	31/01/2009		I	CI/3	74585.000	SFurrow/Condor Insert - Job 9196 - Delivery 27 Jan 2009 - 87 grams. Includes folding fee 0.0100 cents. 	0.1260	0.1417	9397.710	SFurrow/Condor Insert	S	1174.71	I	261
+C11025	31/01/2009		I		0.000	SFurrow/Condor Insert - Job 9196 - Delivery 27 Jan 2009 - 87 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	SFurrow/Condor Insert	S	0.00	I	261
+C11025	31/01/2009		I	CI/4	4404.000	Straight Furrow - Job 9162 - Delivery 13 Jan 2009 - 232 grams. Includes folding fee 0.0100 cents. 	0.2060	0.2318	907.224	Straight Furrow	S	113.40	I	261
+C11025	31/01/2009		I		0.000	Straight Furrow - Job 9162 - Delivery 13 Jan 2009 - 232 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Straight Furrow	S	0.00	I	261
+C11025	31/01/2009		I	CI/5	86330.000	Straight Furrow - Job 9149 - Delivery 20 Jan 2009 - 75 grams. Includes folding fee 0.0100 cents. 	0.0100	0.0113	863.300	Straight Furrow	S	107.91	I	261
+C11025	31/01/2009		I		0.000	Straight Furrow - Job 9149 - Delivery 20 Jan 2009 - 75 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Straight Furrow	S	0.00	I	261
+C11025	31/01/2009		I	CI/6	78949.000	Straight Furrow/Ag Trader - Job 9105 - Delivery 13 Jan 2009 - 235 grams. Includes folding fee 0.0100 cents. 	0.2060	0.2318	16263.494	Straight Furrow/Ag Trader	S	2032.94	I	261
+C11025	31/01/2009		I		0.000	Straight Furrow/Ag Trader - Job 9105 - Delivery 13 Jan 2009 - 235 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Straight Furrow/Ag Trader	S	0.00	I	261
+
+C11026	31/01/2009	2308396	I	CI/1	895.000	Bay News - Job 8851 - Delivery 07 Jan 2009 - 83 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	81.266	Bay News	S	10.16	I	201
+C11026	31/01/2009	2308396	I		0.000	Bay News - Job 8851 - Delivery 07 Jan 2009 - 83 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Bay News	S	0.00	I	201
+C11026	31/01/2009	2308396	I	CI/2	895.000	Bay News - Job 8852 - Delivery 14 Jan 2009 - 106 grams.  	0.1070	0.1204	95.765	Bay News	S	11.97	I	201
+C11026	31/01/2009	2308396	I		0.000	Bay News - Job 8852 - Delivery 14 Jan 2009 - 106 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Bay News	S	0.00	I	201
+C11026	31/01/2009	2308396	I	CI/3	895.000	Bay News - Job 9081 - Delivery 21 Jan 2009 - 118 grams.  	0.1070	0.1204	95.765	Bay News	S	11.97	I	201
+C11026	31/01/2009	2308396	I		0.000	Bay News - Job 9081 - Delivery 21 Jan 2009 - 118 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Bay News	S	0.00	I	201
+C11026	31/01/2009	2308396	I	CI/4	895.000	Bay News - Job 9082 - Delivery 28 Jan 2009 - 133 grams.  	0.1070	0.1204	95.765	Bay News	S	11.97	I	201
+C11026	31/01/2009	2308396	I		0.000	Bay News - Job 9082 - Delivery 28 Jan 2009 - 133 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Bay News	S	0.00	I	201
+
+C11027	31/01/2009	2308418	I	CI/1	2585.000	Bay Report - Job 9090 - Delivery 08 Jan 2009 - 42 grams. Includes folding fee 0.0100 cents. 	0.0758	0.0853	195.943	Bay Report	S	24.49	I	201
+C11027	31/01/2009	2308418	I		0.000	Bay Report - Job 9090 - Delivery 08 Jan 2009 - 42 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Bay Report	S	0.00	I	201
+C11027	31/01/2009	2308418	I	CI/2	2585.000	Bay Report - Job 9094 - Delivery 15 Jan 2009 - 41 grams. Includes folding fee 0.0100 cents. 	0.0758	0.0853	195.943	Bay Report	S	24.49	I	201
+C11027	31/01/2009	2308418	I		0.000	Bay Report - Job 9094 - Delivery 15 Jan 2009 - 41 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Bay Report	S	0.00	I	201
+C11027	31/01/2009	2308418	I	CI/3	2585.000	Bay Report - Job 9095 - Delivery 22 Jan 2009 - 43 grams.  	0.0658	0.0740	170.093	Bay Report	S	21.26	I	201
+C11027	31/01/2009	2308418	I		0.000	Bay Report - Job 9095 - Delivery 22 Jan 2009 - 43 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Bay Report	S	0.00	I	201
+C11027	31/01/2009	2308418	I	CI/4	2585.000	Bay Report - Job 9096 - Delivery 29 Jan 2009 - 41 grams.  	0.0658	0.0740	170.093	Bay Report	S	21.26	I	201
+C11027	31/01/2009	2308418	I		0.000	Bay Report - Job 9096 - Delivery 29 Jan 2009 - 41 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Bay Report	S	0.00	I	201
+
+C11028	31/01/2009	2308097	I	CI/1	1591.000	CHCH Star Combined Paper - Job 9069 - Delivery 06 Jan 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	144.463	CHCH Star Combined Paper	S	18.06	I	201
+C11028	31/01/2009	2308097	I		0.000	CHCH Star Combined Paper - Job 9069 - Delivery 06 Jan 2009 - 76 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	CHCH Star Combined Paper	S	0.00	I	201
+
+C11029	31/01/2009	2308358	I	CI/1	3670.000	Guardian Newspaper - Job 8858 - Delivery 08 Jan 2009 - 75 grams.  	0.0808	0.0909	296.536	Guardian Newspaper	S	37.07	I	201
+C11029	31/01/2009	2308358	I		0.000	Guardian Newspaper - Job 8858 - Delivery 08 Jan 2009 - 75 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Guardian Newspaper	S	0.00	I	201
+C11029	31/01/2009	2308358	I	CI/2	3670.000	Guardian Newspaper - Job 8859 - Delivery 15 Jan 2009 - 75 grams.  	0.0808	0.0909	296.536	Guardian Newspaper	S	37.07	I	201
+C11029	31/01/2009	2308358	I		0.000	Guardian Newspaper - Job 8859 - Delivery 15 Jan 2009 - 75 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Guardian Newspaper	S	0.00	I	201
+C11029	31/01/2009	2308358	I	CI/3	3670.000	Guardian Newspaper - Job 9077 - Delivery 22 Jan 2009 - 166 grams.  	0.1284	0.1445	471.228	Guardian Newspaper	S	58.90	I	201
+C11029	31/01/2009	2308358	I		0.000	Guardian Newspaper - Job 9077 - Delivery 22 Jan 2009 - 166 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Guardian Newspaper	S	0.00	I	201
+
+C11030	31/01/2009	2312955	I	CI/1	3670.000	Guardian Newspaper - Job 9140 - Delivery 29 Jan 2009 - 85 grams.  	0.0808	0.0909	296.536	Guardian Newspaper	S	37.07	I	201
+C11030	31/01/2009	2312955	I		0.000	Guardian Newspaper - Job 9140 - Delivery 29 Jan 2009 - 85 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Guardian Newspaper	S	0.00	I	201
+
+C11031	31/01/2009	2308357	I	CI/1	6440.000	Hawkesbay Country Scene - Job 8880 - Delivery 14 Jan 2009 - 42 grams.  	0.0658	0.0740	423.752	Hawkesbay Country Scene	S	52.97	I	201
+C11031	31/01/2009	2308357	I		0.000	Hawkesbay Country Scene - Job 8880 - Delivery 14 Jan 2009 - 42 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Hawkesbay Country Scene	S	0.00	I	201
+
+C11032	31/01/2009	2308454	I	CI/1	3771.000	Herald - Mid Canterbury Herald - Job 8941 - Delivery 07 Jan 2009 - 43 grams. Includes folding fee 0.0100 cents. 	0.0758	0.0853	285.842	Herald - Mid Canterbury Herald	S	35.73	I	201
+C11032	31/01/2009	2308454	I		0.000	Herald - Mid Canterbury Herald - Job 8941 - Delivery 07 Jan 2009 - 43 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - Mid Canterbury Herald	S	0.00	I	201
+
+C11033	31/01/2009	2309901	I	CI/1	3771.000	Herald - Mid Canterbury Herald - Job 9136 - Delivery 14 Jan 2009 - 63 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	342.407	Herald - Mid Canterbury Herald	S	42.80	I	201
+C11033	31/01/2009	2309901	I		0.000	Herald - Mid Canterbury Herald - Job 9136 - Delivery 14 Jan 2009 - 63 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - Mid Canterbury Herald	S	0.00	I	201
+C11033	31/01/2009	2309901	I	CI/2	3771.000	Herald - Mid Canterbury Herald - Job 9137 - Delivery 21 Jan 2009 - 100 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	342.407	Herald - Mid Canterbury Herald	S	42.80	I	201
+C11033	31/01/2009	2309901	I		0.000	Herald - Mid Canterbury Herald - Job 9137 - Delivery 21 Jan 2009 - 100 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - Mid Canterbury Herald	S	0.00	I	201
+C11033	31/01/2009	2309901	I	CI/3	3771.000	Herald - Mid Canterbury Herald - Job 9138 - Delivery 28 Jan 2009 - 85 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	342.407	Herald - Mid Canterbury Herald	S	42.80	I	201
+C11033	31/01/2009	2309901	I		0.000	Herald - Mid Canterbury Herald - Job 9138 - Delivery 28 Jan 2009 - 85 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - Mid Canterbury Herald	S	0.00	I	201
+
+C11034	31/01/2009	2309899	I	CI/1	5234.000	Herald - The High Country Herald - Job 8949 - Delivery 14 Jan 2009 - 60 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	475.247	Herald - The High Country Herald	S	59.41	I	201
+C11034	31/01/2009	2309899	I		0.000	Herald - The High Country Herald - Job 8949 - Delivery 14 Jan 2009 - 60 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - The High Country Herald	S	0.00	I	201
+C11034	31/01/2009	2309899	I	CI/2	5234.000	Herald - The High Country Herald - Job 9142 - Delivery 21 Jan 2009 - 88 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	475.247	Herald - The High Country Herald	S	59.41	I	201
+C11034	31/01/2009	2309899	I		0.000	Herald - The High Country Herald - Job 9142 - Delivery 21 Jan 2009 - 88 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - The High Country Herald	S	0.00	I	201
+C11034	31/01/2009	2309899	I	CI/3	5234.000	Herald - The High Country Herald - Job 9143 - Delivery 28 Jan 2009 - 90 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	475.247	Herald - The High Country Herald	S	59.41	I	201
+C11034	31/01/2009	2309899	I		0.000	Herald - The High Country Herald - Job 9143 - Delivery 28 Jan 2009 - 90 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - The High Country Herald	S	0.00	I	201
+
+C11035	31/01/2009	2308451	I	CI/1	2413.000	Herald - The Waitaki Herald - Job 8955 - Delivery 07 Jan 2009 - 88 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	219.100	Herald - The Waitaki Herald	S	27.39	I	201
+C11035	31/01/2009	2308451	I		0.000	Herald - The Waitaki Herald - Job 8955 - Delivery 07 Jan 2009 - 88 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - The Waitaki Herald	S	0.00	I	201
+
+C11036	31/01/2009	2309895	I	CI/1	2413.000	Herald - The Waitaki Herald - Job 8956 - Delivery 14 Jan 2009 - 88 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	219.100	Herald - The Waitaki Herald	S	27.39	I	201
+C11036	31/01/2009	2309895	I		0.000	Herald - The Waitaki Herald - Job 8956 - Delivery 14 Jan 2009 - 88 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - The Waitaki Herald	S	0.00	I	201
+C11036	31/01/2009	2309895	I	CI/2	2413.000	Herald - The Waitaki Herald - Job 9144 - Delivery 21 Jan 2009 - 100 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	219.100	Herald - The Waitaki Herald	S	27.39	I	201
+C11036	31/01/2009	2309895	I		0.000	Herald - The Waitaki Herald - Job 9144 - Delivery 21 Jan 2009 - 100 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - The Waitaki Herald	S	0.00	I	201
+C11036	31/01/2009	2309895	I	CI/3	2413.000	Herald - The Waitaki Herald - Job 9145 - Delivery 28 Jan 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	219.100	Herald - The Waitaki Herald	S	27.39	I	201
+C11036	31/01/2009	2309895	I		0.000	Herald - The Waitaki Herald - Job 9145 - Delivery 28 Jan 2009 - 80 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - The Waitaki Herald	S	0.00	I	201
+
+C11037	31/01/2009	2308447	I	CI/1	2413.000	Herald - The Waitaki Herald Weekender - Job 9086 - Delivery 09 Jan 2009 - 88 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	219.100	Herald - The Waitaki Herald Weekender	S	27.39	I	201
+C11037	31/01/2009	2308447	I		0.000	Herald - The Waitaki Herald Weekender - Job 9086 - Delivery 09 Jan 2009 - 88 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - The Waitaki Herald Weekender	S	0.00	I	201
+
+C11038	31/01/2009	2309896	I	CI/1	2413.000	Herald - The Waitaki Herald Weekender - Job 9146 - Delivery 16 Jan 2009 - 88 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	219.100	Herald - The Waitaki Herald Weekender	S	27.39	I	201
+C11038	31/01/2009	2309896	I		0.000	Herald - The Waitaki Herald Weekender - Job 9146 - Delivery 16 Jan 2009 - 88 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - The Waitaki Herald Weekender	S	0.00	I	201
+C11038	31/01/2009	2309896	I	CI/2	2413.000	Herald - The Waitaki Herald Weekender - Job 9147 - Delivery 23 Jan 2009 - 75 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	219.100	Herald - The Waitaki Herald Weekender	S	27.39	I	201
+C11038	31/01/2009	2309896	I		0.000	Herald - The Waitaki Herald Weekender - Job 9147 - Delivery 23 Jan 2009 - 75 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - The Waitaki Herald Weekender	S	0.00	I	201
+C11038	31/01/2009	2309896	I	CI/3	2413.000	Herald - The Waitaki Herald Weekender - Job 9148 - Delivery 31 Jan 2009 - 100 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	219.100	Herald - The Waitaki Herald Weekender	S	27.39	I	201
+C11038	31/01/2009	2309896	I		0.000	Herald - The Waitaki Herald Weekender - Job 9148 - Delivery 31 Jan 2009 - 100 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Herald - The Waitaki Herald Weekender	S	0.00	I	201
+
+C11039	31/01/2009	2307854	I	CI/1	6998.000	Mainland Uniforms - Job 9070 - Delivery 14 Jan 2009 - 14 grams.  	0.0536	0.0603	375.093	Mainland Uniforms	S	46.89	I	201
+C11039	31/01/2009	2307854	I		0.000	Mainland Uniforms - Job 9070 - Delivery 14 Jan 2009 - 14 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Mainland Uniforms	S	0.00	I	201
+
+C11040	31/01/2009	2306940	I	CI/1	1315.000	Metropol - Job 8876 - Delivery 22 Jan 2009 - 145 grams.  	0.1070	0.1204	140.705	Metropol	S	17.59	I	201
+C11040	31/01/2009	2306940	I		0.000	Metropol - Job 8876 - Delivery 22 Jan 2009 - 145 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Metropol	S	0.00	I	201
+
+C11041	31/01/2009	2308356	I	CI/1	1530.000	Napier Mail - Job 8844 - Delivery 14 Jan 2009 - 60 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+C11041	31/01/2009	2308356	I		0.000	Napier Mail - Job 8844 - Delivery 14 Jan 2009 - 60 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Napier Mail	S	0.00	I	201
+C11041	31/01/2009	2308356	I	CI/2	1530.000	Napier Mail - Job 9151 - Delivery 21 Jan 2009 - 97 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+C11041	31/01/2009	2308356	I		0.000	Napier Mail - Job 9151 - Delivery 21 Jan 2009 - 97 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Napier Mail	S	0.00	I	201
+C11041	31/01/2009	2308356	I	CI/3	1530.000	Napier Mail - Job 9152 - Delivery 28 Jan 2009 - 108 grams. Includes folding fee 0.0100 cents. 	0.1170	0.1316	179.010	Napier Mail	S	22.38	I	201
+C11041	31/01/2009	2308356	I		0.000	Napier Mail - Job 9152 - Delivery 28 Jan 2009 - 108 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Napier Mail	S	0.00	I	201
+
+C11042	31/01/2009	2308434	I	CI/1	7133.000	North Canterbury News - Job 8935 - Delivery 13 Jan 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	647.676	North Canterbury News	S	80.96	I	201
+C11042	31/01/2009	2308434	I		0.000	North Canterbury News - Job 8935 - Delivery 13 Jan 2009 - 76 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	North Canterbury News	S	0.00	I	201
+
+C11043	31/01/2009	2310569	I	CI/1	7133.000	North Canterbury News - Job 9153 - Delivery 20 Jan 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	624.851	North Canterbury News	S	78.11	I	201
+C11043	31/01/2009	2310569	I		0.000	North Canterbury News - Job 9153 - Delivery 20 Jan 2009 - 76 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	North Canterbury News	S	0.00	I	201
+C11043	31/01/2009	2310569	I	CI/2	7133.000	North Canterbury News - Job 9154 - Delivery 27 Jan 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	647.676	North Canterbury News	S	80.96	I	201
+C11043	31/01/2009	2310569	I		0.000	North Canterbury News - Job 9154 - Delivery 27 Jan 2009 - 76 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	North Canterbury News	S	0.00	I	201
+
+C11044	31/01/2009	2308829	I	CI/1	89166.000	Postie Plus - Job 9087 - Delivery 14 Jan 2009 - 20 grams.  	0.0536	0.0603	4779.298	Postie Plus	S	597.41	I	201
+C11044	31/01/2009	2308829	I		0.000	Postie Plus - Job 9087 - Delivery 14 Jan 2009 - 20 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Postie Plus	S	0.00	I	201
+
+C11045	31/01/2009	2308259	I	CI/1	3135.000	Property Outlook - Job 8878 - Delivery 22 Jan 2009 - 20 grams.  	0.0536	0.0603	168.036	Property Outlook	S	21.00	I	201
+C11045	31/01/2009	2308259	I		0.000	Property Outlook - Job 8878 - Delivery 22 Jan 2009 - 20 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Property Outlook	S	0.00	I	201
+
+C11046	31/01/2009	2308353	I	CI/1	770.000	Rangitikei Mail - Job 8838 - Delivery 13 Jan 2009 - 65 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+C11046	31/01/2009	2308353	I		0.000	Rangitikei Mail - Job 8838 - Delivery 13 Jan 2009 - 65 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Rangitikei Mail	S	0.00	I	201
+C11046	31/01/2009	2308353	I	CI/2	770.000	Rangitikei Mail - Job 9076 - Delivery 20 Jan 2009 - 65 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+C11046	31/01/2009	2308353	I		0.000	Rangitikei Mail - Job 9076 - Delivery 20 Jan 2009 - 65 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Rangitikei Mail	S	0.00	I	201
+
+C11047	31/01/2009	2312982	I	CI/1	770.000	Rangitikei Mail - Job 9141 - Delivery 27 Jan 2009 - 54 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+C11047	31/01/2009	2312982	I		0.000	Rangitikei Mail - Job 9141 - Delivery 27 Jan 2009 - 54 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Rangitikei Mail	S	0.00	I	201
+
+C11048	31/01/2009	2308393	I	CI/1	2280.000	Scene Matamata - Job 8868 - Delivery 21 Jan 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	207.024	Scene Matamata	S	25.88	I	201
+C11048	31/01/2009	2308393	I		0.000	Scene Matamata - Job 8868 - Delivery 21 Jan 2009 - 80 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Scene Matamata	S	0.00	I	201
+
+C11049	31/01/2009	2308439	I	CI/1	6396.000	Selwyn Times - Job 8928 - Delivery 13 Jan 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	580.757	Selwyn Times	S	72.60	I	201
+C11049	31/01/2009	2308439	I		0.000	Selwyn Times - Job 8928 - Delivery 13 Jan 2009 - 76 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Selwyn Times	S	0.00	I	201
+
+C11050	31/01/2009	2310570	I	CI/1	6396.000	Selwyn Times - Job 9121 - Delivery 20 Jan 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	580.757	Selwyn Times	S	72.60	I	201
+C11050	31/01/2009	2310570	I		0.000	Selwyn Times - Job 9121 - Delivery 20 Jan 2009 - 76 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Selwyn Times	S	0.00	I	201
+C11050	31/01/2009	2310570	I	CI/2	6396.000	Selwyn Times - Job 9155 - Delivery 27 Jan 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	580.757	Selwyn Times	S	72.60	I	201
+C11050	31/01/2009	2310570	I		0.000	Selwyn Times - Job 9155 - Delivery 27 Jan 2009 - 76 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Selwyn Times	S	0.00	I	201
+
+C11051	31/01/2009	2308392	I	CI/1	1320.000	Taupo Real Estate - Job 8871 - Delivery 15 Jan 2009 - 310 grams. Includes folding fee 0.0100 cents. 	0.2026	0.2279	267.432	Taupo Real Estate	S	33.43	I	201
+C11051	31/01/2009	2308392	I		0.000	Taupo Real Estate - Job 8871 - Delivery 15 Jan 2009 - 310 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Taupo Real Estate	S	0.00	I	201
+C11051	31/01/2009	2308392	I	CI/2	1320.000	Taupo Real Estate - Job 8872 - Delivery 29 Jan 2009 - 270 grams. Includes folding fee 0.0100 cents. 	0.1812	0.2039	239.184	Taupo Real Estate	S	29.90	I	201
+C11051	31/01/2009	2308392	I		0.000	Taupo Real Estate - Job 8872 - Delivery 29 Jan 2009 - 270 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Taupo Real Estate	S	0.00	I	201
+
+C11052	31/01/2009	2308457	I	CI/1	5234.000	The High Country Herald - Job 8948 - Delivery 07 Jan 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	475.247	The High Country Herald	S	59.41	I	201
+C11052	31/01/2009	2308457	I		0.000	The High Country Herald - Job 8948 - Delivery 07 Jan 2009 - 80 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	The High Country Herald	S	0.00	I	201
+
+C11053	31/01/2009	2308391	I	CI/1	9986.000	Weekend Sun - Job 8865 - Delivery 09 Jan 2009 - 128 grams. Includes folding fee 0.0100 cents. 	0.1170	0.1316	1168.362	Weekend Sun	S	146.04	I	201
+C11053	31/01/2009	2308391	I		0.000	Weekend Sun - Job 8865 - Delivery 09 Jan 2009 - 128 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Weekend Sun	S	0.00	I	201
+C11053	31/01/2009	2308391	I	CI/2	9986.000	Weekend Sun - Job 8866 - Delivery 16 Jan 2009 - 152 grams. Includes folding fee 0.0100 cents. 	0.1384	0.1557	1382.062	Weekend Sun	S	172.76	I	201
+C11053	31/01/2009	2308391	I		0.000	Weekend Sun - Job 8866 - Delivery 16 Jan 2009 - 152 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Weekend Sun	S	0.00	I	201
+C11053	31/01/2009	2308391	I	CI/3	9986.000	Weekend Sun - Job 9078 - Delivery 23 Jan 2009 - 142 grams. Includes folding fee 0.0100 cents. 	0.1170	0.1316	1168.362	Weekend Sun	S	146.04	I	201
+C11053	31/01/2009	2308391	I		0.000	Weekend Sun - Job 9078 - Delivery 23 Jan 2009 - 142 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Weekend Sun	S	0.00	I	201
+C11053	31/01/2009	2308391	I	CI/4	9986.000	Weekend Sun - Job 9079 - Delivery 30 Jan 2009 - 160 grams. Includes folding fee 0.0100 cents. 	0.1384	0.1557	1382.062	Weekend Sun	S	172.76	I	201
+C11053	31/01/2009	2308391	I		0.000	Weekend Sun - Job 9079 - Delivery 30 Jan 2009 - 160 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Weekend Sun	S	0.00	I	201
+
+C11054	31/01/2009	2308403	I	CI/1	8965.000	Whangarei Report - Job 8961 - Delivery 08 Jan 2009 - 86 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	814.022	Whangarei Report	S	101.75	I	201
+C11054	31/01/2009	2308403	I		0.000	Whangarei Report - Job 8961 - Delivery 08 Jan 2009 - 86 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Whangarei Report	S	0.00	I	201
+C11054	31/01/2009	2308403	I	CI/2	8965.000	Whangarei Report - Job 9091 - Delivery 15 Jan 2009 - 54 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	814.022	Whangarei Report	S	101.75	I	201
+C11054	31/01/2009	2308403	I		0.000	Whangarei Report - Job 9091 - Delivery 15 Jan 2009 - 54 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Whangarei Report	S	0.00	I	201
+C11054	31/01/2009	2308403	I	CI/3	10580.000	Whangarei Report - Job 9092 - Delivery 22 Jan 2009 - 83 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	960.664	Whangarei Report	S	120.08	I	201
+C11054	31/01/2009	2308403	I		0.000	Whangarei Report - Job 9092 - Delivery 22 Jan 2009 - 83 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Whangarei Report	S	0.00	I	201
+C11054	31/01/2009	2308403	I	CI/4	10580.000	Whangarei Report - Job 9206 - Delivery 29 Jan 2009 - 71 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	960.664	Whangarei Report	S	120.08	I	201
+C11054	31/01/2009	2308403	I		0.000	Whangarei Report - Job 9206 - Delivery 29 Jan 2009 - 71 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Whangarei Report	S	0.00	I	201
+
+C11055	31/01/2009	2309976	I	CI/1	3771.000	Winslows/Lake Hood - Job 9191 - Delivery IOA - 20 grams.  	0.0536	0.0603	202.126	Winslows/Lake Hood	S	25.27	I	201
+C11055	31/01/2009	2309976	I		0.000	Winslows/Lake Hood - Job 9191 - Delivery IOA - 20 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Winslows/Lake Hood	S	0.00	I	201
+
+C11056	31/01/2009	2308429	I	CI/1	4056.000	Your Cambridge News - Job 9085 - Delivery 16 Jan 2009 - 85 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	368.285	Your Cambridge News	S	46.04	I	201
+C11056	31/01/2009	2308429	I		0.000	Your Cambridge News - Job 9085 - Delivery 16 Jan 2009 - 85 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Your Cambridge News	S	0.00	I	201
+C11056	31/01/2009	2308429	I	CI/2	4076.000	Your Cambridge News - Job 9089 - Delivery 30 Jan 2009 - 87 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	370.101	Your Cambridge News	S	46.26	I	201
+C11056	31/01/2009	2308429	I		0.000	Your Cambridge News - Job 9089 - Delivery 30 Jan 2009 - 87 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Your Cambridge News	S	0.00	I	201
+
+C11057	31/01/2009		I	CI/1	7040.000	Essence Mag- Nth Canty - Job 9025 - Delivery 21 Jan 2009 - 100 grams.  	0.1050	0.1181	739.200	Essence Mag- Nth Canty	S	92.40	I	258
+C11057	31/01/2009		I		0.000	Essence Mag- Nth Canty - Job 9025 - Delivery 21 Jan 2009 - 100 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Essence Mag- Nth Canty	S	0.00	I	258
+
+C11058	31/01/2009		I	CI/1	1616.000	Kaiapoi Advocate - Job 9173 - Delivery 21 Jan 2009 - 80 grams.  	0.1050	0.1181	169.680	Kaiapoi Advocate	S	21.21	I	258
+C11058	31/01/2009		I		0.000	Kaiapoi Advocate - Job 9173 - Delivery 21 Jan 2009 - 80 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Kaiapoi Advocate	S	0.00	I	258
+
+C11059	31/01/2009		I	CI/1	28478.000	Coast N Country - Job 9139 - Delivery 11 Jan 2009 - 150 grams. Includes folding fee 0.0100 cents. 	0.1010	0.1136	2876.278	Coast N Country	S	359.54	I	217
+C11059	31/01/2009		I		0.000	Coast N Country - Job 9139 - Delivery 11 Jan 2009 - 150 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	Coast N Country	S	0.00	I	217
+

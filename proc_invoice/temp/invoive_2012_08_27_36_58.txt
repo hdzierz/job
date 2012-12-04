@@ -1,0 +1,29 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Total_GST_Inc	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C82771	27/08/2012	2444655	I	CI/1	6537.000	Agri Business CW NCNews - Job 72677 - Delivery 21 Aug 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	363.46	417.98	Agri Business CW NCNews	S	54.52	I	201
+
+C82772	27/08/2012	2442403	I	CI/1	7506.000	Bond and Bond - Job 72352 - Delivery 21 Aug 2012 - 25 grams.   Includes Linehaul.	0.0615	0.0707	461.62	530.86	Bond and Bond	S	69.24	I	201
+
+C82773	27/08/2012	2442513	I	CI/1	55687.000	Four Square Northern - Job 72437 - Delivery 18 Aug 2012 - 20 grams.   Includes Linehaul.	0.0615	0.0707	3424.75	3938.46	Four Square Northern	S	513.71	I	201
+
+C82774	27/08/2012	2442517	I	CI/1	55687.000	Four Square Northern - Job 72626 - Delivery 25 Aug 2012 - 20 grams.   Includes Linehaul.	0.0615	0.0707	3424.75	3938.46	Four Square Northern	S	513.71	I	201
+
+C82775	27/08/2012	2444912	I	CI/1	47271.000	Four Square Southern - Job 72690 - Delivery 24 Aug 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	2628.27	3022.51	Four Square Southern	S	394.24	I	201
+
+C82776	27/08/2012	2444637	I	CI/1	11980.000	Genesis Homes - Job 72669 - Delivery 24 Aug 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	666.09	766.00	Genesis Homes	S	99.91	I	201
+
+C82777	27/08/2012	2444605	I	CI/1	10814.000	Murray Implement Flyer - Job 72664 - Delivery 20 Aug 2012 - 20 grams.   Includes Linehaul.	0.0615	0.0707	665.06	764.82	Murray Implement Flyer	S	99.76	I	201
+
+C82778	27/08/2012	2442566	I	CI/1	80613.000	New World Northern - Job 72631 - Delivery 18 Aug 2012 - 25 grams.   Includes Linehaul.	0.0615	0.0707	4957.70	5701.36	New World Northern	S	743.66	I	201
+
+C82779	27/08/2012	2442569	I	CI/1	80613.000	New World Northern - Job 72632 - Delivery 25 Aug 2012 - 25 grams.   Includes Linehaul.	0.0615	0.0707	4957.70	5701.36	New World Northern	S	743.66	I	201
+
+C82780	27/08/2012	2444919	I	CI/1	803.000	New World Northern Mailings - Job 72700 - Delivery 25 Aug 2012 - 250 grams.   Includes Linehaul.	0.0556	0.0639	44.65	51.35	New World Northern Mailings	S	6.70	I	201
+
+C82781	27/08/2012	2444909	I	CI/1	64639.000	New World Southern - Job 72688 - Delivery 24 Aug 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	3593.93	4133.02	New World Southern	S	539.09	I	201
+
+C82782	27/08/2012	2444972	I	CI/1	6852.000	Our Christchurch August 2012 - Job 72699 - Delivery 25 Aug 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	380.97	438.12	Our Christchurch August 2012	S	57.15	I	201
+
+C82783	27/08/2012	2444641	I	CI/1	3163.000	Paterson Burn Optometrists - Job 72671 - Delivery 24 Aug 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	175.86	202.24	Paterson Burn Optometrists	S	26.38	I	201
+
+C82784	27/08/2012	2445384	I	CI/1	33.000	Target Furniture Christchurch - Job 72748 - Delivery 24 Aug 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	1.83	2.10	Target Furniture Christchurch	S	0.27	I	201
+

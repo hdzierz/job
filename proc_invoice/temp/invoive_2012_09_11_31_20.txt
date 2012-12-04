@@ -1,0 +1,84 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Total_GST_Inc	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C82948	09/09/2012	2444675	I	CI/1	10043.000	ATS In Season Catalogue - Job 72678 - Delivery 03 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	558.39	642.15	ATS In Season Catalogue	S	83.76	I	201
+
+C82949	09/09/2012	2445862	I	CI/1	2699.000	Bayleys 36pg Preview Guide Sept 2012 - Job 72864 - Delivery 08 Sep 2012 - 150 grams.   Includes Linehaul.	0.0919	0.1057	248.04	285.25	Bayleys 36pg Preview Guide Sept 2012	S	37.21	I	201
+
+C82950	09/09/2012	2443501	I	CI/1	7506.000	Bond and Bond - Job 72411 - Delivery 04 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	417.33	479.93	Bond and Bond	S	62.60	I	201
+
+C82951	09/09/2012	2444802	I	CI/1	41925.000	Briscoes - Job 72695 - Delivery 03 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	2331.03	2680.68	Briscoes	S	349.65	I	201
+
+C82952	09/09/2012	2445147	I	CI/1	55008.000	Carpet One September - Job 72760 - Delivery 04 Sep 2012 - 20 grams.   Includes Linehaul.	0.0566	0.0651	3113.45	3580.47	Carpet One September	S	467.02	I	201
+
+C82953	09/09/2012	2445391	I	CI/1	13367.000	Colourplus Sept Drape Mailer - Job 72763 - Delivery 04 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	743.21	854.69	Colourplus Sept Drape Mailer	S	111.48	I	201
+
+C82954	09/09/2012	2445124	I	CI/1	16660.000	Curtain Studio - Job 72715 - Delivery 04 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	926.30	1065.25	Curtain Studio	S	138.95	I	201
+
+C82955	09/09/2012	2445200	I	CI/1	13723.000	DA Lewis 8 Pg Mailer - Job 72757 - Delivery 04 Sep 2012 - 10 grams.   Includes Linehaul.	0.0566	0.0651	776.72	893.23	DA Lewis 8 Pg Mailer	S	116.51	I	201
+
+C82956	09/09/2012	2446086	I	CI/1	462.000	DTR Porirua Birthday Mailer - Job 72941 - Delivery 08 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	25.69	29.54	DTR Porirua Birthday Mailer	S	3.85	I	201
+
+C82957	09/09/2012	2445566	I	CI/1	3950.000	eLocal Magazine - Job 72839 - Delivery 03 Sep 2012 - 92 grams.   Includes Linehaul.	0.0756	0.0869	298.62	343.41	eLocal Magazine	S	44.79	I	201
+C82957	09/09/2012	2445566	I	CI/2	1910.000	eLocal Magazine - Job 72840 - Delivery 03 Sep 2012 - 92 grams.   Includes Linehaul.	0.0756	0.0869	144.40	166.06	eLocal Magazine	S	21.66	I	201
+
+C82958	09/09/2012	2445448	I	CI/1	5987.000	Flying Fish  - Job 72761 - Delivery 04 Sep 2012 - 10 grams.   	0.0556	0.0639	332.88	382.81	Flying Fish 	S	49.93	I	201
+
+C82959	09/09/2012	2443882	I	CI/1	55687.000	Four Square Northern - Job 72635 - Delivery 01 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	3096.20	3560.63	Four Square Northern	S	464.43	I	201
+
+C82960	09/09/2012	2444923	I	CI/1	47347.000	Four Square Southern - Job 72733 - Delivery 01 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	2632.49	3027.36	Four Square Southern	S	394.87	I	201
+
+C82961	09/09/2012	2444601	I	CI/1	16795.000	Franklin Valley Voice - Job 72662 - Delivery 03 Sep 2012 - 60 grams.   Includes Linehaul.	0.0756	0.0869	1269.70	1460.16	Franklin Valley Voice	S	190.46	I	201
+
+C82962	09/09/2012	2445068	I	CI/1	15665.000	Hand J Smith Style Book Sept - Job 72810 - Delivery 03 Sep 2012 - 125 grams.   Includes Linehaul.	0.0919	0.1057	1439.61	1655.55	Hand J Smith Style Book Sept	S	215.94	I	201
+
+C82963	09/09/2012	 2445060 	I	CI/1	13724.000	HandJ Smith Home Value Catalogue - Job 72721 - Delivery 04 Sep 2012 - 60 grams.   Includes Linehaul.	0.0756	0.0869	1037.53	1193.16	HandJ Smith Home Value Catalogue	S	155.63	I	201
+
+C82964	09/09/2012	2445491	I	CI/1	207732.000	Harvey Norman Computer Electrical - Job 72808 - Delivery 04 Sep 2012 - 60 grams.   Includes Linehaul.	0.0756	0.0869	15704.54	18060.22	Harvey Norman Computer Electrical	S	2355.68	I	201
+
+C82965	09/09/2012	2445229	I	CI/1	227941.000	Husqvana Sept 2012 - Job 72771 - Delivery 04 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	12673.52	14574.55	Husqvana Sept 2012	S	1901.03	I	201
+
+C82966	09/09/2012	2445244	I	CI/1	25419.000	Ideal Garages Flyer - Job 72762 - Delivery 04 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	1413.30	1625.30	Ideal Garages Flyer	S	212.00	I	201
+
+C82967	09/09/2012	2445590	I	CI/1	10756.000	Insight Traders Invercargill Sept 2012 - Job 72812 - Delivery 04 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	598.03	687.73	Insight Traders Invercargill Sept 2012	S	89.70	I	201
+
+C82968	09/09/2012	2445592	I	CI/1	903.000	Insight Traders Lower Hutt Sept 2012 - Job 72813 - Delivery 04 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	50.21	57.74	Insight Traders Lower Hutt Sept 2012	S	7.53	I	201
+
+C82969	09/09/2012	2445242	I	CI/1	2558.000	JB Hi Fi Sept 2012 - Job 72735 - Delivery 06 Sep 2012 - 10 grams.   	0.0556	0.0639	142.22	163.55	JB Hi Fi Sept 2012	S	21.33	I	201
+
+C82970	09/09/2012	2445090	I	CI/1	5370.000	LADS Sept Mailer - Job 72730 - Delivery 04 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	298.57	343.36	LADS Sept Mailer	S	44.79	I	201
+
+C82971	09/09/2012	2444995	I	CI/1	3031.000	Lewis Home Fabrics Thermal Draps and Venetion Blinds - Job 72776 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0556	0.0639	168.52	193.80	Lewis Home Fabrics Thermal Draps and Venetion Blinds	S	25.28	I	201
+
+C82972	09/09/2012	2444731	I	CI/1	284.000	Metlife Care - Job 72685 - Delivery 04 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	15.79	18.16	Metlife Care	S	2.37	I	201
+
+C82973	09/09/2012	2444948	I	CI/1	94773.000	New World Northern - Job 72633 - Delivery 01 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	5269.38	6059.79	New World Northern	S	790.41	I	201
+
+C82974	09/09/2012	2444924	I	CI/1	64806.000	New World Southern - Job 72732 - Delivery 01 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	3603.21	4143.69	New World Southern	S	540.48	I	201
+
+C82975	09/09/2012	2445709	I	CI/1	13324.000	Noel Leeming BOP - Job 72859 - Delivery 04 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	740.81	851.93	Noel Leeming BOP	S	111.12	I	201
+
+C82976	09/09/2012	2445149	I	CI/1	2289.000	Our Christchurch - Job 72766 - Delivery 04 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	127.27	146.36	Our Christchurch	S	19.09	I	201
+
+C82977	09/09/2012	2442728	I	CI/1	16831.000	PK Furniture Sept 2012 - Job 72683 - Delivery 04 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	935.80	1076.17	PK Furniture Sept 2012	S	140.37	I	201
+
+C82978	09/09/2012	 2444870	I	CI/1	123257.000	Postie Plus Birthday Mailer and TVC - Job 72770 - Delivery 04 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	6853.09	7881.05	Postie Plus Birthday Mailer and TVC	S	1027.96	I	201
+
+C82979	09/09/2012	2443944	I	CI/1	5860.000	Raeward Nelson Sept Flyer - Job 72623 - Delivery 03 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	325.82	374.69	Raeward Nelson Sept Flyer	S	48.87	I	201
+
+C82980	09/09/2012	2444804	I	CI/1	209798.000	Repco  Sept  #1 - Job 72804 - Delivery 05 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	11664.77	13414.49	Repco  Sept  #1	S	1749.72	I	201
+
+C82981	09/09/2012	2444829	I	CI/1	3174.000	Specsavers Gisborne  - Job 72707 - Delivery 03 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	176.47	202.94	Specsavers Gisborne 	S	26.47	I	201
+
+C82982	09/09/2012	2445714	I	CI/1	5814.000	Taratahi Leadership  - Job 72844 - Delivery 06 Sep 2012 - 10 grams.   	0.0556	0.0639	323.26	371.75	Taratahi Leadership 	S	48.49	I	201
+
+C82983	09/09/2012	2445521	I	CI/1	2116.000	Taratahi Leadership - Dunedin - Job 72816 - Delivery 05 Sep 2012 - 10 grams.   	0.0556	0.0639	117.65	135.30	Taratahi Leadership - Dunedin	S	17.65	I	201
+
+C82984	09/09/2012	2445513	I	CI/1	3106.000	Taratahi Leadership - Whakatane - Job 72815 - Delivery 05 Sep 2012 - 10 grams.   	0.0556	0.0639	172.69	198.59	Taratahi Leadership - Whakatane	S	25.90	I	201
+
+C82985	09/09/2012	2445483	I	CI/1	5760.000	Taratahi Rural Leadership - Job 72791 - Delivery 04 Sep 2012 - 10 grams.   	0.0556	0.0639	320.26	368.30	Taratahi Rural Leadership	S	48.04	I	201
+
+C82986	09/09/2012	2445328	I	CI/1	20054.000	Toyworld A5 Catalogue - Job 72769 - Delivery 03 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	1115.00	1282.25	Toyworld A5 Catalogue	S	167.25	I	201
+
+C82987	09/09/2012	2444569	I	CI/1	12817.000	Tyrepower - Job 72659 - Delivery 04 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	712.63	819.52	Tyrepower	S	106.89	I	201
+
+C82988	09/09/2012	2445163	I	CI/1	8415.000	Westfield Albany WIW Campaign - Job 72759 - Delivery 04 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	467.87	538.05	Westfield Albany WIW Campaign	S	70.18	I	201
+

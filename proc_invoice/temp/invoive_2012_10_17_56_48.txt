@@ -1,0 +1,23 @@
+ContactName,InvoiceNo,Reference,InvoiceDate,DueDate,Description,Quantity,UnitAmount,Discount,AccountCode,TaxType,TrackingName1,TrackingOption1
+APN Holdings NZ Ltd,C83314,,2012-09-30,2012-10-20,Cambridge Property Guide - Job 71621 - Delivery 06 Jun 2012 - 75 grams. Includes folding fee 0.0100 cents.   Boxholder Type: Total ,1.925,95.6,,100,15% GST on income,Division,Circulars
+APN Holdings NZ Ltd,C83314,,2012-09-30,2012-10-20,Cambridge Property Guide - Job 71622 - Delivery 13 Jun 2012 - 75 grams. Includes folding fee 0.0100 cents.   Boxholder Type: Total ,2.18,95.6,,100,15% GST on income,Division,Circulars
+APN Holdings NZ Ltd,C83314,,2012-09-30,2012-10-20,Cambridge Property Guide - Job 72046 - Delivery 20 Jun 2012 - 75 grams. Includes folding fee 0.0100 cents.   Boxholder Type: Total ,2.18,95.6,,100,15% GST on income,Division,Circulars
+APN Holdings NZ Ltd,C83314,,2012-09-30,2012-10-20,Cambridge Property Guide - Job 72047 - Delivery 27 Jun 2012 - 75 grams. Includes folding fee 0.0100 cents.   Boxholder Type: Total ,2.18,95.6,,100,15% GST on income,Division,Circulars
+
+APN Holdings NZ Ltd,C83315,10455,2012-09-30,2012-10-20,Rural Advocate - Job 71855 - Delivery 20 Jun 2012 - 132 grams. Includes folding fee 0.0100 cents.   Boxholder Type: Total ,8.092,102,,100,15% GST on income,Division,Circulars
+
+Central Excavations,C83316,Waikato,2012-09-30,2012-10-20,Central Excavations Flyer - Job 71836 - Delivery IOA - 10 grams.    Boxholder Type: Dairies ,3.013,82.4,,100,15% GST on income,Division,Circulars
+
+Central Excavations,C83317,Taranaki,2012-09-30,2012-10-20,Central Excavations Flyer - Job 71835 - Delivery IOA - 10 grams.    Boxholder Type: Dairies ,3.599,82.4,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83318,2440741,2012-09-30,2012-10-20,Repco July Catalogue - Job 72131 - Delivery 27 Jun 2012 - 25 grams.    Boxholder Type: Total Includes Linehaul.,211.851,61.5,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83319,2438469,2012-09-30,2012-10-20,Smith City Furniture Flyer - Job 71771 - Delivery 12 Jun 2012 - 20 grams.    Boxholder Type: Total Includes Linehaul.,102.387,61.5,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83320,2437724,2012-09-30,2012-10-20,Smith City Queens Birthday Sale - Job 71760 - Delivery 01 Jun 2012 - 20 grams.    Boxholder Type: Total Includes Linehaul.,101.836,61.5,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83321,2439130,2012-09-30,2012-10-20,Invercargill Eye - Job 71685 - Delivery 07 Jun 2012 - 50 grams.    Boxholder Type: Total ,2.288,65.8,,100,15% GST on income,Division,Circulars
+PMP Distribution Lim,C83321,2439130,2012-09-30,2012-10-20,Invercargill Eye - Job 71944 - Delivery 14 Jun 2012 - 40 grams.    Boxholder Type: Total ,2.288,65.8,,100,15% GST on income,Division,Circulars
+PMP Distribution Lim,C83321,2439130,2012-09-30,2012-10-20,Invercargill Eye - Job 71945 - Delivery 21 Jun 2012 - 40 grams.    Boxholder Type: Total ,2.288,65.8,,100,15% GST on income,Division,Circulars
+PMP Distribution Lim,C83321,2439130,2012-09-30,2012-10-20,Invercargill Eye - Job 71946 - Delivery 28 Jun 2012 - 40 grams.    Boxholder Type: Total ,2.288,65.8,,100,15% GST on income,Division,Circulars
+

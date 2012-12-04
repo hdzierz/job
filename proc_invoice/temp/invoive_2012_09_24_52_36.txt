@@ -1,0 +1,76 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Total_GST_Inc	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C83029	23/09/2012	2446648	I	CI/1	4871.000	Barfoot Mt Albert September - Job 73067 - Delivery 17 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	270.83	311.45	Barfoot Mt Albert September	S	40.62	I	PMP Distribution Lim
+
+C83030	23/09/2012	2446571	I	CI/1	64524.000	Bed Bath and Beyond Sept - Job 73062 - Delivery 18 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	3587.53	4125.66	Bed Bath and Beyond Sept	S	538.13	I	PMP Distribution Lim
+
+C83031	23/09/2012	2443747	I	CI/1	0.000	Bond and Bond - Job 73089 - Delivery 18 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	0.00	0.00	Bond and Bond	S	0.00	I	PMP Distribution Lim
+
+C83032	23/09/2012	2444806	I	CI/1	41925.000	Briscoes - Job 72704 - Delivery 17 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	2331.03	2680.68	Briscoes	S	349.65	I	PMP Distribution Lim
+
+C83033	23/09/2012	2445391	I	CI/1	20237.000	Colourplus Sept Drape Mailer - Job 72764 - Delivery 18 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	1125.18	1293.96	Colourplus Sept Drape Mailer	S	168.78	I	PMP Distribution Lim
+
+C83034	23/09/2012	2445124	I	CI/1	12029.000	Curtain Studio - Job 72717 - Delivery 18 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	668.81	769.13	Curtain Studio	S	100.32	I	PMP Distribution Lim
+
+C83035	23/09/2012	2446384	I	CI/1	11378.000	DMS Increasing Grower Profit - Job 73057 - Delivery 18 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	632.62	727.51	DMS Increasing Grower Profit	S	94.89	I	PMP Distribution Lim
+
+C83036	23/09/2012	2443898	I	CI/1	55687.000	Four Square Northern - Job 72956 - Delivery 22 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	3096.20	3560.63	Four Square Northern	S	464.43	I	PMP Distribution Lim
+
+C83037	23/09/2012	2446767	I	CI/1	47347.000	Four Square Southern - Job 72873 - Delivery 22 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	2632.49	3027.36	Four Square Southern	S	394.87	I	PMP Distribution Lim
+
+C83038	23/09/2012	2446525	I	CI/1	8099.000	Furniture 2 Go Warkworth - Job 73058 - Delivery 18 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	450.30	517.85	Furniture 2 Go Warkworth	S	67.55	I	PMP Distribution Lim
+
+C83039	23/09/2012	2446122	I	CI/1	3806.000	Goldpine Te Awamutu Sept 2012 - Job 73033 - Delivery 18 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	211.61	243.35	Goldpine Te Awamutu Sept 2012	S	31.74	I	PMP Distribution Lim
+
+C83040	23/09/2012	2445854	I	CI/1	332.000	Grapevine - Job 72863 - Delivery 17 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	18.46	21.23	Grapevine	S	2.77	I	PMP Distribution Lim
+
+C83041	23/09/2012	2446405	I	CI/1	207732.000	Harvey Norman Computer Electrical - Job 73052 - Delivery 18 Sep 2012 - 57 grams.   Includes Linehaul.	0.0756	0.0869	15704.54	18060.22	Harvey Norman Computer Electrical	S	2355.68	I	PMP Distribution Lim
+
+C83042	23/09/2012	2445648	I	CI/1	78930.000	Husqvana September 2012 - Job 72847 - Delivery 18 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	4388.51	5046.79	Husqvana September 2012	S	658.28	I	PMP Distribution Lim
+C83042	23/09/2012	2445648	I	CI/2	1874.000	Husqvana September 2012 - Job 72848 - Delivery 18 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	104.19	119.82	Husqvana September 2012	S	15.63	I	PMP Distribution Lim
+
+C83043	23/09/2012	2446642	I	CI/1	6342.000	Insight Traders West Auckland - Job 73066 - Delivery 18 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	352.62	405.51	Insight Traders West Auckland	S	52.89	I	PMP Distribution Lim
+
+C83044	23/09/2012	2446133	I	CI/1	2558.000	JB Hi Fi  Dunedin - Job 73034 - Delivery 18 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	142.22	163.55	JB Hi Fi  Dunedin	S	21.33	I	PMP Distribution Lim
+
+C83045	23/09/2012	2446268	I	CI/1	3830.000	John Deere Mailer - Job 73040 - Delivery 17 Sep 2012 - 95 grams.   Includes Linehaul.	0.0756	0.0869	289.55	332.98	John Deere Mailer	S	43.43	I	PMP Distribution Lim
+
+C83046	23/09/2012	2444638	I	CI/1	4566.000	Kings Plant Barn - Job 72672 - Delivery 18 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	253.87	291.95	Kings Plant Barn	S	38.08	I	PMP Distribution Lim
+
+C83047	23/09/2012	2445353	I	CI/1	4993.000	Lewis Home Fabrics Sanderson Maycott Sept 2012 - Job 72775 - Delivery 21 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	277.61	319.25	Lewis Home Fabrics Sanderson Maycott Sept 2012	S	41.64	I	PMP Distribution Lim
+
+C83048	23/09/2012	2446586	I	CI/1	29695.000	Living Here Newsletter - Job 73063 - Delivery 21 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	1651.04	1898.70	Living Here Newsletter	S	247.66	I	PMP Distribution Lim
+
+C83049	23/09/2012	2444951	I	CI/1	94773.000	New World Northern - Job 72779 - Delivery 22 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	5269.38	6059.79	New World Northern	S	790.41	I	PMP Distribution Lim
+
+C83050	23/09/2012	2444941	I	CI/1	64806.000	New World Southern - Job 72785 - Delivery 22 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	3603.21	4143.69	New World Southern	S	540.48	I	PMP Distribution Lim
+
+C83051	23/09/2012	2445710	I	CI/1	15787.000	Noel leeming Carnival of Savings - Job 72860 - Delivery 18 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	877.76	1009.42	Noel leeming Carnival of Savings	S	131.66	I	PMP Distribution Lim
+
+C83052	23/09/2012	2444334	I	CI/1	1692.000	Pharmacy First - Gees Pharmacy - Job 72660 - Delivery 18 Sep 2012 - 10 grams.   	0.0556	0.0639	94.08	108.19	Pharmacy First - Gees Pharmacy	S	14.11	I	PMP Distribution Lim
+
+C83053	23/09/2012	2445946	I	CI/1	21156.000	PWL Clicks September - Job 72936 - Delivery 17 Sep 2012 - 10 grams.   	0.0556	0.0639	1176.27	1352.71	PWL Clicks September	S	176.44	I	PMP Distribution Lim
+
+C83054	23/09/2012	2446527	I	CI/1	290798.000	Repco Sept 2nd Drop - Job 73059 - Delivery 19 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	16168.37	18593.63	Repco Sept 2nd Drop	S	2425.26	I	PMP Distribution Lim
+
+C83055	23/09/2012	2446557	I	CI/1	11404.000	Riverside Orchard - Job 73061 - Delivery 17 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	634.06	729.17	Riverside Orchard	S	95.11	I	PMP Distribution Lim
+
+C83056	23/09/2012	2446232	I	CI/1	702.000	Shoe Connection - Job 73038 - Delivery 18 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	39.03	44.88	Shoe Connection	S	5.85	I	PMP Distribution Lim
+
+C83057	23/09/2012	2443145	I	CI/1	101985.000	Smith City Appliance Flyer Sept - Job 72691 - Delivery 18 Sep 2012 - 15 grams.   Includes Linehaul.	0.0556	0.0639	5670.37	6520.93	Smith City Appliance Flyer Sept	S	850.56	I	PMP Distribution Lim
+
+C83058	23/09/2012	2445765	I	CI/1	194925.000	Specsavers Spring Catalogue - Job 72875 - Delivery 18 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	10837.83	12463.50	Specsavers Spring Catalogue	S	1625.67	I	PMP Distribution Lim
+
+C83059	23/09/2012	2446315	I	CI/1	2350.000	Stihl Brochure - Job 73056 - Delivery 17 Sep 2012 - 12 grams.   Includes Linehaul.	0.0556	0.0639	130.66	150.26	Stihl Brochure	S	19.60	I	PMP Distribution Lim
+
+C83060	23/09/2012	2445626	I	CI/1	6633.000	Taratahi Morrinsville Leadership Course - Job 73037 - Delivery 18 Sep 2012 - 10 grams.   	0.0556	0.0639	368.79	424.11	Taratahi Morrinsville Leadership Course	S	55.32	I	PMP Distribution Lim
+
+C83061	23/09/2012	2445426	I	CI/1	734.000	Tyrepower - Job 72931 - Delivery 18 Sep 2012 - 25 grams.   	0.0556	0.0639	40.81	46.93	Tyrepower	S	6.12	I	PMP Distribution Lim
+
+C83062	23/09/2012	2446875	I	CI/1	4264.000	United Travel Cruise Event Mailer - Job 73085 - Delivery 18 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	237.08	272.64	United Travel Cruise Event Mailer	S	35.56	I	PMP Distribution Lim
+
+C83063	23/09/2012	2446626	I	CI/1	2858.000	Warkworth Distribution - Job 73065 - Delivery 18 Sep 2012 - 37 grams.   Includes Linehaul.	0.0597	0.0687	170.62	196.21	Warkworth Distribution	S	25.59	I	PMP Distribution Lim
+
+C83064	23/09/2012	2444607	I	CI/1	9442.000	Westfield Manukau Walk In Wardrobe - Job 72665 - Delivery 20 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	524.98	603.73	Westfield Manukau Walk In Wardrobe	S	78.75	I	PMP Distribution Lim
+
+C83065	23/09/2012	2444608	I	CI/1	9442.000	Westfield Manukau What's What - Job 72666 - Delivery 17 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	524.98	603.73	Westfield Manukau What's What	S	78.75	I	PMP Distribution Lim
+

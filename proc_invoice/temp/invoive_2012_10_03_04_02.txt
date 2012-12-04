@@ -1,0 +1,517 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Total_GST_Inc	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C83066	30/09/2012		I	CI/1	481.000	Allfarm Hawkes Bay - Job 72798 - Delivery 06 Sep 2012 - 5 grams.   Includes Linehaul.	0.0971	0.1117	46.71	53.72	Allfarm Hawkes Bay	S	7.01	I	Allfarm Inernational
+C83066	30/09/2012		I	CI/2	481.000	Allfarm Hawkes Bay - Job 72799 - Delivery 20 Sep 2012 - 5 grams.   Includes Linehaul.	0.0971	0.1117	46.71	53.72	Allfarm Hawkes Bay	S	7.01	I	Allfarm Inernational
+
+C83067	30/09/2012		I	CI/1	1040.000	Allfarm Tangimoana - Job 72795 - Delivery 13 Sep 2012 - 5 grams.   Includes Linehaul.	0.0971	0.1117	100.98	116.13	Allfarm Tangimoana	S	15.15	I	Allfarm Inernational
+
+C83068	30/09/2012		I	CI/1	3028.000	Allfarm Waikato - Job 72796 - Delivery 06 Sep 2012 - 5 grams.   Includes Linehaul.	0.0971	0.1117	294.02	338.12	Allfarm Waikato	S	44.10	I	Allfarm Inernational
+C83068	30/09/2012		I	CI/2	3028.000	Allfarm Waikato - Job 72797 - Delivery 20 Sep 2012 - 5 grams.   Includes Linehaul.	0.0971	0.1117	294.02	338.12	Allfarm Waikato	S	44.10	I	Allfarm Inernational
+
+C83069	30/09/2012	1131	I	CI/1	6929.000	Almac Flyer - Job 72789 - Delivery IOA - 20 grams.   	0.0824	0.0948	570.95	656.59	Almac Flyer	S	85.64	I	Almac
+
+C83070	30/09/2012		I	CI/1	2180.000	Cambridge Property Guide - Job 72455 - Delivery 05 Sep 2012 - 75 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	208.41	239.67	Cambridge Property Guide	S	31.26	I	APN Holdings NZ Ltd
+C83070	30/09/2012		I	CI/2	2180.000	Cambridge Property Guide - Job 72456 - Delivery 12 Sep 2012 - 75 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	208.41	239.67	Cambridge Property Guide	S	31.26	I	APN Holdings NZ Ltd
+C83070	30/09/2012		I	CI/3	2180.000	Cambridge Property Guide - Job 72878 - Delivery 19 Sep 2012 - 75 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	208.41	239.67	Cambridge Property Guide	S	31.26	I	APN Holdings NZ Ltd
+C83070	30/09/2012		I	CI/4	2180.000	Cambridge Property Guide - Job 72879 - Delivery 26 Sep 2012 - 75 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	208.41	239.67	Cambridge Property Guide	S	31.26	I	APN Holdings NZ Ltd
+
+C83071	30/09/2012		I	CI/1	6125.000	Rural Advocate - Job 73105 - Delivery 20 Sep 2012 - 132 grams.   	0.0920	0.1058	563.50	648.03	Rural Advocate	S	84.53	I	APN Holdings NZ Ltd
+C83071	30/09/2012		I	CI/2	1940.000	Rural Advocate - Job 73106 - Delivery 20 Sep 2012 - 132 grams.   	0.0920	0.1058	178.48	205.25	Rural Advocate	S	26.77	I	APN Holdings NZ Ltd
+
+C83072	30/09/2012		I	CI/1	3270.000	Te Puke Times - Job 72461 - Delivery 06 Sep 2012 - 95 grams.   	0.0856	0.0984	279.91	321.90	Te Puke Times	S	41.99	I	APN Holdings NZ Ltd
+C83072	30/09/2012		I	CI/2	3270.000	Te Puke Times - Job 72462 - Delivery 13 Sep 2012 - 71 grams.   	0.0856	0.0984	279.91	321.90	Te Puke Times	S	41.99	I	APN Holdings NZ Ltd
+C83072	30/09/2012		I	CI/3	3270.000	Te Puke Times - Job 72882 - Delivery 20 Sep 2012 - 94 grams.   	0.0856	0.0984	279.91	321.90	Te Puke Times	S	41.99	I	APN Holdings NZ Ltd
+C83072	30/09/2012		I	CI/4	3270.000	Te Puke Times - Job 72883 - Delivery 27 Sep 2012 - 72 grams.   	0.0856	0.0984	279.91	321.90	Te Puke Times	S	41.99	I	APN Holdings NZ Ltd
+
+C83073	30/09/2012	Hawkes Bay	I	CI/1	3181.000	Farm Location Maps - Job 72827 - Delivery IOA - 100 grams.   	0.0942	0.1083	299.65	344.60	Farm Location Maps	S	44.95	I	Arcadia Marketing
+
+C83074	30/09/2012	South Waikato	I	CI/1	1336.000	Reply Paid Cards - Job 73023 - Delivery 12 Sep 2012 - 15 grams.   	0.1123	0.1291	150.03	172.53	Reply Paid Cards	S	22.50	I	Arcadia Marketing
+
+C83075	30/09/2012	Rotorua/Taupo	I	CI/1	2586.000	Reply Paid Cards - Job 73024 - Delivery 12 Sep 2012 - 15 grams.   	0.0824	0.0948	213.09	245.05	Reply Paid Cards	S	31.96	I	Arcadia Marketing
+
+C83076	30/09/2012	Ray Castle	I	CI/1	26229.000	Bayer Tylofen Mail Drop - Job 73152 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	2546.84	2928.87	Bayer Tylofen Mail Drop	S	382.03	I	Bayer NZ
+
+C83077	30/09/2012	Turben/Judy Sparks	I	CI/1	675.000	Just Sold In Your Area - Job 72826 - Delivery IOA - 10 grams.   Includes Linehaul.	0.1111	0.1278	74.99	86.24	Just Sold In Your Area	S	11.25	I	Whalan & Partners Li
+
+C83078	30/09/2012		I	CI/1	2485.000	One Team One Choice - Job 73042 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	241.29	277.48	One Team One Choice	S	36.19	I	Whalan & Partners Li
+
+C83079	30/09/2012	513726CS	I	CI/1	452.000	Swannanoa Auction  - Job 73180 - Delivery IOA - 10 grams.   Includes Linehaul.	0.3319	0.3817	150.02	172.52	Swannanoa Auction 	S	22.50	I	Whalan & Partners Li
+
+C83080	30/09/2012	Turben/Judy Sparks	I	CI/1	675.000	Wanted in Your Area - Job 73041 - Delivery IOA - 10 grams.   Includes Linehaul.	0.1111	0.1278	74.99	86.24	Wanted in Your Area	S	11.25	I	Whalan & Partners Li
+
+C83081	30/09/2012		I	CI/1	12074.000	Bayleys Preview - Job 73044 - Delivery IOA - 270 grams.   Includes Linehaul.	0.3060	0.3519	3694.64	4248.84	Bayleys Preview	S	554.20	I	Bayleys Palmerston N
+C83081	30/09/2012		I	CI/2	1539.000	Bayleys Preview - Job 73045 - Delivery IOA - 270 grams.   Includes Linehaul.	0.3060	0.3519	470.93	541.57	Bayleys Preview	S	70.64	I	Bayleys Palmerston N
+
+C83082	30/09/2012	73091	I	CI/1	6806.000	Eastern North Island Farmer Council - Job 73091 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	660.86	759.99	Eastern North Island Farmer Council	S	99.13	I	Beef + Lamb NZ Hast
+C83082	30/09/2012	73091	I	CI/2	1.000	Eastern North Island Farmer Council - Job 73091 - Delivery IOA - 10 grams. Bags Boxes and Counter. Includes Linehaul.	854.2000	982.3300	854.20	982.33	Eastern North Island Farmer Council	S	128.13	I	Beef + Lamb NZ Hast
+C83082	30/09/2012	73091	I	CI/3	6806.000	Eastern North Island Farmer Council - Job 73115 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0000	0.0000	0.00	0.00	Eastern North Island Farmer Council	S	0.00	I	Beef + Lamb NZ Hast
+C83082	30/09/2012	73091	I	CI/4	1.000	Eastern North Island Farmer Council - Job 73115 - Delivery IOA - 10 grams. Bags Boxes and Counter. Includes Linehaul.	504.2000	579.8300	504.20	579.83	Eastern North Island Farmer Council	S	75.63	I	Beef + Lamb NZ Hast
+
+C83083	30/09/2012		I	CI/1	1573.000	Beef Returns Improvement GRoups - Job 72850 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	152.74	175.65	Beef Returns Improvement GRoups	S	22.91	I	Beef + Lamb NZ Feild
+
+C83084	30/09/2012		I	CI/1	14828.000	Rural Living  - Job 72890 - Delivery 27 Sep 2012 - 75 grams.   Includes Linehaul.	0.0996	0.1145	1476.87	1698.40	Rural Living 	S	221.53	I	Business Media Press
+
+C83085	30/09/2012	Andrew Weir	I	CI/1	2361.000	Stihl Mailer - Job 73092 - Delivery 18 Sep 2012 - 20 grams.   	0.0824	0.0948	194.55	223.73	Stihl Mailer	S	29.18	I	520
+
+C83086	30/09/2012		I	CI/1	8889.000	Deere Season - Job 73068 - Delivery 26 Sep 2012 - 96 grams.   Includes Linehaul.	0.1354	0.1557	1203.57	1384.11	Deere Season	S	180.54	I	Cervus Equipment NZ 
+
+C83087	30/09/2012	Simon Stewart	I	CI/1	10191.000	Chainsaw & Outdoor Power Ltd - Job 72845 - Delivery 04 Sep 2012 - 10 grams.   	0.0824	0.0948	839.74	965.70	Chainsaw & Outdoor Power Ltd	S	125.96	I	Chainsaw and Outdoor
+
+C83088	30/09/2012	001	I	CI/1	1334.000	CMP - John Byrne - Job 73046 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	129.53	148.96	CMP - John Byrne	S	19.43	I	CMP Canterbury Ltd
+
+C83089	30/09/2012	001	I	CI/1	2738.000	CMP - Tony Kelly - Job 73047 - Delivery 11 Sep 2012 - 10 grams.   Includes Linehaul.	0.0971	0.1117	265.86	305.74	CMP - Tony Kelly	S	39.88	I	CMP Canterbury Ltd
+
+C83090	30/09/2012		I	CI/1	80881.000	GrubOut Postcard - Job 72777 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	7853.55	9031.58	GrubOut Postcard	S	1178.03	I	Cropmark Seeds Ltd
+
+C83091	30/09/2012	133599	I	CI/1	1040.000	It Starts Now - Job 72801 - Delivery 04 Sep 2012 - 10 grams.   Includes Linehaul.	0.1442	0.1658	149.97	172.47	It Starts Now	S	22.50	I	DairyNZ Ltd
+
+C83092	30/09/2012	133547	I	CI/1	3583.000	Mating Management - Job 72825 - Delivery 13 Sep 2012 - 10 grams.   Includes Linehaul.	0.0949	0.1091	340.03	391.03	Mating Management	S	51.00	I	DairyNZ Ltd
+
+C83093	30/09/2012	133599	I	CI/1	375.000	Meetings - Job 72800 - Delivery 05 Sep 2012 - 10 grams.   Includes Linehaul.	0.4000	0.4600	150.00	172.50	Meetings	S	22.50	I	DairyNZ Ltd
+
+C83094	30/09/2012	133715	I	CI/1	1810.000	Pasture Improvement Focus Farm - Job 72877 - Delivery IOA - 10 grams.   	0.0829	0.0953	150.05	172.56	Pasture Improvement Focus Farm	S	22.51	I	DairyNZ Ltd
+
+C83095	30/09/2012	133908	I	CI/1	1005.000	Pasture Plus Manawatu - Job 73123 - Delivery IOA - 10 grams.   Includes Linehaul.	0.1493	0.1717	150.05	172.56	Pasture Plus Manawatu	S	22.51	I	DairyNZ Ltd
+
+C83096	30/09/2012	133737	I	CI/1	2378.000	Spring Event Planner - Job 72968 - Delivery IOA - 10 grams.   	0.0805	0.0926	191.43	220.14	Spring Event Planner	S	28.71	I	DairyNZ Ltd
+
+C83097	30/09/2012	133799	I	CI/1	327.000	Tararua Pasture Plus - Job 73116 - Delivery IOA - 10 grams.   Includes Linehaul.	0.3043	0.3499	99.51	114.44	Tararua Pasture Plus	S	14.93	I	DairyNZ Ltd
+
+C83098	30/09/2012	133799	I	CI/1	166.000	Woodville Flyers - Job 73117 - Delivery IOA - 10 grams.   Includes Linehaul.	0.3043	0.3499	50.51	58.09	Woodville Flyers	S	7.58	I	DairyNZ Ltd
+
+C83099	30/09/2012	U381708	I	CI/1	930.000	Heli Management Flyer - Job 73169 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0000	0.0000	0.00	0.00	Heli Management Flyer	S	0.00	I	Dow Agroscience
+
+C83100	30/09/2012	U415186	I	CI/1	866.000	Preside Postcard - Job 73170 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0000	0.0000	0.00	0.00	Preside Postcard	S	0.00	I	Dow Agroscience
+
+C83101	30/09/2012	39791	I	CI/1	39791.000	3M - Job 72819 - Delivery IOA - 15 grams.   	0.0824	0.0948	3278.78	3770.60	3M	S	491.82	I	Etec Crop Solutions 
+
+C83102	30/09/2012	65825	I	CI/1	46714.000	Hammer - Job 72824 - Delivery IOA - 10 grams.   	0.0824	0.0948	3849.23	4426.61	Hammer	S	577.38	I	Etec Crop Solutions 
+C83102	30/09/2012	65825	I	CI/2	1424.000	Hammer - Job 72828 - Delivery IOA - 10 grams.   	0.0824	0.0948	117.34	134.94	Hammer	S	17.60	I	Etec Crop Solutions 
+C83102	30/09/2012	65825	I	CI/3	17687.000	Hammer - Job 72829 - Delivery IOA - 10 grams.   	0.0824	0.0948	1457.41	1676.02	Hammer	S	218.61	I	Etec Crop Solutions 
+
+C83103	30/09/2012		I	CI/1	3065.000	Dargaville District News - Job 72469 - Delivery 05 Sep 2012 - 44 grams. Includes folding fee 0.0100 cents.  	0.0875	0.1006	268.19	308.42	Dargaville District News	S	40.23	I	Fairfax - Dargaville
+C83103	30/09/2012		I	CI/2	3065.000	Dargaville District News - Job 72470 - Delivery 12 Sep 2012 - 49 grams. Includes folding fee 0.0100 cents.  	0.0875	0.1006	268.19	308.42	Dargaville District News	S	40.23	I	Fairfax - Dargaville
+C83103	30/09/2012		I	CI/3	3065.000	Dargaville District News - Job 72886 - Delivery 19 Sep 2012 - 68 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	302.21	347.54	Dargaville District News	S	45.33	I	Fairfax - Dargaville
+C83103	30/09/2012		I	CI/4	3065.000	Dargaville District News - Job 72887 - Delivery 26 Sep 2012 - 52 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	302.21	347.54	Dargaville District News	S	45.33	I	Fairfax - Dargaville
+
+C83104	30/09/2012		I	CI/1	7920.000	Whangarei Leader - Job 72474 - Delivery 04 Sep 2012 - 68 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	780.91	898.05	Whangarei Leader	S	117.14	I	Fairfax - Whangarei 
+C83104	30/09/2012		I	CI/2	7920.000	Whangarei Leader - Job 72475 - Delivery 11 Sep 2012 - 55 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	780.91	898.05	Whangarei Leader	S	117.14	I	Fairfax - Whangarei 
+C83104	30/09/2012		I	CI/3	7920.000	Whangarei Leader - Job 72986 - Delivery 18 Sep 2012 - 71 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	780.91	898.05	Whangarei Leader	S	117.14	I	Fairfax - Whangarei 
+C83104	30/09/2012		I	CI/4	7920.000	Whangarei Leader - Job 72987 - Delivery 25 Sep 2012 - 57 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	780.91	898.05	Whangarei Leader	S	117.14	I	Fairfax - Whangarei 
+
+C83105	30/09/2012		I	CI/1	3940.000	Cambridge Edition - Job 72479 - Delivery 05 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	388.48	446.75	Cambridge Edition	S	58.27	I	Fairfax - WRCN
+C83105	30/09/2012		I	C100	2.000	Bundles	1.0000	1.1500	2.00	2.30	Cambridge Edition	S	0.30	I	Fairfax - WRCN
+C83105	30/09/2012		I	CI/2	3940.000	Cambridge Edition - Job 72480 - Delivery 12 Sep 2012 - 87 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	388.48	446.75	Cambridge Edition	S	58.27	I	Fairfax - WRCN
+C83105	30/09/2012		I	C100	2.000	Bundles	1.0000	1.1500	2.00	2.30	Cambridge Edition	S	0.30	I	Fairfax - WRCN
+C83105	30/09/2012		I	CI/3	3940.000	Cambridge Edition - Job 72892 - Delivery 19 Sep 2012 - 87 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	388.48	446.75	Cambridge Edition	S	58.27	I	Fairfax - WRCN
+C83105	30/09/2012		I	C100	2.000	Bundles	1.0000	1.1500	2.00	2.30	Cambridge Edition	S	0.30	I	Fairfax - WRCN
+C83105	30/09/2012		I	CI/4	3940.000	Cambridge Edition - Job 72893 - Delivery 26 Sep 2012 - 98 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	388.48	446.75	Cambridge Edition	S	58.27	I	Fairfax - WRCN
+C83105	30/09/2012		I	C100	2.000	Bundles	1.0000	1.1500	2.00	2.30	Cambridge Edition	S	0.30	I	Fairfax - WRCN
+
+C83106	30/09/2012		I	CI/1	11345.000	FCN - Thursday - Job 72484 - Delivery 06 Sep 2012 - 197 grams. Includes folding fee 0.0100 cents.  	0.1153	0.1326	1308.08	1504.29	FCN - Thursday	S	196.21	I	Fairfax - WRCN
+C83106	30/09/2012		I	C100	1.000	Bundles	1.0000	1.1500	1.00	1.15	FCN - Thursday	S	0.15	I	Fairfax - WRCN
+C83106	30/09/2012		I	C150	12.000	Bundles	1.5000	1.7250	18.00	20.70	FCN - Thursday	S	2.70	I	Fairfax - WRCN
+C83106	30/09/2012		I	CI/2	11345.000	FCN - Thursday - Job 72485 - Delivery 13 Sep 2012 - 197 grams. Includes folding fee 0.0100 cents.  	0.1153	0.1326	1308.08	1504.29	FCN - Thursday	S	196.21	I	Fairfax - WRCN
+C83106	30/09/2012		I	C100	1.000	Bundles	1.0000	1.1500	1.00	1.15	FCN - Thursday	S	0.15	I	Fairfax - WRCN
+C83106	30/09/2012		I	C150	12.000	Bundles	1.5000	1.7250	18.00	20.70	FCN - Thursday	S	2.70	I	Fairfax - WRCN
+C83106	30/09/2012		I	CI/3	11345.000	FCN - Thursday - Job 72896 - Delivery 20 Sep 2012 - 197 grams. Includes folding fee 0.0100 cents.  	0.1153	0.1326	1308.08	1504.29	FCN - Thursday	S	196.21	I	Fairfax - WRCN
+C83106	30/09/2012		I	C100	1.000	Bundles	1.0000	1.1500	1.00	1.15	FCN - Thursday	S	0.15	I	Fairfax - WRCN
+C83106	30/09/2012		I	C150	12.000	Bundles	1.5000	1.7250	18.00	20.70	FCN - Thursday	S	2.70	I	Fairfax - WRCN
+C83106	30/09/2012		I	CI/4	11345.000	FCN - Thursday - Job 72897 - Delivery 27 Sep 2012 - 218 grams. Includes folding fee 0.0100 cents.  	0.1263	0.1452	1432.87	1647.80	FCN - Thursday	S	214.93	I	Fairfax - WRCN
+C83106	30/09/2012		I	C100	1.000	Bundles	1.0000	1.1500	1.00	1.15	FCN - Thursday	S	0.15	I	Fairfax - WRCN
+C83106	30/09/2012		I	C150	12.000	Bundles	1.5000	1.7250	18.00	20.70	FCN - Thursday	S	2.70	I	Fairfax - WRCN
+
+C83107	30/09/2012		I	CI/1	11145.000	FCN - Tuesday - Job 72489 - Delivery 04 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	1098.90	1263.74	FCN - Tuesday	S	164.84	I	Fairfax - WRCN
+C83107	30/09/2012		I	C150	13.000	Bundles	1.5000	1.7250	19.50	22.43	FCN - Tuesday	S	2.93	I	Fairfax - WRCN
+C83107	30/09/2012		I	CI/2	11145.000	FCN - Tuesday - Job 72490 - Delivery 11 Sep 2012 - 109 grams. Includes folding fee 0.0100 cents.  	0.1097	0.1262	1222.61	1406.00	FCN - Tuesday	S	183.39	I	Fairfax - WRCN
+C83107	30/09/2012		I	C150	13.000	Bundles	1.5000	1.7250	19.50	22.43	FCN - Tuesday	S	2.93	I	Fairfax - WRCN
+C83107	30/09/2012		I	CI/3	11145.000	FCN - Tuesday - Job 72920 - Delivery 18 Sep 2012 - 76 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	1098.90	1263.74	FCN - Tuesday	S	164.84	I	Fairfax - WRCN
+C83107	30/09/2012		I	C150	13.000	Bundles	1.5000	1.7250	19.50	22.43	FCN - Tuesday	S	2.93	I	Fairfax - WRCN
+C83107	30/09/2012		I	CI/4	11145.000	FCN - Tuesday - Job 72921 - Delivery 25 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	1098.90	1263.74	FCN - Tuesday	S	164.84	I	Fairfax - WRCN
+C83107	30/09/2012		I	C150	13.000	Bundles	1.5000	1.7250	19.50	22.43	FCN - Tuesday	S	2.93	I	Fairfax - WRCN
+
+C83108	30/09/2012		I	CI/1	2265.000	Matamata Chronicle - Job 72494 - Delivery 05 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	223.33	256.83	Matamata Chronicle	S	33.50	I	Fairfax - WRCN
+C83108	30/09/2012		I	CI/2	2265.000	Matamata Chronicle - Job 72495 - Delivery 12 Sep 2012 - 87 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	223.33	256.83	Matamata Chronicle	S	33.50	I	Fairfax - WRCN
+C83108	30/09/2012		I	CI/3	2265.000	Matamata Chronicle - Job 73027 - Delivery 19 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	223.33	256.83	Matamata Chronicle	S	33.50	I	Fairfax - WRCN
+C83108	30/09/2012		I	CI/4	2265.000	Matamata Chronicle - Job 73028 - Delivery 26 Sep 2012 - 98 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	223.33	256.83	Matamata Chronicle	S	33.50	I	Fairfax - WRCN
+
+C83109	30/09/2012		I	CI/1	2876.000	Nth Waikato News - Job 72499 - Delivery 05 Sep 2012 - 44 grams. Includes folding fee 0.0100 cents.  	0.0875	0.1006	251.65	289.40	Nth Waikato News	S	37.75	I	Fairfax - WRCN
+C83109	30/09/2012		I	CI/2	2876.000	Nth Waikato News - Job 72500 - Delivery 12 Sep 2012 - 33 grams. Includes folding fee 0.0100 cents.  	0.0875	0.1006	251.65	289.40	Nth Waikato News	S	37.75	I	Fairfax - WRCN
+C83109	30/09/2012		I	CI/3	2876.000	Nth Waikato News - Job 72925 - Delivery 19 Sep 2012 - 44 grams. Includes folding fee 0.0100 cents.  	0.0875	0.1006	251.65	289.40	Nth Waikato News	S	37.75	I	Fairfax - WRCN
+C83109	30/09/2012		I	CI/4	2876.000	Nth Waikato News - Job 72926 - Delivery 26 Sep 2012 - 33 grams. Includes folding fee 0.0100 cents.  	0.0875	0.1006	251.65	289.40	Nth Waikato News	S	37.75	I	Fairfax - WRCN
+
+C83110	30/09/2012		I	CI/1	3457.000	Piako Post - Job 72504 - Delivery 05 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	340.86	391.99	Piako Post	S	51.13	I	Fairfax - WRCN
+C83110	30/09/2012		I	CI/2	3457.000	Piako Post - Job 72505 - Delivery 12 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	340.86	391.99	Piako Post	S	51.13	I	Fairfax - WRCN
+C83110	30/09/2012		I	CI/3	3457.000	Piako Post - Job 72909 - Delivery 19 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	340.86	391.99	Piako Post	S	51.13	I	Fairfax - WRCN
+C83110	30/09/2012		I	CI/4	3457.000	Piako Post - Job 72910 - Delivery 26 Sep 2012 - 98 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	340.86	391.99	Piako Post	S	51.13	I	Fairfax - WRCN
+
+C83111	30/09/2012		I	CI/1	2885.000	Rotorua Review - Job 72509 - Delivery 05 Sep 2012 - 76 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	284.46	327.13	Rotorua Review	S	42.67	I	Fairfax - WRCN
+C83111	30/09/2012		I	C150	2.000	Bundles	1.5000	1.7250	3.00	3.45	Rotorua Review	S	0.45	I	Fairfax - WRCN
+C83111	30/09/2012		I	CI/2	2885.000	Rotorua Review - Job 72510 - Delivery 12 Sep 2012 - 76 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	284.46	327.13	Rotorua Review	S	42.67	I	Fairfax - WRCN
+C83111	30/09/2012		I	C150	2.000	Bundles	1.5000	1.7250	3.00	3.45	Rotorua Review	S	0.45	I	Fairfax - WRCN
+C83111	30/09/2012		I	CI/3	2885.000	Rotorua Review - Job 72913 - Delivery 19 Sep 2012 - 87 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	284.46	327.13	Rotorua Review	S	42.67	I	Fairfax - WRCN
+C83111	30/09/2012		I	C150	2.000	Bundles	1.5000	1.7250	3.00	3.45	Rotorua Review	S	0.45	I	Fairfax - WRCN
+C83111	30/09/2012		I	CI/4	2885.000	Rotorua Review - Job 72914 - Delivery 26 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	284.46	327.13	Rotorua Review	S	42.67	I	Fairfax - WRCN
+C83111	30/09/2012		I	C150	2.000	Bundles	1.5000	1.7250	3.00	3.45	Rotorua Review	S	0.45	I	Fairfax - WRCN
+
+C83112	30/09/2012		I	CI/1	2017.000	Sth Waikato News - Job 72514 - Delivery 05 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	198.88	228.71	Sth Waikato News	S	29.83	I	Fairfax - WRCN
+C83112	30/09/2012		I	C100	3.000	Bundles	1.0000	1.1500	3.00	3.45	Sth Waikato News	S	0.45	I	Fairfax - WRCN
+C83112	30/09/2012		I	CI/2	2017.000	Sth Waikato News - Job 72515 - Delivery 12 Sep 2012 - 55 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	198.88	228.71	Sth Waikato News	S	29.83	I	Fairfax - WRCN
+C83112	30/09/2012		I	C100	3.000	Bundles	1.0000	1.1500	3.00	3.45	Sth Waikato News	S	0.45	I	Fairfax - WRCN
+C83112	30/09/2012		I	CI/3	2017.000	Sth Waikato News - Job 72516 - Delivery 19 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	198.88	228.71	Sth Waikato News	S	29.83	I	Fairfax - WRCN
+C83112	30/09/2012		I	C100	3.000	Bundles	1.0000	1.1500	3.00	3.45	Sth Waikato News	S	0.45	I	Fairfax - WRCN
+C83112	30/09/2012		I	CI/4	2017.000	Sth Waikato News - Job 72917 - Delivery 26 Sep 2012 - 82 grams. Includes folding fee 0.0100 cents.  	0.0986	0.1134	198.88	228.71	Sth Waikato News	S	29.83	I	Fairfax - WRCN
+C83112	30/09/2012		I	C100	3.000	Bundles	1.0000	1.1500	3.00	3.45	Sth Waikato News	S	0.45	I	Fairfax - WRCN
+
+C83113	30/09/2012		I	CI/1	11270.000	Waikato Farmers Newspaper - Job 72517 - Delivery IOA - 131 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1540	0.1771	1735.58	1995.92	Waikato Farmers Newspaper	S	260.34	I	Fairfax - WRCN
+
+C83114	30/09/2012	16600	I	CI/1	26000.000	FIL The Dairy Farmer Spring  2012 - Job 72354 - Delivery 03 Sep 2012 - 35 grams.   Includes Linehaul.	0.1089	0.1252	2831.40	3256.11	FIL The Dairy Farmer Spring  2012	S	424.71	I	Farmers Industries (
+
+C83115	30/09/2012		I	CI/1	4678.000	Fishing & Shooting Pro Shops - Job 72712 - Delivery 24 Sep 2012 - 53 grams.   Includes Linehaul.	0.1354	0.1557	633.40	728.41	Fishing & Shooting Pro Shops	S	95.01	I	Fiordland Frontier
+C83115	30/09/2012		I	CI/2	1.000	Fishing & Shooting Pro Shops - Job 72712 - Delivery 24 Sep 2012 - 53 grams. Bags Boxes and Counter. Includes Linehaul.	394.0000	453.1000	394.00	453.10	Fishing & Shooting Pro Shops	S	59.10	I	Fiordland Frontier
+
+C83116	30/09/2012		I	CI/1	3745.000	GEAFT NZ Shed 5 MMT Flyer - Job 73036 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0000	0.0000	0.00	0.00	GEAFT NZ Shed 5 MMT Flyer	S	0.00	I	GEA Farm Technologie
+
+C83117	30/09/2012		I	CI/1	1100.000	Quality Sheds - Job 73132 - Delivery IOA - 5 grams.   Includes Linehaul.	0.0971	0.1117	106.81	122.83	Quality Sheds	S	16.02	I	H2 Group
+
+C83118	30/09/2012		I	CI/1	1912.000	Harcourts - Job 72790 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0759	0.0873	145.12	166.89	Harcourts	S	21.77	I	Harcourts Taupo
+
+C83119	30/09/2012		I	CI/1	4799.000	My Hastings - Job 72518 - Delivery IOA - 10 grams.   	0.0824	0.0948	395.44	454.76	My Hastings	S	59.32	I	Hastings District Co
+
+C83120	30/09/2012	P1025	I	CI/1	197067.000	Heartland Rural Supplies - Job 72709 - Delivery IOA - 8 grams.   Includes Linehaul.	0.0800	0.0920	15765.36	18130.16	Heartland Rural Supplies	S	2364.80	I	Heartland Rural Supp
+
+C83121	30/09/2012		I	CI/1	4608.000	Glen R Angus Bull Sale Flyer - Job 73070 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	447.44	514.56	Glen R Angus Bull Sale Flyer	S	67.12	I	Helen Heddell
+
+C83122	30/09/2012		I	CI/1	3179.000	Herd Homes Open Day - Job 73164 - Delivery IOA - 10 grams.   	0.0824	0.0948	261.95	301.24	Herd Homes Open Day	S	39.29	I	Herd Homes Systems L
+
+C83123	30/09/2012	22470	I	CI/1	4000.000	Placemakers Ashburton - Job 73118 - Delivery 25 Sep 2012 - 10 grams.   Includes Linehaul.	0.0971	0.1117	388.40	446.66	Placemakers Ashburton	S	58.26	I	Higgins Print Ltd
+
+C83124	30/09/2012		I	CI/1	6095.000	Farrells Nurseries - Job 72713 - Delivery 03 Sep 2012 - 10 grams.   Includes Linehaul.	0.0750	0.0863	457.13	525.70	Farrells Nurseries	S	68.57	I	John Farrells Nurser
+C83124	30/09/2012		I	CI/2	9580.000	Farrells Nurseries - Job 72821 - Delivery 03 Sep 2012 - 10 grams.   Includes Linehaul.	0.0750	0.0863	718.50	826.28	Farrells Nurseries	S	107.78	I	John Farrells Nurser
+C83124	30/09/2012		I	CI/3	3485.000	Farrells Nurseries - Job 72929 - Delivery 11 Sep 2012 - 10 grams.   Includes Linehaul.	0.0750	0.0863	261.38	300.59	Farrells Nurseries	S	39.21	I	John Farrells Nurser
+C83124	30/09/2012		I	CI/4	6095.000	Farrells Nurseries - Job 73054 - Delivery 17 Sep 2012 - 10 grams.   Includes Linehaul.	0.0750	0.0863	457.13	525.70	Farrells Nurseries	S	68.57	I	John Farrells Nurser
+C83124	30/09/2012		I	CI/5	2579.000	Farrells Nurseries - Job 73113 - Delivery 25 Sep 2012 - 10 grams.   Includes Linehaul.	0.0750	0.0863	193.43	222.44	Farrells Nurseries	S	29.01	I	John Farrells Nurser
+
+C83125	30/09/2012		I	CI/1	1890.000	Josh Grimmett Rural - Job 72842 - Delivery 03 Sep 2012 - 10 grams.   Includes Linehaul.	0.0971	0.1117	183.52	211.05	Josh Grimmett Rural	S	27.53	I	Josh Grimmett
+C83125	30/09/2012		I	CI/2	1582.000	Josh Grimmett Urban - Job 72843 - Delivery 03 Sep 2012 - 10 grams.   Includes Linehaul.	0.0500	0.0575	79.10	90.97	Josh Grimmett Urban	S	11.87	I	Josh Grimmett
+
+C83126	30/09/2012		I	CI/1	5805.000	Kaipara Workwear - Job 72166 - Delivery 01 Sep 2012 - 0 grams.   Includes Linehaul.	0.0000	0.0000	0.00	0.00	Kaipara Workwear	S	0.00	I	Kaipara Workwear
+
+C83127	30/09/2012		I	CI/1	2875.000	Stihl - Spring Time Clean Up - Job 72970 - Delivery 04 Sep 2012 - 20 grams.   Includes Linehaul.	0.0971	0.1117	279.16	321.03	Stihl - Spring Time Clean Up	S	41.87	I	KC Motors
+
+C83128	30/09/2012		I	CI/1	830.000	Hibiscus Matters - Job 72901 - Delivery 06 Sep 2012 - 35 grams.   	0.0904	0.1040	75.03	86.28	Hibiscus Matters	S	11.25	I	Local Matters 2005 L
+C83128	30/09/2012		I	CI/2	830.000	Hibiscus Matters - Job 72902 - Delivery 20 Sep 2012 - 35 grams.   	0.0904	0.1040	75.03	86.28	Hibiscus Matters	S	11.25	I	Local Matters 2005 L
+
+C83129	30/09/2012		I	CI/1	38572.000	Ohinewai Auction - Job 72726 - Delivery 25 Sep 2012 - 10 grams.   Includes Linehaul.	0.0851	0.0979	3282.48	3774.85	Ohinewai Auction	S	492.37	I	Max Birt Sawmills
+
+C83130	30/09/2012		I	CI/1	57063.000	Genesis pour on 1, 2 - Job 72856 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	5540.82	6371.94	Genesis pour on 1, 2	S	831.12	I	Merial Ancare
+
+C83131	30/09/2012		I	CI/1	80881.000	Spring 2012 Icebreaker - Job 72857 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	7853.55	9031.58	Spring 2012 Icebreaker	S	1178.03	I	Merial Ancare
+
+C83132	30/09/2012		I	CI/1	5101.000	Mid West Flyer - Job 73150 - Delivery 24 Sep 2012 - 20 grams.   Includes Linehaul.	0.0874	0.1005	445.83	512.70	Mid West Flyer	S	66.87	I	Mid-West Machinery L
+
+C83133	30/09/2012		I	CI/1	16638.000	Nevada Dairy Nutrient Solutions - Job 72747 - Delivery 01 Sep 2012 - 10 grams.   Includes Linehaul.	0.0874	0.1005	1454.16	1672.28	Nevada Dairy Nutrient Solutions	S	218.12	I	Mid-West Machinery L
+
+C83134	30/09/2012		I	CI/1	29084.000	Canterbury Farming - Job 72905 - Delivery 25 Sep 2012 - 60 grams.   Includes Linehaul.	0.0959	0.1103	2789.16	3207.53	Canterbury Farming	S	418.37	I	North South Multimed
+
+C83135	30/09/2012		I	CI/1	5225.000	Kaipara Lifestyler - Job 72522 - Delivery 05 Sep 2012 - 75 grams.   	0.0776	0.0892	405.46	466.28	Kaipara Lifestyler	S	60.82	I	North South Multimed
+C83135	30/09/2012		I	CI/2	5225.000	Kaipara Lifestyler - Job 72523 - Delivery 12 Sep 2012 - 75 grams.   	0.0776	0.0892	405.46	466.28	Kaipara Lifestyler	S	60.82	I	North South Multimed
+C83135	30/09/2012		I	CI/3	4620.000	Kaipara Lifestyler - Job 72648 - Delivery 19 Sep 2012 - 75 grams.   	0.0776	0.0892	358.51	412.29	Kaipara Lifestyler	S	53.78	I	North South Multimed
+C83135	30/09/2012		I	CI/4	4620.000	Kaipara Lifestyler - Job 72649 - Delivery 26 Sep 2012 - 75 grams.   	0.0776	0.0892	358.51	412.29	Kaipara Lifestyler	S	53.78	I	North South Multimed
+
+C83136	30/09/2012		I	CI/1	33082.000	Northland Farming Lifestyler - Job 72906 - Delivery 20 Sep 2012 - 92 grams.   	0.0959	0.1103	3172.56	3648.44	Northland Farming Lifestyler	S	475.88	I	North South Multimed
+
+C83137	30/09/2012		I	CI/1	22281.000	Taranaki/Manawatu  Farming Lifestlye - Job 72907 - Delivery IOA - 70 grams.   Includes Linehaul.	0.0959	0.1103	2136.75	2457.26	Taranaki/Manawatu  Farming Lifestlye	S	320.51	I	North South Multimed
+
+C83138	30/09/2012		I	CI/1	30455.000	Waikato Farming Lifestyler - Job 72908 - Delivery IOA - 124 grams.   Includes Linehaul.	0.1142	0.1313	3477.96	3999.65	Waikato Farming Lifestyler	S	521.69	I	North South Multimed
+
+C83139	30/09/2012		I	CI/1	8926.000	Allied Farmers Flyer - Job 72803 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	866.71	996.72	Allied Farmers Flyer	S	130.01	I	NZ Farmers Livestock
+
+C83140	30/09/2012		I	CI/1	2143.000	NZ farmers Livestock - Job 73078 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	208.09	239.30	NZ farmers Livestock	S	31.21	I	NZ Farmers Livestock
+
+C83141	30/09/2012		I	CI/1	26321.000	Dairyman - Job 72851 - Delivery IOA - 127 grams.   Includes Linehaul.	0.1221	0.1404	3213.79	3695.86	Dairyman	S	482.07	I	NZ Rural Press Limit
+
+C83142	30/09/2012		I	CI/1	81109.000	Straight Furrow - Job 72830 - Delivery 03 Sep 2012 - 210 grams.   Includes Linehaul.	0.1801	0.2071	14607.73	16798.89	Straight Furrow	S	2191.16	I	NZ Rural Press Limit
+C83142	30/09/2012		I	CI/2	1853.000	Straight Furrow - Job 72830 - Delivery 03 Sep 2012 - 210 grams. Bags Boxes and Counter. Includes Linehaul.	0.0910	0.1047	168.62	193.91	Straight Furrow	S	25.29	I	NZ Rural Press Limit
+
+C83143	30/09/2012		I	CI/1	81109.000	Straight Furrow - Job 72834 - Delivery 17 Sep 2012 - 107 grams.   Includes Linehaul.	0.1221	0.1404	9903.41	11388.92	Straight Furrow	S	1485.51	I	NZ Rural Press Limit
+C83143	30/09/2012		I	CI/2	1853.000	Straight Furrow - Job 72834 - Delivery 17 Sep 2012 - 107 grams. Bags Boxes and Counter. Includes Linehaul.	0.0910	0.1047	168.62	193.91	Straight Furrow	S	25.29	I	NZ Rural Press Limit
+
+C83144	30/09/2012		I	CI/1	19107.000	Straight Furrow - Central - Job 72835 - Delivery 24 Sep 2012 - 70 grams.   Includes Linehaul.	0.0973	0.1119	1859.11	2137.98	Straight Furrow - Central	S	278.87	I	NZ Rural Press Limit
+C83144	30/09/2012		I	CI/2	1342.000	Straight Furrow - Central - Job 72835 - Delivery 24 Sep 2012 - 70 grams. Bags Boxes and Counter. Includes Linehaul.	0.0000	0.0000	0.00	0.00	Straight Furrow - Central	S	0.00	I	NZ Rural Press Limit
+
+C83145	30/09/2012		I	CI/1	19107.000	Straight Furrow - Central/Ag Trader - Job 72831 - Delivery 10 Sep 2012 - 340 grams.   Includes Linehaul.	0.2381	0.2738	4549.38	5231.79	Straight Furrow - Central/Ag Trader	S	682.41	I	NZ Rural Press Limit
+C83145	30/09/2012		I	CI/2	1342.000	Straight Furrow - Central/Ag Trader - Job 72831 - Delivery 10 Sep 2012 - 340 grams. Bags Boxes and Counter. Includes Linehaul.	0.1600	0.1840	214.72	246.93	Straight Furrow - Central/Ag Trader	S	32.21	I	NZ Rural Press Limit
+
+C83146	30/09/2012		I	CI/1	37064.000	Straight Furrow - North - Job 72836 - Delivery 24 Sep 2012 - 70 grams.   Includes Linehaul.	0.0973	0.1119	3606.33	4147.28	Straight Furrow - North	S	540.95	I	NZ Rural Press Limit
+
+C83147	30/09/2012		I	CI/1	37064.000	Straight Furrow - North/Ag Trader - Job 72832 - Delivery 10 Sep 2012 - 340 grams.   Includes Linehaul.	0.2381	0.2738	8824.94	10148.68	Straight Furrow - North/Ag Trader	S	1323.74	I	NZ Rural Press Limit
+
+C83148	30/09/2012		I	CI/1	24968.000	Straight Furrow - South - Job 72837 - Delivery 24 Sep 2012 - 70 grams.   Includes Linehaul.	0.0973	0.1119	2429.39	2793.80	Straight Furrow - South	S	364.41	I	NZ Rural Press Limit
+C83148	30/09/2012		I	CI/2	511.000	Straight Furrow - South - Job 72837 - Delivery 24 Sep 2012 - 70 grams. Bags Boxes and Counter. Includes Linehaul.	0.0910	0.1047	46.50	53.48	Straight Furrow - South	S	6.98	I	NZ Rural Press Limit
+
+C83149	30/09/2012		I	CI/1	24968.000	Straight Furrow - South/Ag Trader - Job 72833 - Delivery 10 Sep 2012 - 340 grams.   Includes Linehaul.	0.2381	0.2738	5944.88	6836.61	Straight Furrow - South/Ag Trader	S	891.73	I	NZ Rural Press Limit
+C83149	30/09/2012		I	CI/2	511.000	Straight Furrow - South/Ag Trader - Job 72833 - Delivery 10 Sep 2012 - 340 grams. Bags Boxes and Counter. Includes Linehaul.	0.1600	0.1840	81.76	94.02	Straight Furrow - South/Ag Trader	S	12.26	I	NZ Rural Press Limit
+
+C83150	30/09/2012	N-3227432	I	CI/1	14842.000	Cydectin Pour on Swazi  - Job 73162 - Delivery IOA - 15 grams.   Includes Linehaul.	0.0971	0.1117	1441.16	1657.33	Cydectin Pour on Swazi 	S	216.17	I	Pfizer NZ Ltd
+
+C83151	30/09/2012	N-3221220	I	CI/1	25113.000	Cydectin Pour on Swazi DM - Job 72805 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	2438.47	2804.24	Cydectin Pour on Swazi DM	S	365.77	I	Pfizer NZ Ltd
+
+C83152	30/09/2012	2446385	I	CI/1	3528.000	100% Folders Grand Opening - Job 73071 - Delivery 24 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	196.16	225.58	100% Folders Grand Opening	S	29.42	I	PMP Distribution Lim
+
+C83153	30/09/2012	2447065	I	CI/1	890.000	Albany Car Clinic Sept 2012 - Job 73149 - Delivery 24 Sep 2012 - 10 grams.   	0.0556	0.0639	49.48	56.90	Albany Car Clinic Sept 2012	S	7.42	I	PMP Distribution Lim
+
+C83154	30/09/2012	2444807	I	CI/1	41925.000	Briscoes - Job 72705 - Delivery 24 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	2331.03	2680.68	Briscoes	S	349.65	I	PMP Distribution Lim
+
+C83155	30/09/2012	2446881	I	CI/1	1972.000	Butlers Coastlands and North City - Job 73086 - Delivery 25 Sep 2012 - 10 grams.   	0.0520	0.0598	102.54	117.92	Butlers Coastlands and North City	S	15.38	I	PMP Distribution Lim
+
+C83156	30/09/2012	2446938	I	CI/1	890.000	Colliers Silverdale Centre - Job 73094 - Delivery 24 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	49.48	56.90	Colliers Silverdale Centre	S	7.42	I	PMP Distribution Lim
+
+C83157	30/09/2012	2445391	I	CI/1	8107.000	Colourplus Sept Drape Mailer - Job 72765 - Delivery 25 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	450.75	518.36	Colourplus Sept Drape Mailer	S	67.61	I	PMP Distribution Lim
+
+C83158	30/09/2012	2446652	I	CI/1	6481.000	Continuing Education - Job 73064 - Delivery 29 Sep 2012 - 25 grams.   	0.0520	0.0598	337.01	387.56	Continuing Education	S	50.55	I	PMP Distribution Lim
+
+C83159	30/09/2012	2447060	I	CI/1	10935.000	Curtain Studio October 2pg - Job 73148 - Delivery 25 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	607.99	699.19	Curtain Studio October 2pg	S	91.20	I	PMP Distribution Lim
+
+C83160	30/09/2012	2444648	I	CI/1	2417.000	DTR September 2012 - Job 72675 - Delivery 25 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	134.39	154.55	DTR September 2012	S	20.16	I	PMP Distribution Lim
+
+C83161	30/09/2012	2446943	I	CI/1	58052.000	Fishing Camping and Outdoors - Job 73096 - Delivery 25 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	3227.69	3711.84	Fishing Camping and Outdoors	S	484.15	I	PMP Distribution Lim
+
+C83162	30/09/2012	2443918	I	CI/1	55687.000	Four Square Northern - Job 73161 - Delivery 29 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	3096.20	3560.63	Four Square Northern	S	464.43	I	PMP Distribution Lim
+
+C83163	30/09/2012	2446769	I	CI/1	47347.000	Four Square Southern - Job 73082 - Delivery 29 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	2632.49	3027.36	Four Square Southern	S	394.87	I	PMP Distribution Lim
+
+C83164	30/09/2012	2446971	I	CI/1	7792.000	Franklin A-Z Business Directory - Job 73144 - Delivery 27 Sep 2012 - 210 grams.   Includes Linehaul.	0.1230	0.1415	958.42	1102.18	Franklin A-Z Business Directory	S	143.76	I	PMP Distribution Lim
+
+C83165	30/09/2012	2446377	I	CI/1	10704.000	Freeview 2nd Drop - Job 73053 - Delivery 24 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	595.14	684.41	Freeview 2nd Drop	S	89.27	I	PMP Distribution Lim
+
+C83166	30/09/2012	2446959	I	CI/1	9210.000	Furniture Link - Job 73095 - Delivery 25 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	512.08	588.89	Furniture Link	S	76.81	I	PMP Distribution Lim
+C83166	30/09/2012	2446959	I	CI/2	9210.000	Furniture Link - Job 73177 - Delivery 25 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	512.08	588.89	Furniture Link	S	76.81	I	PMP Distribution Lim
+
+C83167	30/09/2012	2447833	I	CI/1	3806.000	Geminal Seeds SI - Job 73279 - Delivery 28 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	211.61	243.35	Geminal Seeds SI	S	31.74	I	PMP Distribution Lim
+
+C83168	30/09/2012	2446889	I	CI/1	202627.000	Harvey Norman Furniture Bedding - Job 73088 - Delivery 25 Sep 2012 - 57 grams.   Includes Linehaul.	0.0756	0.0869	15318.60	17616.39	Harvey Norman Furniture Bedding	S	2297.79	I	PMP Distribution Lim
+
+C83169	30/09/2012	2446144	I	CI/1	18485.000	Heathcote Appliances - Job 73035 - Delivery 25 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	1027.77	1181.94	Heathcote Appliances	S	154.17	I	PMP Distribution Lim
+
+C83170	30/09/2012	2446977	I	CI/1	1312.000	Hoyts Hibiscus Coast - Job 73146 - Delivery 25 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	72.95	83.89	Hoyts Hibiscus Coast	S	10.94	I	PMP Distribution Lim
+
+C83171	30/09/2012	2447043	I	CI/1	10321.000	Hoyts Te Awa Drop - Job 73147 - Delivery 25 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	573.85	659.93	Hoyts Te Awa Drop	S	86.08	I	PMP Distribution Lim
+
+C83172	30/09/2012	2446951	I	CI/1	7417.000	Instant Finance Sept 2012 - Job 73097 - Delivery 25 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	412.39	474.25	Instant Finance Sept 2012	S	61.86	I	PMP Distribution Lim
+
+C83173	30/09/2012	2445469	I	CI/1	4038.000	Kathmandu Gear Up Mailer Sept 2012 - Job 72809 - Delivery 25 Sep 2012 - 32 grams.   Includes Linehaul.	0.0000	0.0000	0.00	0.00	Kathmandu Gear Up Mailer Sept 2012	S	0.00	I	PMP Distribution Lim
+
+C83174	30/09/2012	2447240	I	CI/1	1025.000	Kowhai Dental - Flying Fish - Job 73160 - Delivery 27 Sep 2012 - 10 grams.   	0.0520	0.0598	53.30	61.30	Kowhai Dental - Flying Fish	S	8.00	I	PMP Distribution Lim
+
+C83175	30/09/2012	2445260	I	CI/1	3031.000	Lewis Home Fabrics Thermal Drapes - Job 72746 - Delivery 28 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	168.52	193.80	Lewis Home Fabrics Thermal Drapes	S	25.28	I	PMP Distribution Lim
+
+C83176	30/09/2012	2447223	I	CI/1	267.000	Lifecare Waiheke Sept Flyer - Job 73159 - Delivery 25 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	14.85	17.08	Lifecare Waiheke Sept Flyer	S	2.23	I	PMP Distribution Lim
+
+C83177	30/09/2012	2444952	I	CI/1	81309.000	New World Northern - Job 72780 - Delivery 29 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	4520.78	5198.90	New World Northern	S	678.12	I	PMP Distribution Lim
+
+C83178	30/09/2012	2445833	I	CI/1	64806.000	New World Southern - Job 72786 - Delivery 29 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	3603.21	4143.69	New World Southern	S	540.48	I	PMP Distribution Lim
+
+C83179	30/09/2012	2443507	I	CI/1	111902.000	Noel Leeming - Job 72874 - Delivery 25 Sep 2012 - 30 grams.   	0.0000	0.0000	0.00	0.00	Noel Leeming	S	0.00	I	PMP Distribution Lim
+
+C83180	30/09/2012	2445712	I	CI/1	7982.000	Noel Leeming Gore 1st Birthday - Job 72861 - Delivery 25 Sep 2012 - 20 grams.   	0.0556	0.0639	443.80	510.37	Noel Leeming Gore 1st Birthday	S	66.57	I	PMP Distribution Lim
+
+C83181	30/09/2012	2447366	I	CI/1	728.000	NZ Sale Flyer - Job 73172 - Delivery 29 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	40.48	46.55	NZ Sale Flyer	S	6.07	I	PMP Distribution Lim
+
+C83182	30/09/2012	2443945	I	CI/1	5860.000	Raeward Nelson Sept Flyer - Job 72625 - Delivery 24 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	325.82	374.69	Raeward Nelson Sept Flyer	S	48.87	I	PMP Distribution Lim
+
+C83183	30/09/2012	2447221	I	CI/1	5373.000	Specsavers Whakatane Soft Comparison - Job 73153 - Delivery 26 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	298.74	343.55	Specsavers Whakatane Soft Comparison	S	44.81	I	PMP Distribution Lim
+
+C83184	30/09/2012	2446770	I	CI/1	15020.000	Target Furniture 8pg - Job 73083 - Delivery 25 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	835.11	960.38	Target Furniture 8pg	S	125.27	I	PMP Distribution Lim
+
+C83185	30/09/2012	2446757	I	CI/1	33.000	Target Furniture Christchurch - Job 73081 - Delivery 25 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	1.83	2.10	Target Furniture Christchurch	S	0.27	I	PMP Distribution Lim
+
+C83186	30/09/2012	2444856	I	CI/1	8066.000	The Good Guys Week 13 Sept 2012 - Job 72693 - Delivery 25 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	448.47	515.74	The Good Guys Week 13 Sept 2012	S	67.27	I	PMP Distribution Lim
+
+C83187	30/09/2012	2447161	I	CI/1	173852.000	Tier 3 Country Spring 2012 - Job 73158 - Delivery 26 Sep 2012 - 94 grams.   Includes Linehaul.	0.1050	0.1208	18254.46	20992.63	Tier 3 Country Spring 2012	S	2738.17	I	PMP Distribution Lim
+C83187	30/09/2012	2447161	I	CI/2	1.000	Tier 3 Country Spring 2012 - Job 73158 - Delivery 26 Sep 2012 - 94 grams. Bags Boxes and Counter. Includes Linehaul.	150.0000	172.5000	150.00	172.50	Tier 3 Country Spring 2012	S	22.50	I	PMP Distribution Lim
+
+C83188	30/09/2012	2446874	I	CI/1	17144.000	Toyworld October 32pg - Job 73084 - Delivery 25 Sep 2012 - 25 grams.   Includes Linehaul.	0.0556	0.0639	953.21	1096.19	Toyworld October 32pg	S	142.98	I	PMP Distribution Lim
+
+C83189	30/09/2012	2445427	I	CI/1	4328.000	Tyrepower - Job 72932 - Delivery 25 Sep 2012 - 25 grams.   	0.0000	0.0000	0.00	0.00	Tyrepower	S	0.00	I	PMP Distribution Lim
+
+C83190	30/09/2012	2445940	I	CI/1	38468.000	Vantage Sept 2012 - Job 72933 - Delivery 25 Sep 2012 - 29 grams.   	0.0597	0.0687	2296.54	2641.02	Vantage Sept 2012	S	344.48	I	PMP Distribution Lim
+C83190	30/09/2012	2445940	I	CI/2	799.000	Vantage Sept 2012 - Job 73190 - Delivery 25 Sep 2012 - 29 grams.   	0.0597	0.0687	47.70	54.86	Vantage Sept 2012	S	7.16	I	PMP Distribution Lim
+
+C83191	30/09/2012	2446922	I	CI/1	3877.000	West Auckland Trust Services - Swanson - Job 73093 - Delivery IOA - 20 grams.   Includes Linehaul.	0.0556	0.0639	215.56	247.89	West Auckland Trust Services - Swanson	S	32.33	I	PMP Distribution Lim
+
+C83192	30/09/2012	2446334	I	CI/1	1252.000	Westfield Chartwell Mad Hatter Shows - Job 73055 - Delivery 24 Sep 2012 - 20 grams.   Includes Linehaul.	0.0556	0.0639	69.61	80.05	Westfield Chartwell Mad Hatter Shows	S	10.44	I	PMP Distribution Lim
+
+C83193	30/09/2012	2446976	I	CI/1	1936.000	Westlife Furniture Papamoa Sept 2012 - Job 73145 - Delivery 24 Sep 2012 - 10 grams.   Includes Linehaul.	0.0556	0.0639	107.64	123.79	Westlife Furniture Papamoa Sept 2012	S	16.15	I	PMP Distribution Lim
+
+C83194	30/09/2012	2445555	I	CI/1	4308.000	Bay Weekend - Job 72530 - Delivery 01 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	391.17	449.85	Bay Weekend	S	58.68	I	PMP Distribution Lim
+C83194	30/09/2012	2445555	I	CI/2	4308.000	Bay Weekend - Job 72531 - Delivery 08 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	391.17	449.85	Bay Weekend	S	58.68	I	PMP Distribution Lim
+C83194	30/09/2012	2445555	I	CI/3	4308.000	Bay Weekend - Job 72532 - Delivery 15 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	391.17	449.85	Bay Weekend	S	58.68	I	PMP Distribution Lim
+C83194	30/09/2012	2445555	I	CI/4	4308.000	Bay Weekend - Job 72937 - Delivery 22 Sep 2012 - 72 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	391.17	449.85	Bay Weekend	S	58.68	I	PMP Distribution Lim
+C83194	30/09/2012	2445555	I	CI/5	4308.000	Bay Weekend - Job 72938 - Delivery 29 Sep 2012 - 72 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	391.17	449.85	Bay Weekend	S	58.68	I	PMP Distribution Lim
+
+C83195	30/09/2012	2445865	I	CI/1	9193.000	Guardian Country - Job 72950 - Delivery 20 Sep 2012 - 21 grams.   	0.0536	0.0616	492.74	566.65	Guardian Country	S	73.91	I	PMP Distribution Lim
+
+C83196	30/09/2012	2445864	I	CI/1	1575.000	Guardian Newspaper - Job 72535 - Delivery 01 Sep 2012 - 69 grams.   	0.0952	0.1095	149.94	172.43	Guardian Newspaper	S	22.49	I	PMP Distribution Lim
+C83196	30/09/2012	2445864	I	CI/2	1575.000	Guardian Newspaper - Job 72536 - Delivery 06 Sep 2012 - 79 grams.   	0.0952	0.1095	149.94	172.43	Guardian Newspaper	S	22.49	I	PMP Distribution Lim
+C83196	30/09/2012	2445864	I	CI/3	1575.000	Guardian Newspaper - Job 72537 - Delivery 13 Sep 2012 - 98 grams.   	0.0952	0.1095	149.94	172.43	Guardian Newspaper	S	22.49	I	PMP Distribution Lim
+C83196	30/09/2012	2445864	I	CI/4	1575.000	Guardian Newspaper - Job 72945 - Delivery 20 Sep 2012 - 88 grams.   	0.0952	0.1095	149.94	172.43	Guardian Newspaper	S	22.49	I	PMP Distribution Lim
+C83196	30/09/2012	2445864	I	CI/5	1810.000	Guardian Newspaper - Job 72946 - Delivery 27 Sep 2012 - 88 grams.   	0.0829	0.0953	150.05	172.56	Guardian Newspaper	S	22.51	I	PMP Distribution Lim
+
+C83197	30/09/2012	 2439286	I	CI/1	6550.000	Hawkesbay Country Scene - Job 72076 - Delivery 05 Sep 2012 - 60 grams.   	0.0808	0.0929	529.24	608.63	Hawkesbay Country Scene	S	79.39	I	PMP Distribution Lim
+
+C83198	30/09/2012	2443234	I	CI/1	2288.000	Invercargill Eye - Job 72559 - Delivery 06 Sep 2012 - 40 grams.   	0.0658	0.0757	150.55	173.13	Invercargill Eye	S	22.58	I	PMP Distribution Lim
+C83198	30/09/2012	2443234	I	CI/2	2288.000	Invercargill Eye - Job 72560 - Delivery 13 Sep 2012 - 40 grams.   	0.0000	0.0000	0.00	0.00	Invercargill Eye	S	0.00	I	PMP Distribution Lim
+C83198	30/09/2012	2443234	I	CI/3	2288.000	Invercargill Eye - Job 72960 - Delivery 20 Sep 2012 - 40 grams.   	0.0658	0.0757	150.55	173.13	Invercargill Eye	S	22.58	I	PMP Distribution Lim
+C83198	30/09/2012	2443234	I	CI/4	2288.000	Invercargill Eye - Job 72961 - Delivery 27 Sep 2012 - 40 grams.   	0.0658	0.0757	150.55	173.13	Invercargill Eye	S	22.58	I	PMP Distribution Lim
+
+C83199	30/09/2012	 2445551	I	CI/1	1470.000	Lake Taupo Property Press - Job 72544 - Delivery 06 Sep 2012 - 174 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1408	179.93	206.92	Lake Taupo Property Press	S	26.99	I	PMP Distribution Lim
+C83199	30/09/2012	 2445551	I	CI/2	1470.000	Lake Taupo Property Press - Job 72545 - Delivery 20 Sep 2012 - 208 grams. Includes folding fee 0.0100 cents.  	0.1384	0.1592	203.45	233.97	Lake Taupo Property Press	S	30.52	I	PMP Distribution Lim
+
+C83200	30/09/2012	2443197	I	CI/1	1570.000	Metropol - Job 72680 - Delivery 13 Sep 2012 - 136 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	166.89	191.92	Metropol	S	25.03	I	PMP Distribution Lim
+C83200	30/09/2012	2443197	I	CI/2	1570.000	Metropol - Job 72681 - Delivery 27 Sep 2012 - 155 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1408	192.17	221.00	Metropol	S	28.83	I	PMP Distribution Lim
+
+C83201	30/09/2012	2442975	I	CI/1	3911.000	Mid Canterbury Herald - Job 72564 - Delivery 05 Sep 2012 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	355.12	408.39	Mid Canterbury Herald	S	53.27	I	PMP Distribution Lim
+C83201	30/09/2012	2442975	I	CI/2	3911.000	Mid Canterbury Herald - Job 72565 - Delivery 12 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	355.12	408.39	Mid Canterbury Herald	S	53.27	I	PMP Distribution Lim
+C83201	30/09/2012	2442975	I	CI/3	3911.000	Mid Canterbury Herald - Job 72971 - Delivery 19 Sep 2012 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	355.12	408.39	Mid Canterbury Herald	S	53.27	I	PMP Distribution Lim
+C83201	30/09/2012	2442975	I	CI/4	3911.000	Mid Canterbury Herald - Job 72972 - Delivery 26 Sep 2012 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	355.12	408.39	Mid Canterbury Herald	S	53.27	I	PMP Distribution Lim
+
+C83202	30/09/2012	2439029	I	CI/1	1560.000	Napier Mail - Job 72081 - Delivery 05 Sep 2012 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	141.65	162.90	Napier Mail	S	21.25	I	PMP Distribution Lim
+C83202	30/09/2012	2439029	I	CI/2	1560.000	Napier Mail - Job 72083 - Delivery 12 Sep 2012 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	141.65	162.90	Napier Mail	S	21.25	I	PMP Distribution Lim
+C83202	30/09/2012	2439029	I	CI/3	1560.000	Napier Mail - Job 72084 - Delivery 19 Sep 2012 - 87 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	141.65	162.90	Napier Mail	S	21.25	I	PMP Distribution Lim
+C83202	30/09/2012	2439029	I	CI/4	1560.000	Napier Mail - Job 72085 - Delivery 26 Sep 2012 - 87 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	141.65	162.90	Napier Mail	S	21.25	I	PMP Distribution Lim
+
+C83203	30/09/2012	2442844	I	CI/1	7123.000	North Canterbury News - Job 72570 - Delivery 04 Sep 2012 - 87 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	646.77	743.79	North Canterbury News	S	97.02	I	PMP Distribution Lim
+C83203	30/09/2012	2442844	I	CI/2	7123.000	North Canterbury News - Job 72571 - Delivery 11 Sep 2012 - 98 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	646.77	743.79	North Canterbury News	S	97.02	I	PMP Distribution Lim
+C83203	30/09/2012	2442844	I	CI/3	7123.000	North Canterbury News - Job 72572 - Delivery 18 Sep 2012 - 94 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	646.77	743.79	North Canterbury News	S	97.02	I	PMP Distribution Lim
+C83203	30/09/2012	2442844	I	CI/4	7123.000	North Canterbury News - Job 72975 - Delivery 25 Sep 2012 - 106 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	757.17	870.75	North Canterbury News	S	113.58	I	PMP Distribution Lim
+
+C83204	30/09/2012	2445545	I	CI/1	5437.000	Peninsula Press - Job 72541 - Delivery 06 Sep 2012 - 55 grams.   	0.0875	0.1006	475.74	547.10	Peninsula Press	S	71.36	I	PMP Distribution Lim
+
+C83205	30/09/2012	2445546	I	CI/1	5437.000	Peninsula Press - Job 72542 - Delivery 13 Sep 2012 - 55 grams.   	0.0875	0.1006	475.74	547.10	Peninsula Press	S	71.36	I	PMP Distribution Lim
+
+C83206	30/09/2012	2445547	I	CI/1	5437.000	Peninsula Press - Job 72978 - Delivery 20 Sep 2012 - 40 grams.   	0.0725	0.0834	394.18	453.31	Peninsula Press	S	59.13	I	PMP Distribution Lim
+
+C83207	30/09/2012	2445548	I	CI/1	5437.000	Peninsula Press - Job 72979 - Delivery 27 Sep 2012 - 40 grams.   	0.0725	0.0834	394.18	453.31	Peninsula Press	S	59.13	I	PMP Distribution Lim
+
+C83208	30/09/2012	2445863	I	CI/1	800.000	Rangitikei Mail - Job 72613 - Delivery 06 Sep 2012 - 101 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2156	150.00	172.50	Rangitikei Mail	S	22.50	I	PMP Distribution Lim
+C83208	30/09/2012	2445863	I	CI/2	800.000	Rangitikei Mail - Job 72614 - Delivery 13 Sep 2012 - 105 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2156	150.00	172.50	Rangitikei Mail	S	22.50	I	PMP Distribution Lim
+C83208	30/09/2012	2445863	I	CI/3	800.000	Rangitikei Mail - Job 73019 - Delivery 20 Sep 2012 - 91 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2156	150.00	172.50	Rangitikei Mail	S	22.50	I	PMP Distribution Lim
+C83208	30/09/2012	2445863	I	CI/4	800.000	Rangitikei Mail - Job 73020 - Delivery 27 Sep 2012 - 101 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2156	150.00	172.50	Rangitikei Mail	S	22.50	I	PMP Distribution Lim
+
+C83209	30/09/2012	2442864	I	CI/1	6799.000	Selwyn Times - Job 72576 - Delivery 04 Sep 2012 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	617.35	709.95	Selwyn Times	S	92.60	I	PMP Distribution Lim
+C83209	30/09/2012	2442864	I	CI/2	6799.000	Selwyn Times - Job 72577 - Delivery 11 Sep 2012 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	617.35	709.95	Selwyn Times	S	92.60	I	PMP Distribution Lim
+C83209	30/09/2012	2442864	I	CI/3	6799.000	Selwyn Times - Job 72990 - Delivery 18 Sep 2012 - 98 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	617.35	709.95	Selwyn Times	S	92.60	I	PMP Distribution Lim
+C83209	30/09/2012	2442864	I	CI/4	6799.000	Selwyn Times - Job 72991 - Delivery 25 Sep 2012 - 109 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	722.73	831.14	Selwyn Times	S	108.41	I	PMP Distribution Lim
+
+C83210	30/09/2012	2442998	I	CI/1	5319.000	South Canterbury Herald - Job 72581 - Delivery 05 Sep 2012 - 98 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	482.97	555.42	South Canterbury Herald	S	72.45	I	PMP Distribution Lim
+C83210	30/09/2012	2442998	I	CI/2	5319.000	South Canterbury Herald - Job 72582 - Delivery 12 Sep 2012 - 87 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	482.97	555.42	South Canterbury Herald	S	72.45	I	PMP Distribution Lim
+C83210	30/09/2012	2442998	I	CI/3	5319.000	South Canterbury Herald - Job 72951 - Delivery 19 Sep 2012 - 87 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	482.97	555.42	South Canterbury Herald	S	72.45	I	PMP Distribution Lim
+C83210	30/09/2012	2442998	I	CI/4	5319.000	South Canterbury Herald - Job 72952 - Delivery 26 Sep 2012 - 109 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	565.41	650.22	South Canterbury Herald	S	84.81	I	PMP Distribution Lim
+
+C83211	30/09/2012	2439030	I	CI/1	1560.000	Spring Is Here CW Napier Mail - Job 72087 - Delivery 05 Sep 2012 - 15 grams.   	0.0962	0.1106	150.07	172.58	Spring Is Here CW Napier Mail	S	22.51	I	PMP Distribution Lim
+
+C83212	30/09/2012	2442698	I	CI/1	2475.000	The Waitaki Herald Weekender - Job 72591 - Delivery 07 Sep 2012 - 33 grams. Includes folding fee 0.0100 cents.  	0.0758	0.0872	187.61	215.75	The Waitaki Herald Weekender	S	28.14	I	PMP Distribution Lim
+C83212	30/09/2012	2442698	I	CI/2	2475.000	The Waitaki Herald Weekender - Job 72592 - Delivery 14 Sep 2012 - 44 grams. Includes folding fee 0.0100 cents.  	0.0758	0.0872	187.61	215.75	The Waitaki Herald Weekender	S	28.14	I	PMP Distribution Lim
+C83212	30/09/2012	2442698	I	CI/3	2475.000	The Waitaki Herald Weekender - Job 72655 - Delivery 21 Sep 2012 - 55 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	224.73	258.44	The Waitaki Herald Weekender	S	33.71	I	PMP Distribution Lim
+C83212	30/09/2012	2442698	I	CI/4	2475.000	The Waitaki Herald Weekender - Job 72656 - Delivery 28 Sep 2012 - 44 grams. Includes folding fee 0.0100 cents.  	0.0758	0.0872	187.61	215.75	The Waitaki Herald Weekender	S	28.14	I	PMP Distribution Lim
+
+C83213	30/09/2012	2445867	I	CI/1	5291.000	Wairarapa News - Job 72609 - Delivery 06 Sep 2012 - 110 grams.   	0.1275	0.1466	674.60	775.79	Wairarapa News	S	101.19	I	PMP Distribution Lim
+C83213	30/09/2012	2445867	I	CI/2	5291.000	Wairarapa News - Job 72609 - Delivery 06 Sep 2012 - 110 grams. Bags Boxes and Counter. 	0.0350	0.0403	185.19	212.97	Wairarapa News	S	27.78	I	PMP Distribution Lim
+
+C83214	30/09/2012	2445868	I	CI/1	5291.000	Wairarapa News - Job 72866 - Delivery 13 Sep 2012 - 88 grams.   	0.1275	0.1466	674.60	775.79	Wairarapa News	S	101.19	I	PMP Distribution Lim
+
+C83215	30/09/2012	2445869	I	CI/1	5291.000	Wairarapa News - Job 72964 - Delivery 20 Sep 2012 - 101 grams.   	0.1275	0.1466	674.60	775.79	Wairarapa News	S	101.19	I	PMP Distribution Lim
+C83215	30/09/2012	2445869	I	CI/2	10582.000	Wairarapa News - Job 72964 - Delivery 20 Sep 2012 - 101 grams. Bags Boxes and Counter. 	0.0350	0.0403	370.37	425.93	Wairarapa News	S	55.56	I	PMP Distribution Lim
+
+C83216	30/09/2012	2445871	I	CI/1	5291.000	Wairarapa News - Job 72965 - Delivery 27 Sep 2012 - 99 grams.   	0.1275	0.1466	674.60	775.79	Wairarapa News	S	101.19	I	PMP Distribution Lim
+
+C83217	30/09/2012	2442966	I	CI/1	2475.000	Waitaki Herald - Job 72586 - Delivery 05 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	224.73	258.44	Waitaki Herald	S	33.71	I	PMP Distribution Lim
+C83217	30/09/2012	2442966	I	CI/2	2475.000	Waitaki Herald - Job 72587 - Delivery 12 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	224.73	258.44	Waitaki Herald	S	33.71	I	PMP Distribution Lim
+C83217	30/09/2012	2442966	I	CI/3	2475.000	Waitaki Herald - Job 72994 - Delivery 19 Sep 2012 - 66 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	224.73	258.44	Waitaki Herald	S	33.71	I	PMP Distribution Lim
+C83217	30/09/2012	2442966	I	CI/4	2475.000	Waitaki Herald - Job 72995 - Delivery 26 Sep 2012 - 55 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	224.73	258.44	Waitaki Herald	S	33.71	I	PMP Distribution Lim
+
+C83218	30/09/2012	2445557	I	CI/1	10773.000	Weekend Sun - Job 72554 - Delivery 07 Sep 2012 - 177 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1577	0.1814	1698.90	1953.74	Weekend Sun	S	254.84	I	PMP Distribution Lim
+C83218	30/09/2012	2445557	I	CI/2	10773.000	Weekend Sun - Job 72555 - Delivery 14 Sep 2012 - 135 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1063	0.1222	1145.17	1316.95	Weekend Sun	S	171.78	I	PMP Distribution Lim
+C83218	30/09/2012	2445557	I	CI/3	10773.000	Weekend Sun - Job 72982 - Delivery 21 Sep 2012 - 194 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1577	0.1814	1698.90	1953.74	Weekend Sun	S	254.84	I	PMP Distribution Lim
+C83218	30/09/2012	2445557	I	CI/4	10773.000	Weekend Sun - Job 72983 - Delivery 28 Sep 2012 - 159 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1577	0.1814	1698.90	1953.74	Weekend Sun	S	254.84	I	PMP Distribution Lim
+
+C83219	30/09/2012	2445552	I	CI/1	7921.000	Whangarei Report - Job 72549 - Delivery 06 Sep 2012 - 90 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	719.23	827.11	Whangarei Report	S	107.88	I	PMP Distribution Lim
+C83219	30/09/2012	2445552	I	CI/2	7921.000	Whangarei Report - Job 72550 - Delivery 13 Sep 2012 - 92 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	719.23	827.11	Whangarei Report	S	107.88	I	PMP Distribution Lim
+C83219	30/09/2012	2445552	I	CI/3	7921.000	Whangarei Report - Job 72867 - Delivery 20 Sep 2012 - 92 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	719.23	827.11	Whangarei Report	S	107.88	I	PMP Distribution Lim
+C83219	30/09/2012	2445552	I	CI/4	7921.000	Whangarei Report - Job 72868 - Delivery 27 Sep 2012 - 77 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	719.23	827.11	Whangarei Report	S	107.88	I	PMP Distribution Lim
+
+C83220	30/09/2012	 2445553	I	CI/1	4040.000	Your Cambridge News - Job 73025 - Delivery 13 Sep 2012 - 125 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	429.45	493.87	Your Cambridge News	S	64.42	I	PMP Distribution Lim
+C83220	30/09/2012	 2445553	I	CI/2	4040.000	Your Cambridge News - Job 73026 - Delivery 27 Sep 2012 - 125 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	366.83	421.85	Your Cambridge News	S	55.02	I	PMP Distribution Lim
+
+C83221	30/09/2012	Ross Nesdale	I	CI/1	5478.000	Maber Motors - Job 73114 - Delivery 25 Sep 2012 - 25 grams.   Includes Linehaul.	0.0971	0.1117	531.91	611.70	Maber Motors	S	79.79	I	Power Farming Wholes
+
+C83222	30/09/2012	Lee Vertongen	I	CI/1	2800.000	Lifestyle Properties - Job 73102 - Delivery 18 Sep 2012 - 10 grams.   Includes Linehaul.	0.0971	0.1117	271.88	312.66	Lifestyle Properties	S	40.78	I	Professionals Palmer
+
+C83223	30/09/2012		I	CI/1	29683.000	Information Flyer - Job 72397 - Delivery 01 Sep 2012 - 20 grams.   Includes Linehaul.	0.0971	0.1117	2882.22	3314.55	Information Flyer	S	432.33	I	Property Brokers Pal
+
+C83224	30/09/2012		I	CI/1	4717.000	P/P - BOP 1 - Job 72998 - Delivery 06 Sep 2012 - 107 grams. Includes folding fee 0.0100 cents.  	0.1068	0.1228	503.78	579.35	P/P - BOP 1	S	75.57	I	ACP Media Limited
+C83224	30/09/2012		I	CI/2	4717.000	P/P - BOP 1 - Job 72999 - Delivery 20 Sep 2012 - 112 grams. Includes folding fee 0.0100 cents.  	0.1068	0.1228	503.78	579.35	P/P - BOP 1	S	75.57	I	ACP Media Limited
+C83224	30/09/2012		I	CI/3	3124.000	P/P - BOP 2 - Job 72341 - Delivery 14 Sep 2012 - 107 grams. Includes folding fee 0.0100 cents.  	0.1068	0.1228	333.64	383.69	P/P - BOP 2	S	50.05	I	ACP Media Limited
+C83224	30/09/2012		I	CI/4	3124.000	P/P - BOP 2 - Job 73002 - Delivery 28 Sep 2012 - 130 grams. Includes folding fee 0.0100 cents.  	0.1068	0.1228	333.64	383.69	P/P - BOP 2	S	50.05	I	ACP Media Limited
+
+C83225	30/09/2012		I	CI/1	460.000	P/P - Eastern 1 - Job 72594 - Delivery 14 Sep 2012 - 281 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.3361	0.3865	154.61	177.80	P/P - Eastern 1	S	23.19	I	ACP Media Limited
+C83225	30/09/2012		I	CI/2	460.000	P/P - Eastern 1 - Job 73005 - Delivery 28 Sep 2012 - 331 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.3361	0.3865	154.61	177.80	P/P - Eastern 1	S	23.19	I	ACP Media Limited
+C83225	30/09/2012		I	CI/3	371.000	P/P - Eastern 2 - Job 72596 - Delivery 07 Sep 2012 - 264 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.4043	0.4649	150.00	172.50	P/P - Eastern 2	S	22.50	I	ACP Media Limited
+C83225	30/09/2012		I	CI/4	371.000	P/P - Eastern 2 - Job 72597 - Delivery 21 Sep 2012 - 309 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.4043	0.4649	150.00	172.50	P/P - Eastern 2	S	22.50	I	ACP Media Limited
+
+C83226	30/09/2012		I	CI/1	2670.000	P/P - Lakes District - Job 72448 - Delivery 06 Sep 2012 - 280 grams. Includes folding fee 0.0100 cents.  	0.1605	0.1846	428.54	492.82	P/P - Lakes District	S	64.28	I	ACP Media Limited
+C83226	30/09/2012		I	CI/2	2670.000	P/P - Lakes District - Job 73011 - Delivery 20 Sep 2012 - 293 grams. Includes folding fee 0.0100 cents.  	0.1605	0.1846	428.54	492.82	P/P - Lakes District	S	64.28	I	ACP Media Limited
+
+C83227	30/09/2012		I	CI/1	2870.000	P/P - Manawatu1 - Job 72598 - Delivery 08 Sep 2012 - 98 grams. Includes folding fee 0.0100 cents.  	0.0960	0.1104	275.52	316.85	P/P - Manawatu1	S	41.33	I	ACP Media Limited
+C83227	30/09/2012		I	CI/2	2870.000	P/P - Manawatu1 - Job 72599 - Delivery 22 Sep 2012 - 98 grams. Includes folding fee 0.0100 cents.  	0.0960	0.1104	275.52	316.85	P/P - Manawatu1	S	41.33	I	ACP Media Limited
+C83227	30/09/2012		I	CI/3	3788.000	P/P - Manawatu2 - Job 72600 - Delivery 01 Sep 2012 - 98 grams. Includes folding fee 0.0100 cents.  	0.0960	0.1104	363.65	418.20	P/P - Manawatu2	S	54.55	I	ACP Media Limited
+C83227	30/09/2012		I	CI/4	3788.000	P/P - Manawatu2 - Job 72601 - Delivery 15 Sep 2012 - 82 grams. Includes folding fee 0.0100 cents.  	0.0960	0.1104	363.65	418.20	P/P - Manawatu2	S	54.55	I	ACP Media Limited
+C83227	30/09/2012		I	CI/5	3788.000	P/P - Manawatu2 - Job 72602 - Delivery 29 Sep 2012 - 98 grams. Includes folding fee 0.0100 cents.  	0.0960	0.1104	363.65	418.20	P/P - Manawatu2	S	54.55	I	ACP Media Limited
+
+C83228	30/09/2012		I	CI/1	6920.000	Ray White  - Job 73151 - Delivery IOA - 25 grams.   	0.0000	0.0000	0.00	0.00	Ray White 	S	0.00	I	Ray White Hamilton
+
+C83229	30/09/2012		I	CI/1	3370.000	Ray White Flyer - Job 73165 - Delivery IOA - 10 grams.   	0.0824	0.0948	277.69	319.34	Ray White Flyer	S	41.65	I	Ray White Ohaupo
+
+C83230	30/09/2012		I	CI/1	14402.000	Rural Lifestyle - Job 73060 - Delivery IOA - 40 grams.   Includes Linehaul.	0.0803	0.0923	1156.48	1329.95	Rural Lifestyle	S	173.47	I	RD Marketing Ltd
+C83230	30/09/2012		I	CI/2	1.000	Rural Lifestyle - Job 73060 - Delivery IOA - 40 grams. Bags Boxes and Counter. Includes Linehaul.	100.0000	115.0000	100.00	115.00	Rural Lifestyle	S	15.00	I	RD Marketing Ltd
+
+C83231	30/09/2012		I	CI/1	19281.000	Otago Southland Farmer - Job 72604 - Delivery 07 Sep 2012 - 105 grams. Includes folding fee 0.0100 cents.  	0.0990	0.1139	1908.82	2195.14	Otago Southland Farmer	S	286.32	I	Fairfax - Southland 
+C83231	30/09/2012		I	CI/2	1.000	Otago Southland Farmer - Job 72604 - Delivery 07 Sep 2012 - 105 grams. Bags Boxes and Counter. 	350.0000	402.5000	350.00	402.50	Otago Southland Farmer	S	52.50	I	Fairfax - Southland 
+C83231	30/09/2012		I	CI/3	19281.000	Otago Southland Farmer - Job 72605 - Delivery 21 Sep 2012 - 80 grams. Includes folding fee 0.0100 cents.  	0.0850	0.0978	1638.89	1884.72	Otago Southland Farmer	S	245.83	I	Fairfax - Southland 
+C83231	30/09/2012		I	CI/4	1.000	Otago Southland Farmer - Job 72605 - Delivery 21 Sep 2012 - 80 grams. Bags Boxes and Counter. 	350.0000	402.5000	350.00	402.50	Otago Southland Farmer	S	52.50	I	Fairfax - Southland 
+
+C83232	30/09/2012		I	CI/1	193910.000	Super Spring Specials - Job 73043 - Delivery IOA - 40 grams.   Includes Linehaul.	0.0797	0.0917	15454.63	17772.82	Super Spring Specials	S	2318.19	I	Steelfort Engineerin
+
+C83233	30/09/2012		I	CI/1	24986.000	Coast N Country - Job 72822 - Delivery 03 Sep 2012 - 179 grams.   Includes Linehaul.	0.1053	0.1211	2631.03	3025.68	Coast N Country	S	394.65	I	Sun Media
+C83233	30/09/2012		I	CI/2	3839.000	Coast N Country - Job 72823 - Delivery 03 Sep 2012 - 179 grams.   Includes Linehaul.	0.1053	0.1211	404.25	464.89	Coast N Country	S	60.64	I	Sun Media
+
+C83234	30/09/2012		I	CI/1	26210.000	New Farm Dairies - Job 72935 - Delivery 25 Sep 2012 - 307 grams.   	0.1661	0.1910	4353.48	5006.50	New Farm Dairies	S	653.02	I	Sun Media
+
+C83235	30/09/2012		I	CI/1	220.000	Ag Direct - Job 72969 - Delivery IOA - 20 grams.   	0.0971	0.1117	21.36	24.56	Ag Direct	S	3.20	I	Terry Frost
+C83235	30/09/2012		I	CI/2	1140.000	Mt Pokaka Timber - Job 73187 - Delivery 26 Sep 2012 - 10 grams.   	0.0971	0.1117	110.69	127.29	Mt Pokaka Timber	S	16.60	I	Terry Frost
+C83235	30/09/2012		I	CI/3	765.000	Mt Pokaka Timber - Job 73188 - Delivery 26 Sep 2012 - 10 grams.   	0.0971	0.1117	74.28	85.42	Mt Pokaka Timber	S	11.14	I	Terry Frost
+C83235	30/09/2012		I	CI/4	2935.000	Plant Sale - Job 73191 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	284.99	327.74	Plant Sale	S	42.75	I	Terry Frost
+
+C83236	30/09/2012		I	CI/1	1356.000	Taranaki Beef Focus Group - Job 72858 - Delivery 05 Sep 2012 - 10 grams.   Includes Linehaul.	0.0971	0.1117	131.67	151.42	Taranaki Beef Focus Group	S	19.75	I	Totally Vets
+
+C83237	30/09/2012	1030	I	CI/1	7279.000	Attention Farmers and Contractors - Job 73171 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	706.79	812.81	Attention Farmers and Contractors	S	106.02	I	Trans Ag Centre
+
+C83238	30/09/2012	990	I	CI/1	1280.000	Venture Southalnd  - Job 73049 - Delivery IOA - 10 grams.   	0.1172	0.1348	150.02	172.52	Venture Southalnd 	S	22.50	I	Venture Southland
+
+C83239	30/09/2012		I	CI/1	1717.000	Agrivert - Job 73112 - Delivery IOA - 10 grams.   	0.0971	0.1117	166.72	191.73	Agrivert	S	25.01	I	VitaPower Ltd
+C83239	30/09/2012		I	CI/2	3599.000	Agrivert - Job 73178 - Delivery IOA - 10 grams.   	0.0971	0.1117	349.46	401.88	Agrivert	S	52.42	I	VitaPower Ltd
+
+C83240	30/09/2012		I	CI/1	12632.000	NZ dairy - Job 72872 - Delivery 11 Sep 2012 - 115 grams.   Includes Linehaul.	0.1733	0.1993	2189.13	2517.50	NZ dairy	S	328.37	I	Waterford Press
+
+C83241	30/09/2012		I	CI/1	600.000	JVL Spring Open Home Tour - Job 73176 - Delivery 21 Sep 2012 - 10 grams.   	0.1250	0.1438	75.00	86.25	JVL Spring Open Home Tour	S	11.25	I	Wendy Goss Real Esta
+
+C83242	30/09/2012		I	CI/1	6745.000	Nora Boots - Job 72792 - Delivery 04 Sep 2012 - 25 grams.   Includes Linehaul.	0.0971	0.1117	654.94	753.18	Nora Boots	S	98.24	I	Westlea Trading Limi
+
+C83243	30/09/2012	Taranaki	I	CI/1	3599.000	WhiteboardsNZ - Job 73174 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	349.46	401.88	WhiteboardsNZ	S	52.42	I	WhiteboardsNZ
+
+C83244	30/09/2012	Waikato	I	CI/1	7031.000	WhiteboardsNZ - Job 73175 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	682.71	785.12	WhiteboardsNZ	S	102.41	I	WhiteboardsNZ
+
+C83245	30/09/2012		I	CI/1	4484.000	Pacific Seeds - A4 Flyer - Job 72743 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0971	0.1117	435.40	500.71	Pacific Seeds - A4 Flyer	S	65.31	I	Wright Advertising L
+
+C83246	30/09/2012		I	CI/1	7201.000	Pacific Seeds - Seed Guide - Job 72750 - Delivery IOA - 88 grams.   Includes Linehaul.	0.1354	0.1557	975.02	1121.27	Pacific Seeds - Seed Guide	S	146.25	I	Wright Advertising L
+

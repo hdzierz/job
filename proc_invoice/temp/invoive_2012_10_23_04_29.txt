@@ -1,0 +1,82 @@
+ContactName,InvoiceNo,Reference,InvoiceDate,DueDate,Description,Quantity,UnitAmount,Discount,AccountCode,TaxType,TrackingName1,TrackingOption1
+PMP Distribution Lim,C83322,2448367,2012-10-21,2012-11-20,Bed Bath and Beyond - Job 73395 - Delivery 16 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,55.453,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83323,2447506,2012-10-21,2012-11-20,Bond and Bond - Job 73198 - Delivery 16 Oct 2012 - 20 grams.    Boxholder Type: Total Includes Linehaul.,5.67,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83324,2448641,2012-10-21,2012-11-20,Briscoes - Job 73418 - Delivery 15 Oct 2012 - 25 grams.    Boxholder Type: Total Includes Linehaul.,36.501,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83325,2448044,2012-10-21,2012-11-20,Buller District Council Newsletter - Job 73349 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,0.558,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83326,2447595,2012-10-21,2012-11-20,Carpet One - Job 73365 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,118.491,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83327,2448453,2012-10-21,2012-11-20,Clendon/Southmall New World - Job 73404 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,0.371,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83328,2448460,2012-10-21,2012-11-20,Clendon/Southmall New World - Job 73406 - Delivery 20 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,0.371,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83329,2447681,2012-10-21,2012-11-20,Curtain Studio - Job 73257 - Delivery 16 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,13.612,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83330,2448697,2012-10-21,2012-11-20,Dowsons Shoes - Job 73430 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,4.284,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83331,2448211,2012-10-21,2012-11-20,Flooring Xtra - Job 73342 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,6.862,55.6,,100,15% GST on income,Division,Circulars
+PMP Distribution Lim,C83331,2448211,2012-10-21,2012-11-20,Flooring Xtra - Job 73343 - Delivery 16 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,2.144,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83332,2447977,2012-10-21,2012-11-20,Four Square Northern - Job 73250 - Delivery 20 Oct 2012 - 20 grams.    Boxholder Type: Total Includes Linehaul.,55.156,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83333,2448003,2012-10-21,2012-11-20,Four Square Southern - Job 73263 - Delivery 20 Oct 2012 - 25 grams.    Boxholder Type: Total Includes Linehaul.,41.942,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83334,2447829,2012-10-21,2012-11-20,Germinal Seeds Rongotea/Manaia - Job 73278 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,2.535,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83335,2448027,2012-10-21,2012-11-20,Holcium Newsletter - Job 73292 - Delivery 15 Oct 2012 - 25 grams.    Boxholder Type: Total Includes Linehaul.,1.98,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83336,2446108,2012-10-21,2012-11-20,Husqvana October 2012 - Job 73032 - Delivery 16 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,19.954,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83337,244448158,2012-10-21,2012-11-20,Insight Traders - Job 73376 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,0.3,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83338,2448540,2012-10-21,2012-11-20,Insight Traders Pukekohe - Job 73428 - Delivery 16 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,7.11,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83339,2447963,2012-10-21,2012-11-20,JB Hi Fi  - Job 73377 - Delivery 15 Oct 2012 - 20 grams.    Boxholder Type: Total Includes Linehaul.,2.335,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83340,2447963,2012-10-21,2012-11-20,JB Hi Fi Dunedin - Job 73360 - Delivery 16 Oct 2012 - 20 grams.    Boxholder Type: Total Includes Linehaul.,2.335,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83341,2448658,2012-10-21,2012-11-20,Kurow/Sth Canty Pest News - Job 73547 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,5.879,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83342,2448122,2012-10-21,2012-11-20,Lewis Home Fabrics - Job 73353 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,4.169,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83343,2448133,2012-10-21,2012-11-20,Lewis Home Fabrics - Job 73389 - Delivery IOA - 10 grams.    Boxholder Type: Total Includes Linehaul.,4.169,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83344,2447588,2012-10-21,2012-11-20,New World Northern - Job 73221 - Delivery 20 Oct 2012 - 25 grams.    Boxholder Type: Total Includes Linehaul.,81.309,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83345,2448010,2012-10-21,2012-11-20,New World Southern - Job 73357 - Delivery 20 Oct 2012 - 20 grams.    Boxholder Type: Total Includes Linehaul.,56.968,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83346,2447929,2012-10-21,2012-11-20,Oamaru Opera House - Job 73297 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,2.33,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83347,2447855,2012-10-21,2012-11-20,Palmers Plant Store  - Job 73283 - Delivery 16 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,2.53,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83348,2448391,2012-10-21,2012-11-20,PK Furniture - Job 73379 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,16.625,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83349,2448085,2012-10-21,2012-11-20,Raetihi Postcard - Job 73350 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,3.016,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83350,2448375,2012-10-21,2012-11-20,Rusty Dogs Outdoors - Job 73362 - Delivery 15 Oct 2012 - 50 grams.    Boxholder Type: Total Includes Linehaul.,3.897,59.7,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83351,2448678,2012-10-21,2012-11-20,Sewerage Treatment Services - Job 73431 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,9.254,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83352,2447873,2012-10-21,2012-11-20,Southern Woods  - Job 73285 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,19.451,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83353,2448566,2012-10-21,2012-11-20,Storage Box - Job 73405 - Delivery 16 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,2.72,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83354,2448203,2012-10-21,2012-11-20,Swanson Now Open Flyer - Job 73429 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,3.877,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83355,2448161,2012-10-21,2012-11-20,Target Furniture  - Job 73382 - Delivery 16 Oct 2012 - 20 grams.    Boxholder Type: Total Includes Linehaul.,11.418,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83356,2448165,2012-10-21,2012-11-20,Target Furniture Christchurch - Job 73381 - Delivery 16 Oct 2012 - 20 grams.    Boxholder Type: Total Includes Linehaul.,0.03,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83357,2448319,2012-10-21,2012-11-20,Tumu Mailer - Job 73363 - Delivery 15 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,15.113,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83358,2448232,2012-10-21,2012-11-20,Tyrepower - Job 73378 - Delivery 16 Oct 2012 - 20 grams.    Boxholder Type: Total Includes Linehaul.,5.859,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83359,2448043,2012-10-21,2012-11-20,Waipa A-Z Business Directory - Job 73348 - Delivery 16 Oct 2012 - 172 grams.    Boxholder Type: Total Includes Linehaul.,5.163,91.9,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83360,2447718,2012-10-21,2012-11-20,Wolfe Hearing Howick  - Job 73273 - Delivery 16 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,0.831,55.6,,100,15% GST on income,Division,Circulars
+
+PMP Distribution Lim,C83361,2447531,2012-10-21,2012-11-20,Wolfe Hearing Pukekohe  - Job 73214 - Delivery 16 Oct 2012 - 10 grams.    Boxholder Type: Total Includes Linehaul.,10.82,55.6,,100,15% GST on income,Division,Circulars
+

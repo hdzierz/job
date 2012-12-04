@@ -1,0 +1,396 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C80269	31/05/2011		I	CI/1	8898.000	AC Pet Foods - Job 68669 - Delivery IOA - 10 grams.   	0.0749	0.0861	666.460	AC Pet Foods	S	99.97	I	100
+
+C80270	31/05/2011		I	CI/1	17328.000	AgMax May Flyer - Job 68538 - Delivery 10 May 2011 - 65 grams.   Includes Linehaul.	0.0883	0.1015	1530.062	AgMax May Flyer	S	229.51	I	103
+
+C80271	31/05/2011	10455	I	CI/1	8092.000	Rural Advocate - Job 68451 - Delivery 20 May 2011 - 153 grams. Includes folding fee 0.0100 cents.  	0.1010	0.1162	817.292	Rural Advocate	S	122.59	I	106
+
+C80272	31/05/2011		I	CI/1	3525.000	Te Puke Times - Job 68173 - Delivery 04 May 2011 - 75 grams.   	0.0749	0.0861	264.023	Te Puke Times	S	39.60	I	106
+C80272	31/05/2011		I	CI/2	3525.000	Te Puke Times - Job 68452 - Delivery 11 May 2011 - 85 grams.   	0.0749	0.0861	264.023	Te Puke Times	S	39.60	I	106
+C80272	31/05/2011		I	CI/3	3525.000	Te Puke Times - Job 68453 - Delivery 18 May 2011 - 90 grams.   	0.0749	0.0861	264.023	Te Puke Times	S	39.60	I	106
+C80272	31/05/2011		I	CI/4	3525.000	Te Puke Times - Job 68454 - Delivery 25 May 2011 - 90 grams.   	0.0749	0.0861	264.023	Te Puke Times	S	39.60	I	106
+
+C80273	31/05/2011	Tararua	I	CI/1	2123.000	FLM-Reply Paid Cards - Job 68377 - Delivery 05 May 2011 - 10 grams.   	0.0749	0.0861	159.013	FLM-Reply Paid Cards	S	23.85	I	107
+
+C80274	31/05/2011		I	CI/1	11723.000	Beef + Lamb  - Job 68607 - Delivery 24 May 2011 - 10 grams.   Includes Linehaul.	0.0883	0.1015	1035.141	Beef + Lamb 	S	155.27	I	415
+
+C80275	31/05/2011		I	CI/1	10212.000	Farmer Council Science Day - Job 68674 - Delivery 20 May 2011 - 10 grams.   Includes Linehaul.	0.0883	0.1015	901.720	Farmer Council Science Day	S	135.26	I	427
+
+C80276	31/05/2011		I	CI/1	26143.000	Bomac May Flyer - Job 68639 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0937	0.1078	2449.599	Bomac May Flyer	S	367.44	I	320
+
+C80277	31/05/2011		I	CI/1	14828.000	Rural Living  - Job 68457 - Delivery 23 May 2011 - 110 grams.   Includes Linehaul.	0.1103	0.1268	1635.528	Rural Living 	S	245.33	I	256
+
+C80278	31/05/2011		I	CI/1	87254.000	C-Dax May/June Flyer - Job 68634 - Delivery 16 May 2011 - 15 grams.   Includes Linehaul.	0.0692	0.0796	6037.977	C-Dax May/June Flyer	S	905.70	I	116
+
+C80279	31/05/2011		I	CI/1	28964.000	Canterbury Farming - Job 68679 - Delivery 20 May 2011 - 76 grams.   Includes Linehaul.	0.0960	0.1104	2780.544	Canterbury Farming	S	417.08	I	416
+
+C80280	31/05/2011		I	CI/1	6794.000	Logburner Servicing Flyer - Job 68450 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0883	0.1015	599.910	Logburner Servicing Flyer	S	89.99	I	413
+
+C80281	31/05/2011		I	CI/1	981.000	Dead Cows - Pick Up Service - Job 68621 - Delivery IOA - 5 grams.   Includes Linehaul.	0.1529	0.1758	149.995	Dead Cows - Pick Up Service	S	22.50	I	401
+
+C80282	31/05/2011		I	CI/1	3197.000	Central Excavations Flyer - Job 68636 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0749	0.0861	239.455	Central Excavations Flyer	S	35.92	I	118
+
+C80283	31/05/2011		I	CI/1	2501.000	Chilly Cow flyer - Job 68637 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0883	0.1015	220.838	Chilly Cow flyer	S	33.13	I	420
+
+C80284	31/05/2011	008	I	CI/1	350.000	CMP Ken Chamberlain - Job 68684 - Delivery IOA - 10 grams.   Includes Linehaul.	0.4286	0.4929	150.010	CMP Ken Chamberlain	S	22.50	I	250
+
+C80285	31/05/2011	125738	I	CI/1	1143.000	BOP Focus Farm Flyer - Job 68711 - Delivery 30 May 2011 - 10 grams.   	0.1312	0.1509	149.962	BOP Focus Farm Flyer	S	22.49	I	233
+
+C80286	31/05/2011	125541	I	CI/1	1459.000	Canterbury StockSense Workshops - Job 68662 - Delivery 27 May 2011 - 10 grams.   	0.1028	0.1182	149.985	Canterbury StockSense Workshops	S	22.50	I	233
+
+C80287	31/05/2011	125438	I	CI/1	3190.000	Get StockSense - Job 68640 - Delivery 23 May 2011 - 10 grams.   	0.0749	0.0861	238.931	Get StockSense	S	35.84	I	233
+
+C80288	31/05/2011	125443	I	CI/1	6031.000	Stocksense - Job 68642 - Delivery IOA - 10 grams.   	0.0749	0.0861	451.722	Stocksense	S	67.76	I	233
+
+C80289	31/05/2011	125687	I	CI/1	1929.000	StockSense Flyer - Job 68715 - Delivery 30 May 2011 - 10 grams.   Includes Linehaul.	0.0778	0.0895	150.076	StockSense Flyer	S	22.51	I	233
+
+C80290	31/05/2011	125549	I	CI/1	3071.000	StockSense Workshops - Job 68664 - Delivery 24 May 2011 - 10 grams.   	0.0749	0.0861	230.018	StockSense Workshops	S	34.50	I	233
+
+C80291	31/05/2011	125442	I	CI/1	1233.000	Tauhara Moana Focus Farm Season Wrap Up Field Day - Job 68641 - Delivery 16 May 2011 - 10 grams.   	0.1217	0.1400	150.056	Tauhara Moana Focus Farm Season Wrap Up Field Day	S	22.51	I	233
+
+C80292	31/05/2011	125247	I	CI/1	524.000	West Coast Monitor Farm Field Days - Job 68605 - Delivery 12 May 2011 - 5 grams.   Includes Linehaul.	0.2863	0.3292	150.021	West Coast Monitor Farm Field Days	S	22.50	I	233
+
+C80293	31/05/2011		I	CI/1	5113.000	Farmers: Do your Own Maintenance! - Job 68672 - Delivery IOA - 15 grams.   Includes Linehaul.	0.0883	0.1015	451.478	Farmers: Do your Own Maintenance!	S	67.72	I	418
+
+C80294	31/05/2011	Nick Carter	I	CI/1	1269.000	Elders Flyer - Job 68393 - Delivery 02 May 2011 - 10 grams.   	0.1182	0.1359	149.996	Elders Flyer	S	22.50	I	329
+
+C80295	31/05/2011		I	CI/1	3065.000	Dargaville District News - Job 68178 - Delivery 04 May 2011 - 40 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0976	260.219	Dargaville District News	S	39.03	I	141
+C80295	31/05/2011		I	CI/2	3065.000	Dargaville District News - Job 68476 - Delivery 11 May 2011 - 40 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0976	260.219	Dargaville District News	S	39.03	I	141
+C80295	31/05/2011		I	CI/3	3065.000	Dargaville District News - Job 68477 - Delivery 18 May 2011 - 40 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0976	260.219	Dargaville District News	S	39.03	I	141
+C80295	31/05/2011		I	CI/4	3065.000	Dargaville District News - Job 68478 - Delivery 25 May 2011 - 40 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0976	260.219	Dargaville District News	S	39.03	I	141
+
+C80296	31/05/2011		I	CI/1	7920.000	Whangarei Leader - Job 68182 - Delivery 03 May 2011 - 63 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	757.152	Whangarei Leader	S	113.57	I	141
+C80296	31/05/2011		I	CI/2	7920.000	Whangarei Leader - Job 68481 - Delivery 10 May 2011 - 62 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	757.152	Whangarei Leader	S	113.57	I	141
+C80296	31/05/2011		I	CI/3	7920.000	Whangarei Leader - Job 68482 - Delivery 17 May 2011 - 82 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	757.152	Whangarei Leader	S	113.57	I	141
+C80296	31/05/2011		I	CI/4	7920.000	Whangarei Leader - Job 68647 - Delivery 24 May 2011 - 66 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	757.152	Whangarei Leader	S	113.57	I	141
+C80296	31/05/2011		I	CI/5	7920.000	Whangarei Leader - Job 68648 - Delivery 31 May 2011 - 61 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	757.152	Whangarei Leader	S	113.57	I	141
+
+C80297	31/05/2011		I	CI/1	3936.000	Cambridge Edition - Job 68486 - Delivery 04 May 2011 - 89 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	376.282	Cambridge Edition	S	56.44	I	389
+C80297	31/05/2011		I	C100	2.000	Bundles	1.0000	1.1500	2.000	Cambridge Edition	S	0.30	I	389
+C80297	31/05/2011		I	CI/2	3936.000	Cambridge Edition - Job 68487 - Delivery 11 May 2011 - 180 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1285	439.651	Cambridge Edition	S	65.95	I	389
+C80297	31/05/2011		I	C100	2.000	Bundles	1.0000	1.1500	2.000	Cambridge Edition	S	0.30	I	389
+C80297	31/05/2011		I	CI/3	3936.000	Cambridge Edition - Job 68488 - Delivery 18 May 2011 - 168 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1285	439.651	Cambridge Edition	S	65.95	I	389
+C80297	31/05/2011		I	C100	2.000	Bundles	1.0000	1.1500	2.000	Cambridge Edition	S	0.30	I	389
+C80297	31/05/2011		I	CI/4	3936.000	Cambridge Edition - Job 68489 - Delivery 25 May 2011 - 203 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1408	481.766	Cambridge Edition	S	72.26	I	389
+C80297	31/05/2011		I	C100	2.000	Bundles	1.0000	1.1500	2.000	Cambridge Edition	S	0.30	I	389
+
+C80298	31/05/2011		I	CI/1	11345.000	FCN - Thursday - Job 68190 - Delivery 05 May 2011 - 1750 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1285	1267.237	FCN - Thursday	S	190.09	I	389
+C80298	31/05/2011		I	C150	13.000	Bundles	1.5000	1.7250	19.500	FCN - Thursday	S	2.93	I	389
+C80298	31/05/2011		I	CI/2	11345.000	FCN - Thursday - Job 68492 - Delivery 12 May 2011 - 174 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1285	1267.237	FCN - Thursday	S	190.09	I	389
+C80298	31/05/2011		I	C150	13.000	Bundles	1.5000	1.7250	19.500	FCN - Thursday	S	2.93	I	389
+C80298	31/05/2011		I	CI/3	11345.000	FCN - Thursday - Job 68493 - Delivery 19 May 2011 - 169 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1285	1267.237	FCN - Thursday	S	190.09	I	389
+C80298	31/05/2011		I	C150	13.000	Bundles	1.5000	1.7250	19.500	FCN - Thursday	S	2.93	I	389
+C80298	31/05/2011		I	CI/4	11345.000	FCN - Thursday - Job 68494 - Delivery 26 May 2011 - 180 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1285	1267.237	FCN - Thursday	S	190.09	I	389
+C80298	31/05/2011		I	C150	13.000	Bundles	1.5000	1.7250	19.500	FCN - Thursday	S	2.93	I	389
+
+C80299	31/05/2011		I	CI/1	11145.000	FCN - Tuesday - Job 68195 - Delivery 03 May 2011 - 62 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	1065.462	FCN - Tuesday	S	159.82	I	389
+C80299	31/05/2011		I	C150	13.000	Bundles	1.5000	1.7250	19.500	FCN - Tuesday	S	2.93	I	389
+C80299	31/05/2011		I	CI/2	11145.000	FCN - Tuesday - Job 68497 - Delivery 10 May 2011 - 51 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	1065.462	FCN - Tuesday	S	159.82	I	389
+C80299	31/05/2011		I	C150	13.000	Bundles	1.5000	1.7250	19.500	FCN - Tuesday	S	2.93	I	389
+C80299	31/05/2011		I	CI/3	11145.000	FCN - Tuesday - Job 68498 - Delivery 17 May 2011 - 82 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	1065.462	FCN - Tuesday	S	159.82	I	389
+C80299	31/05/2011		I	C150	13.000	Bundles	1.5000	1.7250	19.500	FCN - Tuesday	S	2.93	I	389
+C80299	31/05/2011		I	CI/4	11145.000	FCN - Tuesday - Job 68499 - Delivery 24 May 2011 - 61 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	1065.462	FCN - Tuesday	S	159.82	I	389
+C80299	31/05/2011		I	C150	13.000	Bundles	1.5000	1.7250	19.500	FCN - Tuesday	S	2.93	I	389
+C80299	31/05/2011		I	CI/5	11145.000	FCN - Tuesday - Job 68500 - Delivery 31 May 2011 - 65 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	1065.462	FCN - Tuesday	S	159.82	I	389
+C80299	31/05/2011		I	C150	13.000	Bundles	1.5000	1.7250	19.500	FCN - Tuesday	S	2.93	I	389
+
+C80300	31/05/2011		I	CI/1	2265.000	Matamata Chronicle - Job 68199 - Delivery 04 May 2011 - 112 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	240.770	Matamata Chronicle	S	36.12	I	389
+C80300	31/05/2011		I	CI/2	2265.000	Matamata Chronicle - Job 68502 - Delivery 11 May 2011 - 185 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1285	253.001	Matamata Chronicle	S	37.95	I	389
+C80300	31/05/2011		I	CI/3	2265.000	Matamata Chronicle - Job 68503 - Delivery 18 May 2011 - 208 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1408	277.236	Matamata Chronicle	S	41.59	I	389
+C80300	31/05/2011		I	CI/4	2265.000	Matamata Chronicle - Job 68504 - Delivery 25 May 2011 - 212 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1408	277.236	Matamata Chronicle	S	41.59	I	389
+
+C80301	31/05/2011		I	CI/1	2876.000	Nth Waikato News - Job 68203 - Delivery 04 May 2011 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0976	244.172	Nth Waikato News	S	36.63	I	389
+C80301	31/05/2011		I	CI/2	2876.000	Nth Waikato News - Job 68507 - Delivery 11 May 2011 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0976	244.172	Nth Waikato News	S	36.63	I	389
+C80301	31/05/2011		I	CI/3	2876.000	Nth Waikato News - Job 68508 - Delivery 18 May 2011 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0976	244.172	Nth Waikato News	S	36.63	I	389
+C80301	31/05/2011		I	CI/4	2876.000	Nth Waikato News - Job 68509 - Delivery 25 May 2011 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0976	244.172	Nth Waikato News	S	36.63	I	389
+
+C80302	31/05/2011		I	CI/1	3457.000	Piako Post - Job 68207 - Delivery 04 May 2011 - 116 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	367.479	Piako Post	S	55.12	I	389
+C80302	31/05/2011		I	CI/2	3457.000	Piako Post - Job 68512 - Delivery 11 May 2011 - 162 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1285	386.147	Piako Post	S	57.92	I	389
+C80302	31/05/2011		I	CI/3	3457.000	Piako Post - Job 68513 - Delivery 18 May 2011 - 145 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	367.479	Piako Post	S	55.12	I	389
+C80302	31/05/2011		I	CI/4	3457.000	Piako Post - Job 68514 - Delivery 25 May 2011 - 199 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1285	386.147	Piako Post	S	57.92	I	389
+
+C80303	31/05/2011		I	CI/1	2885.000	Rotorua Review - Job 68211 - Delivery 04 May 2011 - 91 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	275.806	Rotorua Review	S	41.37	I	389
+C80303	31/05/2011		I	C150	2.000	Bundles	1.5000	1.7250	3.000	Rotorua Review	S	0.45	I	389
+C80303	31/05/2011		I	CI/2	2885.000	Rotorua Review - Job 68517 - Delivery 11 May 2011 - 71 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	275.806	Rotorua Review	S	41.37	I	389
+C80303	31/05/2011		I	C150	2.000	Bundles	1.5000	1.7250	3.000	Rotorua Review	S	0.45	I	389
+C80303	31/05/2011		I	CI/3	2885.000	Rotorua Review - Job 68518 - Delivery 18 May 2011 - 81 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	275.806	Rotorua Review	S	41.37	I	389
+C80303	31/05/2011		I	C150	2.000	Bundles	1.5000	1.7250	3.000	Rotorua Review	S	0.45	I	389
+C80303	31/05/2011		I	CI/4	2885.000	Rotorua Review - Job 68519 - Delivery 25 May 2011 - 71 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	275.806	Rotorua Review	S	41.37	I	389
+C80303	31/05/2011		I	C150	2.000	Bundles	1.5000	1.7250	3.000	Rotorua Review	S	0.45	I	389
+
+C80304	31/05/2011		I	CI/1	2017.000	Sth Waikato News - Job 68215 - Delivery 04 May 2011 - 96 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	192.825	Sth Waikato News	S	28.92	I	389
+C80304	31/05/2011		I	C100	3.000	Bundles	1.0000	1.1500	3.000	Sth Waikato News	S	0.45	I	389
+C80304	31/05/2011		I	CI/2	2017.000	Sth Waikato News - Job 68522 - Delivery 11 May 2011 - 154 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1285	225.299	Sth Waikato News	S	33.80	I	389
+C80304	31/05/2011		I	C100	3.000	Bundles	1.0000	1.1500	3.000	Sth Waikato News	S	0.45	I	389
+C80304	31/05/2011		I	CI/3	2017.000	Sth Waikato News - Job 68523 - Delivery 18 May 2011 - 129 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	214.407	Sth Waikato News	S	32.16	I	389
+C80304	31/05/2011		I	C100	3.000	Bundles	1.0000	1.1500	3.000	Sth Waikato News	S	0.45	I	389
+C80304	31/05/2011		I	CI/4	2017.000	Sth Waikato News - Job 68524 - Delivery 25 May 2011 - 179 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1285	225.299	Sth Waikato News	S	33.80	I	389
+C80304	31/05/2011		I	C100	3.000	Bundles	1.0000	1.1500	3.000	Sth Waikato News	S	0.45	I	389
+
+C80305	31/05/2011		I	CI/1	11270.000	Waikato Farmers Newspaper - Job 68527 - Delivery 05 May 2011 - 81 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1277	0.1469	1439.179	Waikato Farmers Newspaper	S	215.88	I	389
+
+C80306	31/05/2011		I	CI/1	3156.000	Farm Mapping DLE Flyer - Job 68626 - Delivery IOA - 10 grams.   	0.0883	0.1015	278.675	Farm Mapping DLE Flyer	S	41.80	I	142
+
+C80307	31/05/2011		I	CI/1	950.000	A4 Flyer - Job 68623 - Delivery 16 May 2011 - 10 grams.   	0.1579	0.1816	150.005	A4 Flyer	S	22.50	I	421
+
+C80308	31/05/2011		I	CI/1	12886.000	Gibb Gro A4 Flyer - Job 68646 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0883	0.1015	1137.834	Gibb Gro A4 Flyer	S	170.68	I	419
+C80308	31/05/2011		I	CI/2	1.000	Gibb Gro A4 Flyer - Job 68646 - Delivery IOA - 10 grams. Bags Boxes and Counter. Includes Linehaul.	863.1000	992.5650	863.100	Gibb Gro A4 Flyer	S	129.47	I	419
+
+C80309	31/05/2011		I	CI/1	5090.000	Autumn 2011 - Job 68638 - Delivery IOA - 10 grams.   	0.0883	0.1015	449.447	Autumn 2011	S	67.42	I	300
+
+C80310	31/05/2011		I	CI/1	3300.000	Beef + Lamb Farm Focus Group - Job 68445 - Delivery 04 May 2011 - 5 grams.   Includes Linehaul.	0.0883	0.1015	291.390	Beef + Lamb Farm Focus Group	S	43.71	I	350
+
+C80311	31/05/2011		I	CI/1	5351.000	Central Wairarapa Angus Breeders - Job 68609 - Delivery IOA - 5 grams.   Includes Linehaul.	0.0883	0.1015	472.493	Central Wairarapa Angus Breeders	S	70.87	I	350
+
+C80312	31/05/2011		I	CI/1	7604.000	HB Seeds & Cereals May Savers - Job 68627 - Delivery IOA - 5 grams.   Includes Linehaul.	0.0749	0.0861	569.540	HB Seeds & Cereals May Savers	S	85.43	I	350
+
+C80313	31/05/2011		I	CI/1	1453.000	Hain Herefords - Open Day - Job 68403 - Delivery 27 May 2011 - 5 grams.   	0.1032	0.1187	149.950	Hain Herefords - Open Day	S	22.49	I	150
+
+C80314	31/05/2011	Dean Roughton	I	CI/1	3814.000	Carbon Forestry Survey - Job 68622 - Delivery IOA - 20 grams.   Includes Linehaul.	0.0883	0.1015	336.776	Carbon Forestry Survey	S	50.52	I	285
+
+C80315	31/05/2011	24456	I	CI/1	1379.000	Ngaruroro Newsletter - Job 68322 - Delivery IOA - 10 grams.   	0.1088	0.1251	150.035	Ngaruroro Newsletter	S	22.51	I	285
+
+C80316	31/05/2011		I	CI/1	3023.000	Herd Homes Open Day - Job 68685 - Delivery IOA - 10 grams.   	0.0749	0.0861	226.423	Herd Homes Open Day	S	33.96	I	318
+
+C80317	31/05/2011		I	CI/1	3110.000	Residential, Lifestlye or Rural Flyer - Job 68127 - Delivery 09 May 2011 - 10 grams.   Includes Linehaul.	0.0883	0.1015	274.613	Residential, Lifestlye or Rural Flyer	S	41.19	I	158
+
+C80318	31/05/2011		I	CI/1	650.000	Look  - Job 68610 - Delivery 05 May 2011 - 80 grams.   	0.2308	0.2654	150.020	Look 	S	22.50	I	349
+
+C80319	31/05/2011		I	CI/1	15810.000	Rural Price Buster - Job 68660 - Delivery IOA - 25 grams.   Includes Linehaul.	0.0883	0.1015	1396.023	Rural Price Buster	S	209.40	I	346
+
+C80320	31/05/2011		I	CI/1	9050.000	Home Insulation-Getta Grant Now! - Job 68537 - Delivery 05 May 2011 - 8 grams.   Includes Linehaul.	0.0883	0.1015	799.115	Home Insulation-Getta Grant Now!	S	119.87	I	407
+
+C80321	31/05/2011		I	CI/1	830.000	Hibiscus Matters - Job 68387 - Delivery 05 May 2011 - 35 grams.   	0.0904	0.1040	75.032	Hibiscus Matters	S	11.26	I	240
+C80321	31/05/2011		I	CI/2	830.000	Hibiscus Matters - Job 68388 - Delivery 19 May 2011 - 35 grams.   	0.0904	0.1040	75.032	Hibiscus Matters	S	11.26	I	240
+
+C80322	31/05/2011	L526	I	CI/1	7690.000	Mech Agriculture Winter Flyer - Job 68658 - Delivery IOA - 10 grams.   	0.0749	0.0861	575.981	Mech Agriculture Winter Flyer	S	86.40	I	176
+
+C80323	31/05/2011		I	CI/1	4620.000	Kaipara Lifestyler - Job 68219 - Delivery 05 May 2011 - 75 grams.   	0.0750	0.0863	346.500	Kaipara Lifestyler	S	51.98	I	257
+C80323	31/05/2011		I	CI/2	4620.000	Kaipara Lifestyler - Job 68528 - Delivery 12 May 2011 - 75 grams.   	0.0750	0.0863	346.500	Kaipara Lifestyler	S	51.98	I	257
+C80323	31/05/2011		I	CI/3	4620.000	Kaipara Lifestyler - Job 68529 - Delivery 19 May 2011 - 75 grams.   	0.0750	0.0863	346.500	Kaipara Lifestyler	S	51.98	I	257
+C80323	31/05/2011		I	CI/4	4620.000	Kaipara Lifestyler - Job 68530 - Delivery 26 May 2011 - 75 grams.   	0.0750	0.0863	346.500	Kaipara Lifestyler	S	51.98	I	257
+
+C80324	31/05/2011		I	CI/1	33082.000	Northland Farming Lifestyler - Job 68533 - Delivery 25 May 2011 - 83 grams.   	0.0927	0.1066	3066.701	Northland Farming Lifestyler	S	460.01	I	257
+
+C80325	31/05/2011		I	CI/1	1222.000	Norwood Ag Mag - Job 68676 - Delivery IOA - 90 grams.   Includes Linehaul.	0.1445	0.1662	176.579	Norwood Ag Mag	S	26.49	I	428
+
+C80326	31/05/2011		I	CI/1	25567.000	Dairyman - Job 68399 - Delivery 03 May 2011 - 153 grams.   Includes Linehaul.	0.1460	0.1679	3732.782	Dairyman	S	559.92	I	261
+C80326	31/05/2011		I	CI/2	1.000	Dairyman - Job 68399 - Delivery 03 May 2011 - 153 grams. Bags Boxes and Counter. Includes Linehaul.	299.0000	343.8500	299.000	Dairyman	S	44.85	I	261
+C80326	31/05/2011		I	CI/3	25567.000	Dairyman - Job 68709 - Delivery 31 May 2011 - 166 grams.   Includes Linehaul.	0.1460	0.1679	3732.782	Dairyman	S	559.92	I	261
+C80326	31/05/2011		I	CI/4	1.000	Dairyman - Job 68709 - Delivery 31 May 2011 - 166 grams. Bags Boxes and Counter. Includes Linehaul.	299.0100	343.8615	299.010	Dairyman	S	44.85	I	261
+
+C80327	31/05/2011		I	CI/1	83804.000	Fieldays Focus - Job 68645 - Delivery 23 May 2011 - 90 grams.   Includes Linehaul.	0.0890	0.1024	7458.556	Fieldays Focus	S	1118.78	I	261
+
+C80328	31/05/2011		I	CI/1	80893.000	Straight Furrow - Job 68402 - Delivery 02 May 2011 - 86 grams.   Includes Linehaul.	0.0940	0.1081	7603.942	Straight Furrow	S	1140.59	I	261
+C80328	31/05/2011		I	CI/2	1612.000	Straight Furrow - Job 68402 - Delivery 02 May 2011 - 86 grams. Bags Boxes and Counter. Includes Linehaul.	0.0000	0.0000	0.000	Straight Furrow	S	0.00	I	261
+
+C80329	31/05/2011		I	CI/1	80893.000	Straight Furrow - Job 68633 - Delivery 23 May 2011 - 145 grams.   Includes Linehaul.	0.1180	0.1357	9545.374	Straight Furrow	S	1431.81	I	261
+C80329	31/05/2011		I	CI/2	1612.000	Straight Furrow - Job 68633 - Delivery 23 May 2011 - 145 grams. Bags Boxes and Counter. Includes Linehaul.	0.1660	0.1909	267.592	Straight Furrow	S	40.14	I	261
+
+C80330	31/05/2011		I	CI/1	80893.000	Straight Furrow - Job 68707 - Delivery 30 May 2011 - 65 grams.   Includes Linehaul.	0.0940	0.1081	7603.942	Straight Furrow	S	1140.59	I	261
+C80330	31/05/2011		I	CI/2	1612.000	Straight Furrow - Job 68707 - Delivery 30 May 2011 - 65 grams. Bags Boxes and Counter. Includes Linehaul.	0.0910	0.1047	146.692	Straight Furrow	S	22.00	I	261
+
+C80331	31/05/2011		I	CI/1	19199.000	Straight Furrow-Central - Job 68654 - Delivery 16 May 2011 - 86 grams.   Includes Linehaul.	0.0940	0.1081	1804.706	Straight Furrow-Central	S	270.71	I	261
+C80331	31/05/2011		I	CI/2	1101.000	Straight Furrow-Central - Job 68654 - Delivery 16 May 2011 - 86 grams. Bags Boxes and Counter. Includes Linehaul.	0.0910	0.1047	100.191	Straight Furrow-Central	S	15.03	I	261
+C80331	31/05/2011		I	CI/3	36866.000	Straight Furrow-North - Job 68655 - Delivery 16 May 2011 - 86 grams.   Includes Linehaul.	0.0940	0.1081	3465.404	Straight Furrow-North	S	519.81	I	261
+C80331	31/05/2011		I	CI/4	24825.000	Straight Furrow-South - Job 68656 - Delivery 16 May 2011 - 86 grams.   Includes Linehaul.	0.0940	0.1081	2333.550	Straight Furrow-South	S	350.03	I	261
+C80331	31/05/2011		I	CI/5	511.000	Straight Furrow-South - Job 68656 - Delivery 16 May 2011 - 86 grams. Bags Boxes and Counter. Includes Linehaul.	0.0910	0.1047	46.501	Straight Furrow-South	S	6.98	I	261
+
+C80332	31/05/2011		I	CI/1	80893.000	Straight Furrow/Ag Trader - Job 68534 - Delivery 09 May 2011 - 250 grams.   Includes Linehaul.	0.1740	0.2001	14075.382	Straight Furrow/Ag Trader	S	2111.31	I	261
+C80332	31/05/2011		I	CI/2	1612.000	Straight Furrow/Ag Trader - Job 68534 - Delivery 09 May 2011 - 250 grams. Bags Boxes and Counter. Includes Linehaul.	0.1660	0.1909	267.592	Straight Furrow/Ag Trader	S	40.14	I	261
+
+C80333	31/05/2011		I	CI/1	15493.000	Orari Gorge Sheep Flyer - Job 68663 - Delivery 25 May 2011 - 10 grams.   Includes Linehaul.	0.0883	0.1015	1368.032	Orari Gorge Sheep Flyer	S	205.21	I	192
+
+C80334	31/05/2011		I	CI/1	1231.000	Central Otago Monitor Farm Field Day - Job 68650 - Delivery 18 May 2011 - 10 grams.   	0.1219	0.1402	150.059	Central Otago Monitor Farm Field Day	S	22.51	I	422
+
+C80335	31/05/2011	2408546	I	CI/1	14431.000	Agri Business - Bee Keeping For Beginners - Job 68659 - Delivery 17 May 2011 - 10 grams.   	0.0615	0.0707	887.507	Agri Business - Bee Keeping For Beginners	S	133.13	I	201
+
+C80336	31/05/2011	2408536	I	CI/1	14431.000	Agri Business - Essential Horse Care - Job 68657 - Delivery 17 May 2011 - 10 grams.   	0.0615	0.0707	887.507	Agri Business - Essential Horse Care	S	133.13	I	201
+
+C80337	31/05/2011	2407505	I	CI/1	5848.000	Bay Weekend - Job 68539 - Delivery 07 May 2011 - 125 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	621.642	Bay Weekend	S	93.25	I	201
+C80337	31/05/2011	2407505	I	CI/2	5848.000	Bay Weekend - Job 68540 - Delivery 14 May 2011 - 105 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	621.642	Bay Weekend	S	93.25	I	201
+C80337	31/05/2011	2407505	I	CI/3	5848.000	Bay Weekend - Job 68541 - Delivery 21 May 2011 - 85 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	530.998	Bay Weekend	S	79.65	I	201
+C80337	31/05/2011	2407505	I	CI/4	5848.000	Bay Weekend - Job 68542 - Delivery 28 May 2011 - 95 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	530.998	Bay Weekend	S	79.65	I	201
+
+C80338	31/05/2011	2406485	I	CI/1	8912.000	Bond & Bond - Job 68405 - Delivery 03 May 2011 - 20 grams.   Includes Linehaul.	0.0000	0.0000	0.000	Bond & Bond	S	0.00	I	201
+
+C80339	31/05/2011	2407714	I	CI/1	8912.000	Bond & Bond - Job 68628 - Delivery 17 May 2011 - 20 grams.   Includes Linehaul.	0.0615	0.0707	548.088	Bond & Bond	S	82.21	I	201
+
+C80340	31/05/2011	2409001	I	CI/1	8912.000	Bond & Bond - Job 68714 - Delivery 31 May 2011 - 15 grams.   Includes Linehaul.	0.0615	0.0707	548.088	Bond & Bond	S	82.21	I	201
+
+C80341	31/05/2011	2406313	I	CI/1	1925.000	Cambridge Property Guide - Job 68244 - Delivery 04 May 2011 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	174.790	Cambridge Property Guide	S	26.22	I	201
+C80341	31/05/2011	2406313	I	CI/2	1925.000	Cambridge Property Guide - Job 68613 - Delivery 18 May 2011 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	174.790	Cambridge Property Guide	S	26.22	I	201
+
+C80342	31/05/2011	2406187	I	CI/1	10955.000	eLocal Magazine - Job 68395 - Delivery 03 May 2011 - 90 grams.   Includes Linehaul.	0.0964	0.1109	1056.062	eLocal Magazine	S	158.41	I	201
+
+C80343	31/05/2011	2409450	I	CI/1	10355.000	eLocal Magazine - Job 68700 - Delivery 31 May 2011 - 90 grams.   Includes Linehaul.	0.0964	0.1109	998.222	eLocal Magazine	S	149.73	I	201
+
+C80344	31/05/2011	2405159	I	CI/1	60009.000	Four Square Northern - Job 68163 - Delivery 07 May 2011 - 10 grams.   Includes Linehaul.	0.0615	0.0707	3690.554	Four Square Northern	S	553.58	I	201
+
+C80345	31/05/2011	2405177	I	CI/1	60009.000	Four Square Northern - Job 68547 - Delivery 14 May 2011 - 10 grams.   Includes Linehaul.	0.0615	0.0707	3690.554	Four Square Northern	S	553.58	I	201
+
+C80346	31/05/2011	2405182	I	CI/1	60009.000	Four Square Northern - Job 68548 - Delivery 21 May 2011 - 10 grams.   Includes Linehaul.	0.0615	0.0707	3690.554	Four Square Northern	S	553.58	I	201
+
+C80347	31/05/2011	2405188	I	CI/1	60009.000	Four Square Northern - Job 68549 - Delivery 28 May 2011 - 10 grams.   Includes Linehaul.	0.0615	0.0707	3690.554	Four Square Northern	S	553.58	I	201
+
+C80348	31/05/2011	2407011	I	CI/1	9209.000	Guardian Country - Job 68551 - Delivery 19 May 2011 - 54 grams.   	0.0808	0.0929	744.087	Guardian Country	S	111.61	I	201
+
+C80349	31/05/2011	2407010	I	CI/1	3100.000	Guardian Newspaper - Job 68344 - Delivery 05 May 2011 - 86 grams.   	0.0808	0.0929	250.480	Guardian Newspaper	S	37.57	I	201
+
+C80350	31/05/2011		2407010	I	CI/1	3100.000	Guardian Newspaper - Job 68552 - Delivery 12 May 2011 - 75 grams.   	0.0808	0.0929	250.480	Guardian Newspaper	S	37.57	I	201
+C80350	31/05/2011		2407010	I	CI/2	3100.000	Guardian Newspaper - Job 68553 - Delivery 19 May 2011 - 91 grams.   	0.0808	0.0929	250.480	Guardian Newspaper	S	37.57	I	201
+C80350	31/05/2011		2407010	I	CI/3	3100.000	Guardian Newspaper - Job 68554 - Delivery 26 May 2011 - 145 grams.   	0.0963	0.1107	298.530	Guardian Newspaper	S	44.78	I	201
+
+C80351	31/05/2011	2405907	I	CI/1	6511.000	Hawkesbay Country Scene - Job 68557 - Delivery 25 May 2011 - 50 grams.   	0.0658	0.0757	428.424	Hawkesbay Country Scene	S	64.26	I	201
+
+C80352	31/05/2011	2409495	I	CI/1	1080.000	Invercargill Eye - Job 68625 - Delivery 12 May 2011 - 40 grams.   	0.0658	0.0757	71.064	Invercargill Eye	S	10.66	I	201
+C80352	31/05/2011	2409495	I	CI/2	1080.000	Invercargill Eye - Job 68701 - Delivery 19 May 2011 - 45 grams.   	0.0658	0.0757	71.064	Invercargill Eye	S	10.66	I	201
+C80352	31/05/2011	2409495	I	CI/3	1080.000	Invercargill Eye - Job 68702 - Delivery 26 May 2011 - 50 grams.   	0.0658	0.0757	71.064	Invercargill Eye	S	10.66	I	201
+
+C80353	31/05/2011	2406320	I	CI/1	1470.000	Lake Taupo Property Press - Job 68616 - Delivery 05 May 2011 - 160 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1408	179.928	Lake Taupo Property Press	S	26.99	I	201
+C80353	31/05/2011	2406320	I	CI/2	1470.000	Lake Taupo Property Press - Job 68617 - Delivery 19 May 2011 - 170 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1408	179.928	Lake Taupo Property Press	S	26.99	I	201
+
+C80354	31/05/2011	2406659	I	CI/1	7727.000	MEC Lincoln University - Job 68408 - Delivery 04 May 2011 - 25 grams.   Includes Linehaul.	0.0615	0.0707	475.211	MEC Lincoln University	S	71.28	I	201
+
+C80355	31/05/2011	2408251	I	CI/1	1495.000	Metropol - Job 68252 - Delivery 12 May 2011 - 161 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1408	182.988	Metropol	S	27.45	I	201
+C80355	31/05/2011	2408251	I	CI/2	1495.000	Metropol - Job 68558 - Delivery 26 May 2011 - 195 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1408	182.988	Metropol	S	27.45	I	201
+
+C80356	31/05/2011	2408229	I	CI/1	3861.000	Mid Canterbury Herald - Job 68256 - Delivery 04 May 2011 - 117 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	410.424	Mid Canterbury Herald	S	61.56	I	201
+C80356	31/05/2011	2408229	I	CI/2	3861.000	Mid Canterbury Herald - Job 68561 - Delivery 11 May 2011 - 111 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	410.424	Mid Canterbury Herald	S	61.56	I	201
+C80356	31/05/2011	2408229	I	CI/3	3861.000	Mid Canterbury Herald - Job 68562 - Delivery 18 May 2011 - 61 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	350.579	Mid Canterbury Herald	S	52.59	I	201
+C80356	31/05/2011	2408229	I	CI/4	3861.000	Mid Canterbury Herald - Job 68563 - Delivery 25 May 2011 - 134 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	410.424	Mid Canterbury Herald	S	61.56	I	201
+
+C80357	31/05/2011	2405906	I	CI/1	1560.000	Napier Mail - Job 68141 - Delivery 04 May 2011 - 65 grams. Includes folding fee 0.0100 cents.  	0.1062	0.1221	165.672	Napier Mail	S	24.85	I	201
+C80357	31/05/2011	2405906	I	CI/2	1560.000	Napier Mail - Job 68566 - Delivery 11 May 2011 - 60 grams. Includes folding fee 0.0100 cents.  	0.1062	0.1221	165.672	Napier Mail	S	24.85	I	201
+C80357	31/05/2011	2405906	I	CI/3	1560.000	Napier Mail - Job 68567 - Delivery 18 May 2011 - 60 grams. Includes folding fee 0.0100 cents.  	0.1062	0.1221	165.672	Napier Mail	S	24.85	I	201
+C80357	31/05/2011	2405906	I	CI/4	1560.000	Napier Mail - Job 68568 - Delivery 25 May 2011 - 72 grams. Includes folding fee 0.0100 cents.  	0.1062	0.1221	165.672	Napier Mail	S	24.85	I	201
+
+C80358	31/05/2011	2405208	I	CI/1	80347.000	New World Northern - Job 68360 - Delivery 07 May 2011 - 25 grams.   Includes Linehaul.	0.0615	0.0707	4941.341	New World Northern	S	741.20	I	201
+
+C80359	31/05/2011	2405213	I	CI/1	80347.000	New World Northern - Job 68571 - Delivery 14 May 2011 - 25 grams.   Includes Linehaul.	0.0615	0.0707	4941.341	New World Northern	S	741.20	I	201
+
+C80360	31/05/2011	2405232	I	CI/1	80347.000	New World Northern - Job 68572 - Delivery 21 May 2011 - 25 grams.   Includes Linehaul.	0.0615	0.0707	4941.341	New World Northern	S	741.20	I	201
+
+C80361	31/05/2011	2405236	I	CI/1	80347.000	New World Northern - Job 68573 - Delivery 28 May 2011 - 25 grams.   Includes Linehaul.	0.0615	0.0707	4941.341	New World Northern	S	741.20	I	201
+
+C80362	31/05/2011	2406731	I	CI/1	104263.000	Noel Leeming  - Job 68603 - Delivery 10 May 2011 - 25 grams.   Includes Linehaul.	0.0615	0.0707	6412.175	Noel Leeming 	S	961.83	I	201
+
+C80363	31/05/2011	2408585	I	CI/1	104263.000	Noel Leeming  - Job 68675 - Delivery 24 May 2011 - 25 grams.   Includes Linehaul.	0.0615	0.0707	6412.175	Noel Leeming 	S	961.83	I	201
+
+C80364	31/05/2011	2408579	I	CI/1	10900.000	Noel Leeming Cambridge/Tokoroa/Matamata - Job 68670 - Delivery 24 May 2011 - 15 grams.   Includes Linehaul.	0.0615	0.0707	670.350	Noel Leeming Cambridge/Tokoroa/Matamata	S	100.55	I	201
+
+C80365	31/05/2011	2406488	I	CI/1	3423.000	Noel Leeming Morrinsville - Job 68406 - Delivery 03 May 2011 - 20 grams.   	0.0615	0.0707	210.515	Noel Leeming Morrinsville	S	31.58	I	201
+
+C80366	31/05/2011	2407747	I	CI/1	7095.000	Noel Leeming Oamaru - Job 68629 - Delivery 17 May 2011 - 15 grams.   Includes Linehaul.	0.0615	0.0707	436.343	Noel Leeming Oamaru	S	65.45	I	201
+
+C80367	31/05/2011	2407774	I	CI/1	5990.000	Noel Leeming Te Awamutu - Job 68630 - Delivery 17 May 2011 - 15 grams.   Includes Linehaul.	0.0615	0.0707	368.385	Noel Leeming Te Awamutu	S	55.26	I	201
+
+C80368	31/05/2011	2406487	I	CI/1	8868.000	Noel Leeming Thames Mighty Sale - Job 68407 - Delivery 03 May 2011 - 20 grams.   Includes Linehaul.	0.0615	0.0707	545.382	Noel Leeming Thames Mighty Sale	S	81.81	I	201
+
+C80369	31/05/2011	2408578	I	CI/1	11874.000	Noel Leeming Whangarei Supa/Cameron StMighty Sale - Job 68671 - Delivery 24 May 2011 - 20 grams.   Includes Linehaul.	0.0615	0.0707	730.251	Noel Leeming Whangarei Supa/Cameron StMighty Sale	S	109.54	I	201
+
+C80370	31/05/2011	2408258	I	CI/1	7836.000	North Canterbury News - Job 68260 - Delivery 03 May 2011 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	711.509	North Canterbury News	S	106.73	I	201
+C80370	31/05/2011	2408258	I	CI/2	7836.000	North Canterbury News - Job 68458 - Delivery 10 May 2011 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	711.509	North Canterbury News	S	106.73	I	201
+C80370	31/05/2011	2408258	I	CI/3	7836.000	North Canterbury News - Job 68459 - Delivery 17 May 2011 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	711.509	North Canterbury News	S	106.73	I	201
+C80370	31/05/2011	2408258	I	CI/4	7836.000	North Canterbury News - Job 68460 - Delivery 24 May 2011 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	711.509	North Canterbury News	S	106.73	I	201
+C80370	31/05/2011	2408258	I	CI/5	7836.000	North Canterbury News - Job 68461 - Delivery 31 May 2011 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	711.509	North Canterbury News	S	106.73	I	201
+
+C80371	31/05/2011	2409388	I	CI/1	10435.000	OMC - Job 68689 - Delivery 24 May 2011 - 15 grams.   Includes Linehaul.	0.0615	0.0707	641.753	OMC	S	96.26	I	201
+
+C80372	31/05/2011	2408221	I	CI/1	5399.000	Peninsula Press - Job 68398 - Delivery 05 May 2011 - 65 grams.   	0.0808	0.0929	436.239	Peninsula Press	S	65.44	I	201
+C80372	31/05/2011	2408221	I	CI/2	5399.000	Peninsula Press - Job 68576 - Delivery 12 May 2011 - 65 grams.   	0.0808	0.0929	436.239	Peninsula Press	S	65.44	I	201
+
+C80373	31/05/2011	2409137	I	CI/1	5399.000	Peninsula Press - Job 68577 - Delivery 19 May 2011 - 65 grams.   	0.0808	0.0929	436.239	Peninsula Press	S	65.44	I	201
+
+C80374	31/05/2011	2409782	I	CI/1	5399.000	Peninsula Press - Job 68578 - Delivery 26 May 2011 - 65 grams.   	0.0808	0.0929	436.239	Peninsula Press	S	65.44	I	201
+
+C80375	31/05/2011	2403890	I	CI/1	121089.000	Postie Plus - Job 68404 - Delivery 03 May 2011 - 25 grams.   Includes Linehaul.	0.0540	0.0621	6538.806	Postie Plus	S	980.82	I	201
+
+C80376	31/05/2011	2407006	I	CI/1	800.000	Rangitikei Mail - Job 68264 - Delivery 03 May 2011 - 51 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2156	150.000	Rangitikei Mail	S	22.50	I	201
+C80376	31/05/2011	2407006	I	CI/2	800.000	Rangitikei Mail - Job 68580 - Delivery 10 May 2011 - 51 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2156	150.000	Rangitikei Mail	S	22.50	I	201
+C80376	31/05/2011	2407006	I	CI/3	800.000	Rangitikei Mail - Job 68581 - Delivery 17 May 2011 - 51 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2156	150.000	Rangitikei Mail	S	22.50	I	201
+C80376	31/05/2011	2407006	I	CI/4	800.000	Rangitikei Mail - Job 68582 - Delivery 24 May 2011 - 51 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2156	150.000	Rangitikei Mail	S	22.50	I	201
+C80376	31/05/2011		I	CI/5	800.000	Rangitikei Mail - Job 68583 - Delivery 31 May 2011 - 51 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2156	150.000	Rangitikei Mail	S	22.50	I	201
+
+C80377	31/05/2011	2408257	I	CI/1	6762.000	Selwyn Times - Job 68267 - Delivery 03 May 2011 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	613.990	Selwyn Times	S	92.10	I	201
+C80377	31/05/2011	2408257	I	CI/2	6762.000	Selwyn Times - Job 68463 - Delivery 10 May 2011 - 130 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	718.801	Selwyn Times	S	107.82	I	201
+C80377	31/05/2011	2408257	I	CI/3	6762.000	Selwyn Times - Job 68464 - Delivery 17 May 2011 - 65 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	613.990	Selwyn Times	S	92.10	I	201
+C80377	31/05/2011	2408257	I	CI/4	6762.000	Selwyn Times - Job 68465 - Delivery 24 May 2011 - 87 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	613.990	Selwyn Times	S	92.10	I	201
+
+C80378	31/05/2011		I	CI/1	6762.000	Selwyn Times - Job 68466 - Delivery 31 May 2011 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	613.990	Selwyn Times	S	92.10	I	201
+
+C80379	31/05/2011	2408237	I	CI/1	5221.000	South Canterbury Herald - Job 68271 - Delivery 04 May 2011 - 129 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	554.992	South Canterbury Herald	S	83.25	I	201
+C80379	31/05/2011	2408237	I	CI/2	5221.000	South Canterbury Herald - Job 68585 - Delivery 11 May 2011 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	474.067	South Canterbury Herald	S	71.11	I	201
+C80379	31/05/2011	2408237	I	CI/3	5221.000	South Canterbury Herald - Job 68586 - Delivery 18 May 2011 - 78 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	474.067	South Canterbury Herald	S	71.11	I	201
+C80379	31/05/2011	2408237	I	CI/4	5221.000	South Canterbury Herald - Job 68651 - Delivery 25 May 2011 - 100 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	474.067	South Canterbury Herald	S	71.11	I	201
+
+C80380	31/05/2011		I	CI/1	1065.000	South Otago Windows & Doors - Job 68604 - Delivery 10 May 2011 - 10 grams.   Includes Linehaul.	0.1408	0.1619	149.952	South Otago Windows & Doors	S	22.49	I	201
+
+C80381	31/05/2011	 2408235	I	CI/1	2480.000	The Waitaki Herald Weekender - Job 68274 - Delivery 06 May 2011 - 61 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	225.184	The Waitaki Herald Weekender	S	33.78	I	201
+C80381	31/05/2011	 2408235	I	CI/2	2480.000	The Waitaki Herald Weekender - Job 68275 - Delivery 13 May 2011 - 42 grams. Includes folding fee 0.0100 cents.  	0.0758	0.0872	187.984	The Waitaki Herald Weekender	S	28.20	I	201
+C80381	31/05/2011	 2408235	I	CI/3	2480.000	The Waitaki Herald Weekender - Job 68468 - Delivery 20 May 2011 - 50 grams. Includes folding fee 0.0100 cents.  	0.0758	0.0872	187.984	The Waitaki Herald Weekender	S	28.20	I	201
+C80381	31/05/2011	 2408235	I	CI/4	2480.000	The Waitaki Herald Weekender - Job 68469 - Delivery 27 May 2011 - 50 grams. Includes folding fee 0.0100 cents.  	0.0758	0.0872	187.984	The Waitaki Herald Weekender	S	28.20	I	201
+
+C80382	31/05/2011	2408228	I	CI/1	2480.000	Waitaki Herald - Job 68279 - Delivery 04 May 2011 - 77 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	225.184	Waitaki Herald	S	33.78	I	201
+C80382	31/05/2011	2408228	I	CI/2	2480.000	Waitaki Herald - Job 68471 - Delivery 11 May 2011 - 61 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	225.184	Waitaki Herald	S	33.78	I	201
+C80382	31/05/2011	2408228	I	CI/3	2480.000	Waitaki Herald - Job 68472 - Delivery 18 May 2011 - 59 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	225.184	Waitaki Herald	S	33.78	I	201
+C80382	31/05/2011	2408228	I	CI/4	2480.000	Waitaki Herald - Job 68473 - Delivery 25 May 2011 - 121 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	263.624	Waitaki Herald	S	39.54	I	201
+
+C80383	31/05/2011	2406331	I	CI/1	10675.000	Weekend Sun - Job 68288 - Delivery 06 May 2011 - 195 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1577	0.1814	1683.448	Weekend Sun	S	252.52	I	201
+C80383	31/05/2011	2406331	I	CI/2	10675.000	Weekend Sun - Job 68446 - Delivery 13 May 2011 - 186 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1577	0.1814	1683.448	Weekend Sun	S	252.52	I	201
+C80383	31/05/2011	2406331	I	CI/3	10675.000	Weekend Sun - Job 68447 - Delivery 20 May 2011 - 160 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1577	0.1814	1683.448	Weekend Sun	S	252.52	I	201
+C80383	31/05/2011	2406331	I	CI/4	10675.000	Weekend Sun - Job 68448 - Delivery 27 May 2011 - 165 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1577	0.1814	1683.448	Weekend Sun	S	252.52	I	201
+
+C80384	31/05/2011	2406323	I	CI/1	8045.000	Whangarei Report - Job 68363 - Delivery 05 May 2011 - 62 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	730.486	Whangarei Report	S	109.57	I	201
+C80384	31/05/2011	2406323	I	CI/2	8045.000	Whangarei Report - Job 68595 - Delivery 12 May 2011 - 87 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	730.486	Whangarei Report	S	109.57	I	201
+C80384	31/05/2011	2406323	I	CI/3	8045.000	Whangarei Report - Job 68596 - Delivery 19 May 2011 - 74 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	730.486	Whangarei Report	S	109.57	I	201
+C80384	31/05/2011	2406323	I	CI/4	8045.000	Whangarei Report - Job 68597 - Delivery 26 May 2011 - 61 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1044	730.486	Whangarei Report	S	109.57	I	201
+
+C80385	31/05/2011	2406327	I	CI/1	3966.000	Your Cambridge News - Job 68600 - Delivery 13 May 2011 - 125 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	421.586	Your Cambridge News	S	63.24	I	201
+C80385	31/05/2011	2406327	I	CI/2	3966.000	Your Cambridge News - Job 68601 - Delivery 27 May 2011 - 140 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1222	421.586	Your Cambridge News	S	63.24	I	201
+
+C80386	31/05/2011		I	CI/1	3196.000	Kioti Mailer Drop - Job 68666 - Delivery IOA - 30 grams.   Includes Linehaul.	0.0990	0.1139	316.404	Kioti Mailer Drop	S	47.46	I	402
+
+C80387	31/05/2011		I	CI/1	4717.000	P/P - BOP 1 - Job 68419 - Delivery 13 May 2011 - 112 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1150	471.700	P/P - BOP 1	S	70.76	I	323
+C80387	31/05/2011		I	CI/2	4717.000	P/P - BOP 1 - Job 68420 - Delivery 27 May 2011 - 126 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1150	471.700	P/P - BOP 1	S	70.76	I	323
+C80387	31/05/2011		I	CI/3	3124.000	P/P - BOP 2 - Job 68424 - Delivery 06 May 2011 - 107 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1150	312.400	P/P - BOP 2	S	46.86	I	323
+C80387	31/05/2011		I	CI/4	3124.000	P/P - BOP 2 - Job 68425 - Delivery 20 May 2011 - 112 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1150	312.400	P/P - BOP 2	S	46.86	I	323
+
+C80388	31/05/2011		I	CI/1	460.000	P/P - Eastern 1 - Job 68413 - Delivery 06 May 2011 - 219 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.3361	0.3865	154.606	P/P - Eastern 1	S	23.19	I	323
+C80388	31/05/2011		I	CI/2	460.000	P/P - Eastern 1 - Job 68414 - Delivery 20 May 2011 - 237 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.3361	0.3865	154.606	P/P - Eastern 1	S	23.19	I	323
+C80388	31/05/2011		I	CI/3	371.000	P/P - Eastern 2 - Job 68409 - Delivery 13 May 2011 - 237 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.4143	0.4764	153.705	P/P - Eastern 2	S	23.06	I	323
+C80388	31/05/2011		I	CI/4	371.000	P/P - Eastern 2 - Job 68410 - Delivery 27 May 2011 - 237 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.4143	0.4764	153.705	P/P - Eastern 2	S	23.06	I	323
+
+C80389	31/05/2011		I	CI/1	2670.000	P/P - Lakes District - Job 68292 - Delivery 06 May 2011 - 170 grams. Includes folding fee 0.0100 cents.  	0.1200	0.1380	320.400	P/P - Lakes District	S	48.06	I	323
+C80389	31/05/2011		I	CI/2	2670.000	P/P - Lakes District - Job 68429 - Delivery 20 May 2011 - 147 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1150	267.000	P/P - Lakes District	S	40.05	I	323
+
+C80390	31/05/2011		I	CI/1	2870.000	P/P - Manawatu1 - Job 68434 - Delivery 14 May 2011 - 143 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1150	287.000	P/P - Manawatu1	S	43.05	I	323
+C80390	31/05/2011		I	CI/2	2870.000	P/P - Manawatu1 - Job 68435 - Delivery 28 May 2011 - 115 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1150	287.000	P/P - Manawatu1	S	43.05	I	323
+C80390	31/05/2011		I	CI/3	3788.000	P/P - Manawatu2 - Job 68439 - Delivery 07 May 2011 - 112 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1150	378.800	P/P - Manawatu2	S	56.82	I	323
+C80390	31/05/2011		I	CI/4	3788.000	P/P - Manawatu2 - Job 68440 - Delivery 21 May 2011 - 143 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1150	378.800	P/P - Manawatu2	S	56.82	I	323
+
+C80391	31/05/2011		I	CI/1	5113.000	Need Magnesium? - Job 68608 - Delivery 09 May 2011 - 5 grams.   Includes Linehaul.	0.0883	0.1015	451.478	Need Magnesium?	S	67.72	I	284
+
+C80392	31/05/2011		I	CI/1	14402.000	Rural Lifestyle - Job 68653 - Delivery 16 May 2011 - 60 grams.   Includes Linehaul.	0.0856	0.0984	1232.811	Rural Lifestyle	S	184.92	I	377
+C80392	31/05/2011		I	CI/2	1.000	Rural Lifestyle - Job 68653 - Delivery 16 May 2011 - 60 grams. Bags Boxes and Counter. Includes Linehaul.	100.0000	115.0000	100.000	Rural Lifestyle	S	15.00	I	377
+
+C80393	31/05/2011		I	CI/1	10389.000	Telephone Book Covers - Job 68401 - Delivery 21 May 2011 - 10 grams.   	0.0749	0.0861	778.136	Telephone Book Covers	S	116.72	I	207
+
+C80394	31/05/2011		I	CI/1	8791.000	Exclusively Franklin - Job 68611 - Delivery 05 May 2011 - 60 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1099	840.420	Exclusively Franklin	S	126.06	I	376
+
+C80395	31/05/2011		I	CI/1	10478.000	Rotavec Dairy Mailer - Job 68326 - Delivery 05 May 2011 - 10 grams.   Includes Linehaul.	0.0883	0.1015	925.207	Rotavec Dairy Mailer	S	138.78	I	360
+C80395	31/05/2011		I	CI/2	4583.000	Rotavec Dairy Mailer - Job 68323 - Delivery 17 May 2011 - 10 grams.   Includes Linehaul.	0.0883	0.1015	404.679	Rotavec Dairy Mailer	S	60.70	I	360
+
+C80396	31/05/2011	5252	I	CI/1	80299.000	Strainrite Envelope - Job 68667 - Delivery IOA - 50 grams.   Includes Linehaul.	0.0990	0.1139	7949.601	Strainrite Envelope	S	1192.44	I	319
+
+C80397	31/05/2011		I	CI/1	18988.000	Otago Southland Farmer - Job 68296 - Delivery 06 May 2011 - 55 grams. Includes folding fee 0.0100 cents.  	0.0825	0.0949	1566.510	Otago Southland Farmer	S	234.98	I	397
+C80397	31/05/2011		I	CI/2	1.000	Otago Southland Farmer - Job 68296 - Delivery 06 May 2011 - 55 grams. Bags Boxes and Counter. 	350.0000	402.5000	350.000	Otago Southland Farmer	S	52.50	I	397
+C80397	31/05/2011		I	CI/3	18988.000	Otago Southland Farmer - Job 68535 - Delivery 20 May 2011 - 55 grams. Includes folding fee 0.0100 cents.  	0.0825	0.0949	1566.510	Otago Southland Farmer	S	234.98	I	397
+C80397	31/05/2011		I	CI/4	1.000	Otago Southland Farmer - Job 68535 - Delivery 20 May 2011 - 55 grams. Bags Boxes and Counter. 	350.0000	402.5000	350.000	Otago Southland Farmer	S	52.50	I	397
+
+C80398	31/05/2011		I	CI/1	28213.000	Coast N Country - Job 68612 - Delivery 05 May 2011 - 155 grams.   Includes Linehaul.	0.1017	0.1170	2869.262	Coast N Country	S	430.39	I	217
+
+C80399	31/05/2011		I	CI/1	200.000	Viafos - From Our High Country... - Job 68624 - Delivery IOA - 10 grams.   Includes Linehaul.	0.3000	0.3450	60.000	Viafos - From Our High Country...	S	9.00	I	417
+
+C80400	31/05/2011		I	CI/1	1193.000	Nor West Rock Flyer - Job 68635 - Delivery 12 May 2011 - 10 grams.   	0.1257	0.1446	149.960	Nor West Rock Flyer	S	22.49	I	355
+

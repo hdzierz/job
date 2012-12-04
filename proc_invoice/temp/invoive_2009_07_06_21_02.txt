@@ -1,0 +1,387 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C20221	30/06/2009		I	CI/1	2991.000	Cambridge Property Guide - Job 62870 - Delivery 03 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C20221	30/06/2009		I	CI/2	2991.000	Cambridge Property Guide - Job 63033 - Delivery 10 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C20221	30/06/2009		I	CI/3	2991.000	Cambridge Property Guide - Job 62871 - Delivery 17 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C20221	30/06/2009		I	CI/4	2991.000	Cambridge Property Guide - Job 63034 - Delivery 24 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+
+C20222	30/06/2009	Gay Hubbard	I	CI/1	2220.000	Hamilton This Week - Job 62879 - Delivery 04 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0858	0.0965	190.476	Hamilton This Week	S	23.81	I	106
+C20222	30/06/2009	Gay Hubbard	I	CI/2	2220.000	Hamilton This Week - Job 62880 - Delivery 11 Jun 2009 - 65 grams. Includes folding fee 0.0100 cents.  	0.0858	0.0965	190.476	Hamilton This Week	S	23.81	I	106
+C20222	30/06/2009	Gay Hubbard	I	CI/3	2220.000	Hamilton This Week - Job 62881 - Delivery 18 Jun 2009 - 70 grams. Includes folding fee 0.0100 cents.  	0.0858	0.0965	190.476	Hamilton This Week	S	23.81	I	106
+C20222	30/06/2009	Gay Hubbard	I	CI/4	2220.000	Hamilton This Week - Job 62882 - Delivery 25 Jun 2009 - 100 grams. Includes folding fee 0.0100 cents.  	0.0858	0.0965	190.476	Hamilton This Week	S	23.81	I	106
+
+C20223	30/06/2009	10455	I	CI/1	8092.000	Rural Advocate - Job 63056 - Delivery 19 Jun 2009 - 160 grams. Includes folding fee 0.0100 cents.  	0.1010	0.1136	817.292	Rural Advocate	S	102.16	I	106
+
+C20224	30/06/2009		I	CI/1	3505.000	Te Puke Times - Job 9942 - Delivery 03 Jun 2009 - 95 grams.   	0.0749	0.0843	262.525	Te Puke Times	S	32.82	I	106
+C20224	30/06/2009		I	CI/2	3505.000	Te Puke Times - Job 62948 - Delivery 10 Jun 2009 - 100 grams.   	0.0749	0.0843	262.525	Te Puke Times	S	32.82	I	106
+C20224	30/06/2009		I	CI/3	3505.000	Te Puke Times - Job 62949 - Delivery 17 Jun 2009 - 65 grams.   	0.0749	0.0843	262.525	Te Puke Times	S	32.82	I	106
+C20224	30/06/2009		I	CI/4	3505.000	Te Puke Times - Job 62950 - Delivery 24 Jun 2009 - 75 grams.   	0.0749	0.0843	262.525	Te Puke Times	S	32.82	I	106
+
+C20225	30/06/2009	Rangiora	I	CI/1	2582.000	Farm Location Maps - Job 63067 - Delivery IOA - 90 grams.   	0.0856	0.0963	221.019	Farm Location Maps	S	27.63	I	107
+
+C20226	30/06/2009		I	CI/1	14392.000	Bayleys Quarterly - Job 62890 - Delivery IOA - 400 grams.   	0.4000	0.4500	5756.800	Bayleys Quarterly	S	719.60	I	111
+
+C20227	30/06/2009		I	CI/1	3000.000	Bayley's - Job 63055 - Delivery 09 Jun 2009 - 400 grams.   	0.4000	0.4500	1200.000	Bayley's	S	150.00	I	306
+
+C20228	30/06/2009		I	CI/1	42021.000	Rural Living - Job 62813 - Delivery 22 Jun 2009 - 62 grams.   	0.0927	0.1043	3895.347	Rural Living	S	486.92	I	256
+
+C20229	30/06/2009		I	CI/1	435.000	Visit Us At The Field Days - Job 63044 - Delivery IOA - 15 grams.   	0.0749	0.0843	32.582	Visit Us At The Field Days	S	4.07	I	118
+
+C20230	30/06/2009	1284	I	CI/1	1315.000	James McRae - Job 63116 - Delivery 25 Jun 2009 - 10 grams.   	0.0883	0.0993	116.115	James McRae	S	14.51	I	250
+
+C20231	30/06/2009	mcMillan Equine Darfield DM	I	CI/1	2717.000	It's All Right Here - Job 63069 - Delivery 17 Jun 2009 - 20 grams.   	0.0728	0.0819	197.798	It's All Right Here	S	24.72	I	125
+
+C20232	30/06/2009	114877	I	CI/1	1018.000	Canterbury Winter PP Workshops - Job 63068 - Delivery 23 Jun 2009 - 15 grams.   	0.0883	0.0993	89.889	Canterbury Winter PP Workshops	S	11.24	I	233
+
+C20233	30/06/2009	114924	I	CI/1	960.000	Local Link Louise June 09 - Job 63080 - Delivery 20 Jun 2009 - 15 grams.   	0.0883	0.0993	84.768	Local Link Louise June 09	S	10.60	I	233
+
+C20234	30/06/2009	115049	I	CI/1	1750.000	Locallink - Hamilton North - Job 63287 - Delivery IOA - 10 grams.   	0.0749	0.0843	131.075	Locallink - Hamilton North	S	16.38	I	233
+
+C20235	30/06/2009	115047	I	CI/1	1753.000	Locallink - Wayne Berry - Job 63286 - Delivery IOA - 10 grams.   	0.0749	0.0843	131.300	Locallink - Wayne Berry	S	16.41	I	233
+
+C20236	30/06/2009	115007	I	CI/1	2372.000	Spring on a Shoestring - Job 63119 - Delivery IOA - 15 grams.   	0.0749	0.0843	177.663	Spring on a Shoestring	S	22.21	I	233
+
+C20237	30/06/2009	115032	I	CI/1	1143.000	Spring on a Shoestring - BOP - Job 63278 - Delivery IOA - 10 grams.   	0.0749	0.0843	85.611	Spring on a Shoestring - BOP	S	10.70	I	233
+
+C20238	30/06/2009	114930	I	CI/1	1293.000	Tight Management for Tight Times - Job 63079 - Delivery 22 Jun 2009 - 10 grams.   	0.0749	0.0843	96.846	Tight Management for Tight Times	S	12.11	I	233
+
+C20239	30/06/2009	115050	I	CI/1	3895.000	Tight Management for Tight Times - Job 63288 - Delivery IOA - 10 grams.   	0.0749	0.0843	291.736	Tight Management for Tight Times	S	36.47	I	233
+
+C20240	30/06/2009	11441	I	CI/1	1216.000	Tight Times Flyer - Manawatu - Job 63049 - Delivery IOA - 10 grams.   	0.0856	0.0963	104.090	Tight Times Flyer - Manawatu	S	13.01	I	233
+
+C20241	30/06/2009	114440	I	CI/1	3550.000	Tight Times Flyer - Taranaki - Job 63047 - Delivery IOA - 10 grams.   	0.0856	0.0963	303.880	Tight Times Flyer - Taranaki	S	37.99	I	233
+
+C20242	30/06/2009	114439	I	CI/1	1002.000	Tight Times Flyer - Wairarapa/HB - Job 63048 - Delivery IOA - 10 grams.   	0.0856	0.0963	85.771	Tight Times Flyer - Wairarapa/HB	S	10.72	I	233
+
+C20243	30/06/2009		I	CI/1	1039.000	Dave Anderson Motorcycles - Job 63039 - Delivery IOA - 10 grams.   	0.0772	0.0869	80.211	Dave Anderson Motorcycles	S	10.03	I	128
+
+C20244	30/06/2009	38322	I	CI/1	27899.000	Field Days Postcard - Job 62782 - Delivery 02 Jun 2009 - 15 grams.   	0.0883	0.0993	2463.482	Field Days Postcard	S	307.93	I	132
+
+C20245	30/06/2009	252371	I	CI/1	4047.000	Cambridge Edition - Job 9949 - Delivery 03 Jun 2009 - 191 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	452.050	Cambridge Edition	S	56.51	I	141
+C20245	30/06/2009	252371	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C20245	30/06/2009	252371	I	CI/2	4047.000	Cambridge Edition - Job 62952 - Delivery 10 Jun 2009 - 196 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	452.050	Cambridge Edition	S	56.51	I	141
+C20245	30/06/2009	252371	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C20245	30/06/2009	252371	I	CI/3	4047.000	Cambridge Edition - Job 62953 - Delivery 17 Jun 2009 - 110 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	430.196	Cambridge Edition	S	53.77	I	141
+C20245	30/06/2009	252371	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C20245	30/06/2009	252371	I	CI/4	4047.000	Cambridge Edition - Job 62954 - Delivery 24 Jun 2009 - 100 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	386.893	Cambridge Edition	S	48.36	I	141
+C20245	30/06/2009	252371	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+
+C20246	30/06/2009	253596	I	CI/1	2975.000	Dargaville District News - Job 9954 - Delivery 03 Jun 2009 - 35 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+C20246	30/06/2009	253596	I	CI/2	2975.000	Dargaville District News - Job 62857 - Delivery 10 Jun 2009 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+C20246	30/06/2009	253596	I	CI/3	2975.000	Dargaville District News - Job 62858 - Delivery 17 Jun 2009 - 58 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	284.410	Dargaville District News	S	35.55	I	141
+C20246	30/06/2009	253596	I	CI/4	2975.000	Dargaville District News - Job 62859 - Delivery 24 Jun 2009 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+
+C20247	30/06/2009	256615	I	CI/1	11345.000	FCN - Thursday - Job 9978 - Delivery 04 Jun 2009 - 170 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	1267.237	FCN - Thursday	S	158.40	I	141
+C20247	30/06/2009	256615	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C20247	30/06/2009	256615	I	CI/2	11345.000	FCN - Thursday - Job 62848 - Delivery 11 Jun 2009 - 160 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	1267.237	FCN - Thursday	S	158.40	I	141
+C20247	30/06/2009	256615	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C20247	30/06/2009	256615	I	CI/3	11345.000	FCN - Thursday - Job 62849 - Delivery 18 Jun 2009 - 170 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	1267.237	FCN - Thursday	S	158.40	I	141
+C20247	30/06/2009	256615	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C20247	30/06/2009	256615	I	CI/4	11345.000	FCN - Thursday - Job 62850 - Delivery 25 Jun 2009 - 140 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	1205.974	FCN - Thursday	S	150.75	I	141
+C20247	30/06/2009	256615	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+
+C20248	30/06/2009	256615	I	CI/1	11345.000	FCN - Tuesday - Job 9983 - Delivery 02 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	1084.582	FCN - Tuesday	S	135.57	I	141
+C20248	30/06/2009	256615	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C20248	30/06/2009	256615	I	CI/2	11345.000	FCN - Tuesday - Job 62852 - Delivery 09 Jun 2009 - 60 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	1084.582	FCN - Tuesday	S	135.57	I	141
+C20248	30/06/2009	256615	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C20248	30/06/2009	256615	I	CI/3	11345.000	FCN - Tuesday - Job 62853 - Delivery 16 Jun 2009 - 60 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	1084.582	FCN - Tuesday	S	135.57	I	141
+C20248	30/06/2009	256615	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C20248	30/06/2009	256615	I	CI/4	11345.000	FCN - Tuesday - Job 62854 - Delivery 23 Jun 2009 - 75 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	1084.582	FCN - Tuesday	S	135.57	I	141
+C20248	30/06/2009	256615	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C20248	30/06/2009	256615	I	CI/5	11345.000	FCN - Tuesday - Job 62855 - Delivery 30 Jun 2009 - 60 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	1084.582	FCN - Tuesday	S	135.57	I	141
+C20248	30/06/2009	256615	I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+
+C20249	30/06/2009		I	CI/1	3195.000	LV Martin CW Rotorua Review - Job 63299 - Delivery 30 Jun 2009 - 0 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	305.442	LV Martin CW Rotorua Review	S	38.18	I	141
+C20249	30/06/2009		I	C150	2.000	Bundles	1.5000	1.6875	3.000	LV Martin CW Rotorua Review	S	0.38	I	141
+
+C20250	30/06/2009	256508	I	CI/1	2230.000	Matamata Chronicle - Job 9988 - Delivery 02 Jun 2009 - 235 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1377	272.952	Matamata Chronicle	S	34.12	I	141
+C20250	30/06/2009	256508	I	CI/2	2230.000	Matamata Chronicle - Job 62956 - Delivery 09 Jun 2009 - 186 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	249.091	Matamata Chronicle	S	31.14	I	141
+C20250	30/06/2009	256508	I	CI/3	2230.000	Matamata Chronicle - Job 62957 - Delivery 16 Jun 2009 - 208 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1377	272.952	Matamata Chronicle	S	34.12	I	141
+C20250	30/06/2009	256508	I	CI/4	2230.000	Matamata Chronicle - Job 62958 - Delivery 23 Jun 2009 - 136 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	237.049	Matamata Chronicle	S	29.63	I	141
+C20250	30/06/2009	256508	I	CI/5	2230.000	Matamata Chronicle - Job 62959 - Delivery 30 Jun 2009 - 259 grams. Includes folding fee 0.0100 cents.  	0.1331	0.1497	296.813	Matamata Chronicle	S	37.10	I	141
+
+C20251	30/06/2009	255786	I	CI/1	3076.000	Nth Waikato News - Job 9993 - Delivery 03 Jun 2009 - 40 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C20251	30/06/2009	255786	I	CI/2	3076.000	Nth Waikato News - Job 62861 - Delivery 10 Jun 2009 - 35 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C20251	30/06/2009	255786	I	CI/3	3076.000	Nth Waikato News - Job 62862 - Delivery 17 Jun 2009 - 40 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C20251	30/06/2009	255786	I	CI/4	3076.000	Nth Waikato News - Job 62863 - Delivery 24 Jun 2009 - 45 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+
+C20252	30/06/2009	256607	I	CI/1	3802.000	Piako Post - Job 9998 - Delivery 03 Jun 2009 - 245 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1377	465.365	Piako Post	S	58.17	I	141
+C20252	30/06/2009	256607	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C20252	30/06/2009	256607	I	CI/2	3802.000	Piako Post - Job 62961 - Delivery 10 Jun 2009 - 197 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	424.683	Piako Post	S	53.08	I	141
+C20252	30/06/2009	256607	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C20252	30/06/2009	256607	I	CI/3	3802.000	Piako Post - Job 62962 - Delivery 17 Jun 2009 - 155 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	424.683	Piako Post	S	53.08	I	141
+C20252	30/06/2009	256607	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C20252	30/06/2009	256607	I	CI/4	3802.000	Piako Post - Job 62963 - Delivery 24 Jun 2009 - 103 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	404.153	Piako Post	S	50.52	I	141
+C20252	30/06/2009	256607	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+
+C20253	30/06/2009	255789	I	CI/1	3195.000	Rotorua Review - Job 62839 - Delivery 02 Jun 2009 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	271.256	Rotorua Review	S	33.91	I	141
+C20253	30/06/2009	255789	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C20253	30/06/2009	255789	I	CI/2	3195.000	Rotorua Review - Job 62840 - Delivery 09 Jun 2009 - 64 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	305.442	Rotorua Review	S	38.18	I	141
+C20253	30/06/2009	255789	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C20253	30/06/2009	255789	I	CI/3	3195.000	Rotorua Review - Job 62841 - Delivery 16 Jun 2009 - 60 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	305.442	Rotorua Review	S	38.18	I	141
+C20253	30/06/2009	255789	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C20253	30/06/2009	255789	I	CI/4	3195.000	Rotorua Review - Job 62842 - Delivery 23 Jun 2009 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	271.256	Rotorua Review	S	33.91	I	141
+C20253	30/06/2009	255789	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C20253	30/06/2009	255789	I	CI/5	3195.000	Rotorua Review - Job 62843 - Delivery 30 Jun 2009 - 65 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	305.442	Rotorua Review	S	38.18	I	141
+C20253	30/06/2009	255789	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+
+C20254	30/06/2009	255519	I	CI/1	2382.000	Sth Waikato News - Job 62666 - Delivery 03 Jun 2009 - 235 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1377	291.557	Sth Waikato News	S	36.44	I	141
+C20254	30/06/2009	255519	I	CI/2	2382.000	Sth Waikato News - Job 62965 - Delivery 10 Jun 2009 - 140 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	253.207	Sth Waikato News	S	31.65	I	141
+C20254	30/06/2009	255519	I	CI/3	2382.000	Sth Waikato News - Job 62966 - Delivery 17 Jun 2009 - 120 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	253.207	Sth Waikato News	S	31.65	I	141
+C20254	30/06/2009	255519	I	CI/4	2382.000	Sth Waikato News - Job 62967 - Delivery 24 Jun 2009 - 106 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	253.207	Sth Waikato News	S	31.65	I	141
+
+C20255	30/06/2009	251407	I	CI/1	11270.000	Waikato Farmers Newspaper - Job 62969 - Delivery 08 Jun 2009 - 150 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1491	0.1677	1680.357	Waikato Farmers Newspaper	S	210.05	I	141
+
+C20256	30/06/2009	252639	I	CI/1	7950.000	Whangarei Leader - Job 62970 - Delivery 02 Jun 2009 - 63 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	760.020	Whangarei Leader	S	95.00	I	141
+C20256	30/06/2009	252639	I	CI/2	7950.000	Whangarei Leader - Job 62971 - Delivery 09 Jun 2009 - 83 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	760.020	Whangarei Leader	S	95.00	I	141
+C20256	30/06/2009	252639	I	CI/3	7950.000	Whangarei Leader - Job 62972 - Delivery 16 Jun 2009 - 75 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	760.020	Whangarei Leader	S	95.00	I	141
+C20256	30/06/2009	252639	I	CI/4	7950.000	Whangarei Leader - Job 62973 - Delivery 23 Jun 2009 - 72 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	760.020	Whangarei Leader	S	95.00	I	141
+C20256	30/06/2009	252639	I	CI/5	7950.000	Whangarei Leader - Job 62974 - Delivery 30 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	760.020	Whangarei Leader	S	95.00	I	141
+
+C20257	30/06/2009	15681	I	CI/1	25623.000	FIL The Dairy Farmer Winter 2009 - Job 9879 - Delivery 02 Jun 2009 - 34 grams.   	0.1043	0.1173	2672.479	FIL The Dairy Farmer Winter 2009	S	334.06	I	271
+
+C20258	30/06/2009		I	CI/1	25428.000	Plastic Ruler - Dairy Farmers - Job 62940 - Delivery IOA - 120 grams.   	0.1873	0.2107	4762.664	Plastic Ruler - Dairy Farmers	S	595.33	I	235
+
+C20259	30/06/2009		I	CI/1	8016.000	Franklin Life Newspaper - Job 9970 - Delivery 03 Jun 2009 - 50 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1010	0.1136	809.616	Franklin Life Newspaper	S	101.20	I	247
+C20259	30/06/2009		I	CI/2	8016.000	Franklin Life Newspaper - Job 62976 - Delivery 10 Jun 2009 - 50 grams. Includes folding fee 0.0100 cents.  	0.1010	0.1136	809.616	Franklin Life Newspaper	S	101.20	I	247
+C20259	30/06/2009		I	CI/3	8016.000	Franklin Life Newspaper - Job 62977 - Delivery 17 Jun 2009 - 50 grams. Includes folding fee 0.0100 cents.  	0.1010	0.1136	809.616	Franklin Life Newspaper	S	101.20	I	247
+C20259	30/06/2009		I	CI/4	8016.000	Franklin Life Newspaper - Job 62978 - Delivery 24 Jun 2009 - 50 grams. Includes folding fee 0.0100 cents.  	0.1010	0.1136	809.616	Franklin Life Newspaper	S	101.20	I	247
+
+C20260	30/06/2009		I	CI/1	4109.000	Giltrap Brochure - Job 63040 - Delivery 10 Jun 2009 - 15 grams.   	0.0883	0.0993	362.825	Giltrap Brochure	S	45.35	I	280
+
+C20261	30/06/2009	Country Builders	I	CI/1	3549.000	Country Builders - Job 62790 - Delivery 04 Jun 2009 - 15 grams.   	0.0749	0.0843	265.820	Country Builders	S	33.23	I	237
+
+C20262	30/06/2009		I	CI/1	950.000	Leader Catalogue - Job 63045 - Delivery IOA - 410 grams.   	0.4350	0.4894	413.250	Leader Catalogue	S	51.66	I	165
+
+C20263	30/06/2009		I	CI/1	830.000	Hibiscus Matters - Job 63283 - Delivery 11 Jun 2009 - 35 grams.   	0.0803	0.0903	66.649	Hibiscus Matters	S	8.33	I	240
+C20263	30/06/2009		I	CI/2	830.000	Hibiscus Matters - Job 63284 - Delivery 18 Jun 2009 - 35 grams.   	0.0803	0.0903	66.649	Hibiscus Matters	S	8.33	I	240
+
+C20264	30/06/2009		I	CI/1	4200.000	Mainland Stockfeed - Job 63041 - Delivery IOA - 7 grams.   	0.0883	0.0993	370.860	Mainland Stockfeed	S	46.36	I	275
+
+C20265	30/06/2009	2801035	I	CI/1	25217.000	Dairy News - Job 62980 - Delivery 09 Jun 2009 - 183 grams. Includes folding fee 0.0100 cents.  	0.1170	0.1316	2950.389	Dairy News	S	368.80	I	169
+C20265	30/06/2009	2801035	I	CI/2	25302.000	Dairy News - Job 62981 - Delivery 30 Jun 2009 - 135 grams. Includes folding fee 0.0100 cents.  	0.1015	0.1142	2568.153	Dairy News	S	321.02	I	169
+
+C20266	30/06/2009	2906027	I	CI/1	6935.000	IC Motorgroup - Job 62941 - Delivery 09 Jun 2009 - 8 grams.   	0.0508	0.0572	352.298	IC Motorgroup	S	44.04	I	169
+
+C20267	30/06/2009	2901048	I	CI/1	73490.000	Rural News  - Job 62945 - Delivery 02 Jun 2009 - 225 grams. Includes folding fee 0.0100 cents.  	0.1304	0.1467	9583.096	Rural News 	S	1197.89	I	169
+C20267	30/06/2009	2901048	I	CI/2	73490.000	Rural News  - Job 62946 - Delivery 23 Jun 2009 - 130 grams. Includes folding fee 0.0100 cents.  	0.1015	0.1142	7459.235	Rural News 	S	932.40	I	169
+
+C20268	30/06/2009		I	CI/1	45934.000	McKee Plastics - Job 62906 - Delivery 05 Jun 2009 - 15 grams.   	0.0910	0.1024	4179.994	McKee Plastics	S	522.50	I	302
+
+C20269	30/06/2009		I	CI/1	9150.000	Wall Planners - Job 63051 - Delivery IOA - 40 grams.   	0.1043	0.1173	954.345	Wall Planners	S	119.29	I	177
+
+C20270	30/06/2009		I	CI/1	460.000	Mineral Systems - Job 63050 - Delivery 05 Jun 2009 - 10 grams.   	0.1744	0.1962	80.224	Mineral Systems	S	10.03	I	304
+
+C20271	30/06/2009		I	CI/1	5659.000	New Plymouth Mortorcycles - Job 62939 - Delivery IOA - 10 grams.   	0.0749	0.0843	423.859	New Plymouth Mortorcycles	S	52.98	I	182
+
+C20272	30/06/2009		I	CI/1	4220.000	Kaipara Lifestyler - Job 62696 - Delivery 04 Jun 2009 - 85 grams.   Includes Linehaul.	0.0927	0.1043	391.194	Kaipara Lifestyler	S	48.90	I	257
+C20272	30/06/2009		I	CI/2	4220.000	Kaipara Lifestyler - Job 62982 - Delivery 18 Jun 2009 - 80 grams.   	0.0927	0.1043	391.194	Kaipara Lifestyler	S	48.90	I	257
+
+C20273	30/06/2009		I	CI/1	14639.000	Northland Farming Lifestyler - Job 62984 - Delivery 17 Jun 2009 - 40 grams.   	0.0750	0.0844	1097.925	Northland Farming Lifestyler	S	137.24	I	257
+
+C20274	30/06/2009		I	CI/1	25343.000	Dairyman - Job 62985 - Delivery 29 Jun 2009 - 130 grams.   Includes Linehaul.	0.1300	0.1463	3294.590	Dairyman	S	411.82	I	261
+
+C20275	30/06/2009		I	CI/1	82501.000	Straight Furrow - Job 63023 - Delivery 09 Jun 2009 - 125 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1400	0.1575	11550.140	Straight Furrow	S	1443.77	I	261
+C20275	30/06/2009		I	CI/2	82501.000	Straight Furrow - Job 63024 - Delivery 16 Jun 2009 - 130 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1400	0.1575	11550.140	Straight Furrow	S	1443.77	I	261
+C20275	30/06/2009		I	CI/3	82501.000	Straight Furrow - Job 63028 - Delivery 30 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1160	0.1305	9570.116	Straight Furrow	S	1196.26	I	261
+
+C20276	30/06/2009		I	CI/1	20349.000	Straight Furrow - Central - Job 63025 - Delivery 23 Jun 2009 - 105 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1400	0.1575	2848.860	Straight Furrow - Central	S	356.11	I	261
+C20276	30/06/2009		I	CI/2	36961.000	Straight Furrow - North - Job 63026 - Delivery 23 Jun 2009 - 105 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1400	0.1575	5174.540	Straight Furrow - North	S	646.82	I	261
+C20276	30/06/2009		I	CI/3	25191.000	Straight Furrow - South - Job 63027 - Delivery 23 Jun 2009 - 105 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1400	0.1575	3526.740	Straight Furrow - South	S	440.84	I	261
+
+C20277	30/06/2009		I	CI/1	82501.000	Straight Furrow/Ag Trader - Job 62896 - Delivery 02 Jun 2009 - 375 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.2800	0.3150	23100.280	Straight Furrow/Ag Trader	S	2887.54	I	261
+
+C20278	30/06/2009		I	CI/1	79449.000	NZ Farmers Weekly - Job 62786 - Delivery 02 Jun 2009 - 125 grams. Includes folding fee 0.0100 cents.  	0.1480	0.1665	11758.452	NZ Farmers Weekly	S	1469.81	I	124
+C20278	30/06/2009		I	CI/2	7681.000	NZ Farmers Weekly - Job 62786 - Delivery 02 Jun 2009 - 125 grams. Bags Boxes and Counter. 	0.1150	0.1294	883.315	NZ Farmers Weekly	S	110.41	I	124
+C20278	30/06/2009		I	CI/3	79449.000	NZ Farmers Weekly - Job 62892 - Delivery 08 Jun 2009 - 110 grams. Includes folding fee 0.0100 cents.  	0.1480	0.1665	11758.452	NZ Farmers Weekly	S	1469.81	I	124
+C20278	30/06/2009		I	CI/4	7681.000	NZ Farmers Weekly - Job 62892 - Delivery 08 Jun 2009 - 110 grams. Bags Boxes and Counter. 	0.0000	0.0000	0.000	NZ Farmers Weekly	S	0.00	I	124
+C20278	30/06/2009		I	CI/5	79449.000	NZ Farmers Weekly - Job 62893 - Delivery 15 Jun 2009 - 75 grams. Includes folding fee 0.0100 cents.  	0.1195	0.1344	9494.155	NZ Farmers Weekly	S	1186.77	I	124
+C20278	30/06/2009		I	CI/6	7681.000	NZ Farmers Weekly - Job 62893 - Delivery 15 Jun 2009 - 75 grams. Bags Boxes and Counter. 	0.1150	0.1294	883.315	NZ Farmers Weekly	S	110.41	I	124
+C20278	30/06/2009		I	CI/7	79449.000	NZ Farmers Weekly - Job 62894 - Delivery 22 Jun 2009 - 90 grams. Includes folding fee 0.0100 cents.  	0.1195	0.1344	9494.155	NZ Farmers Weekly	S	1186.77	I	124
+C20278	30/06/2009		I	CI/8	7681.000	NZ Farmers Weekly - Job 62894 - Delivery 22 Jun 2009 - 90 grams. Bags Boxes and Counter. 	0.1150	0.1294	883.315	NZ Farmers Weekly	S	110.41	I	124
+C20278	30/06/2009		I	CI/9	79449.000	NZ Farmers Weekly - Job 62895 - Delivery 29 Jun 2009 - 95 grams. Includes folding fee 0.0100 cents.  	0.1195	0.1344	9494.155	NZ Farmers Weekly	S	1186.77	I	124
+C20278	30/06/2009		I	CI/10	7681.000	NZ Farmers Weekly - Job 62895 - Delivery 29 Jun 2009 - 95 grams. Bags Boxes and Counter. 	0.1150	0.1294	883.315	NZ Farmers Weekly	S	110.41	I	124
+
+C20279	30/06/2009		I	CI/1	9044.000	PGG Wrightsons - Job 62944 - Delivery 09 Jun 2009 - 10 grams.   	0.0910	0.1024	823.004	PGG Wrightsons	S	102.88	I	199
+
+C20280	30/06/2009	2327442	I	CI/1	7083.000	Agri Business - Job 63043 - Delivery 09 Jun 2009 - 15 grams.   	0.0559	0.0629	395.940	Agri Business	S	49.49	I	201
+
+C20281	30/06/2009	2327584	I	CI/1	895.000	Bay News - Job 62703 - Delivery 03 Jun 2009 - 119 grams. Includes folding fee 0.0100 cents.  	0.1170	0.1316	104.715	Bay News	S	13.09	I	201
+C20281	30/06/2009	2327584	I	CI/2	895.000	Bay News - Job 62986 - Delivery 10 Jun 2009 - 115 grams. Includes folding fee 0.0100 cents.  	0.1170	0.1316	104.715	Bay News	S	13.09	I	201
+C20281	30/06/2009	2327584	I	CI/3	895.000	Bay News - Job 62987 - Delivery 17 Jun 2009 - 119 grams. Includes folding fee 0.0100 cents.  	0.1170	0.1316	104.715	Bay News	S	13.09	I	201
+C20281	30/06/2009	2327584	I	CI/4	895.000	Bay News - Job 62988 - Delivery 24 Jun 2009 - 100 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	81.266	Bay News	S	10.16	I	201
+
+C20282	30/06/2009	2328263	I	CI/1	2620.000	Bay Report - Job 62708 - Delivery 04 Jun 2009 - 0 grams.   	0.0000	0.0000	0.000	Bay Report	S	0.00	I	201
+C20282	30/06/2009	2328263	I	CI/2	2620.000	Bay Report - Job 62930 - Delivery 11 Jun 2009 - 0 grams.   	0.0000	0.0000	0.000	Bay Report	S	0.00	I	201
+C20282	30/06/2009	2328263	I	CI/3	2620.000	Bay Report - Job 62931 - Delivery 18 Jun 2009 - 0 grams.   	0.0000	0.0000	0.000	Bay Report	S	0.00	I	201
+C20282	30/06/2009	2328263	I	CI/4	2620.000	Bay Report - Job 62932 - Delivery 25 Jun 2009 - 0 grams.   	0.0000	0.0000	0.000	Bay Report	S	0.00	I	201
+
+C20283	30/06/2009	2328330	I	CI/1	2738.000	Continuing Education - Job 63066 - Delivery 26 Jun 2009 - 70 grams.   	0.0808	0.0909	221.230	Continuing Education	S	27.65	I	201
+
+C20284	30/06/2009	2326312	I	CI/1	23619.000	Ecan Living Here - Job 62902 - Delivery 06 Jun 2009 - 16 grams.   	0.0536	0.0603	1265.978	Ecan Living Here	S	158.25	I	201
+
+C20285	30/06/2009	2326716	I	CI/1	1590.000	Floorpride CW Nth Canty News - Job 62907 - Delivery 02 Jun 2009 - 20 grams.   	0.0536	0.0603	85.224	Floorpride CW Nth Canty News	S	10.65	I	201
+
+C20286	30/06/2009	2326819	I	CI/1	59999.000	Four Square Northern - Job 9931 - Delivery 06 Jun 2009 - 11 grams.   Includes Linehaul.	0.0615	0.0692	3689.938	Four Square Northern	S	461.24	I	201
+
+C20287	30/06/2009	2327862	I	CI/1	59403.000	Four Square Northern - Job 63037 - Delivery 13 Jun 2009 - 10 grams.   	0.0617	0.0694	3665.165	Four Square Northern	S	458.15	I	201
+
+C20288	30/06/2009	2328191	I	CI/1	59403.000	Four Square Northern - Job 63059 - Delivery 20 Jun 2009 - 10 grams.   	0.0617	0.0694	3665.165	Four Square Northern	S	458.15	I	201
+
+C20289	30/06/2009	2329363	I	CI/1	59403.000	Four Square Northern - Job 63071 - Delivery 27 Jun 2009 - 10 grams.   Includes Linehaul.	0.0615	0.0692	3653.284	Four Square Northern	S	456.66	I	201
+
+C20290	30/06/2009	2324793	I	CI/1	8841.000	Guardian Country - Job 62794 - Delivery 18 Jun 2009 - 25 grams.   	0.0536	0.0603	473.878	Guardian Country	S	59.24	I	201
+
+C20291	30/06/2009	2324789	I	CI/1	3670.000	Guardian Newspaper - Job 62690 - Delivery 04 Jun 2009 - 86 grams.   	0.0808	0.0909	296.536	Guardian Newspaper	S	37.07	I	201
+C20291	30/06/2009	2324789	I	CI/2	3670.000	Guardian Newspaper - Job 62796 - Delivery 11 Jun 2009 - 86 grams.   	0.0808	0.0909	296.536	Guardian Newspaper	S	37.07	I	201
+C20291	30/06/2009	2324789	I	CI/3	3670.000	Guardian Newspaper - Job 62797 - Delivery 18 Jun 2009 - 161 grams.   	0.1284	0.1445	471.228	Guardian Newspaper	S	58.90	I	201
+C20291	30/06/2009	2324789	I	CI/4	3670.000	Guardian Newspaper - Job 62798 - Delivery 25 Jun 2009 - 86 grams.   	0.0808	0.0909	296.536	Guardian Newspaper	S	37.07	I	201
+
+C20292	30/06/2009	2324787	I	CI/1	6432.000	Hawkesbay Country Scene - Job 62800 - Delivery 10 Jun 2009 - 27 grams.   	0.0658	0.0740	423.226	Hawkesbay Country Scene	S	52.90	I	201
+
+C20293	30/06/2009	2326311	I	CI/1	18288.000	Healthfirst Brochure - Job 62891 - Delivery 06 Jun 2009 - 36 grams.   	0.0658	0.0740	1203.350	Healthfirst Brochure	S	150.42	I	201
+
+C20294	30/06/2009	2326654	I	CI/1	1495.000	Metropol - Job 62712 - Delivery 11 Jun 2009 - 152 grams.   	0.1400	0.1575	209.300	Metropol	S	26.16	I	201
+C20294	30/06/2009	2326654	I	CI/2	1495.000	Metropol - Job 62916 - Delivery 25 Jun 2009 - 152 grams.   	0.1400	0.1575	209.300	Metropol	S	26.16	I	201
+
+C20295	30/06/2009	2326658	I	CI/1	3836.000	Mid Canterbury Herald - Job 62717 - Delivery 03 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	348.309	Mid Canterbury Herald	S	43.54	I	201
+C20295	30/06/2009	2326658	I	CI/2	3836.000	Mid Canterbury Herald - Job 62921 - Delivery 10 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	348.309	Mid Canterbury Herald	S	43.54	I	201
+C20295	30/06/2009	2326658	I	CI/3	3836.000	Mid Canterbury Herald - Job 62922 - Delivery 17 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	348.309	Mid Canterbury Herald	S	43.54	I	201
+C20295	30/06/2009	2326658	I	CI/4	3836.000	Mid Canterbury Herald - Job 62923 - Delivery 24 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	348.309	Mid Canterbury Herald	S	43.54	I	201
+
+C20296	30/06/2009	2324784	I	CI/1	1530.000	Napier Mail - Job 62805 - Delivery 03 Jun 2009 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+C20296	30/06/2009	2324784	I	CI/2	1530.000	Napier Mail - Job 62807 - Delivery 10 Jun 2009 - 74 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+C20296	30/06/2009	2324784	I	CI/3	1530.000	Napier Mail - Job 62808 - Delivery 17 Jun 2009 - 81 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+C20296	30/06/2009	2324784	I	CI/4	1530.000	Napier Mail - Job 62809 - Delivery 24 Jun 2009 - 75 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+
+C20297	30/06/2009	2329441	I	CI/1	64547.000	New World Birthday card - Job 63196 - Delivery 27 Jun 2009 - 25 grams.   	0.0615	0.0692	3969.641	New World Birthday card	S	496.20	I	201
+
+C20298	30/06/2009	2326805	I	CI/1	64547.000	New World Northern  - Job 9936 - Delivery 06 Jun 2009 - 31 grams.   	0.0679	0.0764	4382.741	New World Northern 	S	547.84	I	201
+
+C20299	30/06/2009	2327855	I	CI/1	64547.000	New World Northern  - Job 63036 - Delivery 13 Jun 2009 - 31 grams.   	0.0615	0.0692	3969.641	New World Northern 	S	496.20	I	201
+
+C20300	30/06/2009	2328209	I	CI/1	64547.000	New World Northern  - Job 63058 - Delivery 20 Jun 2009 - 31 grams.   	0.0615	0.0692	3969.641	New World Northern 	S	496.20	I	201
+
+C20301	30/06/2009	2329347	I	CI/1	64547.000	New World Northern  - Job 63072 - Delivery 27 Jun 2009 - 31 grams.   Includes Linehaul.	0.0615	0.0692	3969.641	New World Northern 	S	496.20	I	201
+
+C20302	30/06/2009	2326587	I	CI/1	7235.000	North Canterbury News - Job 62685 - Delivery 02 Jun 2009 - 76 grams. Includes folding fee 0.0100 cents.  	0.0915	0.1029	662.002	North Canterbury News	S	82.75	I	201
+C20302	30/06/2009	2326587	I	CI/2	7235.000	North Canterbury News - Job 62897 - Delivery 09 Jun 2009 - 76 grams. Includes folding fee 0.0100 cents.  	0.0915	0.1029	662.002	North Canterbury News	S	82.75	I	201
+C20302	30/06/2009	2326587	I	CI/3	7235.000	North Canterbury News - Job 62898 - Delivery 16 Jun 2009 - 76 grams. Includes folding fee 0.0100 cents.  	0.0915	0.1029	662.002	North Canterbury News	S	82.75	I	201
+C20302	30/06/2009	2326587	I	CI/4	7235.000	North Canterbury News - Job 62899 - Delivery 23 Jun 2009 - 76 grams. Includes folding fee 0.0100 cents.  	0.0915	0.1029	662.002	North Canterbury News	S	82.75	I	201
+C20302	30/06/2009	2326587	I	CI/5	7235.000	North Canterbury News - Job 62900 - Delivery 30 Jun 2009 - 76 grams. Includes folding fee 0.0100 cents.  	0.0915	0.1029	662.002	North Canterbury News	S	82.75	I	201
+
+C20303	30/06/2009	2326826	I	CI/1	78371.000	Postie Plus - Job 63035 - Delivery 09 Jun 2009 - 20 grams.   Includes Linehaul.	0.0615	0.0692	4819.817	Postie Plus	S	602.48	I	201
+
+C20304	30/06/2009	2328903	I	CI/1	4883.000	Raeward Fresh - Job 63081 - Delivery 20 Jun 2009 - 20 grams.   	0.0536	0.0603	261.729	Raeward Fresh	S	32.72	I	201
+
+C20305	30/06/2009	  2324781	I	CI/1	770.000	Rangitikei Mail - Job 62722 - Delivery 02 Jun 2009 - 54 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+C20305	30/06/2009	  2324781	I	CI/2	770.000	Rangitikei Mail - Job 62801 - Delivery 09 Jun 2009 - 54 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+C20305	30/06/2009	  2324781	I	CI/3	770.000	Rangitikei Mail - Job 62802 - Delivery 16 Jun 2009 - 71 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+C20305	30/06/2009	  2324781	I	CI/4	770.000	Rangitikei Mail - Job 62803 - Delivery 23 Jun 2009 - 54 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+C20305	30/06/2009	  2324781	I	CI/5	770.000	Rangitikei Mail - Job 62804 - Delivery 30 Jun 2009 - 54 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+
+C20306	30/06/2009	2327433	I	CI/1	9656.000	Riverside Garden Centre - Job 63042 - Delivery IOA - 15 grams.   	0.0536	0.0603	517.562	Riverside Garden Centre	S	64.69	I	201
+
+C20307	30/06/2009	2330005	I	CI/1	13897.000	Riverside Horticulture - Job 63285 - Delivery 30 Jun 2009 - 20 grams.   	0.0536	0.0603	744.879	Riverside Horticulture	S	93.11	I	201
+
+C20308	30/06/2009	2327577	I	CI/1	2336.000	Scene Matamata - Job 63082 - Delivery 10 Jun 2009 - 125 grams. Includes folding fee 0.0100 cents.  	0.1170	0.1316	273.312	Scene Matamata	S	34.16	I	201
+C20308	30/06/2009	2327577	I	CI/2	2336.000	Scene Matamata - Job 63083 - Delivery 24 Jun 2009 - 70 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	212.109	Scene Matamata	S	26.51	I	201
+
+C20309	30/06/2009	2326644	I	CI/1	6652.000	Selwyn Times - Job 62729 - Delivery 02 Jun 2009 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	604.002	Selwyn Times	S	75.50	I	201
+C20309	30/06/2009	2326644	I	CI/2	6652.000	Selwyn Times - Job 62908 - Delivery 09 Jun 2009 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	604.002	Selwyn Times	S	75.50	I	201
+C20309	30/06/2009	2326644	I	CI/3	6652.000	Selwyn Times - Job 62909 - Delivery 16 Jun 2009 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	604.002	Selwyn Times	S	75.50	I	201
+C20309	30/06/2009	2326644	I	CI/4	6652.000	Selwyn Times - Job 62910 - Delivery 23 Jun 2009 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	604.002	Selwyn Times	S	75.50	I	201
+C20309	30/06/2009	2326644	I	CI/5	6652.000	Selwyn Times - Job 62911 - Delivery 30 Jun 2009 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	604.002	Selwyn Times	S	75.50	I	201
+
+C20310	30/06/2009	2328041	I	CI/1	15401.000	Smith City - Job 63057 - Delivery 23 Jun 2009 - 21 grams.   	0.0536	0.0603	825.494	Smith City	S	103.19	I	201
+
+C20311	30/06/2009	2327573	I	CI/1	1320.000	Taupo Real Estate - Job 62732 - Delivery 04 Jun 2009 - 135 grams. Includes folding fee 0.0100 cents.  	0.1170	0.1316	154.440	Taupo Real Estate	S	19.31	I	201
+C20311	30/06/2009	2327573	I	CI/2	1320.000	Taupo Real Estate - Job 62990 - Delivery 18 Jun 2009 - 148 grams. Includes folding fee 0.0100 cents.  	0.1170	0.1316	154.440	Taupo Real Estate	S	19.31	I	201
+
+C20312	30/06/2009	2326661	I	CI/1	5166.000	The High Country Herald - Job 62737 - Delivery 03 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	469.073	The High Country Herald	S	58.63	I	201
+C20312	30/06/2009	2326661	I	CI/2	5166.000	The High Country Herald - Job 62925 - Delivery 10 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	469.073	The High Country Herald	S	58.63	I	201
+C20312	30/06/2009	2326661	I	CI/3	5166.000	The High Country Herald - Job 62926 - Delivery 17 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	469.073	The High Country Herald	S	58.63	I	201
+C20312	30/06/2009	2326661	I	CI/4	5166.000	The High Country Herald - Job 62927 - Delivery 24 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	469.073	The High Country Herald	S	58.63	I	201
+
+C20313	30/06/2009	2324792	I	CI/1	3135.000	The Professionals Feilding - Job 62795 - Delivery 18 Jun 2009 - 20 grams.   	0.0536	0.0603	168.036	The Professionals Feilding	S	21.00	I	201
+
+C20314	30/06/2009	2326651	I	CI/1	2440.000	The Waitaki Herald Weekender - Job 62742 - Delivery 05 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	221.552	The Waitaki Herald Weekender	S	27.69	I	201
+C20314	30/06/2009	2326651	I	CI/2	2440.000	The Waitaki Herald Weekender - Job 62912 - Delivery 12 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	221.552	The Waitaki Herald Weekender	S	27.69	I	201
+C20314	30/06/2009	2326651	I	CI/3	2440.000	The Waitaki Herald Weekender - Job 62913 - Delivery 19 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	221.552	The Waitaki Herald Weekender	S	27.69	I	201
+C20314	30/06/2009	2326651	I	CI/4	2440.000	The Waitaki Herald Weekender - Job 62914 - Delivery 26 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	221.552	The Waitaki Herald Weekender	S	27.69	I	201
+
+C20315	30/06/2009	2326656	I	CI/1	2440.000	Waitaki Herald - Job 62747 - Delivery 03 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	221.552	Waitaki Herald	S	27.69	I	201
+C20315	30/06/2009	2326656	I	CI/2	2440.000	Waitaki Herald - Job 62917 - Delivery 10 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	221.552	Waitaki Herald	S	27.69	I	201
+C20315	30/06/2009	2326656	I	CI/3	2440.000	Waitaki Herald - Job 62918 - Delivery 17 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	221.552	Waitaki Herald	S	27.69	I	201
+C20315	30/06/2009	2326656	I	CI/4	2440.000	Waitaki Herald - Job 62919 - Delivery 24 Jun 2009 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	221.552	Waitaki Herald	S	27.69	I	201
+
+C20316	30/06/2009	2327479	I	CI/1	10381.000	Weekend Sun - Job 62934 - Delivery 05 Jun 2009 - 154 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1577	0.1774	1637.084	Weekend Sun	S	204.64	I	201
+C20316	30/06/2009	2327479	I	CI/2	10381.000	Weekend Sun - Job 62935 - Delivery 12 Jun 2009 - 172 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1577	0.1774	1637.084	Weekend Sun	S	204.64	I	201
+C20316	30/06/2009	2327479	I	CI/3	10381.000	Weekend Sun - Job 62936 - Delivery 19 Jun 2009 - 159 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1577	0.1774	1637.084	Weekend Sun	S	204.64	I	201
+C20316	30/06/2009	2327479	I	CI/4	10381.000	Weekend Sun - Job 62992 - Delivery 26 Jun 2009 - 138 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1360	0.1530	1411.816	Weekend Sun	S	176.48	I	201
+
+C20317	30/06/2009	2328259	I	CI/1	8900.000	Whangarei Report - Job 9922 - Delivery 04 Jun 2009 - 0 grams. Includes folding fee 0.0100 cents.  	0.0825	0.0928	734.250	Whangarei Report	S	91.78	I	201
+C20317	30/06/2009	2328259	I	CI/2	8900.000	Whangarei Report - Job 62993 - Delivery 11 Jun 2009 - 0 grams. Includes folding fee 0.0100 cents.  	0.0825	0.0928	734.250	Whangarei Report	S	91.78	I	201
+C20317	30/06/2009	2328259	I	CI/3	8920.000	Whangarei Report - Job 62994 - Delivery 18 Jun 2009 - 0 grams. Includes folding fee 0.0100 cents.  	0.0825	0.0928	735.900	Whangarei Report	S	91.99	I	201
+C20317	30/06/2009	2328259	I	CI/4	8900.000	Whangarei Report - Job 62995 - Delivery 25 Jun 2009 - 0 grams. Includes folding fee 0.0100 cents.  	0.0825	0.0928	734.250	Whangarei Report	S	91.78	I	201
+
+C20318	30/06/2009	2329106	I	CI/1	722.000	Winslow - Job 63110 - Delivery 22 Jun 2009 - 15 grams.   	0.0536	0.0603	38.699	Winslow	S	4.84	I	201
+
+C20319	30/06/2009	2327910	I	CI/1	722.000	Winslows - CRT Roadshow - Job 63054 - Delivery 12 Jun 2009 - 15 grams.   	0.0536	0.0603	38.699	Winslows - CRT Roadshow	S	4.84	I	201
+
+C20320	30/06/2009	2326986	I	CI/1	9929.000	Winslows Calf Food - Job 62942 - Delivery 04 Jun 2009 - 10 grams.   Includes Linehaul.	0.0536	0.0603	532.194	Winslows Calf Food	S	66.52	I	201
+
+C20321	30/06/2009	2328668	I	CI/1	9944.000	Winslows Calf Food - Job 63070 - Delivery 17 Jun 2009 - 20 grams.   	0.0536	0.0603	532.998	Winslows Calf Food	S	66.63	I	201
+
+C20322	30/06/2009	2328284	I	CI/1	3832.000	Your Cambridge News - Job 62756 - Delivery 05 Jun 2009 - 158 grams. Includes folding fee 0.0100 cents.  	0.1384	0.1557	530.349	Your Cambridge News	S	66.29	I	201
+C20322	30/06/2009	2328284	I	CI/2	3832.000	Your Cambridge News - Job 62929 - Delivery 19 Jun 2009 - 87 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	347.946	Your Cambridge News	S	43.49	I	201
+
+C20323	30/06/2009		I	CI/1	1833.000	Premier Stockfeeds - Job 63118 - Delivery IOA - 15 grams.   	0.0856	0.0963	156.905	Premier Stockfeeds	S	19.61	I	238
+
+C20324	30/06/2009	Michael Parker	I	CI/1	15837.000	PGG Wrightson - Job 62845 - Delivery 09 Jun 2009 - 25 grams.   Includes Linehaul.	0.0706	0.0794	1118.092	PGG Wrightson	S	139.76	I	295
+
+C20325	30/06/2009		I	CI/1	884.000	Gore Phone Book Covers - Job 62817 - Delivery IOA - 25 grams.   	0.0908	0.1022	80.267	Gore Phone Book Covers	S	10.03	I	207
+C20325	30/06/2009		I	CI/2	3637.000	Invercargill Phone Book Covers - Job 62818 - Delivery IOA - 25 grams.   	0.0749	0.0843	272.411	Invercargill Phone Book Covers	S	34.05	I	207
+C20325	30/06/2009		I	CI/3	760.000	Otautau Phone Book Covers - Job 62820 - Delivery IOA - 25 grams.   	0.1056	0.1188	80.256	Otautau Phone Book Covers	S	10.03	I	207
+C20325	30/06/2009		I	CI/4	990.000	Riverton Phone Book Covers - Job 62821 - Delivery IOA - 25 grams.   	0.0810	0.0911	80.190	Riverton Phone Book Covers	S	10.02	I	207
+C20325	30/06/2009		I	CI/5	1348.000	Tapanui Phone Book Covers - Job 62822 - Delivery IOA - 25 grams.   	0.0749	0.0843	100.965	Tapanui Phone Book Covers	S	12.62	I	207
+C20325	30/06/2009		I	CI/6	635.000	Te Anau Phone Book Covers - Job 62819 - Delivery IOA - 25 grams.   	0.1264	0.1422	80.264	Te Anau Phone Book Covers	S	10.03	I	207
+C20325	30/06/2009		I	CI/7	155.000	Tuatapere Phone Book Covers - Job 62823 - Delivery IOA - 25 grams.   	0.5177	0.5824	80.244	Tuatapere Phone Book Covers	S	10.03	I	207
+C20325	30/06/2009		I	CI/8	1213.000	Winton/Dipton Phone Book Covers - Job 62824 - Delivery IOA - 25 grams.   	0.0749	0.0843	90.854	Winton/Dipton Phone Book Covers	S	11.36	I	207
+C20325	30/06/2009		I	CI/9	629.000	Wyndham Phone Book Covers - Job 62825 - Delivery IOA - 25 grams.   	0.1276	0.1435	80.260	Wyndham Phone Book Covers	S	10.03	I	207
+
+C20326	30/06/2009	626104	I	CI/1	3679.000	Rural Delivery - Job 63281 - Delivery IOA - 10 grams.   	0.0910	0.1024	334.789	Rural Delivery	S	41.85	I	305
+
+C20327	30/06/2009		I	CI/1	371.000	Autotrader - Eastern - Job 63280 - Delivery 26 Jun 2009 - 44 grams. Includes folding fee 0.0100 cents.  	0.0950	0.1069	35.245	Autotrader - Eastern	S	4.41	I	258
+
+C20328	30/06/2009		I	CI/1	1616.000	Kaiapoi Advocate - Job 62997 - Delivery 12 Jun 2009 - 45 grams.   	0.0850	0.0956	137.360	Kaiapoi Advocate	S	17.17	I	258
+
+C20329	30/06/2009		I	CI/1	3124.000	P/P - BOP 2 - Job 63003 - Delivery 05 Jun 2009 - 119 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1125	312.400	P/P - BOP 2	S	39.05	I	258
+C20329	30/06/2009		I	CI/2	3124.000	P/P - BOP 2 - Job 63004 - Delivery 19 Jun 2009 - 142 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1125	312.400	P/P - BOP 2	S	39.05	I	258
+
+C20330	30/06/2009		I	CI/1	460.000	P/P - Eastern 1 - Job 63006 - Delivery 05 Jun 2009 - 205 grams. Includes folding fee 0.0100 cents.  	0.1775	0.1997	81.650	P/P - Eastern 1	S	10.21	I	258
+C20330	30/06/2009		I	CI/2	460.000	P/P - Eastern 1 - Job 63007 - Delivery 19 Jun 2009 - 205 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1775	0.1997	81.650	P/P - Eastern 1	S	10.21	I	258
+
+C20331	30/06/2009		I	CI/1	371.000	P/P - Eastern 2 - Job 63009 - Delivery 12 Jun 2009 - 205 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1775	0.1997	65.852	P/P - Eastern 2	S	8.23	I	258
+C20331	30/06/2009		I	CI/2	371.000	P/P - Eastern 2 - Job 63010 - Delivery 26 Jun 2009 - 217 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1775	0.1997	65.852	P/P - Eastern 2	S	8.23	I	258
+
+C20332	30/06/2009		I	CI/1	2670.000	P/P - Lakes District - Job 63012 - Delivery 05 Jun 2009 - 165 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1600	0.1800	427.200	P/P - Lakes District	S	53.40	I	258
+C20332	30/06/2009		I	CI/2	2670.000	P/P - Lakes District - Job 63013 - Delivery 19 Jun 2009 - 165 grams. Includes folding fee 0.0100 cents.  	0.1200	0.1350	320.400	P/P - Lakes District	S	40.05	I	258
+
+C20333	30/06/2009		I	CI/1	2870.000	P/P - Manawatu1 - Job 63015 - Delivery 13 Jun 2009 - 180 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1600	0.1800	459.200	P/P - Manawatu1	S	57.40	I	258
+C20333	30/06/2009		I	CI/2	2870.000	P/P - Manawatu1 - Job 63016 - Delivery 27 Jun 2009 - 170 grams. Includes folding fee 0.0100 cents.  	0.1200	0.1350	344.400	P/P - Manawatu1	S	43.05	I	258
+
+C20334	30/06/2009		I	CI/1	3788.000	P/P - Manawatu2 - Job 63018 - Delivery 06 Jun 2009 - 170 grams. Includes folding fee 0.0100 cents.  	0.1600	0.1800	606.080	P/P - Manawatu2	S	75.76	I	258
+C20334	30/06/2009		I	CI/2	3788.000	P/P - Manawatu2 - Job 63019 - Delivery 20 Jun 2009 - 180 grams. Includes folding fee 0.0100 cents.  	0.1200	0.1350	454.560	P/P - Manawatu2	S	56.82	I	258
+
+C20335	30/06/2009		I	CI/1	4717.000	P/P BOP 1 - Job 63000 - Delivery 12 Jun 2009 - 142 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1125	471.700	P/P BOP 1	S	58.96	I	258
+C20335	30/06/2009		I	CI/2	4717.000	P/P BOP 1 - Job 63001 - Delivery 26 Jun 2009 - 119 grams. Includes folding fee 0.0100 cents.  	0.1000	0.1125	471.700	P/P BOP 1	S	58.96	I	258
+
+C20336	30/06/2009		I	CI/1	7264.000	Waikato Auto Trader - Job 9710 - Delivery 05 Jun 2009 - 58 grams.   	0.0800	0.0900	581.120	Waikato Auto Trader	S	72.64	I	258
+C20336	30/06/2009		I	CI/2	6504.000	Waikato Auto Trader - Job 63060 - Delivery 19 Jun 2009 - 45 grams.   	0.0750	0.0844	487.800	Waikato Auto Trader	S	60.97	I	258
+
+C20337	30/06/2009		I	CI/1	28478.000	Coast N Country - Job 62784 - Delivery 02 Jun 2009 - 140 grams.   	0.0910	0.1024	2591.498	Coast N Country	S	323.94	I	217
+
+C20338	30/06/2009		I	CI/1	1935.000	Timbco Harvesting - Job 62943 - Delivery IOA - 15 grams.   	0.0910	0.1024	176.085	Timbco Harvesting	S	22.01	I	303
+
+C20339	30/06/2009	Hiway Stabilizers	I	CI/1	980.000	Raceway Stabiliation - Job 63117 - Delivery 29 Jun 2009 - 15 grams.   	0.0819	0.0921	80.262	Raceway Stabiliation	S	10.03	I	231
+

@@ -1,0 +1,21 @@
+div.suggestions_2 {
+
+    -moz-box-sizing: border-box;
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;   
+}
+
+div.suggestions_2 div {
+    cursor: default;
+    padding: 0px 3px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+
+div.suggestions_2 div.current {
+    background-color: #3366cc;
+    color: white;
+}

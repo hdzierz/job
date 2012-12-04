@@ -1,0 +1,480 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Inc-GST Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C10145	31/07/2008		I	CI/1	2991	Cambridge Property Guide - Job 7508 - Delivery 02 Jul 2008 - 80 grams	0.08	0.09	239.28	269.19	Cambridge Property Guide	S	29.91	I	106
+C10145	31/07/2008		I	CI/2	2991	Cambridge Property Guide - Job 7509 - Delivery 09 Jul 2008 - 80 grams	0.08	0.09	239.28	269.19	Cambridge Property Guide	S	29.91	I	106
+C10145	31/07/2008		I	CI/3	2991	Cambridge Property Guide - Job 7510 - Delivery 16 Jul 2008 - 80 grams	0.08	0.09	239.28	269.19	Cambridge Property Guide	S	29.91	I	106
+C10145	31/07/2008		I	CI/4	2991	Cambridge Property Guide - Job 7511 - Delivery 23 Jul 2008 - 80 grams	0.08	0.09	239.28	269.19	Cambridge Property Guide	S	29.91	I	106
+C10145	31/07/2008		I	CI/5	2991	Cambridge Property Guide - Job 7512 - Delivery 30 Jul 2008 - 80 grams	0.08	0.09	239.28	269.19	Cambridge Property Guide	S	29.91	I	106
+C10145	31/07/2008		I	FS	1196.4	Fuel Surcharge	7	7.88	8374.8	9421.65	Cambridge Property Guide	S	1046.85	I	106
+
+C10146	31/07/2008	Gay Hubbard	I	CI/1	2000	Eastside Community News - Job 6947 - Delivery 04 Jul 2008 - 0 grams	0.0713	0.0802	142.6	160.425	Eastside Community News	S	17.83	I	106
+C10146	31/07/2008	Gay Hubbard	I	FS	142.6	Fuel Surcharge	7	7.88	998.2	1122.98	Eastside Community News	S	124.78	I	106
+
+C10147	31/07/2008	Gay Hubbard	I	CI/1	6000	Hamilton This Week - Job 7518 - Delivery 03 Jul 2008 - 0 grams	0.0713	0.0802	427.8	481.275	Hamilton This Week	S	53.47	I	106
+C10147	31/07/2008	Gay Hubbard	I	CI/2	6000	Hamilton This Week - Job 7519 - Delivery 10 Jul 2008 - 0 grams	0.0713	0.0802	427.8	481.275	Hamilton This Week	S	53.47	I	106
+C10147	31/07/2008	Gay Hubbard	I	CI/3	6000	Hamilton This Week - Job 7520 - Delivery 17 Jul 2008 - 0 grams	0.0713	0.0802	427.8	481.275	Hamilton This Week	S	53.47	I	106
+C10147	31/07/2008	Gay Hubbard	I	CI/4	6000	Hamilton This Week - Job 7521 - Delivery 24 Jul 2008 - 0 grams	0.0713	0.0802	427.8	481.275	Hamilton This Week	S	53.47	I	106
+C10147	31/07/2008	Gay Hubbard	I	CI/5	6000	Hamilton This Week - Job 7522 - Delivery 31 Jul 2008 - 0 grams	0.0713	0.0802	427.8	481.275	Hamilton This Week	S	53.47	I	106
+C10147	31/07/2008	Gay Hubbard	I	FS	2139	Fuel Surcharge	7	7.88	14973	16844.63	Hamilton This Week	S	1871.63	I	106
+
+C10148	31/07/2008		I	CI/1	2595	Lawrences FLyer - Job 7385 - Delivery 04 Jul 2008 - 25 grams	0.0713	0.0802	185.024	208.152	Lawrences FLyer	S	23.13	I	106
+C10148	31/07/2008		I	FS	185.024	Fuel Surcharge	7	7.88	1295.17	1457.07	Lawrences FLyer	S	161.9	I	106
+
+C10149	31/07/2008		I	CI/1	8100	Northern Advocate - Job 7611 - Delivery 21 Jul 2008 - 205 grams	0.13	0.1463	1053	1184.625	Northern Advocate	S	131.63	I	106
+C10149	31/07/2008		I	FS	1053	Fuel Surcharge	7	7.88	7371	8292.38	Northern Advocate	S	921.38	I	106
+
+C10150	31/07/2008		I	CI/1	3505	Te Puke Times - Job 7840 - Delivery 30 Jul 2008 - 110 grams	0.09	0.1012	315.45	354.881	Te Puke Times	S	39.43	I	106
+C10150	31/07/2008		I	CI/2	3505	Te Puke Times - Job 7515 - Delivery 16 Jul 2008 - 95 grams	0.08	0.09	280.4	315.45	Te Puke Times	S	35.05	I	106
+C10150	31/07/2008		I	CI/3	3505	Te Puke Times - Job 7516 - Delivery 23 Jul 2008 - 170 grams	0.095	0.1069	332.975	374.597	Te Puke Times	S	41.62	I	106
+C10150	31/07/2008		I	CI/4	3505	Te Puke Times - Job 7513 - Delivery 02 Jul 2008 - 150 grams	0.095	0.1069	332.975	374.597	Te Puke Times	S	41.62	I	106
+C10150	31/07/2008		I	CI/5	3505	Te Puke Times - Job 7514 - Delivery 09 Jul 2008 - 80 grams	0.08	0.09	280.4	315.45	Te Puke Times	S	35.05	I	106
+C10150	31/07/2008		I	FS	1542.2	Fuel Surcharge	7	7.88	10795.4	12144.83	Te Puke Times	S	1349.43	I	106
+
+C10151	31/07/2008		I	CI/1	1105	FLM Sth Waikato Maps - Job 6779 - Delivery IOA - 100 grams	0.1	0.1125	110.5	124.313	FLM Sth Waikato Maps	S	13.81	I	107
+C10151	31/07/2008		I	FS	110.5	Fuel Surcharge	7	7.88	773.5	870.19	FLM Sth Waikato Maps	S	96.69	I	107
+
+C10152	31/07/2008		I	CI/1	1908	Wairarapa Post Cards - Job 7705 - Delivery IOA - 10 grams	0.07	0.0788	133.56	150.255	Wairarapa Post Cards	S	16.69	I	107
+C10152	31/07/2008		I	FS	133.56	Fuel Surcharge	7	7.88	934.92	1051.78	Wairarapa Post Cards	S	116.86	I	107
+
+C10153	31/07/2008		I	CI/1	3805	Peter Barnett Rural Newsletter - Job 7565 - Delivery IOA - 15 grams	0.085	0.0956	323.425	363.853	Peter Barnett Rural Newsletter	S	40.43	I	111
+C10153	31/07/2008		I	FS	323.425	Fuel Surcharge	7	7.88	2263.98	2546.98	Peter Barnett Rural Newsletter	S	283	I	111
+
+C10154	31/07/2008		I	CI/1	1000	Bill Milham Rural Cards - Job 7602 - Delivery IOA - 5 grams	0.085	0.0956	85	95.625	Bill Milham Rural Cards	S	10.63	I	114
+C10154	31/07/2008		I	FS	85	Fuel Surcharge	7	7.88	595	669.38	Bill Milham Rural Cards	S	74.38	I	114
+
+C10155	31/07/2008		I	CI/1	84601	C-Dax July Flyer - Job 7555 - Delivery IOA - 10 grams	0.06	0.0675	5076.06	5710.568	C-Dax July Flyer	S	634.51	I	116
+C10155	31/07/2008		I	CI/2	25943	C-Dax Mid July Dairy Flyer - Job 7541 - Delivery IOA - 10 grams	0.06	0.0675	1556.58	1751.153	C-Dax Mid July Dairy Flyer	S	194.57	I	116
+C10155	31/07/2008		I	FS	6632.64	Fuel Surcharge	7	7.88	46428.48	52232.04	C-Dax Mid July Dairy Flyer	S	5803.56	I	116
+
+C10156	31/07/2008		I	CI/1	1340	Central Excavation Flyer - Job 7704 - Delivery IOA - 25 grams	0.07	0.0788	93.8	105.525	Central Excavation Flyer	S	11.73	I	118
+C10156	31/07/2008		I	FS	93.8	Fuel Surcharge	7	7.88	656.6	738.68	Central Excavation Flyer	S	82.08	I	118
+
+C10157	31/07/2008		I	CI/1	1540	Concrete Grooving FLyer - Job 7551 - Delivery 08 Jul 2008 - 5 grams	0.085	0.0956	130.9	147.263	Concrete Grooving FLyer	S	16.36	I	234
+C10157	31/07/2008		I	FS	130.9	Fuel Surcharge	7	7.88	916.3	1030.84	Concrete Grooving FLyer	S	114.54	I	234
+
+C10158	31/07/2008		I	CI/1	75684	NZ FARMERS WEEKLY - Job 7544 - Delivery 07 Jul 2008 - 81 grams	0.072	0.081	5449.248	6130.404	NZ FARMERS WEEKLY	S	681.16	I	124
+C10158	31/07/2008		I	CI/2	75684	NZ FARMERS WEEKLY - Job 7571 - Delivery 14 Jul 2008 - 105 grams	0.0875	0.0984	6622.35	7450.144	NZ FARMERS WEEKLY	S	827.79	I	124
+C10158	31/07/2008		I	CI/3	75684	NZ FARMERS WEEKLY - Job 7572 - Delivery 21 Jul 2008 - 84 grams	0.072	0.081	5449.248	6130.404	NZ FARMERS WEEKLY	S	681.16	I	124
+C10158	31/07/2008		I	CI/4	75684	NZ FARMERS WEEKLY - Job 7573 - Delivery 28 Jul 2008 - 83 grams	0.072	0.081	5449.248	6130.404	NZ FARMERS WEEKLY	S	681.16	I	124
+C10158	31/07/2008		I	FS	22970.094	Fuel Surcharge	7	7.88	160790.66	180889.49	NZ FARMERS WEEKLY	S	20098.83	I	124
+
+C10159	31/07/2008		I	CI/1	0	South Island - Job 7816 - Delivery 31 Jul 2008 - 0 grams	0	0	0	0	South Island	S	0	I	
+
+C10160	31/07/2008	110354	I	CI/1	300	Farm Enviro Walk - Job 7596 - Delivery IOA - 5 grams	0.2833	0.3187	84.99	95.614	Farm Enviro Walk	S	10.62	I	233
+C10160	31/07/2008	110354	I	FS	84.99	Fuel Surcharge	7	7.88	594.93	669.3	Farm Enviro Walk	S	74.37	I	233
+
+C10161	31/07/2008	110175	I	CI/1	419	Grey Valley Farm Systems GRP - Job 7416 - Delivery IOA - 5 grams	0.2029	0.2283	85.015	95.642	Grey Valley Farm Systems GRP	S	10.63	I	233
+C10161	31/07/2008	110175	I	FS	85.015	Fuel Surcharge	7	7.88	595.11	669.5	Grey Valley Farm Systems GRP	S	74.39	I	233
+
+C10162	31/07/2008	110378	I	CI/1	1171	Local Link - James Mwendwa - Job 7601 - Delivery IOA - 5 grams	0.085	0.0956	99.535	111.977	Local Link - James Mwendwa	S	12.44	I	233
+C10162	31/07/2008	110378	I	FS	99.535	Fuel Surcharge	7	7.88	696.75	783.84	Local Link - James Mwendwa	S	87.09	I	233
+
+C10163	31/07/2008	110382 	I	CI/1	2034	Local Link - Wayne Berry  - Job 7600 - Delivery IOA - 5 grams	0.085	0.0956	172.89	194.501	Local Link - Wayne Berry 	S	21.61	I	233
+C10163	31/07/2008	110382 	I	FS	172.89	Fuel Surcharge	7	7.88	1210.23	1361.51	Local Link - Wayne Berry 	S	151.28	I	233
+
+C10164	31/07/2008	110174	I	CI/1	277	Nutrient Management F'Day - Canterbury - Job 7402 - Delivery IOA - 5 grams	0.3069	0.3453	85.011	95.637	Nutrient Management F'Day - Canterbury	S	10.63	I	233
+C10164	31/07/2008	110174	I	FS	85.011	Fuel Surcharge	7	7.88	595.08	669.47	Nutrient Management F'Day - Canterbury	S	74.39	I	233
+
+C10165	31/07/2008	110174	I	CI/1	991	Nutrient Mgmt Seminar - Oamaru - Job 7418 - Delivery IOA - 5 grams	0.0858	0.0965	85.028	95.657	Nutrient Mgmt Seminar - Oamaru	S	10.63	I	233
+C10165	31/07/2008	110174	I	FS	85.028	Fuel Surcharge	7	7.88	595.2	669.6	Nutrient Mgmt Seminar - Oamaru	S	74.4	I	233
+
+C10166	31/07/2008	110174	I	CI/1	691	Nutrient Mgmt Seminar - Rangitata - Job 7399 - Delivery IOA - 5 grams	0.123	0.1384	84.993	95.617	Nutrient Mgmt Seminar - Rangitata	S	10.62	I	233
+C10166	31/07/2008	110174	I	FS	84.993	Fuel Surcharge	7	7.88	594.95	669.32	Nutrient Mgmt Seminar - Rangitata	S	74.37	I	233
+
+C10167	31/07/2008	110174	I	CI/1	1129	Nutrient Mgmt Seminar - WInton - Job 7419 - Delivery IOA - 5 grams	0.0753	0.0847	85.014	95.641	Nutrient Mgmt Seminar - WInton	S	10.63	I	233
+C10167	31/07/2008	110174	I	FS	85.014	Fuel Surcharge	7	7.88	595.1	669.49	Nutrient Mgmt Seminar - WInton	S	74.39	I	233
+
+C10168	31/07/2008	110528	I	CI/1	595	Spring Survival Meeting - Job 7786 - Delivery IOA - 10 grams	0.1429	0.1608	85.026	95.654	Spring Survival Meeting	S	10.63	I	233
+C10168	31/07/2008	110289 	I	CI/2	200	Spring Survival Meeting - Job 7566 - Delivery IOA - 5 grams	0.425	0.4781	85	95.625	Spring Survival Meeting	S	10.63	I	233
+C10168	31/07/2008	110289 	I	FS	170.026	Fuel Surcharge	7	7.88	1190.18	1338.95	Spring Survival Meeting	S	148.77	I	233
+
+C10169	31/07/2008	110177	I	CI/1	991	Winter Pasture Plus Workshops - Wamate/Geraldine - Job 7417 - Delivery IOA - 5 grams	0.0858	0.0965	85.028	95.657	Winter Pasture Plus Workshops - Wamate/Geraldine	S	10.63	I	233
+C10169	31/07/2008	110177	I	FS	85.028	Fuel Surcharge	7	7.88	595.2	669.6	Winter Pasture Plus Workshops - Wamate/Geraldine	S	74.4	I	233
+
+C10170	31/07/2008		I	CI/1	2845	Elder Real Estate Monthly Booklet - Job 7358 - Delivery 23 Jul 2008 - 150 grams	0.085	0.0956	241.825	272.053	Elder Real Estate Monthly Booklet	S	30.23	I	135
+C10170	31/07/2008		I	FS	241.825	Fuel Surcharge	7	7.88	1692.78	1904.38	Elder Real Estate Monthly Booklet	S	211.6	I	135
+
+C10171	31/07/2008	178684 July - Sep	I	CI/1	4030	Cambridge Edition - Job 7425 - Delivery 30 Jul 2008 - 246 grams	0.105	0.1181	423.15	476.044	Cambridge Edition	S	52.89	I	141
+C10171	31/07/2008	178684 July - Sep	I	C100	2	Bundles	1	1.13	2	2.25	Cambridge Edition	S	0.25	I	141
+C10171	31/07/2008	178684 July - Sep	I	CI/2	4030	Cambridge Edition - Job 7421 - Delivery 02 Jul 2008 - 290 grams	0.115	0.1294	463.45	521.381	Cambridge Edition	S	57.93	I	141
+C10171	31/07/2008	178684 July - Sep	I	C100	2	Bundles	1	1.13	2	2.25	Cambridge Edition	S	0.25	I	141
+C10171	31/07/2008	178684 July - Sep	I	CI/3	4030	Cambridge Edition - Job 7422 - Delivery 09 Jul 2008 - 138 grams	0.09	0.1012	362.7	408.037	Cambridge Edition	S	45.34	I	141
+C10171	31/07/2008	178684 July - Sep	I	C100	2	Bundles	1	1.13	2	2.25	Cambridge Edition	S	0.25	I	141
+C10171	31/07/2008	178684 July - Sep	I	CI/4	4030	Cambridge Edition - Job 7423 - Delivery 16 Jul 2008 - 250 grams	0.105	0.1181	423.15	476.044	Cambridge Edition	S	52.89	I	141
+C10171	31/07/2008	178684 July - Sep	I	C100	2	Bundles	1	1.13	2	2.25	Cambridge Edition	S	0.25	I	141
+C10171	31/07/2008	178684 July - Sep	I	CI/5	4030	Cambridge Edition - Job 7424 - Delivery 23 Jul 2008 - 316 grams	0.125	0.1406	503.75	566.719	Cambridge Edition	S	62.97	I	141
+C10171	31/07/2008	178684 July - Sep	I	C100	2	Bundles	1	1.13	2	2.25	Cambridge Edition	S	0.25	I	141
+C10171	31/07/2008	178684 July - Sep	I	FS	2186.2	Fuel Surcharge	7	7.88	15303.4	17216.33	Cambridge Edition	S	1912.93	I	141
+
+C10172	31/07/2008	178684 July - Sep	I	CI/1	4030	Cambridge Edition CW Healthcotes - Job 7773 - Delivery 23 Jul 2008 - 25 grams	0.07	0.0788	282.1	317.363	Cambridge Edition CW Healthcotes	S	35.26	I	141
+C10172	31/07/2008	178684 July - Sep	I	FS	282.1	Fuel Surcharge	7	7.88	1974.7	2221.54	Cambridge Edition CW Healthcotes	S	246.84	I	141
+
+C10173	31/07/2008	178761 July - Sep	I	CI/1	2975	Dargaville District News - Job 7426 - Delivery 02 Jul 2008 - 40 grams	0.07	0.0788	208.25	234.281	Dargaville District News	S	26.03	I	141
+C10173	31/07/2008	178761 July - Sep	I	CI/2	2975	Dargaville District News - Job 7427 - Delivery 09 Jul 2008 - 105 grams	0.09	0.1012	267.75	301.219	Dargaville District News	S	33.47	I	141
+C10173	31/07/2008	178761 July - Sep	I	CI/3	2975	Dargaville District News - Job 7428 - Delivery 16 Jul 2008 - 71 grams	0.08	0.09	238	267.75	Dargaville District News	S	29.75	I	141
+C10173	31/07/2008	178761 July - Sep	I	CI/4	2975	Dargaville District News - Job 7429 - Delivery 23 Jul 2008 - 107 grams	0.09	0.1012	267.75	301.219	Dargaville District News	S	33.47	I	141
+C10173	31/07/2008	178761 July - Sep	I	CI/5	2975	Dargaville District News - Job 7430 - Delivery 30 Jul 2008 - 43 grams	0.07	0.0788	208.25	234.281	Dargaville District News	S	26.03	I	141
+C10173	31/07/2008	178761 July - Sep	I	FS	1190	Fuel Surcharge	7	7.88	8330	9371.25	Dargaville District News	S	1041.25	I	141
+
+C10174	31/07/2008	178638 July - Sep	I	CI/1	11505	FCN - Thursday - Job 7436 - Delivery 03 Jul 2008 - 220 grams	0.105	0.1181	1208.025	1359.028	FCN - Thursday	S	151	I	141
+C10174	31/07/2008	178638 July - Sep	I	C100	14	Bundles	1	1.13	14	15.75	FCN - Thursday	S	1.75	I	141
+C10174	31/07/2008	178638 July - Sep	I	C150	9	Bundles	1.5	1.69	13.5	15.19	FCN - Thursday	S	1.69	I	141
+C10174	31/07/2008	178638 July - Sep	I	CI/2	11505	FCN - Thursday - Job 7437 - Delivery 10 Jul 2008 - 230 grams	0.105	0.1181	1208.025	1359.028	FCN - Thursday	S	151	I	141
+C10174	31/07/2008	178638 July - Sep	I	C100	14	Bundles	1	1.13	14	15.75	FCN - Thursday	S	1.75	I	141
+C10174	31/07/2008	178638 July - Sep	I	C150	9	Bundles	1.5	1.69	13.5	15.19	FCN - Thursday	S	1.69	I	141
+C10174	31/07/2008	178638 July - Sep	I	CI/3	11505	FCN - Thursday - Job 7438 - Delivery 17 Jul 2008 - 225 grams	0.105	0.1181	1208.025	1359.028	FCN - Thursday	S	151	I	141
+C10174	31/07/2008	178638 July - Sep	I	C100	14	Bundles	1	1.13	14	15.75	FCN - Thursday	S	1.75	I	141
+C10174	31/07/2008	178638 July - Sep	I	C150	9	Bundles	1.5	1.69	13.5	15.19	FCN - Thursday	S	1.69	I	141
+C10174	31/07/2008	178638 July - Sep	I	CI/4	11505	FCN - Thursday - Job 7439 - Delivery 24 Jul 2008 - 205 grams	0.105	0.1181	1208.025	1359.028	FCN - Thursday	S	151	I	141
+C10174	31/07/2008	178638 July - Sep	I	C100	14	Bundles	1	1.13	14	15.75	FCN - Thursday	S	1.75	I	141
+C10174	31/07/2008	178638 July - Sep	I	C150	9	Bundles	1.5	1.69	13.5	15.19	FCN - Thursday	S	1.69	I	141
+C10174	31/07/2008	178638 July - Sep	I	CI/5	11505	FCN - Thursday - Job 7440 - Delivery 31 Jul 2008 - 220 grams	0.105	0.1181	1208.025	1359.028	FCN - Thursday	S	151	I	141
+C10174	31/07/2008	178638 July - Sep	I	C100	14	Bundles	1	1.13	14	15.75	FCN - Thursday	S	1.75	I	141
+C10174	31/07/2008	178638 July - Sep	I	C150	9	Bundles	1.5	1.69	13.5	15.19	FCN - Thursday	S	1.69	I	141
+C10174	31/07/2008	178638 July - Sep	I	FS	6177.625	Fuel Surcharge	7	7.88	43243.38	48648.8	FCN - Thursday	S	5405.42	I	141
+
+C10175	31/07/2008	178638 July - Sep	I	CI/1	11505	FCN - Tuesday - Job 7431 - Delivery 01 Jul 2008 - 170 grams	0.095	0.1069	1092.975	1229.597	FCN - Tuesday	S	136.62	I	141
+C10175	31/07/2008	178638 July - Sep	I	C100	14	Bundles	1	1.13	14	15.75	FCN - Tuesday	S	1.75	I	141
+C10175	31/07/2008	178638 July - Sep	I	C150	9	Bundles	1.5	1.69	13.5	15.19	FCN - Tuesday	S	1.69	I	141
+C10175	31/07/2008	178638 July - Sep	I	CI/2	11505	FCN - Tuesday - Job 7432 - Delivery 08 Jul 2008 - 210 grams	0.105	0.1181	1208.025	1359.028	FCN - Tuesday	S	151	I	141
+C10175	31/07/2008	178638 July - Sep	I	C100	14	Bundles	1	1.13	14	15.75	FCN - Tuesday	S	1.75	I	141
+C10175	31/07/2008	178638 July - Sep	I	C150	9	Bundles	1.5	1.69	13.5	15.19	FCN - Tuesday	S	1.69	I	141
+C10175	31/07/2008	178638 July - Sep	I	CI/3	11505	FCN - Tuesday - Job 7433 - Delivery 15 Jul 2008 - 205 grams	0.105	0.1181	1208.025	1359.028	FCN - Tuesday	S	151	I	141
+C10175	31/07/2008	178638 July - Sep	I	C100	14	Bundles	1	1.13	14	15.75	FCN - Tuesday	S	1.75	I	141
+C10175	31/07/2008	178638 July - Sep	I	C150	9	Bundles	1.5	1.69	13.5	15.19	FCN - Tuesday	S	1.69	I	141
+C10175	31/07/2008	178638 July - Sep	I	CI/4	11505	FCN - Tuesday - Job 7434 - Delivery 22 Jul 2008 - 85 grams	0.08	0.09	920.4	1035.45	FCN - Tuesday	S	115.05	I	141
+C10175	31/07/2008	178638 July - Sep	I	C100	14	Bundles	1	1.13	14	15.75	FCN - Tuesday	S	1.75	I	141
+C10175	31/07/2008	178638 July - Sep	I	C150	9	Bundles	1.5	1.69	13.5	15.19	FCN - Tuesday	S	1.69	I	141
+C10175	31/07/2008	178638 July - Sep	I	CI/5	11505	FCN - Tuesday - Job 7435 - Delivery 29 Jul 2008 - 115 grams	0.09	0.1012	1035.45	1164.881	FCN - Tuesday	S	129.43	I	141
+C10175	31/07/2008	178638 July - Sep	I	C100	14	Bundles	1	1.13	14	15.75	FCN - Tuesday	S	1.75	I	141
+C10175	31/07/2008	178638 July - Sep	I	C150	9	Bundles	1.5	1.69	13.5	15.19	FCN - Tuesday	S	1.69	I	141
+C10175	31/07/2008	178638 July - Sep	I	FS	5602.375	Fuel Surcharge	7	7.88	39216.63	44118.71	FCN - Tuesday	S	4902.08	I	141
+
+C10176	31/07/2008	180807 June - Sep	I	CI/1	2201	Matamata Chronicle - Job 7441 - Delivery 01 Jul 2008 - 356 grams	0.14	0.1575	308.14	346.657	Matamata Chronicle	S	38.52	I	141
+C10176	31/07/2008	180807 June - Sep	I	CI/2	2201	Matamata Chronicle - Job 7442 - Delivery 08 Jul 2008 - 155 grams	0.105	0.1181	231.105	259.993	Matamata Chronicle	S	28.89	I	141
+C10176	31/07/2008	180807 June - Sep	I	CI/3	2201	Matamata Chronicle - Job 7443 - Delivery 15 Jul 2008 - 251 grams	0.125	0.1406	275.125	309.516	Matamata Chronicle	S	34.39	I	141
+C10176	31/07/2008	180807 June - Sep	I	CI/4	2201	Matamata Chronicle - Job 7444 - Delivery 22 Jul 2008 - 263 grams	0.125	0.1406	275.125	309.516	Matamata Chronicle	S	34.39	I	141
+C10176	31/07/2008	180807 June - Sep	I	CI/5	2201	Matamata Chronicle - Job 7445 - Delivery 29 Jul 2008 - 240 grams	0.115	0.1294	253.115	284.754	Matamata Chronicle	S	31.64	I	141
+C10176	31/07/2008	180807 June - Sep	I	FS	1342.61	Fuel Surcharge	7	7.88	9398.27	10573.05	Matamata Chronicle	S	1174.78	I	141
+
+C10177	31/07/2008	180856 June - Sep	I	CI/1	3076	Nth Waikato News - Job 7447 - Delivery 09 Jul 2008 - 80 grams	0.08	0.09	246.08	276.84	Nth Waikato News	S	30.76	I	141
+C10177	31/07/2008	180856 June - Sep	I	CI/2	3076	Nth Waikato News - Job 7448 - Delivery 16 Jul 2008 - 105 grams	0.09	0.1012	276.84	311.445	Nth Waikato News	S	34.61	I	141
+C10177	31/07/2008	180856 June - Sep	I	CI/3	3076	Nth Waikato News - Job 7449 - Delivery 23 Jul 2008 - 35 grams	0.07	0.0788	215.32	242.235	Nth Waikato News	S	26.92	I	141
+C10177	31/07/2008	180856 June - Sep	I	CI/4	3076	Nth Waikato News - Job 7450 - Delivery 30 Jul 2008 - 55 grams	0.08	0.09	246.08	276.84	Nth Waikato News	S	30.76	I	141
+C10177	31/07/2008	180856 June - Sep	I	CI/5	3076	Nth Waikato News - Job 7446 - Delivery 02 Jul 2008 - 75 grams	0.08	0.09	246.08	276.84	Nth Waikato News	S	30.76	I	141
+C10177	31/07/2008	180856 June - Sep	I	FS	1230.4	Fuel Surcharge	7	7.88	8612.8	9689.4	Nth Waikato News	S	1076.6	I	141
+
+C10178	31/07/2008	182443 July/Sep	I	CI/1	3902	Piako Post - Job 7451 - Delivery 02 Jul 2008 - 310 grams	0.135	0.1519	526.77	592.616	Piako Post	S	65.85	I	141
+C10178	31/07/2008	182443 July/Sep	I	C100	2	Bundles	1	1.13	2	2.25	Piako Post	S	0.25	I	141
+C10178	31/07/2008	182443 July/Sep	I	CI/2	3907	Piako Post - Job 7452 - Delivery 09 Jul 2008 - 218 grams	0.115	0.1294	449.305	505.468	Piako Post	S	56.16	I	141
+C10178	31/07/2008	182443 July/Sep	I	C100	2	Bundles	1	1.13	2	2.25	Piako Post	S	0.25	I	141
+C10178	31/07/2008	182443 July/Sep	I	CI/3	3907	Piako Post - Job 7453 - Delivery 16 Jul 2008 - 282 grams	0.125	0.1406	488.375	549.422	Piako Post	S	61.05	I	141
+C10178	31/07/2008	182443 July/Sep	I	C100	2	Bundles	1	1.13	2	2.25	Piako Post	S	0.25	I	141
+C10178	31/07/2008	182443 July/Sep	I	CI/4	3787	Piako Post - Job 7454 - Delivery 23 Jul 2008 - 256 grams	0.125	0.1406	473.375	532.547	Piako Post	S	59.17	I	141
+C10178	31/07/2008	182443 July/Sep	I	C100	2	Bundles	1	1.13	2	2.25	Piako Post	S	0.25	I	141
+C10178	31/07/2008	182443 July/Sep	I	CI/5	3787	Piako Post - Job 7455 - Delivery 30 Jul 2008 - 254 grams	0.125	0.1406	473.375	532.547	Piako Post	S	59.17	I	141
+C10178	31/07/2008	182443 July/Sep	I	C100	2	Bundles	1	1.13	2	2.25	Piako Post	S	0.25	I	141
+C10178	31/07/2008	182443 July/Sep	I	FS	2421.2	Fuel Surcharge	7	7.88	16948.4	19066.95	Piako Post	S	2118.55	I	141
+
+C10179	31/07/2008	187481 July-Sep	I	CI/1	3775	Rotorua Review - Job 7457 - Delivery 15 Jul 2008 - 80 grams	0.08	0.09	302	339.75	Rotorua Review	S	37.75	I	141
+C10179	31/07/2008	187481 July-Sep	I	C150	1	Bundles	1.5	1.69	1.5	1.69	Rotorua Review	S	0.19	I	141
+C10179	31/07/2008	187481 July-Sep	I	CI/2	3775	Rotorua Review - Job 7458 - Delivery 22 Jul 2008 - 104 grams	0.09	0.1012	339.75	382.219	Rotorua Review	S	42.47	I	141
+C10179	31/07/2008	187481 July-Sep	I	C150	1	Bundles	1.5	1.69	1.5	1.69	Rotorua Review	S	0.19	I	141
+C10179	31/07/2008	187481 July-Sep	I	CI/3	3775	Rotorua Review - Job 7459 - Delivery 29 Jul 2008 - 122 grams	0.09	0.1012	339.75	382.219	Rotorua Review	S	42.47	I	141
+C10179	31/07/2008	187481 July-Sep	I	C150	1	Bundles	1.5	1.69	1.5	1.69	Rotorua Review	S	0.19	I	141
+C10179	31/07/2008	187481 July-Sep	I	CI/4	3775	Rotorua Review - Job 7420 - Delivery 01 Jul 2008 - 106 grams	0.09	0.1012	339.75	382.219	Rotorua Review	S	42.47	I	141
+C10179	31/07/2008	187481 July-Sep	I	C150	1	Bundles	1.5	1.69	1.5	1.69	Rotorua Review	S	0.19	I	141
+C10179	31/07/2008	187481 July-Sep	I	CI/5	3775	Rotorua Review - Job 7456 - Delivery 08 Jul 2008 - 78 grams	0.08	0.09	302	339.75	Rotorua Review	S	37.75	I	141
+C10179	31/07/2008	187481 July-Sep	I	C150	1	Bundles	1.5	1.69	1.5	1.69	Rotorua Review	S	0.19	I	141
+C10179	31/07/2008	187481 July-Sep	I	FS	1630.75	Fuel Surcharge	7	7.88	11415.25	12842.16	Rotorua Review	S	1426.91	I	141
+
+C10180	31/07/2008	187481 July-Sep	I	CI/1	3775	Rotorua Review CW LV Martin - Job 7564 - Delivery 08 Jul 2008 - 10 grams	0.07	0.0788	264.25	297.281	Rotorua Review CW LV Martin	S	33.03	I	141
+C10180	31/07/2008	187481 July-Sep	I	C150	1	Bundles	1.5	1.69	1.5	1.69	Rotorua Review CW LV Martin	S	0.19	I	141
+C10180	31/07/2008	187481 July-Sep	I	FS	265.75	Fuel Surcharge	7	7.88	1860.25	2092.78	Rotorua Review CW LV Martin	S	232.53	I	141
+
+C10181	31/07/2008	179469 July - Sep	I	CI/1	2372	Sth Waikato News - Job 7460 - Delivery 02 Jul 2008 - 262 grams	0.115	0.1294	272.78	306.877	Sth Waikato News	S	34.1	I	141
+C10181	31/07/2008	179469 July - Sep	I	CI/2	2372	Sth Waikato News - Job 7461 - Delivery 09 Jul 2008 - 84 grams	0.08	0.09	189.76	213.48	Sth Waikato News	S	23.72	I	141
+C10181	31/07/2008	179469 July - Sep	I	CI/3	2372	Sth Waikato News - Job 7462 - Delivery 16 Jul 2008 - 318 grams	0.125	0.1406	296.5	333.563	Sth Waikato News	S	37.06	I	141
+C10181	31/07/2008	179469 July - Sep	I	CI/4	2372	Sth Waikato News - Job 7463 - Delivery 23 Jul 2008 - 260 grams	0.115	0.1294	272.78	306.877	Sth Waikato News	S	34.1	I	141
+C10181	31/07/2008	179469 July - Sep	I	CI/5	2372	Sth Waikato News - Job 7464 - Delivery 30 Jul 2008 - 250 grams	0.105	0.1181	249.06	280.193	Sth Waikato News	S	31.13	I	141
+C10181	31/07/2008	179469 July - Sep	I	FS	1280.88	Fuel Surcharge	7	7.88	8966.16	10086.93	Sth Waikato News	S	1120.77	I	141
+
+C10182	31/07/2008		I	CI/1	0	Unknown - Job 7581 - Delivery 02 Jul 2008 - 0 grams	0	0	0	0	Unknown	S	0	I	141
+
+C10183	31/07/2008	180549	I	CI/1	11656	Waikato Farmers Newspaper - Job 7470 - Delivery 15 Jul 2008 - 290 grams	0.2	0.225	2331.2	2622.6	Waikato Farmers Newspaper	S	291.4	I	141
+C10183	31/07/2008	180549	I	FS	2331.2	Fuel Surcharge	7	7.88	16318.4	18358.2	Waikato Farmers Newspaper	S	2039.8	I	141
+
+C10184	31/07/2008		I	CI/1	0	Wakato Farmers Test - Job 7637 - Delivery 15 Jul 2008 - 0 grams	0	0	0	0	Wakato Farmers Test	S	0	I	141
+
+C10185	31/07/2008	178761 July - Sep	I	CI/1	8000	Whangarei Leader - Job 7468 - Delivery 22 Jul 2008 - 52 grams	0.08	0.09	640	720	Whangarei Leader	S	80	I	141
+C10185	31/07/2008	178761 July - Sep	I	CI/2	8000	Whangarei Leader - Job 7469 - Delivery 29 Jul 2008 - 70 grams	0.08	0.09	640	720	Whangarei Leader	S	80	I	141
+C10185	31/07/2008	178761 July - Sep	I	CI/3	8000	Whangarei Leader - Job 7465 - Delivery 01 Jul 2008 - 70 grams	0.08	0.09	640	720	Whangarei Leader	S	80	I	141
+C10185	31/07/2008	178761 July - Sep	I	CI/4	8000	Whangarei Leader - Job 7466 - Delivery 08 Jul 2008 - 70 grams	0.08	0.09	640	720	Whangarei Leader	S	80	I	141
+C10185	31/07/2008	178761 July - Sep	I	CI/5	8000	Whangarei Leader - Job 7467 - Delivery 15 Jul 2008 - 70 grams	0.08	0.09	640	720	Whangarei Leader	S	80	I	141
+C10185	31/07/2008	178761 July - Sep	I	FS	3200	Fuel Surcharge	7	7.88	22400	25200	Whangarei Leader	S	2800	I	141
+
+C10186	31/07/2008	01	I	CI/1	5573	Farm Mapping Flyer - Job 7638 - Delivery 22 Jul 2008 - 25 grams	0.07	0.0788	390.11	438.874	Farm Mapping Flyer	S	48.76	I	142
+C10186	31/07/2008	01	I	FS	390.11	Fuel Surcharge	7	7.88	2730.77	3072.12	Farm Mapping Flyer	S	341.35	I	142
+
+C10187	31/07/2008		I	CI/1	25940	Bobby Calf Mailer - Job 7799 - Delivery IOA - 25 grams	0.1	0.1125	2594	2918.25	Bobby Calf Mailer	S	324.25	I	235
+C10187	31/07/2008		I	CI/2	22043	Cydectin Dairy Nth Island Farm Mail Drop - Job 7394 - Delivery IOA - 40 grams	0.1	0.1125	2204.3	2479.838	Cydectin Dairy Nth Island Farm Mail Drop	S	275.54	I	235
+C10187	31/07/2008		I	CI/3	3928	Cydectin Dairy Sth Island Farm Mail Drop - Job 7395 - Delivery 21 Jul 2008 - 40 grams	0.1	0.1125	392.8	441.9	Cydectin Dairy Sth Island Farm Mail Drop	S	49.1	I	235
+C10187	31/07/2008		I	CI/4	40897	What Would You Use - Job 7628 - Delivery IOA - 26 grams	0.1	0.1125	4089.7	4600.912	What Would You Use	S	511.21	I	235
+C10187	31/07/2008		I	FS	9280.8	Fuel Surcharge	7	7.88	64965.6	73086.3	What Would You Use	S	8120.7	I	235
+
+C10188	31/07/2008		I	CI/1	440	Harcourts Stan Hickford DLE - Job 7801 - Delivery IOA - 25 grams	0.1932	0.2174	85.008	95.634	Harcourts Stan Hickford DLE	S	10.63	I	210
+C10188	31/07/2008		I	FS	85.008	Fuel Surcharge	7	7.88	595.06	669.44	Harcourts Stan Hickford DLE	S	74.38	I	210
+
+C10189	31/07/2008		I	CI/1	295	Agdirect Flyer - Job 7574 - Delivery IOA - 5 grams	0.2881	0.3241	84.99	95.614	Agdirect Flyer	S	10.62	I	131
+C10189	31/07/2008		I	FS	84.99	Fuel Surcharge	7	7.88	594.93	669.3	Agdirect Flyer	S	74.37	I	131
+
+C10190	31/07/2008		I	CI/1	2489	Mike English Flyers - Job 7629 - Delivery 15 Jul 2008 - 25 grams	0.065	0.0731	161.785	182.008	Mike English Flyers	S	20.22	I	159
+C10190	31/07/2008		I	FS	161.785	Fuel Surcharge	7	7.88	1132.49	1274.05	Mike English Flyers	S	141.56	I	159
+
+C10191	31/07/2008		I	CI/1	1398	Kouldja Clothing Flyer - Job 7657 - Delivery 17 Jul 2008 - 5 grams	0.07	0.0788	97.86	110.093	Kouldja Clothing Flyer	S	12.23	I	162
+C10191	31/07/2008		I	FS	97.86	Fuel Surcharge	7	7.88	685.02	770.65	Kouldja Clothing Flyer	S	85.63	I	162
+
+C10192	31/07/2008		I	CI/1	830	Hibiscus Matters - Job 7800 - Delivery 30 Jul 2008 - 65 grams	0.08	0.09	66.4	74.7	Hibiscus Matters	S	8.3	I	240
+C10192	31/07/2008		I	FS	66.4	Fuel Surcharge	7	7.88	464.8	522.9	Hibiscus Matters	S	58.1	I	240
+
+C10193	31/07/2008		I	CI/1	6749	Bill English MP Survey - Job 7589 - Delivery 12 Jul 2008 - 10 grams	0.0475	0.0534	320.578	360.65	Bill English MP Survey	S	40.07	I	169
+C10193	31/07/2008		I	FS	320.578	Fuel Surcharge	7	7.88	2244.05	2524.56	Bill English MP Survey	S	280.51	I	169
+
+C10194	31/07/2008		I	CI/1	3351	Bunnings Fireworks - Job 7594 - Delivery 08 Jul 2008 - 15 grams	0.0475	0.0534	159.173	179.07	Bunnings Fireworks	S	19.9	I	169
+C10194	31/07/2008		I	FS	159.173	Fuel Surcharge	7	7.88	1114.21	1253.49	Bunnings Fireworks	S	139.28	I	169
+
+C10195	31/07/2008	2807071	I	CI/1	2465	Comtool FLyer - Job 7588 - Delivery 08 Jul 2008 - 15 grams	0.0475	0.0534	117.088	131.724	Comtool FLyer	S	14.64	I	169
+C10195	31/07/2008	87998	I	CI/2	2095	Comtool FLyer - Job 7625 - Delivery 12 Jul 2008 - 15 grams	0.0475	0.0534	99.513	111.952	Comtool FLyer	S	12.44	I	169
+C10195	31/07/2008	87998	I	FS	216.6	Fuel Surcharge	7	7.88	1516.2	1705.73	Comtool FLyer	S	189.53	I	169
+
+C10196	31/07/2008	2807055	I	CI/1	8660	DA Lewis - Job 7576 - Delivery 05 Jul 2008 - 10 grams	0.0475	0.0534	411.35	462.769	DA Lewis	S	51.42	I	169
+C10196	31/07/2008	2807154	I	CI/2	9106	DA Lewis - Job 7789 - Delivery 29 Jul 2008 - 12 grams	0.0475	0.0534	432.535	486.602	DA Lewis	S	54.07	I	169
+C10196	31/07/2008	2807154	I	FS	843.885	Fuel Surcharge	7	7.88	5907.2	6645.6	DA Lewis	S	738.4	I	169
+
+C10197	31/07/2008	2807012	I	CI/1	6403	Ecologic Soil Improvement - Job 7655 - Delivery 22 Jul 2008 - 30 grams	0.055	0.0619	352.165	396.186	Ecologic Soil Improvement	S	44.02	I	169
+C10197	31/07/2008	2807012	I	FS	352.165	Fuel Surcharge	7	7.88	2465.16	2773.31	Ecologic Soil Improvement	S	308.15	I	169
+
+C10198	31/07/2008		I	CI/1	60672	Four Square Northern - Job 7528 - Delivery 05 Jul 2008 - 8 grams	0.0475	0.0534	2881.92	3242.16	Four Square Northern	S	360.24	I	169
+C10198	31/07/2008		I	CI/2	60672	Four Square Northern - Job 7529 - Delivery 12 Jul 2008 - 8 grams	0.0475	0.0534	2881.92	3242.16	Four Square Northern	S	360.24	I	169
+C10198	31/07/2008		I	CI/3	60672	Four Square Northern - Job 7530 - Delivery 19 Jul 2008 - 8 grams	0.0475	0.0534	2881.92	3242.16	Four Square Northern	S	360.24	I	169
+C10198	31/07/2008		I	CI/4	61866	Four Square Northern - Job 7794 - Delivery 26 Jul 2008 - 8 grams	0.0475	0.0534	2938.635	3305.964	Four Square Northern	S	367.33	I	169
+C10198	31/07/2008		I	FS	11584.395	Fuel Surcharge	7	7.88	81090.77	91227.12	Four Square Northern	S	10136.35	I	169
+
+C10199	31/07/2008	2807152	I	CI/1	920	Harcourt 133 McHugh's Road Flyer - Job 7788 - Delivery 29 Jul 2008 - 10 grams	0.0475	0.0534	43.7	49.163	Harcourt 133 McHugh's Road Flyer	S	5.46	I	169
+C10199	31/07/2008	2807152	I	FS	43.7	Fuel Surcharge	7	7.88	305.9	344.14	Harcourt 133 McHugh's Road Flyer	S	38.24	I	169
+
+C10200	31/07/2008	2807140	I	CI/1	11867	Heathcote Appliances - Job 7751 - Delivery 22 Jul 2008 - 28 grams	0.055	0.0619	652.685	734.271	Heathcote Appliances	S	81.59	I	169
+C10200	31/07/2008	2807140	I	FS	652.685	Fuel Surcharge	7	7.88	4568.8	5139.9	Heathcote Appliances	S	571.1	I	169
+
+C10201	31/07/2008		I	CI/1	53792	New World Birthday Postcard Sth Island - Job 7570 - Delivery 05 Jul 2008 - 10 grams	0.0475	0.0534	2555.12	2874.51	New World Birthday Postcard Sth Island	S	319.39	I	169
+C10201	31/07/2008		I	FS	2555.12	Fuel Surcharge	7	7.88	17885.84	20121.57	New World Birthday Postcard Sth Island	S	2235.73	I	169
+
+C10202	31/07/2008		I	CI/1	63923	New World Northern - Job 7793 - Delivery 26 Jul 2008 - 24 grams	0.0475	0.0534	3036.343	3415.886	New World Northern	S	379.54	I	169
+C10202	31/07/2008		I	CI/2	62556	New World Northern - Job 7524 - Delivery 05 Jul 2008 - 30 grams	0.055	0.0619	3440.58	3870.653	New World Northern	S	430.07	I	169
+C10202	31/07/2008		I	CI/3	62556	New World Northern - Job 7525 - Delivery 12 Jul 2008 - 30 grams	0.055	0.0619	3440.58	3870.653	New World Northern	S	430.07	I	169
+C10202	31/07/2008		I	CI/4	62556	New World Northern - Job 7526 - Delivery 19 Jul 2008 - 30 grams	0.055	0.0619	3440.58	3870.653	New World Northern	S	430.07	I	169
+C10202	31/07/2008		I	FS	13358.083	Fuel Surcharge	7	7.88	93506.58	105194.9	New World Northern	S	11688.32	I	169
+
+C10203	31/07/2008	2807049	I	CI/1	62556	New World Northern Birthday Special - Job 7567 - Delivery 05 Jul 2008 - 10 grams	0.0475	0.0534	2971.41	3342.836	New World Northern Birthday Special	S	371.43	I	169
+C10203	31/07/2008	2807049	I	FS	2971.41	Fuel Surcharge	7	7.88	20799.87	23399.85	New World Northern Birthday Special	S	2599.98	I	169
+
+C10204	31/07/2008	2807043	I	CI/1	7443	North Canterbury News - Job 7608 - Delivery 15 Jul 2008 - 132 grams	0.0955	0.1074	710.807	799.658	North Canterbury News	S	88.85	I	169
+C10204	31/07/2008	2807043	I	CI/2	7443	North Canterbury News - Job 7618 - Delivery 22 Jul 2008 - 60 grams	0.0825	0.0928	614.048	690.804	North Canterbury News	S	76.76	I	169
+C10204	31/07/2008	2807043	I	CI/3	7443	North Canterbury News - Job 7619 - Delivery 29 Jul 2008 - 86 grams	0.0825	0.0928	614.048	690.804	North Canterbury News	S	76.76	I	169
+C10204	31/07/2008	2807043	I	FS	1938.902	Fuel Surcharge	7	7.88	13572.31	15268.85	North Canterbury News	S	1696.54	I	169
+
+C10205	31/07/2008	2807084	I	CI/1	72150	Numat Industries - Job 7609 - Delivery 12 Jul 2008 - 30 grams	0.055	0.0619	3968.25	4464.281	Numat Industries	S	496.03	I	169
+C10205	31/07/2008	2807084	I	FS	3968.25	Fuel Surcharge	7	7.88	27777.75	31249.97	Numat Industries	S	3472.22	I	169
+
+C10206	31/07/2008	2807151	I	CI/1	4324	Pain Management - Job 7787 - Delivery 26 Jul 2008 - 10 grams	0.0475	0.0534	205.39	231.064	Pain Management	S	25.67	I	169
+C10206	31/07/2008	2807151	I	FS	205.39	Fuel Surcharge	7	7.88	1437.73	1617.45	Pain Management	S	179.72	I	169
+
+C10207	31/07/2008		I	CI/1	5855	Paterson Burn FLyer - Job 7403 - Delivery 01 Jul 2008 - 10 grams	0.0475	0.0534	278.113	312.877	Paterson Burn FLyer	S	34.76	I	169
+C10207	31/07/2008		I	CI/2	5855	Paterson Burn FLyer - Job 7404 - Delivery 22 Jul 2008 - 10 grams	0.0475	0.0534	278.113	312.877	Paterson Burn FLyer	S	34.76	I	169
+C10207	31/07/2008		I	FS	556.225	Fuel Surcharge	7	7.88	3893.58	4380.28	Paterson Burn FLyer	S	486.7	I	169
+
+C10208	31/07/2008	2807057	I	CI/1	17945	Pest News Drop 1 - Job 7577 - Delivery 08 Jul 2008 - 15 grams	0.0475	0.0534	852.388	958.937	Pest News Drop 1	S	106.55	I	169
+C10208	31/07/2008	2807057	I	FS	852.388	Fuel Surcharge	7	7.88	5966.72	6712.56	Pest News Drop 1	S	745.84	I	169
+
+C10209	31/07/2008		I	CI/1	28752	Polaris Flyer - Job 7587 - Delivery 08 Jul 2008 - 15 grams	0.0475	0.0534	1365.72	1536.435	Polaris Flyer	S	170.71	I	169
+C10209	31/07/2008	2807074	I	CI/2	8340	Polaris Flyer - Job 7595 - Delivery 15 Jul 2008 - 15 grams	0.0475	0.0534	396.15	445.669	Polaris Flyer	S	49.52	I	169
+C10209	31/07/2008	2807074	I	FS	1761.87	Fuel Surcharge	7	7.88	12333.09	13874.73	Polaris Flyer	S	1541.64	I	169
+
+C10210	31/07/2008	2807117	I	CI/1	4197	Resene Invercargill - Job 7635 - Delivery 29 Jul 2008 - 25 grams	0.0475	0.0534	199.358	224.278	Resene Invercargill	S	24.92	I	169
+C10210	31/07/2008	2807117	I	FS	199.358	Fuel Surcharge	7	7.88	1395.51	1569.95	Resene Invercargill	S	174.44	I	169
+
+C10211	31/07/2008	2807045	I	CI/1	19606	Resene Postcard Drop 1 - Job 7558 - Delivery 05 Jul 2008 - 10 grams	0.0475	0.0534	931.285	1047.696	Resene Postcard Drop 1	S	116.41	I	169
+C10211	31/07/2008	2807045	I	FS	931.285	Fuel Surcharge	7	7.88	6519	7333.88	Resene Postcard Drop 1	S	814.88	I	169
+
+C10212	31/07/2008	2807045	I	CI/1	33369	Resene Postcard Drop 2 - Job 7582 - Delivery 12 Jul 2008 - 15 grams	0.0475	0.0534	1585.028	1783.157	Resene Postcard Drop 2	S	198.13	I	169
+C10212	31/07/2008	2807045	I	FS	1585.028	Fuel Surcharge	7	7.88	11095.2	12482.1	Resene Postcard Drop 2	S	1386.9	I	169
+
+C10213	31/07/2008	2807045	I	CI/1	44973	Resene Postcard Drop 3 - Job 7583 - Delivery 19 Jul 2008 - 25 grams	0.0475	0.0534	2136.218	2403.245	Resene Postcard Drop 3	S	267.03	I	169
+C10213	31/07/2008	2807045	I	FS	2136.218	Fuel Surcharge	7	7.88	14953.53	16822.72	Resene Postcard Drop 3	S	1869.19	I	169
+
+C10214	31/07/2008	2807045	I	CI/1	27708	Resene Postcard Drop 4 - Job 7584 - Delivery 26 Jul 2008 - 15 grams	0.0475	0.0534	1316.13	1480.646	Resene Postcard Drop 4	S	164.52	I	169
+C10214	31/07/2008	2807045	I	FS	1316.13	Fuel Surcharge	7	7.88	9212.91	10364.52	Resene Postcard Drop 4	S	1151.61	I	169
+
+C10215	31/07/2008	2807142	I	CI/1	29768	Rural Living - Job 7755 - Delivery 22 Jul 2008 - 106 grams	0.0855	0.0962	2545.164	2863.31	Rural Living	S	318.15	I	169
+C10215	31/07/2008	2807142	I	FS	2545.164	Fuel Surcharge	7	7.88	17816.15	20043.17	Rural Living	S	2227.02	I	169
+
+C10216	31/07/2008		I	CI/1	73820	Rural News  - Job 7543 - Delivery 08 Jul 2008 - 143 grams	0.0855	0.0962	6311.61	7100.561	Rural News 	S	788.95	I	169
+C10216	31/07/2008		I	CI/2	73547	Rural News  - Job 7627 - Delivery 22 Jul 2008 - 130 grams	0.0855	0.0962	6288.269	7074.303	Rural News 	S	786.03	I	169
+C10216	31/07/2008		I	FS	12599.879	Fuel Surcharge	7	7.88	88199.15	99224.04	Rural News 	S	11024.89	I	169
+
+C10217	31/07/2008	2807066	I	CI/1	6485	Scene Magazine - Job 7585 - Delivery 05 Jul 2008 - 83 grams	0.0825	0.0928	535.013	601.89	Scene Magazine	S	66.88	I	169
+C10217	31/07/2008	2807066	I	FS	535.013	Fuel Surcharge	7	7.88	3745.09	4213.23	Scene Magazine	S	468.14	I	169
+
+C10218	31/07/2008	2807043	I	CI/1	6396	Selwyn Times - Job 7612 - Delivery 22 Jul 2008 - 60 grams	0.0825	0.0928	527.67	593.629	Selwyn Times	S	65.96	I	169
+C10218	31/07/2008	2807043	I	CI/2	6396	Selwyn Times - Job 7613 - Delivery 29 Jul 2008 - 62 grams	0.0825	0.0928	527.67	593.629	Selwyn Times	S	65.96	I	169
+C10218	31/07/2008	2807043	I	CI/3	6396	Selwyn Times - Job 7605 - Delivery 15 Jul 2008 - 100 grams	0.0825	0.0928	527.67	593.629	Selwyn Times	S	65.96	I	169
+C10218	31/07/2008	2807043	I	FS	1583.01	Fuel Surcharge	7	7.88	11081.07	12466.2	Selwyn Times	S	1385.13	I	169
+
+C10219	31/07/2008	2807053	I	CI/1	64920	Smith City - Job 7575 - Delivery 08 Jul 2008 - 28 grams	0.055	0.0619	3570.6	4016.925	Smith City	S	446.33	I	169
+C10219	31/07/2008	2807053	I	FS	3570.6	Fuel Surcharge	7	7.88	24994.2	28118.48	Smith City	S	3124.28	I	169
+
+C10220	31/07/2008	2807056	I	CI/1	64920	Smith City Drop 2 - Job 7578 - Delivery 15 Jul 2008 - 28 grams	0.055	0.0619	3570.6	4016.925	Smith City Drop 2	S	446.33	I	169
+C10220	31/07/2008	2807056	I	FS	3570.6	Fuel Surcharge	7	7.88	24994.2	28118.48	Smith City Drop 2	S	3124.28	I	169
+
+C10221	31/07/2008	87855	I	CI/1	920	Solid Walls and Fences - Job 7597 - Delivery 12 Jul 2008 - 5 grams	0.0475	0.0534	43.7	49.163	Solid Walls and Fences	S	5.46	I	169
+C10221	31/07/2008	87855	I	FS	43.7	Fuel Surcharge	7	7.88	305.9	344.14	Solid Walls and Fences	S	38.24	I	169
+
+C10222	31/07/2008	2807155	I	CI/1	860	Still Waiting For Your Ship - Job 7656 - Delivery 22 Jul 2008 - 19 grams	0.0475	0.0534	40.85	45.956	Still Waiting For Your Ship	S	5.11	I	169
+C10222	31/07/2008	2807155	I	FS	40.85	Fuel Surcharge	7	7.88	285.95	321.69	Still Waiting For Your Ship	S	35.74	I	169
+
+C10223	31/07/2008		I	CI/1	2745	Taieri College - Job 7568 - Delivery 12 Jul 2008 - 10 grams	0.0475	0.0534	130.387	146.685	Taieri College	S	16.3	I	169
+C10223	31/07/2008		I	FS	130.387	Fuel Surcharge	7	7.88	912.71	1026.8	Taieri College	S	114.09	I	169
+
+C10224	31/07/2008	2807106	I	CI/1	4278	Taratahi Training Skills - Job 7626 - Delivery 22 Jul 2008 - 10 grams	0.0475	0.0534	203.205	228.606	Taratahi Training Skills	S	25.4	I	169
+C10224	31/07/2008	2807106	I	FS	203.205	Fuel Surcharge	7	7.88	1422.44	1600.25	Taratahi Training Skills	S	177.81	I	169
+
+C10225	31/07/2008	2807142	I	CI/1	10185	The Plaza Redevelopment Kiwi Income - Job 7762 - Delivery 26 Jul 2008 - 25 grams	0.0475	0.0534	483.788	544.262	The Plaza Redevelopment Kiwi Income	S	60.47	I	169
+C10225	31/07/2008	2807142	I	FS	483.788	Fuel Surcharge	7	7.88	3386.52	3809.84	The Plaza Redevelopment Kiwi Income	S	423.32	I	169
+
+C10226	31/07/2008	2807083	I	CI/1	69194	Vodafone Carerra Drop 1 - Job 7603 - Delivery 12 Jul 2008 - 15 grams	0.0475	0.0534	3286.715	3697.554	Vodafone Carerra Drop 1	S	410.84	I	169
+C10226	31/07/2008	2807083	I	FS	3286.715	Fuel Surcharge	7	7.88	23007.01	25882.89	Vodafone Carerra Drop 1	S	2875.88	I	169
+
+C10227	31/07/2008	2807083	I	CI/1	33228	Vodafone Carerra Drop 2 - Job 7604 - Delivery 15 Jul 2008 - 15 grams	0.0475	0.0534	1578.33	1775.621	Vodafone Carerra Drop 2	S	197.29	I	169
+C10227	31/07/2008	2807083	I	FS	1578.33	Fuel Surcharge	7	7.88	11048.31	12429.35	Vodafone Carerra Drop 2	S	1381.04	I	169
+
+C10228	31/07/2008	2807083	I	CI/1	31916	Vodafone Carerra Drop 3 - Job 7610 - Delivery 19 Jul 2008 - 15 grams	0.0475	0.0534	1516.01	1705.511	Vodafone Carerra Drop 3	S	189.5	I	169
+C10228	31/07/2008	2807083	I	FS	1516.01	Fuel Surcharge	7	7.88	10612.07	11938.58	Vodafone Carerra Drop 3	S	1326.51	I	169
+
+C10229	31/07/2008		I	CI/1	1600	Westfield July School Holidays - Job 7552 - Delivery 08 Jul 2008 - 10 grams	0.0475	0.0534	76	85.5	Westfield July School Holidays	S	9.5	I	169
+C10229	31/07/2008		I	FS	76	Fuel Surcharge	7	7.88	532	598.5	Westfield July School Holidays	S	66.5	I	169
+
+C10230	31/07/2008	88018	I	CI/1	9090	Whangarei Report - Job 7563 - Delivery 31 Jul 2008 - 71 grams	0.0725	0.0816	659.025	741.403	Whangarei Report	S	82.38	I	169
+C10230	31/07/2008	88018	I	CI/2	8945	Whangarei Report - Job 7546 - Delivery 03 Jul 2008 - 100 grams	0.0725	0.0816	648.512	729.576	Whangarei Report	S	81.06	I	169
+C10230	31/07/2008	88018	I	CI/3	8945	Whangarei Report - Job 7560 - Delivery 10 Jul 2008 - 93 grams	0.0725	0.0816	648.512	729.576	Whangarei Report	S	81.06	I	169
+C10230	31/07/2008	88018	I	CI/4	8945	Whangarei Report - Job 7561 - Delivery 17 Jul 2008 - 103 grams	0.0855	0.0962	764.798	860.398	Whangarei Report	S	95.6	I	169
+C10230	31/07/2008	88018	I	CI/5	8945	Whangarei Report - Job 7562 - Delivery 24 Jul 2008 - 107 grams	0.0855	0.0962	764.798	860.398	Whangarei Report	S	95.6	I	169
+C10230	31/07/2008	88018	I	FS	3485.645	Fuel Surcharge	7	7.88	24399.52	27449.46	Whangarei Report	S	3049.94	I	169
+
+C10231	31/07/2008	2807133	I	CI/1	4594	William & Kettle - Job 7654 - Delivery 22 Jul 2008 - 10 grams	0.0475	0.0534	218.215	245.492	William & Kettle	S	27.28	I	169
+C10231	31/07/2008	2807133	I	FS	218.215	Fuel Surcharge	7	7.88	1527.51	1718.45	William & Kettle	S	190.94	I	169
+
+C10232	31/07/2008		I	CI/1	1650	Mech Traders FLyer - Job 7586 - Delivery 07 Jul 2008 - 5 grams	0.07	0.0788	115.5	129.938	Mech Traders FLyer	S	14.44	I	176
+C10232	31/07/2008		I	FS	115.5	Fuel Surcharge	7	7.88	808.5	909.56	Mech Traders FLyer	S	101.06	I	176
+
+C10233	31/07/2008		I	CI/1	41235	Bionic DLE Flyer - Job 7554 - Delivery IOA - 10 grams	0.085	0.0956	3504.975	3943.097	Bionic DLE Flyer	S	438.12	I	178
+C10233	31/07/2008		I	CI/2	62230	Muckboots DLE Flyer - Job 7553 - Delivery IOA - 10 grams	0.085	0.0956	5289.55	5950.744	Muckboots DLE Flyer	S	661.19	I	178
+C10233	31/07/2008		I	FS	8794.525	Fuel Surcharge	7	7.88	61561.68	69256.89	Muckboots DLE Flyer	S	7695.21	I	178
+
+C10234	31/07/2008	2283391-87250	I	CI/1	895	Bay News - Job 7547 - Delivery 02 Jul 2008 - 95 grams	0.0855	0.0962	76.523	86.088	Bay News	S	9.56	I	201
+C10234	31/07/2008	2283391-87250	I	CI/2	895	Bay News - Job 7548 - Delivery 09 Jul 2008 - 85 grams	0.0855	0.0962	76.523	86.088	Bay News	S	9.56	I	201
+C10234	31/07/2008	2287655/87912	I	CI/3	895	Bay News - Job 7714 - Delivery 30 Jul 2008 - 90 grams	0.0855	0.0962	76.523	86.088	Bay News	S	9.56	I	201
+C10234	31/07/2008	2283391-87250	I	CI/4	895	Bay News - Job 7549 - Delivery 16 Jul 2008 - 75 grams	0.0855	0.0962	76.523	86.088	Bay News	S	9.56	I	201
+C10234	31/07/2008	2283391-87250	I	CI/5	895	Bay News - Job 7550 - Delivery 23 Jul 2008 - 160 grams	0.13	0.1463	116.35	130.894	Bay News	S	14.54	I	201
+C10234	31/07/2008	2283391-87250	I	FS	422.44	Fuel Surcharge	7	7.88	2957.08	3326.72	Bay News	S	369.64	I	201
+
+C10235	31/07/2008	2285279/87480	I	CI/1	5625	Baytrust Annual Report - Job 7590 - Delivery 22 Jul 2008 - 51 grams	0.0855	0.0962	480.938	541.055	Baytrust Annual Report	S	60.12	I	201
+C10235	31/07/2008	2285279/87480	I	FS	480.938	Fuel Surcharge	7	7.88	3366.57	3787.39	Baytrust Annual Report	S	420.82	I	201
+
+C10236	31/07/2008	2283171-86043	I	CI/1	6440	Hawkesbay Country Scene - Job 7412 - Delivery 16 Jul 2008 - 63 grams	0.0855	0.0962	550.62	619.448	Hawkesbay Country Scene	S	68.83	I	201
+C10236	31/07/2008	2283171-86043	I	FS	550.62	Fuel Surcharge	7	7.88	3854.34	4336.13	Hawkesbay Country Scene	S	481.79	I	201
+
+C10237	31/07/2008	2283135/87218	I	CI/1	1315	Metropol - Job 7501 - Delivery 18 Jul 2008 - 164 grams	0.13	0.1463	170.95	192.319	Metropol	S	21.37	I	201
+C10237	31/07/2008	2283135/87218	I	CI/2	1315	Metropol - Job 7500 - Delivery 04 Jul 2008 - 214 grams	0.15	0.1687	197.25	221.906	Metropol	S	24.66	I	201
+C10237	31/07/2008	2283135/87218	I	FS	368.2	Fuel Surcharge	7	7.88	2577.4	2899.58	Metropol	S	322.18	I	201
+
+C10238	31/07/2008	2282846-87341	I	CI/1	1530	Napier Mail - Job 7479 - Delivery 23 Jul 2008 - 84 grams	0.0955	0.1074	146.115	164.379	Napier Mail	S	18.26	I	201
+C10238	31/07/2008	2288667/88159	I	CI/2	1530	Napier Mail - Job 7480 - Delivery 30 Jul 2008 - 154 grams	0.14	0.1575	214.2	240.975	Napier Mail	S	26.78	I	201
+C10238	31/07/2008	2282846-87341	I	CI/3	1530	Napier Mail - Job 7476 - Delivery 02 Jul 2008 - 108 grams	0.12	0.135	183.6	206.55	Napier Mail	S	22.95	I	201
+C10238	31/07/2008	2282846-87341	I	CI/4	1530	Napier Mail - Job 7477 - Delivery 09 Jul 2008 - 91 grams	0.0955	0.1074	146.115	164.379	Napier Mail	S	18.26	I	201
+C10238	31/07/2008	2282846-87341	I	CI/5	1530	Napier Mail - Job 7478 - Delivery 16 Jul 2008 - 93 grams	0.0955	0.1074	146.115	164.379	Napier Mail	S	18.26	I	201
+C10238	31/07/2008	2282846-87341	I	FS	836.145	Fuel Surcharge	7	7.88	5853.02	6584.65	Napier Mail	S	731.63	I	201
+
+C10239	31/07/2008	2283821/87239	I	CI/1	7304	North Canterbury News - Job 7557 - Delivery 01 Jul 2008 - 132 grams	0.12	0.135	876.48	986.04	North Canterbury News	S	109.56	I	201
+C10239	31/07/2008	2285232/87239	I	CI/2	7304	North Canterbury News - Job 7591 - Delivery 08 Jul 2008 - 66 grams	0.0955	0.1074	697.532	784.724	North Canterbury News	S	87.19	I	201
+C10239	31/07/2008	2285232/87239	I	FS	1574.012	Fuel Surcharge	7	7.88	11018.08	12395.34	North Canterbury News	S	1377.26	I	201
+
+C10240	31/07/2008	2283177-87380	I	CI/1	3135	Property Outlook - Job 7491 - Delivery 03 Jul 2008 - 20 grams	0.0501	0.0564	157.064	176.697	Property Outlook	S	19.63	I	201
+C10240	31/07/2008	2283177-87380	I	CI/2	3135	Property Outlook - Job 7492 - Delivery 23 Jul 2008 - 20 grams	0.0501	0.0564	157.064	176.697	Property Outlook	S	19.63	I	201
+C10240	31/07/2008	2288681/88203	I	CI/3	3135	Property Outlook - Job 7493 - Delivery 31 Jul 2008 - 20 grams	0.0501	0.0564	157.064	176.697	Property Outlook	S	19.63	I	201
+C10240	31/07/2008		I	CI/4	3333	Property Outlook - Job 7644 - Delivery 03 Jul 2008 - 20 grams	0.0501	0.0564	166.983	187.856	Property Outlook	S	20.87	I	201
+C10240	31/07/2008		I	FS	638.174	Fuel Surcharge	7	7.88	4467.22	5025.62	Property Outlook	S	558.4	I	201
+
+C10241	31/07/2008	2283925/87330	I	CI/1	770	Rangitikei Mail - Job 7471 - Delivery 01 Jul 2008 - 86 grams	0.0855	0.0962	65.835	74.064	Rangitikei Mail	S	8.23	I	201
+C10241	31/07/2008	2283925/87330	I	CI/2	770	Rangitikei Mail - Job 7472 - Delivery 08 Jul 2008 - 65 grams	0.0855	0.0962	65.835	74.064	Rangitikei Mail	S	8.23	I	201
+C10241	31/07/2008	2283925/87330	I	CI/3	770	Rangitikei Mail - Job 7473 - Delivery 15 Jul 2008 - 65 grams	0.0855	0.0962	65.835	74.064	Rangitikei Mail	S	8.23	I	201
+C10241	31/07/2008	2283925/87330	I	CI/4	770	Rangitikei Mail - Job 7474 - Delivery 22 Jul 2008 - 65 grams	0.0855	0.0962	65.835	74.064	Rangitikei Mail	S	8.23	I	201
+C10241	31/07/2008	2288665/88128	I	CI/5	770	Rangitikei Mail - Job 7475 - Delivery 29 Jul 2008 - 86 grams	0.0855	0.0962	65.835	74.064	Rangitikei Mail	S	8.23	I	201
+C10241	31/07/2008	2288665/88128	I	FS	329.175	Fuel Surcharge	7	7.88	2304.23	2592.26	Rangitikei Mail	S	288.03	I	201
+
+C10242	31/07/2008	2283168-87248	I	CI/1	2341	Scene Matamata - Job 7503 - Delivery 09 Jul 2008 - 80 grams	0.0955	0.1074	223.566	251.512	Scene Matamata	S	27.95	I	201
+C10242	31/07/2008	2283168-87248	I	CI/2	2341	Scene Matamata - Job 7504 - Delivery 23 Jul 2008 - 80 grams	0.0955	0.1074	223.566	251.512	Scene Matamata	S	27.95	I	201
+C10242	31/07/2008		I	CI/3	2280	Scene Matamata - Job 7646 - Delivery 23 Jul 2008 - 0 grams	0	0	0	0	Scene Matamata	S	0	I	201
+C10242	31/07/2008		I	FS	447.131	Fuel Surcharge	7	7.88	3129.92	3521.16	Scene Matamata	S	391.24	I	201
+
+C10243	31/07/2008	2283822/87240	I	CI/1	6396	Selwyn Times - Job 7556 - Delivery 01 Jul 2008 - 96 grams	0.0955	0.1074	610.818	687.17	Selwyn Times	S	76.35	I	201
+C10243	31/07/2008	2285234/87240	I	CI/2	6396	Selwyn Times - Job 7592 - Delivery 08 Jul 2008 - 66 grams	0.0955	0.1074	610.818	687.17	Selwyn Times	S	76.35	I	201
+C10243	31/07/2008		I	CI/3	6426	Selwyn Times - Job 7647 - Delivery 08 Jul 2008 - 66 grams	0.0955	0.1074	613.683	690.393	Selwyn Times	S	76.71	I	201
+C10243	31/07/2008		I	FS	1835.319	Fuel Surcharge	7	7.88	12847.23	14453.13	Selwyn Times	S	1605.9	I	201
+
+C10244	31/07/2008	2283159-87303	I	CI/1	1320	Taupo Real Estate - Job 7494 - Delivery 03 Jul 2008 - 270 grams	0.17	0.1913	224.4	252.45	Taupo Real Estate	S	28.05	I	201
+C10244	31/07/2008	2283159-87303	I	CI/2	1320	Taupo Real Estate - Job 7495 - Delivery 17 Jul 2008 - 243 grams	0.15	0.1687	198	222.75	Taupo Real Estate	S	24.75	I	201
+C10244	31/07/2008	2287589/88015	I	CI/3	1320	Taupo Real Estate - Job 7496 - Delivery 31 Jul 2008 - 216 grams	0.15	0.1687	198	222.75	Taupo Real Estate	S	24.75	I	201
+C10244	31/07/2008	2287589/88015	I	FS	620.4	Fuel Surcharge	7	7.88	4342.8	4885.65	Taupo Real Estate	S	542.85	I	201
+
+C10245	31/07/2008	2283175-87299	I	CI/1	3834	Te Awamutu Property Guide - Job 7497 - Delivery 03 Jul 2008 - 176 grams	0.13	0.1463	498.42	560.723	Te Awamutu Property Guide	S	62.3	I	201
+C10245	31/07/2008	2283175-87299	I	CI/2	3834	Te Awamutu Property Guide - Job 7498 - Delivery 17 Jul 2008 - 176 grams	0.13	0.1463	498.42	560.723	Te Awamutu Property Guide	S	62.3	I	201
+C10245	31/07/2008	2287644/88014	I	CI/3	3834	Te Awamutu Property Guide - Job 7499 - Delivery 31 Jul 2008 - 176 grams	0.13	0.1463	498.42	560.723	Te Awamutu Property Guide	S	62.3	I	201
+C10245	31/07/2008	2287644/88014	I	FS	1495.26	Fuel Surcharge	7	7.88	10466.82	11775.17	Te Awamutu Property Guide	S	1308.35	I	201
+
+C10246	31/07/2008	2282840-87377	I	CI/1	3660	The Guardian - Job 7481 - Delivery 03 Jul 2008 - 160 grams	0.13	0.1463	475.8	535.275	The Guardian	S	59.47	I	201
+C10246	31/07/2008	2282840-87377	I	CI/2	3660	The Guardian - Job 7482 - Delivery 10 Jul 2008 - 171 grams	0.13	0.1463	475.8	535.275	The Guardian	S	59.47	I	201
+C10246	31/07/2008	2282840-87377	I	CI/3	3660	The Guardian - Job 7483 - Delivery 17 Jul 2008 - 85 grams	0.0855	0.0962	312.93	352.046	The Guardian	S	39.12	I	201
+C10246	31/07/2008	2282840-87377	I	CI/4	3660	The Guardian - Job 7484 - Delivery 24 Jul 2008 - 139 grams	0.11	0.1238	402.6	452.925	The Guardian	S	50.32	I	201
+C10246	31/07/2008	2288679/88220	I	CI/5	3660	The Guardian - Job 7485 - Delivery 31 Jul 2008 - 169 grams	0.13	0.1463	475.8	535.275	The Guardian	S	59.47	I	201
+C10246	31/07/2008	2288679/88220	I	FS	2142.93	Fuel Surcharge	7	7.88	15000.51	16875.57	The Guardian	S	1875.06	I	201
+
+C10247	31/07/2008	2285511/87873	I	CI/1	8841	The Guardian Country - Job 7598 - Delivery 10 Jul 2008 - 25 grams	0.0501	0.0564	442.934	498.301	The Guardian Country	S	55.37	I	201
+C10247	31/07/2008	2285119/87807	I	CI/2	8841	The Guardian Country - Job 7580 - Delivery 03 Jul 2008 - 25 grams	0.0501	0.0564	442.934	498.301	The Guardian Country	S	55.37	I	201
+C10247	31/07/2008	2285119/87807	I	FS	885.868	Fuel Surcharge	7	7.88	6201.08	6976.22	The Guardian Country	S	775.14	I	201
+
+C10248	31/07/2008	2283883/87674	I	CI/1	13704	Valley Voice - Job 7506 - Delivery 03 Jul 2008 - 80 grams	0.0855	0.0962	1171.692	1318.154	Valley Voice	S	146.46	I	201
+C10248	31/07/2008	2283883/87674	I	FS	1171.692	Fuel Surcharge	7	7.88	8201.84	9227.07	Valley Voice	S	1025.23	I	201
+
+C10249	31/07/2008	2283156-87394	I	CI/1	9986	Weekend Sun - Job 7489 - Delivery 25 Jul 2008 - 224 grams	0.16	0.18	1597.76	1797.48	Weekend Sun	S	199.72	I	201
+C10249	31/07/2008	2283156-87394	I	CI/2	9986	Weekend Sun - Job 7486 - Delivery 04 Jul 2008 - 150 grams	0.12	0.135	1198.32	1348.11	Weekend Sun	S	149.79	I	201
+C10249	31/07/2008	2283156-87394	I	CI/3	9986	Weekend Sun - Job 7487 - Delivery 11 Jul 2008 - 300 grams	0.18	0.2025	1797.48	2022.165	Weekend Sun	S	224.68	I	201
+C10249	31/07/2008	2283156-87394	I	CI/4	9986	Weekend Sun - Job 7488 - Delivery 18 Jul 2008 - 140 grams	0.12	0.135	1198.32	1348.11	Weekend Sun	S	149.79	I	201
+C10249	31/07/2008	2283156-87394	I	FS	5791.88	Fuel Surcharge	7	7.88	40543.16	45611.06	Weekend Sun	S	5067.9	I	201
+
+C10250	31/07/2008		I	CI/1	2144	To The Diary Farmer Flyer - Job 7653 - Delivery IOA - 8 grams	0.085	0.0956	182.24	205.02	To The Diary Farmer Flyer	S	22.78	I	238
+C10250	31/07/2008		I	FS	182.24	Fuel Surcharge	7	7.88	1275.68	1435.14	To The Diary Farmer Flyer	S	159.46	I	238
+
+C10251	31/07/2008		I	CI/1	2498	Central Otago Phone Book Covers - Job 7593 - Delivery 12 Jul 2008 - 25 grams	0.07	0.0788	174.86	196.718	Central Otago Phone Book Covers	S	21.86	I	207
+C10251	31/07/2008		I	CI/2	1110	Darfield Phone Book Covers - Job 7660 - Delivery IOA - 25 grams	0.07	0.0788	77.7	87.413	Darfield Phone Book Covers	S	9.71	I	207
+C10251	31/07/2008		I	CI/3	2605	Ellesmere Phone Book Covers - Job 7661 - Delivery IOA - 25 grams	0.07	0.0788	182.35	205.144	Ellesmere Phone Book Covers	S	22.79	I	207
+C10251	31/07/2008		I	CI/4	2716	Yaldhurst / West Melton Phone Book COvers - Job 7662 - Delivery IOA - 25 grams	0.07	0.0788	190.12	213.885	Yaldhurst / West Melton Phone Book COvers	S	23.76	I	207
+C10251	31/07/2008		I	FS	625.03	Fuel Surcharge	7	7.88	4375.21	4922.11	Yaldhurst / West Melton Phone Book COvers	S	546.9	I	207
+
+C10252	31/07/2008		I	CI/1	29650	Coast N Country - Job 7536 - Delivery 11 Jul 2008 - 165 grams	0.095	0.1069	2816.75	3168.844	Coast N Country	S	352.09	I	217
+C10252	31/07/2008		I	FS	2816.75	Fuel Surcharge	7	7.88	19717.25	22181.91	Coast N Country	S	2464.66	I	217
+
+C10253	31/07/2008		I	CI/1	101994	Terra Firma Magazine - Job 7360 - Delivery 28 Jul 2008 - 180 grams	0.185	0.2081	18868.89	21227.501	Terra Firma Magazine	S	2358.61	I	219
+C10253	31/07/2008		I	FS	18868.89	Fuel Surcharge	7	7.88	132082.23	148592.51	Terra Firma Magazine	S	16510.28	I	219
+
+C10254	31/07/2008		I	CI/1	6000	Te Rapa Wholesale Timber - Job 7579 - Delivery IOA - 10 grams	0.07	0.0788	420	472.5	Te Rapa Wholesale Timber	S	52.5	I	234
+C10254	31/07/2008		I	FS	420	Fuel Surcharge	7	7.88	2940	3307.5	Te Rapa Wholesale Timber	S	367.5	I	234
+

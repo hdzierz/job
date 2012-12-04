@@ -1,0 +1,43 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C21793	31/03/2010	118465	I	CI/1	2938.000	Dairy Awards - Field Days - Job 65261 - Delivery 12 Mar 2010 - 5 grams.   	0.0883	0.0993	259.425	Dairy Awards - Field Days	S	32.43	I	233
+
+C21794	31/03/2010	118458	I	CI/1	426.000	Dairy Awards - Field Days Central HBay - Job 65278 - Delivery 15 Mar 2010 - 5 grams.   	0.3521	0.3961	149.995	Dairy Awards - Field Days Central HBay	S	18.75	I	233
+
+C21795	31/03/2010	118456	I	CI/1	468.000	Dairy Awards - Field Days Wairarapa - Job 65276 - Delivery 13 Mar 2010 - 5 grams.   	0.3205	0.3606	149.994	Dairy Awards - Field Days Wairarapa	S	18.75	I	233
+
+C21796	31/03/2010	Need PO	I	CI/1	1480.000	Dairy Industry Awards - Canterbury - Job 65300 - Delivery 25 Mar 2010 - 5 grams.   	0.1014	0.1141	150.072	Dairy Industry Awards - Canterbury	S	18.76	I	233
+
+C21797	31/03/2010	118208	I	CI/1	9803.000	DairyNZ - Body Condition Score Workshops - Job 65067 - Delivery 01 Mar 2010 - 5 grams.   	0.0749	0.0843	734.245	DairyNZ - Body Condition Score Workshops	S	91.78	I	233
+
+C21798	31/03/2010	118593	I	CI/1	900.000	DairyNZ - SMOTY Manawatu - Job 65293 - Delivery 23 Mar 2010 - 5 grams.   	0.1667	0.1875	150.030	DairyNZ - SMOTY Manawatu	S	18.75	I	233
+
+C21799	31/03/2010	118573	I	CI/1	1968.000	DairyNZ - Tight Mangement - Wayne Berry - Job 65290 - Delivery 26 Mar 2010 - 5 grams.   	0.0762	0.0857	149.962	DairyNZ - Tight Mangement - Wayne Berry	S	18.75	I	233
+
+C21800	31/03/2010	118783	I	CI/1	659.000	DairyNZ - Tight Mgmnt Awanui March - Job 65225 - Delivery IOA - 5 grams.   	0.2276	0.2561	149.988	DairyNZ - Tight Mgmnt Awanui March	S	18.75	I	233
+
+C21801	31/03/2010	118789	I	CI/1	250.000	DairyNZ - Tight Mgmnt Galatea March 2010 - Job 65207 - Delivery IOA - 0 grams.   	0.6000	0.6750	150.000	DairyNZ - Tight Mgmnt Galatea March 2010	S	18.75	I	233
+
+C21802	31/03/2010	118245	I	CI/1	378.000	DairyNZ - Tight Mgmnt Greytown - Job 65229 - Delivery IOA - 5 grams.   	0.3968	0.4464	149.990	DairyNZ - Tight Mgmnt Greytown	S	18.75	I	233
+
+C21803	31/03/2010	118789	I	CI/1	1185.000	DairyNZ - Tight Mgmnt Ngatea March 2010 - Job 65206 - Delivery IOA - 5 grams.   	0.1266	0.1424	150.021	DairyNZ - Tight Mgmnt Ngatea March 2010	S	18.75	I	233
+
+C21804	31/03/2010	118304	I	CI/1	1207.000	DairyNZ - Tight Mgmt Awatuna - Job 65228 - Delivery 04 Mar 2010 - 5 grams.   	0.1243	0.1398	150.030	DairyNZ - Tight Mgmt Awatuna	S	18.75	I	233
+
+C21805	31/03/2010	118791 	I	CI/1	1128.000	DairyNZ -Tight Mgmnt Rotorua - Job 65277 - Delivery IOA - 5 grams.   	0.1330	0.1496	150.024	DairyNZ -Tight Mgmnt Rotorua	S	18.75	I	233
+
+C21806	31/03/2010	118792	I	CI/1	1613.000	DairyNZ-BOP Focus Farm Field Day - Job 65316 - Delivery IOA - 5 grams.   	0.0930	0.1046	150.009	DairyNZ-BOP Focus Farm Field Day	S	18.75	I	233
+
+C21807	31/03/2010	118303	I	CI/1	2378.000	Farming Through The Drought - Job 65224 - Delivery IOA - 5 grams.   	0.0749	0.0843	178.112	Farming Through The Drought	S	22.26	I	233
+
+C21808	31/03/2010	118364	I	CI/1	1245.000	Forage Renewal Field Day  - Job 65242 - Delivery 12 Mar 2010 - 5 grams.   	0.1205	0.1356	150.023	Forage Renewal Field Day 	S	18.75	I	233
+
+C21809	31/03/2010	118663	I	CI/1	1592.000	Irrigation Workshops - Job 65317 - Delivery 31 Mar 2010 - 5 grams.   	0.0942	0.1060	149.966	Irrigation Workshops	S	18.75	I	233
+
+C21810	31/03/2010	118380	I	CI/1	1188.000	Pasture Plus Start Up Group - Matamata/Kereone - Job 65243 - Delivery 12 Mar 2010 - 5 grams.   	0.1263	0.1421	150.044	Pasture Plus Start Up Group - Matamata/Kereone	S	18.76	I	233
+
+C21811	31/03/2010	118664	I	CI/1	553.000	South Otago April Groups - Job 65318 - Delivery 30 Mar 2010 - 5 grams.   	0.2622	0.2950	144.997	South Otago April Groups	S	18.13	I	233
+
+C21812	31/03/2010	118620	I	CI/1	1290.000	Tight Management Field Day - Job 65302 - Delivery 25 Mar 2010 - 10 grams.   	0.1163	0.1308	150.027	Tight Management Field Day	S	18.75	I	233
+
+C21813	31/03/2010	118316	I	CI/1	528.000	West Coast Pasture Plus - March - Job 65226 - Delivery 05 Mar 2010 - 5 grams.   	0.2841	0.3196	150.005	West Coast Pasture Plus - March	S	18.75	I	233
+

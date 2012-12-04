@@ -1,0 +1,10 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C21509	31/01/2010	117750	I	CI/1	1103.000	Dealing with the Dry - Job 64801 - Delivery IOA - 10 grams.   	0.1360	0.1530	150.008	Dealing with the Dry	S	18.75	I	233
+C21509	31/01/2010	117800	I	CI/2	2378.000	Farming Through The Drought - Job 64804 - Delivery IOA - 5 grams.   	0.0749	0.0843	178.112	Farming Through The Drought	S	22.26	I	233
+C21509	31/01/2010	117627	I	CI/3	3387.000	Forage Master Workshops - Job 64746 - Delivery 15 Jan 2010 - 5 grams.   	0.0883	0.0993	299.072	Forage Master Workshops	S	37.38	I	233
+C21509	31/01/2010	117769	I	CI/4	5534.000	Forage Renewal - Job 64799 - Delivery IOA - 5 grams.   	0.0749	0.0843	414.497	Forage Renewal	S	51.81	I	233
+C21509	31/01/2010	117761	I	CI/5	999.000	Tight Management Field Day - Job 64796 - Delivery IOA - 5 grams.   	0.1502	0.1690	150.050	Tight Management Field Day	S	18.76	I	233
+C21509	31/01/2010	117770	I	CI/6	2088.000	Tight Management Field Day - Job 64798 - Delivery IOA - 5 grams.   	0.0749	0.0843	156.391	Tight Management Field Day	S	19.55	I	233
+C21509	31/01/2010		I	CI/7	659.000	Tight Management Field Day Awanui - Job 64708 - Delivery 11 Jan 2010 - 5 grams.   	0.2276	0.2561	149.988	Tight Management Field Day Awanui	S	18.75	I	233
+C21509	31/01/2010	117722	I	CI/8	528.000	West Coast Feb Groups - Job 64779 - Delivery 25 Jan 2010 - 15 grams.   	0.2841	0.3196	150.005	West Coast Feb Groups	S	18.75	I	233
+

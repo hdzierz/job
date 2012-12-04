@@ -1,0 +1,4 @@
+ContactName,InvoiceNo,Reference,InvoiceDate,DueDate,Description,Quantity,UnitAmount,Discount,AccountCode,TaxType,TrackingName1,TrackingOption1
+APN Holdings NZ Ltd,C83310,,2012-01-09,2012-11-20,Cambridge Property Guide - Job 70592 - Delivery 11 Jan 2012 - 75 grams. Includes folding fee 0.0100 cents.   ,1.925,95.6,,100,15% GST on income,Division,Circulars
+APN Holdings NZ Ltd,C83310,,2012-01-09,2012-11-20,Cambridge Property Guide - Job 70593 - Delivery 18 Jan 2012 - 75 grams. Includes folding fee 0.0100 cents.   ,1.925,95.6,,100,15% GST on income,Division,Circulars
+

@@ -1,0 +1,1 @@
+"c:\Program Files\Adobe\Reader 9.0\Reader\AcroRd32.exe" /t test.pdf "Canon iR3570/iR4570 PCL5e"

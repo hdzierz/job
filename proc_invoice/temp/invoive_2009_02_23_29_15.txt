@@ -1,0 +1,5 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C11063	23/02/2009		I	CI/1	73267.000	Rural News  - Job 9390 - Delivery 17 Feb 2009 - 150 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	7436.601	Rural News 	S	929.57	I	169
+
+C11064	23/02/2009	2902057	I	CI/1	177085.000	Steelfort Cub Cadet - Job 9370 - Delivery 17 Feb 2009 - 15 grams.  	0.0508	0.0572	8995.918	Steelfort Cub Cadet	S	1124.49	I	169
+

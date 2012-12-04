@@ -1,0 +1,4 @@
+ContactName,InvoiceNo,Reference,InvoiceDate,DueDate,Description,Quantity,UnitAmount,Discount,AccountCode,TaxType,TrackingName1,TrackingOption1
+Allfarm Internationa,C83309,,2012-08-27,2012-11-20,Allfarm Hawkes Bay - Job 72798 - Delivery 06 Sep 2012 - 5 grams.    Includes Linehaul.,0.481,311.8,,100,15% GST on income,Division,Circulars
+Allfarm Internationa,C83309,,2012-08-27,2012-11-20,Allfarm Hawkes Bay - Job 72799 - Delivery 20 Sep 2012 - 5 grams.    Includes Linehaul.,0.481,311.8,,100,15% GST on income,Division,Circulars
+

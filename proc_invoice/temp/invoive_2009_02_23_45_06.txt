@@ -1,0 +1,5 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C11066	28/02/2009	2312997	I	CI/1	62120.000	Four Square Northern - Job 9260 - Delivery 14 Feb 2009 - 10 grams.  	0.0536	0.0603	3329.632	Four Square Northern	S	416.20	I	201
+
+C11067	28/02/2009	2312963	I	CI/1	63780.000	New World Northern  - Job 9256 - Delivery 14 Feb 2009 - 40 grams.  	0.0658	0.0740	4196.724	New World Northern 	S	524.59	I	201
+

@@ -1,0 +1,284 @@
+/*DIV footer*/
+#footer{
+	padding:0.3em;
+	background-color:#21CE39; 
+	text-align:right;
+}
+
+
+body {
+	font-size:0.8em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+
+.logout {
+		font-size:13px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:#65B930;
+		text-decoration:underline;
+		font-weight: bold;
+}
+.logout:hover {
+		font-size:13px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:#000000;
+		text-decoration:underline;
+		font-weight: bold;
+}
+.link {
+        FONT-SIZE: 12px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:#222222;
+		text-decoration:none;
+
+}
+.link:hover {
+        FONT-SIZE: 12px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:#FF9000;
+		text-decoration:underline;
+
+}
+.cclink {
+        FONT-SIZE: 11px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:#FFFFFF;
+		text-decoration:none;
+
+}
+.cclink:hover {
+        FONT-SIZE: 11px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:#10319C;
+		text-decoration:none
+
+}
+
+
+
+/*********************************************************/
+/* STYLES FOR BODY                                       */
+/*********************************************************/
+
+div#content{
+	background-color:#EEEEEE;
+	min-height:50em;
+	height:100%;
+	padding:2em;
+}
+
+div#content h1{
+	background-color: #00CC33;
+	text-align:center;
+	font-size:1.8em;
+}
+
+div#wrapper{
+	padding: 4ex 0.5em 0.5em 0.5em; 
+	height:80%;
+	background-color:#21CE39; 
+	margin:0em 0em 0em 0em;
+}
+
+
+/*********************************************************/
+/* STYLES FOR LOGIN TABLE                                */
+/*********************************************************/
+.login{
+	background-color:#DDDDDD;
+	margin-top:15em;
+	padding:3em;
+}
+.loginh{
+	font-weight:normal;
+	text-align:left;
+}
+.submit{
+	text-align:center;
+}
+
+
+/*********************************************************/
+/* STYLES FOR HEADER                                     */
+/*********************************************************/
+div#title{
+	height:50px;
+}
+div#logopic{
+	float:left;
+}
+div#stopblogopic{
+	float:right;
+}
+
+
+/*********************************************************/
+/* STYLES FOR MENU                                       */
+/*********************************************************/
+#interm{
+	padding:4px 10px 7px 8px;
+	border-top:1px solid #FFFFFF;
+	border-right:1px solid #FFFFFF;
+	border-left:1px solid #FFFFFF;	
+}
+.intermt{
+	color:#FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	text-decoration:none;
+}
+	
+#tab {
+	background-color:#DEDEDE;
+	padding:4px 10px 7px 8px;
+	float:left;
+	border-top:1px solid #8C8C8C;
+	border-right:1px solid #8C8C8C;
+	border-left:1px solid #8C8C8C;
+}
+#activetab {
+	background-color:#21CE39;
+	padding:4px 10px 7px 8px;
+	float:left;
+	border-top:1px solid #65B930;
+	border-right:1px solid #65B930;
+	border-left:1px solid #65B930;
+}
+#tab2 {
+	background-color:#DEDEDE;
+	padding:4px 6px 7px 6px;
+	float:right;
+	border-top:1px solid #8C8C8C;
+	border-right:1px solid #8C8C8C;
+	border-left:1px solid #8C8C8C;
+}
+#activetab2 {
+	background-color:#65B930;
+	padding:4px 6px 7px 6px;
+	float:right;
+	border-top:1px solid #65B930;
+	border-right:1px solid #65B930;
+	border-left:1px solid #65B930;
+}
+.logouta {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#FF0000;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.logouta:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#FF0000;
+	font-weight:bold;
+	text-decoration: underline;
+}
+
+		
+.menulink {
+		font-size:13px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:#FFFFFF;
+		text-decoration:none;
+		font-weight: bold;
+}
+
+.menulink:hover {
+		font-size:13px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:#FFFF00;
+		text-decoration:underline;
+		font-weight: bold;
+}
+.menulink2 {
+		font-size:13px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:#21CE39;
+		text-decoration:none;
+		font-weight: bold;
+}
+.menulink2:hover {
+		font-size:13px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:#000000;
+		text-decoration:underline;
+		font-weight: bold;
+}
+.submenulink {
+		font-size:11px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:#FFFFFF;
+		text-decoration:none;
+
+}
+.submenulink:hover {
+		font-size:11px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:#FFFF00;
+		text-decoration:underline;
+}
+
+/*********************************************************/
+/* STYLES FOR INVOICE  / JOB                             */
+/*********************************************************/
+
+div#job_header{
+	position:absolute;
+	font-weight:bold;
+	left:20em;
+	
+}
+div#job_add_route{
+	position:absolute;
+	left:5em;
+	top:43ex;
+	margin-right:3em;
+}
+
+div#job_show_table{
+	position:absolute;
+	margin-left:3em;
+	left:26em;
+	top:43ex;
+	width:60em;
+}
+
+div#invoice{
+	margin-left:10em;
+	margin-right:3em;
+	padding-top:3em;
+}
+
+table#invoice{
+	background-color: #DE724E;
+}
+
+table#invoice h1{
+	background-color: #DE724E;
+}
+
+
+table#job{
+	background-color: #DDDDDD;
+}
+
+th#addjob_header{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:1.1em;
+	background-color:#999999;
+}
+
+/*********************************************************/
+/* STYLES FOR JOBLISTS ON index.php                      */
+/*********************************************************/
+
+.joblist_head{
+	background-color: #00CC33;
+	text-align:center;
+	font-size:1.8em;
+}

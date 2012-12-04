@@ -1,0 +1,351 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C22405	30/06/2010		I	CI/1	8477.000	AC Pet Foods A4 Flyer - Job 65978 - Delivery IOA - 10 grams.   	0.0749	0.0843	634.927	AC Pet Foods A4 Flyer	S	79.37	I	100
+C22405	30/06/2010		I	CI/2	3955.000	AC Petfoods A5 Flyer - Job 65977 - Delivery IOA - 10 grams.   	0.0749	0.0843	296.230	AC Petfoods A5 Flyer	S	37.03	I	100
+
+C22406	30/06/2010		I	CI/1	2871.000	Concrete Grooving & Grinding - Job 65953 - Delivery IOA - 5 grams.   Includes Linehaul.	0.0883	0.0993	253.509	Concrete Grooving & Grinding	S	31.69	I	364
+
+C22407	30/06/2010		I	CI/1	10849.000	2010 ALLFARMNZ Annual Conference - Job 65946 - Delivery 01 Jun 2010 - 5 grams.   Includes Linehaul.	0.0883	0.0993	957.967	2010 ALLFARMNZ Annual Conference	S	119.75	I	308
+C22407	30/06/2010		I	CI/2	2573.000	2010 ALLFARMNZ Annual Conference - Job 65972 - Delivery 15 Jun 2010 - 5 grams.   Includes Linehaul.	0.0883	0.0993	227.196	2010 ALLFARMNZ Annual Conference	S	28.40	I	308
+
+C22408	30/06/2010		I	CI/1	2991.000	Cambridge Property Guide - Job 65631 - Delivery 02 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C22408	30/06/2010		I	CI/2	2991.000	Cambridge Property Guide - Job 65816 - Delivery 09 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C22408	30/06/2010		I	CI/3	2991.000	Cambridge Property Guide - Job 65817 - Delivery 16 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C22408	30/06/2010		I	CI/4	2991.000	Cambridge Property Guide - Job 65818 - Delivery 23 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+C22408	30/06/2010		I	CI/5	2991.000	Cambridge Property Guide - Job 65819 - Delivery 30 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	253.936	Cambridge Property Guide	S	31.74	I	106
+
+C22409	30/06/2010	Cade Hughes	I	CI/1	2220.000	Hamilton News - Job 65627 - Delivery 03 Jun 2010 - 60 grams. Includes folding fee 0.0100 cents.  	0.0858	0.0965	190.476	Hamilton News	S	23.81	I	106
+C22409	30/06/2010	Cade Hughes	I	CI/2	2220.000	Hamilton News - Job 65782 - Delivery 10 Jun 2010 - 132 grams. Includes folding fee 0.0100 cents.  	0.0959	0.1079	212.898	Hamilton News	S	26.61	I	106
+C22409	30/06/2010	Cade Hughes	I	CI/3	2220.000	Hamilton News - Job 65783 - Delivery 17 Jun 2010 - 60 grams. Includes folding fee 0.0100 cents.  	0.0858	0.0965	190.476	Hamilton News	S	23.81	I	106
+C22409	30/06/2010	Cade Hughes	I	CI/4	2220.000	Hamilton News - Job 65784 - Delivery 24 Jun 2010 - 90 grams. Includes folding fee 0.0100 cents.  	0.0858	0.0965	190.476	Hamilton News	S	23.81	I	106
+
+C22410	30/06/2010	10455	I	CI/1	8092.000	Rural Advocate - Job 65821 - Delivery 18 Jun 2010 - 130 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	773.595	Rural Advocate	S	96.70	I	106
+
+C22411	30/06/2010		I	CI/1	3525.000	Te Puke Times - Job 65650 - Delivery 02 Jun 2010 - 75 grams.   	0.0749	0.0843	264.023	Te Puke Times	S	33.00	I	106
+C22411	30/06/2010		I	CI/2	3525.000	Te Puke Times - Job 65822 - Delivery 09 Jun 2010 - 90 grams.   	0.0749	0.0843	264.023	Te Puke Times	S	33.00	I	106
+C22411	30/06/2010		I	CI/3	3525.000	Te Puke Times - Job 65823 - Delivery 16 Jun 2010 - 100 grams.   	0.0749	0.0843	264.023	Te Puke Times	S	33.00	I	106
+C22411	30/06/2010		I	CI/4	3525.000	Te Puke Times - Job 65824 - Delivery 23 Jun 2010 - 60 grams.   	0.0749	0.0843	264.023	Te Puke Times	S	33.00	I	106
+C22411	30/06/2010		I	CI/5	3525.000	Te Puke Times - Job 65825 - Delivery 30 Jun 2010 - 65 grams.   	0.0749	0.0843	264.023	Te Puke Times	S	33.00	I	106
+
+C22412	30/06/2010	C/HB/Hastings	I	CI/1	3137.000	 Central Hawkes Bay - FLMaps - Job 66025 - Delivery 28 Jun 2010 - 15 grams.   	0.0749	0.0843	234.961	 Central Hawkes Bay - FLMaps	S	29.37	I	107
+
+C22413	30/06/2010	Nelson	I	CI/1	1918.000	Farm Location Maps - Nelson - Job 66079 - Delivery IOA - 100 grams.   	0.0856	0.0963	164.181	Farm Location Maps - Nelson	S	20.52	I	107
+
+C22414	30/06/2010	Sth Canterbury	I	CI/1	2641.000	Reply Paid cards - Sth Canterbury - Job 66024 - Delivery 28 Jun 2010 - 15 grams.   	0.0749	0.0843	197.811	Reply Paid cards - Sth Canterbury	S	24.73	I	107
+
+C22415	30/06/2010		I	CI/1	1044.000	Au Pair Link - Job 65949 - Delivery IOA - 10 grams.   	0.1437	0.1617	150.023	Au Pair Link	S	18.75	I	363
+
+C22416	30/06/2010		I	CI/1	4493.000	Provincial Property Update By Peter Barnett - Job 66013 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0883	0.0993	396.732	Provincial Property Update By Peter Barnett	S	49.59	I	370
+
+C22417	30/06/2010		I	CI/1	1250.000	Bayleys - Preview Magazine - Job 65983 - Delivery IOA - 190 grams.   	0.1124	0.1265	140.500	Bayleys - Preview Magazine	S	17.56	I	368
+
+C22418	30/06/2010		I	CI/1	24246.000	Rural Living - Job 66209 - Delivery 21 Jun 2010 - 66 grams.   Includes Linehaul.	0.0927	0.1043	2247.604	Rural Living	S	280.95	I	256
+C22418	30/06/2010		I	CI/2	14828.000	Rural Living - South - Job 66208 - Delivery 21 Jun 2010 - 109 grams.   Includes Linehaul.	0.1103	0.1241	1635.528	Rural Living - South	S	204.44	I	256
+
+C22419	30/06/2010	119620	I	CI/1	1968.000	DairyNZ - Pasture Plus Group - Job 65815 - Delivery 03 Jun 2010 - 10 grams.   	0.0762	0.0857	149.962	DairyNZ - Pasture Plus Group	S	18.75	I	233
+
+C22420	30/06/2010	119935	I	CI/1	5482.000	DairyNZ Progression Group Biz Start/Biz grow - Job 65981 - Delivery 18 Jun 2010 - 10 grams.   	0.0749	0.0843	410.602	DairyNZ Progression Group Biz Start/Biz grow	S	51.33	I	233
+
+C22421	30/06/2010	119740	I	CI/1	2834.000	DairyNZ-Get Pumping For Spring - Job 65951 - Delivery 10 Jun 2010 - 10 grams.   	0.0749	0.0843	212.267	DairyNZ-Get Pumping For Spring	S	26.53	I	233
+
+C22422	30/06/2010	Michelle Greaves	I	CI/1	1378.000	DairyNZ-Progression Group Flyer - Job 65945 - Delivery IOA - 10 grams.   	0.1089	0.1225	150.064	DairyNZ-Progression Group Flyer	S	18.76	I	233
+
+C22423	30/06/2010	23347	I	CI/1	992.000	DairyNZ-Southland Farm Systems Discussion Group - Job 65952 - Delivery 14 Jun 2010 - 10 grams.   	0.1512	0.1701	149.990	DairyNZ-Southland Farm Systems Discussion Group	S	18.75	I	233
+
+C22424	30/06/2010	120081	I	CI/1	1976.000	Events Notice - Job 66066 - Delivery IOA - 10 grams.   	0.0749	0.0843	148.002	Events Notice	S	18.50	I	233
+
+C22425	30/06/2010	120088	I	CI/1	5482.000	Get Pumping Into Spring - Job 66067 - Delivery 30 Jun 2010 - 10 grams.   	0.0749	0.0843	410.602	Get Pumping Into Spring	S	51.33	I	233
+
+C22426	30/06/2010	119764	I	CI/1	1044.000	Northland Dairy Development Trust Field Days - Job 65957 - Delivery 15 Jun 2010 - 10 grams.   	0.1437	0.1617	150.023	Northland Dairy Development Trust Field Days	S	18.75	I	233
+
+C22427	30/06/2010	120137	I	CI/1	1976.000	Northland Progression Group - Job 66088 - Delivery IOA - 10 grams.   	0.0749	0.0843	148.002	Northland Progression Group	S	18.50	I	233
+
+C22428	30/06/2010		I	CI/1	1245.000	South Waikato Succession Planning - Job 65803 - Delivery 10 Jun 2010 - 10 grams.   	0.1205	0.1356	150.023	South Waikato Succession Planning	S	18.75	I	233
+
+C22429	30/06/2010	119815	I	CI/1	2218.000	Wintering Dairy Cows On Pumice Coutnry - Job 65962 - Delivery 14 Jun 2010 - 10 grams.   	0.0749	0.0843	166.128	Wintering Dairy Cows On Pumice Coutnry	S	20.77	I	233
+
+C22430	30/06/2010		I	CI/1	4096.000	Cambridge Edition - Job 65636 - Delivery 02 Jun 2010 - 122 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	435.405	Cambridge Edition	S	54.43	I	141
+C22430	30/06/2010		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C22430	30/06/2010		I	CI/2	4096.000	Cambridge Edition - Job 65637 - Delivery 09 Jun 2010 - 199 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	457.523	Cambridge Edition	S	57.19	I	141
+C22430	30/06/2010		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C22430	30/06/2010		I	CI/3	4096.000	Cambridge Edition - Job 65828 - Delivery 16 Jun 2010 - 168 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	457.523	Cambridge Edition	S	57.19	I	141
+C22430	30/06/2010		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C22430	30/06/2010		I	CI/4	4096.000	Cambridge Edition - Job 65829 - Delivery 23 Jun 2010 - 244 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1377	501.350	Cambridge Edition	S	62.67	I	141
+C22430	30/06/2010		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C22430	30/06/2010		I	CI/5	4096.000	Cambridge Edition - Job 65830 - Delivery 30 Jun 2010 - 82 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	391.578	Cambridge Edition	S	48.95	I	141
+C22430	30/06/2010		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+
+C22431	30/06/2010		I	CI/1	2975.000	Dargaville District News - Job 65658 - Delivery 02 Jun 2010 - 45 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+C22431	30/06/2010		I	CI/2	2975.000	Dargaville District News - Job 65832 - Delivery 09 Jun 2010 - 40 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+C22431	30/06/2010		I	CI/3	2975.000	Dargaville District News - Job 65833 - Delivery 16 Jun 2010 - 40 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+C22431	30/06/2010		I	CI/4	2975.000	Dargaville District News - Job 65834 - Delivery 23 Jun 2010 - 60 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	284.410	Dargaville District News	S	35.55	I	141
+C22431	30/06/2010		I	CI/5	2975.000	Dargaville District News - Job 65835 - Delivery 30 Jun 2010 - 40 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+
+C22432	30/06/2010		I	CI/1	11345.000	FCN - Thursday - Job 65664 - Delivery 03 Jun 2010 - 164 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	1267.237	FCN - Thursday	S	158.40	I	141
+C22432	30/06/2010		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C22432	30/06/2010		I	CI/2	11345.000	FCN - Thursday - Job 65665 - Delivery 10 Jun 2010 - 191 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	1267.237	FCN - Thursday	S	158.40	I	141
+C22432	30/06/2010		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C22432	30/06/2010		I	CI/3	11345.000	FCN - Thursday - Job 65837 - Delivery 17 Jun 2010 - 174 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	1267.237	FCN - Thursday	S	158.40	I	141
+C22432	30/06/2010		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C22432	30/06/2010		I	CI/4	11345.000	FCN - Thursday - Job 65838 - Delivery 24 Jun 2010 - 163 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	1267.237	FCN - Thursday	S	158.40	I	141
+C22432	30/06/2010		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+
+C22433	30/06/2010		I	CI/1	11345.000	FCN - Tuesday - Job 65669 - Delivery 01 Jun 2010 - 112 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	1205.974	FCN - Tuesday	S	150.75	I	141
+C22433	30/06/2010		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C22433	30/06/2010		I	CI/2	11345.000	FCN - Tuesday - Job 65670 - Delivery 08 Jun 2010 - 59 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	1084.582	FCN - Tuesday	S	135.57	I	141
+C22433	30/06/2010		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C22433	30/06/2010		I	CI/3	11345.000	FCN - Tuesday - Job 65841 - Delivery 15 Jun 2010 - 120 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	1205.974	FCN - Tuesday	S	150.75	I	141
+C22433	30/06/2010		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C22433	30/06/2010		I	CI/4	11345.000	FCN - Tuesday - Job 65842 - Delivery 22 Jun 2010 - 71 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	1084.582	FCN - Tuesday	S	135.57	I	141
+C22433	30/06/2010		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C22433	30/06/2010		I	CI/5	11345.000	FCN - Tuesday - Job 65843 - Delivery 29 Jun 2010 - 60 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	1084.582	FCN - Tuesday	S	135.57	I	141
+C22433	30/06/2010		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+
+C22434	30/06/2010		I	CI/1	2240.000	Matamata Chronicle - Job 65559 - Delivery 02 Jun 2010 - 154 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	250.208	Matamata Chronicle	S	31.28	I	141
+C22434	30/06/2010		I	CI/2	2240.000	Matamata Chronicle - Job 65845 - Delivery 09 Jun 2010 - 235 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1377	274.176	Matamata Chronicle	S	34.27	I	141
+C22434	30/06/2010		I	CI/3	2240.000	Matamata Chronicle - Job 65846 - Delivery 16 Jun 2010 - 200 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	250.208	Matamata Chronicle	S	31.28	I	141
+C22434	30/06/2010		I	CI/4	2240.000	Matamata Chronicle - Job 65847 - Delivery 23 Jun 2010 - 254 grams. Includes folding fee 0.0100 cents.  	0.1331	0.1497	298.144	Matamata Chronicle	S	37.27	I	141
+C22434	30/06/2010		I	CI/5	2240.000	Matamata Chronicle - Job 65848 - Delivery 30 Jun 2010 - 204 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1377	274.176	Matamata Chronicle	S	34.27	I	141
+
+C22435	30/06/2010		I	CI/1	3076.000	Nth Waikato News - Job 65674 - Delivery 02 Jun 2010 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C22435	30/06/2010		I	CI/2	3076.000	Nth Waikato News - Job 65850 - Delivery 09 Jun 2010 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C22435	30/06/2010		I	CI/3	3076.000	Nth Waikato News - Job 65851 - Delivery 16 Jun 2010 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C22435	30/06/2010		I	CI/4	3076.000	Nth Waikato News - Job 65852 - Delivery 23 Jun 2010 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C22435	30/06/2010		I	CI/5	3076.000	Nth Waikato News - Job 65853 - Delivery 30 Jun 2010 - 50 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+
+C22436	30/06/2010		I	CI/1	3807.000	Piako Post - Job 65517 - Delivery 02 Jun 2010 - 98 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	363.949	Piako Post	S	45.49	I	141
+C22436	30/06/2010		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C22436	30/06/2010		I	CI/2	3807.000	Piako Post - Job 65855 - Delivery 09 Jun 2010 - 236 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1377	465.977	Piako Post	S	58.25	I	141
+C22436	30/06/2010		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C22436	30/06/2010		I	CI/3	3807.000	Piako Post - Job 65856 - Delivery 16 Jun 2010 - 209 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1377	465.977	Piako Post	S	58.25	I	141
+C22436	30/06/2010		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C22436	30/06/2010		I	CI/4	3807.000	Piako Post - Job 65857 - Delivery 23 Jun 2010 - 218 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1377	465.977	Piako Post	S	58.25	I	141
+C22436	30/06/2010		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C22436	30/06/2010		I	CI/5	3807.000	Piako Post - Job 65858 - Delivery 30 Jun 2010 - 148 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	404.684	Piako Post	S	50.59	I	141
+C22436	30/06/2010		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+
+C22437	30/06/2010		I	CI/1	3110.000	Rotorua Review - Job 65678 - Delivery 01 Jun 2010 - 70 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	297.316	Rotorua Review	S	37.16	I	141
+C22437	30/06/2010		I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C22437	30/06/2010		I	CI/2	3110.000	Rotorua Review - Job 65679 - Delivery 08 Jun 2010 - 68 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	297.316	Rotorua Review	S	37.16	I	141
+C22437	30/06/2010		I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C22437	30/06/2010		I	CI/3	3110.000	Rotorua Review - Job 65860 - Delivery 15 Jun 2010 - 60 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	297.316	Rotorua Review	S	37.16	I	141
+C22437	30/06/2010		I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C22437	30/06/2010		I	CI/4	3110.000	Rotorua Review - Job 65861 - Delivery 22 Jun 2010 - 73 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	297.316	Rotorua Review	S	37.16	I	141
+C22437	30/06/2010		I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C22437	30/06/2010		I	CI/5	3110.000	Rotorua Review - Job 65862 - Delivery 29 Jun 2010 - 81 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	297.316	Rotorua Review	S	37.16	I	141
+C22437	30/06/2010		I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+
+C22438	30/06/2010		I	CI/1	2432.000	Sth Waikato News - Job 65683 - Delivery 02 Jun 2010 - 115 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	258.522	Sth Waikato News	S	32.32	I	141
+C22438	30/06/2010		I	CI/2	2432.000	Sth Waikato News - Job 65684 - Delivery 09 Jun 2010 - 212 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1377	297.677	Sth Waikato News	S	37.21	I	141
+C22438	30/06/2010		I	CI/3	2432.000	Sth Waikato News - Job 65793 - Delivery 16 Jun 2010 - 140 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	258.522	Sth Waikato News	S	32.32	I	141
+C22438	30/06/2010		I	CI/4	2432.000	Sth Waikato News - Job 65794 - Delivery 23 Jun 2010 - 228 grams. Includes folding fee 0.0100 cents.  	0.1224	0.1377	297.677	Sth Waikato News	S	37.21	I	141
+C22438	30/06/2010		I	CI/5	2432.000	Sth Waikato News - Job 65795 - Delivery 30 Jun 2010 - 158 grams. Includes folding fee 0.0100 cents.  	0.1117	0.1257	271.654	Sth Waikato News	S	33.96	I	141
+
+C22439	30/06/2010	326597	I	CI/1	11270.000	Waikato Farmers Newspaper - Job 65781 - Delivery 14 Jun 2010 - 220 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1919	0.2159	2162.713	Waikato Farmers Newspaper	S	270.34	I	141
+
+C22440	30/06/2010		I	CI/1	7875.000	Whangarei Leader - Job 65688 - Delivery 01 Jun 2010 - 62 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	752.850	Whangarei Leader	S	94.11	I	141
+C22440	30/06/2010		I	CI/2	7875.000	Whangarei Leader - Job 65689 - Delivery 08 Jun 2010 - 70 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	752.850	Whangarei Leader	S	94.11	I	141
+C22440	30/06/2010		I	CI/3	7875.000	Whangarei Leader - Job 65864 - Delivery 15 Jun 2010 - 83 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	752.850	Whangarei Leader	S	94.11	I	141
+C22440	30/06/2010		I	CI/4	7875.000	Whangarei Leader - Job 65865 - Delivery 22 Jun 2010 - 82 grams. Includes folding fee 0.0100 cents.  	0.0956	0.1076	752.850	Whangarei Leader	S	94.11	I	141
+C22440	30/06/2010		I	CI/5	7875.000	Whangarei Leader - Job 65866 - Delivery 29 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0849	0.0955	668.588	Whangarei Leader	S	83.57	I	141
+
+C22441	30/06/2010	16146	I	CI/1	25993.000	FIL The Dairy Farmer Winter 2010 - Job 65732 - Delivery 01 Jun 2010 - 30 grams.   	0.1043	0.1173	2711.070	FIL The Dairy Farmer Winter 2010	S	338.88	I	271
+
+C22442	30/06/2010	7366	I	CI/1	13985.000	Grab A Free Chocolate - Job 65950 - Delivery 08 Jun 2010 - 5 grams.   Includes Linehaul.	0.0883	0.0993	1234.876	Grab A Free Chocolate	S	154.36	I	362
+
+C22443	30/06/2010		I	CI/1	676.000	Hautapu Rural Supplies-Winter Specials - Job 65961 - Delivery IOA - 5 grams.   Includes Linehaul.	0.2219	0.2496	150.004	Hautapu Rural Supplies-Winter Specials	S	18.75	I	353
+
+C22444	30/06/2010	15583	I	CI/1	990.000	Ray Mayne Irrigation - Job 66010 - Delivery 22 Jun 2010 - 10 grams.   	0.1515	0.1704	149.985	Ray Mayne Irrigation	S	18.75	I	237
+
+C22445	30/06/2010		I	CI/1	1000.000	North West Engineering - Job 65954 - Delivery IOA - 15 grams.   	0.1500	0.1687	150.000	North West Engineering	S	18.75	I	281
+
+C22446	30/06/2010		I	CI/1	4095.000	Look  - Job 65718 - Delivery 04 Jun 2010 - 80 grams.   	0.0762	0.0857	312.039	Look 	S	39.00	I	349
+
+C22447	30/06/2010		I	CI/1	528.000	Livestock Exchange Newsletter - Job 66014 - Delivery IOA - 5 grams.   	0.1520	0.1710	80.256	Livestock Exchange Newsletter	S	10.03	I	252
+
+C22448	30/06/2010		I	CI/1	830.000	Hibiscus Matters - Job 65808 - Delivery 03 Jun 2010 - 35 grams.   	0.0904	0.1017	75.032	Hibiscus Matters	S	9.38	I	240
+C22448	30/06/2010		I	CI/2	830.000	Hibiscus Matters - Job 65970 - Delivery 17 Jun 2010 - 35 grams.   	0.0904	0.1017	75.032	Hibiscus Matters	S	9.38	I	240
+
+C22449	30/06/2010	201005054	I	CI/1	88737.000	Steelfort Mystery Creek - Job 65773 - Delivery 08 Jun 2010 - 12 grams.   	0.0508	0.0572	4507.840	Steelfort Mystery Creek	S	563.48	I	169
+
+C22450	30/06/2010		I	CI/1	9409.000	Wall Planners - Job 65969 - Delivery IOA - 40 grams.   	0.1043	0.1173	981.359	Wall Planners	S	122.67	I	177
+
+C22451	30/06/2010	26165	I	CI/1	57811.000	Eprinex Means More Milk - Job 66068 - Delivery IOA - 6 grams.   	0.0910	0.1024	5260.801	Eprinex Means More Milk	S	657.60	I	178
+
+C22452	30/06/2010	26134	I	CI/1	37912.000	Make Sure It's Only Lambs That Feed Off Your Ewes - Job 65948 - Delivery IOA - 16 grams.   Includes Linehaul.	0.0910	0.1024	3449.992	Make Sure It's Only Lambs That Feed Off Your Ewes	S	431.25	I	178
+
+C22453	30/06/2010		I	CI/1	2160.000	Mobile Vet - Job 65810 - Delivery IOA - 25 grams.   	0.0749	0.0843	161.784	Mobile Vet	S	20.22	I	361
+
+C22454	30/06/2010		I	CI/1	4530.000	Kaipara Lifestyler - Job 65610 - Delivery 03 Jun 2010 - 75 grams.   	0.0750	0.0844	339.750	Kaipara Lifestyler	S	42.47	I	257
+C22454	30/06/2010		I	CI/2	4530.000	Kaipara Lifestyler - Job 65611 - Delivery 10 Jun 2010 - 75 grams.   	0.0750	0.0844	339.750	Kaipara Lifestyler	S	42.47	I	257
+C22454	30/06/2010		I	CI/3	4530.000	Kaipara Lifestyler - Job 65774 - Delivery 17 Jun 2010 - 75 grams.   	0.0750	0.0844	339.750	Kaipara Lifestyler	S	42.47	I	257
+C22454	30/06/2010		I	CI/4	4530.000	Kaipara Lifestyler - Job 65775 - Delivery 24 Jun 2010 - 75 grams.   	0.0750	0.0844	339.750	Kaipara Lifestyler	S	42.47	I	257
+
+C22455	30/06/2010		I	CI/1	33077.000	Northland Farming Lifestyler - Job 65868 - Delivery 30 Jun 2010 - 71 grams.   	0.0927	0.1043	3066.238	Northland Farming Lifestyler	S	383.28	I	257
+
+C22456	30/06/2010		I	CI/1	2450.000	Implementation - Job 66012 - Delivery IOA - 95 grams.   	0.0856	0.0963	209.720	Implementation	S	26.22	I	186
+
+C22457	30/06/2010		I	CI/1	5346.000	Norwood Ag Mag - Job 65991 - Delivery IOA - 49 grams.   Includes Linehaul.	0.0990	0.1114	529.254	Norwood Ag Mag	S	66.16	I	369
+
+C22458	30/06/2010		I	CI/1	2525.000	The World of New Holland - Job 65982 - Delivery IOA - 58 grams.   Includes Linehaul.	0.1231	0.1385	310.828	The World of New Holland	S	38.85	I	367
+
+C22459	30/06/2010	Dean Fowler	I	CI/1	6460.000	Cut A Fieldays Deal - Job 65955 - Delivery IOA - 10 grams.   	0.0749	0.0843	483.854	Cut A Fieldays Deal	S	60.48	I	365
+
+C22460	30/06/2010	N-2248910	I	CI/1	16582.000	Cydecton Sheep Flyer - Job 65739 - Delivery 22 Jun 2010 - 25 grams.   Includes Linehaul.	0.0883	0.0993	1464.191	Cydecton Sheep Flyer	S	183.02	I	235
+
+C22461	30/06/2010	2371911	I	CI/1	24992.000	Baileys Fieldays - Job 65973 - Delivery IOA - 270 grams.   Includes Linehaul.	0.1969	0.2215	4920.925	Baileys Fieldays	S	615.12	I	201
+
+C22462	30/06/2010	2374037	I	CI/1	5808.000	Bay Weekend - Job 65602 - Delivery 05 Jun 2010 - 127 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	617.390	Bay Weekend	S	77.17	I	201
+C22462	30/06/2010	2374037	I	CI/2	5808.000	Bay Weekend - Job 65875 - Delivery 12 Jun 2010 - 100 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	527.366	Bay Weekend	S	65.92	I	201
+C22462	30/06/2010	2374037	I	CI/3	5808.000	Bay Weekend - Job 65876 - Delivery 19 Jun 2010 - 129 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	617.390	Bay Weekend	S	77.17	I	201
+C22462	30/06/2010	2374037	I	CI/4	5808.000	Bay Weekend - Job 65877 - Delivery 26 Jun 2010 - 130 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	617.390	Bay Weekend	S	77.17	I	201
+
+C22463	30/06/2010	2372869	I	CI/1	1260.000	Bupa - Job 66009 - Delivery 19 Jun 2010 - 15 grams.   Includes Linehaul.	0.1191	0.1340	150.066	Bupa	S	18.76	I	201
+
+C22464	30/06/2010	2373974	I	CI/1	1816.000	Canty Green Waste - Job 66087 - Delivery IOA - 15 grams.   Includes Linehaul.	0.0615	0.0692	111.684	Canty Green Waste	S	13.96	I	201
+
+C22465	30/06/2010	2374029	I	CI/1	2772.000	Continuing Education - Job 66038 - Delivery 30 Jun 2010 - 110 grams.   	0.1163	0.1308	322.384	Continuing Education	S	40.30	I	201
+
+C22466	30/06/2010	2372313	I	CI/1	5045.000	Curtain Studio - Job 65966 - Delivery IOA - 15 grams.   Includes Linehaul.	0.0615	0.0692	310.268	Curtain Studio	S	38.78	I	201
+
+C22467	30/06/2010	2372014	I	CI/1	4274.000	Evolution Cycles - Half Price Bikes - Job 65959 - Delivery 10 Jun 2010 - 10 grams.   	0.0536	0.0603	229.086	Evolution Cycles - Half Price Bikes	S	28.64	I	201
+
+C22468	30/06/2010	2373003	I	CI/1	4274.000	Evolution Cycles - Half Price Bikes - Job 65984 - Delivery 22 Jun 2010 - 10 grams.   	0.0536	0.0603	229.086	Evolution Cycles - Half Price Bikes	S	28.64	I	201
+
+C22469	30/06/2010	2371022	I	CI/1	60298.000	Four Square Northern - Job 65576 - Delivery 05 Jun 2010 - 10 grams.   Includes Linehaul.	0.0615	0.0692	3708.327	Four Square Northern	S	463.54	I	201
+
+C22470	30/06/2010	2372146	I	CI/1	60298.000	Four Square Northern - Job 65768 - Delivery 12 Jun 2010 - 10 grams.   Includes Linehaul.	0.0615	0.0692	3708.327	Four Square Northern	S	463.54	I	201
+
+C22471	30/06/2010	2372754	I	CI/1	60298.000	Four Square Northern - Job 65769 - Delivery 19 Jun 2010 - 10 grams.   Includes Linehaul.	0.0615	0.0692	3708.327	Four Square Northern	S	463.54	I	201
+
+C22472	30/06/2010	2372763	I	CI/1	60298.000	Four Square Northern - Job 65770 - Delivery 26 Jun 2010 - 10 grams.   Includes Linehaul.	0.0615	0.0692	3708.327	Four Square Northern	S	463.54	I	201
+
+C22473	30/06/2010	2372072	I	CI/1	2625.000	Gold Buyers Ltd - Job 65965 - Delivery IOA - 15 grams.   Includes Linehaul.	0.0615	0.0692	161.438	Gold Buyers Ltd	S	20.18	I	201
+
+C22474	30/06/2010	2373150	I	CI/1	8769.000	Guardian Country - Job 65879 - Delivery 17 Jun 2010 - 25 grams.   	0.0536	0.0603	470.018	Guardian Country	S	58.75	I	201
+
+C22475	30/06/2010	2370344	I	CI/1	3715.000	Guardian Newspaper - Job 65564 - Delivery 03 Jun 2010 - 69 grams.   	0.0808	0.0909	300.172	Guardian Newspaper	S	37.52	I	201
+C22475	30/06/2010	2370344	I	CI/2	3715.000	Guardian Newspaper - Job 65880 - Delivery 10 Jun 2010 - 69 grams.   	0.0808	0.0909	300.172	Guardian Newspaper	S	37.52	I	201
+C22475	30/06/2010	2370344	I	CI/3	3715.000	Guardian Newspaper - Job 65881 - Delivery 17 Jun 2010 - 118 grams.   	0.0963	0.1083	357.755	Guardian Newspaper	S	44.72	I	201
+C22475	30/06/2010	2370344	I	CI/4	3715.000	Guardian Newspaper - Job 65882 - Delivery 24 Jun 2010 - 64 grams.   	0.0808	0.0909	300.172	Guardian Newspaper	S	37.52	I	201
+
+C22476	30/06/2010	2370342	I	CI/1	6511.000	Hawkesbay Country Scene - Job 65885 - Delivery 30 Jun 2010 - 53 grams.   	0.0808	0.0909	526.089	Hawkesbay Country Scene	S	65.76	I	201
+
+C22477	30/06/2010	2370989	I	CI/1	19470.000	Healthfirst - Job 65944 - Delivery 05 Jun 2010 - 32 grams.   Includes Linehaul.	0.0679	0.0764	1322.013	Healthfirst	S	165.25	I	201
+
+C22478	30/06/2010	2373021	I	CI/1	1440.000	Lake Taupo Property Press - Job 65693 - Delivery 03 Jun 2010 - 202 grams. Includes folding fee 0.0100 cents.  	0.1384	0.1557	199.296	Lake Taupo Property Press	S	24.91	I	201
+C22478	30/06/2010	2373021	I	CI/2	1440.000	Lake Taupo Property Press - Job 65694 - Delivery 17 Jun 2010 - 175 grams. Includes folding fee 0.0100 cents.  	0.0212	0.0239	30.528	Lake Taupo Property Press	S	3.82	I	201
+
+C22479	30/06/2010	2370906	I	CI/1	1495.000	Metropol - Job 65533 - Delivery 10 Jun 2010 - 145 grams. Includes folding fee 0.0100 cents.  	0.1170	0.1316	174.915	Metropol	S	21.86	I	201
+C22479	30/06/2010	2370906	I	CI/2	1495.000	Metropol - Job 65886 - Delivery 24 Jun 2010 - 145 grams. Includes folding fee 0.0100 cents.  	0.1170	0.1316	174.915	Metropol	S	21.86	I	201
+
+C22480	30/06/2010	2340901	I	CI/1	3861.000	Mid Canterbury Herald - Job 65541 - Delivery 02 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	350.579	Mid Canterbury Herald	S	43.82	I	201
+C22480	30/06/2010	2340901	I	CI/2	3861.000	Mid Canterbury Herald - Job 65888 - Delivery 09 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	350.579	Mid Canterbury Herald	S	43.82	I	201
+C22480	30/06/2010	2340901	I	CI/3	3861.000	Mid Canterbury Herald - Job 65889 - Delivery 16 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	350.579	Mid Canterbury Herald	S	43.82	I	201
+C22480	30/06/2010	2340901	I	CI/4	3861.000	Mid Canterbury Herald - Job 65890 - Delivery 23 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	350.579	Mid Canterbury Herald	S	43.82	I	201
+C22480	30/06/2010	2340901	I	CI/5	3861.000	Mid Canterbury Herald - Job 65891 - Delivery 30 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	350.579	Mid Canterbury Herald	S	43.82	I	201
+
+C22481	30/06/2010	2370341	I	CI/1	1560.000	Napier Mail - Job 65554 - Delivery 02 Jun 2010 - 76 grams. Includes folding fee 0.0100 cents.  	0.0962	0.1082	150.072	Napier Mail	S	18.76	I	201
+C22481	30/06/2010	2370341	I	CI/2	1560.000	Napier Mail - Job 65893 - Delivery 09 Jun 2010 - 81 grams. Includes folding fee 0.0100 cents.  	0.0962	0.1082	150.072	Napier Mail	S	18.76	I	201
+C22481	30/06/2010	2370341	I	CI/3	1560.000	Napier Mail - Job 65894 - Delivery 16 Jun 2010 - 75 grams. Includes folding fee 0.0100 cents.  	0.0962	0.1082	150.072	Napier Mail	S	18.76	I	201
+C22481	30/06/2010	2370341	I	CI/4	1560.000	Napier Mail - Job 65895 - Delivery 23 Jun 2010 - 105 grams. Includes folding fee 0.0100 cents.  	0.0962	0.1082	150.072	Napier Mail	S	18.76	I	201
+C22481	30/06/2010	2370341	I	CI/5	1560.000	Napier Mail - Job 65896 - Delivery 30 Jun 2010 - 65 grams. Includes folding fee 0.0100 cents.  	0.0962	0.1082	150.072	Napier Mail	S	18.76	I	201
+
+C22482	30/06/2010	2371011	I	CI/1	79564.000	New World Northern - Job 65571 - Delivery 05 Jun 2010 - 31 grams.   Includes Linehaul.	0.0679	0.0764	5402.396	New World Northern	S	675.30	I	201
+
+C22483	30/06/2010	2372157	I	CI/1	79564.000	New World Northern - Job 65764 - Delivery 12 Jun 2010 - 31 grams.   Includes Linehaul.	0.0679	0.0764	5402.396	New World Northern	S	675.30	I	201
+
+C22484	30/06/2010	2372701	I	CI/1	79564.000	New World Northern - Job 65765 - Delivery 19 Jun 2010 - 31 grams.   Includes Linehaul.	0.0679	0.0764	5402.396	New World Northern	S	675.30	I	201
+
+C22485	30/06/2010	2372703	I	CI/1	79564.000	New World Northern - Job 65766 - Delivery 26 Jun 2010 - 31 grams.   Includes Linehaul.	0.0679	0.0764	5402.396	New World Northern	S	675.30	I	201
+
+C22486	30/06/2010	2370493	I	CI/1	7577.000	North Canterbury News - Job 65525 - Delivery 01 Jun 2010 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	687.992	North Canterbury News	S	86.00	I	201
+C22486	30/06/2010	2370493	I	CI/2	7577.000	North Canterbury News - Job 65898 - Delivery 08 Jun 2010 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	687.992	North Canterbury News	S	86.00	I	201
+C22486	30/06/2010	2370493	I	CI/3	7703.000	North Canterbury News - Job 65899 - Delivery 15 Jun 2010 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	699.432	North Canterbury News	S	87.43	I	201
+C22486	30/06/2010	2370493	I	CI/4	7703.000	North Canterbury News - Job 65900 - Delivery 22 Jun 2010 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	699.432	North Canterbury News	S	87.43	I	201
+C22486	30/06/2010	2370493	I	CI/5	7703.000	North Canterbury News - Job 65901 - Delivery 29 Jun 2010 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	699.432	North Canterbury News	S	87.43	I	201
+
+C22487	30/06/2010	2372037	I	CI/1	3234.000	Office Furniture First - Job 65963 - Delivery IOA - 15 grams.   Includes Linehaul.	0.0615	0.0692	198.891	Office Furniture First	S	24.86	I	201
+
+C22488	30/06/2010	2373183	I	CI/1	82709.000	Pak N Save - Job 66008 - Delivery 23 Jun 2010 - 15 grams.   Includes Linehaul.	0.0585	0.0658	4838.477	Pak N Save	S	604.81	I	201
+
+C22489	30/06/2010	2374188	I	CI/1	82709.000	Pak N Save - Job 66060 - Delivery 30 Jun 2010 - 15 grams.   Includes Linehaul.	0.0585	0.0658	4838.477	Pak N Save	S	604.81	I	201
+
+C22490	30/06/2010	2370340	I	CI/1	800.000	Rangitikei Mail - Job 65549 - Delivery 01 Jun 2010 - 54 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2109	150.000	Rangitikei Mail	S	18.75	I	201
+C22490	30/06/2010	2370340	I	CI/2	800.000	Rangitikei Mail - Job 65903 - Delivery 08 Jun 2010 - 43 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2109	150.000	Rangitikei Mail	S	18.75	I	201
+C22490	30/06/2010	2370340	I	CI/3	800.000	Rangitikei Mail - Job 65904 - Delivery 15 Jun 2010 - 65 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2109	150.000	Rangitikei Mail	S	18.75	I	201
+C22490	30/06/2010	2370340	I	CI/4	800.000	Rangitikei Mail - Job 65905 - Delivery 22 Jun 2010 - 54 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2109	150.000	Rangitikei Mail	S	18.75	I	201
+C22490	30/06/2010	2370340	I	CI/5	800.000	Rangitikei Mail - Job 65906 - Delivery 29 Jun 2010 - 65 grams. Includes folding fee 0.0100 cents.  	0.1875	0.2109	150.000	Rangitikei Mail	S	18.75	I	201
+
+C22491	30/06/2010	2370495	I	CI/1	6682.000	Selwyn Times - Job 65521 - Delivery 01 Jun 2010 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	606.726	Selwyn Times	S	75.84	I	201
+C22491	30/06/2010	2370495	I	CI/2	6682.000	Selwyn Times - Job 65908 - Delivery 08 Jun 2010 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	606.726	Selwyn Times	S	75.84	I	201
+C22491	30/06/2010	2370495	I	CI/3	6682.000	Selwyn Times - Job 65909 - Delivery 15 Jun 2010 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	606.726	Selwyn Times	S	75.84	I	201
+C22491	30/06/2010	2370495	I	CI/4	6682.000	Selwyn Times - Job 65910 - Delivery 22 Jun 2010 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	606.726	Selwyn Times	S	75.84	I	201
+C22491	30/06/2010	2370495	I	CI/5	6682.000	Selwyn Times - Job 65911 - Delivery 29 Jun 2010 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	606.726	Selwyn Times	S	75.84	I	201
+
+C22492	30/06/2010	2373015	I	CI/1	16023.000	Smith City - Job 65987 - Delivery 22 Jun 2010 - 30 grams.   Includes Linehaul.	0.0679	0.0764	1087.962	Smith City	S	136.00	I	201
+
+C22493	30/06/2010	2367362	I	CI/1	5206.000	The High Country Herald - Job 65758 - Delivery 02 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	472.705	The High Country Herald	S	59.09	I	201
+C22493	30/06/2010	2367362	I	CI/2	5206.000	The High Country Herald - Job 65759 - Delivery 09 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	472.705	The High Country Herald	S	59.09	I	201
+C22493	30/06/2010	2367362	I	CI/3	5206.000	The High Country Herald - Job 65760 - Delivery 16 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	472.705	The High Country Herald	S	59.09	I	201
+C22493	30/06/2010	2367362	I	CI/4	5206.000	The High Country Herald - Job 65761 - Delivery 23 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	472.705	The High Country Herald	S	59.09	I	201
+C22493	30/06/2010	2367362	I	CI/5	5206.000	The High Country Herald - Job 65762 - Delivery 30 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	472.705	The High Country Herald	S	59.09	I	201
+
+C22494	30/06/2010	2370345	I	CI/1	3135.000	The Professionals Feilding - Job 65912 - Delivery 17 Jun 2010 - 20 grams.   	0.0536	0.0603	168.036	The Professionals Feilding	S	21.00	I	201
+
+C22495	30/06/2010	2370908	I	CI/1	2480.000	The Waitaki Herald Weekender - Job 65529 - Delivery 04 Jun 2010 - 45 grams. Includes folding fee 0.0100 cents.  	0.0758	0.0853	187.984	The Waitaki Herald Weekender	S	23.50	I	201
+C22495	30/06/2010	2370908	I	CI/2	2480.000	The Waitaki Herald Weekender - Job 65913 - Delivery 11 Jun 2010 - 40 grams. Includes folding fee 0.0100 cents.  	0.0758	0.0853	187.984	The Waitaki Herald Weekender	S	23.50	I	201
+C22495	30/06/2010	2370908	I	CI/3	2480.000	The Waitaki Herald Weekender - Job 65914 - Delivery 18 Jun 2010 - 45 grams. Includes folding fee 0.0100 cents.  	0.0758	0.0853	187.984	The Waitaki Herald Weekender	S	23.50	I	201
+C22495	30/06/2010	2370908	I	CI/4	2480.000	The Waitaki Herald Weekender - Job 65915 - Delivery 25 Jun 2010 - 45 grams. Includes folding fee 0.0100 cents.  	0.0758	0.0853	187.984	The Waitaki Herald Weekender	S	23.50	I	201
+
+C22496	30/06/2010	2370898	I	CI/1	2480.000	Waitaki Herald - Job 65537 - Delivery 02 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	225.184	Waitaki Herald	S	28.15	I	201
+C22496	30/06/2010	2370898	I	CI/2	2480.000	Waitaki Herald - Job 65918 - Delivery 09 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	225.184	Waitaki Herald	S	28.15	I	201
+C22496	30/06/2010	2370898	I	CI/3	2480.000	Waitaki Herald - Job 65919 - Delivery 16 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	225.184	Waitaki Herald	S	28.15	I	201
+C22496	30/06/2010	2370898	I	CI/4	2480.000	Waitaki Herald - Job 65920 - Delivery 23 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	225.184	Waitaki Herald	S	28.15	I	201
+C22496	30/06/2010	2370898	I	CI/5	2480.000	Waitaki Herald - Job 65921 - Delivery 30 Jun 2010 - 80 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	225.184	Waitaki Herald	S	28.15	I	201
+
+C22497	30/06/2010	2373018	I	CI/1	10550.000	Weekend Sun - Job 65700 - Delivery 04 Jun 2010 - 136 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1360	0.1530	1434.800	Weekend Sun	S	179.35	I	201
+C22497	30/06/2010	2373018	I	CI/2	10550.000	Weekend Sun - Job 65701 - Delivery 11 Jun 2010 - 142 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1360	0.1530	1434.800	Weekend Sun	S	179.35	I	201
+C22497	30/06/2010	2373018	I	CI/3	10550.000	Weekend Sun - Job 65811 - Delivery 18 Jun 2010 - 166 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1577	0.1774	1663.735	Weekend Sun	S	207.97	I	201
+C22497	30/06/2010	2373018	I	CI/4	10550.000	Weekend Sun - Job 65812 - Delivery 25 Jun 2010 - 160 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.1577	0.1774	1663.735	Weekend Sun	S	207.97	I	201
+
+C22498	30/06/2010	2373023	I	CI/1	9200.000	Whangarei Report - Job 65584 - Delivery 03 Jun 2010 - 55 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	835.360	Whangarei Report	S	104.42	I	201
+C22498	30/06/2010	2373023	I	CI/2	9200.000	Whangarei Report - Job 65923 - Delivery 10 Jun 2010 - 101 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	977.960	Whangarei Report	S	122.24	I	201
+C22498	30/06/2010	2373023	I	CI/3	9200.000	Whangarei Report - Job 65924 - Delivery 17 Jun 2010 - 66 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	835.360	Whangarei Report	S	104.42	I	201
+C22498	30/06/2010	2373023	I	CI/4	9200.000	Whangarei Report - Job 65925 - Delivery 24 Jun 2010 - 77 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	835.360	Whangarei Report	S	104.42	I	201
+
+C22499	30/06/2010	2374039	I	CI/1	3966.000	Your Cambridge News - Job 65579 - Delivery 11 Jun 2010 - 124 grams. Includes folding fee 0.0100 cents.  	0.1063	0.1196	421.586	Your Cambridge News	S	52.70	I	201
+C22499	30/06/2010	2374039	I	CI/2	3966.000	Your Cambridge News - Job 65580 - Delivery 25 Jun 2010 - 76 grams. Includes folding fee 0.0100 cents.  	0.0908	0.1022	360.113	Your Cambridge News	S	45.01	I	201
+
+C22500	30/06/2010		I	CI/1	3124.000	P/P - BOP 2 - Job 65928 - Delivery 04 Jun 2010 - 179 grams. Includes folding fee 0.0100 cents.  	0.1200	0.1350	374.880	P/P - BOP 2	S	46.86	I	323
+C22500	30/06/2010		I	CI/2	3124.000	P/P - BOP 2 - Job 65929 - Delivery 18 Jun 2010 - 169 grams. Includes folding fee 0.0100 cents.  	0.1200	0.1350	374.880	P/P - BOP 2	S	46.86	I	323
+
+C22501	30/06/2010		I	CI/1	460.000	P/P - Eastern 1 - Job 65620 - Delivery 11 Jun 2010 - 279 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.3361	0.3781	154.606	P/P - Eastern 1	S	19.33	I	323
+C22501	30/06/2010		I	CI/2	460.000	P/P - Eastern 1 - Job 65621 - Delivery 25 Jun 2010 - 367 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.3361	0.3781	154.606	P/P - Eastern 1	S	19.33	I	323
+C22501	30/06/2010		I	CI/3	371.000	P/P - Eastern 2 - Job 65411 - Delivery 04 Jun 2010 - 267 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.4143	0.4661	153.705	P/P - Eastern 2	S	19.21	I	323
+C22501	30/06/2010		I	CI/4	371.000	P/P - Eastern 2 - Job 65932 - Delivery 18 Jun 2010 - 255 grams. Includes folding fee 0.0100 cents.  Includes Linehaul.	0.4143	0.4661	153.705	P/P - Eastern 2	S	19.21	I	323
+
+C22502	30/06/2010		I	CI/1	2670.000	P/P - Lakes District - Job 65935 - Delivery 04 Jun 2010 - 187 grams. Includes folding fee 0.0100 cents.  	0.1200	0.1350	320.400	P/P - Lakes District	S	40.05	I	323
+C22502	30/06/2010		I	CI/2	2670.000	P/P - Lakes District - Job 65936 - Delivery 18 Jun 2010 - 165 grams. Includes folding fee 0.0100 cents.  	0.1200	0.1350	320.400	P/P - Lakes District	S	40.05	I	323
+
+C22503	30/06/2010		I	CI/1	2870.000	P/P - Manawatu1 - Job 65511 - Delivery 05 Jun 2010 - 264 grams. Includes folding fee 0.0100 cents.  	0.1500	0.1687	430.500	P/P - Manawatu1	S	53.81	I	323
+C22503	30/06/2010		I	CI/2	2870.000	P/P - Manawatu1 - Job 65939 - Delivery 19 Jun 2010 - 254 grams. Includes folding fee 0.0100 cents.  	0.1500	0.1687	430.500	P/P - Manawatu1	S	53.81	I	323
+C22503	30/06/2010		I	CI/3	3788.000	P/P - Manawatu2 - Job 65705 - Delivery 12 Jun 2010 - 264 grams. Includes folding fee 0.0100 cents.  	0.1500	0.1687	568.200	P/P - Manawatu2	S	71.02	I	323
+C22503	30/06/2010		I	CI/4	3788.000	P/P - Manawatu2 - Job 65706 - Delivery 26 Jun 2010 - 264 grams. Includes folding fee 0.0100 cents.  	0.1500	0.1687	568.200	P/P - Manawatu2	S	71.02	I	323
+
+C22504	30/06/2010		I	CI/1	4717.000	P/P BOP 1 - Job 65709 - Delivery 11 Jun 2010 - 179 grams. Includes folding fee 0.0100 cents.  	0.1200	0.1350	566.040	P/P BOP 1	S	70.76	I	323
+C22504	30/06/2010		I	CI/2	4717.000	P/P BOP 1 - Job 65710 - Delivery 25 Jun 2010 - 179 grams. Includes folding fee 0.0100 cents.  	0.1200	0.1350	566.040	P/P BOP 1	S	70.76	I	323
+
+C22505	30/06/2010		I	CI/1	31073.000	Nilvax - For Every Extra Lamb..... - Job 65971 - Delivery IOA - 41 grams.   Includes Linehaul.	0.0990	0.1114	3076.227	Nilvax - For Every Extra Lamb.....	S	384.53	I	360
+
+C22506	30/06/2010		I	CI/1	1847.000	Maungahina Bull Sale - Job 65964 - Delivery IOA - 5 grams.   	0.0813	0.0915	150.161	Maungahina Bull Sale	S	18.77	I	350
+
+C22507	30/06/2010		I	CI/1	4143.000	Foxton Machinery - Job 65985 - Delivery IOA - 9 grams.   Includes Linehaul.	0.0883	0.0993	365.827	Foxton Machinery	S	45.73	I	278
+
+C22508	30/06/2010		I	CI/1	28188.000	Coast N Country - Job 65652 - Delivery 03 Jun 2010 - 179 grams.   	0.1017	0.1144	2866.720	Coast N Country	S	358.34	I	217
+
+C22509	30/06/2010	AGITO 0610-1	I	CI/1	3638.000	AGITO - North Canterbury - Job 65960 - Delivery IOA - 10 grams.   Includes Linehaul.	0.0883	0.0993	321.235	AGITO - North Canterbury	S	40.15	I	307
+
+C22510	30/06/2010	TKCF0610	I	CI/1	7195.000	Allied Farmers June Catalogue - Job 65804 - Delivery 01 Jun 2010 - 72 grams.   Includes Linehaul.	0.1231	0.1385	885.705	Allied Farmers June Catalogue	S	110.71	I	307
+
+C22511	30/06/2010		I	CI/1	4985.000	Willams Contracting - Job 65956 - Delivery IOA - 5 grams.   	0.0749	0.0843	373.376	Willams Contracting	S	46.67	I	325
+

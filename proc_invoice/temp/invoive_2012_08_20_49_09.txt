@@ -1,0 +1,37 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Total_GST_Inc	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C82754	17/08/2012	2444057	I	CI/1	10682.000	Bayleys Canty Country Brochure - Job 72618 - Delivery IOA - 20 grams.   Includes Linehaul.	0.0615	0.0707	656.94	755.48	Bayleys Canty Country Brochure	S	98.54	I	201
+
+C82755	17/08/2012	2439609	I	CI/1	7514.000	Bond and Bond - Job 72090 - Delivery 07 Aug 2012 - 25 grams.   Includes Linehaul.	0.0615	0.0707	462.11	531.43	Bond and Bond	S	69.32	I	201
+
+C82756	17/08/2012	2442753	I	CI/1	4747.000	Bond and Bond Napier/Hastings - Job 72426 - Delivery 07 Aug 2012 - 20 grams.   Includes Linehaul.	0.0615	0.0707	291.94	335.73	Bond and Bond Napier/Hastings	S	43.79	I	201
+
+C82757	17/08/2012	2443495	I	CI/1	28585.000	ECAN LWRP Public Notice Bylaw Letter Envelopes - Job 72406 - Delivery 13 Aug 2012 - 20 grams.   Includes Linehaul.	0.0615	0.0707	1757.98	2021.68	ECAN LWRP Public Notice Bylaw Letter Envelopes	S	263.70	I	201
+
+C82758	17/08/2012	2442341	I	CI/1	55687.000	Four Square Northern - Job 72278 - Delivery 04 Aug 2012 - 20 grams.   Includes Linehaul.	0.0615	0.0707	3424.75	3938.46	Four Square Northern	S	513.71	I	201
+
+C82759	17/08/2012	2442493	I	CI/1	55687.000	Four Square Northern - Job 72279 - Delivery 11 Aug 2012 - 20 grams.   Includes Linehaul.	0.0615	0.0707	3424.75	3938.46	Four Square Northern	S	513.71	I	201
+
+C82760	17/08/2012	2442545	I	CI/1	80613.000	New World Northern - Job 72282 - Delivery 04 Aug 2012 - 25 grams.   Includes Linehaul.	0.0615	0.0707	4957.70	5701.36	New World Northern	S	743.66	I	201
+
+C82761	17/08/2012	2442563	I	CI/1	80613.000	New World Northern - Job 72283 - Delivery 11 Aug 2012 - 25 grams.   Includes Linehaul.	0.0615	0.0707	4957.70	5701.36	New World Northern	S	743.66	I	201
+
+C82762	17/08/2012	2444155	I	CI/1	6245.000	Newlands Auto Flyer - Job 72620 - Delivery 13 Aug 2012 - 10 grams.   Includes Linehaul.	0.0575	0.0661	359.09	412.95	Newlands Auto Flyer	S	53.86	I	201
+
+C82763	17/08/2012	2441743	I	CI/1	108554.000	Noel Leeming  - Job 72186 - Delivery 14 Aug 2012 - 30 grams.   Includes Linehaul.	0.0679	0.0781	7370.82	8476.44	Noel Leeming 	S	1105.62	I	201
+C82763	17/08/2012	 2441743	I	CI/2	748.000	Noel leeming Greymouth - Job 72409 - Delivery 14 Aug 2012 - 30 grams.   Includes Linehaul.	0.0679	0.0781	50.79	58.41	Noel leeming Greymouth	S	7.62	I	201
+C82763	17/08/2012	2441743	I	CI/3	2610.000	Noel Leeming Napier/Hastings - Job 72408 - Delivery 14 Aug 2012 - 30 grams.   Includes Linehaul.	0.0679	0.0781	177.22	203.80	Noel Leeming Napier/Hastings	S	26.58	I	201
+
+C82764	17/08/2012	2444911	I	CI/1	14448.000	Northpower Annual Report August 2012 - Job 72689 - Delivery 17 Aug 2012 - 118 grams.   Includes Linehaul.	0.1260	0.1449	1820.45	2093.52	Northpower Annual Report August 2012	S	273.07	I	201
+
+C82765	17/08/2012	2443942	I	CI/1	5860.000	Raeward Nelson August Flyer - Job 72621 - Delivery 13 Aug 2012 - 10 grams.   	0.0615	0.0707	360.39	414.45	Raeward Nelson August Flyer	S	54.06	I	201
+
+C82766	17/08/2012	2443648	I	CI/1	211851.000	Repco Fathers Day Catalogue 2012 - Job 72428 - Delivery 08 Aug 2012 - 25 grams.   Includes Linehaul.	0.0615	0.0707	13028.84	14983.17	Repco Fathers Day Catalogue 2012	S	1954.33	I	201
+
+C82767	17/08/2012	2444028	I	CI/1	2303.000	Sign of the Times - Job 72619 - Delivery 13 Aug 2012 - 10 grams.   Includes Linehaul.	0.0651	0.0749	149.93	172.42	Sign of the Times	S	22.49	I	201
+
+C82768	17/08/2012	2443137	I	CI/1	101985.000	Smith City Brand Flyer - Job 72432 - Delivery 14 Aug 2012 - 30 grams.   Includes Linehaul.	0.0655	0.0753	6680.02	7682.02	Smith City Brand Flyer	S	1002.00	I	201
+
+C82769	17/08/2012	2443427	I	CI/1	25002.000	The Front Store - Job 72425 - Delivery 07 Aug 2012 - 14 grams.   Includes Linehaul.	0.0615	0.0707	1537.62	1768.26	The Front Store	S	230.64	I	201
+
+C82770	17/08/2012	2443024	I	CI/1	82472.000	Versatile Mailer - Job 72617 - Delivery 14 Aug 2012 - 20 grams.   Includes Linehaul.	0.0575	0.0661	4742.14	5453.46	Versatile Mailer	S	711.32	I	201
+

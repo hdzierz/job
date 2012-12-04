@@ -1,0 +1,345 @@
+th.sqltabhead{
+	text-align:center;
+	background-color:#999999;
+}
+
+th.sqltable_head_print_white{
+	text-align:center;
+	background-color:#999999;
+}
+
+th.sqltabsep{
+	text-align:center;
+	background-color:#999999;
+	font-size:0.3em;
+	
+}
+
+th.side_header{
+	background-color:#DDDDDD;
+}
+
+.sqltable_scroll{
+	 width:95%;
+	font-size:0.8em;
+	display:block;
+/*	height:80ex;
+	overflow:scroll;*/
+}
+.sqltable_big{
+	width:100%;
+	font-size:1.1em;
+}
+.sqltable{
+	width:95%;
+	font-size:0.8em;
+}
+.sqltable_small{
+	width:60%;
+	font-size:0.8em;
+}
+
+.sqltable_8{
+	width:100%;
+	font-size:0.8em;
+}
+
+
+.sqltable_10{
+	width:95%;
+	font-size:1em;
+}
+
+.sqltable_9{
+	width:95%;
+	font-size:0.9em;
+}
+
+.sqllist{
+	font-size:0.8em;
+}
+
+.sqlhref{
+	color:#0000FF;
+	text-decoration:none;
+}
+
+.sqlhref:hover{
+	cursor:pointer;
+	color:#999999;
+}
+
+.sqlhref_delete{
+	color:#FF0000;
+	text-decoration:none;
+}
+
+.sqlhref_delete:hover{
+	cursor:pointer;
+	color:#000000;
+}
+
+
+.sqllistelementcaption{
+	font-weight:bold;
+	font-size:1.3em;
+	text-align:center;
+	padding-bottom:1em;
+}
+
+.sqlbutton{
+	width:6em;
+}
+
+.sqlref{
+	color:#0000FF;
+	text-decoration:none;
+}
+
+.sqlref:hover {
+	color:#FF0000;
+	text-decoration:underline;
+}
+
+
+.sqlsumline{
+	font-weight:bold;
+	text-align:right;
+}
+
+.sqltabhead{
+	text-align:left;
+}
+
+
+
+.sqltabheadaction{
+
+}
+
+
+
+.sqldevider{
+	display:none;
+	/*color:#FF0000;
+	background-color:#FF0000;
+	height:1px;	*/
+}
+
+.sqltabevenline{
+	background-color:#FFFFFF;
+}
+
+
+.sqltabevenlinehover{
+	background-color: #FFCC00;
+}
+
+
+.sqltabunevenline{
+	background-color:#DDDDDD;
+}
+
+.sqltabunevenline_white_print{
+	background-color:#DDDDDD;
+}
+
+.sqltabunevenline_white{
+	background-color:#FFFFFF;
+}
+
+
+.sqltabunevenlinehover{
+	background-color:#FFCC00;
+}
+
+
+.sqltabevencol{
+	background-color:#FFFFFF;
+}
+
+
+.sqltabunevencol{
+	background-color:#DDDDDD;
+}
+
+.sqltabunevencol_white{
+	background-color:#FFFFFF;
+}
+
+.sqltabevencol_high{
+	background-color:#FFFFFF;
+	color:#FF0000;
+}
+
+.sqltabunevencol_high{
+	background-color:#DDDDDD;
+	color:#FF0000;
+}
+
+.sqltabevenline_high_bold{
+	background-color:#FFFFFF;
+	font-weight:bold;
+}
+
+.sqltabunevenline_high_bold{
+	background-color:#DDDDDD;
+	font-weight:bold;
+}
+
+.sqllist_high_head{
+	background-color:#DDDDDD;
+	font-weight:bold;
+}
+.sqllist_high_value{
+	background-color:#DDDDDD;
+	font-weight:bold;
+}
+
+.sqltabevenaddline{
+	background-color:#FFFFFF;
+	font-weight:bold;
+	text-align:right;
+}
+
+.sqltabunevenaddline{
+	background-color:#DDDDDD;
+	font-weight:bold;	
+	text-align:right;
+}
+
+/****************************************************/
+/* Style for extra line manually set in reports.php */
+/****************************************************/
+
+.sql_extra_line_number{
+	font-weight:bold;
+	text-align:right;
+}
+
+.sql_extra_line_text{
+	font-weight:bold;
+	text-align:left;
+}
+
+.sql_extra_line_number_grey{
+	font-weight:bold;
+	text-align:right;
+	background-color:#CCCCCC;
+}
+
+.sql_extra_line_number_grey_print_white{
+	font-weight:bold;
+	text-align:right;
+	background-color:#CCCCCC;
+}
+
+.sql_extra_line_text_grey{
+	font-weight:bold;
+	text-align:left;
+	background-color:#CCCCCC;	
+}
+
+.sql_extra_line_text_grey_small{
+	font-size:0.9em;
+	font-weight:bold;
+	text-align:left;
+	background-color:#CCCCCC;	
+}
+
+.sql_extra_line_text_grey_large{
+	font-size:1.1em;
+	font-weight:bold;
+	text-align:left;
+	background-color:#CCCCCC;	
+}
+
+.sql_extra_line_text_light_grey{
+	font-weight:bold;
+	text-align:left;
+	background-color:#CCCCCC;	
+}
+
+.sql_extra_line_text_light_grey_small{
+	font-size:0.9em;
+	font-weight:bold;
+	text-align:left;
+	background-color:#CCCCCC;	
+}
+
+.sql_extra_line_text_light_grey_large{
+	font-size:1.1em;
+	font-weight:bold;
+	text-align:left;
+	background-color:#CCCCCC;	
+}
+
+.sql_extra_head{
+	font-weight:bold;
+	background-color:#FF0000;
+	text-align:center;
+	color:#FFFFFF;
+}
+
+.sql_extra_head_print_white{
+	font-weight:bold;
+	background-color:#FF0000;
+	text-align:center;
+	color:#FFFFFF;
+}
+
+.sql_extra_head_white{
+	font-weight:bold;
+	text-align:center;
+}
+
+.sql_extra_head_big{
+	font-size:1.1em;
+	font-weight:bold;
+	background-color:#FFFFFF;
+	text-align:center;
+}
+
+.sql_extra_head_big_left{
+	font-size:1.1em;
+	font-weight:bold;
+	background-color:#FFFFFF;
+	text-align:left;
+}
+
+.sql_extra_head_huge_left{
+	font-size:1.5em;
+	font-weight:bold;
+	background-color:#FFFFFF;
+	text-align:left;
+}
+
+.sql_extra_head_small_left{
+	font-size:1.1em;
+	font-weight:bold;
+	background-color:#FFFFFF;
+	text-align:left;
+}
+
+.sql_comment_line{
+	text-align:left;
+	background-color:#FFFFFF;
+	font-weight:bold;
+}
+
+.sql_comment_line_bg0{
+	text-align:left;
+	font-weight:bold;
+}
+
+
+.sqltab_sumline{
+	background-color:#FFFFFF;
+	font-weight:bold;
+}
+
+.sqltab_sumline_hover{
+	background-color:#CC9900;
+	font-weight:bold;
+}
+	

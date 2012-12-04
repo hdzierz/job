@@ -1,0 +1,345 @@
+Invoice  No.	Date	Customer PO	Delivery Status	Item Number	Quantity	Description	Price	Inc-GST Price	Total	Journal Memo	GST Code	GST Amount	Sale Status	Card ID
+C11182	06/03/2009		I	CI/1	2991.000	Cambridge Property Guide - Job 9297 - Delivery 04 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	285.940	Cambridge Property Guide	S	35.74	I	106
+C11182	06/03/2009		I	CI/2	2991.000	Cambridge Property Guide - Job 9298 - Delivery 11 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	285.940	Cambridge Property Guide	S	35.74	I	106
+C11182	06/03/2009		I	CI/3	2991.000	Cambridge Property Guide - Job 9299 - Delivery 18 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	285.940	Cambridge Property Guide	S	35.74	I	106
+C11182	06/03/2009		I	CI/4	2991.000	Cambridge Property Guide - Job 9300 - Delivery 25 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	285.940	Cambridge Property Guide	S	35.74	I	106
+
+C11183	06/03/2009	Gay Hubbard	I	CI/1	6000.000	Hamilton This Week - Job 9301 - Delivery 05 Feb 2009 - 55 grams. Includes folding fee 0.0100 cents. 	0.0858	0.0965	514.800	Hamilton This Week	S	64.35	I	106
+C11183	06/03/2009	Gay Hubbard	I	CI/2	6000.000	Hamilton This Week - Job 9302 - Delivery 12 Feb 2009 - 50 grams. Includes folding fee 0.0100 cents. 	0.0756	0.0851	453.600	Hamilton This Week	S	56.70	I	106
+C11183	06/03/2009	Gay Hubbard	I	CI/3	6000.000	Hamilton This Week - Job 9303 - Delivery 19 Feb 2009 - 55 grams. Includes folding fee 0.0100 cents. 	0.0858	0.0965	514.800	Hamilton This Week	S	64.35	I	106
+C11183	06/03/2009	Gay Hubbard	I	CI/4	6000.000	Hamilton This Week - Job 9304 - Delivery 26 Feb 2009 - 60 grams. Includes folding fee 0.0100 cents. 	0.0858	0.0965	514.800	Hamilton This Week	S	64.35	I	106
+
+C11184	06/03/2009	10434	I	CI/1	1922.000	Rural Advocate - Job 9386 - Delivery 20 Feb 2009 - 175 grams.  	0.0910	0.1024	174.902	Rural Advocate	S	21.86	I	106
+
+C11185	06/03/2009		I	CI/1	3505.000	Te Puke Times - Job 9306 - Delivery 04 Feb 2009 - 75 grams.  	0.0749	0.0843	262.525	Te Puke Times	S	32.82	I	106
+C11185	06/03/2009		I	CI/2	3505.000	Te Puke Times - Job 9307 - Delivery 11 Feb 2009 - 68 grams.  	0.0749	0.0843	262.525	Te Puke Times	S	32.82	I	106
+C11185	06/03/2009		I	CI/3	3505.000	Te Puke Times - Job 9308 - Delivery 18 Feb 2009 - 75 grams.  	0.0749	0.0843	262.525	Te Puke Times	S	32.82	I	106
+C11185	06/03/2009		I	CI/4	3505.000	Te Puke Times - Job 9309 - Delivery 25 Feb 2009 - 60 grams.  	0.0749	0.0843	262.525	Te Puke Times	S	32.82	I	106
+
+C11186	06/03/2009		I	CI/1	16082.000	Bayleys Quarterly LNI - Job 9216 - Delivery 12 Feb 2009 - 115 grams.  	0.1605	0.1806	2581.161	Bayleys Quarterly LNI	S	322.65	I	111
+
+C11187	06/03/2009	Peter Barnett	I	CI/1	4596.000	Provincial Property Update - Job 9487 - Delivery IOA - 15 grams.  	0.0000	0.0000	0.000	Provincial Property Update	S	0.00	I	111
+
+C11188	06/03/2009	Doug	I	CI/1	4892.000	Pro Cow - BLM Holdings - Job 9396 - Delivery 18 Feb 2009 - 5 grams.  	0.0856	0.0963	418.755	Pro Cow - BLM Holdings	S	52.34	I	273
+
+C11189	06/03/2009		I	CI/1	41481.000	Rural Living - Job 8767 - Delivery 16 Feb 2009 - 90 grams.  	0.0927	0.1043	3845.289	Rural Living	S	480.66	I	256
+
+C11190	06/03/2009		I	CI/1	79903.000	C-Dax Feb Flyer - Job 9203 - Delivery IOA - 12 grams.  	0.0642	0.0722	5129.773	C-Dax Feb Flyer	S	641.22	I	116
+
+C11191	06/03/2009		I	CI/1	1718.000	Concrete Grooving Flyer - Job 9215 - Delivery 17 Feb 2009 - 5 grams.  	0.0856	0.0963	147.061	Concrete Grooving Flyer	S	18.38	I	241
+
+C11192	06/03/2009		I	CI/1	81296.000	NZ Farmers Weekly - Job 9248 - Delivery 02 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.1195	0.1344	9714.872	NZ Farmers Weekly	S	1214.36	I	124
+C11192	06/03/2009		I	CI/2	6198.000	NZ Farmers Weekly - Job 9248 - Delivery 02 Feb 2009 - 80 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	NZ Farmers Weekly	S	0.00	I	124
+C11192	06/03/2009		I	CI/3	81296.000	NZ Farmers Weekly - Job 9249 - Delivery 09 Feb 2009 - 85 grams. Includes folding fee 0.0100 cents. 	0.1195	0.1344	9714.872	NZ Farmers Weekly	S	1214.36	I	124
+C11192	06/03/2009		I	CI/4	6198.000	NZ Farmers Weekly - Job 9249 - Delivery 09 Feb 2009 - 85 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	NZ Farmers Weekly	S	0.00	I	124
+C11192	06/03/2009		I	CI/5	81296.000	NZ Farmers Weekly - Job 9250 - Delivery 16 Feb 2009 - 135 grams. Includes folding fee 0.0100 cents. 	0.1570	0.1766	12763.472	NZ Farmers Weekly	S	1595.43	I	124
+C11192	06/03/2009		I	CI/6	6198.000	NZ Farmers Weekly - Job 9250 - Delivery 16 Feb 2009 - 135 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	NZ Farmers Weekly	S	0.00	I	124
+C11192	06/03/2009		I	CI/7	81296.000	NZ Farmers Weekly - Job 9251 - Delivery 23 Feb 2009 - 125 grams. Includes folding fee 0.0100 cents. 	0.1480	0.1665	12031.808	NZ Farmers Weekly	S	1503.98	I	124
+C11192	06/03/2009		I	CI/8	6198.000	NZ Farmers Weekly - Job 9251 - Delivery 23 Feb 2009 - 125 grams. Bags Boxes and Counter	0.0000	0.0000	0.000	NZ Farmers Weekly	S	0.00	I	124
+
+C11193	06/03/2009	112912	I	CI/1	1655.000	BOP Focus Farm Field Day Feb 09 - Job 9349 - Delivery IOA - 10 grams.  	0.0749	0.0843	123.959	BOP Focus Farm Field Day Feb 09	S	15.50	I	233
+
+C11194	06/03/2009	112921	I	CI/1	1215.000	Discover the Facts of Climate Change - Job 9361 - Delivery IOA - 10 grams.  	0.0749	0.0843	91.003	Discover the Facts of Climate Change	S	11.38	I	233
+
+C11195	06/03/2009	112926	I	CI/1	620.000	Locallink - Dan Hinton - Job 9366 - Delivery IOA - 10 grams.  	0.0749	0.0843	46.438	Locallink - Dan Hinton	S	5.81	I	233
+
+C11196	06/03/2009	112925	I	CI/1	1053.000	Locallink - Denis Collins - Job 9368 - Delivery IOA - 10 grams.  	0.0749	0.0843	78.870	Locallink - Denis Collins	S	9.86	I	233
+
+C11197	06/03/2009	112927	I	CI/1	1750.000	Locallink - Hamilton North - Job 9367 - Delivery IOA - 10 grams.  	0.0749	0.0843	131.075	Locallink - Hamilton North	S	16.38	I	233
+
+C11198	06/03/2009	112977	I	CI/1	863.000	Locallink - Leo Feb 09 - Job 9380 - Delivery 16 Feb 2009 - 15 grams.  	0.0856	0.0963	73.873	Locallink - Leo Feb 09	S	9.23	I	233
+
+C11199	06/03/2009	112922	I	CI/1	1215.000	locallink - Murray Holt - Job 9362 - Delivery IOA - 10 grams.  	0.0749	0.0843	91.003	locallink - Murray Holt	S	11.38	I	233
+
+C11200	06/03/2009	112923	I	CI/1	1223.000	Locallink - Tai Chikazhe - Job 9360 - Delivery IOA - 10 grams.  	0.0749	0.0843	91.603	Locallink - Tai Chikazhe	S	11.45	I	233
+
+C11201	06/03/2009	112930	I	CI/1	1910.000	Locallink - Wayne Barry - Job 9363 - Delivery IOA - 10 grams.  	0.0749	0.0843	143.059	Locallink - Wayne Barry	S	17.88	I	233
+
+C11202	06/03/2009	112924	I	CI/1	860.000	locallink- Richard Snell - Job 9365 - Delivery IOA - 10 grams.  	0.0749	0.0843	64.414	locallink- Richard Snell	S	8.05	I	233
+
+C11203	06/03/2009	113133	I	CI/1	907.000	Tight Managemenrt - Okaihau - Job 9449 - Delivery IOA - 15 grams.  	0.0749	0.0843	67.934	Tight Managemenrt - Okaihau	S	8.49	I	233
+
+C11204	06/03/2009	113134	I	CI/1	615.000	Tight Management - Dargaville - Job 9450 - Delivery IOA - 15 grams.  	0.0749	0.0843	46.064	Tight Management - Dargaville	S	5.76	I	233
+
+C11205	06/03/2009	113135	I	CI/1	498.000	Tight Management - Mangawhai - Job 9451 - Delivery IOA - 15 grams.  	0.0749	0.0843	37.300	Tight Management - Mangawhai	S	4.66	I	233
+
+C11206	06/03/2009	113138	I	CI/1	1380.000	Tight Management - Pukekohe - Job 9452 - Delivery IOA - 15 grams.  	0.0749	0.0843	103.362	Tight Management - Pukekohe	S	12.92	I	233
+
+C11207	06/03/2009	112939	I	CI/1	1223.000	Yellow Bristle Grass Field Day - Job 9359 - Delivery IOA - 10 grams.  	0.0749	0.0843	91.603	Yellow Bristle Grass Field Day	S	11.45	I	233
+
+C11208	06/03/2009		I	CI/1	1039.000	Cash Back - Dave Anderson - Job 9446 - Delivery IOA - 10 grams.  	0.0749	0.0843	77.821	Cash Back - Dave Anderson	S	9.73	I	128
+
+C11209	06/03/2009	services	I	CI/1	695.000	Effluent & Irrigation - Job 9213 - Delivery 04 Feb 2009 - 10 grams.  	0.0856	0.0963	59.492	Effluent & Irrigation	S	7.44	I	267
+
+C11210	06/03/2009	services1	I	CI/1	1208.000	Effluent & Irrigation Services - Job 9397 - Delivery 19 Feb 2009 - 10 grams.  	0.0856	0.0963	103.405	Effluent & Irrigation Services	S	12.93	I	267
+C11210	06/03/2009	services1	I	CI/2	456.000	Effluent & Irrigation Services - Job 9398 - Delivery 26 Feb 2009 - 10 grams.  	0.0856	0.0963	39.034	Effluent & Irrigation Services	S	4.88	I	267
+
+C11211	06/03/2009	2036	I	CI/1	3641.000	Trencher Flyer - Job 9211 - Delivery 05 Feb 2009 - 10 grams.  	0.0856	0.0963	311.670	Trencher Flyer	S	38.96	I	267
+
+C11212	06/03/2009		I	CI/1	4047.000	Cambridge Edition - Job 9310 - Delivery 04 Feb 2009 - 89 grams.  	0.0749	0.0843	303.120	Cambridge Edition	S	37.89	I	141
+C11212	06/03/2009		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C11212	06/03/2009		I	CI/2	4047.000	Cambridge Edition - Job 9311 - Delivery 11 Feb 2009 - 224 grams.  	0.1017	0.1144	411.580	Cambridge Edition	S	51.45	I	141
+C11212	06/03/2009		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C11212	06/03/2009		I	CI/3	4047.000	Cambridge Edition - Job 9312 - Delivery 18 Feb 2009 - 177 grams.  	0.0910	0.1024	368.277	Cambridge Edition	S	46.04	I	141
+C11212	06/03/2009		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+C11212	06/03/2009		I	CI/4	4047.000	Cambridge Edition - Job 9313 - Delivery 25 Feb 2009 - 259 grams.  	0.1124	0.1265	454.883	Cambridge Edition	S	56.86	I	141
+C11212	06/03/2009		I	C100	2.000	Bundles	1.0000	1.1250	2.000	Cambridge Edition	S	0.25	I	141
+
+C11213	06/03/2009		I	CI/1	2975.000	Dargaville District News - Job 9314 - Delivery 04 Feb 2009 - 25 grams.  	0.0856	0.0963	254.660	Dargaville District News	S	31.83	I	141
+C11213	06/03/2009		I	CI/2	2975.000	Dargaville District News - Job 9315 - Delivery 11 Feb 2009 - 25 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	252.578	Dargaville District News	S	31.57	I	141
+C11213	06/03/2009		I	CI/3	2975.000	Dargaville District News - Job 9316 - Delivery 18 Feb 2009 - 45 grams.  	0.0749	0.0843	222.828	Dargaville District News	S	27.85	I	141
+C11213	06/03/2009		I	CI/4	2975.000	Dargaville District News - Job 9317 - Delivery 25 Feb 2009 - 35 grams.  	0.0749	0.0843	222.828	Dargaville District News	S	27.85	I	141
+
+C11214	06/03/2009		I	CI/1	11345.000	FCN - Thursday - Job 9318 - Delivery 05 Feb 2009 - 190 grams.  	0.0963	0.1083	1092.524	FCN - Thursday	S	136.57	I	141
+C11214	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C11214	06/03/2009		I	CI/2	11345.000	FCN - Thursday - Job 9319 - Delivery 12 Feb 2009 - 200 grams.  	0.0910	0.1024	1032.395	FCN - Thursday	S	129.05	I	141
+C11214	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C11214	06/03/2009		I	CI/3	11345.000	FCN - Thursday - Job 9320 - Delivery 19 Feb 2009 - 201 grams.  	0.1017	0.1144	1153.787	FCN - Thursday	S	144.22	I	141
+C11214	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+C11214	06/03/2009		I	CI/4	11345.000	FCN - Thursday - Job 9321 - Delivery 26 Feb 2009 - 185 grams.  	0.0910	0.1024	1032.395	FCN - Thursday	S	129.05	I	141
+C11214	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Thursday	S	2.44	I	141
+
+C11215	06/03/2009		I	CI/1	11345.000	FCN - Tuesday - Job 9322 - Delivery 03 Feb 2009 - 95 grams.  	0.0963	0.1083	1092.524	FCN - Tuesday	S	136.57	I	141
+C11215	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C11215	06/03/2009		I	CI/2	11345.000	FCN - Tuesday - Job 9323 - Delivery 10 Feb 2009 - 45 grams.  	0.0749	0.0843	849.740	FCN - Tuesday	S	106.22	I	141
+C11215	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C11215	06/03/2009		I	CI/3	11345.000	FCN - Tuesday - Job 9324 - Delivery 17 Feb 2009 - 90 grams.  	0.0749	0.0843	849.740	FCN - Tuesday	S	106.22	I	141
+C11215	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+C11215	06/03/2009		I	CI/4	11345.000	FCN - Tuesday - Job 9325 - Delivery 24 Feb 2009 - 90 grams.  	0.0749	0.0843	849.740	FCN - Tuesday	S	106.22	I	141
+C11215	06/03/2009		I	C150	13.000	Bundles	1.5000	1.6875	19.500	FCN - Tuesday	S	2.44	I	141
+
+C11216	06/03/2009		I	CI/1	2230.000	Matamata Chronicle - Job 9197 - Delivery 03 Feb 2009 - 133 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	213.188	Matamata Chronicle	S	26.65	I	141
+C11216	06/03/2009		I	CI/2	2230.000	Matamata Chronicle - Job 9198 - Delivery 10 Feb 2009 - 242 grams. Includes folding fee 0.0100 cents. 	0.1117	0.1257	249.091	Matamata Chronicle	S	31.14	I	141
+C11216	06/03/2009		I	CI/3	2230.000	Matamata Chronicle - Job 9199 - Delivery 17 Feb 2009 - 174 grams. Includes folding fee 0.0100 cents. 	0.1010	0.1136	225.230	Matamata Chronicle	S	28.15	I	141
+C11216	06/03/2009		I	CI/4	2230.000	Matamata Chronicle - Job 9200 - Delivery 24 Feb 2009 - 135 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	213.188	Matamata Chronicle	S	26.65	I	141
+
+C11217	06/03/2009		I	CI/1	3076.000	Nth Waikato News - Job 9326 - Delivery 04 Feb 2009 - 50 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C11217	06/03/2009		I	CI/2	3076.000	Nth Waikato News - Job 9327 - Delivery 11 Feb 2009 - 40 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C11217	06/03/2009		I	CI/3	3076.000	Nth Waikato News - Job 9328 - Delivery 18 Feb 2009 - 40 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+C11217	06/03/2009		I	CI/4	3076.000	Nth Waikato News - Job 9329 - Delivery 25 Feb 2009 - 40 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	261.152	Nth Waikato News	S	32.64	I	141
+
+C11218	06/03/2009	203198 Oct - Mar	I	CI/1	3792.000	Piako Post - Job 9330 - Delivery 04 Feb 2009 - 115 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	362.515	Piako Post	S	45.31	I	141
+C11218	06/03/2009	203198 Oct - Mar	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C11218	06/03/2009	203198 Oct - Mar	I	CI/2	3792.000	Piako Post - Job 9331 - Delivery 11 Feb 2009 - 210 grams.  	0.1017	0.1144	385.646	Piako Post	S	48.21	I	141
+C11218	06/03/2009	203198 Oct - Mar	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C11218	06/03/2009	203198 Oct - Mar	I	CI/3	3792.000	Piako Post - Job 9332 - Delivery 18 Feb 2009 - 154 grams. Includes folding fee 0.0100 cents. 	0.1010	0.1136	382.992	Piako Post	S	47.87	I	141
+C11218	06/03/2009	203198 Oct - Mar	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+C11218	06/03/2009	203198 Oct - Mar	I	CI/4	3792.000	Piako Post - Job 9333 - Delivery 25 Feb 2009 - 254 grams. Includes folding fee 0.0100 cents. 	0.1224	0.1377	464.141	Piako Post	S	58.02	I	141
+C11218	06/03/2009	203198 Oct - Mar	I	C100	2.000	Bundles	1.0000	1.1250	2.000	Piako Post	S	0.25	I	141
+
+C11219	06/03/2009	0000215990JAN-MAR	I	CI/1	3195.000	Rotorua Review - Job 9334 - Delivery 03 Feb 2009 - 68 grams.  	0.0749	0.0843	239.306	Rotorua Review	S	29.91	I	141
+C11219	06/03/2009	0000215990JAN-MAR	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C11219	06/03/2009	0000215990JAN-MAR	I	CI/2	3195.000	Rotorua Review - Job 9335 - Delivery 10 Feb 2009 - 82 grams.  	0.0749	0.0843	239.306	Rotorua Review	S	29.91	I	141
+C11219	06/03/2009	0000215990JAN-MAR	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C11219	06/03/2009	0000215990JAN-MAR	I	CI/3	3195.000	Rotorua Review - Job 9336 - Delivery 17 Feb 2009 - 73 grams.  	0.0749	0.0843	239.306	Rotorua Review	S	29.91	I	141
+C11219	06/03/2009	0000215990JAN-MAR	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+C11219	06/03/2009	0000215990JAN-MAR	I	CI/4	3195.000	Rotorua Review - Job 9337 - Delivery 24 Feb 2009 - 60 grams.  	0.0749	0.0843	239.306	Rotorua Review	S	29.91	I	141
+C11219	06/03/2009	0000215990JAN-MAR	I	C150	2.000	Bundles	1.5000	1.6875	3.000	Rotorua Review	S	0.38	I	141
+
+C11220	06/03/2009		I	CI/1	2382.000	Sth Waikato News - Job 9338 - Delivery 04 Feb 2009 - 141 grams. Includes folding fee 0.0100 cents. 	0.0956	0.1076	227.719	Sth Waikato News	S	28.47	I	141
+C11220	06/03/2009		I	CI/2	2382.000	Sth Waikato News - Job 9339 - Delivery 11 Feb 2009 - 212 grams.  	0.1017	0.1144	242.249	Sth Waikato News	S	30.28	I	141
+C11220	06/03/2009		I	CI/3	2382.000	Sth Waikato News - Job 9340 - Delivery 18 Feb 2009 - 73 grams.  	0.0749	0.0843	178.412	Sth Waikato News	S	22.30	I	141
+C11220	06/03/2009		I	CI/4	2382.000	Sth Waikato News - Job 9341 - Delivery 25 Feb 2009 - 90 grams.  	0.0749	0.0843	178.412	Sth Waikato News	S	22.30	I	141
+
+C11221	06/03/2009		I	CI/1	11656.000	Waikato Farmers Newspaper - Job 9384 - Delivery IOA - 100 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	989.594	Waikato Farmers Newspaper	S	123.70	I	141
+
+C11222	06/03/2009		I	CI/1	7950.000	Whangarei Leader - Job 9342 - Delivery 03 Feb 2009 - 60 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	674.955	Whangarei Leader	S	84.37	I	141
+C11222	06/03/2009		I	CI/2	7950.000	Whangarei Leader - Job 9343 - Delivery 10 Feb 2009 - 75 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	674.955	Whangarei Leader	S	84.37	I	141
+C11222	06/03/2009		I	CI/3	7950.000	Whangarei Leader - Job 9344 - Delivery 17 Feb 2009 - 70 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	674.955	Whangarei Leader	S	84.37	I	141
+C11222	06/03/2009		I	CI/4	7950.000	Whangarei Leader - Job 9345 - Delivery 24 Feb 2009 - 51 grams. Includes folding fee 0.0100 cents. 	0.0849	0.0955	674.955	Whangarei Leader	S	84.37	I	141
+
+C11223	06/03/2009		I	CI/1	20941.000	Fort Dodge Sheep NI - Job 9376 - Delivery 17 Feb 2009 - 8 grams.  	0.0910	0.1024	1905.631	Fort Dodge Sheep NI	S	238.20	I	235
+
+C11224	06/03/2009		I	CI/1	14912.000	Fort Dodge Sheep SI - Job 9375 - Delivery 17 Feb 2009 - 8 grams.  	0.0910	0.1024	1356.992	Fort Dodge Sheep SI	S	169.62	I	235
+
+C11225	06/03/2009		I	CI/1	15798.000	Garden Gloves - Job 9353 - Delivery 17 Feb 2009 - 10 grams.  	0.0749	0.0843	1183.270	Garden Gloves	S	147.91	I	147
+
+C11226	06/03/2009	renae	I	CI/1	4056.000	Maxiscoop Brochure - Job 9358 - Delivery IOA - 30 grams.  	0.0856	0.0963	347.194	Maxiscoop Brochure	S	43.40	I	263
+
+C11227	06/03/2009		I	CI/1	3280.000	Barfoot & Thompson - Job 9369 - Delivery 09 Feb 2009 - 9 grams.  	0.0000	0.0000	0.000	Barfoot & Thompson	S	0.00	I	131
+C11227	06/03/2009		I	CI/2	3520.000	Barfoot & Thompson - Job 9488 - Delivery IOA - 5 grams.  	0.0749	0.0843	263.648	Barfoot & Thompson	S	32.96	I	131
+
+C11228	06/03/2009		I	CI/1	5485.000	Mt Potaka Timber Products - Job 9455 - Delivery 23 Feb 2009 - 5 grams.  	0.0749	0.0843	410.826	Mt Potaka Timber Products	S	51.35	I	131
+
+C11229	06/03/2009		I	CI/1	6357.000	Placemakers Taupo Flyer - Job 9204 - Delivery 11 Feb 2009 - 10 grams.  	0.0749	0.0843	476.139	Placemakers Taupo Flyer	S	59.52	I	237
+
+C11230	06/03/2009		I	CI/1	2703.000	Terracare Fertiliser - Job 9207 - Delivery 05 Feb 2009 - 15 grams.  	0.0856	0.0963	231.377	Terracare Fertiliser	S	28.92	I	
+
+C11231	06/03/2009		I	CI/1	37129.000	PGG Wrightsons - Job 8677 - Delivery 07 Feb 2009 - 45 grams.  	0.1043	0.1173	3872.555	PGG Wrightsons	S	484.07	I	255
+
+C11232	06/03/2009		I	CI/1	21645.000	Ingham Feeds & Nutrition - Job 9189 - Delivery 02 Feb 2009 - 25 grams.  	0.1150	0.1294	2489.175	Ingham Feeds & Nutrition	S	311.15	I	262
+
+C11233	06/03/2009		I	CI/1	830.000	Hibiscus Matters - Job 9220 - Delivery 05 Feb 2009 - 55 grams.  	0.0803	0.0903	66.649	Hibiscus Matters	S	8.33	I	240
+C11233	06/03/2009		I	CI/2	830.000	Hibiscus Matters - Job 9391 - Delivery 19 Feb 2009 - 35 grams.  	0.0749	0.0843	62.167	Hibiscus Matters	S	7.77	I	240
+
+C11234	06/03/2009	2801035	I	CI/1	25639.000	Dairying Today - Job 9252 - Delivery 10 Feb 2009 - 95 grams. Includes folding fee 0.0100 cents. 	0.1170	0.1316	2999.763	Dairying Today	S	374.97	I	169
+C11234	06/03/2009	2801035	I	CI/2	25759.000	Dairying Today - Job 9253 - Delivery 24 Feb 2009 - 101 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	2614.539	Dairying Today	S	326.82	I	169
+
+C11235	06/03/2009		I	CI/1	62120.000	Four Square Northern - Job 9259 - Delivery 07 Feb 2009 - 10 grams.  	0.0508	0.0572	3155.696	Four Square Northern	S	394.46	I	169
+
+C11236	06/03/2009		I	CI/1	63780.000	New World Northern  - Job 9255 - Delivery 07 Feb 2009 - 30 grams.  	0.0589	0.0663	3756.642	New World Northern 	S	469.58	I	169
+
+C11237	06/03/2009		I	CI/1	73267.000	Rural News  - Job 9201 - Delivery 03 Feb 2009 - 110 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	7436.601	Rural News 	S	929.57	I	169
+C11237	06/03/2009		I	CI/2	73267.000	Rural News  - Job 9390 - Delivery 17 Feb 2009 - 150 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	7436.601	Rural News 	S	929.57	I	169
+
+C11238	06/03/2009	2902057	I	CI/1	177085.000	Steelfort Cub Cadet - Job 9370 - Delivery 17 Feb 2009 - 15 grams.  	0.0508	0.0572	8995.918	Steelfort Cub Cadet	S	1124.49	I	169
+
+C11239	06/03/2009		I	CI/1	1158.000	Mech Traders - Job 9484 - Delivery IOA - 10 grams.  	0.0749	0.0843	86.734	Mech Traders	S	10.84	I	176
+
+C11240	06/03/2009	24109	I	CI/1	20941.000	Exodus Backpack Sheep Mailer - Job 9435 - Delivery IOA - 15 grams.  	0.0883	0.0993	1849.090	Exodus Backpack Sheep Mailer	S	231.14	I	178
+
+C11241	06/03/2009	24051	I	CI/1	60042.000	Right Tools for the Job - Job 9399 - Delivery 27 Feb 2009 - 15 grams.  	0.0910	0.1024	5463.822	Right Tools for the Job	S	682.98	I	178
+
+C11242	06/03/2009	131108	I	CI/1	4420.000	Kaipara Lifestyler - Job 8759 - Delivery 12 Feb 2009 - 80 grams.  	0.0927	0.1043	409.734	Kaipara Lifestyler	S	51.22	I	257
+C11242	06/03/2009	131108	I	CI/2	4220.000	Kaipara Lifestyler - Job 8760 - Delivery 26 Feb 2009 - 90 grams.  	0.0927	0.1043	391.194	Kaipara Lifestyler	S	48.90	I	257
+
+C11243	06/03/2009		I	CI/1	14639.000	Northland Farming Lifestyler - Job 9382 - Delivery IOA - 40 grams. Includes folding fee 0.0100 cents. 	0.0850	0.0956	1244.315	Northland Farming Lifestyler	S	155.54	I	257
+
+C11244	06/03/2009		I	CI/1	3371.000	NZ Freezebranders - Job 9458 - Delivery IOA - 20 grams.  	0.0749	0.0843	252.488	NZ Freezebranders	S	31.56	I	274
+
+C11245	06/03/2009		I	CI/1	34858.000	CD Field Days Prog - Job 9383 - Delivery 17 Feb 2009 - 182 grams.  	0.1680	0.1890	5856.144	CD Field Days Prog	S	732.02	I	261
+
+C11246	06/03/2009		I	CI/1	25658.000	Dairyman - Job 9371 - Delivery 28 Feb 2009 - 123 grams.  	0.1400	0.1575	3592.120	Dairyman	S	449.02	I	261
+
+C11247	06/03/2009		I	CI/1	2592.000	NZ Lifestyle Farmer - Job 9187 - Delivery 23 Feb 2009 - 200 grams.  	0.1680	0.1890	435.456	NZ Lifestyle Farmer	S	54.43	I	261
+
+C11248	06/03/2009		I	CI/1	12880.000	Rural Central Districts - Job 9245 - Delivery 03 Feb 2009 - 44 grams. Includes folding fee 0.0100 cents. 	0.0934	0.1051	1202.992	Rural Central Districts	S	150.37	I	261
+
+C11249	06/03/2009		I	CI/1	11455.000	SF/Agricom/RCD - Job 9246 - Delivery 03 Feb 2009 - 300 grams. Includes folding fee 0.0100 cents. 	0.2380	0.2678	2726.290	SF/Agricom/RCD	S	340.79	I	261
+
+C11250	06/03/2009		I	CI/1	81926.000	SFurrow/Ag Trader - Job 9356 - Delivery 10 Feb 2009 - 270 grams. Includes folding fee 0.0100 cents. 	0.2380	0.2678	19498.388	SFurrow/Ag Trader	S	2437.30	I	261
+
+C11251	06/03/2009		I	CI/1	74875.000	StFurrow/Agricom Insert - Job 9247 - Delivery 03 Feb 2009 - 222 grams. Includes folding fee 0.0100 cents. 	0.2060	0.2318	15424.250	StFurrow/Agricom Insert	S	1928.03	I	261
+
+C11252	06/03/2009		I	CI/1	4404.000	Straight Furrow - Job 9169 - Delivery 10 Feb 2009 - 115 grams. Includes folding fee 0.0100 cents. 	0.1500	0.1687	660.600	Straight Furrow	S	82.57	I	261
+C11252	06/03/2009		I	CI/2	86330.000	Straight Furrow - Job 9378 - Delivery 17 Feb 2009 - 88 grams. Includes folding fee 0.0100 cents. 	0.1260	0.1417	10877.580	Straight Furrow	S	1359.70	I	261
+C11252	06/03/2009		I	CI/3	86330.000	Straight Furrow - Job 9407 - Delivery 24 Feb 2009 - 110 grams. Includes folding fee 0.0100 cents. 	0.1500	0.1687	12949.500	Straight Furrow	S	1618.69	I	261
+
+C11253	06/03/2009	2312044	I	CI/1	3771.000	 Mid Canterbury Herald - Job 9221 - Delivery 04 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	342.407	 Mid Canterbury Herald	S	42.80	I	201
+
+C11254	06/03/2009	2310231	I	CI/1	2413.000	 Waitaki Herald - Job 9230 - Delivery 18 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	 Waitaki Herald	S	30.62	I	201
+
+C11255	06/03/2009	2313540	I	CI/1	895.000	Bay News - Job 9263 - Delivery 04 Feb 2009 - 133 grams.  	0.1070	0.1204	95.765	Bay News	S	11.97	I	201
+C11255	06/03/2009	2313540	I	CI/2	895.000	Bay News - Job 9264 - Delivery 11 Feb 2009 - 225 grams.  	0.1498	0.1685	134.071	Bay News	S	16.76	I	201
+C11255	06/03/2009	2313540	I	CI/3	895.000	Bay News - Job 9265 - Delivery 18 Feb 2009 - 111 grams.  	0.1070	0.1204	95.765	Bay News	S	11.97	I	201
+C11255	06/03/2009	2313540	I	CI/4	895.000	Bay News - Job 9266 - Delivery 25 Feb 2009 - 78 grams.  	0.0808	0.0909	72.316	Bay News	S	9.04	I	201
+
+C11256	06/03/2009	2313581	I	CI/1	2585.000	Bay Report - Job 9267 - Delivery 05 Feb 2009 - 41 grams. Includes folding fee 0.0100 cents. 	0.0758	0.0853	195.943	Bay Report	S	24.49	I	201
+C11256	06/03/2009	2313581	I	CI/2	2585.000	Bay Report - Job 9268 - Delivery 12 Feb 2009 - 41 grams. Includes folding fee 0.0100 cents. 	0.0758	0.0853	195.943	Bay Report	S	24.49	I	201
+C11256	06/03/2009	2313581	I	CI/3	2585.000	Bay Report - Job 9269 - Delivery 19 Feb 2009 - 41 grams. Includes folding fee 0.0100 cents. 	0.0758	0.0853	195.943	Bay Report	S	24.49	I	201
+C11256	06/03/2009	2313581	I	CI/4	2585.000	Bay Report - Job 9270 - Delivery 26 Feb 2009 - 41 grams. Includes folding fee 0.0100 cents. 	0.0758	0.0853	195.943	Bay Report	S	24.49	I	201
+
+C11257	06/03/2009	2314498	I	CI/1	23910.000	Ecan Living Here Catalogue - Job 9443 - Delivery 28 Feb 2009 - 16 grams.  	0.0536	0.0603	1281.576	Ecan Living Here Catalogue	S	160.20	I	201
+
+C11258	06/03/2009	2312997	I	CI/1	62120.000	Four Square Northern - Job 9260 - Delivery 14 Feb 2009 - 10 grams.  	0.0536	0.0603	3329.632	Four Square Northern	S	416.20	I	201
+
+C11259	06/03/2009	2313702	I	CI/1	62120.000	Four Square Northern - Job 9261 - Delivery 21 Feb 2009 - 10 grams.  	0.0508	0.0572	3155.696	Four Square Northern	S	394.46	I	201
+
+C11260	06/03/2009	2313719	I	CI/1	62120.000	Four Square Northern - Job 9262 - Delivery 28 Feb 2009 - 10 grams.  	0.0508	0.0572	3155.696	Four Square Northern	S	394.46	I	201
+
+C11261	06/03/2009	2312955	I	CI/1	3670.000	Guardian Newspaper - Job 9271 - Delivery 05 Feb 2009 - 101 grams.  	0.1070	0.1204	392.690	Guardian Newspaper	S	49.09	I	201
+C11261	06/03/2009	2312955	I	CI/2	3670.000	Guardian Newspaper - Job 9272 - Delivery 12 Feb 2009 - 163 grams.  	0.1284	0.1445	471.228	Guardian Newspaper	S	58.90	I	201
+C11261	06/03/2009	2312955	I	CI/3	3670.000	Guardian Newspaper - Job 9273 - Delivery 19 Feb 2009 - 70 grams.  	0.0808	0.0909	296.536	Guardian Newspaper	S	37.07	I	201
+
+C11262	06/03/2009	2316173	I	CI/1	3670.000	Guardian Newspaper - Job 9274 - Delivery 26 Feb 2009 - 85 grams.  	0.0808	0.0909	296.536	Guardian Newspaper	S	37.07	I	201
+
+C11263	06/03/2009	2311997	I	CI/1	1315.000	Harringtons CW Metropol - Job 9351 - Delivery 05 Feb 2009 - 40 grams.  	0.0658	0.0740	86.527	Harringtons CW Metropol	S	10.82	I	201
+
+C11264	06/03/2009	2312957	I	CI/1	6440.000	Hawkesbay Country Scene - Job 9392 - Delivery 11 Feb 2009 - 53 grams.  	0.0808	0.0909	520.352	Hawkesbay Country Scene	S	65.04	I	201
+
+C11265	06/03/2009	2311997	I	CI/1	1315.000	Metropol - Job 9276 - Delivery 05 Feb 2009 - 156 grams.  	0.1284	0.1445	168.846	Metropol	S	21.11	I	201
+C11265	06/03/2009	2311997	I	CI/2	1315.000	Metropol - Job 9352 - Delivery 19 Feb 2009 - 145 grams.  	0.1070	0.1204	140.705	Metropol	S	17.59	I	201
+
+C11266	06/03/2009	2312044	I	CI/1	3771.000	Mid Canterbury Herald - Job 9222 - Delivery 11 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	342.407	Mid Canterbury Herald	S	42.80	I	201
+C11266	06/03/2009	2312044	I	CI/2	3771.000	Mid Canterbury Herald - Job 9223 - Delivery 18 Feb 2009 - 85 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	342.407	Mid Canterbury Herald	S	42.80	I	201
+C11266	06/03/2009	2312044	I	CI/3	3771.000	Mid Canterbury Herald - Job 9348 - Delivery 25 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	342.407	Mid Canterbury Herald	S	42.80	I	201
+
+C11267	06/03/2009	2312969	I	CI/1	1530.000	Napier Mail - Job 9277 - Delivery 04 Feb 2009 - 65 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+C11267	06/03/2009	2312969	I	CI/2	1530.000	Napier Mail - Job 9278 - Delivery 11 Feb 2009 - 73 grams. Includes folding fee 0.0100 cents. 	0.1170	0.1316	179.010	Napier Mail	S	22.38	I	201
+C11267	06/03/2009	2312969	I	CI/3	1530.000	Napier Mail - Job 9279 - Delivery 18 Feb 2009 - 51 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+
+C11268	06/03/2009	2316158	I	CI/1	1530.000	Napier Mail - Job 9280 - Delivery 25 Feb 2009 - 75 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	138.924	Napier Mail	S	17.37	I	201
+
+C11269	06/03/2009	2312963	I	CI/1	63780.000	New World Northern  - Job 9256 - Delivery 14 Feb 2009 - 40 grams.  	0.0658	0.0740	4196.724	New World Northern 	S	524.59	I	201
+
+C11270	06/03/2009	2313335	I	CI/1	63780.000	New World Northern  - Job 9257 - Delivery 21 Feb 2009 - 40 grams.  	0.0658	0.0740	4196.724	New World Northern 	S	524.59	I	201
+
+C11271	06/03/2009	2313734	I	CI/1	63780.000	New World Northern  - Job 9258 - Delivery 28 Feb 2009 - 40 grams.  	0.0658	0.0740	4196.724	New World Northern 	S	524.59	I	201
+
+C11272	06/03/2009	2311971	I	CI/1	7133.000	North Canterbury News - Job 9240 - Delivery 03 Feb 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	624.851	North Canterbury News	S	78.11	I	201
+
+C11273	06/03/2009	2312066	I	CI/1	7133.000	North Canterbury News - Job 9241 - Delivery 10 Feb 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	624.851	North Canterbury News	S	78.11	I	201
+C11273	06/03/2009	2312066	I	CI/2	7133.000	North Canterbury News - Job 9242 - Delivery 17 Feb 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	624.851	North Canterbury News	S	78.11	I	201
+C11273	06/03/2009	2312066	I	CI/3	7133.000	North Canterbury News - Job 9243 - Delivery 24 Feb 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	624.851	North Canterbury News	S	78.11	I	201
+
+C11274	06/03/2009	2313254	I	CI/1	3976.000	OMC Power Tools - Job 9377 - Delivery 13 Feb 2009 - 20 grams.  	0.0536	0.0603	213.114	OMC Power Tools	S	26.64	I	201
+
+C11275	06/03/2009	2312948   	I	CI/1	3135.000	Property Outlook - Job 9281 - Delivery 12 Feb 2009 - 20 grams.  	0.0536	0.0603	168.036	Property Outlook	S	21.00	I	201
+
+C11276	06/03/2009	2312982	I	CI/1	770.000	Rangitikei Mail - Job 9282 - Delivery 03 Feb 2009 - 98 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+C11276	06/03/2009	2312982	I	CI/2	770.000	Rangitikei Mail - Job 9283 - Delivery 10 Feb 2009 - 54 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+C11276	06/03/2009	2312982	I	CI/3	770.000	Rangitikei Mail - Job 9284 - Delivery 17 Feb 2009 - 65 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+
+C11277	06/03/2009	2316142	I	CI/1	770.000	Rangitikei Mail - Job 9285 - Delivery 24 Feb 2009 - 54 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	69.916	Rangitikei Mail	S	8.74	I	201
+
+C11278	06/03/2009	2315140	I	CI/1	7133.000	Riverside Hort CW Nth Canty - Job 9459 - Delivery 24 Feb 2009 - 20 grams.  	0.0536	0.0603	382.329	Riverside Hort CW Nth Canty	S	47.79	I	201
+
+C11279	06/03/2009	2313536	I	CI/1	2280.000	Scene Matamata - Job 9373 - Delivery 04 Feb 2009 - 95 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	207.024	Scene Matamata	S	25.88	I	201
+
+C11280	06/03/2009	2308393	I	CI/1	2336.000	Scene Matamata - Job 9205 - Delivery 28 Feb 2009 - 100 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	212.109	Scene Matamata	S	26.51	I	201
+
+C11281	06/03/2009	2311978	I	CI/1	6396.000	Selwyn Times - Job 9236 - Delivery 03 Feb 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	580.757	Selwyn Times	S	72.60	I	201
+
+C11282	06/03/2009	2312072	I	CI/1	6396.000	Selwyn Times - Job 9237 - Delivery 10 Feb 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	560.290	Selwyn Times	S	70.04	I	201
+C11282	06/03/2009	2312072	I	CI/2	6396.000	Selwyn Times - Job 9238 - Delivery 17 Feb 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	560.290	Selwyn Times	S	70.04	I	201
+C11282	06/03/2009	2312072	I	CI/3	6396.000	Selwyn Times - Job 9239 - Delivery 24 Feb 2009 - 76 grams. Includes folding fee 0.0100 cents. 	0.0876	0.0986	560.290	Selwyn Times	S	70.04	I	201
+
+C11283	06/03/2009	2313531	I	CI/1	1320.000	Taupo Real Estate - Job 9286 - Delivery 12 Feb 2009 - 229 grams. Includes folding fee 0.0100 cents. 	0.1598	0.1798	210.936	Taupo Real Estate	S	26.37	I	201
+C11283	06/03/2009	2313531	I	CI/2	1320.000	Taupo Real Estate - Job 9457 - Delivery 26 Feb 2009 - 202 grams. Includes folding fee 0.0100 cents. 	0.1598	0.1798	210.936	Taupo Real Estate	S	26.37	I	201
+
+C11284	06/03/2009	2312037	I	CI/1	4811.000	The High Country Herald - Job 9224 - Delivery 04 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	436.839	The High Country Herald	S	54.61	I	201
+C11284	06/03/2009	2312037	I	CI/2	4811.000	The High Country Herald - Job 9225 - Delivery 11 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	436.839	The High Country Herald	S	54.61	I	201
+C11284	06/03/2009	2312037	I	CI/3	4811.000	The High Country Herald - Job 9226 - Delivery 18 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	436.839	The High Country Herald	S	54.61	I	201
+C11284	06/03/2009	2312037	I	CI/4	4811.000	The High Country Herald - Job 9227 - Delivery 25 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	436.839	The High Country Herald	S	54.61	I	201
+
+C11285	06/03/2009	2312131	I	CI/1	2413.000	The Waitaki Herald Weekender - Job 9232 - Delivery 07 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	219.100	The Waitaki Herald Weekender	S	27.39	I	201
+C11285	06/03/2009	2312131	I	CI/2	2413.000	The Waitaki Herald Weekender - Job 9233 - Delivery 13 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	The Waitaki Herald Weekender	S	30.62	I	201
+C11285	06/03/2009	2312131	I	CI/3	2413.000	The Waitaki Herald Weekender - Job 9234 - Delivery 20 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	The Waitaki Herald Weekender	S	30.62	I	201
+C11285	06/03/2009	2312131	I	CI/4	2413.000	The Waitaki Herald Weekender - Job 9235 - Delivery 27 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	The Waitaki Herald Weekender	S	30.62	I	201
+
+C11286	06/03/2009	2314852	I	CI/1	20662.000	Vantage Pharmacy - Job 9453 - Delivery 28 Feb 2009 - 20 grams.  	0.0000	0.0000	0.000	Vantage Pharmacy	S	0.00	I	201
+
+C11287	06/03/2009	2312031	I	CI/1	2413.000	Waitaki Herald - Job 9228 - Delivery 04 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	Waitaki Herald	S	30.62	I	201
+C11287	06/03/2009	2312031	I	CI/2	2413.000	Waitaki Herald - Job 9229 - Delivery 11 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	Waitaki Herald	S	30.62	I	201
+C11287	06/03/2009	2312031	I	CI/3	2413.000	Waitaki Herald - Job 9540 - Delivery 25 Feb 2009 - 80 grams. Includes folding fee 0.0100 cents. 	0.1015	0.1142	244.920	Waitaki Herald	S	30.62	I	201
+
+C11288	06/03/2009	2312268	I	CI/1	9986.000	Weekend Sun - Job 9287 - Delivery 06 Feb 2009 - 132 grams. Includes folding fee 0.0100 cents. 	0.1170	0.1316	1168.362	Weekend Sun	S	146.04	I	201
+C11288	06/03/2009	2312268	I	CI/2	9986.000	Weekend Sun - Job 9288 - Delivery 13 Feb 2009 - 164 grams. Includes folding fee 0.0100 cents. 	0.1384	0.1557	1382.062	Weekend Sun	S	172.76	I	201
+C11288	06/03/2009	2312268	I	CI/3	9986.000	Weekend Sun - Job 9289 - Delivery 20 Feb 2009 - 171 grams. Includes folding fee 0.0100 cents. 	0.1384	0.1557	1382.062	Weekend Sun	S	172.76	I	201
+C11288	06/03/2009	2312268	I	CI/4	9986.000	Weekend Sun - Job 9290 - Delivery 27 Feb 2009 - 155 grams. Includes folding fee 0.0100 cents. 	0.1384	0.1557	1382.062	Weekend Sun	S	172.76	I	201
+
+C11289	06/03/2009	2313571	I	CI/1	10340.000	Whangarei Report - Job 9291 - Delivery 05 Feb 2009 - 86 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	938.872	Whangarei Report	S	117.36	I	201
+C11289	06/03/2009	2313571	I	CI/2	10340.000	Whangarei Report - Job 9292 - Delivery 12 Feb 2009 - 77 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	938.872	Whangarei Report	S	117.36	I	201
+C11289	06/03/2009	2313571	I	CI/3	10340.000	Whangarei Report - Job 9293 - Delivery 19 Feb 2009 - 77 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	938.872	Whangarei Report	S	117.36	I	201
+C11289	06/03/2009	2313571	I	CI/4	10580.000	Whangarei Report - Job 9294 - Delivery 26 Feb 2009 - 88 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	960.664	Whangarei Report	S	120.08	I	201
+
+C11290	06/03/2009	2315242	I	CI/1	4346.000	Your Cambridge News - Job 9295 - Delivery 13 Feb 2009 - 87 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	394.617	Your Cambridge News	S	49.33	I	201
+C11290	06/03/2009	2315242	I	CI/2	4346.000	Your Cambridge News - Job 9296 - Delivery 27 Feb 2009 - 87 grams. Includes folding fee 0.0100 cents. 	0.0908	0.1022	394.617	Your Cambridge News	S	49.33	I	201
+
+C11291	06/03/2009	1715	I	CI/1	1898.000	HSNO Compliant Solutions - Job 9181 - Delivery 19 Feb 2009 - 20 grams.  	0.0856	0.0963	162.469	HSNO Compliant Solutions	S	20.31	I	268
+
+C11292	06/03/2009		I	CI/1	1033.000	Scan It - Job 9381 - Delivery 16 Feb 2009 - 5 grams.  	0.0856	0.0963	88.425	Scan It	S	11.05	I	272
+
+C11293	06/03/2009		I	CI/1	7055.000	Essence Mag- Nth Canty - Job 9372 - Delivery 13 Feb 2009 - 100 grams.  	0.1050	0.1181	740.775	Essence Mag- Nth Canty	S	92.60	I	258
+
+C11294	06/03/2009		I	CI/1	1616.000	Kaiapoi Advocate - Job 9357 - Delivery 07 Feb 2009 - 45 grams.  	0.0850	0.0956	137.360	Kaiapoi Advocate	S	17.17	I	258
+C11294	06/03/2009		I	CI/2	1616.000	Kaiapoi Advocate - Job 9395 - Delivery 21 Feb 2009 - 45 grams.  	0.0850	0.0956	137.360	Kaiapoi Advocate	S	17.17	I	258
+
+C11295	06/03/2009	Beryl	I	CI/1	785.000	Milos Mowing Service - Job 9541 - Delivery 25 Feb 2009 - 5 grams.  	0.0700	0.0788	54.950	Milos Mowing Service	S	6.87	I	258
+
+C11296	06/03/2009	Beryl	I	CI/1	500.000	Selwyn District Council - Job 9447 - Delivery IOA - 15 grams.  	0.0700	0.0788	35.000	Selwyn District Council	S	4.38	I	258
+
+C11297	06/03/2009		I	CI/1	28478.000	Coast N Country - Job 9364 - Delivery 09 Feb 2009 - 150 grams. Includes folding fee 0.0100 cents. 	0.1117	0.1257	3180.993	Coast N Country	S	397.62	I	217
+
+C11298	06/03/2009		I	CI/1	3245.000	Broadband Just Got Cheaper - Job 9219 - Delivery 05 Feb 2009 - 20 grams.  	0.0856	0.0963	277.772	Broadband Just Got Cheaper	S	34.72	I	254
+
