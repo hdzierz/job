@@ -25,9 +25,11 @@ if($action=="save"){
 									 page_main,
 									 page_procjob,
 									 page_reports,
+									 page_rep_old,
 									 page_rep_revenue,
 									 page_invoice,
 									 page_parcels,
+						
 									 page_rep_parcels,
 									 gst) 
 					VALUES('$username',
@@ -40,6 +42,7 @@ if($action=="save"){
 							'$page_main',
 							'$page_procjob',
 							'$page_reports',
+							'$page_rep_old',
 							'$page_rep_revenue',
 							'$page_invoice',
 							'$page_parcels',
@@ -60,6 +63,7 @@ if($action=="save"){
 						page_main	 ='$page_main',
 						page_procjob	 ='$page_procjob',
 						page_reports	 ='$page_reports',
+						page_rep_old	 ='$page_rep_old',
 						page_rep_revenue	 ='$page_rep_revenue',
 						page_invoice	 ='$page_invoice',
 						page_parcels	 ='$page_parcels',

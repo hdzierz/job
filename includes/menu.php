@@ -62,7 +62,7 @@ if ($pagename=="login.php") { ?>
 			<? } #else pagename = rep_revenue.php
 		} #report finance
 		
-		if ($CK_PAGE_REVENUE=="Y") {
+		if ($CK_PAGE_REP_OLD=="Y") {
 			if ($pagename=="rep_old.php") {?>
 				<div id="activetab">
 					<a class="menulink" href="rep_old.php">Old Reps</a>

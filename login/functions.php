@@ -50,6 +50,7 @@ function process_user_info($username,$passwd,$rememberme){
 			setcookie("coural_page_addradmin",$data->page_addradmin,$expiry,$path);
 			setcookie("coural_page_opadmin",$data->page_opadmin,$expiry,$path);
 			setcookie("coural_page_reports",$data->page_reports,$expiry,$path);
+			setcookie("coural_page_rep_old",$data->page_rep_old,$expiry,$path);
 			setcookie("coural_page_rep_revenue",$data->page_rep_revenue,$expiry,$path);
 			
 			setcookie("coural_page_parcels",$data->page_parcels,$expiry,$path);

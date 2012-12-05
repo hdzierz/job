@@ -40,6 +40,7 @@ $CK_PAGE_INVOICEPROC = $_COOKIE['coural_page_procinvoice'];
 $CK_PAGE_JOBPROC 	 = $_COOKIE['coural_page_procjob'];
 $CK_PAGE_INVOICE 	 = $_COOKIE['coural_page_invoice'];
 $CK_PAGE_REPORTS 	 = $_COOKIE['coural_page_reports'];
+$CK_PAGE_REP_OLD 	 = $_COOKIE['coural_page_rep_old'];
 $CK_PAGE_REVENUE 	 = $_COOKIE['coural_page_rep_revenue'];
 
 $CK_PAGE_REPPARCELS  = $_COOKIE['coural_page_rep_parcels'];

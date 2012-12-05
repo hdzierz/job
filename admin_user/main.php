@@ -47,6 +47,10 @@ if($action=="edit"||$action=="add"){
 				<td><input type="checkbox" name="page_reports" value="Y" <? if($user->page_reports=="Y"){ ?> checked <? }?> /></td>
 			</tr>	
 			<tr>
+				<td>Old Reports:</td>
+				<td><input type="checkbox" name="page_rep_old" value="Y" <? if($user->page_rep_old=="Y"){ ?> checked <? }?> /></td>
+			</tr>	
+			<tr>
 				<td>Job Reports:</td>
 				<td><input type="checkbox" name="page_rep_revenue" value="Y" <? if($user->page_rep_revenue=="Y"){ ?> checked <? }?> /></td>
 			</tr>	
@@ -122,6 +126,7 @@ if($action=="" || !isset($action)){
 					 page_main AS 'Current Jobs',
 					 page_procjob AS 'Job Booking',
 					 page_reports AS 'Maint. Reports',
+					 page_rep_old AS 'Old Reports',
 					 page_rep_revenue AS 'Job Reports',
 					 page_invoice AS 'Invoices',
 					 page_parcels AS Parcels,
