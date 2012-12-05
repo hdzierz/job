@@ -42,16 +42,7 @@
 <?
 	}
 ?>
-<? if($report=="delivery_details"){?>
-		<a class="subaself" href="reports.php?report=delivery_details">Delivery Details</a>|
-<? 
-	}
-	else{
-?>
-		<a class="suba" href="reports.php?report=delivery_details">Delivery Details</a>|
-<?
-	}
-?>
+
 <? if($report=="address_details"){?>
 		<a class="subaself" href="reports.php?report=address_details">Address Details</a>|
 <? 
@@ -96,16 +87,7 @@
 <?
 	}
 ?>
-<? if($report=="dropoff_details"){?>
-		<a class="subaself" href="reports.php?report=dropoff_details">Drop Off Details</a>|
-<? 
-	}
-	else{
-?>
-		<a class="suba" href="reports.php?report=dropoff_details">Drop Off Details</a>|
-<?
-	}
-?>
+
 <? if($report=="error"){?>
 		<a class="subaself" href="reports.php?report=error">Route Aff. Errors</a>
 <? 
