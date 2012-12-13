@@ -889,8 +889,10 @@ if($action=="edit_job"||$action=="new_job"){
 			</tr>
 			<tr>
 				<td>Purchase #:</td>
-				<td><input type="text" name="purchase_no" value="<?=$purchase_no?>" /></td>
-				<td></td>
+				<td><input type="text" name="purchase_no" onkeyup="get(this,'po_no_error','proc_job/get/check_po_no.php?job_id=<?=$job_id?>&no='+this.value);" value="<?=$purchase_no?>" /></td>
+				<td>
+					<span style="background-color:#EEEEEE;" id="po_no_error"></span>
+				</td>
 				<td>Invoice #:</td>
 				<td><input type="text" name="invoice_no" value="<?=$invoice_no?>" /></td>		
 				<td>&nbsp;</td>
