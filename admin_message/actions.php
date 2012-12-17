@@ -45,7 +45,7 @@ if($action=='add_addresses'){
 	else if($subaction=='add_operator'){
 		
 		$qry = "REPLACE INTO message_op(message_id,operator_id)
-					(SELECT $message_id,operator_id FROM operator WHERE operator_id IS NOT NULL ";	
+					(SELECT DISTINCT $message_id,operator_id FROM operator WHERE operator_id IS NOT NULL ";	
 		$where_add = "";
 		if($is_current !== "All"){	
 			$where_add.= " AND is_current='$is_current'";
@@ -65,8 +65,13 @@ if($action=='add_addresses'){
 			while($c = mysql_fetch_object($res)){
 				$ids[] = $c->contractor_id;
 			}
+			$qry2 = "SELECT subdist_id FROM route_aff WHERE dist_id IN (".implode($dist,',').") AND now() BETWEEN app_date AND stop_date ";
+			$res = query($qry2);
+			while($c = mysql_fetch_object($res)){
+				$ids[] = $c->subdist_id;
+			}
 			if(count($ids)>0)
-				$where_add .= " AND operator_id IN (".implode($ids,',').")";
+				$where_add .= " AND operator_id IN (".implode($dist,',').",".implode($ids,',').")";
 		}
 		$qry .= $where_add." )";
 		query($qry);
