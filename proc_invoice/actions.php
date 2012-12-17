@@ -86,7 +86,7 @@ function create_description_bbc($job){
 	
 	
 	
-	$result = $job->publication." - Job ".$job->job_no." - Delivery ".$delivery_date." - ".sprintf("%d",$job->weight)." grams. Bags Boxes and Counter. $add_linehaul";
+	$result = $job->publication." - Job ".$job->job_no." - Delivery ".$delivery_date." - ".sprintf("%d",$job->weight)." grams. ".$job->desc_bbc.". $add_linehaul";
 	return $result; 
 }
 
