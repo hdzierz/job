@@ -11,6 +11,18 @@ function create_invoice_no(){
 
 	return 'C'.$max_no;
 }
+
+function create_invoice_null_no(){
+	$max_inv = get_max("job","invoice_no","WHERE job_id IS NOT NULL AND LEFT(invoice_no,1) = 'N'","");
+	
+	$max_no = substr($max_inv,1);
+	$max_no++;
+	
+	$new_inv = 'N'.$max_no;
+
+	return 'N'.$max_no;
+}
+
 function update_invoice_no($job_id,$invoice_no){
 	
 	$qry = "UPDATE job SET invoice_no='$invoice_no' WHERE job_id='$job_id'";
@@ -283,6 +295,11 @@ if($action=="Create Invoices"){
 			//$gst = 1.00+$job->gst/100;
 			$gst = 1+$GST_CIRCULAR;
 			
+			if($is_null_job){
+				$qry = "UPDATE job SET invoice_no='No Charge' WHERE job_id=".$job->job_id;
+				query($qry);
+				continue;
+			}
 			//if(!$fuel_surcharge) $fuel_surcharge = $job->fuel_surcharge;
 			
 			//echo $job->rate." / ".$job->invoice_qty;

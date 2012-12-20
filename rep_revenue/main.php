@@ -1123,8 +1123,8 @@ if($report=="weekly_send_out"){
 					
 					$title = "Distributor: $dist->company";
 					$tab->StartLine(8);
-						$tab->WriteLine($title,'L',8,$maxw-20);
-						$tab->WriteLine('Drop off '.$tab->PageNo().'/{nb}','R',8,30);
+						$tab->WriteLine($title,'L',6,$maxw-20);
+						$tab->WriteLine('Drop off '.$tab->PageNo().'/{nb}','R',6,30);
 					$tab->StopLine();
 					
 					if($is_job_report)
@@ -1257,7 +1257,7 @@ if($report=="weekly_send_out"){
 
 					
 					
-					$tab->Ln();
+					//$tab->Ln();
 					//$tab->WordWrap($comment2, $maxw-1,'\n');
 					$tab->StartLine($font_size);
 						$tab->WriteLine("* D/date as DD-MM",'L',$font_size,$maxw);
@@ -1269,9 +1269,9 @@ if($report=="weekly_send_out"){
 						$tab->WriteLine($comment2,'L',$font_size,$maxw);
 					$tab->StopLine();*/
 					
-					$tab->StartLine($font_size);
-						$tab->WriteLine("",'R',$font_size,$maxw);
-					$tab->StopLine();
+					//$tab->StartLine($font_size);
+						//$tab->WriteLine("",'R',$font_size,$maxw);
+					//$tab->StopLine();
 					
 					
 				
@@ -1327,22 +1327,24 @@ if($report=="weekly_send_out"){
 					
 					$first_job=false;
 
-					$tab->StartLine($font_size);
-						$tab->WriteLine("",'R',$font_size,$maxw);
-					$tab->StopLine();
+					//$tab->StartLine($font_size);
+						//$tab->WriteLine("",'R',$font_size,$maxw);
+					//$tab->StopLine();
 					$tab->SetFontSize(9);
 					$blurb = "THIS SHOULD BE USED FOR DELIVERY CONFIRMATIONS - 'GOLDS'. PLEASE FAX TO 06 356 6618 EACH WEEK.\n";
 					$blurb.= "Please enter date received in the box alongside the total drop (above) and note any shortages or other comments below.";
 					$blurb.="\n\n";
-					$y = $tab->GetY();
-					$tab->MultiCell($maxw-130,3,$blurb,1,'L');
-					$tab->SetXY($maxw-110,$y);
-			
 					$blurb2 = "The above deliveries have been carried out in accordance with instructions.\n\n";
 					$blurb2.= "Signed:______________________  Date: _______________________\n\n\n";
+					$y = $tab->GetY();
+					$tab->MultiCell($maxw-130,6,$blurb,1,'L');
+					$tab->SetXY($maxw-110,$y);
+			
+					//$blurb2 = "The above deliveries have been carried out in accordance with instructions.\n\n";
+					//$blurb2.= "Signed:______________________  Date: _______________________\n\n\n";
 					//$blurb2.="\n\n\n\n";
 					
-					$tab->MultiCell($maxw-154,3,$blurb2,1,'L');
+					//$tab->MultiCell($maxw-154,3,$blurb2,1,'L');
 					$tab->Ln();
 					$tab->SetFontSize($font_size);
 					

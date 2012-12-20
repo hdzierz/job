@@ -142,6 +142,7 @@ if($action=="select_jobs"){
 			$tab->startNewLine();
 				$tab->writeSubmitButton("action","Create Invoices");
 				$tab->addInput("fuel_surcharge_show",$fuel_surcharge,"Fuel Surcharge: ",4,true);
+				$tab->addCheckbox("is_null_job",$is_null_job,"Null Invoice: ",false);
 				$tab->addInput("date_show",date("d M Y",strtotime($date)),"Invoice Date: ",8,true);
 			$tab->stopNewLine();
 			$tab->writeTable();

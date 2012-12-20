@@ -293,6 +293,12 @@ class MySQLTable{
 <?	
 	}
 	
+	function addCheckbox($name,$value,$label,$readonly=false){
+?>
+		<?=$label?> <input readonly="<?=$readonly?>" name="<?=$name?>" id="<?=$name?>"  type="checkbox" <? if($value){ echo "checked"; }?> />
+<?	
+	}
+	
 	function stopTable(){
 		$this->lineCount=0;
 		$this->numRows=0;
