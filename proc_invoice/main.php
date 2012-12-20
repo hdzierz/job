@@ -44,8 +44,6 @@ Select:
 			WHERE finished<>'Y'
 				AND cancelled <>'Y'
 				AND is_quote<>'Y'
-				AND invoice_no IS NOT NULL
-				AND invoice_no <> ''
 			ORDER BY client.name,invoice_no
 			";
 
