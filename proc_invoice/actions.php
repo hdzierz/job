@@ -190,7 +190,7 @@ function write_bundles($fp,$job,$invoiceno,$fuel_surcharge,$gst,$date){
 		//$balance_dd			= 20;
 		$card_id			= $job->card_id;
 		$description		= "Bundles";
-		fwrite($fp, "$contact,$invoiceno,$cust_po,{$job->invoice_date},{$job->delivery_date},$description,$qty,$price,$discount,100,15% GST on income,Division,Circulars\n");
+		fwrite($fp, ",$invoiceno,$cust_po,$date,{$job->delivery_date},$description,$qty,$price,$discount,100,15% GST on income,Division,Circulars\n");
 
 		//echo $price." ".$price_gst." ".$gst."<br />";
 		//fwrite($fp, "$invoiceno\t$date\t$cust_po\t$delivery_status\t$item_no\t$qty\t$description\t$price\t$price_gst\t$total\t$total_gst\t$journal\t$gst_code\t$gst_val\t$sale_stat\t$card_id\n");
@@ -229,7 +229,7 @@ function write_bbc($fp,$job,$invoiceno,$gst,$date,$count){
 		//$balance_dd			= 20;
 		$card_id			= $job->card_id;
 		$description		= create_description_bbc($job);
-		fwrite($fp, "$contact,$invoiceno,$cust_po,{$job->invoice_date},{$job->delivery_date},$description,$qty,$price,$discount,100,15% GST on income,Division,Circulars\n");
+		fwrite($fp, ",$invoiceno,$cust_po,$date,{$job->delivery_date},$description,$qty,$price,$discount,100,15% GST on income,Division,Circulars\n");
 
 		//fwrite($fp, "$invoiceno\t$date\t$cust_po\t$delivery_status\t$item_no\t$qty\t$description\t$price\t$price_gst\t$total\t$total_gst\t$journal\t$gst_code\t$gst_val\t$sale_stat\t$card_id\n");
 	}
@@ -370,9 +370,9 @@ if($action=="Create Invoices"){
 
 			
 			
-			$count = write_bbc($fp,$job,$invoiceno,$gst,$date,$count);
+			$count = write_bbc($fp,$job,$invoiceno,$gst,$inv_date,$count);
 			
-			write_bundles($fp,$job,$invoiceno,$fuel_surcharge,$gst,$date);
+			write_bundles($fp,$job,$invoiceno,$fuel_surcharge,$gst,$inv_date);
 			
 			/*if($counter==$last_item){
 				if(!$fuel_surcharge)  $fuel_sc = $prev_job->fuel_surcharge;
