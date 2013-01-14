@@ -816,7 +816,7 @@ if($action=="edit_job"||$action=="new_job"){
 	$freight_charge = sprintf("%.2f",$freight_charge);
 	$weight		 	= sprintf("%d",$weight);
 	$invoice_qty	= sprintf("%d",$invoice_qty);
-	$qty_bbc		= sprintf("%d",$qty_bbc);
+	//$qty_bbc		= sprintf("%d",$qty_bbc);
 	
 	if($regular=="true")
 		$regular="Y";
