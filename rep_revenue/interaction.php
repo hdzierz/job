@@ -452,8 +452,8 @@ if($report=="weekly"){
 		$date_final_show=$date_final;
 ?>		
 	<script language="javascript">
-		function send_out(company,date_start,date_final,show_regular,show_casual,show_rd_details,pdf_only){
-			document.location.href='rep_revenue.php?report=weekly_send_out&company='+company+'&date_start='+date_start+'&date_final='+date_final+'&show_regular='+show_regular+'&show_casual='+show_casual+'&show_rd_details='+show_rd_details+'&pdf_only='+pdf_only;
+		function send_out(company,date_start,date_final,show_regular,show_casual,show_rd_details,sel_contr_only,pdf_only){
+			document.location.href='rep_revenue.php?report=weekly_send_out&company='+company+'&date_start='+date_start+'&date_final='+date_final+'&show_regular='+show_regular+'&show_casual='+show_casual+'&show_rd_details='+show_rd_details+'&sel_contr_only='+sel_contr_only+'&pdf_only='+pdf_only;
 		}
 	</script>
 	<form name="weekly_job" action="rep_revenue.php" method="post">
@@ -498,6 +498,12 @@ if($report=="weekly"){
 				
 			</tr>
 			<tr>
+				<td>Show presel. RD contr. only</td>
+				<td>
+					<input <? if($sel_contr_only){?> checked <? }?> type="checkbox" value="1" name="sel_contr_only" />
+				</td>
+			</tr>
+			<tr>
 				<td>Comment:</td>
 				<td colspan="3">
 					<textarea cols="80" rows="3" name="comment2"><?=$comment2?></textarea>
@@ -510,8 +516,8 @@ if($report=="weekly"){
 					<?
 					if($date_start>="2000-01-01" && $date_final>="2000-01-01"){
 					?>
-						<input type="button" value="Send Out!" onClick="send_out('<?=$company?>','<?=$date_start?>','<?=$date_final?>','<?=$show_regular?>','<?=$show_casual?>','<?=$show_rd_details?>','0');" />
-						<input type="button" value="Create PDF only!" onClick="send_out('<?=$company?>','<?=$date_start?>','<?=$date_final?>','<?=$show_regular?>','<?=$show_casual?>','<?=$show_rd_details?>','1');" />
+						<input type="button" value="Send Out!" onClick="send_out('<?=$company?>','<?=$date_start?>','<?=$date_final?>','<?=$show_regular?>','<?=$show_casual?>','<?=$show_rd_details?>','<?=$sel_contr_only?>','0');" />
+						<input type="button" value="Create PDF only!" onClick="send_out('<?=$company?>','<?=$date_start?>','<?=$date_final?>','<?=$show_regular?>','<?=$show_casual?>','<?=$show_rd_details?>','<?=$sel_contr_only?>','1');" />
 					<?
 					}
 					?>

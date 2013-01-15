@@ -1039,16 +1039,18 @@ if($report=="weekly_send_out"){
 		
 			$fn = clean_file_name("dist_delivery_instructions_".$name.".pdf");
 			
-			if($num_jobs>0){
+			if($num_jobs>0 && !$sel_contr_only){
 				$tab->Output($dir.'/'.$fn);
 				//$tab->Output();
 				
 				echo "Delivery instructions for <strong>$company</strong> created.<br />";
+				
 				fwrite($fp,"Delivery instructions for <strong>$company</strong> created.\n");
 		
 				if(!$pdf_only) {
 					send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$dist_id,$receiver);
 				}
+				
 				$pdffiles[] = $dir.'/'.$fn;
 				//pdf_merge($now,$fn);
 			}
@@ -1058,7 +1060,9 @@ if($report=="weekly_send_out"){
 			/////////////////////////////////////////////////////////
 			// DROPOFF SEND OUT
 			/////////////////////////////////////////////////////////
+			$where_add_contr = "";
 			
+			if($sel_contr_only) $where_add_contr = " AND parcel_send_di='Y' ";
 			$qry_dos = "SELECT DISTINCT CONCAT(name,'_',first_name) AS name,
 								company,
 								dropoff_id,
@@ -1074,6 +1078,7 @@ if($report=="weekly_send_out"){
 						 ON address.operator_id=operator.operator_id
 						 WHERE job_route.dist_id='$dist_id'
 							$where_add
+							$where_add_contr
 							#mailt_type='m'
 						ORDER BY company";
 			//echo nl2br($qry_jobs); 
@@ -1947,6 +1952,9 @@ if($report=="weekly"){
 			$start=true;
 			$start_cas=true;
 			$dist_id=get("operator","operator_id","WHERE company='$dist->company'");
+			
+			$where_add_contr = " ";
+			if($sel_contr_only=='Y') $where_add_contr = " AND operator.parcel_send_di = 'Y' ";
 			
 			$qry_jobs = "SELECT DISTINCT job.job_id,job_no,is_regular 
 						 FROM job 
