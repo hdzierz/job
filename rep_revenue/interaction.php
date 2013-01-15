@@ -498,7 +498,7 @@ if($report=="weekly"){
 				
 			</tr>
 			<tr>
-				<td>Show presel. RD contr. only</td>
+				<td colspan='2'>Show presel. RD contr. only</td>
 				<td>
 					<input <? if($sel_contr_only){?> checked <? }?> type="checkbox" value="1" name="sel_contr_only" />
 				</td>
