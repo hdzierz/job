@@ -4,7 +4,10 @@
 	
 	if(!$_GET['no']) die();
 	
-	$qry = "SELECT * FROM job WHERE job_id<>".$_GET['job_id']." AND purchase_no=".$_GET['no'];
+	if($job_id)
+		$qry = "SELECT * FROM job WHERE job_id<>".$_GET['job_id']." AND purchase_no=".$_GET['no'];
+	else
+		$qry = "SELECT * FROM job WHERE purchase_no=".$_GET['no'];
 	$res = query($qry);
 	
 	$num = mysql_num_rows($res);

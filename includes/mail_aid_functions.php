@@ -1,4 +1,6 @@
 <?
+
+
 require_once('includes/phpMailer/class.phpmailer.php');
 // Configuration settings for My Site
 $ADMIN_EMAIL = "howard@coural.co.nz";
@@ -15,13 +17,15 @@ $site['from_email'] = $ADMIN_EMAIL; // from email address
 $site['smtp_mode'] = 'enabled'; // enabled or disabled
 //$site['smtp_host'] = "ssl://smtp.ramsu.co.nz:465";
 $site['smtp_host'] = "ssl://smtp.gmail.com:465";
+//$site['smtp_host'] = 'mail.coural.co.nz';
 
-
-$site['smtp_port'] = intval(465);
+$site['smtp_port'] = intval(25);
 //$site['smtp_username'] = "support_send@coural.co.nz";
 $site['smtp_username'] = "ruralcouriers@gmail.com";
+//$site['smtp_username'] = 'cjobsys@coural.co.nz';
 
 $site['smtp_password'] = "zt90undr";
+//$site['smtp_password'] = "oeckel6b&z";
 
 //$ADMIN_EMAIL = "hdzierz@gmail.com";
 
@@ -190,9 +194,9 @@ function send_test_mail(){
 	$mailer->Subject = 	"TEST";
 	$mailer->Body = "TEST";
 	$mailer->From = "coural@coural.co.nz";
-	//$mailer->SMTPDebug = 2;
-	
-	$mailer->AddAddress("hdzierz@gmail.com", 'Coural Head Office');
+	$mailer->SMTPDebug = 2;
+	$mailer->AuthType = "NTLM";
+	$mailer->AddAddress("helge.dzierzon@plantandfood.co.nz", 'Coural Head Office');
 	if(!$mailer->Send())
 	{
 		echo "<font color='red'>Mail to $company failed (".$email.") : ".$mailer->ErrorInfo."</font><br />";
