@@ -189,6 +189,7 @@ if($action=="save_operator"){
 	if($is_subdist!="Y")$is_subdist="N";
 	if($is_dropoff!="Y")$is_dropoff="N";
 	if($is_contr!="Y")$is_contr="N";
+	if($parcel_send_di!='Y') $parcel_send_di = 'N';
 	$is_hauler_ni!="Y" ? $is_hauler_ni="0" : $is_hauler_ni="1";
 	$is_hauler_si!="Y" ? $is_hauler_si="0" : $is_hauler_si="1";
 	if($is_shareholder!="Y")$is_shareholder="N";
@@ -236,7 +237,8 @@ if($action=="save_operator"){
 									 env_deliv_notes,
 									 latest_dep,
 									 subdist_seq,
-									 rate_red_fact)
+									 rate_red_fact,
+									 parcel_send_di)
 				VALUES('$is_current',
 					 '$company',
 					 '$is_dist',
@@ -262,7 +264,8 @@ if($action=="save_operator"){
 					 '$env_deliv_notes',
 					 '$latest_dep',
 					 '$subdist_seq'+0,
-					 '$rate_red_fact'+0)";
+					 '$rate_red_fact'+0,
+					 '$parcel_send_di')";
 		query($sql);
 		$operator_id=mysql_insert_id();					 
 		$qry = "UPDATE address SET operator_id=$operator_id WHERE address_id=$address_id";
@@ -296,7 +299,8 @@ if($action=="save_operator"){
 					 env_deliv_notes= '$env_deliv_notes',
 					 latest_dep		= '$latest_dep',
 					 subdist_seq	= '$subdist_seq'+0,
-					 rate_red_fact  = '$rate_red_fact'
+					 rate_red_fact  = '$rate_red_fact',
+					 parcel_send_di = '$parcel_send_di'
 				WHERE operator_id='$operator_id'";
 			query($sql);
 	}

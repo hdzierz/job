@@ -191,6 +191,8 @@ if($action=="edit"||$action=="add"){
 			<tr>
 				<td>Same Drop Off as Address</td>
 				<td><input type="checkbox" value="Y" name="same_as_add" /></td>
+				<td>Parcel Drop Off SDI Sendout</td>
+				<td><input type="checkbox" value="Y" <?php if($operator->parcel_send_di=='Y') echo "checked"; ?> name="parcel_send_di" /></td>
 					
 			</tr>
 			<tr>

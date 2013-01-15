@@ -2101,10 +2101,10 @@ if($report=="weekly"){
 							//$tab->stopNewLine();					
 							$tab->writeSQLTableElement($qry,$first_job);
 							$tab->startNewLine();
-								$tab->addLines("",$num_blank_cols);
+								$tab->addLines("",$num_blank_cols-1);
 								$tab->addLine("Total:");
 								$tab->addLine($sum->tot_qty1);
-								$tab->addLine($sum->tot_qty2);
+								//$tab->addLine($sum->tot_qty2);
 								//$tab->addLine($sum->tot_bund);
 								//$tab->addLine($sum->total);
 							$tab->stopNewLine();
@@ -2271,6 +2271,359 @@ if($report=="weekly"){
 	}
 			
 }
+
+
+
+if($report=="weekly_contr_only"){
+	
+
+	if($comment2){
+		$comment2 = nl2br($comment2);
+		$qry = "UPDATE last_print_comment SET comment2='$comment2' WHERE last_print_comment_id=1";
+		query($qry);
+	}
+	
+	if($date_start&&$date_final){
+		$date_show_start 	= date("jS M Y",strtotime($date_start));
+		$date_show_end 		= date("jS M Y",strtotime($date_final));
+		
+		if($company!='All') $where_add = " AND operator_id='$company'";
+		
+		$qry_dist = "SELECT DISTINCT operator_id,company FROM operator WHERE is_dist='Y' $where_add";
+		$res_dist = query($qry_dist);
+		
+		$num_dist = mysql_num_rows($res_dist);
+		$count=0;
+		while($dist = mysql_fetch_object($res_dist)){
+			$start=true;
+			$start_cas=true;
+			$dist_id=get("operator","operator_id","WHERE company='$dist->company'");
+			
+			$qry_jobs = "SELECT DISTINCT job.job_id,job_no,is_regular 
+						 FROM job 
+						 LEFT JOIN job_route
+						 ON job.job_id=job_route.job_id
+						 LEFT JOIN route
+						 ON route.route_id=job_route.route_id
+						 WHERE delivery_date>='$date_start'
+						 	AND delivery_date<='$date_final'
+							AND job_route.dist_id='$dist_id'
+						ORDER BY seq_region,seq_area,seq_code";
+			//echo nl2br($qry_jobs);
+			$res_jobs = query($qry_jobs);
+			
+			if(mysql_num_rows($res_jobs)>0){
+		?>
+					<div class="weekly_head">		
+						<div class="weekly_logo"><img src="images/coural_logo.jpg" width="71" height="38" /></div>
+						<h3>Summary Delivery Instruction Period from: <?=$date_show_start?> to: <?=$date_show_end?><br />
+						Distributor: <?=$dist->company?></h3>						
+					</div>								
+		<?								
+			}			
+			$show_regular=true;
+			$show_casual=false;
+			
+			if($show_regular){
+				$tab  = new MySQLTable("reports.php","");
+				$tab->showRec=0;
+				$tab->noRepFields["Circular"] = 1;
+				$tab->noRepFields["Job #"] = 1;
+				$tab->noRepFields["Delivery Date"] = 1;
+				$tab->noRepFields["Type"] = 1;
+				$tab->noRepFields["Dropoff"] = 1;
+				
+				$tab->collField["Qty"]=true;
+				//$tab->collField["Qty 2"]=true;
+				
+				$tab->hasEditButton=false;
+				$tab->hasDeleteButton=false;
+				$tab->hasAddButton=false;
+				$tab->setHiddenField("type");
+				$tab->startTable();
+				$first_job=true;
+				
+				$tot_sum_qty = 0;
+				$tot_sum_bund = 0;
+				$tot_sum_total = 0;
+				
+				/*if($show_rd_details){
+					$group = "GROUP BY job.job_no,job_route.route_id,IF(job_route.dest_type='bundles',1,0)";
+					$sel_rd = "route.code AS 'RD',";					
+					$num_blank_cols = 6;
+				}
+				else{
+					$group = "GROUP BY job.job_no,job_route.dropoff_id,IF(job_route.dest_type='bundles',1,0)";
+					$num_blank_cols = 5;
+				}*/
+
+				while($job=mysql_fetch_object($res_jobs)){
+					//echo "Hello:".$job->is_regular;
+					if(($show_rd_details && $job->is_regular=='Y') || ($job->is_regular=='N'||trim($job->is_regular=='')) ){
+						$group = "GROUP BY job_route.route_id,IF(job_route.dest_type='bundles',1,0)";
+						$sel_rd = "route.code AS 'RD',";					
+						$num_blank_cols = 7;
+					}
+					else{
+						$group = "GROUP BY job.job_no,IF(job_route.dest_type='bundles',1,0)";
+						$num_blank_cols = 7;
+						$sel_rd = "'N/A' AS RD,";
+					}
+					$qry = "SELECT 	job.job_id 				AS Record,
+							CONCAT('#',job.job_no,IF(job.job_no_add IS NOT NULL AND job.job_no_add<>'','L',''))         AS 'Job #',
+							IF(job.is_regular='Y','Y','N')	 AS 'Is Regular',
+							GROUP_CONCAT(DISTINCT IF(is_att<>'Y', 
+								   CASE job_route.dest_type
+										WHEN 'num_lifestyle' THEN 'L/Style'
+										WHEN 'num_farmers' THEN 'Farmer'
+										WHEN 'num_dairies' THEN 'Dairy'
+										WHEN 'num_sheep' THEN 'Sheep'
+										WHEN 'num_beef' THEN 'Beef'
+										WHEN 'num_sheepbeef' THEN 'S/Beef'
+										WHEN 'num_dairybeef' THEN 'D/Beef'
+										WHEN 'num_hort' THEN 'Hort'
+										WHEN 'num_total' THEN 'Total'
+										WHEN 'num_nzfw' THEN 'F@90%'
+										WHEN 'bundles' THEN 'Bundles'
+								   END
+								   , '') SEPARATOR '') AS 'Type',
+								
+							CASE job.publication
+								WHEN LENGTH(job.publication)<=20 THEN CONCAT(LEFT(job.publication,17),'...')
+								ELSE job.publication
+							END
+											AS Circular,
+							IF(is_ioa='Y','IOA',DATE_FORMAT(job.delivery_date,'%m-%d'))
+								AS 'D/Date',
+							CASE operator.company
+								WHEN LENGTH(operator.company) <= 20 THEN CONCAT(LEFT(operator.company,17),'... (',mail_type,')')
+								ELSE CONCAT(operator.company,' (',mail_type,')')
+							END
+								AS Dropoff,
+							$sel_rd
+							SUM(IF(is_att<>'Y',job_route.amount,0)) 	AS 'Qty'
+				
+					FROM job
+					LEFT JOIN job_route
+					ON job.job_id=job_route.job_id
+					LEFT JOIN route
+						ON route.route_id=job_route.route_id
+					LEFT JOIN operator
+						ON job_route.dropoff_id=operator.operator_id
+					LEFT JOIN address
+						ON address.operator_id=operator.operator_id
+					WHERE job.job_no='$job->job_no'					
+						AND job_route.dist_id=$dist_id
+						AND job.cancelled<>'Y'
+					$group
+					ORDER BY seq_region,seq_area,seq_code,job.job_no,operator.company";
+
+						//echo nl2br($qry);
+						//$res_query = query($qry);
+						$qry_sum = "SELECT 	SUM(IF(is_att<>'Y',job_route.amount,0)) 	AS tot_qty1,
+											SUM(IF(is_att='Y',job_route.amount,0)) 	AS tot_qty2
+											#SUM(IF(job_route.dest_type='bundles',job_route.amount,0)) AS tot_bund
+								FROM job
+								LEFT JOIN job_route
+								ON job.job_id=job_route.job_id
+								LEFT JOIN route
+								ON route.route_id=job_route.route_id
+								LEFT JOIN operator
+								ON job_route.contractor_id=operator.operator_id
+								WHERE job.job_id='$job->job_id'					
+									AND job_route.dist_id=$dist_id				
+								GROUP BY job_route.dist_id";
+						//echo nl2br($qry);
+						$res_sum = query($qry_sum);
+						if(mysql_num_rows($res_sum)>0){
+							$has_reg=true;
+							if($start){
+								$start=false;
+	/*?>
+								<div class="weekly_head">
+									<h3>Regular Jobs</h3>
+								</div>								
+	<?			*/								
+							}
+						
+							$sum = mysql_fetch_object($res_sum);	
+							//$tab->startNewLine();
+								//$tab->addLineWithStyle("Job #:".$job->job_no,"sql_extra_head_big");
+							//$tab->stopNewLine();					
+							$tab->writeSQLTableElement($qry,$first_job);
+							$tab->startNewLine();
+								$tab->addLines("",$num_blank_cols-1);
+								$tab->addLine("Total:");
+								$tab->addLine($sum->tot_qty1);
+								//$tab->addLine($sum->tot_qty2);
+								//$tab->addLine($sum->tot_bund);
+								//$tab->addLine($sum->total);
+							$tab->stopNewLine();
+							$tot_sum_qty += $sum->tot_qty;
+							$tot_sum_bund += $sum->tot_bund;
+							$tot_sum_total += $sum->total;
+							$first_job=false;
+						}
+					}//while job
+					
+					$first_job=true;
+					/*$tab->startNewLine();
+						$tab->addLines("",4);
+						$tab->addLine("Total:");
+						$tab->addLine($tot_sum_qty);
+						//$tab->addLine($tot_sum_bund);
+						//$tab->addLine($tot_sum_total);
+					$tab->stopNewLine();*/
+					
+					$tab->startNewLine();
+						$tab->addLineWithStyle($comment2,"sql_comment_line",$num_blank_cols+2);
+					$tab->stopNewLine();
+					
+					$tab->stopTable();	
+				
+				} // if regular
+				
+				//////////////////////////////// Casual Jobs /////////////////////////////////
+				if($show_casual){
+					$tab  = new MySQLTable("reports.php","");
+					$tab->showRec=0;
+					$tab->hasEditButton=false;
+					$tab->hasDeleteButton=false;
+					$tab->hasAddButton=false;
+					$tab->hasForm = false;
+					$tab->noRepFields["Circular"] = 1;
+					$tab->noRepFields["Job #"] = 1;
+					$tab->noRepFields["Delivery Date"] = 1;
+					$tab->noRepFields["Type"] = 1;
+					$tab->noRepFields["Dropoff"] = 1;
+					$tab->setHiddenField("type");
+					$tab->startTable();
+					$first_job=true;
+					
+					$tot_sum_qty = 0;
+					$tot_sum_bund = 0;
+					$tot_sum_total = 0;
+					$start=true;
+					$res_jobs = query($qry_jobs);
+					while($job=mysql_fetch_object($res_jobs)){
+						$qry = "SELECT 	job.job_id 				AS Record,
+										CONCAT(job.job_no,IF(job.job_no_add IS NOT NULL,job.job_no_add,''))         AS 'Job #',
+										CASE job.dest_type
+											WHEN 'num_lifestyle' THEN 'L/Style'
+											WHEN 'num_farmers' THEN 'Farmer'
+											WHEN 'num_dairies' THEN 'Dairy'
+											WHEN 'num_sheep' THEN 'Sheep'
+											WHEN 'num_beef' THEN 'Beef'
+											WHEN 'num_sheepbeef' THEN 'S/Beef'
+											WHEN 'num_dairybeef' THEN 'D/Beef'
+											WHEN 'num_hort' THEN 'Hort'
+											WHEN 'num_total' THEN 'Total'
+											WHEN 'num_nzfw' THEN 'F@90%'
+										END
+																AS 'Type',
+										job.publication 		AS Circular,
+										IF(is_ioa='Y','IOA',DATE_FORMAT(job.delivery_date,'%%m-%%d'))
+											AS 'D/Date',
+										@mail_type := (SELECT address.mail_type FROM address WHERE address.operator_id=job_route.dropoff_id)
+																AS 'type',
+										IF(@mail_type='e',(SELECT CONCAT(operator.company,' (e)') FROM operator WHERE operator.operator_id=job_route.dropoff_id),
+											IF(@mail_type='f',(SELECT CONCAT(operator.company,' (f)') FROM operator WHERE operator.operator_id=job_route.dropoff_id),
+												(SELECT CONCAT(operator.company,' (m)') FROM operator WHERE operator.operator_id=job_route.dropoff_id)))
+																AS Dropoff,
+										route.code AS 'RD',
+										SUM(IF(job_route.dest_type<>'bundles',job_route.amount,0)) 	AS Quantity
+										#SUM(IF(job_route.dest_type='bundles',job_route.amount,0)) 	AS Bundles
+								FROM job
+								LEFT JOIN job_route
+								ON job.job_id=job_route.job_id
+								LEFT JOIN route
+								ON route.route_id=job_route.route_id
+								LEFT JOIN operator
+								ON job_route.contractor_id=operator.operator_id
+								WHERE job.job_id='$job->job_id'					
+									AND job_route.dist_id=$dist_id
+									AND job.is_regular<>'Y'
+								#GROUP BY job.job_no,job_route.dropoff_id
+								GROUP BY job.job_no,job_route.route_id
+								ORDER BY job.job_no,operator.company";
+						//echo nl2br($qry);
+						//$res_query = query($qry);
+						$qry_sum = "SELECT 	SUM(IF(job_route.dest_type<>'bundles',job_route.amount,0)) 
+														AS tot_qty
+											#SUM(IF(job_route.dest_type='bundles',job_route.amount,0)) 	AS tot_bund
+								FROM job
+								LEFT JOIN job_route
+								ON job.job_id=job_route.job_id
+								LEFT JOIN route
+								ON route.route_id=job_route.route_id
+								LEFT JOIN operator
+								ON job_route.contractor_id=operator.operator_id
+								WHERE job.job_id='$job->job_id'					
+									AND job_route.dist_id=$dist_id				
+									AND job.is_regular<>'Y'
+								GROUP BY job_route.dist_id";
+						//echo nl2br($qry);
+						$res_sum = query($qry_sum);
+						if(mysql_num_rows($res_sum)>0){
+							$has_reg=true;
+							
+							if($start_cas){
+								$start_cas=false;
+	?>
+								<div class="weekly_head">
+									<h3>Casual Jobs</h3>
+								</div>								
+	<?										
+							}
+							$sum = mysql_fetch_object($res_sum);	
+							//$tab->startNewLine();
+								//$tab->addLineWithStyle("Job #:".$job->job_no,"sql_extra_head_big");
+							//$tab->stopNewLine();					
+							$tab->writeSQLTableElement($qry,$first_job);
+							$tab->startNewLine();
+								$tab->addLines("",5);
+								$tab->addLine("Total:");
+								$tab->addLine($sum->tot_qty);
+								//$tab->addLine($sum->tot_bund);
+								//$tab->addLine($sum->total);
+							$tab->stopNewLine();
+							$tot_sum_qty += $sum->tot_qty;
+							$tot_sum_bund += $sum->tot_bund;
+							$tot_sum_total += $sum->total;
+							$first_job=false;
+						}
+					}//while job
+					
+					$first_job=true;
+					/*$tab->startNewLine();
+						$tab->addLines("",4);
+						$tab->addLine("Total:");
+						$tab->addLine($tot_sum_qty);
+						//$tab->addLine($tot_sum_bund);
+						//$tab->addLine($tot_sum_total);
+					$tab->stopNewLine();*/
+					
+					$tab->stopTable();	
+				
+				}
+				//echo "Hello: ".$count." ".$num_dist;
+				if($count<$num_dist-1){
+				
+?>
+					<div class="pagebreak_after">&nbsp;</div>
+<?				
+				}
+				$count++;
+		}//while($dist = mysql_fetch_object($res_dist))					
+		
+	}//if($year && $week && $distributor)
+	else{
+		$ERROR = "";
+	}
+			
+}
+
+
 if($report=="job_delivery_select"){
 	$where_add="";
 	if($dist_only){
