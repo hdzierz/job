@@ -1103,15 +1103,18 @@ if($action=="edit_job"||$action=="new_job"){
 				<td>Rate (extra charge):</td>
 				<td><input style="text-align:right " type="text" name="rate_bbc" value="<?=$rate_bbc?>" onKeyUp="javascript:checkfloat(this.value, this);"  /></td>									
 				<td></td>
-				<td>Quantity (extra charge):</td>
+				<td>Quantity (extra charge)<sup>1</sup>:</td>
 				<td><input style="text-align:right " type="text" name="qty_bbc" value="<?=$qty_bbc?>" onKeyUp="javascript:checkfloat(this.value, this);"  /></td>			
 				<td></td>
 				<td>Extra charge desc.</td>
-				<td><input style="text-align:right " type="text" name="desc_bbc" value="<?=$desc_bbc?>"   /></td>				
+				<td><input type="text" name="desc_bbc" value="<?=$desc_bbc?>"   /></td>				
+			</tr>
+			<tr>
+				<td colspan="4"></td>
+				<td><sup>1</sup>Extra charges per 000</td>
 			</tr>			
 			<tr>
 				<th colspan="4">Cost Structure</th>
-				<th>&nbsp;</th>
 			</tr>
 			<tr>
 				<td>Distributors: $</td>
