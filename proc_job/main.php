@@ -885,7 +885,7 @@ if($action=="edit_job"||$action=="new_job"){
 				<td>Quote (Yes):</td>
 				<td><input type="checkbox" name="quote" value="Y" <? if($quote=='Y'){?> checked <? }?> /></td>
 				<td></td>
-				<td><b>PMP</b></td>
+				<!-- <td><b>PMP</b></td>-->
 			</tr>
 			<tr>
 				<td>Purchase #:</td>
@@ -896,12 +896,7 @@ if($action=="edit_job"||$action=="new_job"){
 				<td>Invoice #:</td>
 				<td><input type="text" name="invoice_no" value="<?=$invoice_no?>" /></td>		
 				<td>&nbsp;</td>
-				<td>Lodgement Date</td>
-				<td>
-<?				
-					echo "<script>DateInput(\"lodge_date\", true, \"YYYY-MM-DD\",\"$lodge_date\")</script>";
-?>					
-				</td>							
+										
 			</tr>
 			<tr>
 				<td>Job #</td>
@@ -915,7 +910,12 @@ if($action=="edit_job"||$action=="new_job"){
 				<td>PMP Job #</td>
 				<td><input type="text" name="pmp_job_no" value="<?=$pmp_job_no?>" /></td>
 				<td></td>
-				<td></td>
+				<td>Lodgement Date</td>
+				<td>
+<?				
+					echo "<script>DateInput(\"lodge_date\", true, \"YYYY-MM-DD\",\"$lodge_date\")</script>";
+?>					
+				</td>	
 				<td></td>			
 				<td>&nbsp;</td>					
 			</tr>
