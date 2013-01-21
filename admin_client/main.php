@@ -169,6 +169,7 @@ if($action=="manage_price_template"){
 		$sel_client_id = $client_id;
 	}
 
+	$print_date = date("d M Y");
 	$qry = "SELECT * FROM client WHERE client_id='$sel_client_id'";
 	$res_client = query($qry);
 	$client = mysql_fetch_object($res_client);
@@ -238,7 +239,9 @@ if($action=="manage_price_template"){
 		<table >
 			<tr>
 				<th align="left">Client:</th>
-				<th><?=$client->name?></th>
+					<th><?=$client->name?></th>
+				<th>Printed:</th>
+				<td><?php echo $print_date; ?></td>
 			</tr>
 			<tr>
 				<td>Network Costs:</td>
@@ -314,12 +317,12 @@ if($action=="manage_price_template"){
 					<td>
 						<input class="pub_input" type="text" name="pub_other[<?=$i?>]" value="<?=$pub_other[$i]?>" />
 					</td>
-					<td valign="top">
+					<!-- <td valign="top">
 						<input type="checkbox" style="width:40px" value="1" name="pub_other_ff[<?=$i?>]" <? if($pub_other_ff[$i]){ ?> checked <? }?> />
 					</td>
 					<td valign="top">
 						<input type="checkbox" style="width:40px" value="1" name="pub_other_lh[<?=$i?>]" <? if($pub_other_lh[$i]){ ?> checked <? }?> />
-					</td>
+					</td>-->
 				</tr>
 <?
 			}
