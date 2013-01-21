@@ -92,6 +92,12 @@ if($action=="select_jobs"){
 		$qry = "SELECT job.job_id AS Record,
 						job_no AS 'Job #',
 						invoice_no AS Invoice,
+						IF(
+							(SELECT COUNT(purchase_no) FROM job AS j WHERE j.purchase_no=job.purchase_no) >1
+								AND job.purchase_no <> '' AND job.purchase_no IS NOT NULL,
+							CONCAT('<font color=\'red\'>',job.purchase_no,'</font>'),
+							job.purchase_no
+						) AS tt,
 						job.purchase_no AS 'Purchase Order #',
 						client.name AS Client,
 						job.publication AS 'Publication',

@@ -1,7 +1,6 @@
 <script language="javascript">
 	function checkfloat(strString,field)
 		   //  check for valid numeric strings	
-		   {
 		   var strValidChars = "0123456789.";
 		   var strChar;
 		   var blnResult = true;

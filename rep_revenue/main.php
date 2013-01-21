@@ -573,12 +573,12 @@ if($report=="linehaul_send_out"){
 			
 			$num_jobs = mysql_num_rows($res_jobs);
 			
-			$tab  = new MySQLPDFTable($MYSQL,'p');
+			$tab  = new MySQLPDFTable($MYSQL,'l');
 			$tab->collField["Total Quantity"]=true;
 			$tab->hasDivider=false;
 			$tab->border = "LRB";
-			$header=array('Job #','PMP Job #','Circular','Rec','P/Date','D/Date','Disp','We','Rural','PO Boxes','Total');
-			$width=array('Job #'=>15,'PMP Job #' => 20,'Circular'=>30,'Rec'=>15,'D/Date'=>15,'P/Date'=>15,'Disp' => 15, 'We'=>10,'Rural'=>20,'PO Boxes'=>20,'Total'=>20);
+			$header=array('Job #','PMP Job #','Circular','Recd Date','Pick Date','D/Date','Disp Qty','Weight','Rural','PO Boxes','Total', 'Recd Qty', 'Signed');
+			$width=array('Job #'=>15,'PMP Job #' => 20,'Circular'=>30,'Recd Date'=>15,'D/Date'=>15,'Pick Date'=>15,'Disp Qty' => 15, 'Weight'=>10,'Rural'=>20,'PO Boxes'=>20,'Total'=>20, 'Recd Qty' => 15, 'Signed' => 15);
 			$tab->fontSize = 7;
 			
 			//$tab->norepField["Circular"]=true;
