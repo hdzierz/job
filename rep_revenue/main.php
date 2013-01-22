@@ -577,8 +577,8 @@ if($report=="linehaul_send_out"){
 			$tab->collField["Total Quantity"]=true;
 			$tab->hasDivider=false;
 			$tab->border = "LRB";
-			$header=array('Job #','PMP Job #','Circular','Recd Date','Pick Date','D/Date','Disp Qty','Weight','Rural','PO Boxes','Total', 'Recd Qty', 'Signed');
-			$width=array('Job #'=>15,'PMP Job #' => 20,'Circular'=>30,'Recd Date'=>15,'D/Date'=>15,'Pick Date'=>15,'Disp Qty' => 15, 'Weight'=>10,'Rural'=>20,'PO Boxes'=>20,'Total'=>20, 'Recd Qty' => 15, 'Signed' => 15);
+			$header=array('Job #','PMP Job #','Circular','Recd Date','Pick Date','D/Date','Disp Qty','Weight','Rural','PO Boxes','Total', 'Recd Qty', 'Overs/Unders', 'Signed');
+			$width=array('Job #'=>15,'PMP Job #' => 20,'Circular'=>30,'Recd Date'=>15,'D/Date'=>15,'Pick Date'=>15,'Disp Qty' => 15, 'Weight'=>10,'Rural'=>20,'PO Boxes'=>20,'Total'=>20, 'Recd Qty' => 15, 'Overs/Unders' => 20, 'Signed' => 15);
 			$tab->fontSize = 7;
 			
 			//$tab->norepField["Circular"]=true;
