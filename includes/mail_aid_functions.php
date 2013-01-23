@@ -16,16 +16,16 @@ $site['from_email'] = $ADMIN_EMAIL; // from email address
 // provide an option to use external mail server.
 $site['smtp_mode'] = 'enabled'; // enabled or disabled
 //$site['smtp_host'] = "ssl://smtp.ramsu.co.nz:465";
-$site['smtp_host'] = "ssl://smtp.gmail.com:465";
-//$site['smtp_host'] = 'mail.coural.co.nz';
+//$site['smtp_host'] = "ssl://smtp.gmail.com:465";
+$site['smtp_host'] = 'mail.coural.co.nz';
 
 $site['smtp_port'] = intval(25);
 //$site['smtp_username'] = "support_send@coural.co.nz";
-$site['smtp_username'] = "ruralcouriers@gmail.com";
-//$site['smtp_username'] = 'cjobsys@coural.co.nz';
+//$site['smtp_username'] = "ruralcouriers@gmail.com";
+$site['smtp_username'] = 'Admin@coural.co.nz';
 
-$site['smtp_password'] = "zt90undr";
-//$site['smtp_password'] = "oeckel6b&z";
+//$site['smtp_password'] = "zt90undr";
+$site['smtp_password'] = "8KP_Adm1n";
 
 //$ADMIN_EMAIL = "hdzierz@gmail.com";
 
@@ -42,7 +42,9 @@ class FreakMailer extends PHPMailer
     function FreakMailer()
     {
         global $site;
+		
 		$this->isSMTP();
+		$this->AuthType = "NTLM";
         // Comes from config.php $site array
 
         if($site['smtp_mode'] == 'enabled')
@@ -52,7 +54,7 @@ class FreakMailer extends PHPMailer
 			
             if($site['smtp_username'] != '')
             {
-                $this->SMTPAuth = true;
+                //$this->SMTPAuth = true;
                 $this->Username = $site['smtp_username'];
                 $this->Password = $site['smtp_password'];
             }
