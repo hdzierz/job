@@ -284,7 +284,7 @@ if($action=="manage_price_template"){
 				<th>L/H</th>
 			</tr>
 <?
-			for($i=0;$i<22;$i++){
+			for($i=0;$i<19;$i++){
 ?>			
 				<tr>
 					<td>
@@ -379,7 +379,7 @@ if($action=="manage_price_template"){
 				<th align="left" colspan="3">Special weights</th>
 			</tr>
 <?
-			for($i=17;$i<24;$i++){
+			for($i=17;$i<22;$i++){
 ?>			
 				<tr>
 					<td align="center"><input type="text" name="weight[<?=$i?>]" value="<?=$weight[$i]?>" /></td>
@@ -398,16 +398,16 @@ if($action=="manage_price_template"){
 ?>						
 			<tr>
 				<td></td>
-				<td><input type="submit" name="submit" value="Save" /></td>
+				<td><input class="noprint" type="submit" name="submit" value="Save" /></td>
 				<?
 					if($dest=="edit"){
 ?>
-						<td><input type="button" name="cancel" value="Back" onClick="window.location.href='admin_client.php?action=edit&record=<?=$client_id?>'" /></td>
+						<td><input class="noprint" type="button" name="cancel" value="Back" onClick="window.location.href='admin_client.php?action=edit&record=<?=$client_id?>'" /></td>
 <?					
 					}
 					else{
 				?>
-						<td><input type="button" name="cancel" value="Cancel" onClick="window.location.href='admin_client.php'" /></td>
+						<td><input class="noprint" type="button" name="cancel" value="Cancel" onClick="window.location.href='admin_client.php'" /></td>
 				<?
 					}
 				?>

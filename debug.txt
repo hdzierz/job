@@ -12,186 +12,22 @@ Number of DOs:5
 (5) Preparing delivery instructions for <strong>Williams-Joanne</strong>.
 (5) Delivery instructions for <strong>Williams-Joanne</strong> created.
 Preparing delivery instructions for <strong>Teejay Distributors Ltd</strong>.
-Number of DOs:0
+Delivery instructions for <strong>Teejay Distributors Ltd</strong> created.
+Number of DOs:8
+(1) Preparing delivery instructions for <strong>Houston B&K</strong>.
+(1) Delivery instructions for <strong>Houston B&K</strong> created.
+(2) Preparing delivery instructions for <strong>Morunga-Robyn</strong>.
+(2) Delivery instructions for <strong>Morunga-Robyn</strong> created.
+(3) Preparing delivery instructions for <strong>Scott-Tony</strong>.
+(3) Delivery instructions for <strong>Scott-Tony</strong> created.
+(4) Preparing delivery instructions for <strong>Smith-Raylene</strong>.
+(4) Delivery instructions for <strong>Smith-Raylene</strong> created.
+(5) Preparing delivery instructions for <strong>Teejay Distributors Ltd</strong>.
+(5) Delivery instructions for <strong>Teejay Distributors Ltd</strong> created.
+(6) Preparing delivery instructions for <strong>Tutira Store (2007) Ltd</strong>.
+(6) Delivery instructions for <strong>Tutira Store (2007) Ltd</strong> created.
+(7) Preparing delivery instructions for <strong>Watson-Rose </strong>.
+(7) Delivery instructions for <strong>Watson-Rose </strong> created.
+(8) Preparing delivery instructions for <strong>Wroe L&J</strong>.
+(8) Delivery instructions for <strong>Wroe L&J</strong> created.
 Preparing delivery instructions for <strong>Bailey, Paul Limited</strong>.
-Number of DOs:0
-Preparing delivery instructions for <strong>Colemans Rural Deliveries</strong>.
-Delivery instructions for <strong>Colemans Rural Deliveries</strong> created.
-Number of DOs:2
-(1) Preparing delivery instructions for <strong>Colemans Rural Deliveries</strong>.
-(1) Delivery instructions for <strong>Colemans Rural Deliveries</strong> created.
-(2) Preparing delivery instructions for <strong>Jones S Contracting</strong>.
-(2) Delivery instructions for <strong>Jones S Contracting</strong> created.
-Preparing delivery instructions for <strong>Crane, RA&B (Coural) Limited</strong>.
-Delivery instructions for <strong>Crane, RA&B (Coural) Limited</strong> created.
-Number of DOs:22
-(1) Preparing delivery instructions for <strong>Baker-Leigh</strong>.
-(1) Delivery instructions for <strong>Baker-Leigh</strong> created.
-(2) Preparing delivery instructions for <strong>Barnett-Sidney</strong>.
-(2) Delivery instructions for <strong>Barnett-Sidney</strong> created.
-(3) Preparing delivery instructions for <strong>Bay Van Couriers Ltd</strong>.
-(3) Delivery instructions for <strong>Bay Van Couriers Ltd</strong> created.
-(4) Preparing delivery instructions for <strong>Blomfield-Fred</strong>.
-(4) Delivery instructions for <strong>Blomfield-Fred</strong> created.
-(5) Preparing delivery instructions for <strong>Bourne W&E</strong>.
-(5) Delivery instructions for <strong>Bourne W&E</strong> created.
-(6) Preparing delivery instructions for <strong>Brown-Michael</strong>.
-(6) Delivery instructions for <strong>Brown-Michael</strong> created.
-(7) Preparing delivery instructions for <strong>DDI Limited</strong>.
-(7) Delivery instructions for <strong>DDI Limited</strong> created.
-(8) Preparing delivery instructions for <strong>East Coast Mail & Courier Service</strong>.
-(8) Delivery instructions for <strong>East Coast Mail & Courier Service</strong> created.
-(9) Preparing delivery instructions for <strong>Evans-Judy</strong>.
-(9) Delivery instructions for <strong>Evans-Judy</strong> created.
-(10) Preparing delivery instructions for <strong>Gibson & Lithgow Contractors</strong>.
-(10) Delivery instructions for <strong>Gibson & Lithgow Contractors</strong> created.
-(11) Preparing delivery instructions for <strong>Hawkins-Judy</strong>.
-(11) Delivery instructions for <strong>Hawkins-Judy</strong> created.
-(12) Preparing delivery instructions for <strong>Iles-Danelle</strong>.
-(12) Delivery instructions for <strong>Iles-Danelle</strong> created.
-(13) Preparing delivery instructions for <strong>John & Gayle Dillon Limited</strong>.
-(13) Delivery instructions for <strong>John & Gayle Dillon Limited</strong> created.
-(14) Preparing delivery instructions for <strong>Kompac NZ Partnership</strong>.
-(14) Delivery instructions for <strong>Kompac NZ Partnership</strong> created.
-(15) Preparing delivery instructions for <strong>Leighton Howarth-O'Connor</strong>.
-(15) Delivery instructions for <strong>Leighton Howarth-O'Connor</strong> created.
-(16) Preparing delivery instructions for <strong>LG and MD Hopkins Partnership</strong>.
-(16) Delivery instructions for <strong>LG and MD Hopkins Partnership</strong> created.
-(17) Preparing delivery instructions for <strong>Murphy-Pamela</strong>.
-(17) Delivery instructions for <strong>Murphy-Pamela</strong> created.
-(18) Preparing delivery instructions for <strong>Norris-Phillipa</strong>.
-(18) Delivery instructions for <strong>Norris-Phillipa</strong> created.
-(19) Preparing delivery instructions for <strong>Okey-Michael John </strong>.
-(19) Delivery instructions for <strong>Okey-Michael John </strong> created.
-(20) Preparing delivery instructions for <strong>SJ & MA Weir</strong>.
-(20) Delivery instructions for <strong>SJ & MA Weir</strong> created.
-(21) Preparing delivery instructions for <strong>Teddy-George</strong>.
-(21) Delivery instructions for <strong>Teddy-George</strong> created.
-(22) Preparing delivery instructions for <strong>Thorp-Michael</strong>.
-(22) Delivery instructions for <strong>Thorp-Michael</strong> created.
-Preparing delivery instructions for <strong>Cunliffe, Peter and Lesley</strong>.
-Delivery instructions for <strong>Cunliffe, Peter and Lesley</strong> created.
-Number of DOs:6
-(1) Preparing delivery instructions for <strong>Bootten R&W</strong>.
-(1) Delivery instructions for <strong>Bootten R&W</strong> created.
-(2) Preparing delivery instructions for <strong>Cunliffe, Peter and Lesley</strong>.
-(2) Delivery instructions for <strong>Cunliffe, Peter and Lesley</strong> created.
-(3) Preparing delivery instructions for <strong>Drinnan-Sarah</strong>.
-(3) Delivery instructions for <strong>Drinnan-Sarah</strong> created.
-(4) Preparing delivery instructions for <strong>Markel Rural Mail Ltd</strong>.
-(4) Delivery instructions for <strong>Markel Rural Mail Ltd</strong> created.
-(5) Preparing delivery instructions for <strong>Renton-Alan</strong>.
-(5) Delivery instructions for <strong>Renton-Alan</strong> created.
-(6) Preparing delivery instructions for <strong>Tinopai Mail Run</strong>.
-(6) Delivery instructions for <strong>Tinopai Mail Run</strong> created.
-Preparing delivery instructions for <strong>Trevan Distributors Ltd</strong>.
-Number of DOs:0
-Preparing delivery instructions for <strong>George-Jasmine</strong>.
-Delivery instructions for <strong>George-Jasmine</strong> created.
-Number of DOs:3
-(1) Preparing delivery instructions for <strong>Brown-Norm</strong>.
-(1) Delivery instructions for <strong>Brown-Norm</strong> created.
-(2) Preparing delivery instructions for <strong>George-Jasmine</strong>.
-(2) Delivery instructions for <strong>George-Jasmine</strong> created.
-(3) Preparing delivery instructions for <strong>R.G.A. Distribution</strong>.
-(3) Delivery instructions for <strong>R.G.A. Distribution</strong> created.
-Preparing delivery instructions for <strong>Henderson-Colleen</strong>.
-Delivery instructions for <strong>Henderson-Colleen</strong> created.
-Number of DOs:3
-(1) Preparing delivery instructions for <strong>Henderson-Colleen</strong>.
-(1) Delivery instructions for <strong>Henderson-Colleen</strong> created.
-(2) Preparing delivery instructions for <strong>Hogg-Joanne</strong>.
-(2) Delivery instructions for <strong>Hogg-Joanne</strong> created.
-(3) Preparing delivery instructions for <strong>John & Tania Roberts</strong>.
-(3) Delivery instructions for <strong>John & Tania Roberts</strong> created.
-Preparing delivery instructions for <strong>Jamieson Partnership</strong>.
-Number of DOs:0
-Preparing delivery instructions for <strong>Johnson-Merlene</strong>.
-Delivery instructions for <strong>Johnson-Merlene</strong> created.
-Number of DOs:20
-(1) Preparing delivery instructions for <strong> Walker/Cullen Partnership 2</strong>.
-(1) Delivery instructions for <strong> Walker/Cullen Partnership 2</strong> created.
-(2) Preparing delivery instructions for <strong>AR & HM Carroll Ltd</strong>.
-(2) Delivery instructions for <strong>AR & HM Carroll Ltd</strong> created.
-(3) Preparing delivery instructions for <strong>Aropapa 7</strong>.
-(3) Delivery instructions for <strong>Aropapa 7</strong> created.
-(4) Preparing delivery instructions for <strong>Bruce & Janette Lye</strong>.
-(4) Delivery instructions for <strong>Bruce & Janette Lye</strong> created.
-(5) Preparing delivery instructions for <strong>Buckman Country Couriers</strong>.
-(5) Delivery instructions for <strong>Buckman Country Couriers</strong> created.
-(6) Preparing delivery instructions for <strong>Chris's Run Ltd</strong>.
-(6) Delivery instructions for <strong>Chris's Run Ltd</strong> created.
-(7) Preparing delivery instructions for <strong>Elite Vehicle Imports Ltd</strong>.
-(7) Delivery instructions for <strong>Elite Vehicle Imports Ltd</strong> created.
-(8) Preparing delivery instructions for <strong>Jaydz Delivery Service</strong>.
-(8) Delivery instructions for <strong>Jaydz Delivery Service</strong> created.
-(9) Preparing delivery instructions for <strong>John & Georgina Wood</strong>.
-(9) Delivery instructions for <strong>John & Georgina Wood</strong> created.
-(10) Preparing delivery instructions for <strong>KR & BM Thomasen Limited</strong>.
-(10) Delivery instructions for <strong>KR & BM Thomasen Limited</strong> created.
-(11) Preparing delivery instructions for <strong>McBean-Tom</strong>.
-(11) Delivery instructions for <strong>McBean-Tom</strong> created.
-(12) Preparing delivery instructions for <strong>Millner-Robert</strong>.
-(12) Delivery instructions for <strong>Millner-Robert</strong> created.
-(13) Preparing delivery instructions for <strong>Ohaupo Store and Postal Centre</strong>.
-(13) Delivery instructions for <strong>Ohaupo Store and Postal Centre</strong> created.
-(14) Preparing delivery instructions for <strong>Ohinewai Delivery Service Ltd </strong>.
-(14) Delivery instructions for <strong>Ohinewai Delivery Service Ltd </strong> created.
-(15) Preparing delivery instructions for <strong>PF & MJ van Zyl</strong>.
-(15) Delivery instructions for <strong>PF & MJ van Zyl</strong> created.
-(16) Preparing delivery instructions for <strong>Powell/Te Maari Partnership</strong>.
-(16) Delivery instructions for <strong>Powell/Te Maari Partnership</strong> created.
-(17) Preparing delivery instructions for <strong>RCJL Ltd </strong>.
-(17) Delivery instructions for <strong>RCJL Ltd </strong> created.
-(18) Preparing delivery instructions for <strong>Rennies Dairy</strong>.
-(18) Delivery instructions for <strong>Rennies Dairy</strong> created.
-(19) Preparing delivery instructions for <strong>Rural XP Ltd</strong>.
-(19) Delivery instructions for <strong>Rural XP Ltd</strong> created.
-(20) Preparing delivery instructions for <strong>Tonkin Enterprises Ltd</strong>.
-(20) Delivery instructions for <strong>Tonkin Enterprises Ltd</strong> created.
-Preparing delivery instructions for <strong>Marsden-Clive</strong>.
-Delivery instructions for <strong>Marsden-Clive</strong> created.
-Number of DOs:1
-(1) Preparing delivery instructions for <strong>Marsden-Clive</strong>.
-(1) Delivery instructions for <strong>Marsden-Clive</strong> created.
-Preparing delivery instructions for <strong>Meyrick-Irene</strong>.
-Number of DOs:0
-Preparing delivery instructions for <strong>Muir-Alan</strong>.
-Delivery instructions for <strong>Muir-Alan</strong> created.
-Number of DOs:1
-(1) Preparing delivery instructions for <strong>Muir-Alan</strong>.
-(1) Delivery instructions for <strong>Muir-Alan</strong> created.
-Preparing delivery instructions for <strong>Home Run Transport</strong>.
-Delivery instructions for <strong>Home Run Transport</strong> created.
-Number of DOs:6
-(1) Preparing delivery instructions for <strong>Davey Partnership</strong>.
-(1) Delivery instructions for <strong>Davey Partnership</strong> created.
-(2) Preparing delivery instructions for <strong>Hazel Land Ltd</strong>.
-(2) Delivery instructions for <strong>Hazel Land Ltd</strong> created.
-(3) Preparing delivery instructions for <strong>Heldun Limited</strong>.
-(3) Delivery instructions for <strong>Heldun Limited</strong> created.
-(4) Preparing delivery instructions for <strong>Home Run Transport</strong>.
-(4) Delivery instructions for <strong>Home Run Transport</strong> created.
-(5) Preparing delivery instructions for <strong>Pickering Motors Limited</strong>.
-(5) Delivery instructions for <strong>Pickering Motors Limited</strong> created.
-(6) Preparing delivery instructions for <strong>R & S Rural Deliveries Ltd</strong>.
-(6) Delivery instructions for <strong>R & S Rural Deliveries Ltd</strong> created.
-Preparing delivery instructions for <strong>Pothoven-Zoe</strong>.
-Number of DOs:0
-Preparing delivery instructions for <strong>Reach Media -</strong>.
-Number of DOs:0
-Preparing delivery instructions for <strong>Frost-Terry</strong>.
-Delivery instructions for <strong>Frost-Terry</strong> created.
-Number of DOs:1
-(1) Preparing delivery instructions for <strong>Frost-Terry</strong>.
-(1) Delivery instructions for <strong>Frost-Terry</strong> created.
-Preparing delivery instructions for <strong>Roscoe-Kieran</strong>.
-Number of DOs:0
-Preparing delivery instructions for <strong>Running-Bryan</strong>.
-Number of DOs:0
-Preparing delivery instructions for <strong>Gullery-Dayna</strong>.
-Number of DOs:0
-Preparing delivery instructions for <strong>ECL Transport NI-</strong>.
-Number of DOs:0
-Preparing delivery instructions for <strong>ECL Transport SI-</strong>.
-Number of DOs:0

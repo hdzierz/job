@@ -15,6 +15,10 @@ html{
 	size:landscape;
 }
 
+.noprint{
+	display:none;
+}
+
 .pagebreak{
 	page-break-before: always;
 
