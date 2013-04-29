@@ -23,9 +23,16 @@
 </script>
 <?
 
+
 if($action=="close_jobs"){
-	$max_line = get_max("job","job_id","WHERE finished<>'Y'	AND invoice_no IS NOT NULL AND invoice_no <> ''","");
-	$min_line = get_min("job","job_id","WHERE finished<>'Y'	AND invoice_no IS NOT NULL AND invoice_no <> ''","");
+	$where_add = "";
+	
+	if($check) $where_add = " AND job_id IN (".implode(',',array_keys($check)).")";
+	
+	$max_line = get_max("job","job_id","WHERE cancelled <>'Y' $where_add AND finished<>'Y'	AND invoice_no IS NOT NULL AND invoice_no <> ''","");
+	$min_line = get_min("job","job_id","WHERE cancelled <>'Y' $where_add AND finished<>'Y'	AND invoice_no IS NOT NULL AND invoice_no <> ''","");
+	
+	
 ?>
 Select:
 	<span class="set_button" onClick="return setCheckboxOn(event,<?=$min_line?>,<?=$max_line?>)">All</span>
@@ -44,6 +51,8 @@ Select:
 			WHERE finished<>'Y'
 				AND cancelled <>'Y'
 				AND is_quote<>'Y'
+				$where_add
+				AND invoice_no <> ''
 			ORDER BY client.name,invoice_no
 			";
 
@@ -97,8 +106,8 @@ if($action=="select_jobs"){
 								AND job.purchase_no <> '' AND job.purchase_no IS NOT NULL,
 							CONCAT('<font color=\'red\'>',job.purchase_no,'</font>'),
 							job.purchase_no
-						) AS tt,
-						job.purchase_no AS 'Purchase Order #',
+						) AS 'Purchase Order #',
+						/*job.purchase_no AS 'Purchase Order #',*/
 						client.name AS Client,
 						job.publication AS 'Publication',
 						IF(is_ioa='Y', 'IOA', delivery_date) AS 'D/Date',
@@ -136,6 +145,8 @@ if($action=="select_jobs"){
 		//$tab->hasSubmitButton = true;
 		$tab->submitButtonValue	= "Create Invoices";
 		$tab->submitButtonName	= "action";
+		$tab->submitButtonValue	= "Close selected jobs";
+		$tab->submitButtonName2 = "close";
 		
 		//$tab->submitOnClick = "return getDateGST();";
 		
@@ -144,6 +155,7 @@ if($action=="select_jobs"){
 		
 		$tab->startTable();
 			$tab->startNewLine();
+			    $tab->writeSubmitButton("close","Close selected");
 				$tab->writeSubmitButton("action","Create Invoices");
 				$tab->addInput("fuel_surcharge_show",$fuel_surcharge,"Fuel Surcharge: ",4,true);
 				$tab->addCheckbox("is_null_job",$is_null_job,"Null Invoice: ",false);
