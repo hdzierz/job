@@ -1,6 +1,9 @@
 <?
 $check = $_POST["check"];
 
+if($close)  $action="close_jobs";
+
+
 function create_invoice_no(){
 	$max_inv = get_max("job","invoice_no","WHERE job_id IS NOT NULL AND LEFT(invoice_no,1) = 'C'","");
 	
