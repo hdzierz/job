@@ -728,7 +728,7 @@ if($report=="linehaul_send_out"){
 				}//while job
 			}
 			
-			$tab->MultiCell($maxw,7,$comment2,1,'L');			
+			$tab->MultiCell($maxw,3,$comment2,1,'L');			
 			$tab->refreshCollFields();
 			$first_job=true;
 			
@@ -1342,7 +1342,7 @@ if($report=="weekly_send_out"){
 					$blurb2 = "The above deliveries have been carried out in accordance with instructions.\n\n";
 					$blurb2.= "Signed:______________________  Date: _______________________\n\n\n";
 					$y = $tab->GetY();
-					$tab->MultiCell($maxw-130,6,$blurb,1,'L');
+					$tab->MultiCell($maxw,4,$blurb,1,'L');
 					$tab->SetXY($maxw-110,$y);
 			
 					//$blurb2 = "The above deliveries have been carried out in accordance with instructions.\n\n";

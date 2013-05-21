@@ -1775,9 +1775,14 @@ if($action=="print_ticket_header_sheet"){
 				# AND route.is_hidden <> 'Y' # Removed as per customer request. HD
 				ORDER BY Distributor,Contractor;";					
 		$res_contr = query($qry,0);
+		$start = true;
 		while($contr = mysql_fetch_object($res_contr)){
 			$contr_address = get("address","CONCAT(name,', ',first_name)","WHERE operator_id = $contr->contr_id");
 			$dist_address = get("address","CONCAT(name,', ',first_name)","WHERE operator_id = $contr->dist_id");
+			if(!$start){
+				?><div class="pagebreak">&nbsp;</div><?php
+			}
+			$start = false;
 	?>
 			<h1>TICKET HEADER SHEET</h1>
 			<br />
@@ -1795,7 +1800,7 @@ if($action=="print_ticket_header_sheet"){
 				<li>Contractor: <strong><?=$contr_address?></strong>, Trading as: <strong><?=$contr->Contractor?></strong></li>
 				<li>Route: <?=$contr->region?>/<?=$contr->area?>/<strong><?=$contr->code?></strong></li>
 			</ul>
-			<div class="pagebreak">&nbsp;</div>
+			
 	<?		
 		}
 	}
