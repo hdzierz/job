@@ -530,7 +530,7 @@ if($report=="linehaul_send_out"){
 
 	if(($date_start&&$date_final)||$check){
 		
-		$fp = fopen("debug.txt","w+");
+		//$fp = fopen("debug.txt","w+");
 		$date_show_start 	= date("jS M Y",strtotime($date_start));
 		$date_show_end 		= date("jS M Y",strtotime($date_final));
 		if($name!='All' && $name) $where_add = " AND client_id='$name'";
@@ -544,7 +544,7 @@ if($report=="linehaul_send_out"){
 		while($haul = mysql_fetch_object($res_dist))
 		{
 			echo "Preparing linehaul job summary for <strong>$haul->name</strong>.<br />";
-			fwrite($fp,"Preparing linehaul job summary for <strong>$haul->name</strong>.\n");
+			//fwrite($fp,"Preparing linehaul job summary for <strong>$haul->name</strong>.\n");
 			
 			/////////////////////////////////////////////////////////
 			// LINEHAUL SEND OUT
@@ -552,7 +552,7 @@ if($report=="linehaul_send_out"){
 			
 			$haul_id=get("client","client_id","WHERE name='$haul->name'");
 			$where_add_client = "";
-			echo "Hello".$client_id;
+			//echo "Hello".$client_id;
 			if($client_id!="All") $where_add_client = " AND client_id=$client_id";
 			
 			$qry_jobs = "SELECT DISTINCT job_no, is_regular, hauler_ni_id, hauler_si_id ,
@@ -577,9 +577,9 @@ if($report=="linehaul_send_out"){
 			$tab->collField["Total Quantity"]=true;
 			$tab->hasDivider=false;
 			$tab->border = "LRB";
-			$header=array('Job #','PMP Job #','Circular','Recd Date','Pick Date','D/Date','Disp Qty','Weight','Rural','PO Boxes','Total', 'Recd Qty', 'Overs/Unders', 'Signed');
-			$width=array('Job #'=>15,'PMP Job #' => 20,'Circular'=>30,'Recd Date'=>15,'D/Date'=>15,'Pick Date'=>15,'Disp Qty' => 15, 'Weight'=>10,'Rural'=>20,'PO Boxes'=>20,'Total'=>20, 'Recd Qty' => 15, 'Overs/Unders' => 20, 'Signed' => 15);
-			$tab->fontSize = 7;
+			$header=array('Job #','PMP Job #','Circular','Recd Date','Pick Date','D/Date','Disp Qty','Weight','Rural','PO Box','Total', 'Recd Qty', 'Overs/Unders', 'Signed');
+			$width=array('Job #'=>15,'PMP Job #' => 20,'Circular'=>30,'Recd Date'=>20,'D/Date'=>15,'Pick Date'=>20,'Disp Qty' => 20, 'Weight'=>20,'Rural'=>20,'PO Box'=>15,'Total'=>20, 'Recd Qty' => 20, 'Overs/Unders' => 20, 'Signed' => 20);
+			$tab->fontSize = 9;
 			
 			//$tab->norepField["Circular"]=true;
 			
@@ -662,7 +662,7 @@ if($report=="linehaul_send_out"){
 						{
 				
 							$data = $tab->LoadData($qry);
-							$tab->WriteTable($header, $data, $width, 5);
+							$tab->WriteTable($header, $data, $width, 7);
 							
 						}
 						
@@ -721,14 +721,14 @@ if($report=="linehaul_send_out"){
 						{
 				
 							$data = $tab->LoadData($qry);
-							$tab->WriteTable($header, $data, $width, 5);
+							$tab->WriteTable($header, $data, $width, 7);
 							
 						}
 						
 				}//while job
 			}
 			
-			$tab->MultiCell($maxw,3,$comment2,1,'L');			
+			$tab->MultiCell($maxw,7,$comment2,1,'L');			
 			$tab->refreshCollFields();
 			$first_job=true;
 			
@@ -737,7 +737,7 @@ if($report=="linehaul_send_out"){
 			$tab->Output($dir.'/'.$fn);
 			
 			echo "Linehaul job summary for <strong>$haul->name</strong> created.<br />";
-			fwrite($fp,"Linehaul job summary for <strong>$haul->name</strong> created.\n");
+			//fwrite($fp,"Linehaul job summary for <strong>$haul->name</strong> created.\n");
 			if($num_jobs>0){
 				if(!$pdf_only) send_operator_mail("LINEHAUL JOB SUMMARY",$dir,$fn,$haul->client_id);
 				
@@ -775,7 +775,7 @@ if($report=="weekly_send_out"){
 
 	if(($date_start&&$date_final)||$check){
 	
-		$fp = fopen("debug.txt","w+");
+		//$fp = fopen("debug.txt","w+");
 		$date_show_start 	= date("jS M Y",strtotime($date_start));
 		$date_show_end 		= date("jS M Y",strtotime($date_final));
 		if($company!='All' && $company) $where_add = " AND operator_id='$company'";
@@ -795,7 +795,7 @@ if($report=="weekly_send_out"){
 			$name = get("address","name","WHERE operator_id='$dist_id'");
 			
 			echo "Preparing delivery instructions for <strong>$company</strong>.<br />";
-			fwrite($fp,"Preparing delivery instructions for <strong>$company</strong>.\n");
+			//fwrite($fp,"Preparing delivery instructions for <strong>$company</strong>.\n");
 			/////////////////////////////////////////////////////////
 			// DISTRIBUTOR SEND OUT
 			/////////////////////////////////////////////////////////
@@ -1045,7 +1045,7 @@ if($report=="weekly_send_out"){
 				
 				echo "Delivery instructions for <strong>$company</strong> created.<br />";
 				
-				fwrite($fp,"Delivery instructions for <strong>$company</strong> created.\n");
+				//fwrite($fp,"Delivery instructions for <strong>$company</strong> created.\n");
 		
 				if(!$pdf_only) {
 					send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$dist_id,$receiver);
@@ -1085,12 +1085,12 @@ if($report=="weekly_send_out"){
 			$res_dos = query($qry_dos,0);
 		
 				echo "Number of DOs:".mysql_num_rows($res_dos)."<br />";
-				fwrite($fp,"Number of DOs:".mysql_num_rows($res_dos)."\n");
+				//fwrite($fp,"Number of DOs:".mysql_num_rows($res_dos)."\n");
 				$count=0;
 				while($do=mysql_fetch_object($res_dos)){
 					$count++;
 					echo "($count) Preparing delivery instructions for <strong>$do->company</strong>.<br />";
-					fwrite($fp,"($count) Preparing delivery instructions for <strong>$do->company</strong>.\n");
+					//fwrite($fp,"($count) Preparing delivery instructions for <strong>$do->company</strong>.\n");
 					$qry_jobs = "SELECT DISTINCT job_no,is_regular
 								 FROM job 
 								 LEFT JOIN job_route
@@ -1361,7 +1361,7 @@ if($report=="weekly_send_out"){
 							$tab->Output($dir.'/'.$fn);
 							
 							echo "($count) Delivery instructions for <strong>$do->company</strong> created.<br />";
-							fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
+							//fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
 							if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$do->dropoff_id,$receiver);
 							$pdffiles[] = $dir.'/'.$fn;
 							//pdf_merge($now,$fn);
@@ -1374,7 +1374,7 @@ if($report=="weekly_send_out"){
 							$tab->Output($dir.'/'.$fn);
 							
 							echo "($count) Delivery instructions for <strong>$do->company (MAIL)</strong> created.<br />";
-							fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
+							//fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
 							if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$do->dropoff_id,$mail_receiver);
 						}
 					}
