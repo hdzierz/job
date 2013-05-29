@@ -421,7 +421,7 @@ function load_circ_sdist($m_table,$op,$route_id,$month,$year){
 					AND year(delivery_date) = '$year'
 					AND job.cancelled<>'Y'
 					# AND route_id=$route_id
-				GROUP BY job.job_no
+				GROUP BY job.job_id
 				) AS sum
 				GROUP BY Job
 				HAVING Total>0
