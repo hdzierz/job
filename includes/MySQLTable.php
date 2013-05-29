@@ -321,6 +321,9 @@ class MySQLTable{
 		
 	function writeButton($class,$name,$value,$onClick,$record){
 		if($this->actionButtonType=="button"){
+			if($name=="delete"){
+				$onClick = "if(!confirmDelete()) return false;".$onClick;
+			}
 ?>	
 			<input class="<?=$class?>" type="button" name="<?=$name?>" value="<?=$value?>" onClick="<?=$onClick?>+'&dest=<?=$this->name?>'" />
 <?

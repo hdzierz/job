@@ -172,7 +172,7 @@
 			if(get_type(area.value)=='CD') mess.style.backgroundColor='red';
 			if(get_type(area.value)=='CP') mess.style.backgroundColor='green';
 			if(get_type(area.value)=='SR') mess.style.backgroundColor='yellow';
-			if(get_type(area.value)=='RP') mess.style.backgroundColor='purple';
+			if(get_type(area.value)=='EX') mess.style.backgroundColor='orange';
 			var sel = document.getElementById("tickets");
 			var num_tickets = 0;
 			if(is_random){
@@ -407,8 +407,8 @@
 		var tick = ticket.toUpperCase();
 		
 		
-		if(tick.substring(0,2)!='CD' && tick.substring(0,2)!='CP' && tick.substring(0,2)!='SR' && tick.substring(0,2)!='RP') return false;
-		if(tick.substring(0,2)=='CD' || tick.substring(0,2)=='CP'  || tick.substring(0,2)=='RP'  || tick.substring(0,2)=='SR')
+		if(tick.substring(0,2)!='CD' && tick.substring(0,2)!='CP' && tick.substring(0,2)!='SR' && tick.substring(0,2)!='EX') return false;
+		if(tick.substring(0,2)=='CD' || tick.substring(0,2)=='CP'  || tick.substring(0,2)=='EX'  || tick.substring(0,2)=='SR')
 			if(tick.substring(start_dp,end_dp)!='P' && tick.substring(start_dp,end_dp)!='D') return false;
 		return true;
 	}

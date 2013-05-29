@@ -256,8 +256,8 @@ if($action=="receive_tickets"){
 					case "SR":
 						return <?=$qty_per_book["SR"] ?>;
 						break;
-					case "RP":
-						return <?=$qty_per_book["RP"] ?>;
+					case "EX":
+						return <?=$qty_per_book["EX"] ?>;
 						break;
 				}
 			}
@@ -366,7 +366,7 @@ if($action=="receive_tickets"){
 					<td>Num Tickets</td>
 				</tr>
 				<?
-				for($i=0;$i<3;$i++){
+				for($i=0;$i<4;$i++){
 					if(!$qty[$i]) $qty[$i]=20;
 				?>
 					<tr>
@@ -383,7 +383,7 @@ if($action=="receive_tickets"){
 									if($i==0) $sel->setOptionIsVal("CD");
 									if($i==1) $sel->setOptionIsVal("CP");
 									if($i==2) $sel->setOptionIsVal("SR");
-									if($i==3) $sel->setOptionIsVal("RP");
+									if($i==3) $sel->setOptionIsVal("EX");
 								}
 								$sel->onChange = "changeQtyPerBook({$i},this.value);";
 								$sel->isReadOnly=true;
@@ -391,14 +391,14 @@ if($action=="receive_tickets"){
 									$sel->addOption("CD","Documents");
 									$sel->addOption("CP","Parcels");
 									$sel->addOption("SR","Signature");
-									$sel->addOption("RP","Pickup");
+									$sel->addOption("EX","Excess");
 								$sel->stop();
 								
 								if(!$type[$i]){
 									if($i==0) $qty[$i] = $qty_per_book["CD"];
 									if($i==1) $qty[$i] = $qty_per_book["CP"];
 									if($i==2) $qty[$i] = $qty_per_book["SR"];
-									if($i==3) $qty[$i] = $qty_per_book["RP"];
+									if($i==3) $qty[$i] = $qty_per_book["EX"];
 								}
 								
 							?>
@@ -448,7 +448,7 @@ if($action=="sell_tickets"){
 		$qty_per_book['CD'] = get("parcel_rates","qty_per_book","WHERE type='CD' AND '$now' BETWEEN start_date AND end_date");
 		$qty_per_book['CP'] = get("parcel_rates","qty_per_book","WHERE type='CP' AND '$now' BETWEEN start_date AND end_date");
 		$qty_per_book['SR'] = get("parcel_rates","qty_per_book","WHERE type='SR' AND '$now' BETWEEN start_date AND end_date");
-		$qty_per_book['RP'] = get("parcel_rates","qty_per_book","WHERE type='RP' AND '$now' BETWEEN start_date AND end_date");
+		$qty_per_book['EX'] = get("parcel_rates","qty_per_book","WHERE type='EX' AND '$now' BETWEEN start_date AND end_date");
 		
 		$qry = "SELECT * FROM parcel_job_ticket WHERE job_id='$job_id'";
 		$res = query($qry);
@@ -486,8 +486,8 @@ if($action=="sell_tickets"){
 			$job_qty[1] = $quantity["CP"];
 			$exp_qty[2] = $quantity["SR"]*$qty_per_book["SR"];
 			$job_qty[2] = $quantity["SR"];
-			$exp_qty[3] = $quantity["RP"]*$qty_per_book["RP"];
-			$job_qty[3] = $quantity["RP"];
+			$exp_qty[3] = $quantity["EX"]*$qty_per_book["EX"];
+			$job_qty[3] = $quantity["EX"];
 		}
 		
 		
@@ -593,7 +593,7 @@ if($action=="sell_tickets"){
 									if($i==0) $sel->setOptionIsVal("CD");
 									if($i==1) $sel->setOptionIsVal("CP");
 									if($i==2) $sel->setOptionIsVal("SR");
-									if($i==3) $sel->setOptionIsVal("RP");
+									if($i==3) $sel->setOptionIsVal("EX");
 								}
 								else{
 									$sel->setOptionIsVal($types[$i]);
@@ -602,7 +602,7 @@ if($action=="sell_tickets"){
 									$sel->addOption("CD","Documents");
 									$sel->addOption("CP","Parcels");
 									$sel->addOption("SR","Signature");
-									$sel->addOption("RP","Pickup");
+									$sel->addOption("EX","Excess");
 								$sel->stop();
 								
 							?>
@@ -707,19 +707,19 @@ if($action=="add_order_books" ||$target=="add_order_books" || $action=="show_tic
 	$rate['CD'] = get("parcel_rates","$rate_name","WHERE type='CD' AND '$now' BETWEEN start_date AND end_date");
 	$rate['CP'] = get("parcel_rates","$rate_name","WHERE type='CP' AND '$now' BETWEEN start_date AND end_date");
 	$rate['SR'] = get("parcel_rates","$rate_name","WHERE type='SR' AND '$now' BETWEEN start_date AND end_date");
-	$rate['RP'] = get("parcel_rates","$rate_name","WHERE type='RP' AND '$now' BETWEEN start_date AND end_date");
+	$rate['EX'] = get("parcel_rates","$rate_name","WHERE type='EX' AND '$now' BETWEEN start_date AND end_date");
 
 	if(!$has_discount){
 		$rate['CD']*=$discount;
 		$rate['CP']*=$discount;
 		$rate['SR']*=$discount;
-		$rate['RP']*=$discount;
+		$rate['EX']*=$discount;
 	}
 	
 	$rate['CD'] = number_format($rate['CD'],2);
 	$rate['CP'] = number_format($rate['CP'],2);
 	$rate['SR'] = number_format($rate['SR'],2);
-	$rate['RP'] = number_format($rate['RP'],2);
+	$rate['EX'] = number_format($rate['EX'],2);
 	
 	
 	$qry = "SELECT * FROM parcel_job WHERE job_id='$job_id'";
@@ -786,7 +786,7 @@ if($action=="add_order_books" ||$target=="add_order_books" || $action=="show_tic
 			var tot_red = getTotals('CD');
 			var tot_green = getTotals('CP');
 			var tot_yellow = getTotals('SR');
-			var tot_purple = getTotals('RP');
+			var tot_purple = getTotals('EX');
 			
 			document.getElementById('grand_tot').value = tot_red+tot_green+tot_yellow+tot_purple;
 		}
@@ -887,10 +887,10 @@ if($action=="add_order_books" ||$target=="add_order_books" || $action=="show_tic
 				<td><input readonly type="text" name="tot[SR]" id="tot[SR]" value="<?=$tot["SR"]?>" /></td>
 			</tr>
 			<tr>
-				<td>Pickup:</td>
-				<td><input type="text" name="quantity[RP]" id="quantity[RP]" onKeyUp="updateTotals()" value="<?=$quantity["RP"]?>" /></td>
-				<td><input type="text" name="rate[RP]" id="rate[RP]" onKeyUp="updateTotals()" value="<?=$rate["RP"]?>" /></td>
-				<td><input readonly type="text" name="tot[RP]" id="tot[RP]" value="<?=$tot["RP"]?>" /></td>
+				<td>Excess:</td>
+				<td><input type="text" name="quantity[EX]" id="quantity[EX]" onKeyUp="updateTotals()" value="<?=$quantity["EX"]?>" /></td>
+				<td><input type="text" name="rate[EX]" id="rate[EX]" onKeyUp="updateTotals()" value="<?=$rate["EX"]?>" /></td>
+				<td><input readonly type="text" name="tot[EX]" id="tot[EX]" value="<?=$tot["EX"]?>" /></td>
 			</tr>
 			<tr>
 				<td colspan="2"></td>
@@ -978,35 +978,35 @@ if($action=="manage_rates"){
 				<td>Documents</td>
 				<td>Parcels</td>
 				<td>Signature</td>
-				<td>Pickup</td>
+				<td>Excess</td>
 			</tr>
 			<tr>
 				<td>Redemption Rate - Pickup:</td>
 				<td><input type="text" name="red_rate_pickup_red" id="red_rate_pickup_red" value="<?=$red_rate_pickup["CD"]?>" /></td>
 				<td><input type="text" name="red_rate_pickup_green" id="red_rate_pickup_green" value="<?=$red_rate_pickup["CP"]?>" /></td>
 				<td><input type="text" name="red_rate_pickup_yellow" id="red_rate_pickup_yellow" value="<?=$red_rate_pickup["SR"]?>" /></td>
-				<td><input type="text" name="red_rate_pickup_purple" id="red_rate_pickup_purple" value="<?=$red_rate_pickup["RP"]?>" /></td>
+				<td><input type="text" name="red_rate_pickup_purple" id="red_rate_pickup_purple" value="<?=$red_rate_pickup["EX"]?>" /></td>
 			</tr>
 			<tr>
 				<td>Redemption Rate - Delivery:</td>
 				<td><input type="text" name="red_rate_deliv_red" id="red_rate_deliv_red" value="<?=$red_rate_deliv["CD"]?>" /></td>
 				<td><input type="text" name="red_rate_deliv_green" id="red_rate_deliv_green" value="<?=$red_rate_deliv["CP"]?>" /></td>
 				<td><input type="text" name="red_rate_deliv_yellow" id="red_rate_deliv_yellow" value="<?=$red_rate_deliv["SR"]?>" /></td>
-				<td><input type="text" name="red_rate_deliv_purple" id="red_rate_deliv_purple" value="<?=$red_rate_deliv["RP"]?>" /></td>
+				<td><input type="text" name="red_rate_deliv_purple" id="red_rate_deliv_purple" value="<?=$red_rate_deliv["EX"]?>" /></td>
 			</tr>
 			<tr>
 				<td>Distributor Payment - Pickup:</td>
 				<td><input type="text" name="distr_payment_pickup_red" id="distr_payment_pickup_red" value="<?=$distr_payment_pickup["CD"]?>" /></td>
 				<td><input type="text" name="distr_payment_pickup_green" id="distr_payment_pickup_green" value="<?=$distr_payment_pickup["CP"]?>" /></td>
 				<td><input type="text" name="distr_payment_pickup_yellow" id="distr_payment_pickup_yellow" value="<?=$distr_payment_pickup["SR"]?>" /></td>
-				<td><input type="text" name="distr_payment_pickup_purple" id="distr_payment_pickup_purple" value="<?=$distr_payment_pickup["RP"]?>" /></td>
+				<td><input type="text" name="distr_payment_pickup_purple" id="distr_payment_pickup_purple" value="<?=$distr_payment_pickup["EX"]?>" /></td>
 			</tr>		
 			<tr>
 				<td>Distributor Payment - Delivery:</td>
 				<td><input type="text" name="distr_payment_deliv_red" id="distr_payment_deliv_red" value="<?=$distr_payment_deliv["CD"]?>" /></td>
 				<td><input type="text" name="distr_payment_deliv_green" id="distr_payment_deliv_green" value="<?=$distr_payment_deliv["CP"]?>" /></td>
 				<td><input type="text" name="distr_payment_deliv_yellow" id="distr_payment_deliv_yellow" value="<?=$distr_payment_deliv["SR"]?>" /></td>
-				<td><input type="text" name="distr_payment_deliv_purple" id="distr_payment_deliv_purple" value="<?=$distr_payment_deliv["RP"]?>" /></td>
+				<td><input type="text" name="distr_payment_deliv_purple" id="distr_payment_deliv_purple" value="<?=$distr_payment_deliv["EX"]?>" /></td>
 			</tr>			
 			
 		</table>
@@ -1019,28 +1019,28 @@ if($action=="manage_rates"){
 				<td >Documents</td>
 				<td >Parcels</td>
 				<td >Signature</td>
-				<td >Pickup</td>
+				<td >Excess</td>
 			</tr>
 			<tr>
 				<td>Qty per Book:</td>
 				<td><input type="text" name="qty_per_book_red" id="qty_per_book_red" value="<?=$qty_per_book["CD"]?>" /></td>
 				<td><input type="text" name="qty_per_book_green" id="qty_per_book_green" value="<?=$qty_per_book["CP"]?>" /></td>
 				<td><input type="text" name="qty_per_book_yellow" id="qty_per_book_yellow" value="<?=$qty_per_book["SR"]?>" /></td>
-				<td><input type="text" name="qty_per_book_purple" id="qty_per_book_purple" value="<?=$qty_per_book["RP"]?>" /></td>
+				<td><input type="text" name="qty_per_book_purple" id="qty_per_book_purple" value="<?=$qty_per_book["EX"]?>" /></td>
 			</tr>
 			<tr>
 				<td>Standard:</td>
 				<td><input type="text" name="sell_rate_std_red" id="sell_rate_std_red" value="<?=$sell_rate_std["CD"]?>" /></td>
 				<td><input type="text" name="sell_rate_std_green" id="sell_rate_std_green" value="<?=$sell_rate_std["CP"]?>" /></td>
 				<td><input type="text" name="sell_rate_std_yellow" id="sell_rate_std_yellow" value="<?=$sell_rate_std["SR"]?>" /></td>
-				<td><input type="text" name="sell_rate_std_purple" id="sell_rate_std_purple" value="<?=$sell_rate_std["RP"]?>" /></td>
+				<td><input type="text" name="sell_rate_std_purple" id="sell_rate_std_purple" value="<?=$sell_rate_std["EX"]?>" /></td>
 			</tr>
 			<tr>
 				<td>Discount:</td>
 				<td><input type="text" name="sell_rate_disc_red" id="sell_rate_disc_red" value="<?=$sell_rate_disc["CD"]?>" /></td>
 				<td><input type="text" name="sell_rate_disc_green" id="sell_rate_disc_green" value="<?=$sell_rate_disc["CP"]?>" /></td>
 				<td><input type="text" name="sell_rate_disc_yellow" id="sell_rate_disc_yellow" value="<?=$sell_rate_disc["SR"]?>" /></td>
-				<td><input type="text" name="sell_rate_disc_purple" id="sell_rate_disc_purple" value="<?=$sell_rate_disc["RP"]?>" /></td>
+				<td><input type="text" name="sell_rate_disc_purple" id="sell_rate_disc_purple" value="<?=$sell_rate_disc["EX"]?>" /></td>
 			</tr>
 			
 		</table>
@@ -1356,8 +1356,8 @@ if($action=="print_docket"){
 						GROUP_CONCAT(DISTINCT CONCAT('Document Ticket Numbers CD',start,' - CD',end) SEPARATOR '<BR />'),
 						IF(parcel_job_ticket.type='CP',
 							GROUP_CONCAT(DISTINCT CONCAT('Parcel Ticket Numbers CP',start,' - CP',end) SEPARATOR '<BR />'),
-							IF(parcel_job_ticket.type='RP',	
-								GROUP_CONCAT(DISTINCT CONCAT('Parcel Ticket Numbers RP',start,' - RP',end) SEPARATOR '<BR />'),
+							IF(parcel_job_ticket.type='EX',	
+								GROUP_CONCAT(DISTINCT CONCAT('Parcel Ticket Numbers EX',start,' - EX',end) SEPARATOR '<BR />'),
 								IF(parcel_job_ticket.type='SR',
 									GROUP_CONCAT(DISTINCT CONCAT('Signature Ticket Numbers SR',start,' - SR',end) SEPARATOR '<BR />'),
 									''
@@ -1448,7 +1448,7 @@ if(!$action){
 					ROUND(SUM(IF(parcel_job_rate.type='CD',parcel_job_rate.rate,0)),2) AS 'Rate Red',
 					ROUND(SUM(IF(parcel_job_rate.type='CP',parcel_job_rate.rate,0)),2) AS 'Rate Green',
 					ROUND(SUM(IF(parcel_job_rate.type='SR',parcel_job_rate.rate,0)),2) AS 'Rate Yellow',
-					ROUND(SUM(IF(parcel_job_rate.type='RP',parcel_job_rate.rate,0)),2) AS 'Rate Purple',
+					ROUND(SUM(IF(parcel_job_rate.type='EX',parcel_job_rate.rate,0)),2) AS 'Rate Orange',
 					CONCAT('<a href=\'parcels.php?action=print_docket&job_id=',parcel_job.job_id,'\'>print</a>') AS Print
 					
 					

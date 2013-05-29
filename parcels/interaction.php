@@ -246,7 +246,7 @@ if($action=="process_xerox_scan2"){
 						$sel->addOption("CD","CD");
 						$sel->addOption("CP","CP");
 						$sel->addOption("SR","SR");
-						$sel->addOption("RP","RP");
+						$sel->addOption("EX","EX");
 					$sel->stop();
 ?>					
 				</td>-->

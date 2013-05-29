@@ -16,7 +16,7 @@ if($action=="update_pjr"){
 	$res = query($qry);
 	$sr = mysql_fetch_object($res);
 	
-	$qry = "SELECT * FROM parcel_rates WHERE '$now' BETWEEN start_date AND end_date AND type='RP'";
+	$qry = "SELECT * FROM parcel_rates WHERE '$now' BETWEEN start_date AND end_date AND type='EX'";
 	$res = query($qry);
 	$rp = mysql_fetch_object($res);
 
@@ -30,7 +30,7 @@ if($action=="update_pjr"){
 	$qry = "UPDATE parcel_job_route SET red_rate_pickup=$sr->red_rate_pickup,red_rate_deliv=$sr->red_rate_deliv,distr_payment_deliv=$sr->distr_payment_deliv,distr_payment_pickup=$sr->distr_payment_pickup WHERE type='SR' AND red_rate_pickup=0;";
 	query($qry);	
 	
-	$qry = "UPDATE parcel_job_route SET red_rate_pickup=$rp->red_rate_pickup,red_rate_deliv=$rp->red_rate_deliv,distr_payment_deliv=$rp->distr_payment_deliv,distr_payment_pickup=$rp->distr_payment_pickup WHERE type='RP' AND red_rate_pickup=0;";
+	$qry = "UPDATE parcel_job_route SET red_rate_pickup=$rp->red_rate_pickup,red_rate_deliv=$rp->red_rate_deliv,distr_payment_deliv=$rp->distr_payment_deliv,distr_payment_pickup=$rp->distr_payment_pickup WHERE type='EX' AND red_rate_pickup=0;";
 	query($qry);	
 	
 	
@@ -185,7 +185,7 @@ if($action=="manage_rates"){
 						sell_rate_std = '$sell_rate_std_purple',
 						sell_rate_disc = '$sell_rate_disc_purple',
 						qty_per_book = '$qty_per_book_purple'
-					WHERE type='RP' AND start_date='$start_date'";
+					WHERE type='EX' AND start_date='$start_date'";
 			query($qry);
 			$MESSAGE = "Rates saved and will be used for the next bookings.";
 		break;
