@@ -115,8 +115,8 @@ function get_regular_joblist_query($date1,$date2){
 																IF(j.dest_type='num_spare','Spare',
 																	IF(j.dest_type='num_lifestyle','Lifestyle',
 																		IF(j.dest_type='bundles','Bundles',j.dest_type	
-							)))))))))))) AS Type,			
-					j.cancelled 	 AS 'Cancelled'
+							)))))))))))) AS Type			
+					# j.cancelled 	 AS 'Cancelled'
 					# CONCAT('<a class=\'sqlhref\' href=index.php?action=unfinish&year=".date("Y", strtotime($date1))."&month=".date("m", strtotime($date1))."&record=',j.job_id,'>reopen</a>') AS Action
 			FROM job j
 			LEFT JOIN job ja
