@@ -119,8 +119,6 @@ function get_regular_joblist_query($date1,$date2){
 					# j.cancelled 	 AS 'Cancelled'
 					# CONCAT('<a class=\'sqlhref\' href=index.php?action=unfinish&year=".date("Y", strtotime($date1))."&month=".date("m", strtotime($date1))."&record=',j.job_id,'>reopen</a>') AS Action
 			FROM job j
-			LEFT JOIN job ja
-			ON ja.alt_job_id=j.job_id			
 			LEFT JOIN client c
 			ON j.client_id=c.client_id
 			WHERE (j.delivery_date BETWEEN '$date1' AND '$date2') 
