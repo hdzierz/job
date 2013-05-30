@@ -92,6 +92,45 @@ function get_joblist_query($with_ioa,$mode,$job,$client,$pub,$start_date=false,$
 	return $qry;
 }
 
+function get_regular_joblist_query($date1,$date2){
+	$qry = "SELECT	j.job_id         AS 'Record',
+					c.name           AS 'Client',
+					j.publication	 AS 'Publication',
+					IF(j.is_ioa='Y','IOA',
+						j.delivery_date)  
+									 AS 'Delivery Date',
+					CONCAT(j.job_no,IF(j.job_no_add IS NOT NULL,j.job_no_add,''))         AS 'Job No.',
+					j.invoice_no     AS 'Invoice No.',
+					j.invoice_qty    AS 'Invoiced',
+					ROUND(j.weight,0)		 AS 'Weight',
+					IF(j.dest_type='num_total','Total',
+								IF(j.dest_type='num_farmers','Farmer',
+									IF(j.dest_type='num_dairies','Dairy',
+										IF(j.dest_type='num_sheep','Sheep',
+											IF(j.dest_type='num_beef','Beef',
+												IF(j.dest_type='num_sheepbeef','Sheep/Beef',
+													IF(j.dest_type='num_dairybeef','Dairy/Beef',
+														IF(j.dest_type='num_hort','Hort',
+															IF(j.dest_type='num_nzfw','F@90%',
+																IF(j.dest_type='num_spare','Spare',
+																	IF(j.dest_type='num_lifestyle','Lifestyle',
+																		IF(j.dest_type='bundles','Bundles',j.dest_type	
+							)))))))))))) AS Type,			
+					j.cancelled 	 AS 'Cancelled'
+					# CONCAT('<a class=\'sqlhref\' href=index.php?action=unfinish&year=".date("Y", strtotime($date1))."&month=".date("m", strtotime($date1))."&record=',j.job_id,'>reopen</a>') AS Action
+			FROM job j
+			LEFT JOIN job ja
+			ON ja.alt_job_id=j.job_id			
+			LEFT JOIN client c
+			ON j.client_id=c.client_id
+			WHERE (j.delivery_date BETWEEN '$date1' AND '$date2') 
+				AND j.is_regular='Y'
+			GROUP BY j.job_id
+			ORDER BY c.name,j.publication,j.delivery_date DESC,j.job_no";
+	return $qry;
+}
+
+
 function get_finished_joblist_query($date1,$date2){
 	$qry = "SELECT	j.job_id         AS 'Record',
 					c.name           AS 'Client',

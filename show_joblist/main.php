@@ -266,4 +266,35 @@ if($action=="" || !isset($action)){
 	$tab->writeTable();
 	$tab->stopTable();
 }
+
+
+if($action=="regular_jobs"){
+	
+	
+	$qry = get_regular_joblist_query($start_date,$final_date);
+	$tab = new MySQLTable("index.php",$qry,"table","proc_job.php");
+	$tab->showRec=0;
+	
+	/*$tab->hasForm=true;
+	$tab->formPage="rep_revenue.php?report=job_delivery";
+	$tab->hasSubmitButton = true;
+	$tab->submitButtonName = "submit";
+	$tab->submitButtonValue = "Process Delivery";*/
+	
+	$tab->hasAddButton=false;
+	$tab->hasEditButton=false;
+	$tab->hasDeleteButton=false;
+	//$tab->hasCheckBoxes=true;
+	$tab->hasCancelButton=false;
+	$tab->hasReopenButton=false;
+	$tab->hasFinishButton=false;
+	$tab->hasDeleteButton=false;
+	$tab->formatLine=true;
+	$tab->hiddenFields["IS_ATT2"]=1;
+	$tab->startTable();
+	$tab->writeTable();
+	$tab->stopTable();
+
+	
+}
 ?>

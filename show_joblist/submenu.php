@@ -10,6 +10,16 @@
 <?
 	}
 ?>
+<? if($action=="regular_jobs"){?>
+		<a class="subaself" href="index.php?action=regular_jobs">Regular Jobs</a>|
+<? 
+	}
+	else{
+?>
+		<a class="suba" href="index.php?action=regular_jobs">Regular Jobs</a>|
+<?
+	}
+?>
 <? if($action=="show_old_jobs"){?>
 		<a class="subaself" href="index.php?action=show_old_jobs">Old Jobs</a>|
 <? 

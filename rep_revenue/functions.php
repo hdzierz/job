@@ -424,7 +424,7 @@ function load_circ_sdist($m_table,$op,$route_id,$month,$year){
 				GROUP BY job.job_id
 				) AS sum
 				GROUP BY Job
-				HAVING Total>0
+				# HAVING Total>0
 				ORDER BY Date,Job,Pub";
 	return $m_table->LoadData($qry);
 }

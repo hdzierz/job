@@ -96,6 +96,39 @@ if($action=="send_messages"){
 	<?
 }
 
+if($action=="regular_jobs"){
+	$today = date("Y-m-15");
+	if(!$start_date || !$final_date){
+		$start_date = date("Y-m-15",strtotime($today." -1 month"));
+		$final_date = date("Y-m-15",strtotime($today." +2 month"));
+	}
+	
+	?>
+		<script type="text/javascript" src="includes/calendarDateInput.js"></script> 
+		<form action="index.php" method="post">
+			<table>
+				<tr>
+					<tr>
+						<td>From:</td>
+						<td>
+							<script language="javascript">DateInput("start_date", true, "YYYY-MM-DD","<?=$start_date?>")</script>		
+						</td>
+						<td>
+							To:
+						</td>
+						<td>
+							<script language="javascript">DateInput("final_date", true, "YYYY-MM-DD","<?=$final_date?>")</script>		
+						</td>
+						<td>
+							<input type="submit" name="submit" value="View" />
+						</td>
+					</tr>
+					<input type="hidden" name="action" value="regular_jobs" />
+			</table>
+		</form>
+	<?
+}
+
 if($action=="clean_jobs"){
 	if(!$date) $date = '2000-01-01';
 	$warning = "This action has major impact on the job system. You will permanently remove jobs from the job list. Continue?";
