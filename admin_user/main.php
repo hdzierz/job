@@ -20,6 +20,10 @@ if($action=="edit"||$action=="add"){
 				<td><input type="text" name="username" value="<?=$user->username?>" /> </td>
 			</tr>
 			<tr>
+				<td>Email</td>
+				<td><input type="text" name="email" value="<?=$user->email?>" /> </td>
+			</tr>
+			<tr>
 				<td>Password</td>
 				<td>
 					<input type="password" name="passwd" value="" /> 
@@ -119,6 +123,7 @@ if($action=="edit"||$action=="add"){
 if($action=="" || !isset($action)){
 	$sql = "SELECT   user_id AS Record,
 					 username AS User, 
+					 email AS Email,
 					 page_useradmin AS Users,
 					 page_routeadmin AS Routes,
 					 page_clientadmin AS Clients,
