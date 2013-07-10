@@ -312,7 +312,7 @@ if($report=="rep_cirpay_by_dist_send_out"){
 						   round(	
 								SUM(
 									IF(job_route.dest_type<>'bundles' ,
-										job_route.amount,
+										job_route.amount * job_route.subdist_rate_red,
 										0
 									)
 								)*
@@ -3524,7 +3524,7 @@ if($report=="rep_cirpay_by_dist" || $report=="rep_cirpay_by_dist_compare"){
 															AS 'Qty Bdl',											
 															
 							   round(job.dist_rate,4)   	AS 'Dist-Rate',				   
-							   round(job.subdist_rate,4)    AS 'S/Dist-Rate',
+							   round((job.subdist_rate * (job_route.subdist_rate_red)),4)    AS 'S/Dist-Rate',
 							   round(job.contr_rate+job.folding_fee + job.premium,4)      AS 'Cont-Rate',
 							   round(job.folding_fee + job.premium,4)      AS 'Add',
 							   round(
@@ -3538,7 +3538,7 @@ if($report=="rep_cirpay_by_dist" || $report=="rep_cirpay_by_dist_compare"){
 							   round(	
 									SUM(
 										IF(job_route.dest_type<>'bundles' ,
-											job_route.amount,
+											job_route.amount * (job_route.subdist_rate_red),
 											0
 										)
 									)*
@@ -3667,12 +3667,12 @@ if($report=="rep_cirpay_by_dist" || $report=="rep_cirpay_by_dist_compare"){
 				operator.company AS Name,
 				SUM(IF(job_route.dest_type<>'bundles',amount,0)) AS Circ,
 				SUM(IF(job_route.dest_type='bundles',amount,0)) AS Bundles,
-				ROUND(SUM(IF(job_route.dest_type<>'bundles',amount*(job.dist_rate+subdist_rate_red*job.subdist_rate+(job.contr_rate+folding_fee+job.premium)),0)),2) AS 'Amount Circ',
+				ROUND(SUM(IF(job_route.dest_type<>'bundles',amount*(job.dist_rate+(subdist_rate_red)*job.subdist_rate+(job.contr_rate+folding_fee+job.premium)),0)),2) AS 'Amount Circ',
 				ROUND(SUM(IF(job_route.dest_type='bundles',(amount*bundle_price),0)),2) AS 'Amount Bundles',
 				
-				ROUND(SUM(IF(job_route.dest_type<>'bundles',amount*(job.dist_rate+subdist_rate_red*job.subdist_rate+(job.contr_rate+folding_fee+job.premium)),0))+
+				ROUND(SUM(IF(job_route.dest_type<>'bundles',amount*(job.dist_rate+(subdist_rate_red)*job.subdist_rate+(job.contr_rate+folding_fee+job.premium)),0))+
 					SUM(IF(job_route.dest_type='bundles',amount*bundle_price,0)),2) AS 'Total',
-				ROUND(".(1+$GST_CIRCULAR)."*(SUM(IF(job_route.dest_type<>'bundles',amount*(job.dist_rate+subdist_rate_red*job.subdist_rate+(job.contr_rate+folding_fee+job.premium)),0))+
+				ROUND(".(1+$GST_CIRCULAR)."*(SUM(IF(job_route.dest_type<>'bundles',amount*(job.dist_rate+(subdist_rate_red)*job.subdist_rate+(job.contr_rate+folding_fee+job.premium)),0))+
 					SUM(IF(job_route.dest_type='bundles',amount*bundle_price,0))),2) AS 'Total (incl. GST)'
 				
 			FROM job

@@ -306,7 +306,9 @@ if($action=="save_operator"){
 	}
 	
 
-
+	$qry = "UPDATE job_route SET subdist_rate_red = '$rate_red_fact' WHERE subdist_id = '$operator_id'";
+	query($qry);
+	
 	$MESSAGE = "Address successfully changed/added.";
 	$action="";
 }

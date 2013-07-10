@@ -398,6 +398,7 @@ function load_circ_sdist($m_table,$op,$route_id,$month,$year){
 						Qty AS 'Circ Qty',
 						Qty_Bdls AS 'Bdl Qty',
 						Rate AS 'Circ Rate',
+						RateRed AS 'Circ RateRed',
 						'' AS 'Bdl Rate',
 						ROUND(Amt,2) AS Total,
 						ROUND(".(1+$GST_CIRCULAR)."*SUM(Amt),2) AS 'Total (incl. GST)'
@@ -408,9 +409,10 @@ function load_circ_sdist($m_table,$op,$route_id,$month,$year){
 						SUM(IF(job_route.dest_type<>'bundles',amount,0)) AS Qty,
 						SUM(IF(job_route.dest_type='bundles',amount,0)) AS Qty_Bdls,
 						
-						SUM(IF(job_route.dest_type<>'bundles',subdist_rate_red*subdist_rate*amount,0)) AS Amt,
+						SUM(IF(job_route.dest_type<>'bundles',(subdist_rate_red)*subdist_rate*amount,0)) AS Amt,
 						SUM(IF(job_route.dest_type='bundles',bundle_price*amount,0)) AS 'Amt Bdls',
-						ROUND(subdist_rate_red*subdist_rate,4) AS Rate,
+						ROUND((subdist_rate_red)*subdist_rate,4) AS Rate,
+						ROUND((subdist_rate_red),4) AS RateRed,
 						bundle_price AS 'Bdl_Price'
 				FROM job
 				LEFT JOIN job_route
@@ -517,7 +519,7 @@ function load_circ_dist_sdist_summary($m_table,$op,$route_id,$month,$year){
 						ROUND(".(1+$GST_CIRCULAR)."*SUM(Amt),2) AS 'Total (incl. GST)'
 				FROM (
 				SELECT  
-						SUM(IF(job_route.dest_type<>'bundles',subdist_rate_red*subdist_rate*amount,0)) AS Amt,
+						SUM(IF(job_route.dest_type<>'bundles',(subdist_rate_red)*subdist_rate*amount,0)) AS Amt,
 						company,subdist_id
 				FROM job
 				LEFT JOIN job_route
@@ -984,7 +986,7 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			
 		
 		$header=array('Date','Job','Pub','Circ Qty','Bdl Qty','Circ Rate','Bdl Rate','Total', 'Total (incl. GST)');
-		$width=array('Date'=>20,'Job'=>15,'Pub'=>25,'Circ Qty'=>15,'Bdl Qty'=>15,'Circ Rate'=>15,'Bdl Rate'=>15,'Total'=>20,'Total (incl. GST)'=>20);
+		$width=array('Date'=>20,'Job'=>15,'Pub'=>25,'Circ Qty'=>15,'Bdl Qty'=>15,'Circ Rate'=>15,'Circ RateRed' => 15, 'Bdl Rate'=>15,'Total'=>20,'Total (incl. GST)'=>20);
 		$maxw=get_maxw($width);
 			
 		// As Contractor
