@@ -786,9 +786,14 @@ else if($report=="pc_dropoff" && $mode=="dist"){
 			<tr>
 				<td>Home Phone (Yes): </td>
 				<td><input type="checkbox" name="home_phone" value="1" <? if($home_phone){ ?> checked <? }?> /></td>	
-			</tr>				
+			</tr>	
+			<tr>			
 				<td>Mobile Phone (Yes):  </td>
 				<td><input type="checkbox" name="mobile_phone" value="1" <? if($mobile_phone){ ?> checked <? }?> /></td>	
+			</tr>
+			<tr>			
+				<td>Email (Yes):  </td>
+				<td><input type="checkbox" name="email" value="1" <? if($email){ ?> checked <? }?> /></td>	
 			</tr>
 			<tr>
 				<td></td>

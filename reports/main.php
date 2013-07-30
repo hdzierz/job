@@ -103,7 +103,7 @@ if($report=="error"){
 <?
 }
 
-if($report=="`off"){
+if($report=="pc_dropoff"){
 	split_rds();
 	if($mode=="geo"){
 		$island = $_POST["island"];
@@ -116,7 +116,7 @@ if($report=="`off"){
 	else{
 		$dist_id = $_POST["dist_id"];
 		if($dist_id)
-			write_dist_table($date,$dist_id,"print",$home_phone,$mobile_phone);
+			write_dist_table($date,$dist_id,"print",$home_phone,$mobile_phone, $email);
 	}
 }
 

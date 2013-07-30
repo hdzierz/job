@@ -193,7 +193,7 @@ function write_bible($date,$island,$region,$mode,$home_phone,$mobile_phone){
 
 }
 
-function write_dist_table($date,$dist_id,$mode,$home_phone,$mobile_phone){
+function write_dist_table($date,$dist_id,$mode,$home_phone,$mobile_phone,$email){
 	//if(!$mobile_phone && !$home_phone) $home_phone=true;
 	/*
 	 ?>
