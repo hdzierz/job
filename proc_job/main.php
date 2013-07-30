@@ -721,6 +721,7 @@ if($action=="edit_job"||$action=="new_job"){
 		$desc_bbc			= $job->desc_bbc;
 		$add_folding_to_invoice = $job->add_folding_to_invoice;
 		$premium			= $job->premium;
+		$premium_sell			= $job->premium_sell;
 		$add_premium_to_invoice = $job->add_premium_to_invoice;
 		
 		$qry = "SELECT SUM(IF(dest_type='bundles',job_route.amount,0)) AS sum_bundles,
@@ -772,6 +773,7 @@ if($action=="edit_job"||$action=="new_job"){
 		$desc_bbc			= $job->desc_bbc;
 		$add_folding_to_invoice = $job->add_folding_to_invoice;
 		$premium			= $job->premium;
+		$premium_sell			= $job->premium_sell;
 		$add_premium_to_invoice = $job->add_premium_to_invoice;
 		
 		$comments 			= $job->comments;
