@@ -3,6 +3,47 @@
 if($action=="send_messages"){
 }
 
+
+if($action=="affiliate_jobs" && $submit){
+	$date1 = $year.'-'.sprintf("%02d",$month).'-01';
+	$date2 = $year.'-'.sprintf("%02d",$month).'-31';
+	
+	$job_qry = "SELECT * FROM job WHERE delivery_date BETWEEN '$date1' AND '$date2'";
+	$res = query($job_qry,0);
+
+	$MESSAGE .= "Updated job: ";
+	
+	while($job = mysql_fetch_object($res)){
+
+		$qry = "UPDATE job_route 
+			SET dist_id = 
+			(
+				SELECT dist_id FROM route_aff WHERE job_route.route_id = route_aff.route_id
+					AND '{$job->delivery_date}' BETWEEN app_date AND stop_date	 LIMIT 1
+			),
+			subdist_id = 
+			(
+				SELECT subdist_id FROM route_aff WHERE job_route.route_id = route_aff.route_id
+					AND '{$job->delivery_date}' BETWEEN app_date AND stop_date  LIMIT 1
+			),
+			contractor_id = 
+			(
+				SELECT contractor_id FROM route_aff WHERE job_route.route_id = route_aff.route_id
+					AND '{$job->delivery_date}' BETWEEN app_date AND stop_date  LIMIT 1
+			)
+			WHERE job_id = {$job->job_id}";		
+		query($qry);
+		
+		$qry = "UPDATE job_route 
+				SET subdist_rate_red = (SELECT rate_red_fact FROM operator WHERE subdist_id = operator_id)
+				WHERE job_id = {$job->job_id} ";
+		query($qry,0);
+		$MESSAGE .= " {$job->job_no} / ";
+	}
+	$MESSAGE .=  "<br />Finished<br />";
+	
+}
+
 if($action=="clean_jobs"){
 	
 	if($date && $submit){

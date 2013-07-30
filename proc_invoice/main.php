@@ -110,14 +110,14 @@ if($action=="select_jobs"){
 						/*job.purchase_no AS 'Purchase Order #',*/
 						client.name AS Client,
 						job.publication AS 'Publication',
-						IF(is_ioa='Y', 'IOA', delivery_date) AS 'D/Date',
+						delivery_date AS 'D/Date',
 						groups.G
 				FROM job
 				LEFT JOIN client
 				ON client.client_id=job.client_id
 				LEFT JOIN
 				(
-					SELECT 	job.job_id AS G,
+					SELECT 	IF(`group` IS NOT NULL, `group`, job.job_id) AS G,
 							publication,
 							purchase_no
 					FROM job

@@ -174,7 +174,8 @@ function bible_dist_qry($date,$dist_id,$home_phone,$mobile_phone){
 								phone IS NOT NULL AND phone<>'',phone,NULL),
 								IF(
 									phone2 IS NOT NULL AND phone2<>'',phone2,NULL
-								)
+								),
+								IF(email IS NOT NULL AND email<>'',email,NULL)
 							)
 														AS Phone,";
 													
@@ -191,6 +192,7 @@ function bible_dist_qry($date,$dist_id,$home_phone,$mobile_phone){
 				$phone_2="Phone,";
 				$phone = "CONCAT_WS('\n',
 							IF(phone IS NOT NULL AND phone<>'',phone,NULL),
+							IF(email IS NOT NULL AND email<>'',email,NULL),
 								IF(phone2 IS NOT NULL AND phone2<>'',phone2,
 										IF(mobile IS NOT NULL AND mobile<>'',mobile,
 											IF(mobile2 IS NOT NULL AND mobile2<>'',mobile2,NULL))

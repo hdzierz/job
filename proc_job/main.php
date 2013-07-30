@@ -808,6 +808,7 @@ if($action=="edit_job"||$action=="new_job"){
 	if(!$desc_bbc) 			$desc_bbc=""; 
 	if(!$add_folding_to_invoice) 			$add_folding_to_invoice="N"; 
 	if(!$premium) 			$premium="0.0000"; 
+	if(!$premium_sell) 			$premium_sell="0.0000"; 
 	if(!$add_premium_to_invoice) 			$add_premium_to_invoice="N"; 
 
 	$lbc_charge 	= sprintf("%.2f",$lbc_charge);
@@ -1109,6 +1110,10 @@ if($action=="edit_job"||$action=="new_job"){
 				<td><input type="text" name="desc_bbc" value="<?=$desc_bbc?>"   /></td>				
 			</tr>
 			<tr>
+				<td>Premium:</td>
+				<td><input style="text-align:right " type="text" name="premium_sell" value="<?=$premium_sell?>" onKeyUp="javascript:checkfloat(this.value, this);"  /></td>									
+			</tr>
+			<tr>
 				<td colspan="4"></td>
 				<td><sup>1</sup>Extra charges per 000</td>
 			</tr>			
@@ -1153,7 +1158,6 @@ if($action=="edit_job"||$action=="new_job"){
 			<tr>
 				<td>Premium $</td>
 				<td><input style="text-align:right " type="text" name="premium" value="<?=sprintf("%.4f",$premium); ?>" onKeyUp="javascript:checkfloat(this.value, this);"  /></td>
-				<td><input type="checkbox" id="add_premium_to_invoice" name="add_premium_to_invoice" value='Y' <? if($add_premium_to_invoice=='Y'){ ?> checked <? } ?> /></td>
 			</tr>
 <?
 			if($res_bundles){

@@ -1,18 +1,4 @@
 <?
-if($MESSAGE){
-?>		
-		<div id="message" >
-			<?=$MESSAGE?>
-		</div>
-<?
-}
-if($ERROR){
-?>		
-		<div id="error" >
-			<?=$ERROR?>
-		</div>
-<?
-}
 
 if($action=="send_messages"){
 	die('Under construction');
@@ -141,7 +127,7 @@ if($action=="clean_jobs"){
 			function confirm_archive(){
 				var is_sure = confirm('<?php echo $warning;?>');
 				if(is_sure){
-					return confirm('Are you sure the date?');
+					return confirm('Are you sure about the date?');
 				} 
 				return false;
 			}
@@ -164,6 +150,49 @@ if($action=="clean_jobs"){
 		</table>
 	
 	<?php
+}
+
+if($action=="affiliate_jobs"){
+	if(!$month) $month = date('n');
+	if(!$year)  $year  = date('Y');
+	if(!$datea) $datea = date('Y-m-d');
+	?>
+	<script type="text/javascript" src="includes/calendarDateInput.js"></script> 
+	<form action="index.php" method="post">
+		<table>
+			<tr>
+				<td>
+					Month:
+				</td>
+				<td>
+					<?
+						$sel_month = new Select("month");
+						$sel_month->setOptionIsVal($month);
+						$sel_month->writeMonthSelect();
+					?>
+				</td>
+				<!--<td>Affiliation date:</td>
+				<td>
+					<script language="javascript">DateInput("datea", true, "YYYY-MM-DD","<?=$datea?>")</script>		
+				</td>-->
+				<td>
+					Year:
+				</td>
+				<td>
+					<?
+						$sel_year = new Select("year");
+						$sel_year->setOptionIsVal($year);
+						$sel_year->writeYearSelectFT();
+					?>
+				</td>	
+				<td>
+					<input type="submit" name="submit" value="Update" onclick="return confirm('Are you sure?');" />
+				</td>				
+			</tr>
+		</table>
+		<input type="hidden" name="action" value="affiliate_jobs" />
+	</form>
+	<?
 }
 
 if($action==""){
@@ -372,4 +401,18 @@ if($action=="gst"){
 	<?php
  }
 
+if($MESSAGE){
+?>		
+		<div id="message" >
+			<?=$MESSAGE?>
+		</div>
+<?
+}
+if($ERROR){
+?>		
+		<div id="error" >
+			<?=$ERROR?>
+		</div>
+<?
+}
 ?>

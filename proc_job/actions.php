@@ -75,6 +75,7 @@ if($action=="do_attach_job"){
 						desc_bbc,
 						add_folding_to_invoice,
 						premium,
+						premium_sell,
 						add_premium_to_invoice)
 						
 						
@@ -121,6 +122,7 @@ if($action=="do_attach_job"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							premium_sell,
 							add_premium_to_invoice
 						 FROM job WHERE job_id=$job_id";
 	query($qry);
@@ -322,6 +324,7 @@ if($action=="save_job" || $action=="add_job"){
 						desc_bbc,
 						add_folding_to_invoice,
 						premium,
+						premium_sell,
 						add_premium_to_invoice)
 					VALUES(
 						'$client_id',
@@ -366,6 +369,7 @@ if($action=="save_job" || $action=="add_job"){
 						'$desc_bbc',
 						'$add_folding_to_invoice',
 						'$premium',
+						'$premium_sell',
 						'$add_premium_to_invoice')";		
 			query($sql);	
 			$job_id=mysql_insert_id();
@@ -438,6 +442,7 @@ if($action=="save_job" || $action=="add_job"){
 							desc_bbc			= '$desc_bbc',
 							add_folding_to_invoice = '$add_folding_to_invoice',
 							premium				= '$premium',
+							premium_sell		= '$premium_sell',
 							add_premium_to_invoice = '$add_premium_to_invoice'
 						WHERE job_id='$job_id'";
 				query($sql);
@@ -480,6 +485,7 @@ if($action=="save_job" || $action=="add_job"){
 							desc_bbc			= '$desc_bbc',
 							add_folding_to_invoice = '$add_folding_to_invoice',
 							premium				= '$premium',
+							premium_sell		= '$premium_sell',
 							add_premium_to_invoice = '$add_premium_to_invoice'
 							is_att				= 'Y'
 						WHERE job_id='$alt_job_id'";				
@@ -670,6 +676,7 @@ if($action=="save_as_new"||$action=="save_as_template"){
 						desc_bbc,
 						add_folding_to_invoice,
 						premium,
+						premium_sell,
 						add_premium_to_invoice)
 						
 						
@@ -716,6 +723,7 @@ if($action=="save_as_new"||$action=="save_as_template"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							premium_sell,
 							add_premium_to_invoice
 						 FROM $from_job WHERE job_id=$job_id";
 	query($qry);
@@ -802,6 +810,7 @@ if($action=="save_as_new"||$action=="save_as_template"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							premium_sell,
 							add_premium_to_invoice)
 							
 							
@@ -848,6 +857,7 @@ if($action=="save_as_new"||$action=="save_as_template"){
 								desc_bbc,
 								add_folding_to_invoice,
 								premium,
+								premium_sell,
 								add_premium_to_invoice
 							 FROM $from_job WHERE job_id=$alt_job_id";
 		query($qry);
@@ -952,6 +962,7 @@ if($action=="load_temp"){
 						desc_bbc,
 						add_folding_to_invoice,
 						premium,
+						premium_sell,
 						add_premium_to_invoice)
 						
 						
@@ -995,6 +1006,7 @@ if($action=="load_temp"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							premium_sell,
 							add_premium_to_invoice
 						 FROM job_temp WHERE job_id=$job_id";
 	query($qry);
@@ -1067,6 +1079,7 @@ if($action=="load_temp"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							premium_sell,
 							add_premium_to_invoice)
 							
 							
@@ -1108,6 +1121,7 @@ if($action=="load_temp"){
 								desc_bbc,
 								add_folding_to_invoice,
 								premium,
+								premium_sell,
 								add_premium_to_invoice
 							 FROM job_temp WHERE job_id=$alt_job_id";
 		query($qry);
@@ -1193,6 +1207,7 @@ if($action=="save_as_new_updated"){
 						desc_bbc,
 						add_folding_to_invoice,
 						premium,
+						premium_sell,
 						add_premium_to_invoice)
 						
 						
@@ -1238,6 +1253,7 @@ if($action=="save_as_new_updated"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							premium_sell,
 							add_premium_to_invoice
 						 FROM job WHERE job_id=$job_id";
 	query($qry);
@@ -1336,6 +1352,7 @@ if($action=="save_as_new_updated"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							premium_sell,
 							add_premium_to_invoice)
 							
 							
@@ -1382,6 +1399,7 @@ if($action=="save_as_new_updated"){
 								desc_bbc,
 								add_folding_to_invoice,
 								premium,
+								premium_sell
 								add_premium_to_invoice
 							 FROM job WHERE job_id=$alt_job_id";
 		query($qry);

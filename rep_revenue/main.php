@@ -3524,7 +3524,7 @@ if($report=="rep_cirpay_by_dist" || $report=="rep_cirpay_by_dist_compare"){
 															AS 'Qty Bdl',											
 															
 							   round(job.dist_rate,4)   	AS 'Dist-Rate',				   
-							   round((job.subdist_rate * (job_route.subdist_rate_red)),4)    AS 'S/Dist-Rate',
+							   round((job.subdist_rate),4)    AS 'S/Dist-Rate',
 							   round(job.contr_rate+job.folding_fee + job.premium,4)      AS 'Cont-Rate',
 							   round(job.folding_fee + job.premium,4)      AS 'Add',
 							   round(

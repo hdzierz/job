@@ -41,9 +41,9 @@ function create_item_no($count){
 function create_description($job){
 	$delivery_date = date("d M Y",strtotime($job->delivery_date));
 	
-	if($job->is_ioa=='Y'){
+	/*if($job->is_ioa=='Y'){
 		$delivery_date = "IOA";
-	}
+	}*/
 	
 	if($job->folding_fee>0  && $job->add_folding_to_invoice == 'Y'){
 		$ff = number_format($job->folding_fee,4);
@@ -76,9 +76,9 @@ function create_description($job){
 function create_description_bbc($job){
 	$delivery_date = date("d M Y",strtotime($job->delivery_date));
 	
-	if($job->is_ioa=='Y'){
+	/*if($job->is_ioa=='Y'){
 		$delivery_date = "IOA";
-	}
+	}*/
 	
 	if($job->folding_fee>0){
 		$ff = number_format($job->folding_fee,4);
@@ -247,10 +247,36 @@ function write_bbc($fp,$job,$invoiceno,$gst,$date,$count){
 		header('Content-Type: text/plain');	
 		header('Content-Disposition: attachment; filename="'.$filename.'"');
 }*/
+function save_group($arrGroups){
+	foreach($arrGroups as $job_id => $group){
+		$qry = "UPDATE job SET `group` = '$group' WHERE job_id = '$job_id'";
+		query($qry,1);
+	}
+}
+
+function get_group($intJobId){
+	$qry = "SELECT * FROM job WHERE job_id = '$intJobId'";
+	$res = query($qry,1);
+	$job = mysql_fetch_object($res);
+	return $job->group;
+}
+
+
+function check_invoice_no($intGroupId){
+	$qry = "SELECT * FROM job WHERE `group` = '$intGroupId' ORER BY invoice_no DESC";
+	$res = query($qry,1);
+	$invoice_no = "";
+	while($job = mysql_fetch_object($res)){
+		$buffer = $job->invoice_no;
+		if($buffer) return $buffer;
+	}
+	return create_invoice_no();
+}
 
 if($action=="Create Invoices"){
 	$group = $_POST["efield"];
 	
+	save_group($group);
 	
 	if($check){
 	
@@ -287,7 +313,7 @@ if($action=="Create Invoices"){
 				LEFT JOIN client
 				ON job.client_id=client.client_id
 				WHERE job_id IN $job_list
-				ORDER BY client.name,publication,delivery_date";
+				ORDER BY invoice_no,client.name,publication,delivery_date";
 		
 		
 		$res = query($qry);
@@ -309,8 +335,12 @@ if($action=="Create Invoices"){
 			
 			$cur_job_id = $job->job_id;
 			$prev_job_id = $prev_job->job_id;
-			//echo $cur_job_id."/".$prev_job_id."<br />";
-			if($group[$cur_job_id] != $group[$prev_job_id]){
+			
+			$g = get_group($job->job_id);
+			$invoiceno = check_invoice_no($g);
+			
+			
+			/*if($group[$cur_job_id] != $group[$prev_job_id]){
 				if(!$fuel_surcharge)  $fuel_sc = $prev_job->fuel_surcharge;
 				else $fuel_sc = $fuel_surcharge;
 				//if($invoiceno) {
@@ -326,9 +356,9 @@ if($action=="Create Invoices"){
 			else{
 				$invoiceno = $invoiceno;
 				$count++;
-			}
+			}*/
 
-			update_invoice_no($cur_job_id,$invoiceno);
+			update_invoice_no($job->job_id,$invoiceno);
 			
 			$discount = 1-$job->discount/100;
 			

@@ -103,7 +103,7 @@ if($report=="error"){
 <?
 }
 
-if($report=="pc_dropoff"){
+if($report=="`off"){
 	split_rds();
 	if($mode=="geo"){
 		$island = $_POST["island"];

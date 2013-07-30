@@ -75,6 +75,16 @@
 ?>
 <? 
 if($CK_CHANGE_GST=='Y'){
+	if($action=="affiliate_jobs"){
+		?>
+		<a class="subaself" href="index.php?action=affiliate_jobs">Update affiliation</a>|
+		<?
+	}
+	else{
+		?>
+		<a class="suba" href="index.php?action=affiliate_jobs">Update affiliation</a>|
+		<?
+	}
 	if($action=="sync_webpage"){?>
 		<a class="subaself" href="index.php?action=sync_webpage">Sync Webpage</a>|
 <? 
