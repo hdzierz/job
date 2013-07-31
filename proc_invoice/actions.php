@@ -250,21 +250,21 @@ function write_bbc($fp,$job,$invoiceno,$gst,$date,$count){
 function save_group($arrGroups){
 	foreach($arrGroups as $job_id => $group){
 		$qry = "UPDATE job SET `group` = '$group' WHERE job_id = '$job_id'";
-		query($qry,1);
+		query($qry,0);
 	}
 }
 
 function get_group($intJobId){
 	$qry = "SELECT * FROM job WHERE job_id = '$intJobId'";
-	$res = query($qry,1);
+	$res = query($qry,0);
 	$job = mysql_fetch_object($res);
 	return $job->group;
 }
 
 
 function check_invoice_no($intGroupId){
-	$qry = "SELECT * FROM job WHERE `group` = '$intGroupId' ORER BY invoice_no DESC";
-	$res = query($qry,1);
+	$qry = "SELECT * FROM job WHERE `group` = '$intGroupId' ORDER BY invoice_no DESC";
+	$res = query($qry,0);
 	$invoice_no = "";
 	while($job = mysql_fetch_object($res)){
 		$buffer = $job->invoice_no;
