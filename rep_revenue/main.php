@@ -3063,6 +3063,7 @@ if($report=="revenue"){
 				   job.add_premium_to_invoice,
 				   job.add_folding_to_invoice,
 				   job.premium,
+				   job.premium_sell,
 				   route.region,
 				   job.delivery_date,
 				   client.name AS client,

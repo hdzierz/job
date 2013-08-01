@@ -557,7 +557,7 @@ if($action=="" || !isset($action)||$action=="edit"){
 }
 
 function get_add_rates_qry(){
-	return "(IF(job.add_folding_to_invoice='Y',job.folding_fee,0) + IF(job.add_premium_to_invoice='Y',job.premium,0))";
+	return "(IF(job.add_folding_to_invoice='Y',job.folding_fee,0) + job.premium_sell)";
 }
 
 // Creates a new job or the user may change general job info
@@ -590,13 +590,14 @@ if($action=="edit_job"||$action=="new_job"){
 				   job.folding_fee,*/
 				   @cust := ROUND(@cust2 * (1+job.fuel_surcharge_fact-discount_fact),2) 
 						AS 'cust_inc',
-				   @coural := round((job.Coural-job.qty_bbc-IF(job.mailings IS NOT NULL,job.mailings,0))*(job.Dist+job.SubDist+job.Cont)+@bundles,2)
+				   @coural := round((job.Coural-job.qty_bbc-IF(job.mailings IS NOT NULL,job.mailings,0))*(job.Dist+job.SubDist+job.Cont+job.premium)+@bundles,2)
 						AS 'Coural',
 				   round((job.Coural-job.qty_bbc-IF(job.mailings IS NOT NULL,job.mailings,0))*(job.Dist+job.SubDist+job.Cont)+@bundles,2)
 						AS 'coural_dollars',
 				   @freight := round(job.lbc_charge+job.freight_charge+job.lbc_charge_bbc,2)
 						  AS 'Freight',
 				   @margin := round(@cust-@coural-@freight,2) AS '$',
+				   @margin := round(@cust-@coural-@freight,2) AS 'marg',
 				   IF(@cust >0,
 					  round(100*@margin/@cust,1),
 					  0)
@@ -611,6 +612,7 @@ if($action=="edit_job"||$action=="new_job"){
 				   job.delivery_date,
 				   client.name AS client,
 				   job.publication,
+				   job.premium,
 				   round(job.weight)  AS 'Weight',
 				   job.invoice_qty,
 				   SUM(
@@ -716,8 +718,8 @@ if($action=="edit_job"||$action=="new_job"){
 		$quote				= $job->is_quote;
 		$hauler_ni_id		= $job->hauler_ni_id;
 		$hauler_si_id		= $job->hauler_si_id;
-		$ni_drop_total		= $job->ni_drop_total;
-		$si_drop_total		= $job->si_drop_total;
+		$ni_drop_total		= number_format($job->ni_drop_total,0);
+		$si_drop_total		= number_format($job->si_drop_total,0);
 		$desc_bbc			= $job->desc_bbc;
 		$add_folding_to_invoice = $job->add_folding_to_invoice;
 		$premium			= $job->premium;
@@ -768,8 +770,8 @@ if($action=="edit_job"||$action=="new_job"){
 		
 		$hauler_ni_id		= $job->hauler_ni_id;
 		$hauler_si_id		= $job->hauler_si_id;
-		$ni_drop_total		= $job->ni_drop_total;
-		$si_drop_total		= $job->si_drop_total;
+		$ni_drop_total		= number_format($job->ni_drop_total,0);
+		$si_drop_total		= number_format($job->si_drop_total,0);
 		$desc_bbc			= $job->desc_bbc;
 		$add_folding_to_invoice = $job->add_folding_to_invoice;
 		$premium			= $job->premium;
@@ -804,8 +806,8 @@ if($action=="edit_job"||$action=="new_job"){
 	
 	if(!$rate) 				$rate="0.0000"; 
 	
-	if(!$ni_drop_total) $ni_drop_total = "0.000";
-	if(!$si_drop_total) $si_drop_total = "0.000";
+	if(!$ni_drop_total) $ni_drop_total = "0";
+	if(!$si_drop_total) $si_drop_total = "0";
 	
 	if(!$desc_bbc) 			$desc_bbc=""; 
 	if(!$add_folding_to_invoice) 			$add_folding_to_invoice="N"; 
@@ -1235,7 +1237,7 @@ if($action=="edit_job"||$action=="new_job"){
 			if($job_id){
 ?>						
 				<tr bgcolor="#FFFFFF">
-					<td colspan="6">Margin: &nbsp;&nbsp;<?=$margin->margin_percent?>%</td>
+					<td colspan="6">Margin: &nbsp;&nbsp;$<?=$margin->marg?>/<?=$margin->margin_percent?>%</td>
 				</tr>
 <?
 			}

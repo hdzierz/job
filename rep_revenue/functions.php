@@ -349,7 +349,7 @@ function get_invoice_no(){
 }
 
 function get_add_rates_qry(){
-	return "(IF(job.add_folding_to_invoice='Y',job.folding_fee,0) + IF(job.add_premium_to_invoice='Y',job.premium,0))";
+	return "(IF(job.add_folding_to_invoice='Y',job.folding_fee,0) + job.premium_sell)";
 }
 
 function load_circ_con($m_table,$op,$route_id,$month,$year){
