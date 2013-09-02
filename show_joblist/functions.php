@@ -100,7 +100,8 @@ function get_regular_joblist_query($date1,$date2){
 						j.delivery_date)  
 									 AS 'Delivery Date',
 					CONCAT(j.job_no,IF(j.job_no_add IS NOT NULL,j.job_no_add,''))         AS 'Job No.',
-					j.invoice_no     AS 'Invoice No.',
+					# j.invoice_no     AS 'Invoice No.',
+					j.paper_source AS 'Paper Src',
 					j.invoice_qty    AS 'Invoiced',
 					ROUND(j.weight,0)		 AS 'Weight',
 					IF(j.dest_type='num_total','Total',
