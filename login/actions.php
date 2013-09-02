@@ -5,7 +5,10 @@
 // RETURNS: Table										//
 // USES: 	coural.user									//
 //////////////////////////////////////////////////////////
-import_request_variables("pg");
+//import_request_variables("pg");
+extract($_GET);
+extract($_POST);
+
 if($action=="Login"){
 	process_user_info($username,$passwd,$rememberme);
 	$action="";

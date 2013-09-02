@@ -718,6 +718,7 @@ if($action=="edit_job"||$action=="new_job"){
 		$quote				= $job->is_quote;
 		$hauler_ni_id		= $job->hauler_ni_id;
 		$hauler_si_id		= $job->hauler_si_id;
+		$paper_source		= $job->paper_source;
 		$ni_drop_total		= number_format($job->ni_drop_total,0);
 		$si_drop_total		= number_format($job->si_drop_total,0);
 		$desc_bbc			= $job->desc_bbc;
@@ -777,7 +778,7 @@ if($action=="edit_job"||$action=="new_job"){
 		$premium			= $job->premium;
 		$premium_sell			= $job->premium_sell;
 		$add_premium_to_invoice = $job->add_premium_to_invoice;
-		
+		$paper_source		= $job->paper_source;
 		$comments 			= $job->comments;
 		$show_comments 		= $job->show_comments;
 		$dest_type			= $job->dest_type;
@@ -814,7 +815,8 @@ if($action=="edit_job"||$action=="new_job"){
 	if(!$premium) 			$premium="0.0000"; 
 	if(!$premium_sell) 			$premium_sell="0.0000"; 
 	if(!$add_premium_to_invoice) 			$add_premium_to_invoice="N"; 
-
+	if(!$paper_source) $paper_source = "";
+	
 	$lbc_charge 	= sprintf("%.2f",$lbc_charge);
 	$lbc_charge_bbc	= sprintf("%.2f",$lbc_charge_bbc);
 	$freight_charge = sprintf("%.2f",$freight_charge);
@@ -1130,6 +1132,10 @@ if($action=="edit_job"||$action=="new_job"){
 				<td></td>
 				<td>NI Linehaul: $</td>
 				<td><input style="text-align:right " type="text" name="freight_charge" value="<?=$freight_charge?>" onKeyUp="javascript:checkfloat(this.value, this);"  /></td>
+				<td></td>
+				<td>Paper Source:</td>
+				<td><input style="text-align:right " type="text" name="paper_source" value="<?=$paper_source?>"  /></td>
+				
 			</tr>		
 			<tr>
 				<td>Sub-Distributors: $</td>

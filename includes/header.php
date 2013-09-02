@@ -2,7 +2,9 @@
 
 ### Header file ###
 session_start();
-import_request_variables("pg");
+//import_request_variables("pg");
+extract($_GET);
+extract($_POST);
 
 date_default_timezone_set ("Pacific/Auckland");
 

@@ -325,6 +325,7 @@ if($action=="save_job" || $action=="add_job"){
 						add_folding_to_invoice,
 						premium,
 						premium_sell,
+						paper_source,
 						add_premium_to_invoice)
 					VALUES(
 						'$client_id',
@@ -369,6 +370,7 @@ if($action=="save_job" || $action=="add_job"){
 						'$desc_bbc',
 						'$add_folding_to_invoice',
 						'$premium',
+						'$paper_source',
 						'$premium_sell',
 						'$add_premium_to_invoice')";		
 			query($sql);	
@@ -442,6 +444,7 @@ if($action=="save_job" || $action=="add_job"){
 							desc_bbc			= '$desc_bbc',
 							add_folding_to_invoice = '$add_folding_to_invoice',
 							premium				= '$premium',
+							paper_source		= '$paper_source',
 							premium_sell		= '$premium_sell',
 							add_premium_to_invoice = '$add_premium_to_invoice'
 						WHERE job_id='$job_id'";
@@ -485,6 +488,7 @@ if($action=="save_job" || $action=="add_job"){
 							desc_bbc			= '$desc_bbc',
 							add_folding_to_invoice = '$add_folding_to_invoice',
 							premium				= '$premium',
+							paper_source		= '$paper_source',
 							premium_sell		= '$premium_sell',
 							add_premium_to_invoice = '$add_premium_to_invoice'
 							is_att				= 'Y'
@@ -676,6 +680,7 @@ if($action=="save_as_new"||$action=="save_as_template"){
 						desc_bbc,
 						add_folding_to_invoice,
 						premium,
+						paper_source,
 						premium_sell,
 						add_premium_to_invoice)
 						
@@ -723,6 +728,7 @@ if($action=="save_as_new"||$action=="save_as_template"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							paper_source,
 							premium_sell,
 							add_premium_to_invoice
 						 FROM $from_job WHERE job_id=$job_id";
@@ -810,6 +816,7 @@ if($action=="save_as_new"||$action=="save_as_template"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							paper_source,
 							premium_sell,
 							add_premium_to_invoice)
 							
@@ -857,6 +864,7 @@ if($action=="save_as_new"||$action=="save_as_template"){
 								desc_bbc,
 								add_folding_to_invoice,
 								premium,
+								paper_source,
 								premium_sell,
 								add_premium_to_invoice
 							 FROM $from_job WHERE job_id=$alt_job_id";
@@ -962,6 +970,7 @@ if($action=="load_temp"){
 						desc_bbc,
 						add_folding_to_invoice,
 						premium,
+						paper_source,
 						premium_sell,
 						add_premium_to_invoice)
 						
@@ -1006,6 +1015,7 @@ if($action=="load_temp"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							paper_source,
 							premium_sell,
 							add_premium_to_invoice
 						 FROM job_temp WHERE job_id=$job_id";
@@ -1079,6 +1089,7 @@ if($action=="load_temp"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							paper_source,
 							premium_sell,
 							add_premium_to_invoice)
 							
@@ -1121,6 +1132,7 @@ if($action=="load_temp"){
 								desc_bbc,
 								add_folding_to_invoice,
 								premium,
+								paper_source,
 								premium_sell,
 								add_premium_to_invoice
 							 FROM job_temp WHERE job_id=$alt_job_id";
@@ -1207,6 +1219,7 @@ if($action=="save_as_new_updated"){
 						desc_bbc,
 						add_folding_to_invoice,
 						premium,
+						paper_source,
 						premium_sell,
 						add_premium_to_invoice)
 						
@@ -1253,6 +1266,7 @@ if($action=="save_as_new_updated"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							paper_source,
 							premium_sell,
 							add_premium_to_invoice
 						 FROM job WHERE job_id=$job_id";
@@ -1352,6 +1366,7 @@ if($action=="save_as_new_updated"){
 							desc_bbc,
 							add_folding_to_invoice,
 							premium,
+							paper_source,
 							premium_sell,
 							add_premium_to_invoice)
 							
@@ -1399,6 +1414,7 @@ if($action=="save_as_new_updated"){
 								desc_bbc,
 								add_folding_to_invoice,
 								premium,
+								paper_source,
 								premium_sell
 								add_premium_to_invoice
 							 FROM job WHERE job_id=$alt_job_id";
