@@ -137,6 +137,7 @@ if($action=="show_quotes"){
 // USES: 	coural.job / coural.job_route				//
 //////////////////////////////////////////////////////////
 if($action=="" || !isset($action)){
+	$user_id = $_COOKIE["coural_userid"];
 	$today_show = date("l jS F Y");
 	$this_month = date("F");
 	$next_month = date("F",strtotime("+1 Month",strtotime(date("Y-m-15"))));
@@ -147,12 +148,12 @@ if($action=="" || !isset($action)){
 	<h2 class="joblist_head">Jobs in and before <?=$prev_month?></h2>
 <?
 	if($remove==1){
-		$qry = "UPDATE current_job_screen SET publication=null,client_id=null,job_id=null";
+		$qry = "UPDATE current_job_screen SET publication=null,client_id=null,job_id=null WHERE user_id='$CK_USERID'";
 		query($qry);	
 	}
 	
 	if(!$client && !$pub && !$job){
-		$qry 	 = "SELECT * FROM current_job_screen";
+		$qry 	 = "SELECT * FROM current_job_screen  WHERE user_id='$CK_USERID'";
 		$res 	 = query($qry);
 		$current = mysql_fetch_object($res);
 		$client  = $current->client_id;
@@ -194,12 +195,12 @@ if($action=="" || !isset($action)){
 	<h2 class="joblist_head">Jobs in <?=$this_month?></h2>
 <?
 	if($remove==1){
-		$qry = "UPDATE current_job_screen SET publication=null,client_id=null,job_id=null";
+		$qry = "UPDATE current_job_screen SET publication=null,client_id=null,job_id=null  WHERE user_id='$CK_USERID'";
 		query($qry);	
 	}
 	
 	if(!$client && !$pub){
-		$qry 	 = "SELECT * FROM current_job_screen";
+		$qry 	 = "SELECT * FROM current_job_screen  WHERE user_id='$CK_USERID'";
 		$res 	 = query($qry);
 		$current = mysql_fetch_object($res);
 		$client  = $current->client_id;

@@ -379,13 +379,14 @@ if($action=="show_job_details"){
 
 // Job edit screen. Lets the user book routes to a job
 if($action=="" || !isset($action)||$action=="edit"){
+	
 	if(!$client) $client="null";
 	else $client = "'$client'";
 	
 	if($first_entry){
 		if($pub) $pub = get("job","publication","WHERE job_id='$job_id'");
 		$pub = addslashes($pub);
-		$qry = "UPDATE current_job_screen SET publication='$pub',client_id=$client, job_id='$job'";
+		$qry = "UPDATE current_job_screen SET publication='$pub',client_id=$client, job_id='$job'  WHERE user_id='$CK_USERID'";
 		query($qry);
 	}
 

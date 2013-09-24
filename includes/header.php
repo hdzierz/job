@@ -77,6 +77,14 @@ $SMS_EMAIL_ADDRESS = get("config","value","WHERE name='SMS_EMAIL_ADDRESS'");//"f
 
 $SEND_OUTPUT_DIR = "";
 $SCAN_OUTPUT_DIR = "";
+
+$qry = "SELECT * FROM current_job_screen WHERE user_id='$CK_USERID'";
+$res = query($qry);
+if(mysql_num_rows($res) == 0){
+	$qry = "INSERT INTO current_job_screen(user_id) VALUES($CK_USERID)";
+	query($qry);
+}
+
 ?>
 
 
