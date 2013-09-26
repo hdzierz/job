@@ -197,11 +197,20 @@ if ($pagename=="login.php") { ?>
 		<? if (1) { 
 				if ($PAGE_NAME=="pod/index.php") {?>
 					<div id="activetab2">
-						<a class="menulink" href="pod/index.php">POD</a>
+						<a class="menulink" href="/pod/index.php">POD</a>
 					</div>
 				<? } else { ?>
 					<div id="tab2">
-						<a class="menulink2" href="pod/index.php">POD</a>
+						<a class="menulink2" href="/pod/index.php">POD</a>
+					</div>		
+				<? } #else pagename = crops 
+				if ($PAGE_NAME=="pod/sample.php") {?>
+					<div id="activetab2">
+						<a class="menulink" href="/pod/sample.php">Haul</a>
+					</div>
+				<? } else { ?>
+					<div id="tab2">
+						<a class="menulink2" href="/pod/sample.php">Haul</a>
 					</div>		
 				<? } #else pagename = crops 
 		} #useradmin  ?>	

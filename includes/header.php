@@ -49,6 +49,9 @@ $CK_PAGE_REPPARCELS  = $_COOKIE['coural_page_rep_parcels'];
 $CK_PAGE_PARCELS	 = $_COOKIE['coural_page_parcels'];
 $CK_CHANGE_GST	 	 = $_COOKIE['coural_change_gst'];
 
+
+
+
 # get page name
 $PAGE_NAME = substr($_SERVER["REQUEST_URI"],1);
 
