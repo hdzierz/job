@@ -31,6 +31,7 @@ $SESSION_ID = session_id();
 $CK_USERNAME       	 = $_COOKIE['coural_username'];
 $CK_USERID       	 = $_COOKIE['coural_userid'];
 $CK_FULL_NAME      	 = $_COOKIE['coural_fullname'];
+
 $CK_SEC_LEVEL      	 = $_COOKIE['coural_security'];
 $CK_PAGE_INDEX     	 = $_COOKIE['coural_page_main'];
 $CK_PAGE_USERADMIN 	 = $_COOKIE['coural_page_useradmin'];

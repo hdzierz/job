@@ -39,6 +39,8 @@ function process_user_info($username,$passwd,$rememberme){
 			setcookie("coural_username",$data->username,$expiry,$path);
 			setcookie("coural_userid",$data->user_id,$expiry,$path);
 			setcookie("coural_fullname", $data->fullname, $expiry,$path);
+			setcookie("haul_island", $data->haul_island, $expiry,$path);
+			
 			
 			setcookie("coural_security",$data->security_lev,$expiry,$path);
 			setcookie("coural_page_main",$data->coural_page_main,$expiry,$path);

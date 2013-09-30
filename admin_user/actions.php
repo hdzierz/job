@@ -18,6 +18,7 @@ if($action=="save"){
 			$sql = "INSERT INTO user(username,
 									 passwd,
 									 email,
+									 haul_island;
 									 page_useradmin,
 									 page_routeadmin,
 									 page_clientadmin,
@@ -36,6 +37,7 @@ if($action=="save"){
 					VALUES('$username',
 							'$passwd',
 							'$email',
+							'$haul_island',
 							'$page_useradmin',
 							'$page_routeadmin',
 							'$page_clientadmin',
@@ -59,6 +61,7 @@ if($action=="save"){
 						$passwd_set
 						page_useradmin	 ='$page_useradmin',
 						email			 ='$email',
+						haul_island		 ='$haul_island',
 						page_routeadmin	 ='$page_routeadmin',
 						page_clientadmin ='$page_clientadmin',
 						page_addradmin	 ='$page_addradmin',

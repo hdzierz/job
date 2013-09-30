@@ -35,7 +35,22 @@ if($action=="edit"||$action=="add"){
 					<input type="password" name="passwd2" value="" /> 
 				</td>
 			</tr>			
-			
+			<tr>
+				<td>Haul Island</td>
+				<td>
+				<?php 
+					$sel = new Select("haul_island");
+					$sel->setOptionIsVal($user->haul_island);
+					$sel->start();
+						$sel->addOption("NONE","NONE");
+						$sel->addOption("NI","NI");
+						$sel->addOption("SI","SI");
+						$sel->addOption("BOTH","BOTH");		
+					$sel->stop()
+					
+				?>
+				</td>
+			</tr>
 			<tr>
 				<td>Current Jobs:</td>
 				<td><input type="checkbox" name="page_main" value="Y" <? if($user->page_main=="Y"){ ?> checked <? }?> /></td>
@@ -124,6 +139,7 @@ if($action=="" || !isset($action)){
 	$sql = "SELECT   user_id AS Record,
 					 username AS User, 
 					 email AS Email,
+					 haul_island AS 'Island Haul',
 					 page_useradmin AS Users,
 					 page_routeadmin AS Routes,
 					 page_clientadmin AS Clients,
