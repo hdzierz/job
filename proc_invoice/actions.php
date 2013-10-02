@@ -46,13 +46,13 @@ function create_description($job){
 	}*/
 	
 	if($job->folding_fee>0  && $job->add_folding_to_invoice == 'Y'){
-		$ff = number_format($job->folding_fee,4);
-		$add_ff = "Includes folding fee $ff cents.";
+		$ff = number_format(1000*$job->folding_fee,0);
+		$add_ff = "Includes folding fee \$$ff/1000 cents.";
 	}
 	
 	if($job->premium_sell>0){
 		$pr = number_format(1000*$job->premium_sell,0);
-		$add_pr = "Includes premium fee $pr/1000.";
+		$add_pr = "Includes premium fee \$$pr/1000.";
 	}
 	
 	if($job->discount>0){

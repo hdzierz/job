@@ -533,7 +533,7 @@ if($report=="label"){
 	if(!isset($space_hor)) 		$space_hor	  = 50;
 	if(!isset($space_vert)) 	$space_vert   = 50;
 	if(!isset($kg_per_lab)) 	$kg_per_lab   = 1000;
-	if(!isset($a4_only)) 		$a4_only   	  = true;
+	//if(!isset($a4_only)) 		$a4_only   	  = true;
 	if(!isset($qty_per_bund)) 	$qty_per_bund  = 1;
 	if(!isset($qty_per_do)) 	$qty_per_do  = 1;
 	
