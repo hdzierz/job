@@ -156,6 +156,7 @@ if($action=="select_jobs"){
 		$tab->startTable();
 			$tab->startNewLine();
 			    $tab->writeSubmitButton("close","Close selected");
+				//$tab->writeSubmitButton("action","Create Invoices No");
 				$tab->writeSubmitButton("action","Create Invoices");
 				$tab->addInput("fuel_surcharge_show",$fuel_surcharge,"Fuel Surcharge: ",4,true);
 				$tab->addCheckbox("is_null_job",$is_null_job,"Null Invoice: ",false);

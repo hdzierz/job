@@ -97,6 +97,8 @@ class MySQLTable{
 	var	$submitButtonValue	= "Submit";
 	var	$submitButtonName2	= "Submit 2";
 	var	$submitButtonValue2	= "Submit 2";	
+	var	$submitButtonName3	= "Submit 3";
+	var	$submitButtonValue3	= "Submit 3";	
 	
 	// Sets additional info for onClicks
 	var $onClickDeleteButton;
@@ -432,6 +434,9 @@ class MySQLTable{
 		}
 		if($this->hasSubmitButton2){
 			$this->writeSubmitButton($this->submitButtonName2,$this->submitButtonValue2);
+		}
+		if($this->hasSubmitButton3){
+			$this->writeSubmitButton($this->submitButtonName3,$this->submitButtonValue3);
 		}		
 
 //		$this->writeDevider($num_fields+1);
@@ -965,6 +970,13 @@ class MySQLTable{
 <?		
 		if($this->hasSubmitButton2){
 			$this->writeSubmitButton($this->submitButtonName2,$this->submitButtonValue2);
+		}		
+?>
+			</td>
+			<td>
+<?		
+		if($this->hasSubmitButton3){
+			$this->writeSubmitButton($this->submitButtonName3,$this->submitButtonValue3);
 		}		
 ?>
 			</td>

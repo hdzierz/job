@@ -317,6 +317,10 @@ if($action=="Create Invoices"){
 		
 		
 		$res = query($qry);
+		while($job = mysql_fetch_object($res)){
+			$job->invoice_no = "";
+		}
+		$res = query($qry);
 		$last_item = mysql_num_rows($res);
 		$counter=1;
 		$prev_invoice_no="";
