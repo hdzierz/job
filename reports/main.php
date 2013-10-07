@@ -2224,7 +2224,7 @@ if($report=="route_download"){
 		fputcsv($file,$route);
 	}
 	fclose($file);
-	echo "<a href='/job/tmp/routes_".$now.".csv'>Download</a>";
+	echo "<a href='/tmp/routes_".$now.".csv'>Download</a>";
 }
 
 ?>
