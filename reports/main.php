@@ -2159,6 +2159,72 @@ if($report=="by_dist"){
 }
 
 
-
+if($report=="route_download"){
+	$now = date("Y-m-d");
+	$qry = "
+		SELECT 
+				route.route_id,
+				island,
+				region,
+				area,
+				code,
+				description,
+				external,
+				no_ticket_header,
+				pmp_areacode,
+				pmp_runcode,
+				num_lifestyle,
+				num_farmers,
+				num_dairies,
+				num_sheep,
+				num_beef,
+				num_sheepbeef,
+				num_dairybeef,
+				num_hort,
+				seq_region,
+				seq_area,
+				seq_code,
+				is_hidden,
+				num_nzfw,
+				rmt,
+				rm_rr,
+				rm_f,
+				rm_d,
+				route_aff_id,
+				app_date,
+				stop_date,
+				dist.company AS Dist,
+				sdist.company AS 'S/Dist',
+				contr.company AS Contractor,
+				doff.company AS Dropoff
+		FROM route
+		LEFT JOIN route_aff
+			ON route_aff.route_id = route.route_id 
+			AND '$now' BETWEEN app_date and stop_date
+		LEFT JOIN operator AS dist
+			ON dist.operator_id=dist_id
+		LEFT JOIN operator AS sdist
+			ON sdist.operator_id=subdist_id
+		LEFT JOIN operator AS contr
+			ON contr.operator_id=contractor_id
+		LEFT JOIN operator AS doff
+			ON doff.operator_id=dropoff_id
+		
+		
+	";
+	
+	$file = fopen("/Users/hdzierz/Sites/job/tmp/routes_".$now.".csv","w");
+	$res = query($qry,0);
+	$start = true;
+	while($route = mysql_fetch_assoc($res)){
+		if($start){
+			fputcsv($file,array_keys($route));
+			$start = false;
+		}
+		fputcsv($file,$route);
+	}
+	fclose($file);
+	echo "<a href='/job/tmp/routes_".$now.".csv'>Download</a>";
+}
 
 ?>

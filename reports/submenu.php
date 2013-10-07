@@ -88,6 +88,18 @@
 	}
 ?>
 
+
+<? if($report=="route_download"){?>
+		<a class="subaself" href="reports.php?report=route_download">Route Download</a>
+<? 
+	}
+	else{
+?>
+		<a class="suba" href="reports.php?report=route_download">Route Download</a>
+<?
+	}
+?>
+
 <? if($report=="error"){?>
 		<a class="subaself" href="reports.php?report=error">Route Aff. Errors</a>
 <? 
