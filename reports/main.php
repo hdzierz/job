@@ -2213,7 +2213,7 @@ if($report=="route_download"){
 		
 	";
 	
-	$file = fopen("/Users/hdzierz/Sites/tmp/routes_".$now.".csv","w");
+	$file = fopen("tmp/routes_".$now.".csv","w");
 	$res = query($qry,0);
 	$start = true;
 	while($route = mysql_fetch_assoc($res)){
