@@ -291,6 +291,10 @@ if($_SERVER['DOCUMENT_ROOT'] == "/Applications/XAMPP/xamppfiles/htdocs"){
 	$MYSQL = new MySQL('localhost', 'coural');
 	$MYSQL->connect('root','inkl67z');
 }
+else if($_SERVER['DOCUMENT_ROOT'] == "/var/www/html"){
+	$MYSQL = new MySQL('localhost', 'coural');
+        $MYSQL->connect('root','inkl67z');
+}
 else{
 	$MYSQL = new MySQL('192.168.100.23:3306', 'coural');
 	$MYSQL->connect('admin','zt90undr');
