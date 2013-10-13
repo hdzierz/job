@@ -14,20 +14,22 @@ $site['from_email'] = $ADMIN_EMAIL; // from email address
  
 // Just in case we need to relay to a different server,
 // provide an option to use external mail server.
-$site['smtp_mode'] = 'enabled'; // enabled or disabled
+//$site['smtp_mode'] = 'enabled'; // enabled or disabled
 //$site['smtp_host'] = "ssl://smtp.ramsu.co.nz:465";
 //$site['smtp_host'] = "ssl://smtp.gmail.com:465";
-$site['smtp_host'] = 'mail.coural.co.nz';
+//$site['smtp_host'] = 'mail.coural.co.nz';
 
-$site['smtp_port'] = intval(25);
+//$site['smtp_port'] = intval(25);
 //$site['smtp_username'] = "support_send@coural.co.nz";
 //$site['smtp_username'] = "ruralcouriers@gmail.com";
-$site['smtp_username'] = 'Admin@coural.co.nz';
+//$site['smtp_username'] = 'Admin@coural.co.nz';
 
 //$site['smtp_password'] = "zt90undr";
-$site['smtp_password'] = "8KP_Adm1n";
+//$site['smtp_password'] = "8KP_Adm1n";
 
-//$ADMIN_EMAIL = "hdzierz@gmail.com";
+$site['smtp_mode'] = 'enabled'; // enabled or disabled
+
+$ADMIN_EMAIL = "hdzierz@gmail.com";
 
 class FreakMailer extends PHPMailer
 {
@@ -43,8 +45,8 @@ class FreakMailer extends PHPMailer
     {
         global $site;
 		
-		$this->isSMTP();
-		$this->AuthType = "NTLM";
+		//$this->isSMTP();
+		//$this->AuthType = "NTLM";
         // Comes from config.php $site array
 
         if($site['smtp_mode'] == 'enabled')
@@ -192,12 +194,12 @@ function get_subject($id, $target){
 }
 function send_test_mail(){
 	$mailer = new FreakMailer();
-	$mailer->SMTPKeepAlive = true; 
+	//$mailer->SMTPKeepAlive = true; 
 	$mailer->Subject = 	"TEST";
 	$mailer->Body = "TEST";
 	$mailer->From = "coural@coural.co.nz";
-	$mailer->SMTPDebug = 2;
-	$mailer->AuthType = "NTLM";
+	//$mailer->SMTPDebug = 2;
+	//$mailer->AuthType = "NTLM";
 	$mailer->AddAddress("helge.dzierzon@plantandfood.co.nz", 'Coural Head Office');
 	if(!$mailer->Send())
 	{
@@ -230,7 +232,7 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 	if($email){
 		
 		
-		$mailer->SMTPKeepAlive = true; 
+		//$mailer->SMTPKeepAlive = true; 
 		$mailer->Subject = 	get_subject($id,$target);
 		$mailer->Body = get_body($id,$target);
 		$mailer->From = "coural@coural.co.nz";
