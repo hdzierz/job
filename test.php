@@ -4,6 +4,10 @@ require_once('includes/mysql.php');
 require_once('includes/mysql_aid_functions.php');
 require_once('includes/mail_aid_functions.php');
 
+
+send_test_mail();
+die();
+
 $file = fopen("tickets_unredeemed.csv", "a");
 
 ini_set('max_execution_time', 3*60*60);

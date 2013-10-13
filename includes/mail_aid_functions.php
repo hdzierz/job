@@ -27,7 +27,7 @@ $site['from_email'] = $ADMIN_EMAIL; // from email address
 //$site['smtp_password'] = "zt90undr";
 //$site['smtp_password'] = "8KP_Adm1n";
 
-$site['smtp_mode'] = 'enabled'; // enabled or disabled
+$site['smtp_mode'] = 'disabled'; // enabled or disabled
 
 $ADMIN_EMAIL = "hdzierz@gmail.com";
 
