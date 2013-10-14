@@ -861,7 +861,7 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 	$title = "Payout Breakdown ".$tit." ".get("operator","company","WHERE operator_id='$dist_id'")." ($date_show)";
 	//$file = $SEND_OUTPUT_DIR."/temp_payout2/payout_".$dist."_".$date_file.".pdf";
 	$vfile = "/temp_payout2/payout_".$dist."_".$date_file.".pdf";
-	$file = "E:/ProgramData/JobSys/temp_payout2/payout_".$dist."_".$date_file.".pdf";
+	$file = "/var/www/html/job/temp_payout2/payout_".$dist."_".$date_file.".pdf";
 	?>
 		<div class="weekly_head">
 			<div class="weekly_logo"><img src="images/coural_logo.jpg" width="71" height="38" /></div>	

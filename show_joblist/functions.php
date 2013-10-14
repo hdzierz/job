@@ -71,8 +71,8 @@ function get_joblist_query($with_ioa,$mode,$job,$client,$pub,$start_date=false,$
 					CONCAT('<a class=\'sqlhref\' href=\'proc_job.php?action=edit&first_entry=1&client=$client&pub=$is_pub&job_id=',j.job_id,'\' >edit</a>') AS Edit,
 					CONCAT('<a class=\'sqlhref\' href=\'proc_job.php?action=edit_job&dest=job&client=$client&pub=$is_pub&job_id=',j.job_id,'\' >go</a>') AS Det
 			FROM job j
-			LEFT JOIN job ja
-			ON ja.alt_job_id=j.job_id
+			# LEFT JOIN job ja
+			# ON ja.alt_job_id=j.job_id
 			LEFT JOIN client c
 			ON j.client_id=c.client_id
 			LEFT JOIN client ni_hauler
