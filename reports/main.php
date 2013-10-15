@@ -487,7 +487,7 @@ if($report=="address_details"){
 					LEFT JOIN operator
 					ON operator.operator_id=dist_id
 					ORDER BY 'Last Name'";		
-			$filename = "addr_".$choice."_".date("Y-m-d").".htm";
+			$filename = "tmp/addr_".$choice."_".date("Y-m-d").".htm";
 			$tab  = new MySQLExport($filename,$qry);
 			$tab->showRec=1;
 		}
@@ -2224,7 +2224,7 @@ if($report=="route_download"){
 		fputcsv($file,$route);
 	}
 	fclose($file);
-	echo "<a href='/tmp/routes_".$now.".csv'>Download</a>";
+	echo "<a href='/job/tmp/routes_".$now.".csv'>Download</a>";
 }
 
 ?>
