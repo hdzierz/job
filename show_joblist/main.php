@@ -160,6 +160,18 @@ if($action=="" || !isset($action)){
 		$pub 	 = $current->publication;
 		$job     = $current->job_id;
 	}
+	else{
+		$qry = "SELECT * FROM current_job_screen WHERE user_id='$CK_USERID'";
+		$res = query($qry);
+		if(mysql_num_rows($res)>0){
+			$qry = "UPDATE current_job_screen SET client_id='$client',job_id='$job',publication='$pub'  WHERE user_id='$CK_USERID'";
+		}
+		else{
+			$qry  = "INSERT INTO current_job_screen SET client_id='$client',job_id='$job',publication='$pub', user_id='$CK_USERID'";
+			
+		}
+		query($qry);
+	}
 
 	if($submit == "Filter"){
 		$qry = get_joblist_query(1,"prev_month",$job,$client,$pub,$start_date,$final_date);
