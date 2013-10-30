@@ -186,16 +186,44 @@ function dir_list ($directory)
         // if $file isn't this directory or its parent, 
         // add it to the results array
         if ($file != '.' && $file != '..')
-            $results[] = $file;
+            $results[filemtime($directory."/".$file)] = $file;
     }
 
     // tidy up: close the handler
     closedir($handler);
+    krsort($results);
 
     // done!
     return $results;
 
 }
+
+
+function dir_list_with_att($dir)
+        {
+            if ($dir[strlen($dir)-1] != '/') $dir .= '/';
+
+            if (!is_dir($dir)) return array();
+
+            $dir_handle  = opendir($dir);
+            $dir_objects = array();
+            while ($object = readdir($dir_handle))
+                if (!in_array($object, array('.','..')))
+                {
+                    $filename    = $dir . $object;
+                    $file_object = array(
+                                            'name' => $object,
+                                            'size' => filesize($filename),
+                                            'perm' => permission($filename),
+                                            'type' => filetype($filename),
+                                            'time' => date("d F Y H:i:s", filemtime($filename))
+                                        );
+                    $dir_objects[] = $file_object;
+                }
+
+            return $dir_objects;
+ }
+
 
 function print_pre($array){
 	echo "<pre>";

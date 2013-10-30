@@ -1604,12 +1604,13 @@ if($action=="select_xerox_scan"){
 		<?	
 			$counter=0;
 			foreach(dir_list($SCAN_OUTPUT_DIR."Canonscan") as $file){
+				
 				if(strpos(strtolower($file),'.csv')!==false){
 		?>
 				<tr>
 					<td>
 						<!-- <a href="parcels.php?action=process_xerox_scan&submit=preprocess&file=<?=$file?>"><?=$file?></a><br />-->
-						<?=$file?><br />	
+						<? echo $file." / "; ?> Date: <?=date("d F Y H:i", filemtime($SCAN_OUTPUT_DIR."Canonscan/".$file))?><br />	
 						<input type="hidden" id="file[<?php echo $counter;?>]" name="file[<?php echo $counter;?>]" value="<?php echo $file;?>" />		
 					</td>
 					<td>
