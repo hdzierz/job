@@ -106,7 +106,7 @@ function loadScroll() {
 	<!--<div id="stopblogopic">
 		<a href="index.php"><img height="38" width="50" src="images/stopbank_logo.jpg" border="0" alt="Stopbank Software Development"></a>
 	</div>	-->
-	<span>Job Management System v1.0  </span>
+	<span>Job Management System v1.0 (DB: <?= $DATABASE?>) </span>
 
 </div>
 

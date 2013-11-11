@@ -7,10 +7,14 @@ if($_SERVER['DOCUMENT_ROOT'] == "/Applications/XAMPP/xamppfiles/htdocs"){
 else if($_SERVER['DOCUMENT_ROOT'] == "/var/www/html"){
 	$db_connect = mysql_connect('localhost', 'root', 'inkl67z');
 }
-else{
-	$db_connect = mysql_connect('192.168.100.23:3306', 'admin', 'zt90undr');
-}
 
-$testing=mysql_select_db('coural', $db_connect); 
+$DATABASE = 'coural';
+if(strpos($_SERVER['REQUEST_URI'],'job_test') !== false){
+	$testing=mysql_select_db('coural_test', $db_connect); 
+	$DATABASE = 'coural_test';
+}
+else{
+	$testing=mysql_select_db('coural', $db_connect);
+}
 if (!$testing) die("error".mysql_error());
 ?>

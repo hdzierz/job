@@ -287,16 +287,21 @@ class MySQL{
 
 }
 
+$db = 'coural';
+if(strpos($_SERVER['REQUEST_URI'],'job_test') !== false){
+	$db = 'coural_test';
+}
+
 if($_SERVER['DOCUMENT_ROOT'] == "/Applications/XAMPP/xamppfiles/htdocs"){
-	$MYSQL = new MySQL('localhost', 'coural');
+	$MYSQL = new MySQL('localhost', $db);
 	$MYSQL->connect('root','inkl67z');
 }
 else if($_SERVER['DOCUMENT_ROOT'] == "/var/www/html"){
-	$MYSQL = new MySQL('localhost', 'coural');
+	$MYSQL = new MySQL('localhost', $db);
         $MYSQL->connect('root','inkl67z');
 }
 else{
-	$MYSQL = new MySQL('192.168.100.23:3306', 'coural');
+	$MYSQL = new MySQL('192.168.100.23:3306', $db);
 	$MYSQL->connect('admin','zt90undr');
 }
 
