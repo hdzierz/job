@@ -47,7 +47,7 @@ function create_description($job){
 	
 	if($job->folding_fee>0  && $job->add_folding_to_invoice == 'Y'){
 		$ff = number_format(1000*$job->folding_fee,0);
-		$add_ff = "Includes folding fee \$$ff/1000 cents.";
+		$add_ff = "Includes folding fee \$$ff/1000.";
 	}
 	
 	if($job->premium_sell>0){
@@ -344,24 +344,6 @@ if($action=="Create Invoices"){
 			$invoiceno = check_invoice_no($g);
 			
 			
-			/*if($group[$cur_job_id] != $group[$prev_job_id]){
-				if(!$fuel_surcharge)  $fuel_sc = $prev_job->fuel_surcharge;
-				else $fuel_sc = $fuel_surcharge;
-				//if($invoiceno) {
-					//write_fuel_surcharge($fp,$prev_job,$invoiceno,$fuel_sc,$gst,$date);
-				//}
-				
-				$invoiceno 	= create_invoice_no();
-				//echo $cur_job_id."/".$prev_job_id."/".$invoiceno ."<br />";
-				$count=1;
-				//if(!$first) fwrite($fp, "\n");
-				
-			}
-			else{
-				$invoiceno = $invoiceno;
-				$count++;
-			}*/
-
 			update_invoice_no($job->job_id,$invoiceno);
 			
 			$discount = 1-$job->discount/100;
