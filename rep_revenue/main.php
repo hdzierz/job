@@ -3082,7 +3082,7 @@ if($report=="revenue"){
 						AS 'Bundles',
 				   SUM(
 						IF(	job_route.dest_type='bundles',
-							amount*job_route.bundle_price,0)
+							amount*job.bundle_sell,0)
 						)
 						AS 'Bundles2',						
 				   job.qty_bbc,
@@ -3296,7 +3296,7 @@ if($report=="revenue2"){
 						AS 'Bundles',
 				   SUM(
 						IF(	job_route.dest_type='bundles',
-							amount*job_route.bundle_price,0)
+							amount*job.bundle_sell,0)
 						)
 						AS 'Bundles2',						
 				   job.qty_bbc,

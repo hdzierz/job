@@ -326,7 +326,8 @@ if($action=="save_job" || $action=="add_job"){
 						premium,
 						premium_sell,
 						paper_source,
-						add_premium_to_invoice)
+						add_premium_to_invoice,
+						bundle_sell)
 					VALUES(
 						'$client_id',
 						'$publication',
@@ -372,7 +373,8 @@ if($action=="save_job" || $action=="add_job"){
 						'$premium',
 						'$paper_source',
 						'$premium_sell',
-						'$add_premium_to_invoice')";		
+						'$add_premium_to_invoice',
+						'$bundle_sell')";		
 			query($sql);	
 			$job_id=mysql_insert_id();
 			// Bring user back to main screen
@@ -446,7 +448,8 @@ if($action=="save_job" || $action=="add_job"){
 							premium				= '$premium',
 							paper_source		= '$paper_source',
 							premium_sell		= '$premium_sell',
-							add_premium_to_invoice = '$add_premium_to_invoice'
+							add_premium_to_invoice = '$add_premium_to_invoice',
+							bundle_sell         = '$bundle_sell'
 						WHERE job_id='$job_id'";
 				query($sql);
 			}
@@ -682,7 +685,8 @@ if($action=="save_as_new"||$action=="save_as_template"){
 						premium,
 						paper_source,
 						premium_sell,
-						add_premium_to_invoice)
+						add_premium_to_invoice,
+						bundle_sell)
 						
 						
 						SELECT client_id,
@@ -730,7 +734,8 @@ if($action=="save_as_new"||$action=="save_as_template"){
 							premium,
 							paper_source,
 							premium_sell,
-							add_premium_to_invoice
+							add_premium_to_invoice,
+							bundle_sell
 						 FROM $from_job WHERE job_id=$job_id";
 	query($qry);
 	$new_job_id = mysql_insert_id();
@@ -1221,7 +1226,8 @@ if($action=="save_as_new_updated"){
 						premium,
 						paper_source,
 						premium_sell,
-						add_premium_to_invoice)
+						add_premium_to_invoice,
+						bundle_sell)
 						
 						
 						SELECT client_id,
@@ -1268,7 +1274,8 @@ if($action=="save_as_new_updated"){
 							premium,
 							paper_source,
 							premium_sell,
-							add_premium_to_invoice
+							add_premium_to_invoice,
+							bundle_sell
 						 FROM job WHERE job_id=$job_id";
 	query($qry);
 	$new_job_id = mysql_insert_id();

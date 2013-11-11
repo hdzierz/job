@@ -628,7 +628,7 @@ if($action=="edit_job"||$action=="new_job"){
 						AS 'Bundles',
 				   SUM(
 						IF(	job_route.dest_type='bundles',
-							amount*job_route.bundle_price,0)
+							amount*job.bundle_sell,0)
 						)
 						AS 'Bundles2',						
 				   job.qty_bbc,
@@ -727,7 +727,8 @@ if($action=="edit_job"||$action=="new_job"){
 		$premium			= $job->premium;
 		$premium_sell			= $job->premium_sell;
 		$add_premium_to_invoice = $job->add_premium_to_invoice;
-		
+		$bundle_sell			= $job->bundle_sell; 	
+	
 		$qry = "SELECT SUM(IF(dest_type='bundles',job_route.amount,0)) AS sum_bundles,
 				bundle_price
 			FROM job_route
@@ -1170,6 +1171,10 @@ if($action=="edit_job"||$action=="new_job"){
 				<td>Premium $</td>
 				<td><input style="text-align:right " type="text" name="premium" value="<?=sprintf("%.4f",$premium); ?>" onKeyUp="javascript:checkfloat(this.value, this);"  /></td>
 			</tr>
+	<tr>
+		<td>Bundle sell</td>
+		<td><input style="text-align:right " type="text" name="bundle_sell" value="<?=sprintf("%.4f",$bundle_sell); ?>" onKeyUp="javascript:checkfloat(this.value, this);"  /></td>
+	</tr>
 <?
 			if($res_bundles){
 				while($bund = mysql_fetch_object($res_bundles)){
