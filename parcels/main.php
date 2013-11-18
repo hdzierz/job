@@ -1011,7 +1011,7 @@ if($action=="manage_rates"){
 			
 		</table>
 		</fieldset>
-	<!-- 
+	
 		<fieldset style="width:90% "> <legend>Sell Rates per Book</legend>
 		<table>
 			<tr>
@@ -1045,7 +1045,7 @@ if($action=="manage_rates"){
 			
 		</table>
 		</fieldset>
-		-->
+		
 		<input type="submit" name="submit" value="Save" />
 		<input type="submit" name="submit" value="Close" />
 	</form>
