@@ -154,6 +154,7 @@ if($action=="edit" || $action=="add"){
 				</td>
 			</tr>
 		</table>
+		
 		<input type="hidden" name="action" value="save" />
 		<input type="hidden" name="dest" value="<?=$action?>" />
 		<input type="hidden" name="client_id" value="<?=$record?>" />

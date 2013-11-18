@@ -98,6 +98,36 @@ if($action=="select_jobs"){
 		if($unproc_only=='Y'){
 			$where_add = " AND (trim(invoice_no) = '' OR invoice_no IS NULL) ";
 		}
+		
+		$qry = "UPDATE job SET str_group = IF(purchase_no IS NOT NULL AND purchase_no<>'',purchase_no,publication)
+				WHERE YEAR(delivery_date) = '$year'
+					AND MONTH(delivery_date) = '$month'
+					AND is_att='N'
+					AND is_quote='N'
+					AND cancelled <> 'Y'
+					$where_add";
+		query($qry,0);
+		
+		$qry = "CREATE TEMPORARY TABLE job_groups ( INDEX(job_id) )  AS 
+				(
+				select job_id,@gr := IF(str_group!=@ogr COLLATE latin1_general_ci,@gr + 1,@gr) AS G,
+				@ogr := str_group 
+				FROM (
+					SELECT * FROM job 
+					WHERE YEAR(delivery_date) = '$year'
+					AND MONTH(delivery_date) = '$month'
+					AND is_att='N'
+					AND is_quote='N'
+					AND cancelled <> 'Y'
+					$where_add
+					ORDER BY str_group
+				) job,
+				(SELECT @gr := 1) gr, 
+				(SELECT @ogr := '')  ogr) 
+				ORDER BY G;";
+		query($qry,0);
+		
+		
 		$qry = "SELECT job.job_id AS Record,
 						job_no AS 'Job #',
 						invoice_no AS Invoice,
@@ -111,20 +141,12 @@ if($action=="select_jobs"){
 						client.name AS Client,
 						job.publication AS 'Publication',
 						delivery_date AS 'D/Date',
-						groups.G
+						job_groups.G
 				FROM job
 				LEFT JOIN client
 				ON client.client_id=job.client_id
-				LEFT JOIN
-				(
-					SELECT 	IF(`group` IS NOT NULL, `group`, job.job_id) AS G,
-							publication,
-							purchase_no
-					FROM job
-					GROUP BY purchase_no,job.publication
-				) AS groups
-				ON groups.publication=job.publication
-					AND groups.purchase_no = job.purchase_no
+				LEFT JOIN job_groups
+				ON job_groups.job_id = job.job_id
 				WHERE YEAR(delivery_date) = '$year'
 					AND MONTH(delivery_date) = '$month'
 					AND is_att='N'
