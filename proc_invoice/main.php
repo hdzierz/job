@@ -132,8 +132,7 @@ if($action=="select_jobs"){
 						job_no AS 'Job #',
 						invoice_no AS Invoice,
 						IF(
-							(SELECT COUNT(purchase_no) FROM job AS j WHERE j.purchase_no=job.purchase_no) >1
-								AND job.purchase_no <> '' AND job.purchase_no IS NOT NULL,
+							pn.pct >1,
 							CONCAT('<font color=\'red\'>',job.purchase_no,'</font>'),
 							job.purchase_no
 						) AS 'Purchase Order #',
@@ -147,6 +146,12 @@ if($action=="select_jobs"){
 				ON client.client_id=job.client_id
 				LEFT JOIN job_groups
 				ON job_groups.job_id = job.job_id
+				LEFT JOIN
+				(
+					SELECT purchase_no,COUNT(purchase_no) AS pct FROM job WHERE job.purchase_no <> '' AND job.purchase_no IS NOT NULL
+					GROUP BY purchase_no
+				) pn
+				ON pn.purchase_no=job.purchase_no
 				WHERE YEAR(delivery_date) = '$year'
 					AND MONTH(delivery_date) = '$month'
 					AND is_att='N'
