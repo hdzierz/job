@@ -450,6 +450,7 @@ if($report=="weekly"){
 		$date_final_show=$today;
 	else 
 		$date_final_show=$date_final;
+	if(!$submit && !$sel_contr_only) $sel_contr_only=1; 
 ?>		
 	<script language="javascript">
 		function send_out(company,date_start,date_final,show_regular,show_casual,show_rd_details,sel_contr_only,pdf_only){
@@ -511,7 +512,7 @@ if($report=="weekly"){
 			</tr>
 			<tr>
 				<td colspan="4" align="center">
-					<input type="submit" value="Run!" />
+					<input type="submit" name="submit" value="Run!" />
 					<input type="hidden" name="report" value="weekly" />
 					<?
 					if($date_start>="2000-01-01" && $date_final>="2000-01-01"){
