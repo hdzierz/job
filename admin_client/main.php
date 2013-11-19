@@ -84,6 +84,13 @@ if($action=="edit" || $action=="add"){
 	if(!$discount) $discount=$client->discount;
 	//if(!$phone) $phone=$client->phone;
 	
+	$qry = "select * from parcel_price left join parcel_ticket_types on parcel_price.type_id=parcel_ticket_types.oid WHERE client_id='$record'";
+	$res = query($qry);
+	while($rate = mysql_fetch_object($res)){
+		$type = $rate->type;
+		$sell_rate_std[$type] = $rate->sell_rate;
+		$qty_per_book[$type] = $rate->qty_per_book;
+	}
 	
 ?>
 	<form name="editclient" action="admin_client.php?action=save" method="get">
@@ -154,6 +161,32 @@ if($action=="edit" || $action=="add"){
 				</td>
 			</tr>
 		</table>
+			
+		<fieldset style="width:90% "> <legend>Sell Rates per Book</legend>
+		<table>
+			<tr>
+				<td></td>
+				<td >Documents</td>
+				<td >Parcels</td>
+				<td >Signature</td>
+				<td >Excess</td>
+			</tr>
+			<tr>
+				<td>Qty per Book:</td>
+				<td><input type="text" name="qty_per_book_red" id="qty_per_book_red" value="<?=$qty_per_book["CD"]?>" /></td>
+				<td><input type="text" name="qty_per_book_green" id="qty_per_book_green" value="<?=$qty_per_book["CP"]?>" /></td>
+				<td><input type="text" name="qty_per_book_yellow" id="qty_per_book_yellow" value="<?=$qty_per_book["SR"]?>" /></td>
+				<td><input type="text" name="qty_per_book_purple" id="qty_per_book_purple" value="<?=$qty_per_book["EX"]?>" /></td>
+			</tr>
+			<tr>
+				<td>Standard:</td>
+				<td><input type="text" name="sell_rate_std_red" id="sell_rate_std_red" value="<?=$sell_rate_std["CD"]?>" /></td>
+				<td><input type="text" name="sell_rate_std_green" id="sell_rate_std_green" value="<?=$sell_rate_std["CP"]?>" /></td>
+				<td><input type="text" name="sell_rate_std_yellow" id="sell_rate_std_yellow" value="<?=$sell_rate_std["SR"]?>" /></td>
+				<td><input type="text" name="sell_rate_std_purple" id="sell_rate_std_purple" value="<?=$sell_rate_std["EX"]?>" /></td>
+			</tr>
+		</table>
+		</fieldset>
 		
 		<input type="hidden" name="action" value="save" />
 		<input type="hidden" name="dest" value="<?=$action?>" />

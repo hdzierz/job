@@ -144,6 +144,8 @@ if($action=="save"){
 		$MESSAGE="Client successfully changed.";
 		$action="";		
 	}
+	
+	
 }
 
 //////////////////////////////////////////////////////////

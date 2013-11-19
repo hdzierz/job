@@ -13,6 +13,9 @@
 	<title>COURAL Rural Courier</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	
+	<link rel="shortcut icon" href="/job/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/job/favicon.ico" type="image/x-icon">
+	
 	<link href="css/styles_screen.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="css/styles_print.css" media="print" rel="stylesheet" type="text/css" />
 	<link rel="alternate stylesheet" type="text/css" href="css/print-preview.css" media="screen" title="Print Preview" />
