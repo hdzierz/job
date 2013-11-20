@@ -812,8 +812,7 @@ if($report=="weekly_send_out"){
 				$where_add = " AND delivery_date>='$date_start'
 						 	AND delivery_date<='$date_final' ";
 			}
-			if($exclude_sent) $where_add_ex_sent = " AND job.is_deliv_sent = 0 ";
-					
+			
 			$qry_jobs = "SELECT DISTINCT job_no,is_regular,job.job_id
 						 FROM job 
 						 LEFT JOIN job_route
@@ -823,7 +822,6 @@ if($report=="weekly_send_out"){
 						 WHERE job_route.dist_id='$dist_id'
 						 	AND is_att<>'Y'
 							$where_add
-							$where_add_ex_sent
 						ORDER BY is_regular DESC,job_no,job_no_add";
 			//echo nl2br($qry_jobs); die();
 			$res_jobs = query($qry_jobs);
@@ -895,7 +893,6 @@ if($report=="weekly_send_out"){
 						 ON address.operator_id=operator.operator_id
 						 WHERE job_route.dist_id='$dist_id'
 							AND job.job_id = $job->job_id
-							$where_add_ex_sent
 						ORDER BY company";
 				//echo nl2br($qry_jobs); 
 				$res_dos = query($qry_dos,0);
@@ -971,7 +968,6 @@ if($report=="weekly_send_out"){
 						AND job_route.dist_id=$dist_id
 						AND job.cancelled<>'Y'
 						AND job_route.dropoff_id = $do->dropoff_id
-						$where_add_ex_sent
 					$group
 					ORDER BY seq_region,seq_area,seq_code,job.job_no,operator.company";				/*echo nl2br($qry);
 					echo "<br />";
@@ -1083,7 +1079,6 @@ if($report=="weekly_send_out"){
 						 WHERE job_route.dist_id='$dist_id'
 							$where_add
 							$where_add_contr
-							$where_add_ex_sent
 							#mailt_type='m'
 						ORDER BY company";
 			//echo nl2br($qry_jobs); 
@@ -1106,7 +1101,6 @@ if($report=="weekly_send_out"){
 									
 									AND job_route.dropoff_id='$do->dropoff_id'
 									$where_add
-									$where_add_ex_sent
 								ORDER BY is_regular DESC,job_no,job_no_add";
 					//echo nl2br($qry_jobs); die();
 					$res_jobs = query($qry_jobs);
@@ -1225,7 +1219,6 @@ if($report=="weekly_send_out"){
 						AND job_route.dist_id=$dist_id
 						AND job.cancelled<>'Y'
 						$where_add
-						$where_add_ex_sent
 						%s
 					%s
 					ORDER BY job.is_regular DESC, job.job_no";
@@ -1961,9 +1954,7 @@ if($report=="weekly"){
 			$dist_id=get("operator","operator_id","WHERE company='$dist->company'");
 			
 			$where_add_contr = " ";
-			if($sel_contr_only) $where_add_contr = " AND operator.parcel_send_di = 'Y' ";
-			
-			if($exclude_sent) $where_add_ex_sent = " AND job.is_deliv_sent = 0 ";
+			if($sel_contr_only=='Y') $where_add_contr = " AND operator.parcel_send_di = 'Y' ";
 			
 			$qry_jobs = "SELECT DISTINCT job.job_id,job_no,is_regular 
 						 FROM job 
@@ -1974,7 +1965,6 @@ if($report=="weekly"){
 						 WHERE delivery_date>='$date_start'
 						 	AND delivery_date<='$date_final'
 							AND job_route.dist_id='$dist_id'
-							$where_add_ex_sent
 						ORDER BY seq_region,seq_area,seq_code";
 			//echo nl2br($qry_jobs);
 			$res_jobs = query($qry_jobs);
@@ -2082,7 +2072,6 @@ if($report=="weekly"){
 					WHERE job.job_no='$job->job_no'					
 						AND job_route.dist_id=$dist_id
 						AND job.cancelled<>'Y'
-						$where_add_ex_sent
 					$group
 					ORDER BY seq_region,seq_area,seq_code,job.job_no,operator.company";
 
@@ -2099,8 +2088,7 @@ if($report=="weekly"){
 								LEFT JOIN operator
 								ON job_route.contractor_id=operator.operator_id
 								WHERE job.job_id='$job->job_id'					
-									AND job_route.dist_id=$dist_id	
-									$where_add_ex_sent			
+									AND job_route.dist_id=$dist_id				
 								GROUP BY job_route.dist_id";
 						//echo nl2br($qry);
 						$res_sum = query($qry_sum);
@@ -2212,7 +2200,6 @@ if($report=="weekly"){
 								WHERE job.job_id='$job->job_id'					
 									AND job_route.dist_id=$dist_id
 									AND job.is_regular<>'Y'
-									$where_add_ex_sent
 								#GROUP BY job.job_no,job_route.dropoff_id
 								GROUP BY job.job_no,job_route.route_id
 								ORDER BY job.job_no,operator.company";
@@ -2231,7 +2218,6 @@ if($report=="weekly"){
 								WHERE job.job_id='$job->job_id'					
 									AND job_route.dist_id=$dist_id				
 									AND job.is_regular<>'Y'
-									$where_add_ex_sent
 								GROUP BY job_route.dist_id";
 						//echo nl2br($qry);
 						$res_sum = query($qry_sum);

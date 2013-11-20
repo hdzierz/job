@@ -501,13 +501,9 @@ if($report=="weekly"){
 				
 			</tr>
 			<tr>
-				<td>Include contractor</td>
+				<td colspan='2'>Include contractor</td>
 				<td>
 					<input <? if($sel_contr_only){?> checked <? }?> type="checkbox" value="1" name="sel_contr_only" />
-				</td>
-				<td>Exclude sent</td>
-				<td>
-					<input <? if($exclude_sent){?> checked <? }?> type="checkbox" value="1" name="exclude_sent" />
 				</td>
 			</tr>
 			<tr>
