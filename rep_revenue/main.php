@@ -3037,15 +3037,15 @@ if($report=="revenue"){
 				   job.SubDist AS 'Sub Dist',
 				   job.Cont,
 				   job.folding_fee + job.premium AS `Add`,
-				   @cust2 := ROUND((job.invoice_qty)*job.Normal+job.qty_bbc*job.bbc_rate+@bundles ,2)
+				   @cust2 := ROUND((job.invoice_qty)*job.Normal+job.qty_bbc*job.bbc_rate+@bundles*job.bundle_sell ,2)
 						AS 'Cust.',
 				  /* job.fuel_surcharge_fact AS 'F/Surch.',
 				   job.discount_fact,*/
 				   @cust := ROUND(@cust2 * (1+job.fuel_surcharge_fact-discount_fact),2) 
 						AS 'Cust. (inc.)',
-				   @coural := round((job.Coural-IF(job.mailings IS NOT NULL,job.mailings,0))*(job.Dist+job.SubDist+job.Cont)+@bundles,2)
+				   @coural := round((job.Coural-IF(job.mailings IS NOT NULL,job.mailings,0))*(job.Dist+job.SubDist+job.Cont)+@bundles*job.bundle_sell,2)
 						AS 'Coural',
-				   round((job.Coural-IF(job.mailings IS NOT NULL,job.mailings,0))*(job.Dist+job.SubDist+job.Cont)+@bundles,2)
+				   round((job.Coural-IF(job.mailings IS NOT NULL,job.mailings,0))*(job.Dist+job.SubDist+job.Cont)+@bundles*job.bundle_sell,2)
 						AS 'coural_dollars',
 				   @freight := round(job.lbc_charge+job.freight_charge+job.lbc_charge_bbc,2)
 						  AS 'Freight',
@@ -3064,6 +3064,7 @@ if($report=="revenue"){
 				   job.add_folding_to_invoice,
 				   job.premium,
 				   job.premium_sell,
+				   job.bundle_sell,
 				   route.region,
 				   job.delivery_date,
 				   client.name AS client,
@@ -3082,7 +3083,7 @@ if($report=="revenue"){
 						AS 'Bundles',
 				   SUM(
 						IF(	job_route.dest_type='bundles',
-							amount*job.bundle_sell,0)
+							amount,0)
 						)
 						AS 'Bundles2',						
 				   job.qty_bbc,
