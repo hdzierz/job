@@ -445,10 +445,11 @@ if($action=="sell_tickets"){
 		
 		$client = get("client","name","WHERE client_id='$client_id'");
 		$now = date('Y-m-d');
-		$qty_per_book['CD'] = get("parcel_rates","qty_per_book","WHERE type='CD' AND '$now' BETWEEN start_date AND end_date");
-		$qty_per_book['CP'] = get("parcel_rates","qty_per_book","WHERE type='CP' AND '$now' BETWEEN start_date AND end_date");
-		$qty_per_book['SR'] = get("parcel_rates","qty_per_book","WHERE type='SR' AND '$now' BETWEEN start_date AND end_date");
-		$qty_per_book['EX'] = get("parcel_rates","qty_per_book","WHERE type='EX' AND '$now' BETWEEN start_date AND end_date");
+		$qty_per_book['CD'] = get("parcel_price","qty_per_book","WHERE type_id='1' AND client_id = '$client_id'");
+		$qty_per_book['CP'] = get("parcel_price","qty_per_book","WHERE type_id='2' AND client_id = '$client_id'");
+		$qty_per_book['SR'] = get("parcel_price","qty_per_book","WHERE type_id='3' AND client_id = '$client_id'");
+		$qty_per_book['EX'] = get("parcel_price","qty_per_book","WHERE type_id='4' AND client_id = '$client_id'");
+		
 		
 		$qry = "SELECT * FROM parcel_job_ticket WHERE job_id='$job_id'";
 		$res = query($qry);
@@ -688,33 +689,13 @@ if($action=="add_order_books" ||$target=="add_order_books" || $action=="show_tic
 	
 	if($record) $job_id=$record;
 	
-	
-	
-	$has_discount = get("client","has_discount","WHERE client_id='$client_id'");
-	if($has_discount){
-		$rate_name = "sell_rate_disc";
-	}
-	else{
-		$rate_name = "sell_rate_std";
-	}
-	
-	$discount = get("client","discount","WHERE client_id='$client_id'");
-	if(!$discount) $discount=0;
-	$discount = 1-$discount;
-	
 	$now = date("Y-m-d");
 	
-	$rate['CD'] = get("parcel_rates","$rate_name","WHERE type='CD' AND '$now' BETWEEN start_date AND end_date");
-	$rate['CP'] = get("parcel_rates","$rate_name","WHERE type='CP' AND '$now' BETWEEN start_date AND end_date");
-	$rate['SR'] = get("parcel_rates","$rate_name","WHERE type='SR' AND '$now' BETWEEN start_date AND end_date");
-	$rate['EX'] = get("parcel_rates","$rate_name","WHERE type='EX' AND '$now' BETWEEN start_date AND end_date");
+	$rate['CD'] = get("parcel_price","sell_rate","WHERE type_id='1' AND client_id = '$client_id'");
+	$rate['CP'] = get("parcel_price","sell_rate","WHERE type_id='2' AND client_id = '$client_id'");
+	$rate['SR'] = get("parcel_price","sell_rate","WHERE type_id='3' AND client_id = '$client_id'");
+	$rate['EX'] = get("parcel_price","sell_rate","WHERE type_id='4' AND client_id = '$client_id'");
 
-	if(!$has_discount){
-		$rate['CD']*=$discount;
-		$rate['CP']*=$discount;
-		$rate['SR']*=$discount;
-		$rate['EX']*=$discount;
-	}
 	
 	$rate['CD'] = number_format($rate['CD'],2);
 	$rate['CP'] = number_format($rate['CP'],2);
@@ -1011,7 +992,7 @@ if($action=="manage_rates"){
 			
 		</table>
 		</fieldset>
-	
+	<!-- 
 		<fieldset style="width:90% "> <legend>Sell Rates per Book</legend>
 		<table>
 			<tr>
@@ -1045,7 +1026,7 @@ if($action=="manage_rates"){
 			
 		</table>
 		</fieldset>
-		
+		-->
 		<input type="submit" name="submit" value="Save" />
 		<input type="submit" name="submit" value="Close" />
 	</form>

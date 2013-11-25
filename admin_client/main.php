@@ -154,12 +154,6 @@ if($action=="edit" || $action=="add"){
 				</td>
 			</tr>
 			
-			<tr>
-				<td colspan="2" align="center">
-					<input type="submit" name="submit" value="Save" />
-					<input type="button" name="cancel" value="Cancel" onClick="window.location.href='admin_client.php'" />
-				</td>
-			</tr>
 		</table>
 			
 		<fieldset style="width:90% "> <legend>Sell Rates per Book</legend>
@@ -187,7 +181,14 @@ if($action=="edit" || $action=="add"){
 			</tr>
 		</table>
 		</fieldset>
-		
+		<table>
+		<tr>
+				<td colspan="2" align="center">
+					<input type="submit" name="submit" value="Save" />
+					<input type="button" name="cancel" value="Cancel" onClick="window.location.href='admin_client.php'" />
+				</td>
+			</tr>
+		</table>
 		<input type="hidden" name="action" value="save" />
 		<input type="hidden" name="dest" value="<?=$action?>" />
 		<input type="hidden" name="client_id" value="<?=$record?>" />

@@ -104,6 +104,30 @@ if($action=="save_branch"){
 // USES: 	coural.user									//
 //////////////////////////////////////////////////////////
 
+function save_arcel_price($client_id, $sell_rate, $qty_per_book, $type){
+	$qry = "SELECT oid FROM parcel_ticket_types WHERE type = '$type'";
+	$res = query($qry);
+	$obj = mysql_fetch_object($res);
+	$type_id = $obj->oid;
+	$qry = "SELECT * 
+			FROM parcel_price 
+			LEFT JOIN parcel_ticket_types
+			ON type_id = parcel_ticket_types.oid
+			WHERE client_id = $client_id
+				AND type='$type'";
+	
+	if(mysql_num_rows(query($qry))>0){
+		$qry = "UPDATE parcel_price SET sell_rate =  $sell_rate, qty_per_book = $qty_per_book
+				WHERE client_id = $client_id
+					AND type_id='$type_id'";
+	}
+	else{
+		$qry = "INSERT INTO parcel_price(client_id,type_id,sell_rate,qty_per_book) VALUES($client_id,$type_id,$sell_rate, $qty_per_book)";
+	}
+	query($qry);
+}
+
+
 if($action=="save"){
 	if(!$discount) $discount=0;
 	if($dest=="add"){
@@ -145,6 +169,10 @@ if($action=="save"){
 		$action="";		
 	}
 	
+	save_arcel_price($client_id, $sell_rate_std_red, $qty_per_book_red, "CD");
+	save_arcel_price($client_id, $sell_rate_std_green, $qty_per_book_green, "CP");
+	save_arcel_price($client_id, $sell_rate_std_yellow, $qty_per_book_yellow, "SR");
+	save_arcel_price($client_id, $sell_rate_std_purple, $qty_per_book_purple, "EX");
 	
 }
 
