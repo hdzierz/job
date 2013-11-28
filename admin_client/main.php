@@ -141,7 +141,7 @@ if($action=="edit" || $action=="add"){
 					<input type="checkbox" name="is_linehaul" value="1" <? if($is_linehaul){ ?> checked <? }?> /> 
 				</td>
 			</tr>
-			<tr>
+			<!--  <tr>
 				<td>Parcel Discount</td>
 				<td>
 					<input type="text" name="discount" value="<?=$discount?>" /> 
@@ -152,7 +152,7 @@ if($action=="edit" || $action=="add"){
 				<td>
 					<input type="checkbox" name="has_discount" value="1" <? if($has_discount){ ?> checked <? }?> /> 
 				</td>
-			</tr>
+			</tr>-->
 			
 		</table>
 			
@@ -475,9 +475,9 @@ if($action=="" || !isset($action)){
 												AS 'Is Courier',
 					IF(is_hauler=1,'Yes','No')			
 												AS 'Is Hauler',
-					IF(has_discount=1,'Yes','No')			
+					/*IF(has_discount=1,'Yes','No')			
 												AS 'Has Discount',
-					discount					AS Discount,
+					discount					AS Discount,*/
 					CONCAT('<a href=\'admin_client.php?action=show_branches&client_id=',client.client_id,'\'>Show</a>')
 								AS Branches
 			FROM client
