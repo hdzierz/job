@@ -55,18 +55,18 @@ if($action=="clean_jobs"){
 		}
 		$job_str .= ")";
 		
-		$qry = "INSERT INTO job_route_archive SELECT * FROM job_route WHERE job_id IN $job_str";
+		$qry = "REPLACE INTO job_route_archive SELECT * FROM job_route WHERE job_id IN $job_str";
 		query($qry);
 		$qry = "DELETE FROM job_route WHERE job_id IN $job_str";
 		query($qry);
 		
-		$qry = "INSERT INTO invoice_archive SELECT * FROM invoice WHERE job_id IN $job_str";
+		$qry = "REPLACE INTO invoice_archive SELECT * FROM invoice WHERE job_id IN $job_str";
 		query($qry);
 		$qry = "DELETE FROM invoice WHERE job_id IN $job_str";
 		query($qry);
 		
 		
-		$qry = "INSERT INTO job_archive 
+		$qry = "REPLACE INTO job_archive 
 				SELECT * FROM job WHERE invoice_date<='$date'";
 		query($qry);
 		$qry = "DELETE FROM job WHERE invoice_date<='$date'";
