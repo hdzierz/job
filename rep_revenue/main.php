@@ -1039,7 +1039,7 @@ if($report=="weekly_send_out"){
 		
 			$fn = clean_file_name("dist_delivery_instructions_".$name.".pdf");
 			
-			if($num_jobs>0 && !$sel_contr_only){
+			if($num_jobs>0){
 				$tab->Output($dir.'/'.$fn);
 				//$tab->Output();
 				
