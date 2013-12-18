@@ -459,7 +459,7 @@ if($report=="weekly"){
 		}
 	</script>
 	
-	<form name="weekly_job" action="rep_revenue.php" method="post">
+	<form name="weekly_job" action="rep_revenue.php" method="get">
 		<table>
 			<tr>
 				<td>Start Date:</td>
@@ -503,7 +503,7 @@ if($report=="weekly"){
 			<tr>
 				<td colspan='2'>Include contractor</td>
 				<td>
-					<input <? if($incluce_contr){?> checked <? }?> type="checkbox" value="1" name="include_contr" />
+					<input <? if($include_contr){?> checked <? }?> type="checkbox" value="1" name="include_contr" />
 				</td>
 			</tr>
 			<tr>
