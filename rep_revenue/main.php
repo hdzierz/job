@@ -1680,7 +1680,7 @@ if($report=="weekly_send_out"){
 
                             echo "($count) Delivery instructions for <strong>$do->company</strong> created.<br />";
                             //fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
-                            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$do->dropoff_id,$receiver);
+                            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$do->contractor_id,$receiver);
                             $pdffiles[] = $dir.'/'.$fn;
                             //pdf_merge($now,$fn);
 
