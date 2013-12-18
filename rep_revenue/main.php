@@ -1056,7 +1056,6 @@ if($report=="weekly_send_out"){
 			}
 			
 			
-			if(!$dist_only){
 			/////////////////////////////////////////////////////////
 			// DROPOFF SEND OUT
 			/////////////////////////////////////////////////////////
@@ -1081,7 +1080,7 @@ if($report=="weekly_send_out"){
 							$where_add_contr
 							#mailt_type='m'
 						ORDER BY company";
-			echo nl2br($qry_dos); 
+			//echo nl2br($qry_dos); 
 			//die();
 			$res_dos = query($qry_dos,0);
 		
@@ -1380,7 +1379,326 @@ if($report=="weekly_send_out"){
 						}
 					}
 				}//while do
-			}// if dist_only
+
+			/////////////////////////////////////////////////////////
+            // CONTRACTOR SEND OUT
+            /////////////////////////////////////////////////////////
+			if($include_contr){
+            $where_add_contr = "";
+
+            #if($include_contr) $where_add_contr = " AND parcel_send_di='N' ";
+            $qry_dos = "SELECT DISTINCT CONCAT(name,'_',first_name) AS name,
+                                company,
+                                dropoff_id,
+                                mail_type
+                         FROM job
+                         LEFT JOIN job_route
+                         ON job.job_id=job_route.job_id
+                         LEFT JOIN route
+                         ON route.route_id=job_route.route_id
+                         LEFT JOIN operator
+                         ON operator.operator_id=contractor_id
+                         LEFT JOIN address
+                         ON address.operator_id=operator.operator_id
+                         WHERE job_route.dist_id='$dist_id'
+                            $where_add
+                            $where_add_contr
+                            #mailt_type='m'
+                        ORDER BY company";
+            //echo nl2br($qry_dos);
+            //die();
+			$res_dos = query($qry_dos,0);
+
+                echo "Number of CONTRs:".mysql_num_rows($res_dos)."<br />";
+                //fwrite($fp,"Number of DOs:".mysql_num_rows($res_dos)."\n");
+                $count=0;
+                while($do=mysql_fetch_object($res_dos)){
+                    $count++;
+                    echo "($count) Preparing delivery instructions for <strong>$do->company</strong>.<br />";
+                    //fwrite($fp,"($count) Preparing delivery instructions for <strong>$do->company</strong>.\n");
+                    $qry_jobs = "SELECT DISTINCT job_no,is_regular
+                                 FROM job
+                                 LEFT JOIN job_route
+                                 ON job.job_id=job_route.job_id
+                                 LEFT JOIN route
+                                 ON route.route_id=job_route.route_id
+                                 WHERE job_route.dist_id='$dist_id'
+
+                                    AND job_route.contractor_id='$do->contractor_id'
+
+                                    $where_add
+                                ORDER BY is_regular DESC,job_no,job_no_add";
+                    //echo nl2br($qry_jobs); die();
+                    $res_jobs = query($qry_jobs);
+				                    $tab  = new MySQLPDFTable($MYSQL,'l');
+                    $tab->SetTopMargin(5);
+                    $tab->AliasNbPages();
+                    $tab->fontSize = $font_size;
+                    //$tab->norepField["Type"]=true;
+                    $tab->norepField["Circular"]=true;
+                    $tab->norepField["Client"]=true;
+
+
+                    $tab->SetFont('Helvetica','B',$font_size);
+
+
+                    $tab->collField["Qty"]=true;
+                    //$tab->collField["Qty 2"]=true;
+                    $tab->collField["Tot"]=true;
+
+
+                    $tab->AddPage();
+
+
+                    $title = "Distributor: $dist->company";
+                    $tab->StartLine(8);
+                        $tab->WriteLine($title,'L',6,$maxw-20);
+                        $tab->WriteLine('Contractor '.$tab->PageNo().'/{nb}','R',6,30);
+                    $tab->StopLine();
+
+                    if($is_job_report)
+                        $title = "Drop off details and delivery report for $do->company.";
+                    else
+                        $title = "Drop off details and delivery report for $do->company. Date range: $date_show_start to $date_show_end.";
+
+
+                    $tab->StartLine(8);
+                        $tab->WriteLine($title,'L',8,$maxw);
+                    $tab->StopLine();
+
+					                    if($show_rd_details){
+                        $group = "GROUP BY job_no,job_route.route_id,IF(job_route.dest_type='bundles',1,0)";
+                        $sel_rd = "route.code AS 'RD',";
+                        $num_blank_cols = 5;
+
+                        $header=array('Job #','Type','Circular','Client','D/Date','RD','Version', 'Qty','Weight','Date Recd.');
+                        $width=array('Job #'=>15,'Type'=>20,'Circular'=>55,'Client'=>40,'D/Date'=>12,'RD'=>40,'Version'=>20,'Qty'=>20,'Weight'=>12,'Date Deliv.'=>20);
+                        $maxw=get_maxw($width);
+                        $width_emtpy = $maxw-$width["Qty"]-$width["RD"];
+                        $width_tot_f = $width["RD"];
+                    }
+                    else{
+                        $group = "GROUP BY job.job_no,job_route.contractor_id,IF(job_route.dest_type='bundles',1,0)";
+                        $num_blank_cols = 5;
+
+                        $header=array('Job #','Type','Circular','Client','D/Date','Version','Qty','Weight','Date Recd.');
+                        $width=array('Job #'=>20,'Type'=>20,'Circular'=>60,'Client'=>45,'D/Date'=>20,'Version'=>20,'Qty'=>20,'Weight'=>15,'Date Recd.'=>35);
+                        $maxw=get_maxw($width);
+                        $width_emtpy = $maxw-$width["Qty"]-$width["D/Date"];
+                        $width_tot_f = $width["D/Date"];
+                    }
+
+                    $tab->StartLine($font_size);
+                        $tab->WriteLine("Regular Jobs",'L',$font_size,$maxw);
+                    $tab->StopLine();
+
+					                   $qry = "SELECT  job.job_id      AS job_id,
+                            CONCAT('#',job.job_no,IF(job.job_no_add IS NOT NULL AND job.job_no_add<>'','L',''))         AS 'Job #',
+                            GROUP_CONCAT(DISTINCT  IF(is_att<>'Y',
+                               CASE job_route.dest_type
+                                    WHEN 'num_lifestyle' THEN 'L/Style'
+                                    WHEN 'num_farmers' THEN 'Farmer'
+                                    WHEN 'num_dairies' THEN 'Dairy'
+                                    WHEN 'num_sheep' THEN 'Sheep'
+                                    WHEN 'num_beef' THEN 'Beef'
+                                    WHEN 'num_sheepbeef' THEN 'S/Beef'
+                                    WHEN 'num_dairybeef' THEN 'D/Beef'
+                                    WHEN 'num_hort' THEN 'Hort'
+                                    WHEN 'num_total' THEN 'Total'
+                                    WHEN 'num_nzfw' THEN 'F@90%%'
+                                    WHEN 'bundles' THEN 'Bundles'
+                               END
+                               , '') SEPARATOR '') AS 'Type',
+
+                            CASE job.publication
+                                WHEN LENGTH(job.publication)<=20 THEN
+                                    CONCAT(LEFT(job.publication,17),'...')
+                                ELSE CONCAT(job.publication)
+                            END
+                                        AS Circular,
+                            CASE client.name
+                                WHEN LENGTH(client.name)<=20 THEN
+                                    CONCAT(LEFT(client.name,17),'...')
+                                ELSE
+                                    client.name
+                            END
+                                            AS Client,
+                            %s
+                            IF(is_ioa='Y','IOA',DATE_FORMAT(job.delivery_date,'%%m-%%d'))
+                                AS 'D/Date',
+                            job_route.version AS Version,
+                            SUM(IF(is_att<>'Y',job_route.amount,0))     AS 'Qty'
+
+                    FROM job
+                    LEFT JOIN client
+                    ON client.client_id=job.client_id
+                    LEFT JOIN job_route
+                    ON job.job_id=job_route.job_id
+                    LEFT JOIN route
+                    ON route.route_id=job_route.route_id
+                    WHERE contractor_id='$do->contractor_id'
+                        AND job_route.dist_id=$dist_id
+                        AND job.cancelled<>'Y'
+                        $where_add
+                        %s
+                    %s
+                    ORDER BY job.is_regular DESC, job.job_no";
+
+                    $tab->WriteHeader($header,$width);
+
+                    if(mysql_num_rows($res_jobs)==0){
+                        $tab->StartLine($font_size);
+                            $tab->WriteLine("No Regular Jobs",'L',$font_size,$maxw);
+                        $tab->StopLine();
+                    }
+
+                    while($job = mysql_fetch_object($res_jobs)){
+                        $qry_reg = sprintf($qry,$sel_rd," AND is_regular='Y' AND job.job_no='$job->job_no'",$group);
+                        //echo nl2br($qry_reg);die();
+                        $data = $tab->LoadData($qry_reg);
+                        /*$new_data = array();
+                        foreach($data as $d){
+                            $new_data[] = $d;
+                            $new_line = array();
+                            $new_line["Circular"] = $d["client"];
+                            $new_data[] = $new_line;
+                        }*/
+
+                        if(count($data)>0){
+                            $tab->WriteTable($header,$data,$width,4,1);
+                            if($show_rd_details){
+                                $tab->StartLine($font_size);
+                                    $tab->WriteLine("",'R',5,$width_emtpy);
+                                    $tab->WriteLine("Total:",'R',5,$width_tot_f);
+                                    $tab->WriteLine($tab->getSum("Qty",0),'R',5,$width["Qty"]);
+                                    //$tab->WriteLine($tab->getSum("Qty 2",0),'R',5,$width["Qty 2"]);
+                                $tab->StopLine();
+                            }
+                            $tab->collFieldVal["Qty"] = array();
+                            //$tab->collFieldVal["Qty 2"] = array();
+                        }
+                    }
+
+                    $first_job=false;
+                    //$tab->Ln();
+                    //$tab->WordWrap($comment2, $maxw-1,'\n');
+                    $tab->StartLine($font_size);
+                        $tab->WriteLine("* D/date as DD-MM",'L',$font_size,$maxw);
+                    $tab->StopLine();
+
+                    $tab->MultiCell($maxw,2.5,$comment2,false,'L');
+                    //$tab->Ln();
+                    /*$tab->StartLine($font_size);
+                        $tab->WriteLine($comment2,'L',$font_size,$maxw);
+                    $tab->StopLine();*/
+
+                    //$tab->StartLine($font_size);
+                        //$tab->WriteLine("",'R',$font_size,$maxw);
+                    //$tab->StopLine();
+
+
+
+
+                    $header=array('Job #','Type','Circular','Client','D/Date','RD','Version','Qty','Weight','Date Recd.');
+                    $width=array('Job #'=>15,'Type'=>20,'Circular'=>45,'Client'=>40,'D/Date'=>12,'RD'=>40,'Version'=>30,'Qty'=>20,'Weight'=>12,'Date Recd.'=>20);
+                    $maxw=get_maxw($width);
+                    $width_emtpy = $maxw-$width["Qty"]-$width["RD"]-$width["Weight"]-$width["Date Recd."];
+                    $width_tot_f = $width["RD"];
+
+                    $res_jobs = query($qry_jobs);
+
+                    $tab->StartLine($font_size);
+                        $tab->WriteLine("Casual Jobs",'L',$font_size,$maxw);
+                    $tab->StopLine();
+
+
+                    $tab->WriteHeader($header,$width);
+                    if(mysql_num_rows($res_jobs)==0){
+                        $tab->StartLine($font_size);
+                            $tab->WriteLine("No Casual Jobs",'L',$font_size,$maxw);
+                        $tab->StopLine();
+                    }
+                    while($job = mysql_fetch_object($res_jobs)){
+                        $qry_cas = sprintf($qry,' route.code AS RD, '," AND job.job_no='$job->job_no' AND is_regular<>'Y' ","GROUP BY job.job_no,job_route.route_id,IF(job_route.dest_type='bundles',1,0)");
+                        $data = $tab->LoadData($qry_cas);
+
+                        /*$new_data = array();
+                        foreach($data as $d){
+                            $new_data[] = $d;
+                            $new_line = array();
+                            $new_line["Circular"] = $d["client"];
+                            $new_data[] = $new_line;
+                        }*/
+
+                        if(count($data)>0){
+                            $tab->WriteTable($header,$data,$width,4,false); //exit;
+                            $tab->StartLine($font_size);
+                                $tab->WriteLine("",'R',5,$width_emtpy);
+                                $tab->WriteLine("Total:",'R',5,$width_tot_f);
+                                $tab->WriteLine($tab->getSum("Qty",0),'R',5,$width["Qty"]);
+                                //$tab->WriteLine($tab->getSum("Qty 2",0),'R',5,$width["Qty 2"]);
+                                $tab->Cell($width["Weight"],5,'',1,0,'L',1);
+                                $tab->Cell($width["Date Recd."],5,'',1,0,'L',1);
+                            $tab->StopLine();
+                            $tab->StopLine();
+                            $tab->collFieldVal["Qty"] = array();
+                            //$tab->collFieldVal["Qty 2"] = array();
+                        }
+                    }
+
+
+
+                    $first_job=false;
+
+                    //$tab->StartLine($font_size);
+                        //$tab->WriteLine("",'R',$font_size,$maxw);
+                    //$tab->StopLine();
+                    $tab->SetFontSize(9);
+                    $blurb = "THIS SHOULD BE USED FOR DELIVERY CONFIRMATIONS - 'GOLDS'. PLEASE FAX TO 06 356 6618 EACH WEEK.\n";
+                    $blurb.= "Please enter date received in the box alongside the total drop (above) and note any shortages or other comments below.";
+                    $blurb.="\n\n";
+                    $blurb2 = "The above deliveries have been carried out in accordance with instructions.\n\n";
+                    $blurb2.= "Signed:______________________  Date: _______________________\n\n\n";
+                    $y = $tab->GetY();
+                    $tab->MultiCell($maxw,4,$blurb,1,'L');
+                    $tab->SetXY($maxw-110,$y);
+
+                    //$blurb2 = "The above deliveries have been carried out in accordance with instructions.\n\n";
+                    //$blurb2.= "Signed:______________________  Date: _______________________\n\n\n";
+                    //$blurb2.="\n\n\n\n";
+
+                    //$tab->MultiCell($maxw-154,3,$blurb2,1,'L');
+                    $tab->Ln();
+                    $tab->SetFontSize($font_size);
+
+                    if($num_jobs>0){
+                        if($do->mail_type<>'m'){
+
+                            $fn = clean_file_name("contr_delivery_instructions_".$do->name.".pdf");
+
+                            $tab->Output($dir.'/'.$fn);
+
+                            echo "($count) Delivery instructions for <strong>$do->company</strong> created.<br />";
+                            //fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
+                            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$do->dropoff_id,$receiver);
+                            $pdffiles[] = $dir.'/'.$fn;
+                            //pdf_merge($now,$fn);
+
+                        }
+                        else{
+                            $fn = clean_file_name("contr_MAIL_delivery_instructions_".$do->company.".pdf");
+
+
+                            $tab->Output($dir.'/'.$fn);
+
+                            echo "($count) Delivery instructions for <strong>$do->company (MAIL)</strong> created.<br />";
+                            //fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
+                            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$do->dropoff_id,$mail_receiver);
+                        }
+                    }
+                }//while contr
+										
+			} // if include_contr;
 		}//while($dist = mysql_fetch_object($res_dist))					
 		
 		$job_str = "-1";
