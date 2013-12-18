@@ -1389,7 +1389,7 @@ if($report=="weekly_send_out"){
             #if($include_contr) $where_add_contr = " AND parcel_send_di='N' ";
             $qry_dos = "SELECT DISTINCT CONCAT(name,'_',first_name) AS name,
                                 company,
-                                dropoff_id,
+                                contractor_id,
                                 mail_type
                          FROM job
                          LEFT JOIN job_route
