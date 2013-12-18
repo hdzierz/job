@@ -1062,7 +1062,7 @@ if($report=="weekly_send_out"){
 			/////////////////////////////////////////////////////////
 			$where_add_contr = "";
 			
-			if($sel_contr_only) $where_add_contr = " AND parcel_send_di='Y' ";
+			#if($include_contr) $where_add_contr = " AND parcel_send_di='N' ";
 			$qry_dos = "SELECT DISTINCT CONCAT(name,'_',first_name) AS name,
 								company,
 								dropoff_id,
@@ -1081,7 +1081,8 @@ if($report=="weekly_send_out"){
 							$where_add_contr
 							#mailt_type='m'
 						ORDER BY company";
-			//echo nl2br($qry_jobs); 
+			echo nl2br($qry_dos); 
+			//die();
 			$res_dos = query($qry_dos,0);
 		
 				echo "Number of DOs:".mysql_num_rows($res_dos)."<br />";

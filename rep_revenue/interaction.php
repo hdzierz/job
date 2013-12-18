@@ -450,12 +450,12 @@ if($report=="weekly"){
 		$date_final_show=$today;
 	else 
 		$date_final_show=$date_final;
-	if(!$submit && !$sel_contr_only) $sel_contr_only=1; 
+	if(!$submit && !$include_contr) $include_contr=1; 
 	// iug
 ?>		
 	<script language="javascript">
-		function send_out(company,date_start,date_final,show_regular,show_casual,show_rd_details,sel_contr_only,pdf_only){
-			document.location.href='rep_revenue.php?report=weekly_send_out&company='+company+'&date_start='+date_start+'&date_final='+date_final+'&show_regular='+show_regular+'&show_casual='+show_casual+'&show_rd_details='+show_rd_details+'&sel_contr_only='+sel_contr_only+'&pdf_only='+pdf_only;
+		function send_out(company,date_start,date_final,show_regular,show_casual,show_rd_details,include_contr,pdf_only){
+			document.location.href='rep_revenue.php?report=weekly_send_out&company='+company+'&date_start='+date_start+'&date_final='+date_final+'&show_regular='+show_regular+'&show_casual='+show_casual+'&show_rd_details='+show_rd_details+'&include_contr='+include_contr+'&pdf_only='+pdf_only;
 		}
 	</script>
 	
@@ -503,7 +503,7 @@ if($report=="weekly"){
 			<tr>
 				<td colspan='2'>Include contractor</td>
 				<td>
-					<input <? if($sel_contr_only){?> checked <? }?> type="checkbox" value="1" name="sel_contr_only" />
+					<input <? if($incluce_contr){?> checked <? }?> type="checkbox" value="1" name="include_contr" />
 				</td>
 			</tr>
 			<tr>
@@ -519,8 +519,8 @@ if($report=="weekly"){
 					<?
 					if($date_start>="2000-01-01" && $date_final>="2000-01-01"){
 					?>
-						<input type="button" value="Send Out!" onClick="send_out('<?=$company?>','<?=$date_start?>','<?=$date_final?>','<?=$show_regular?>','<?=$show_casual?>','<?=$show_rd_details?>','<?=$sel_contr_only?>','0');" />
-						<input type="button" value="Create PDF only!" onClick="send_out('<?=$company?>','<?=$date_start?>','<?=$date_final?>','<?=$show_regular?>','<?=$show_casual?>','<?=$show_rd_details?>','<?=$sel_contr_only?>','1');" />
+						<input type="button" value="Send Out!" onClick="send_out('<?=$company?>','<?=$date_start?>','<?=$date_final?>','<?=$show_regular?>','<?=$show_casual?>','<?=$show_rd_details?>','<?=$include_contr?>','0');" />
+						<input type="button" value="Create PDF only!" onClick="send_out('<?=$company?>','<?=$date_start?>','<?=$date_final?>','<?=$show_regular?>','<?=$show_casual?>','<?=$show_rd_details?>','<?=$include_contr?>','1');" />
 					<?
 					}
 					?>
