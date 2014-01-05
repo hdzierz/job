@@ -8,6 +8,8 @@ else if($_SERVER['DOCUMENT_ROOT'] == "/var/www/html"){
 	$db_connect = mysql_connect('localhost', 'root', 'inkl67z');
 }
 
+$db_connect = mysql_connect('localhost', 'root', 'inkl67z');
+
 $DATABASE = 'coural';
 if(strpos($_SERVER['REQUEST_URI'],'job_test') !== false){
 	$testing=mysql_select_db('coural_test', $db_connect); 
