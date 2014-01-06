@@ -145,7 +145,10 @@ function get_email($id,$is_alt=false){
 			//$fax = substr($fax,1);
 			//$email = '001164'.$fax."@fax.mbox.co.nz";
 			//$email = "00116463566618@fax.mbox.co.nz";
-			$email = $fax."@".$FAX_EMAIL_ADDRESS;
+			if($fax)
+				$email = $fax."@".$FAX_EMAIL_ADDRESS;
+			else
+				$email = "coural@coural.co.nz";
 		break;
 		case 'm':
 			$email = false;
