@@ -1,0 +1,4 @@
+ContactName,InvoiceNumber,Reference,InvoiceDate,DueDate,Description,Quantity,UnitAmount,Discount,AccountCode,TaxType,TrackingName1,TrackingOption1
+296,C84517,,2013-04-30,2013-05-20,Dummy job - all boxholders - Job 73718 - Delivery 31 Jan 2013 - 25 grams.    Boxholder Type: Total. ,0,0,,100,15% GST on income,Division,Circulars
+DairyNZ Limited,C84518,135318,2013-04-30,2013-05-20,Milksmart BOP 2013 - Job 74602 - Delivery 29 Jan 2013 - 10 grams.    Boxholder Type: Dairy. ,0,80.5,,100,15% GST on income,Division,Circulars
+
