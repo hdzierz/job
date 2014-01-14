@@ -4,8 +4,18 @@ require_once('includes/mysql.php');
 require_once('includes/mysql_aid_functions.php');
 require_once('includes/mail_aid_functions.php');
 
+echo "TEST<br />";
 
 send_test_mail();
+
+$to      = 'hdzierz@gmail.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = 'From: hdzierz@gmail.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+if(!mail($to, $subject, $message, $headers)) die("URGS!");
+
 die();
 
 $file = fopen("tickets_unredeemed.csv", "a");

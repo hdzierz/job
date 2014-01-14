@@ -14,20 +14,18 @@ $site['from_email'] = $ADMIN_EMAIL; // from email address
  
 // Just in case we need to relay to a different server,
 // provide an option to use external mail server.
-//$site['smtp_mode'] = 'enabled'; // enabled or disabled
-//$site['smtp_host'] = "ssl://smtp.ramsu.co.nz:465";
+$site['smtp_mode'] = 'enabled'; // enabled or disabled
+$site['smtp_host'] = "mail.dzierzon.co.nz:587";
 //$site['smtp_host'] = "ssl://smtp.gmail.com:465";
-//$site['smtp_host'] = 'mail.coural.co.nz';
 
-//$site['smtp_port'] = intval(25);
-//$site['smtp_username'] = "support_send@coural.co.nz";
+$site['smtp_port'] = intval(587);
 //$site['smtp_username'] = "ruralcouriers@gmail.com";
-//$site['smtp_username'] = 'Admin@coural.co.nz';
+$site['smtp_username'] = 'hdzierz@dzierzon.co.nz';
+//$site['smtp_password'] = "pOdey&02";
+$site['smtp_password'] = "zt90undr";
 
-//$site['smtp_password'] = "zt90undr";
-//$site['smtp_password'] = "8KP_Adm1n";
 
-$site['smtp_mode'] = 'disabled'; // enabled or disabled
+# $site['smtp_mode'] = 'disabled'; // enabled or disabled
 
 $ADMIN_EMAIL = "hdzierz@gmail.com";
 
@@ -56,7 +54,7 @@ class FreakMailer extends PHPMailer
 			
             if($site['smtp_username'] != '')
             {
-                //$this->SMTPAuth = true;
+                $this->SMTPAuth = true;
                 $this->Username = $site['smtp_username'];
                 $this->Password = $site['smtp_password'];
             }
@@ -147,7 +145,10 @@ function get_email($id,$is_alt=false){
 			//$fax = substr($fax,1);
 			//$email = '001164'.$fax."@fax.mbox.co.nz";
 			//$email = "00116463566618@fax.mbox.co.nz";
-			$email = $fax."@".$FAX_EMAIL_ADDRESS;
+			if($fax)
+				$email = $fax."@".$FAX_EMAIL_ADDRESS;
+			else
+				$email = "coural@coural.co.nz";
 		break;
 		case 'm':
 			$email = false;
@@ -198,9 +199,9 @@ function send_test_mail(){
 	$mailer->Subject = 	"TEST";
 	$mailer->Body = "TEST";
 	$mailer->From = "coural@coural.co.nz";
-	//$mailer->SMTPDebug = 2;
+	$mailer->SMTPDebug = 2;
 	//$mailer->AuthType = "NTLM";
-	$mailer->AddAddress("helge.dzierzon@plantandfood.co.nz", 'Coural Head Office');
+	$mailer->AddAddress("hdzierz@gmail.com", 'Coural Head Office');
 	if(!$mailer->Send())
 	{
 		echo "<font color='red'>Mail to $company failed (".$email.") : ".$mailer->ErrorInfo."</font><br />";
