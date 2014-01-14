@@ -1728,7 +1728,75 @@ if($action=="process_xerox_scan2"){
 	}//if submit
 }
 
+require_once 'includes/phpqrcode/qrlib.php';
+
 if($action=="print_ticket_header_sheet"){
+	if($filter){
+		if($dist_id) $where_add_dist = " AND route_aff.env_dist_id='$dist_id'";
+		if($contr_id) $where_add_contr = " AND route_aff.env_contractor_id='$contr_id'";
+		
+		$qry = "SELECT 	route_aff.route_aff_id AS Record,
+						dist.operator_id AS dist_id,
+						dist.company AS Distributor,
+						contr.company AS Contractor,
+						contr.operator_id AS contr_id,
+						route.region AS region,
+						route.area AS area,
+						route.code AS code,
+						route.route_id AS route_id
+				FROM route_aff
+				RIGHT JOIN operator contr
+					ON route_aff.env_contractor_id = contr.operator_id
+						AND DATE_FORMAT(now(),'%Y-%m-%d') BETWEEN app_date AND stop_date
+				LEFT JOIN operator dist
+					ON dist.operator_id = route_aff.env_dist_id
+				LEFT JOIN route
+					On route.route_id=route_aff.route_id
+				WHERE route_aff_id IS NOT NULL
+					$where_add_dist
+					$where_add_contr
+				AND (route.no_ticket_header = 'N' or route.no_ticket_header = '')
+				# AND route.is_hidden <> 'Y' # Removed as per customer request. HD
+				ORDER BY Distributor,Contractor;";					
+		$res_contr = query($qry,0);
+		$start = true;
+		while($contr = mysql_fetch_object($res_contr)){
+			$contr_name = get("address","CONCAT(name,', ',first_name)","WHERE operator_id = $contr->contr_id");
+			$contr_address = get("address","address","WHERE operator_id = $contr->contr_id");
+			$dist_address = get("address","CONCAT(name,', ',first_name)","WHERE operator_id = $contr->dist_id");
+			if(!$start){
+				?>
+				<div style="page-break-before: always">
+					
+				</div>		
+				<?php
+			}
+			$start = false;
+			$code = sprintf("%04d",$contr->dist_id).'-'.sprintf("%04d",$contr->contr_id).'-'.sprintf("%04d",$contr->route_id);
+			$fn = 'temp_img/qcr_'.md5($code).".png";
+			QRcode::png($code,$fn);
+	?>
+			
+			<div style="margin-bottom: 10em">
+			<img style="float:left" src='<?php echo $fn;?>' />
+			
+			<ul>
+				<li>Contractor: <strong><?=$contr_name?></strong></li>
+				<li><Trading as: <strong><?=$contr->Contractor?></strong></li>
+				<li>Route: <?=$contr->region?>/<?=$contr->area?>/<strong><?=$contr->code?></strong></li>
+				<li>Distributor: <?=$dist_address?>, Trading as: <?=$contr->Distributor?></li>
+				<li>Address: <strong><?=$contr_address?></strong></li>
+			</ul>
+			</div>
+			
+			
+						
+	<?		
+		}
+	}
+}
+
+if($action=="print_ticket_header_sheet_without_qcr"){
 	if($filter){
 		if($dist_id) $where_add_dist = " AND route_aff.env_dist_id='$dist_id'";
 		if($contr_id) $where_add_contr = " AND route_aff.env_contractor_id='$contr_id'";
