@@ -299,6 +299,7 @@ if($action=="print_ticket_header_sheet"){
 ?>
 				</td>
 				<td><input type="submit" name="filter" value="Show" /></td>
+				<td>(Uses barcode type Code39.)</td>
 			</tr>
 		</table>
 		<input type="hidden" name="action" id="action" value="<?=$action?>" />

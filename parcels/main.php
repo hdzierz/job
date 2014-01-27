@@ -1728,7 +1728,160 @@ if($action=="process_xerox_scan2"){
 	}//if submit
 }
 
-require_once 'includes/phpqrcode/qrlib.php';
+//require_once 'includes/phpqrcode/qrlib.php';
+require_once "Image/Barcode2.php";
+require_once "includes/fpdf/fpdf.php";
+class PDF extends FPDF{
+function MultiCell($w, $h, $txt, $border=0, $ln=0, $align='J', $fill=false)
+{
+    // Custom Tomaz Ahlin
+    if($ln == 0) {
+        $current_y = $this->GetY();
+        $current_x = $this->GetX();
+    }
+
+    // Output text with automatic or explicit line breaks
+    $cw = &$this->CurrentFont['cw'];
+    if($w==0)
+        $w = $this->w-$this->rMargin-$this->x;
+    $wmax = ($w-2*$this->cMargin)*1000/$this->FontSize;
+    $s = str_replace("\r",'',$txt);
+    $nb = strlen($s);
+    if($nb>0 && $s[$nb-1]=="\n")
+        $nb--;
+    $b = 0;
+    if($border)
+    {
+        if($border==1)
+        {
+            $border = 'LTRB';
+            $b = 'LRT';
+            $b2 = 'LR';
+        }
+        else
+        {
+            $b2 = '';
+            if(strpos($border,'L')!==false)
+                $b2 .= 'L';
+            if(strpos($border,'R')!==false)
+                $b2 .= 'R';
+            $b = (strpos($border,'T')!==false) ? $b2.'T' : $b2;
+        }
+    }
+    $sep = -1;
+    $i = 0;
+    $j = 0;
+    $l = 0;
+    $ns = 0;
+    $nl = 1;
+    while($i<$nb)
+    {
+        // Get next character
+        $c = $s[$i];
+        if($c=="\n")
+        {
+            // Explicit line break
+            if($this->ws>0)
+            {
+                $this->ws = 0;
+                $this->_out('0 Tw');
+            }
+            $this->Cell($w,$h,substr($s,$j,$i-$j),$b,2,$align,$fill);
+            $i++;
+            $sep = -1;
+            $j = $i;
+            $l = 0;
+            $ns = 0;
+            $nl++;
+            if($border && $nl==2)
+                $b = $b2;
+            continue;
+        }
+        if($c==' ')
+        {
+            $sep = $i;
+            $ls = $l;
+            $ns++;
+        }
+        $l += $cw[$c];
+        if($l>$wmax)
+        {
+            // Automatic line break
+            if($sep==-1)
+            {
+                if($i==$j)
+                    $i++;
+                if($this->ws>0)
+                {
+                    $this->ws = 0;
+                    $this->_out('0 Tw');
+                }
+                $this->Cell($w,$h,substr($s,$j,$i-$j),$b,2,$align,$fill);
+            }
+            else
+            {
+                if($align=='J')
+                {
+                    $this->ws = ($ns>1) ?     ($wmax-$ls)/1000*$this->FontSize/($ns-1) : 0;
+                    $this->_out(sprintf('%.3F Tw',$this->ws*$this->k));
+                }
+                $this->Cell($w,$h,substr($s,$j,$sep-$j),$b,2,$align,$fill);
+                $i = $sep+1;
+            }
+            $sep = -1;
+            $j = $i;
+            $l = 0;
+            $ns = 0;
+            $nl++;
+            if($border && $nl==2)
+                $b = $b2;
+        }
+        else
+            $i++;
+    }
+    // Last chunk
+    if($this->ws>0)
+    {
+        $this->ws = 0;
+        $this->_out('0 Tw');
+    }
+    if($border && strpos($border,'B')!==false)
+        $b .= 'B';
+    $this->Cell($w,$h,substr($s,$j,$i-$j),$b,2,$align,$fill);
+    $this->x = $this->lMargin;
+
+    // Custom Tomaz Ahlin
+    if($ln == 0) {
+        $this->SetXY($current_x + $w, $current_y);
+    }
+}
+}
+function create_barcode($code){
+	$fn = 'temp_img/qcr_'.md5($code).".png";
+
+    $img = Image_Barcode2::draw($code, Image_Barcode2::BARCODE_CODE39, 'png', false);
+    imagepng($img, $fn);
+	return $fn;
+}
+
+function ticket_header_single($arrData){
+	$pdf = new PDF();
+	$pdf->AliasNbPages();
+	$pdf->AddPage();
+	$pdf->SetFont('Times','',12);
+	foreach($arrData as $contr){
+		$fn = create_barcode($contr["code"]);
+		$pdf->Image($fn, $pdf->GetX(), $pdf->GetY(), 50);
+    	$pdf->MultiCell(100,25,$contr["code"],0,'L');
+		$pdf->MultiCell(90,25,$contr["code"],0,'L');
+		$pdf->AddPage();
+	}
+	//$pdf->Output();
+	$pdf_fn = 'temp_img/qcr_'.md5(date('Y-m-d')).".pdf";
+	$pdf->Output($pdf_fn);
+	return $pdf_fn;
+}
+
 
 if($action=="print_ticket_header_sheet"){
 	if($filter){
@@ -1760,39 +1913,17 @@ if($action=="print_ticket_header_sheet"){
 				ORDER BY Distributor,Contractor;";					
 		$res_contr = query($qry,0);
 		$start = true;
+		$arr_data = array();
 		while($contr = mysql_fetch_object($res_contr)){
-			$contr_name = get("address","CONCAT(name,', ',first_name)","WHERE operator_id = $contr->contr_id");
-			$contr_address = get("address","address","WHERE operator_id = $contr->contr_id");
-			$dist_address = get("address","CONCAT(name,', ',first_name)","WHERE operator_id = $contr->dist_id");
-			if(!$start){
-				?>
-				<div style="page-break-before: always">
-					
-				</div>		
-				<?php
-			}
-			$start = false;
-			$code = sprintf("%04d",$contr->dist_id).'-'.sprintf("%04d",$contr->contr_id).'-'.sprintf("%04d",$contr->route_id);
-			$fn = 'temp_img/qcr_'.md5($code).".png";
-			QRcode::png($code,$fn);
-	?>
-			
-			<div style="margin-bottom: 10em">
-			<img style="float:left" src='<?php echo $fn;?>' />
-			
-			<ul>
-				<li>Contractor: <strong><?=$contr_name?></strong></li>
-				<li><Trading as: <strong><?=$contr->Contractor?></strong></li>
-				<li>Route: <?=$contr->region?>/<?=$contr->area?>/<strong><?=$contr->code?></strong></li>
-				<li>Distributor: <?=$dist_address?>, Trading as: <?=$contr->Distributor?></li>
-				<li>Address: <strong><?=$contr_address?></strong></li>
-			</ul>
-			</div>
-			
-			
-						
-	<?		
-		}
+			$arr_contr["contractor"] = $contr;
+			$arr_contr["contr_name"] = get("address","CONCAT(name,', ',first_name)","WHERE operator_id = $contr->contr_id");
+			$arr_contr["contr_addr"] = get("address","address","WHERE operator_id = $contr->contr_id");
+			$arr_contr["distr_addr"] = get("address","CONCAT(name,', ',first_name)","WHERE operator_id = $contr->dist_id");
+ 			$arr_contr["code"] = sprintf("%04d",$contr->dist_id).'-'.sprintf("%04d",$contr->contr_id).'-'.sprintf("%04d",$contr->route_id);    
+			$arr_data[] = $arr_contr;
+		}// while $contr = mysql_fetch_object($res_contr))
+		$pdf_fn = ticket_header_single($arr_data);
+		echo "<a href='".$pdf_fn."'>Download</a>";
 	}
 }
 
