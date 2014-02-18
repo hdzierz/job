@@ -1864,14 +1864,46 @@ function create_barcode($code){
 	return $fn;
 }
 
+function ticket_header_multi($arrData, $tickets_per_page){
+    $pdf = new PDF();
+    $pdf->AliasNbPages();
+    $pdf->SetTopMargin(21);
+    $pdf->AddPage();
+    $pdf->SetFont('Times','',7);
+    $i=1;
+    foreach($arrData as $contr){
+        $fn = create_barcode($contr["code"]);
+        $pdf->Image($fn, $pdf->GetX()+2, $pdf->GetY()+2, 50, 5);
+        $txt = "\n\n\n{$contr["code"]}\n".
+                "Contractor: ".$contr["contr_name"]." Trading as: ".$contr["contractor"]->ContrAlias."\n".
+                "Route: ".$contr["contractor"]->code."\n".
+                "Distributor: ".$contr["contractor"]->Distributor.", ".$contr["distr_addr"];
+        $pdf->MultiCell(98,3,$txt, 1,'L', 1);
+        if($i==$tickets_per_page){
+            $pdf->AddPage();
+            $i=0;
+        }
+        else if($i%2==0) {
+			$pdf->Ln(25);
+        }
+        $i++;
+    }
+    //$pdf->Output();
+    $pdf_fn = 'temp_img/bar_'.md5(date('Y-m-d-h-h-i-s')).".pdf";
+    $pdf->Output($pdf_fn);
+    return $pdf_fn;
+}
+
 function ticket_header($arrData, $tickets_per_page){
 	$pdf = new PDF();
 	$pdf->AliasNbPages();
 	$pdf->SetTopMargin(5);
 	$pdf->AddPage();
 	$pdf->SetFont('Times','',7);
-	$i=1;
+	$start = true;
 	foreach($arrData as $contr){
+		if(!$start) $pdf->AddPage();
+		$start = false;
 		$fn = create_barcode($contr["code"]);
 		$pdf->Image($fn, $pdf->GetX()+2, $pdf->GetY()+2, 50, 5);
 		$txt = "\n\n\n{$contr["code"]}\n".
@@ -1880,25 +1912,9 @@ function ticket_header($arrData, $tickets_per_page){
 				"Distributor: ".$contr["contractor"]->Distributor.", ".$contr["distr_addr"];
     	$pdf->MultiCell(91,3,$txt, 0,'L');
 		$pdf->MultiCell(5,4,'',0,'L');
-		//$txt = $contr["contractor"]->Distributor."\n".$contr["distr_addr"];
-		//$pdf->MultiCell(90,6,$txt,0,'L');
-		if($i==$tickets_per_page){
-			$pdf->AddPage();
-			$i=0;
-		}
-		else if($i%2==0) {
-			$pdf->Ln();
-			$pdf->Ln();
-			$pdf->Ln();
-			$pdf->Ln();
-			$pdf->MultiCell(5,4,'',0,'L');
-			$pdf->Ln();
-			//$pdf->SetY($pdf->GetY()+20);
-		}
-		$i++;
 	}
 	//$pdf->Output();
-	$pdf_fn = 'temp_img/qcr_'.md5(date('Y-m-d-h-h-i-s')).".pdf";
+	$pdf_fn = 'temp_img/bar_'.md5(date('Y-m-d-h-h-i-s')).".pdf";
 	$pdf->Output($pdf_fn);
 	return $pdf_fn;
 }
@@ -1944,7 +1960,10 @@ if($action=="print_ticket_header_sheet"){
  			$arr_contr["code"] = sprintf("%04d",$contr->dist_id).'-'.sprintf("%04d",$contr->contr_id).'-'.sprintf("%04d",$contr->route_id);    
 			$arr_data[] = $arr_contr;
 		}// while $contr = mysql_fetch_object($res_contr))
-		$pdf_fn = ticket_header($arr_data, $tickets_per_page);
+		if($tickets_per_page == 1)
+			$pdf_fn = ticket_header($arr_data, $tickets_per_page);
+		else
+			$pdf_fn = ticket_header_multi($arr_data, $tickets_per_page);
 		echo "<a href='".$pdf_fn."'>Download</a>";
 	}
 }
