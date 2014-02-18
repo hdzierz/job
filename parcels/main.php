@@ -1859,25 +1859,46 @@ function MultiCell($w, $h, $txt, $border=0, $ln=0, $align='J', $fill=false)
 function create_barcode($code){
 	$fn = 'temp_img/qcr_'.md5($code).".png";
 
-    $img = Image_Barcode2::draw($code, Image_Barcode2::BARCODE_CODE39, 'png', false);
+    $img = Image_Barcode2::draw($code, Image_Barcode2::BARCODE_CODE128, 'png', false, 50, 5, false);
     imagepng($img, $fn);
 	return $fn;
 }
 
-function ticket_header_single($arrData){
+function ticket_header($arrData, $tickets_per_page){
 	$pdf = new PDF();
 	$pdf->AliasNbPages();
+	$pdf->SetTopMargin(5);
 	$pdf->AddPage();
-	$pdf->SetFont('Times','',12);
+	$pdf->SetFont('Times','',7);
+	$i=1;
 	foreach($arrData as $contr){
 		$fn = create_barcode($contr["code"]);
-		$pdf->Image($fn, $pdf->GetX(), $pdf->GetY(), 50);
-    	$pdf->MultiCell(100,25,$contr["code"],0,'L');
-		$pdf->MultiCell(90,25,$contr["code"],0,'L');
-		$pdf->AddPage();
+		$pdf->Image($fn, $pdf->GetX()+2, $pdf->GetY()+2, 50, 5);
+		$txt = "\n\n\n{$contr["code"]}\n".
+				"Contractor: ".$contr["contr_name"]." Trading as: ".$contr["contractor"]->ContrAlias."\n".
+                "Route: ".$contr["contractor"]->code."\n".
+				"Distributor: ".$contr["contractor"]->Distributor.", ".$contr["distr_addr"];
+    	$pdf->MultiCell(91,3,$txt, 0,'L');
+		$pdf->MultiCell(5,4,'',0,'L');
+		//$txt = $contr["contractor"]->Distributor."\n".$contr["distr_addr"];
+		//$pdf->MultiCell(90,6,$txt,0,'L');
+		if($i==$tickets_per_page){
+			$pdf->AddPage();
+			$i=0;
+		}
+		else if($i%2==0) {
+			$pdf->Ln();
+			$pdf->Ln();
+			$pdf->Ln();
+			$pdf->Ln();
+			$pdf->MultiCell(5,4,'',0,'L');
+			$pdf->Ln();
+			//$pdf->SetY($pdf->GetY()+20);
+		}
+		$i++;
 	}
 	//$pdf->Output();
-	$pdf_fn = 'temp_img/qcr_'.md5(date('Y-m-d')).".pdf";
+	$pdf_fn = 'temp_img/qcr_'.md5(date('Y-m-d-h-h-i-s')).".pdf";
 	$pdf->Output($pdf_fn);
 	return $pdf_fn;
 }
@@ -1892,6 +1913,7 @@ if($action=="print_ticket_header_sheet"){
 						dist.operator_id AS dist_id,
 						dist.company AS Distributor,
 						contr.company AS Contractor,
+						contr.alias AS ContrAlias,
 						contr.operator_id AS contr_id,
 						route.region AS region,
 						route.area AS area,
@@ -1918,11 +1940,11 @@ if($action=="print_ticket_header_sheet"){
 			$arr_contr["contractor"] = $contr;
 			$arr_contr["contr_name"] = get("address","CONCAT(name,', ',first_name)","WHERE operator_id = $contr->contr_id");
 			$arr_contr["contr_addr"] = get("address","address","WHERE operator_id = $contr->contr_id");
-			$arr_contr["distr_addr"] = get("address","CONCAT(name,', ',first_name)","WHERE operator_id = $contr->dist_id");
+			$arr_contr["distr_addr"] = get("address","CONCAT(address,', ',city,' ',postcode)","WHERE operator_id = $contr->dist_id");
  			$arr_contr["code"] = sprintf("%04d",$contr->dist_id).'-'.sprintf("%04d",$contr->contr_id).'-'.sprintf("%04d",$contr->route_id);    
 			$arr_data[] = $arr_contr;
 		}// while $contr = mysql_fetch_object($res_contr))
-		$pdf_fn = ticket_header_single($arr_data);
+		$pdf_fn = ticket_header($arr_data, $tickets_per_page);
 		echo "<a href='".$pdf_fn."'>Download</a>";
 	}
 }

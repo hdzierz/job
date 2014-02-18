@@ -298,6 +298,20 @@ if($action=="print_ticket_header_sheet"){
 	
 ?>
 				</td>
+				<td>Contractors per page:</td>
+				<td>
+					<?
+                    if(!$tickets_per_page) $tickets_per_page = "1";
+                    $sel = new Select("tickets_per_page");
+                    $sel->setOptionIsVal($tickets_per_page);
+                    $sel->defaultText="1";
+                    $sel->defaultValue="1";
+                    $sel->multiple = false;
+                    $sel->start();
+                    $sel->addOption("20","20");
+                    $sel->stop();
+                    ?>
+				</td>
 				<td><input type="submit" name="filter" value="Show" /></td>
 				<td>(Uses barcode type Code39.)</td>
 			</tr>
