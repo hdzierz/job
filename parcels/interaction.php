@@ -263,6 +263,7 @@ if($action=="process_xerox_scan2"){
 }
 
 if($action=="print_ticket_header_sheet"){
+	if(!$num_labels) $num_labels = 20;
 	?>
 	<script type="text/javascript" src="includes/calendarDateInput.js"></script> 
 	<form name="redeem" action="parcels.php?action=<?=$action?>" method="post">
@@ -312,8 +313,9 @@ if($action=="print_ticket_header_sheet"){
                     $sel->stop();
                     ?>
 				</td>
+				<td>Labels per contr.:</td>
+				<td><input style="width:5em;" type="text" name="num_labels" id="num_labels" value="<?=$num_labels?>" /></td>
 				<td><input type="submit" name="filter" value="Show" /></td>
-				<td>(Uses barcode type Code39.)</td>
 			</tr>
 		</table>
 		<input type="hidden" name="action" id="action" value="<?=$action?>" />

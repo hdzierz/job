@@ -19,7 +19,7 @@ function get($table,$field,$where,$print=0){
 }
 
 function get_sum($table,$field,$where,$group){
-	$qry = "SELECT SUM($field) AS $field FROM $table $where $group";
+	$qry = 'SELECT SUM(`$field`) AS "$field" FROM $table $where $group';
 	$res = query($qry);
 	$obj = mysql_fetch_assoc($res);
 	return $obj[$field];
@@ -33,7 +33,7 @@ function get_sum_as($table,$field,$as,$where,$group){
 }
 
 function get_max($table,$field,$where,$group){
-	$qry = "SELECT MAX($field) AS $field FROM $table $where $group";
+	$qry = "SELECT MAX(`$field`) AS `$field` FROM $table $where $group";
 	$res = query($qry);
 	$obj = mysql_fetch_assoc($res);
 	return $obj[$field];

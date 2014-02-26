@@ -1668,6 +1668,7 @@ function _putinfo()
 function _putcatalog()
 {
 	$this->_out('/Type /Catalog');
+	$this->_out('/ViewerPreferences<</Duplex/Simplex/Enforce[/PrintScaling]/PrintScaling/None>>');
 	$this->_out('/Pages 1 0 R');
 	if($this->ZoomMode=='fullpage')
 		$this->_out('/OpenAction [3 0 R /Fit]');
