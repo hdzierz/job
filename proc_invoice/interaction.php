@@ -16,6 +16,7 @@ if($ERROR){
 
 if($action=="select_jobs"){
 	if(!$date) $date = date("Y/m/t");
+	if(!$start_no) $start_no = intval(get_max('job','group')) + 1;
 ?>
 	<script type="text/javascript" src="includes/calendarDateInput.js"></script> 
 	<form method="post" action="proc_invoice.php" name="interface">
@@ -44,9 +45,9 @@ if($action=="select_jobs"){
 				<td>
 					<script language="javascript">DateInput("date", true, "YYYY-MM-DD","<?=$date?>")</script>					
 				</td>
-				<!--<td>
-					FS: <input type="text" name="fuel_surcharge" value="<?=$fuel_surcharge?>" />
-				</td>-->
+				<td>
+					Start No: <input type="text" name="start_no" value="<?=$start_no?>" />
+				</td>
 				<td>
 					<input class="coural_button" type="submit" name="reload" value="Show"  />
 				</td>
