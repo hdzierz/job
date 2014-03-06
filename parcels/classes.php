@@ -272,7 +272,7 @@ class ticket{
 			$is_random=1;
 		}
 		else{
-			$job_id = get("parcel_job_ticket","job_id","WHERE ('$ticket_no' BETWEEN start AND end) AND type='$ticket_type'");
+			$job_id = get("parcel_job_ticket","job_id","WHERE ('".mysql_real_escape_string($ticket_no)."' BETWEEN start AND end) AND type='$ticket_type'");
 			$is_random=0;
 		}
 		
@@ -346,7 +346,7 @@ class ticket{
 			$is_random=1;
 		}
 		else{
-			$job_id = get("parcel_job_ticket","job_id","WHERE ('$ticket_no' BETWEEN start AND end) AND type='$ticket_type'");
+			$job_id = get("parcel_job_ticket","job_id","WHERE ('".mysql_real_escape_string($ticket_no)."' BETWEEN start AND end) AND type='$ticket_type'");
 			$is_random=0;
 		}
 		
