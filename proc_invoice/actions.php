@@ -27,9 +27,7 @@ function create_invoice_null_no(){
 }
 
 function update_invoice_no($job_id,$invoice_no){
-	
 	$qry = "UPDATE job SET invoice_no='$invoice_no' WHERE job_id='$job_id'";
-	//echo $qry."<br />";
 	query($qry);
 }
 
@@ -341,8 +339,8 @@ if($action=="Create Invoices"){
 			$prev_job_id = $prev_job->job_id;
 			
 			$g = get_group($job->job_id);
-			$invoiceno = check_invoice_no($g);
-			
+			//$invoiceno = check_invoice_no($g);
+			$invoiceno = sprintf('C%05d',$g);
 			
 			update_invoice_no($job->job_id,$invoiceno);
 			
