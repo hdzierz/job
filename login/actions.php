@@ -10,7 +10,7 @@ extract($_GET);
 extract($_POST);
 
 if($action=="Login"){
-	process_user_info($username,$passwd,$rememberme);
+	process_user_info($username,$passwd,$rememberme,$origin);
 	$action="";
 }
 

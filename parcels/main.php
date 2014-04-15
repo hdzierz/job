@@ -1875,7 +1875,7 @@ function ticket_header_multi($arrData, $tickets_per_page){
 	$c=1;
     foreach($arrData as $contr){
         $fn = create_barcode($contr["code"]);
-        $pdf->Image($fn, $pdf->GetX()+2, $pdf->GetY()+2, 50, 5);
+        $pdf->Image($fn, $pdf->GetX()+2, $pdf->GetY()+2, 60, 5);
         $txt = "\n\n\n{$contr["code"]}\n".
                 "Contractor: ".$contr["contr_name"]." Trading as: ".$contr["contractor"]->ContrAlias."\n".
                 "Route: ".$contr["contractor"]->code."\n".
@@ -1909,7 +1909,7 @@ function ticket_header($arrData, $tickets_per_page){
 		if(!$start) $pdf->AddPage();
 		$start = false;
 		$fn = create_barcode($contr["code"]);
-		$pdf->Image($fn, $pdf->GetX()+2, $pdf->GetY()+2, 50, 5);
+		$pdf->Image($fn, $pdf->GetX()+2, $pdf->GetY()+2, 60, 5);
 		$txt = "\n\n\n{$contr["code"]}\n".
 				"Contractor: ".$contr["contr_name"]." Trading as: ".$contr["contractor"]->ContrAlias."\n".
                 "Route: ".$contr["contractor"]->code."\n".

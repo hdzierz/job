@@ -13,7 +13,7 @@ function check_passwd_for_inject($passwd){
 		return false;
 }
 
-function process_user_info($username,$passwd,$rememberme){
+function process_user_info($username,$passwd,$rememberme,$redirect=false){
 	if (isset($username) AND isset($passwd) AND $username != "" AND $passwd != "") {
 		// Checking whether user/passwd combinatino exists
 		$passwd=md5($passwd);
@@ -61,7 +61,12 @@ function process_user_info($username,$passwd,$rememberme){
 			
 			$THEIR_IP=($_SERVER['REMOTE_ADDR']);
 			// Reslocating to start page if login was successful
-			header("Location: index.php"); 
+			if($redirect){
+				header("Location: http://103.18.56.175/".urldecode($redirect));
+			}
+			else{
+				header("Location: index.php");
+			} 
 		}
 		else {
 			echo "<p class='error'>Details don't match</p>";

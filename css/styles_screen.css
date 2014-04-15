@@ -172,7 +172,7 @@ div#error{
 div#wrapper{
 	padding: 0ex 0.5em 0.5em 0.5em; 
 /*	background-color:#C1D252;*/
-	background-color:#21CE39;
+	background-color:#4B8B2A;
 }
 
 div#submenu{
@@ -210,11 +210,11 @@ div#submenu .subaself:hover {
 /*DIV footer*/
 #footer{
 	padding:0.3em;
-	background-color:#21CE39; 
+	background-color:#4B8B2A; 
 	text-align:right;
 }
 .clock{
-	background-color:#21CE39; 
+	background-color:#4B8B2A; 
 	border-style:none;
 }
 
@@ -276,7 +276,7 @@ div#stopblogopic{
 	border-left:1px solid #8C8C8C;
 }
 #activetab {
-	background-color:#21CE39;
+	background-color:#4B8B2A;
 	padding:4px 10px 7px 8px;
 	float:left;
 	border-top:1px solid #65B930;
@@ -311,7 +311,7 @@ div#stopblogopic{
 	border-left:1px solid #8C8C8C;
 }
 #activetab2 {
-	background-color:#21CE39;
+	background-color:#4B8B2A;
 	padding:4px 6px 7px 6px;
 	float:right;
 	border-top:1px solid #65B930;
@@ -353,7 +353,7 @@ div#stopblogopic{
 .menulink2 {
 		font-size:13px;
         font-family: Verdana, Arial, Helvetica, sans-serif;
-		color:#21CE39;
+		color:#4B8B2A;
 		text-decoration:none;
 		font-weight: bold;
 }
@@ -383,7 +383,7 @@ div#stopblogopic{
 .menulink2_parcel {
 		font-size:13px;
         font-family: Verdana, Arial, Helvetica, sans-serif;
-		color:#21CE39;
+		color:#4B8B2A;
 		text-decoration:none;
 		font-weight: bold;
 }
@@ -416,7 +416,7 @@ div#stopblogopic{
 .menulink2_small {
 		font-size:10px;
         font-family: Verdana, Arial, Helvetica, sans-serif;
-		color:#21CE39;
+		color:#4B8B2A;
 		text-decoration:none;
 		font-weight: bold;
 		

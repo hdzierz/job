@@ -2,6 +2,7 @@
 class Login{
 	function Login(){}
 	function writeLoginTable(){
+		global $origin;
 ?>
 		<form name="login" method="get" action="login.php">
 			<table class="login">
@@ -24,6 +25,7 @@ class Login{
 					<td class="submit" colspan="2"><input type="submit" name="action" value="Login" /></td>
 				</tr>
 			</table>
+			<input type="hidden" name="origin" value="<?=$origin?>" />
 		</form>		
 <?
 	}

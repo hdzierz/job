@@ -805,7 +805,7 @@ if($report=="invoice"){
 		
 	?>
 		<h1 style="text-align:left">
-			<img style="float:right;" src="images/coural_logo.jpg" />
+			<img style="float:right;width:160px" src="images/coural_logo.jpg" />
 			TICKET REDEMPTION SUMMARY REPORT <br />
 			AND BUYER CREATED TAX INVOICE (IRD approved)
 		</h1>
@@ -1107,9 +1107,7 @@ if($report=="invoice"){
 			$tab->stopNewLine();
 		}
 		$tab->stopTable();
-		/*?>
-			<div class="pagebreak"> &nbsp;</div>
-		<?*/
+		//echo '<div class="pagebreak"> &nbsp;</div>'
 	} // foreach dist
 }
 
