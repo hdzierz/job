@@ -1,2 +1,9 @@
 debug.txt
-
+tmp/
+Canonscan/
+proc_invoice/temp/
+temp_deliv/
+temp_do_det/
+temp_img/
+temp_job_det/
+temp_payout2/
