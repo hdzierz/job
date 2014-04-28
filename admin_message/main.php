@@ -178,6 +178,7 @@ if($action=="add_addresses" || $action == "change_addresses"){
 							$sel->addOption("is_contr","Contractor");
 							$sel->addOption("is_subdist","S/Dist");
 							$sel->addOption("is_dist","Dist");
+                            $sel->addOption("is_dropoff","Dropoff");
 							$sel->stop();
 							?>
 						</td>
