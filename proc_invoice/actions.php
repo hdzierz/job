@@ -160,10 +160,11 @@ function write_fuel_surcharge($fp,$job,$invoiceno,$fuel_surcharge,$gst,$date){
 }
 function write_bundles($fp,$job,$invoiceno,$fuel_surcharge,$gst,$date){
 	
-	$qry = "SELECT SUM(amount) AS amount,bundle_price FROM job_route WHERE job_id='$job->job_id' AND dest_type='bundles' GROUP BY bundle_price ORDER BY bundle_price";
+	$qry = "SELECT SUM(amount) AS amount FROM job_route WHERE job_id='$job->job_id' AND dest_type='bundles' GROUP BY bundle_price ORDER BY bundle_price";
 	$res = query($qry);
 	while($amt = mysql_fetch_object($res)){
-		$item_add = round(100*$amt->bundle_price,0);
+        $bundle_price = get("job", "bundle_sell", "WHERE job_id = {$job->job_id}");
+		$item_add = round(100*$bundle_price,0);
 	
 		$add = 0.0;
 		if($job->add_premium_to_invoice == 'Y'){
@@ -179,7 +180,7 @@ function write_bundles($fp,$job,$invoiceno,$fuel_surcharge,$gst,$date){
 		$delivery_status 	= 'I';
 		$item_no			= 'C'.$item_add;
 		$qty				= number_format($amt->amount,3,'.','');
-		$price				= number_format($amt->bundle_price,4,'.','');
+		$price				= number_format($bundle_price,4,'.','');
 		$price_gst			= number_format($price*$gst,4,'.','');
 		$total 				= number_format($qty*$price,2,'.','');
 		$total_gst			= number_format($total*$gst,2,'.','');
