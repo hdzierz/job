@@ -357,6 +357,7 @@ function load_circ_con($m_table,$op,$route_id,$month,$year){
 	$qry = "SELECT  Date,
 						Job,
 						Pub,
+                        Weight,
 						Qty AS 'Circ Qty',
 						Qty_Bdls AS 'Bdl Qty',
 						Rate AS 'Circ Rate',
@@ -367,6 +368,7 @@ function load_circ_con($m_table,$op,$route_id,$month,$year){
 				SELECT  delivery_date AS Date,
 						job.job_no AS Job,
 						job.publication AS Pub,
+                        round(job.weight,0) AS Weight,
 						SUM(IF(job_route.dest_type<>'bundles',amount,0)) AS Qty,
 						SUM(IF(job_route.dest_type='bundles',amount,0)) AS Qty_Bdls,
 						
@@ -985,16 +987,11 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 	
 			
 		
-		$header=array('Date','Job','Pub','Circ Qty','Bdl Qty','Circ Rate','Bdl Rate','Total', 'Total (incl. GST)');
-		$width=array('Date'=>20,'Job'=>15,'Pub'=>25,'Circ Qty'=>15,'Bdl Qty'=>15,'Circ Rate'=>15,'Circ RateRed' => 15, 'Bdl Rate'=>15,'Total'=>20,'Total (incl. GST)'=>20);
+		$header=array('Date','Job','Pub','Weight', 'Circ Qty','Bdl Qty','Circ Rate','Bdl Rate','Total', 'Total (incl. GST)');
+		$width=array('Date'=>20,'Job'=>15,'Pub'=>25,'Weight'=>15, 'Circ Qty'=>15,'Bdl Qty'=>15,'Circ Rate'=>15,'Circ RateRed' => 15, 'Bdl Rate'=>15,'Total'=>20,'Total (incl. GST)'=>20);
 		$maxw=get_maxw($width);
 			
 		// As Contractor
-			
-		
-			
-		
-
 			
 		if(count($cdata)>0){
 			$new_page = true;
@@ -1008,7 +1005,7 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->WriteTable($header,$cdata,$width,4,1);	
 			$tab->StartLine($font_size);
 				//$tab->WriteLine("",'R',5,10);
-				$tab->WriteLine("Total:",'R',5,60);
+				$tab->WriteLine("Total:",'R',5,75);
 				$tab->WriteLine($tab->getSum("Circ Qty",0),'R',5,$width["Circ Qty"]);
 				$tab->WriteLine($tab->getSum("Bdl Qty",0),'R',5,$width["Bdl Qty"]);
 				$tab->WriteLine("",'R',5,30);
