@@ -773,8 +773,8 @@ if($action=="edit_job"||$action=="new_job"){
 		
 		$hauler_ni_id		= $job->hauler_ni_id;
 		$hauler_si_id		= $job->hauler_si_id;
-		$ni_drop_total		= number_format($job->ni_drop_total,0);
-		$si_drop_total		= number_format($job->si_drop_total,0);
+		$ni_drop_total		= $job->ni_drop_total;
+		$si_drop_total		= $job->si_drop_total;
 		$desc_bbc			= $job->desc_bbc;
 		$add_folding_to_invoice = $job->add_folding_to_invoice;
 		$premium			= $job->premium;
@@ -809,8 +809,8 @@ if($action=="edit_job"||$action=="new_job"){
 	
 	if(!$rate) 				$rate="0.0000"; 
 	
-	if(!$ni_drop_total) $ni_drop_total = "0";
-	if(!$si_drop_total) $si_drop_total = "0";
+	if(!$ni_drop_total) $ni_drop_total = 0;
+	if(!$si_drop_total) $si_drop_total = 0;
 	
 	if(!$desc_bbc) 			$desc_bbc=""; 
 	if(!$add_folding_to_invoice) 			$add_folding_to_invoice="N"; 
