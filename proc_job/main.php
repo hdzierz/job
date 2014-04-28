@@ -720,8 +720,8 @@ if($action=="edit_job"||$action=="new_job"){
 		$hauler_ni_id		= $job->hauler_ni_id;
 		$hauler_si_id		= $job->hauler_si_id;
 		$paper_source		= $job->paper_source;
-		$ni_drop_total		= number_format($job->ni_drop_total,0);
-		$si_drop_total		= number_format($job->si_drop_total,0);
+		$ni_drop_total		= $job->ni_drop_total;
+		$si_drop_total		= $job->si_drop_total;
 		$desc_bbc			= $job->desc_bbc;
 		$add_folding_to_invoice = $job->add_folding_to_invoice;
 		$premium			= $job->premium;

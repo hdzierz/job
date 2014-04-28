@@ -39,8 +39,7 @@ function write_label_a4($label,$count,$space_hor,$space_vert,$qty_per_do){
 					Client: <?=$label["Client"]?><br />
 					Job #: <?=$label["Job"]?><br />
 					Job Name:<?=$publication?><br />
-					Vers.: <?=$label["Version"]?><br />
-					<!--Vers2.: <?=$label["Version"]?><br />-->
+					Comments: <?=$label["Comments"]?><br />
 					Delivery Date: <? if($label["Date"]=="IOA"){?><font style="font-style:italic "><?=$label["Date"]?></font><? } else{echo date("d M y",strtotime($label["Date"]));}?><br />
 					D/Type: <?=$label["DType"]?><br />
 					<img src="images/coural-rural-couriers.png" height="38" width="71" ><br />
@@ -122,7 +121,7 @@ function write_label_a4_bu1($label,$count,$space_hor,$space_vert){
 			</tr>			
 			<tr>
 				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info">Vers.: <?=$label["Version"]?><br /><br /></td>
+				<td class="a4label_job_info">Comments: <?=$label["Comments"]?><br /><br /></td>
 			</tr>						
 			<tr>
 				<td class="a4label_job_info">&nbsp;</td>
@@ -293,7 +292,7 @@ function write_label($label,$count,$space_hor,$space_vert){
 			</tr>			
 			<tr>
 				<td class="label_job_info">&nbsp;</td>
-				<td class="label_job_info">Vers.: <?=$label["Version"]?></td>
+				<td class="label_job_info">Comments: <?=$label["Comments"]?></td>
 			</tr>						
 			<tr>
 				<td class="label_job_info">&nbsp;</td>
