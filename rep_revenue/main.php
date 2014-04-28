@@ -1856,6 +1856,7 @@ if($report=="label"){
 				   address.postcode   AS Postcode,
 				   route.area         AS Area,
 				   job.job_no         AS Job,
+				   job.comments 	  AS Comments,
 				   CASE job_route.dest_type
 						WHEN 'num_lifestyle' THEN 'L/Style'
 						WHEN 'num_farmers' THEN 'Farmer'
@@ -1926,6 +1927,7 @@ if($report=="label"){
 						$lab["Address"] = $label->Address;
 						$lab["Notes"] = $label->Notes;
 						$lab["City"] = $label->City;
+						$lab["Comments"] = $label->Comments;
 						$lab["Postcode"] = $label->Postcode;
 						$lab["Area"] = $label->Area;
 						$lab["Job"] = $label->Job;
