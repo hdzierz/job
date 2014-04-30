@@ -500,12 +500,12 @@ if($report=="weekly"){
 				<td><input type="checkbox" name="show_rd_details" <? if($show_rd_details){?> checked <? }?> value="1" /></td>						
 				
 			</tr>
-			<tr>
+			<!--<tr>
 				<td colspan='2'>Include contractor</td>
 				<td>
 					<input <? if($include_contr){?> checked <? }?> type="checkbox" value="1" name="include_contr" />
 				</td>
-			</tr>
+			</tr>-->
 			<tr>
 				<td>Comment:</td>
 				<td colspan="3">

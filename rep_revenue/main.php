@@ -1383,10 +1383,8 @@ if($report=="weekly_send_out"){
 			/////////////////////////////////////////////////////////
             // CONTRACTOR SEND OUT
             /////////////////////////////////////////////////////////
-			if($include_contr){
-            $where_add_contr = "";
-
-            #if($include_contr) $where_add_contr = " AND parcel_send_di='N' ";
+			if(1){
+            $where_add_contr = " AND parcel_send_di='Y' ";
             $qry_dos = "SELECT DISTINCT CONCAT(name,'_',first_name) AS name,
                                 company,
                                 contractor_id,
@@ -1403,7 +1401,6 @@ if($report=="weekly_send_out"){
                          WHERE job_route.dist_id='$dist_id'
                             $where_add
                             $where_add_contr
-                            #mailt_type='m'
                         ORDER BY company";
             //echo nl2br($qry_dos);
             //die();
