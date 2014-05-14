@@ -1910,11 +1910,22 @@ function ticket_header($arrData, $tickets_per_page){
 		$start = false;
 		$fn = create_barcode($contr["code"]);
 		$pdf->Image($fn, $pdf->GetX()+2, $pdf->GetY()+2, 60, 5);
-		$txt = "\n\n\n{$contr["code"]}\n".
-				"Contractor: ".$contr["contr_name"]." Trading as: ".$contr["contractor"]->ContrAlias."\n".
-                "Route: ".$contr["contractor"]->code."\n".
-				"Distributor: ".$contr["contractor"]->Distributor.", ".$contr["distr_addr"];
-    	$pdf->MultiCell(91,3,$txt, 0,'L');
+        $pdf->Cell(91,3,"");
+        $pdf->Ln();
+        $pdf->Cell(91,3,"");
+        $pdf->Ln();
+        $pdf->Cell(91,3,"");
+        $pdf->Ln();
+        $pdf->Cell(91,3,"{$contr["code"]}");
+        $pdf->Ln();
+        $pdf->SetFont('Times','',12);
+        $pdf->Cell(91,5,"Contractor: ".$contr["contr_name"]." Trading as: ".$contr["contractor"]->ContrAlias);
+        $pdf->SetFont('Times','',7);
+        $pdf->Ln();
+        $pdf->Cell(91,3,"Route: ".$contr["contractor"]->code);
+        $pdf->Ln();
+        $pdf->Cell(91,3,"Distributor: ".$contr["contractor"]->Distributor.", ".$contr["distr_addr"]);
+        $pdf->Ln();
 		$pdf->MultiCell(5,4,'',0,'L');
 	}
 	//$pdf->Output();
