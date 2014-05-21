@@ -253,7 +253,7 @@ class PHPMailer {
   /////////////////////////////////////////////////
 
   private $smtp            = NULL;
-  private $to              = array();
+  protected $to              = array();
   private $cc              = array();
   private $bcc             = array();
   private $ReplyTo         = array();

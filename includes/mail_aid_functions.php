@@ -27,6 +27,13 @@ $site['smtp_password'] = "zt90undr";
 
 # $site['smtp_mode'] = 'disabled'; // enabled or disabled
 
+function log_mail($adr){
+    $f = fopen('tmp/email.log', 'a+');
+    fwrite($f, $adr.': '.date('Y-m-d')."\n\n\n");
+    fclose($f);
+}
+
+
 $ADMIN_EMAIL = "hdzierz@gmail.com";
 
 class FreakMailer extends PHPMailer
@@ -73,6 +80,12 @@ class FreakMailer extends PHPMailer
             $this->Sender = $site['from_email'];
         }
         $this->Priority = $this->priority;
+    }
+
+    function Send(){
+        $to = implode(',',$this->to);
+        log_mail(print_r($this->to, true));
+        return parent::Send();
     }
 }
 

@@ -7,7 +7,7 @@ require_once('includes/mail_aid_functions.php');
 echo "TEST<br />";
 
 send_test_mail();
-
+die();
 $to      = 'hdzierz@gmail.com';
 $subject = 'the subject';
 $message = 'hello';
