@@ -29,6 +29,12 @@ $site['smtp_password'] = "zt90undr";
 
 $ADMIN_EMAIL = "hdzierz@gmail.com";
 
+function log_mail($adr){
+    $f = fopen('tmp/email.log', 'a+');
+    fwrite($f, $adr.': '.date('Y-m-d')."\n\n\n");
+    fclose($f);
+}
+
 class FreakMailer extends PHPMailer
 {
     var $priority = 1;
@@ -73,6 +79,12 @@ class FreakMailer extends PHPMailer
             $this->Sender = $site['from_email'];
         }
         $this->Priority = $this->priority;
+    }
+    
+    function Send(){
+        $to = implode(',',$this->to);
+        log_mail(print_r($this->to, true));
+        return parent::Send();
     }
 }
 

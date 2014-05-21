@@ -1199,7 +1199,8 @@ if($report=="invoice_send"){
 		$tab->MultiCell(0,5,$txt);
 		
 		//Logo
-	    $tab->Image('images/coural_logo.jpg',160,8,33,71,38);
+	    //$tab->Image('images/coural-rural-couriers.jpg',160,8,33,71,38);
+        $tab->Image('images/coural-rural-couriers.jpg',180,5,25);
 		//$tab->Image('images/coural_logo_large.jpg',160,8,33,71,38);
 	
 		$tab->Ln();
@@ -1460,11 +1461,11 @@ if($report=="invoice_send"){
 		}
 		
 		$now=date("Y_m_d_h_i_s");
-		$dir = $SEND_OUTPUT_DIR."temp_payout";
+		$dirp = $SEND_OUTPUT_DIR."temp_payout";
 		$fn = $SEND_OUTPUT_DIR."parcel_payout_".$company."_$now.pdf";
 
-		$tab->Output($dir.'/'.$fn);
-		$send_operator_mail("PARCEL PAYOUT",$SEND_OUTPUT_DIR."temp_payout",$fn,$dist_id);
+		$tab->Output($dirp.'/'.$fn);
+		//$send_operator_mail("PARCEL PAYOUT",$SEND_OUTPUT_DIR."temp_payout",$fn,$dist_id);
 		
 		//$qry = "UPDATE parcel_job SET is_pay_sent=1 WHERE job_no IN ($jobs)";
 		//query($qry);

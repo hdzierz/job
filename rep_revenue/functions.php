@@ -11,6 +11,8 @@ function write_label_a4($label,$count,$space_hor,$space_vert,$qty_per_do){
 ?>	
 	<div id="a4labels_wrapper">
 		<table class="a4labels" cellpadding="0"  cellspacing="0">
+            <col width="130">
+            <col width="80">
 			<tr>	
 				<td class="a4label_head" align="center" colspan="2">
 					<?=$label["FName"]?> <?=$label["Name"]?><br /><br />
@@ -23,7 +25,7 @@ function write_label_a4($label,$count,$space_hor,$space_vert,$qty_per_do){
 				<td class="a4label_head" align="center" colspan="2"><?=$label["City"]?><br /><br /></td>			
 			</tr>			
 			<tr>	
-				<td class="a4label_job_info" align="center"  colspan="2">
+				<td class="a4label_head_small" style="font-weight:bold; font-size: 14pt"  align="center" colspan="2">
 					<?=$label["Notes"]?>
 					<br />
 					<br />
@@ -32,6 +34,7 @@ function write_label_a4($label,$count,$space_hor,$space_vert,$qty_per_do){
 					<br />
 					<br />
 				</td>
+                
 							
 			</tr>
 			<tr>
@@ -39,7 +42,7 @@ function write_label_a4($label,$count,$space_hor,$space_vert,$qty_per_do){
 					Client: <?=$label["Client"]?><br />
 					Job #: <?=$label["Job"]?><br />
 					Job Name:<?=$publication?><br />
-					Comments: <?=$label["Comments"]?><br />
+					<? if($label["ShowNotes"] == 'Y'){ echo  "Comments: ".$label["Comments"]."<br />"; } ?>
 					Delivery Date: <? if($label["Date"]=="IOA"){?><font style="font-style:italic "><?=$label["Date"]?></font><? } else{echo date("d M y",strtotime($label["Date"]));}?><br />
 					D/Type: <?=$label["DType"]?><br />
 					<img src="images/coural-rural-couriers.png" height="38" width="71" ><br />
@@ -59,186 +62,6 @@ function write_label_a4($label,$count,$space_hor,$space_vert,$qty_per_do){
 	<span class="page_border"><hr /></span>
 <?
 	}
-}
-function write_label_a4_bu1($label,$count,$space_hor,$space_vert){
-
-	$client = $label->Client;
-	if(strlen($client)>20){
-		$client = substr($client,1,20)."...";
-	}
-	
-	$publication = $label["Publication"];
-	
-?>	
-	<div id="a4labels">
-		<table class="a4labels" cellpadding="0"  cellspacing="0">
-			<tr>	
-				<td class="a4label_title" align="center" colspan="2">
-					<?=$label["FName"]?> <?=$label["Name"]?>
-					<br />
-					<br />
-				</td>			
-			</tr>
-			<tr>	
-				<td class="a4label_head" align="center" colspan="2"><?=$label["Address"]?></td>			
-			</tr>
-			<tr>	
-				<td class="a4label_head" align="center" colspan="2"><?=$label["Notes"]?></td>			
-			</tr>			
-			<tr>	
-				<td class="a4label_head" align="center"  colspan="2">
-					<?=$label["City"]?><? if($label["Postcode"]>0){ echo ", ".$label["Postcode"];}?>
-					<br />
-					<br />
-					<br />
-					<br />
-					
-				</td>
-							
-			</tr>
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info"><strong>Bundle Qty: </strong>  <?=$label["QtyBundle"]?></td>
-			</tr>
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info">
-					<strong>Single Qty: </strong>  <?=$label["SQuantity"]?>
-					<br />
-					<br />
-				</td>
-			</tr>
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info"><strong><?=$label["Client"]?></strong></td>
-			</tr>
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info"><strong>Job #: <?=$label["Job"]?></strong><br /><br /></td>
-			</tr>
-			<tr>
-				<td colspan="2" class="a4label_job_info"><strong><?=$publication?></strong><br /><br /></td>
-			</tr>			
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info">Comments: <?=$label["Comments"]?><br /><br /></td>
-			</tr>						
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info">Delivery Date: <? if($label["Date"]=="IOA"){?><font style="font-style:italic "><?=$label["Date"]?></font><? } else{echo date("d M y",strtotime($label["Date"]));}?></td>
-			</tr>
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info">D/Type: <?=$label["DType"]?><br /></td>
-			</tr>
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info">Qty:<?=$label["Quantity"]?><br /></td>
-			</tr>
-			<tr>
-				<td class="a4label_coural_address"></td>
-			</tr>	
-			<tr>
-				<td rowspan="3"><img src="images/coural-rural-couriers.png" height="38" width="71" ></td>
-				<td></td>
-			</tr>
-				
-		</table>
-	</div>
-	<div class="pagebreak_after"></div>	
-	<span class="page_border"><hr /></span>
-<?
-}
-function write_label_a4_bu($label,$count,$space_hor,$space_vert){
-
-	$client = $label->Client;
-	if(strlen($client)>20){
-		$client = substr($client,1,20)."...";
-	}
-	
-	$publication = $label["Publication"];
-	
-?>	
-	<div id="a4labels">
-		<table class="a4labels" cellpadding="0"  cellspacing="0">
-			<tr>	
-				<td class="a4label_title" align="center" colspan="2">
-					<br />
-					<br />
-					<?=$label["FName"]?> <?=$label["Name"]?>
-					<br />
-					<br />
-				</td>			
-			</tr>
-			<tr>	
-				<td class="a4label_head" align="center" colspan="2"><?=$label["Address"]?></td>			
-			</tr>
-			<tr>	
-				<td class="a4label_head" align="center" colspan="2"><?=$label["Notes"]?></td>			
-			</tr>			
-			<tr>	
-				<td class="a4label_head" align="center"  colspan="2">
-					<?=$label["City"]?><? if($label["Postcode"]>0){ echo ", ".$label["Postcode"];}?>
-					<br />
-					<br />
-					<br />
-					<br />
-					
-				</td>
-							
-			</tr>
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info"><strong>Job #: <?=$label["Job"]?></strong></td>
-			</tr>
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info"><strong>Bundle Qty: </strong>  <?=$label["QtyBundle"]?></td>
-			</tr>
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info">
-					<strong>Single Qty: </strong>  <?=$label["QtySingle"]?>
-					<br />
-					<br />
-				</td>
-			</tr>
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info"><strong><?=$label["Client"]?></strong><br /><br /></td>
-			</tr>
-			<tr>
-				<td colspan="2" class="a4label_job_pub"><strong><?=$publication?></strong><br /><br /></td>
-			</tr>			
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info">Vers.: <?=$label["Version"]?><br /><br /></td>
-			</tr>						
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info"><strong>Delivery Date: </strong> <? if($label["Date"]=="IOA"){?><font style="font-style:italic "><?=$label["Date"]?></font><? } else{echo date("d M y",strtotime($label["Date"]));}?></td>
-			</tr>
-			<tr>
-				<td class="a4label_job_info">&nbsp;</td>
-				<td class="a4label_job_info"><strong>D/Type:</strong> <?=$label["DType"]?> <strong> - Qty: </strong><?=$label["Quantity"]?><br />
-					<br /></td>
-			</tr>
-			<tr>
-				<td class="a4label_coural_address"> </td>
-			</tr>			
-			<tr>
-				<td class="a4label_coural_address"></td>
-			</tr>	
-			<tr>
-				<td rowspan="3"><img src="images/coural_logo.jpg" height="38" width="71" ></td>
-				<td class="a4label_coural_address">Coural Rural Couriers, 41 Havill Street,Palmerston North, 06 357 3129</td>
-			</tr>
-				
-		</table>
-	</div>
-	<div class="pagebreak_after"></div>	
-	<span class="page_border"><hr /></span>
-<?
 }
 
 function write_label($label,$count,$space_hor,$space_vert){
@@ -292,7 +115,7 @@ function write_label($label,$count,$space_hor,$space_vert){
 			</tr>			
 			<tr>
 				<td class="label_job_info">&nbsp;</td>
-				<td class="label_job_info">Comments: <?=$label["Comments"]?></td>
+				<td class="label_job_info"><? if($label["ShowNotes"] == 'Y'){ echo  "Comments: ".$label["Comments"]."<br />"; } ?></td>
 			</tr>						
 			<tr>
 				<td class="label_job_info">&nbsp;</td>
