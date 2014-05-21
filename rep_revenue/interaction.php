@@ -457,6 +457,9 @@ if($report=="weekly"){
 		function send_out(company,date_start,date_final,show_regular,show_casual,show_rd_details,include_contr,pdf_only){
 			document.location.href='rep_revenue.php?report=weekly_send_out&company='+company+'&date_start='+date_start+'&date_final='+date_final+'&show_regular='+show_regular+'&show_casual='+show_casual+'&show_rd_details='+show_rd_details+'&include_contr='+include_contr+'&pdf_only='+pdf_only;
 		}
+        function weekly_a5(company,date_start,date_final,show_regular,show_casual,show_rd_details,include_contr,pdf_only){
+            document.location.href='rep_revenue.php?report=weekly_a5&company='+company+'&date_start='+date_start+'&date_final='+date_final+'&show_regular='+show_regular+'&show_casual='+show_casual+'&show_rd_details='+show_rd_details+'&include_contr='+include_contr+'&pdf_only='+pdf_only;
+        }
 	</script>
 	
 	<form name="weekly_job" action="rep_revenue.php" method="get">
@@ -521,7 +524,8 @@ if($report=="weekly"){
 					?>
 						<input type="button" value="Send Out!" onClick="send_out('<?=$company?>','<?=$date_start?>','<?=$date_final?>','<?=$show_regular?>','<?=$show_casual?>','<?=$show_rd_details?>','<?=$include_contr?>','0');" />
 						<input type="button" value="Create PDF only!" onClick="send_out('<?=$company?>','<?=$date_start?>','<?=$date_final?>','<?=$show_regular?>','<?=$show_casual?>','<?=$show_rd_details?>','<?=$include_contr?>','1');" />
-					<?
+
+                	<?
 					}
 					?>
 					<a href="#" onClick="self.print()"><img border="0" src="images/print.gif" alt="Print"  /> </a>
