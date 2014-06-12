@@ -1919,7 +1919,7 @@ function ticket_header($arrData, $tickets_per_page){
         $pdf->Cell(91,3,"{$contr["code"]}");
         $pdf->Ln();
         $pdf->SetFont('Times','',12);
-        $pdf->Cell(91,5,"Contractor: ".$contr["contr_name"]." Trading as: ".$contr["contractor"]->ContrAlias);
+        $pdf->Cell(91,5,$contr["contr_name"]." T/A: ".$contr["contractor"]->ContrAlias);
         $pdf->SetFont('Times','',7);
         $pdf->Ln();
         $pdf->Cell(91,3,"Route: ".$contr["contractor"]->code);

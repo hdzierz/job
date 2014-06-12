@@ -579,6 +579,14 @@ div#labels{
 	line-height:23pt;	
 }
 
+.a4label_head_small{
+    font-weight:bold;
+    font-size:14pt;
+    text-align: center;
+    line-height:25pt;
+}
+
+
 .a4label_job_info{
 	font-weight:bold;
 	font-size:14pt;

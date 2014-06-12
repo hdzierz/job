@@ -1924,6 +1924,7 @@ if($report=="label"){
 				   route.area         AS Area,
 				   job.job_no         AS Job,
 				   job.comments 	  AS Comments,
+                   job.show_comments  AS ShowNotes,
 				   CASE job_route.dest_type
 						WHEN 'num_lifestyle' THEN 'L/Style'
 						WHEN 'num_farmers' THEN 'Farmer'
@@ -1968,7 +1969,7 @@ if($report=="label"){
 			GROUP BY route.region,job_route.doff,job_route.dest_type
 			ORDER BY island,route.seq_region,route.seq_area,route.seq_code,address.name";
 	//echo nl2br($qry);
-	$res = query($qry);
+	$res = query($qry );
 	
 	if(mysql_num_rows($res)>0){
 		if($export){
@@ -1992,6 +1993,7 @@ if($report=="label"){
 						$lab["FName"] = $label->FName;
 						$lab["Name"] = $label->Name;
 						$lab["Address"] = $label->Address;
+                        $lab["ShowNotes"] = $label->ShowNotes;
 						$lab["Notes"] = $label->Notes;
 						$lab["City"] = $label->City;
 						$lab["Comments"] = $label->Comments;
