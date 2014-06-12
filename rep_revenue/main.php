@@ -784,7 +784,8 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final){
                                    END
                                    , '') SEPARATOR '') AS 'Type',
                             route.code ,
-                            operator.company 
+                            operator.company,
+                            operator.send_contr_sheet 
                     FROM job
                     LEFT JOIN job_route
                         ON job_route.job_id=job.job_id
@@ -798,6 +799,7 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final){
                         doff={$doff}
                         AND job.job_id=$job
                         AND delivery_date BETWEEN '$date_start' AND '$date_final'
+                        AND send_contr_sheet='Y'
                     GROUP BY job.job_id, contractor_id, route.route_id
                     ORDER BY job.job_id, company, route.code
                 ";
