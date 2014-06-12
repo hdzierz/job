@@ -748,13 +748,94 @@ if($report=="linehaul_send_out"){
 }
 
 
+function weekly_a5($doff, $job, $dirp, $date_start, $date_final){
+    $pdffiles = array();
+
+    $font_size = 8;
+    $count_mail=0;
+    if(!$comment2)
+        $comment2 = get("last_print_comment","comment2","WHERE last_print_comment_id=1");
+
+    if($date_start&&$date_final){
+        $date_show_start    = date("jS M Y",strtotime($date_start));
+        $date_show_end      = date("jS M Y",strtotime($date_final));
+        if($company!='All' && $company) $where_add = " AND operator_id='$company'";
+
+        $jobs = array();
+            $qry = "
+                    SELECT SUM(amount) AS amt,
+                            job.*,
+                            DATE_FORMAT(job.delivery_date,'%e %M') AS disp_date,
+                            address.first_name,
+                            address.name,
+                             GROUP_CONCAT(DISTINCT IF(is_att<>'Y', 
+                                   CASE job_route.dest_type
+                                        WHEN 'num_lifestyle' THEN 'L/Style'
+                                        WHEN 'num_farmers' THEN 'Farmer'
+                                        WHEN 'num_dairies' THEN 'Dairy'
+                                        WHEN 'num_sheep' THEN 'Sheep'
+                                        WHEN 'num_beef' THEN 'Beef'
+                                        WHEN 'num_sheepbeef' THEN 'S/Beef'
+                                        WHEN 'num_dairybeef' THEN 'D/Beef'
+                                        WHEN 'num_hort' THEN 'Hort'
+                                        WHEN 'num_total' THEN 'Total'
+                                        WHEN 'num_nzfw' THEN 'F@90%'
+                                        WHEN 'bundles' THEN 'Bundles'
+                                   END
+                                   , '') SEPARATOR '') AS 'Type',
+                            route.code ,
+                            operator.company,
+                            operator.send_contr_sheet 
+                    FROM job
+                    LEFT JOIN job_route
+                        ON job_route.job_id=job.job_id
+                    LEFT JOIN operator
+                        ON job_route.contractor_id=operator.operator_id
+                    LEFT JOIN address
+                        ON address.operator_id=operator.operator_id
+                    LEFT JOIN route
+                        ON job_route.route_id=route.route_id
+                    WHERE
+                        doff={$doff}
+                        AND job.job_id=$job
+                        AND delivery_date BETWEEN '$date_start' AND '$date_final'
+                        AND send_contr_sheet='Y'
+                    GROUP BY job.job_id, contractor_id, route.route_id
+                    ORDER BY job.job_id, company, route.code
+                ";
+            $res_contr = query($qry);
+            $pdf = new a5label('L', 'mm', 'A5');
+            $pdf->AliasNbPages();
+            while($contr = mysql_fetch_object($res_contr)){
+                $pdf->AddPage();
+                $pdf->SetFontSize(24);
+                $pdf->Cell(0,18,$contr->name.'-'.$contr->first_name,0,1);
+                $pdf->SetFontSize(16);
+                $pdf->Cell(0,18,$contr->code,0,1);
+                $pdf->SetFontSize(20);
+                $pdf->Cell(0,9,"Delivery Date: ".$contr->disp_date,0,1);
+                $pdf->SetFontSize(12);
+                $pdf->Cell(0,9,"Delivery Type: ".$contr->Type,0,1);
+                $pdf->SetFontSize(20);
+                $pdf->Cell(0,9,"Quantity: ".$contr->amt,0,1);
+                $pdf->SetFontSize(12);
+                $pdf->Cell(0,9,"Job Number: ".$contr->job_no,0,1);
+                $pdf->Cell(0,9,"Job Name: ".$contr->publication,0,1);
+                $pdf->Cell(0,9,"Special Notes: ".$contr->comments,0,1);
+                //$pdf->Cell(0,9,$contr->code,0,1);
+            }
+            $do_name = get("operator","company","WHERE operator_id=$doff");
+            $pdf->Output($dirp.'/contractor_sheets_'.$do_name.'.pdf','F');
+    }
+}
+
 if($report=="weekly_send_out"){
 	
 	//$pdf_only=true;
 	$pdffiles = array();
 	$now=date("Y_m_d_H_i_s");
-	$dir=$SEND_OUTPUT_DIR."temp_deliv/$now";
-	mkdir($dir);
+	$dirp=$SEND_OUTPUT_DIR."temp_deliv/$now";
+	mkdir($dirp);
 	
 	$font_size = 8;
 
@@ -779,8 +860,6 @@ if($report=="weekly_send_out"){
 		$date_show_start 	= date("jS M Y",strtotime($date_start));
 		$date_show_end 		= date("jS M Y",strtotime($date_final));
 		if($company!='All' && $company) $where_add = " AND operator_id='$company'";
-		
-		
 		
 		
 		$qry_dist = "SELECT DISTINCT operator_id,company FROM operator WHERE is_dist='Y' $where_add";
@@ -899,6 +978,7 @@ if($report=="weekly_send_out"){
 				$tot_qty1 = 0;
 				$tot_qty2 = 0;
 				while($do = mysql_fetch_object($res_dos)){
+                    weekly_a5($do->dropoff_id, $job->job_id, $dirp, $date_start, $date_final);
 					if(($show_rd_details && $job->is_regular=='Y') || ($job->is_regular=='N'||trim($job->is_regular=='')) ){
 						$group = "GROUP BY job_route.route_id,IF(job_route.dest_type='bundles',1,0)";
 						$sel_rd = "route.code AS 'RD',";					
@@ -975,14 +1055,6 @@ if($report=="weekly_send_out"){
 					echo "<br />";*/
 	
 					$data = $tab->LoadData($qry);
-					/*$new_data = array();
-					foreach($data as $d){
-						$new_data[] = $d;
-						$new_line = array();
-						$new_line["Circular"] = $d["client"];
-						$new_data[] = $new_line;
-					}*/
-					
 								
 					$tab->WriteTable($header,$data,$width,4,false);		
 
@@ -1040,7 +1112,7 @@ if($report=="weekly_send_out"){
 			$fn = clean_file_name("dist_delivery_instructions_".$name.".pdf");
 			
 			if($num_jobs>0){
-				$tab->Output($dir.'/'.$fn);
+				$tab->Output($dirp.'/'.$fn);
 				//$tab->Output();
 				
 				echo "Delivery instructions for <strong>$company</strong> created.<br />";
@@ -1048,10 +1120,10 @@ if($report=="weekly_send_out"){
 				//fwrite($fp,"Delivery instructions for <strong>$company</strong> created.\n");
 		
 				if(!$pdf_only) {
-					send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$dist_id,$receiver);
+					send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$dist_id,$receiver);
 				}
 				
-				$pdffiles[] = $dir.'/'.$fn;
+				$pdffiles[] = $dirp.'/'.$fn;
 				//pdf_merge($now,$fn);
 			}
 			
@@ -1358,12 +1430,12 @@ if($report=="weekly_send_out"){
 						
 							$fn = clean_file_name("do_delivery_instructions_".$do->name.".pdf");
 							
-							$tab->Output($dir.'/'.$fn);
+							$tab->Output($dirp.'/'.$fn);
 							
 							echo "($count) Delivery instructions for <strong>$do->company</strong> created.<br />";
 							//fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
-							if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$do->dropoff_id,$receiver);
-							$pdffiles[] = $dir.'/'.$fn;
+							if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$do->dropoff_id,$receiver);
+							$pdffiles[] = $dirp.'/'.$fn;
 							//pdf_merge($now,$fn);
 							
 						}
@@ -1371,11 +1443,11 @@ if($report=="weekly_send_out"){
 							$fn = clean_file_name("do_MAIL_delivery_instructions_".$do->company.".pdf");
 			
 
-							$tab->Output($dir.'/'.$fn);
+							$tab->Output($dirp.'/'.$fn);
 							
 							echo "($count) Delivery instructions for <strong>$do->company (MAIL)</strong> created.<br />";
 							//fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
-							if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$do->dropoff_id,$mail_receiver);
+							if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$do->dropoff_id,$mail_receiver);
 						}
 					}
 				}//while do
@@ -1384,7 +1456,6 @@ if($report=="weekly_send_out"){
             // CONTRACTOR SEND OUT
             /////////////////////////////////////////////////////////
 			if(1){
-            $where_add_contr = " AND parcel_send_di='Y' ";
             $qry_dos = "SELECT DISTINCT CONCAT(name,'_',first_name) AS name,
                                 company,
                                 contractor_id,
@@ -1400,7 +1471,6 @@ if($report=="weekly_send_out"){
                          ON address.operator_id=operator.operator_id
                          WHERE job_route.dist_id='$dist_id'
                             $where_add
-                            $where_add_contr
                         ORDER BY company";
             //echo nl2br($qry_dos);
             //die();
@@ -1673,12 +1743,12 @@ if($report=="weekly_send_out"){
 
                             $fn = clean_file_name("contr_delivery_instructions_".$do->name.".pdf");
 
-                            $tab->Output($dir.'/'.$fn);
+                            $tab->Output($dirp.'/'.$fn);
 
                             echo "($count) Delivery instructions for <strong>$do->company</strong> created.<br />";
                             //fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
-                            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$do->contractor_id,$receiver);
-                            $pdffiles[] = $dir.'/'.$fn;
+                            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$do->contractor_id,$receiver);
+                            $pdffiles[] = $dirp.'/'.$fn;
                             //pdf_merge($now,$fn);
 
                         }
@@ -1686,11 +1756,11 @@ if($report=="weekly_send_out"){
                             $fn = clean_file_name("contr_MAIL_delivery_instructions_".$do->company.".pdf");
 
 
-                            $tab->Output($dir.'/'.$fn);
+                            $tab->Output($dirp.'/'.$fn);
 
                             echo "($count) Delivery instructions for <strong>$do->company (MAIL)</strong> created.<br />";
                             //fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
-                            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dir,$fn,$do->dropoff_id,$mail_receiver);
+                            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$do->dropoff_id,$mail_receiver);
                         }
                     }
                 }//while contr
