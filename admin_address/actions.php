@@ -197,6 +197,7 @@ if($action=="save_operator"){
 	if($postcode=="") $postcode=0;
 	if($latest_dep=="") $latest_dep="0:00";
 	if(!$shares||$shares=='') $shares=0;
+    if(!$send_contr_sheet) $send_contr_sheet = 'N';
 	
 	if($same_as_add=='Y'){
 		$do_address = $address;
@@ -238,7 +239,8 @@ if($action=="save_operator"){
 									 latest_dep,
 									 subdist_seq,
 									 rate_red_fact,
-									 parcel_send_di)
+									 parcel_send_di,
+                                     send_contr_sheet)
 				VALUES('$is_current',
 					 '$company',
 					 '$is_dist',
@@ -265,7 +267,8 @@ if($action=="save_operator"){
 					 '$latest_dep',
 					 '$subdist_seq'+0,
 					 '$rate_red_fact'+0,
-					 '$parcel_send_di')";
+					 '$parcel_send_di',
+                     '$send_contr_sheet')";
 		query($sql);
 		$operator_id=mysql_insert_id();					 
 		$qry = "UPDATE address SET operator_id=$operator_id WHERE address_id=$address_id";
@@ -300,7 +303,8 @@ if($action=="save_operator"){
 					 latest_dep		= '$latest_dep',
 					 subdist_seq	= '$subdist_seq'+0,
 					 rate_red_fact  = '$rate_red_fact',
-					 parcel_send_di = '$parcel_send_di'
+					 parcel_send_di = '$parcel_send_di',
+                     send_contr_sheet = '$send_contr_sheet'
 				WHERE operator_id='$operator_id'";
 			query($sql);
 	}

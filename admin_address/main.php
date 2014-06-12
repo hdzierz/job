@@ -28,6 +28,8 @@ if($action=="edit"||$action=="add"){
 	if(!$share_bought) $share_bought="1990-01-01";
 	$share_sold   = $operator->share_sold;
 	if(!$share_sold) $share_sold="1990-01-01";
+    
+    if(!$send_contr_sheet) $send_contr_sheet = $operator->send_contr_sheet;
 	
 	$company = stripslashes($operator->company);
 	
@@ -195,6 +197,14 @@ if($action=="edit"||$action=="add"){
 				<td><input type="checkbox" value="Y" <?php if($operator->parcel_send_di=='Y') echo "checked"; ?> name="parcel_send_di" /></td>
 					
 			</tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Send contr. details</td>
+                <td>
+                    <input type="checkbox" value="Y" <?php if($operator->send_contr_sheet=='Y') echo "checked"; ?> name="send_contr_sheet" />
+                </td>
+            </tr>
 			<tr>
 				<td>Drop Off Address:</td>
 				<td colspan="4">
