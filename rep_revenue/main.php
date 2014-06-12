@@ -765,6 +765,9 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final){
             $qry = "
                     SELECT SUM(amount) AS amt,
                             job.*,
+                            DATE_FORMAT(job.delivery_date,'%e %M') AS disp_date,
+                            address.first_name,
+                            address.name,
                              GROUP_CONCAT(DISTINCT IF(is_att<>'Y', 
                                    CASE job_route.dest_type
                                         WHEN 'num_lifestyle' THEN 'L/Style'
@@ -787,6 +790,8 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final){
                         ON job_route.job_id=job.job_id
                     LEFT JOIN operator
                         ON job_route.contractor_id=operator.operator_id
+                    LEFT JOIN address
+                        ON address.operator_id=operator.operator_id
                     LEFT JOIN route
                         ON job_route.route_id=route.route_id
                     WHERE
@@ -801,13 +806,17 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final){
             $pdf->AliasNbPages();
             while($contr = mysql_fetch_object($res_contr)){
                 $pdf->AddPage();
-                $pdf->SetFontSize(18);
-                $pdf->Cell(0,18,$contr->company,0,1);
+                $pdf->SetFontSize(24);
+                $pdf->Cell(0,18,$contr->name.'-'.$contr->first_name,0,1);
+                $pdf->SetFontSize(16);
                 $pdf->Cell(0,18,$contr->code,0,1);
+                $pdf->SetFontSize(20);
+                $pdf->Cell(0,9,"Delivery Date: ".$contr->disp_date,0,1);
                 $pdf->SetFontSize(12);
-                $pdf->Cell(0,9,"Delivery Date: ".$contr->delivery_date,0,1);
                 $pdf->Cell(0,9,"Delivery Type: ".$contr->Type,0,1);
+                $pdf->SetFontSize(20);
                 $pdf->Cell(0,9,"Quantity: ".$contr->amt,0,1);
+                $pdf->SetFontSize(12);
                 $pdf->Cell(0,9,"Job Number: ".$contr->job_no,0,1);
                 $pdf->Cell(0,9,"Job Name: ".$contr->publication,0,1);
                 $pdf->Cell(0,9,"Special Notes: ".$contr->comments,0,1);

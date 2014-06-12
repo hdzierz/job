@@ -8,7 +8,7 @@ class a5label extends FPDF
     function Header()
     {
         // Logo
-        $this->Image('images/coural-rural-couriers.png',10,6,30);
+        //$this->Image('images/coural-rural-couriers.png',10,6,30);
         // Arial bold 15
         $this->SetFont('Arial','B',15);
         // Move to the right
