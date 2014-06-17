@@ -29,11 +29,21 @@ $site['smtp_password'] = "zt90undr";
 
 $ADMIN_EMAIL = "hdzierz@gmail.com";
 
-function log_mail($adr){
-    $f = fopen('tmp/email.log', 'a+');
-    fwrite($f, $adr.': '.date('Y-m-d')."\n\n\n");
-    fclose($f);
+
+function log_mail($adr, $subject){
+    $qry = "INSERT INTO email_log(address, subject) VALUES('%s','%s')";
+    foreach($adr as $a){
+        if(is_array($a) && count($a) == 2){
+            $q = sprintf($qry, $a[0], $subject);
+            query($q);
+        }
+    }
+    //$f = fopen('tmp/email.log', 'a+');
+    //fwrite($f, $adr.': '.date('Y-m-d')."\n\n\n");
+    //fclose($f);
 }
+
+
 
 class FreakMailer extends PHPMailer
 {
@@ -83,7 +93,7 @@ class FreakMailer extends PHPMailer
     
     function Send(){
         $to = implode(',',$this->to);
-        log_mail(print_r($this->to, true));
+        log_mail($this->to, $this->Subject);
         return parent::Send();
     }
 }

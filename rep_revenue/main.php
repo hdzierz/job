@@ -748,7 +748,7 @@ if($report=="linehaul_send_out"){
 }
 
 
-function weekly_a5($doff, $job, $dirp, $date_start, $date_final){
+function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only){
     $pdffiles = array();
 
     $font_size = 8;
@@ -825,7 +825,9 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final){
                 //$pdf->Cell(0,9,$contr->code,0,1);
             }
             $do_name = get("operator","company","WHERE operator_id=$doff");
-            $pdf->Output($dirp.'/contractor_sheets_'.$do_name.'.pdf','F');
+            $fn = 'contractor_sheets_'.$do_name.'.pdf';
+            $pdf->Output($dirp.'/'.$fn,'F');
+            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$doff,false);
     }
 }
 
@@ -978,7 +980,7 @@ if($report=="weekly_send_out"){
 				$tot_qty1 = 0;
 				$tot_qty2 = 0;
 				while($do = mysql_fetch_object($res_dos)){
-                    weekly_a5($do->dropoff_id, $job->job_id, $dirp, $date_start, $date_final);
+                    weekly_a5($do->dropoff_id, $job->job_id, $dirp, $date_start, $date_final, $pdf_only);
 					if(($show_rd_details && $job->is_regular=='Y') || ($job->is_regular=='N'||trim($job->is_regular=='')) ){
 						$group = "GROUP BY job_route.route_id,IF(job_route.dest_type='bundles',1,0)";
 						$sel_rd = "route.code AS 'RD',";					
