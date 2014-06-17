@@ -292,7 +292,8 @@ if($report=="job_delivery"){
 			</tr>
 			<tr>
 				<td colspan="4" align="center">
-					<input type="submit" value="Send Out" />
+					<input type="submit" name="submit" value="Send Out" />
+                    <input type="submit" name="submit" value="Create PDF only" />
 					<input type="hidden" name="report" value="weekly_send_out" />
 					<input type="hidden" name="date_start" value="<?=$date_start?>" />
 					<input type="hidden" name="date_final" value="<?=$date_final?>" />

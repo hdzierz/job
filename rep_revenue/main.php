@@ -748,7 +748,7 @@ if($report=="linehaul_send_out"){
 }
 
 
-function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only){
+function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $receiver){
     $pdffiles = array();
 
     $font_size = 8;
@@ -827,7 +827,7 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only){
             $do_name = get("operator","company","WHERE operator_id=$doff");
             $fn = 'contractor_sheets_'.$do_name.'.pdf';
             $pdf->Output($dirp.'/'.$fn,'F');
-            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$doff,false);
+            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$doff,$receiver);
     }
 }
 
@@ -840,7 +840,9 @@ if($report=="weekly_send_out"){
 	mkdir($dirp);
 	
 	$font_size = 8;
-
+    if($submit=="Create PDF only"){
+        $pdf_only=true;
+    }
 	// Helge
 	//$receiver = "helge.dzierzon@computercare.co.nz";
 	//$mail_receiver = "helge.dzierzon@computercare.co.nz";
@@ -980,7 +982,7 @@ if($report=="weekly_send_out"){
 				$tot_qty1 = 0;
 				$tot_qty2 = 0;
 				while($do = mysql_fetch_object($res_dos)){
-                    weekly_a5($do->dropoff_id, $job->job_id, $dirp, $date_start, $date_final, $pdf_only);
+                    weekly_a5($do->dropoff_id, $job->job_id, $dirp, $date_start, $date_final, $pdf_only, $receiver);
 					if(($show_rd_details && $job->is_regular=='Y') || ($job->is_regular=='N'||trim($job->is_regular=='')) ){
 						$group = "GROUP BY job_route.route_id,IF(job_route.dest_type='bundles',1,0)";
 						$sel_rd = "route.code AS 'RD',";					
