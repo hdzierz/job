@@ -33,4 +33,36 @@ if($ERROR){
 <?
 }
 
+if($action=='show'){
+
+    if(!$date_start){
+        $date_start = date('Y-m-d');
+    }
+
+    if(!$date_end){
+        $date_end = date('Y-m-d');
+    }
+
+?>
+    <script type="text/javascript" src="includes/calendarDateInput.js"></script>
+    <form name="weekly_job" action="admin_message.php" method="post">
+    <table>
+        <tr>
+            <td>From:</td>
+            <td>
+                <script language="javascript">DateInput("date_start", true, "YYYY-MM-DD","<?=$date_start?>")</script>
+            </td>
+            <td>To:</td>
+            <td>
+                <script language="javascript">DateInput("date_end", true, "YYYY-MM-DD","<?=$date_end?>")</script>
+            </td>
+            <td>
+                 <input type="submit" value="List" />
+                 <input type="hidden" name="action" value="show" />
+            </td>
+        </tr>
+    </table>
+    </form>
+<?
+}
 ?>

@@ -799,35 +799,37 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $rec
                         doff={$doff}
                         AND job.job_id=$job
                         AND delivery_date BETWEEN '$date_start' AND '$date_final'
-                        AND send_contr_sheet='Y'
                     GROUP BY job.job_id, contractor_id, route.route_id
                     ORDER BY job.job_id, company, route.code
                 ";
             $res_contr = query($qry);
-            $pdf = new a5label('L', 'mm', 'A5');
-            $pdf->AliasNbPages();
-            while($contr = mysql_fetch_object($res_contr)){
-                $pdf->AddPage();
-                $pdf->SetFontSize(24);
-                $pdf->Cell(0,18,$contr->name.'-'.$contr->first_name,0,1);
-                $pdf->SetFontSize(16);
-                $pdf->Cell(0,18,$contr->code,0,1);
-                $pdf->SetFontSize(20);
-                $pdf->Cell(0,9,"Delivery Date: ".$contr->disp_date,0,1);
-                $pdf->SetFontSize(12);
-                $pdf->Cell(0,9,"Delivery Type: ".$contr->Type,0,1);
-                $pdf->SetFontSize(20);
-                $pdf->Cell(0,9,"Quantity: ".$contr->amt,0,1);
-                $pdf->SetFontSize(12);
-                $pdf->Cell(0,9,"Job Number: ".$contr->job_no,0,1);
-                $pdf->Cell(0,9,"Job Name: ".$contr->publication,0,1);
-                $pdf->Cell(0,9,"Special Notes: ".$contr->comments,0,1);
-                //$pdf->Cell(0,9,$contr->code,0,1);
-            }
-            $do_name = get("operator","company","WHERE operator_id=$doff");
-            $fn = 'contractor_sheets_'.$do_name.'.pdf';
-            $pdf->Output($dirp.'/'.$fn,'F');
-            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$doff,$receiver);
+            if(mysql_num_rows($res_contr)>0){
+                $pdf = new a5label('L', 'mm', 'A5');
+                $pdf->AliasNbPages();
+                while($contr = mysql_fetch_object($res_contr)){
+                    $pdf->AddPage();
+                    $pdf->SetFontSize(24);
+                    $pdf->Cell(0,18,$contr->name.'-'.$contr->first_name,0,1);
+                    $pdf->SetFontSize(16);
+                    $pdf->Cell(0,18,$contr->code,0,1);
+                    $pdf->SetFontSize(20);
+                    $pdf->Cell(0,9,"Delivery Date: ".$contr->disp_date,0,1);
+                    $pdf->SetFontSize(12);
+                    $pdf->Cell(0,9,"Delivery Type: ".$contr->Type,0,1);
+                    $pdf->SetFontSize(20);
+                    $pdf->Cell(0,9,"Quantity: ".$contr->amt,0,1);
+                    $pdf->SetFontSize(12);
+                    $pdf->Cell(0,9,"Job Number: ".$contr->job_no,0,1);
+                    $pdf->Cell(0,9,"Job Name: ".$contr->publication,0,1);
+                    $pdf->Cell(0,9,"Special Notes: ".$contr->comments,0,1);
+                    //$pdf->Cell(0,9,$contr->code,0,1);
+                }
+                $do_name = get("operator","company","WHERE operator_id=$doff");
+                $fn = addslashes('contractor_sheets_'.$do_name.'.pdf');
+                $pdf->Output($dirp.'/'.$fn,'F');
+                if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS (CONTR SHEET)",$dirp,$fn,$doff);
+                die();
+            }//if(mysql_num_rows($res_contr>0)
     }
 }
 
@@ -982,7 +984,9 @@ if($report=="weekly_send_out"){
 				$tot_qty1 = 0;
 				$tot_qty2 = 0;
 				while($do = mysql_fetch_object($res_dos)){
-                    weekly_a5($do->dropoff_id, $job->job_id, $dirp, $date_start, $date_final, $pdf_only, $receiver);
+                    $send_contr_sheet = get("operator", "send_contr_sheet", "WHERE operator_id=$do->dropoff_id");
+                    if($send_contr_sheet == 'Y')
+                        weekly_a5($do->dropoff_id, $job->job_id, $dirp, $date_start, $date_final, $pdf_only, $receiver);
 					if(($show_rd_details && $job->is_regular=='Y') || ($job->is_regular=='N'||trim($job->is_regular=='')) ){
 						$group = "GROUP BY job_route.route_id,IF(job_route.dest_type='bundles',1,0)";
 						$sel_rd = "route.code AS 'RD',";					
@@ -1484,6 +1488,10 @@ if($report=="weekly_send_out"){
                 //fwrite($fp,"Number of DOs:".mysql_num_rows($res_dos)."\n");
                 $count=0;
                 while($do=mysql_fetch_object($res_dos)){
+                    $parcel_send_di = get("operator", "parcel_send_di", "WHERE operator_id={$do->contractor_id}");
+                    if($parcel_send_di != 'Y'){
+                        continue;
+                    } 
                     $count++;
                     echo "($count) Preparing delivery instructions for <strong>$do->company</strong>.<br />";
                     //fwrite($fp,"($count) Preparing delivery instructions for <strong>$do->company</strong>.\n");

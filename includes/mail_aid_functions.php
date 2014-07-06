@@ -16,13 +16,14 @@ $site['from_email'] = $ADMIN_EMAIL; // from email address
 // provide an option to use external mail server.
 $site['smtp_mode'] = 'enabled'; // enabled or disabled
 $site['smtp_host'] = "mail.dzierzon.co.nz:587";
-//$site['smtp_host'] = "ssl://smtp.gmail.com:465";
 
 $site['smtp_port'] = intval(587);
-//$site['smtp_username'] = "ruralcouriers@gmail.com";
 $site['smtp_username'] = 'hdzierz@dzierzon.co.nz';
-//$site['smtp_password'] = "pOdey&02";
 $site['smtp_password'] = "zt90undr";
+
+//$site['smtp_host'] = "mail.coural.co.nz:587";
+//$site['smtp_username'] = 'cloud@coural.co.nz';
+//$site['smtp_password'] = "Rur4lD3l1v3ry";
 
 
 # $site['smtp_mode'] = 'disabled'; // enabled or disabled
@@ -60,7 +61,7 @@ class FreakMailer extends PHPMailer
         global $site;
 		
 		//$this->isSMTP();
-		//$this->AuthType = "NTLM";
+		$this->AuthType = "NTLM";
         // Comes from config.php $site array
 
         if($site['smtp_mode'] == 'enabled')
@@ -222,7 +223,8 @@ function send_test_mail(){
 	$mailer->Body = "TEST";
 	$mailer->From = "coural@coural.co.nz";
 	$mailer->SMTPDebug = 2;
-	//$mailer->AuthType = "NTLM";
+	$mailer->AuthType = "NTLM";
+    $mail->SMTPSecure = "tls";  
 	$mailer->AddAddress("hdzierz@gmail.com", 'Coural Head Office');
 	if(!$mailer->Send())
 	{
@@ -232,8 +234,11 @@ function send_test_mail(){
 		echo "<font color='green'>SUCCESS</font><br />";
 	}
 }
+
+$MAIL_DEBUG = false;
 function send_operator_mail($target,$dir,$file,$id,$email=false){
 	global $ADMIN_EMAIL;
+    global $MAIL_DEBUG;
 	$alt_send_required = false;
 	
 	if($target=="JOB DROP OFF DETAILS"){
@@ -250,7 +255,7 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 		}
 		
 	}
-	
+
 	$mailer = new FreakMailer();
 	if($email){
 		

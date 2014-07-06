@@ -225,6 +225,23 @@ if($action=="add_addresses" || $action == "change_addresses"){
 }
 
 
+if($action=='show'){
+    $qry = "SELECT log_id, address, subject, time_point AS `date` 
+            FROM email_log
+            WHERE time_point 
+            BETWEEN '$date_start' AND '$date_end'
+            ORDER BY time_point DESC";
+            
+    $tab  = new MySQLTable("admin_message.php",$qry);
+    $tab->showRec=0;
+    $tab->hasEditButton=false;
+    $tab->hasDeleteButton=false;
+    $tab->hasAddButton=false;
+    $tab->startTable();
+    $tab->writeTable();
+    $tab->stopTable();    
+}
+
 // Creates a new message or the user may change general message info
 if($action=="edit" || $action=="add"){
 	

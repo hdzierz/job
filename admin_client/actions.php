@@ -124,7 +124,9 @@ function save_arcel_price($client_id, $sell_rate, $qty_per_book, $type){
 	else{
 		$qry = "INSERT INTO parcel_price(client_id,type_id,sell_rate,qty_per_book) VALUES($client_id,$type_id,$sell_rate, $qty_per_book)";
 	}
-	query($qry);
+    if($sell_rate && $qty_per_book){
+	    query($qry);
+    }
 }
 
 
