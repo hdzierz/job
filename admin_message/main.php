@@ -226,7 +226,7 @@ if($action=="add_addresses" || $action == "change_addresses"){
 
 
 if($action=='show'){
-    $qry = "SELECT log_id, address, subject, time_point AS `date` 
+    $qry = "SELECT log_id, address, subject, error_count, error_info, time_point AS `date` 
             FROM email_log
             WHERE time_point 
             BETWEEN '$date_start' AND '$date_end'

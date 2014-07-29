@@ -748,9 +748,15 @@ if($report=="linehaul_send_out"){
 }
 
 
-function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $receiver){
+$doff_prev = 0;
+function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $receiver, $is_by_job){
     $pdffiles = array();
-
+    GLOBAL $doff_prev;
+    if($doff == $doff_prev && !$is_by_job){
+        $doff_prev = $doff;
+        return;
+    }
+    $doff_prev = $doff;
     $font_size = 8;
     $count_mail=0;
     if(!$comment2)
@@ -760,6 +766,10 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $rec
         $date_show_start    = date("jS M Y",strtotime($date_start));
         $date_show_end      = date("jS M Y",strtotime($date_final));
         if($company!='All' && $company) $where_add = " AND operator_id='$company'";
+
+        $where_add = "";
+        if($is_by_job)
+            $where_add = " AND job.job_id=$job\n";
 
         $jobs = array();
             $qry = "
@@ -797,15 +807,16 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $rec
                         ON job_route.route_id=route.route_id
                     WHERE
                         doff={$doff}
-                        AND job.job_id=$job
+                        $where_add 
                         AND delivery_date BETWEEN '$date_start' AND '$date_final'
+                        AND inc_linehaul = 'Y'
                     GROUP BY job.job_id, contractor_id, route.route_id
-                    ORDER BY job.job_id, company, route.code
+                    ORDER BY job.job_id, route.code
                 ";
             $res_contr = query($qry);
             if(mysql_num_rows($res_contr)>0){
-                $pdf = new a5label('L', 'mm', 'A5');
-                $pdf->AliasNbPages();
+                $pdf = new a5label('P', 'mm', 'A4');
+                //$pdf->AliasNbPages();
                 while($contr = mysql_fetch_object($res_contr)){
                     $pdf->AddPage();
                     $pdf->SetFontSize(24);
@@ -821,14 +832,13 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $rec
                     $pdf->SetFontSize(12);
                     $pdf->Cell(0,9,"Job Number: ".$contr->job_no,0,1);
                     $pdf->Cell(0,9,"Job Name: ".$contr->publication,0,1);
-                    $pdf->Cell(0,9,"Special Notes: ".$contr->comments,0,1);
-                    //$pdf->Cell(0,9,$contr->code,0,1);
+                    if($contr->show_comments == 'Y')
+                        $pdf->Cell(0,9,"Special Notes: ".$contr->comments,0,1);
                 }
                 $do_name = get("operator","company","WHERE operator_id=$doff");
                 $fn = addslashes('contractor_sheets_'.$do_name.'.pdf');
                 $pdf->Output($dirp.'/'.$fn,'F');
                 if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS (CONTR SHEET)",$dirp,$fn,$doff);
-                die();
             }//if(mysql_num_rows($res_contr>0)
     }
 }
@@ -867,7 +877,9 @@ if($report=="weekly_send_out"){
 		$date_show_end 		= date("jS M Y",strtotime($date_final));
 		if($company!='All' && $company) $where_add = " AND operator_id='$company'";
 		
-		
+	
+        sleep(60);
+	
 		$qry_dist = "SELECT DISTINCT operator_id,company FROM operator WHERE is_dist='Y' $where_add";
 		
 		$res_dist = query($qry_dist);
@@ -898,7 +910,7 @@ if($report=="weekly_send_out"){
 						 	AND delivery_date<='$date_final' ";
 			}
 			
-			$qry_jobs = "SELECT DISTINCT job_no,is_regular,job.job_id
+			$qry_jobs = "SELECT DISTINCT job_no,is_regular,job.job_id, inc_linehaul
 						 FROM job 
 						 LEFT JOIN job_route
 						 ON job.job_id=job_route.job_id
@@ -966,7 +978,8 @@ if($report=="weekly_send_out"){
 				$qry_dos = "SELECT DISTINCT CONCAT(name,'_',first_name) AS name,
 								company,
 								dropoff_id,
-								mail_type
+								mail_type,
+                                inc_linehaul
 						 FROM job 
 						 LEFT JOIN job_route
 						 ON job.job_id=job_route.job_id
@@ -984,9 +997,12 @@ if($report=="weekly_send_out"){
 				$tot_qty1 = 0;
 				$tot_qty2 = 0;
 				while($do = mysql_fetch_object($res_dos)){
+                    if(!$do->dropoff_id) continue;
                     $send_contr_sheet = get("operator", "send_contr_sheet", "WHERE operator_id=$do->dropoff_id");
-                    if($send_contr_sheet == 'Y')
-                        weekly_a5($do->dropoff_id, $job->job_id, $dirp, $date_start, $date_final, $pdf_only, $receiver);
+                    if($send_contr_sheet == 'Y' && $job->inc_linehaul == 'Y'){
+                        $is_by_job = false;
+                        weekly_a5($do->dropoff_id, $job->job_id, $dirp, $date_start, $date_final, $pdf_only, $receiver, $is_job_report);
+                    }
 					if(($show_rd_details && $job->is_regular=='Y') || ($job->is_regular=='N'||trim($job->is_regular=='')) ){
 						$group = "GROUP BY job_route.route_id,IF(job_route.dest_type='bundles',1,0)";
 						$sel_rd = "route.code AS 'RD',";					
@@ -1039,6 +1055,7 @@ if($report=="weekly_send_out"){
 								ELSE CONCAT(operator.company,' (',mail_type,')')
 							END
 								AS Dropoff,
+                            inc_linehaul,
 							$sel_rd
 							SUM(IF(is_att<>'Y',job_route.amount,0)) 	AS 'Qty'
 					FROM job
@@ -1096,15 +1113,6 @@ if($report=="weekly_send_out"){
 				$tab->StopLine();
 			} // while job
 			$first_job=true;
-			
-			/*$tab->StartLine($font_size);
-				$width_emtpy = $maxw-$width["Delivery Date"]-$width["Quantity"];
-				$tab->WriteLine("",'R',$font_size,$width_emtpy);
-				$tab->WriteLine("Total:",'R',$font_size,$width["Delivery Date"]);
-				$tab->WriteLine($tot_sum_qty,'R',$font_size,$width["Quantity"]);
-			$tab->StopLine();*/
-			
-			//$tab->WriteDivider($maxw);
 			
 			$comment2 = str_replace("<br />","\n",$comment2);
 			$tab->StartLine($font_size);

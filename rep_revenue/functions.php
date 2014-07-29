@@ -27,7 +27,7 @@ class a5label extends FPDF
         // Arial italic 8
         $this->SetFont('Arial','I',8);
         // Page number
-        $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
+        //$this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
     }
 }
 

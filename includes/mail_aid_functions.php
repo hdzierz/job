@@ -31,11 +31,11 @@ $site['smtp_password'] = "zt90undr";
 $ADMIN_EMAIL = "hdzierz@gmail.com";
 
 
-function log_mail($adr, $subject){
-    $qry = "INSERT INTO email_log(address, subject) VALUES('%s','%s')";
+function log_mail($adr, $subject, $err_info, $err_count){
+    $qry = "INSERT INTO email_log(address, subject, error_count, error_info) VALUES('%s','%s', %d, '%s')";
     foreach($adr as $a){
         if(is_array($a) && count($a) == 2){
-            $q = sprintf($qry, $a[0], $subject);
+            $q = sprintf($qry, $a[0], $subject, $err_count, $err_info);
             query($q);
         }
     }
@@ -94,7 +94,7 @@ class FreakMailer extends PHPMailer
     
     function Send(){
         $to = implode(',',$this->to);
-        log_mail($this->to, $this->Subject);
+        log_mail($this->to, $this->Subject, $this->ErrorInfo, $this->error_count);
         return parent::Send();
     }
 }
@@ -260,11 +260,11 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 	if($email){
 		
 		
-		//$mailer->SMTPKeepAlive = true; 
+		$mailer->SMTPKeepAlive = true; 
 		$mailer->Subject = 	get_subject($id,$target);
 		$mailer->Body = get_body($id,$target);
 		$mailer->From = "coural@coural.co.nz";
-		//$mailer->SMTPDebug = 2;
+		$mailer->SMTPDebug = 2;
 		
 		$mailer->AddAddress($email, 'Coural Head Office');
 		if($alt_email)
