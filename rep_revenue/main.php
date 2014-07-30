@@ -829,7 +829,7 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $rec
                     $pdf->Cell(0,9,"Delivery Type: ".$contr->Type,0,1);
                     $pdf->SetFontSize(20);
                     $pdf->Cell(0,9,"Quantity: ".$contr->amt,0,1);
-                    $pdf->SetFontSize(12);
+                    $pdf->SetFontSize(14);
                     $pdf->Cell(0,9,"Job Number: ".$contr->job_no,0,1);
                     $pdf->Cell(0,9,"Job Name: ".$contr->publication,0,1);
                     if($contr->show_comments == 'Y')
