@@ -272,7 +272,7 @@ function show_job_details_send($job_id,$choice){
 			$tab->Output($dir.'/'.$fn);
 			
 			//send_operator_mail("JOB DETAILS","temp_deliv",$fn,$hauler);
-			send_operator_mail("JOB DETAILS",$dir,$fn,$dist->dist_id,"helge.dzierzon@computercare.co.nz");
+			send_operator_mail("JOB DETAILS",$dir,$fn,$dist->dist_id);
 			//send_operator_mail("JOB DETAILS",$dir,$fn,$dist->dist_id,"howard@coural.co.nz");
 		}
 		

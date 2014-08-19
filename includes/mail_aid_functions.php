@@ -10,23 +10,21 @@ $FAX_NUM_EMAIL_MODE = get("config","value","WHERE name='FAX_NUM_EMAIL_MODE'");//
 
 // Email Settings
 $site['from_name'] = 'Coural'; // from email name
-$site['from_email'] = $ADMIN_EMAIL; // from email address
+$site['from_email'] = 'cloud@coural.co.nz'; // from email address
  
 // Just in case we need to relay to a different server,
 // provide an option to use external mail server.
 $site['smtp_mode'] = 'enabled'; // enabled or disabled
-$site['smtp_host'] = "mail.dzierzon.co.nz:587";
+//$site['smtp_host'] = "mail.dzierzon.co.nz:587";
 
 $site['smtp_port'] = intval(587);
-$site['smtp_username'] = 'hdzierz@dzierzon.co.nz';
-$site['smtp_password'] = "zt90undr";
+//$site['smtp_username'] = 'hdzierz@dzierzon.co.nz';
+//$site['smtp_password'] = "zt90undr";
 
-//$site['smtp_host'] = "mail.coural.co.nz:587";
-//$site['smtp_username'] = 'cloud@coural.co.nz';
-//$site['smtp_password'] = "Rur4lD3l1v3ry";
+$site['smtp_host'] = "mail.coural.co.nz:587";
+$site['smtp_username'] = 'cloud@coural.co.nz';
+$site['smtp_password'] = "Rur4lD3l1v3ry";
 
-
-# $site['smtp_mode'] = 'disabled'; // enabled or disabled
 
 $ADMIN_EMAIL = "hdzierz@gmail.com";
 
@@ -60,8 +58,8 @@ class FreakMailer extends PHPMailer
     {
         global $site;
 		
-		//$this->isSMTP();
-		$this->AuthType = "NTLM";
+		$this->isSMTP();
+		//$this->AuthType = "NTLM";
         // Comes from config.php $site array
 
         if($site['smtp_mode'] == 'enabled')
@@ -72,6 +70,7 @@ class FreakMailer extends PHPMailer
             if($site['smtp_username'] != '')
             {
                 $this->SMTPAuth = true;
+                //$this->SMTPSecure = "tls";
                 $this->Username = $site['smtp_username'];
                 $this->Password = $site['smtp_password'];
             }
@@ -221,10 +220,11 @@ function send_test_mail(){
 	//$mailer->SMTPKeepAlive = true; 
 	$mailer->Subject = 	"TEST";
 	$mailer->Body = "TEST";
-	$mailer->From = "coural@coural.co.nz";
+	$mailer->From = "cloud@coural.co.nz";
 	$mailer->SMTPDebug = 2;
-	$mailer->AuthType = "NTLM";
-    $mail->SMTPSecure = "tls";  
+	//$mailer->AuthType = "NTLM";
+    //$mail->SMTPSecure = "tls";  
+    $mailer->AddReplyTo('cloud@coural.co.nz', 'noreply');
 	$mailer->AddAddress("hdzierz@gmail.com", 'Coural Head Office');
 	if(!$mailer->Send())
 	{
@@ -243,7 +243,7 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 	
 	if($target=="JOB DROP OFF DETAILS"){
 		$company = get("client","name","WHERE client_id='$id'");
-		if(!$email) $email = get("client","email","WHERE client_id='$id'");
+		if(!$email) $email = get("client","email","WHERE client_id='$id'", 1);
 	}
 	else{
 		$company = get("operator","company","WHERE operator_id='$id'");
@@ -252,21 +252,27 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 		{
 			$email = get_email($id);
 			$alt_email = get_email($id,true);
+            if(!$email){
+                $email = $alt_email;
+                $alt_email = false;
+            }
 		}
 		
 	}
 
 	$mailer = new FreakMailer();
+    $mailer->SMTPDebug = 2;
 	if($email){
 		
 		
-		$mailer->SMTPKeepAlive = true; 
+		//$mailer->SMTPKeepAlive = true; 
 		$mailer->Subject = 	get_subject($id,$target);
 		$mailer->Body = get_body($id,$target);
 		$mailer->From = "coural@coural.co.nz";
+        $mailer->AddReplyTo('cloud@coural.co.nz', 'noreply');
 		$mailer->SMTPDebug = 2;
 		
-		$mailer->AddAddress($email, 'Coural Head Office');
+		$mailer->AddAddress('hdzierz@gmail.com', 'Coural Head Office');
 		if($alt_email)
 		{
 			// Check if the alt is a fax number email (needs to be sent as a seperate email)
@@ -278,7 +284,7 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 			}
 			else 
 			{
-				$mailer->AddAddress($alt_email, 'Coural Head Office');
+				$mailer->AddAddress('hdzierz@gmail.com', 'Coural Head Office');
 			}
 		}
 		
@@ -301,11 +307,11 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 		{
 			echo "<font color='red'>Mail to $company failed (".$email.") : ".$mailer->ErrorInfo."</font><br />";
 			$mailer->Body = "WRONG EMAIL ADDRESS";
+            $mailer->ClearAddresses();
 			$mailer->AddAddress($ADMIN_EMAIL, 'Coural Head Office');
-			echo 'Mail to <strong>COURAL ADMIN</strong> sent ('.$email.') due to missing or faulty email address!<br />';
-			if(!$mailer->Send()){
-				echo "<font color='red'>Mail to COURAL ADMIN failed (".$email.") : ".$mailer->ErrorInfo."</font><br />";
-			}
+            $mailer->Send();
+			echo 'Mail forwarded  to <strong>COURAL ADMIN</strong> sent ('.$ADMIN_EMAIL.')!<br />';
+			echo "<font color='red'>Mail to COURAL ADMIN failed (".$email.") : ".$mailer->ErrorInfo."</font><br />";
 		}
 		else
 		{
@@ -325,11 +331,11 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 			{
 				echo "<font color='red'>Mail to $company failed (".$alt_email.") : ".$mailer->ErrorInfo."</font><br />";
 				$mailer->Body = "WRONG EMAIL ADDRESS";
+                $mailer->ClearAddresses();
 				$mailer->AddAddress($ADMIN_EMAIL, 'Coural Head Office');
-				echo 'Mail to <strong>COURAL ADMIN</strong> alternative fax no sent ('.$alt_email.') due to missing or faulty email address!<br />';
-				if(!$mailer->Send()){
-					echo "<font color='red'>Mail to COURAL ADMIN failed (".$alt_email.") : ".$mailer->ErrorInfo."</font><br />";
-				}
+                $mailer->Send();
+				echo 'Mail forwarded  to <strong>COURAL ADMIN</strong> alternative fax not sent ('.$alt_email.')!<br />';
+				echo "<font color='red'>Mail to COURAL ADMIN failed (".$alt_email.") : ".$mailer->ErrorInfo."</font><br />";
 			}
 			else
 			{
@@ -343,6 +349,9 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 	else{
 		echo 'Mail to <strong>COURAL ADMIN</strong> sent ('.$email.') due to missing or faulty email address!<br />';
 		if(!$mailer->Send()){
+            $mailer->ClearAddresses();
+            $mailer->AddAddress($ADMIN_EMAIL, 'Coural Head Office');
+            $mailer->Send();
 			echo "<font color='red'>Mail to COURAL ADMIN failed (".$email.") : ".$mailer->ErrorInfo."</font><br />";
 		}
 	}
