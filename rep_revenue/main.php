@@ -748,15 +748,16 @@ if($report=="linehaul_send_out"){
 }
 
 
-$doff_prev = 0;
+$doff_prev = array();
+$ct=0;
 function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $receiver, $is_by_job){
     $pdffiles = array();
     GLOBAL $doff_prev;
-    if($doff == $doff_prev && !$is_by_job){
-        $doff_prev = $doff;
+    GLOBAL $ct;
+    if(isset($doff_prev[$doff])){
         return;
     }
-    $doff_prev = $doff;
+    $doff_prev[$doff] = true;
     $font_size = 8;
     $count_mail=0;
     if(!$comment2)
@@ -836,7 +837,8 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $rec
                         $pdf->Cell(0,9,"Special Notes: ".$contr->comments,0,1);
                 }
                 $do_name = get("operator","company","WHERE operator_id=$doff");
-                $fn = addslashes('contractor_sheets_'.$do_name.'.pdf');
+                $fn = addslashes('contractor_sheets_'.$do_name.'_'.$ct.'.pdf');
+                $ct++;
                 $pdf->Output($dirp.'/'.$fn,'F');
                 if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS (CONTR SHEET)",$dirp,$fn,$doff);
             }//if(mysql_num_rows($res_contr>0)

@@ -109,7 +109,6 @@ function loadScroll() {
 	<!--<div id="stopblogopic">
 		<a href="index.php"><img height="38" width="50" src="images/stopbank_logo.jpg" border="0" alt="Stopbank Software Development"></a>
 	</div>	-->
-    <a href="https://www.positivessl.com" style="float:right; font-family: arial; font-size: 10px; color: #212121; text-decoration: none;"><img style="width:40px" src="https://www.positivessl.com/images-new/PositiveSSL_tl_trans.png" alt="Positive SSL on a transparent background" title="Positive SSL on a transparent background" border="0" /></a>
 	<span>Job Management System v1.0 (DB: <?= $DATABASE?>) </span>
 
 </div>

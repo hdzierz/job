@@ -88,6 +88,7 @@ function write_label_a4($label,$count,$space_hor,$space_vert,$qty_per_do){
 					<? if($label["ShowNotes"] == 'Y'){ echo  "Comments: ".$label["Comments"]."<br />"; } ?>
 					Delivery Date: <? if($label["Date"]=="IOA"){?><font style="font-style:italic "><?=$label["Date"]?></font><? } else{echo date("d M y",strtotime($label["Date"]));}?><br />
 					D/Type: <?=$label["DType"]?><br />
+                    Version: <?=$label["Version"]?><br />
 					<img src="images/coural-rural-couriers.png" height="38" width="71" ><br />
 				</td>
 				<td valign="top" class="a4label_job_info">
@@ -168,6 +169,10 @@ function write_label($label,$count,$space_hor,$space_vert){
 				<td class="label_job_info">&nbsp;</td>
 				<td class="label_job_info"><strong>D/Type: <?=$label["DType"]?> - Qty: <?=$label["Quantity"]?></strong></td>
 			</tr>
+            <tr>
+                <td class="label_job_info">&nbsp;</td>
+                <td class="label_job_info"><strong>Version: <?=$label["Version"]?></strong></td>
+            </tr>
 			<tr>
 				<td class="label_coural_address"> </td>
 			</tr>			
