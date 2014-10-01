@@ -167,6 +167,19 @@ if($action=="save"){
 					query($qry);
 				}
 			}
+            $qry = "SELECT * FROM auth_user WHERE username='$etext'";
+            $res = query($qry);
+            $u = mysql_fetch_object($res);
+            if($u && $etext){
+                $qry = "UPDATE auth_user SET first_name='$first_name', last_name='$name', email='$email'  WHERE username='$etext'";
+                //query($qry,1);
+            }
+            else if($etext){
+                $qry = "INSERT INTO  auth_user SET username='$etext', first_name='$first_name', last_name='$name', email='$email' ";
+                query($qry,1);
+
+            }
+
 			$action="save_operator";	
 		}
 		else{

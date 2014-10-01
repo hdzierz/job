@@ -14,19 +14,20 @@ $site['from_email'] = 'cloud@coural.co.nz'; // from email address
  
 // Just in case we need to relay to a different server,
 // provide an option to use external mail server.
-$site['smtp_mode'] = 'enabled'; // enabled or disabled
+//$site['smtp_mode'] = 'enabled'; // enabled or disabled
 //$site['smtp_host'] = "mail.dzierzon.co.nz:587";
 
-$site['smtp_port'] = intval(587);
+//$site['smtp_port'] = intval(587);
 //$site['smtp_username'] = 'hdzierz@dzierzon.co.nz';
 //$site['smtp_password'] = "zt90undr";
 
-$site['smtp_host'] = "mail.coural.co.nz:587";
-$site['smtp_username'] = 'cloud@coural.co.nz';
-$site['smtp_password'] = "Rur4lD3l1v3ry";
+//$site['smtp_host'] = "mail.coural.co.nz:587";
+//$site['smtp_username'] = 'cloud@coural.co.nz';
+//$site['smtp_password'] = "Rur4lD3l1v3ry";
 
+$site['smtp_host'] = "localhost";
 
-$ADMIN_EMAIL = "hdzierz@gmail.com";
+//$ADMIN_EMAIL = "hdzierz@gmail.com";
 
 
 function log_mail($adr, $subject, $err_info, $err_count){
@@ -58,12 +59,11 @@ class FreakMailer extends PHPMailer
     {
         global $site;
 		
-		$this->isSMTP();
-		//$this->AuthType = "NTLM";
         // Comes from config.php $site array
 
         if($site['smtp_mode'] == 'enabled')
         {
+            $this->isSMTP();
             $this->Host = $site['smtp_host'];
             $this->Port = intval($site['smtp_port']);
 			
@@ -221,10 +221,10 @@ function send_test_mail(){
 	$mailer->Subject = 	"TEST";
 	$mailer->Body = "TEST";
 	$mailer->From = "cloud@coural.co.nz";
-	$mailer->SMTPDebug = 2;
+	//$mailer->SMTPDebug = 2;
 	//$mailer->AuthType = "NTLM";
     //$mail->SMTPSecure = "tls";  
-    $mailer->AddReplyTo('cloud@coural.co.nz', 'noreply');
+    $mailer->AddReplyTo('cloud@coural.co.nz', 'oreply');
 	$mailer->AddAddress("hdzierz@gmail.com", 'Coural Head Office');
 	if(!$mailer->Send())
 	{
@@ -243,7 +243,7 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 	
 	if($target=="JOB DROP OFF DETAILS"){
 		$company = get("client","name","WHERE client_id='$id'");
-		if(!$email) $email = get("client","email","WHERE client_id='$id'", 1);
+		$email = get("client","email","WHERE client_id='$id'", 1);
 	}
 	else{
 		$company = get("operator","company","WHERE operator_id='$id'");
@@ -264,28 +264,17 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
     $mailer->SMTPDebug = 2;
 	if($email){
 		
-		
 		//$mailer->SMTPKeepAlive = true; 
 		$mailer->Subject = 	get_subject($id,$target);
 		$mailer->Body = get_body($id,$target);
 		$mailer->From = "coural@coural.co.nz";
-        $mailer->AddReplyTo('cloud@coural.co.nz', 'noreply');
-		$mailer->SMTPDebug = 2;
+        $mailer->AddReplyTo('coural@coural.co.nz', 'Coural Head Office');
+        $mailer->AddAddress($email, 'Coural Head Office');
 		
 		$mailer->AddAddress('hdzierz@gmail.com', 'Coural Head Office');
 		if($alt_email)
 		{
-			// Check if the alt is a fax number email (needs to be sent as a seperate email)
-			//if(strpbrk($alt_email,'@') == "@fax.mbox.co.nz")
-			if(strpbrk($alt_email,'@') == "@kiwifax.net")
-			{
-				$alt_send_required = true;
-				echo 'Mail to <strong>'.$company.'</strong> alternative fax required!<br />';
-			}
-			else 
-			{
-				$mailer->AddAddress('hdzierz@gmail.com', 'Coural Head Office');
-			}
+			$mailer->AddAddress($alt_email, 'Coural Head Office');
 		}
 		
 		$mail_type = get("address","mail_type","WHERE operator_id='$id'");
@@ -302,6 +291,7 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 		
 		$IS_FAX=false;
 		$mailer->AddAttachment($dir.'/'.$file, $file);
+
 	
 		if(!$mailer->Send())
 		{

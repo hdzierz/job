@@ -63,13 +63,34 @@ if($action=="show_branches"){
 
 if(!$action){
 ?>
+   <script type="text/javascript" src="javascripts/prototype.js"></script>
+   <script type="text/javascript" src="javascripts/effects.js"></script>
+   <script type="text/javascript" src="javascripts/controls.js"></script>
+   <script type="text/javascript" src="includes/calendarDateInput.js"></script>
+
 	<form action="admin_client.php" method="get">
-		<select name="is_courier">
-			<option <? if($is_courier=="-1"){ ?> selected <? }?>  value="-1">All</option>
-			<option <? if($is_courier==1){ ?> selected <? }?> value="1">Couriers</option>
-			<option <? if($is_courier==0){ ?> selected <? }?> value="0">Circular Clients</option>
-		</select>
-		<input type="submit" name="submit" value="Show" />
+        <table>
+            <tr>
+                <td>
+            		<select name="is_courier">
+	    	        	<option <? if($is_courier=="-1"){ ?> selected <? }?>  value="-1">All</option>
+		            	<option <? if($is_courier==1){ ?> selected <? }?> value="1">Couriers</option>
+			         <option <? if($is_courier==0){ ?> selected <? }?> value="0">Circular Clients</option>
+       	        	</select>
+                </td>
+                <td>
+                    <input type="submit" name="submit" value="Show" />
+                </td>
+                <td>
+                    Client: 
+                    <input type="text" id="client" name="client" />
+                    <div id="hint" class="hint"></div>
+                    <script type="text/javascript">
+                        new Ajax.Autocompleter("client","hint","includes/search_server.php");
+                    </script>
+                </td>
+            </tr>
+        </table>
 	</form>
 <?
 }

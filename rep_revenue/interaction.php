@@ -560,7 +560,7 @@ if($report=="label"){
 					$sel_year->sortOrder = "DESC";
 					$sel_year->addSQLWhereNot("finished","Y");
 					$sel_year->addSQLWhereNot("cancelled","Y");
-					$sel_year->addSQLWhereNot("job_no_add","L");
+					//$sel_year->addSQLWhereNot("job_no_add","L");
 					$sel_year->setOptionIsVal($job_id);
 					$sel_year->startSelect();
 					$sel_year->writeSelect();

@@ -465,7 +465,10 @@ if($action=="manage_price_template"){
 //////////////////////////////////////////////////////////
 
 if($action=="" || !isset($action)){
-	if($is_courier>-1) $where_add = "WHERE is_parcel_courier='$is_courier'";
+    $where_add = "";
+	if($is_courier>-1) $where_add .= "AND is_parcel_courier='$is_courier'\n";
+    if($client) $where_add .= "AND client_id=$client\n";
+    
 	$sql = "SELECT 	client.client_id			AS Record,
 					client.card_id 				AS 'Card ID',
 					client.name 				AS Client,
@@ -481,6 +484,7 @@ if($action=="" || !isset($action)){
 					CONCAT('<a href=\'admin_client.php?action=show_branches&client_id=',client.client_id,'\'>Show</a>')
 								AS Branches
 			FROM client
+            WHERE client_id > 0
 			$where_add\n
 			ORDER BY client.name";
 	$clientTab = new MySQLTable("admin_client.php",$sql);
