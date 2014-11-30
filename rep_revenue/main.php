@@ -810,7 +810,7 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $rec
                         doff={$doff}
                         $where_add 
                         AND delivery_date BETWEEN '$date_start' AND '$date_final'
-                        AND inc_linehaul = 'Y'
+                        AND print_advices = 'Y'
                     GROUP BY job.job_id, contractor_id, route.route_id
                     ORDER BY job.job_id, route.code
                 ";

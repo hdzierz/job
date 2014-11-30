@@ -63,7 +63,7 @@ if($action=="edit"||$action=="add"){
 	
 ?>	
 	<script type="text/javascript" src="includes/calendarDateInput.js"></script> 
-	<form name="editoperator" action="admin_address.php?action=save" method="get">
+	<form name="editoperator" action="admin_address.php?action=save" method="post">
 		<table class="address_box">
 			<tr>
 				<td>Name</td>
@@ -159,10 +159,16 @@ if($action=="edit"||$action=="add"){
 			<tr>
 				<td>Address 2</td>
 				<td><input size="40" type="text" name="address2" value="<?=$operator->address2?>" /> </td>
-				<td>EText</td>
-				<td><input size="40" type="text" name="etext" value="<?=$operator->etext?>" /> <?php echo $passwd_link;   ?></td>				
+				<td>Network Username</td>
+				<td><input size="40" type="text" name="etext" value="<?=$operator->etext?>" /> <?php //echo $passwd_link;   ?></td>				
 				
-			</tr>					
+			</tr>				
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Network Password</td>
+                <td><input size="40" type="pasword" name="password" value="" /></td>
+            </tr>	
 			<tr>
 				<td>Postal Address</td>
 				<td><input size="40" type="text" name="postal_addr" value="<?=$operator->postal_addr?>" /> </td>

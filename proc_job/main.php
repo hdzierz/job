@@ -1,7 +1,7 @@
 <script language="javascript">
 	function checkfloat(strString,field){
 		   //  check for valid numeric strings	
-		   var strValidChars = "0123456789.";
+		   var strValidChars = "-0123456789.";
 		   var strChar;
 		   var blnResult = true;
 		
@@ -699,6 +699,7 @@ if($action=="edit_job"||$action=="new_job"){
 		$weight 			= $job->weight;
 		$rate 				= $job->rate;
 		$inc_linehaul		= $job->inc_linehaul;
+        $print_advices       = $job->print_advices;
 		$rate_bbc			= $job->rate_bbc;
 		$hauler				= $job->hauler;
 		$lbc_charge 		= $job->lbc_charge;
@@ -758,6 +759,7 @@ if($action=="edit_job"||$action=="new_job"){
 		$weight 			= $job->weight;
 		$rate 				= $job->rate;
 		$inc_linehaul		= $job->inc_linehaul;
+        $print_advices       = $job->print_advices;
 		$rate_bbc			= $job->rate_bbc;
 		$hauler				= $job->hauler;
 		$lbc_charge 		= $job->lbc_charge;
@@ -818,6 +820,9 @@ if($action=="edit_job"||$action=="new_job"){
 	if(!$premium_sell) 			$premium_sell="0.0000"; 
 	if(!$add_premium_to_invoice) 			$add_premium_to_invoice="N"; 
 	if(!$paper_source) $paper_source = "";
+
+    if(!$inc_linehaul)  $inc_linehaul  = 'Y';
+    if(!$print_advices) $print_advices = 'Y';
 	
 	$lbc_charge 	= sprintf("%.2f",$lbc_charge);
 	$lbc_charge_bbc	= sprintf("%.2f",$lbc_charge_bbc);
@@ -1003,6 +1008,7 @@ if($action=="edit_job"||$action=="new_job"){
 						$sel_name->addOnChange("dest_type");
 						$sel_name->addOnChange("rate");
 						$sel_name->addOnChange("inc_linehaul");
+                        $sel_name->addOnChange("print_advices");
 						$sel_name->addOnChange("rate_bbc");
 						$sel_name->addOnChange("freight_charge");
 						$sel_name->addOnChange("lbc_charge");
@@ -1105,7 +1111,10 @@ if($action=="edit_job"||$action=="new_job"){
 			</tr>
 			<tr>
 				<td>Includes LineHaul:</td>
-				<td><input type="checkbox" name="inc_linehaul" <?if($inc_linehaul=='Y') {?> checked <? } ?> value="Y"   /></td>						
+				<td><input type="checkbox" name="inc_linehaul" <?if($inc_linehaul=='Y') {?> checked <? } ?> value="Y"   /></td>				
+                <td></td>	
+                <td>Print Advices:</td>
+                <td><input type="checkbox" name="print_advices" <?if($print_advices=='Y') {?> checked <? } ?> value="Y"   /></td>	
 			</tr>			
 			<tr>
 				<td>Rate (extra charge):</td>

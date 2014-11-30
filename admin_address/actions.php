@@ -170,14 +170,26 @@ if($action=="save"){
             $qry = "SELECT * FROM auth_user WHERE username='$etext'";
             $res = query($qry);
             $u = mysql_fetch_object($res);
-            if($u && $etext){
-                $qry = "UPDATE auth_user SET first_name='$first_name', last_name='$name', email='$email'  WHERE username='$etext'";
-                //query($qry,1);
-            }
-            else if($etext){
-                $qry = "INSERT INTO  auth_user SET username='$etext', first_name='$first_name', last_name='$name', email='$email' ";
-                query($qry,1);
 
+            if($u && $etext && $password){
+                $qry = "UPDATE auth_user SET password=md5('$password'), first_name='$first_name', last_name='$name', email='$email'  WHERE username='$etext'";
+                query($qry);
+            }
+            else if($etext && $password){
+                $qry = "INSERT INTO  auth_user SET last_login=now(), 
+                                                    username='$etext', 
+                                                    first_name='$first_name', 
+                                                    last_name='$name', 
+                                                    email='$email',
+                                                    is_staff=0,
+                                                    is_active=1,
+                                                    date_joined=now(),
+                                                    is_superuser=0,
+                                                    password=md5('$password') ";
+                query($qry);
+                $auth_user_id = mysql_insert_id();
+                $qry = "INSERT INTO auth_user_groups(user_id, group_id) VALUES($auth_user_id,1)";
+                query($qry);
             }
 
 			$action="save_operator";	
@@ -321,7 +333,16 @@ if($action=="save_operator"){
 				WHERE operator_id='$operator_id'";
 			query($sql);
 	}
-	
+    
+    if($etext){
+        $qry = "SELECT * FROM auth_user WHERE username='$etext'";
+        $res = query($qry);
+        $u = mysql_fetch_object($res);
+        if($u){
+            $qry = "UPDATE operator SET user_id={$u->id} WHERE operator_id='$operator_id'";
+            query($qry);
+        } 
+    }
 
 	$qry = "UPDATE job_route SET subdist_rate_red = '$rate_red_fact' WHERE subdist_id = '$operator_id'";
 	query($qry,0);

@@ -74,7 +74,7 @@
 	}
 ?>
 <? 
-if($CK_CHANGE_GST=='Y'){
+if($CK_CHANGE_GST=='Y' || $CK_USERNAME=='dayna'){
 	if($action=="affiliate_jobs"){
 		?>
 		<a class="subaself" href="index.php?action=affiliate_jobs">Update affiliation</a>|

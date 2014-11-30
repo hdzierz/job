@@ -52,6 +52,7 @@ function get_joblist_query($with_ioa,$mode,$job,$client,$pub,$start_date=false,$
 					)
 						
 									AS Linehaul,
+                    j.print_advices AS 'P/Adv',
 					j.invoice_qty    AS 'Invoiced',
 					ROUND(j.weight,0)		 AS 'Weight',
 					IF(j.dest_type='num_total','Total',

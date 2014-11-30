@@ -858,7 +858,7 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			
 		
 		$header=array('Date','Job','Pub','Weight', 'Circ Qty','Bdl Qty','Circ Rate','Bdl Rate','Total', 'Total (incl. GST)');
-		$width=array('Date'=>20,'Job'=>15,'Pub'=>25,'Weight'=>15, 'Circ Qty'=>15,'Bdl Qty'=>15,'Circ Rate'=>15,'Circ RateRed' => 15, 'Bdl Rate'=>15,'Total'=>20,'Total (incl. GST)'=>20);
+		$width=array('Date'=>20,'Job'=>10,'Pub'=>35,'Weight'=>10, 'Circ Qty'=>15,'Bdl Qty'=>15,'Circ Rate'=>15,'Circ RateRed' => 15, 'Bdl Rate'=>15,'Total'=>20,'Total (incl. GST)'=>20);
 		$maxw=get_maxw($width);
 			
 		// As Contractor

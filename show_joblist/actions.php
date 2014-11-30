@@ -30,7 +30,13 @@ if($action=="affiliate_jobs" && $submit){
 			(
 				SELECT contractor_id FROM route_aff WHERE job_route.route_id = route_aff.route_id
 					AND '{$job->delivery_date}' BETWEEN app_date AND stop_date  LIMIT 1
-			)
+			),
+            dropoff_id = 
+            (
+                SELECT dropoff_id FROM route_aff WHERE job_route.route_id = route_aff.route_id
+                    AND '{$job->delivery_date}' BETWEEN app_date AND stop_date  LIMIT 1
+            )
+
 			WHERE job_id = {$job->job_id}";		
 		query($qry);
 		
