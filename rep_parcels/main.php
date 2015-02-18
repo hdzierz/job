@@ -1532,6 +1532,11 @@ if($report=="ticket_sales"){
 		$tab->collField["Qty Green"]=true;
 		$tab->collField["Qty Yellow"]=true;
 		$tab->collField["Qty Purple"]=true;
+        $tab->collField["Val Red"]=true;
+        $tab->collField["Val Green"]=true;
+        $tab->collField["Val Yellow"]=true;
+        $tab->collField["Val Purple"]=true;
+
 		$tab->hasEditButton=false;
 		$tab->hasDeleteButton=false;
 		$tab->hasAddButton=false;
@@ -1549,8 +1554,11 @@ if($report=="ticket_sales"){
 	   					SUM(IF(parcel_job_rate.type='CP',parcel_job_rate.qty,0)) AS `Qty Green`,   
 	                    SUM(IF(parcel_job_rate.type='SR',parcel_job_rate.qty,0)) AS `Qty Yellow`,  
 						SUM(IF(parcel_job_rate.type='RP',parcel_job_rate.qty,0)) AS `Qty Purple`,  						
-	                    ROUND(SUM(parcel_job_rate.rate*qty),2) AS Total,
-	                    ROUND(1.15*SUM(parcel_job_rate.rate*qty),2) AS `Total (incl. GST)`
+                        ROUND(SUM(IF(parcel_job_rate.type='CD',parcel_job_rate.qty * parcel_job_rate.rate,0)),2) AS `Val Red`,
+                        ROUND(SUM(IF(parcel_job_rate.type='CP',parcel_job_rate.qty * parcel_job_rate.rate,0)),2) AS `Val Green`,
+                        ROUND(SUM(IF(parcel_job_rate.type='SR',parcel_job_rate.qty * parcel_job_rate.rate,0)),2) AS `Val Yellow`,
+                        ROUND(SUM(IF(parcel_job_rate.type='RP',parcel_job_rate.qty * parcel_job_rate.rate,0)),2) AS `Val Purple`,
+	                    ROUND(SUM(parcel_job_rate.rate*qty),2) AS Total
 					FROM parcel_job
 					LEFT JOIN `client`
 					ON parcel_job.client_id=`client`.client_id
@@ -1577,20 +1585,37 @@ if($report=="ticket_sales"){
 				$green = $tab->getSum('Qty Green',2,true);
 				$yellow = $tab->getSum('Qty Yellow',2,true);
 				$purple = $tab->getSum('Qty Purple',2,true);
+
+                $vred = $tab->getSum('Val Red',2,true);
+                $vgreen = $tab->getSum('Val Green',2,true);
+                $vyellow = $tab->getSum('Val Yellow',2,true);
+                $vpurple = $tab->getSum('Val Purple',2,true);
+
 				$tab->startNewLine();
 					$tab->addLine("",4);
 					$tab->addLine(number_format($red,0));
 					$tab->addLine(number_format($green,0));
 					$tab->addLine(number_format($yellow,0));
 					$tab->addLine(number_format($purple,0));
+
+                    $tab->addLine(number_format($vred,2));
+                    $tab->addLine(number_format($vgreen,2));
+                    $tab->addLine(number_format($vyellow,2));
+                    $tab->addLine(number_format($vpurple,2));
+
 					$tab->addLine(number_format($tot,2));
-					$tab->addLine(number_format(round($tot*1.15,2),2));
 				$tab->stopNewLine();
 				$tot_tot += $tot;
 				$tot_red += $red;
 				$tot_green += $green;
 				$tot_yellow += $yellow;
 				$tot_purple += $purple;
+
+                $tot_vred += $vred;
+                $tot_vgreen += $vgreen;
+                $tot_vyellow += $vyellow;
+                $tot_vpurple += $vpurple;
+
 			}
 			
 			
@@ -1600,9 +1625,14 @@ if($report=="ticket_sales"){
 			$tab->addLine(number_format($tot_red,0));
 			$tab->addLine(number_format($tot_green,0));
 			$tab->addLine(number_format($tot_yellow,0));
-			$tab->addLine(number_format($tot_purple,2));
+			$tab->addLine(number_format($tot_purple,0));
+
+            $tab->addLine(number_format($tot_vred,2));
+            $tab->addLine(number_format($tot_vgreen,2));
+            $tab->addLine(number_format($tot_vyellow,2));
+            $tab->addLine(number_format($tot_vpurple,2));
+
 			$tab->addLine(number_format($tot_tot,2));
-			$tab->addLine(number_format(round($tot_tot*1.15,2),2));
 		$tab->stopNewLine();
 		$tab->stopTable();
 	}

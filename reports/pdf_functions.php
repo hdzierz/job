@@ -68,7 +68,6 @@ function bible_region_qry($date,$island,$region,$home_phone,$mobile_phone){
 							IF(Notes IS NOT NULL AND Notes<>'',
 								CONCAT(IF(`Parcel Drop Off`=',','',CONCAT(`Parcel Drop Off`,'\n')),'Notes: ',Notes),`Parcel Drop Off`) 
 									AS `Parcel Drop Off`,
-							`Latest Dep`,
 							Description
 						FROM (
 						SELECT 	  CONCAT(
@@ -83,7 +82,6 @@ function bible_region_qry($date,$island,$region,$home_phone,$mobile_phone){
 									$phone
 								   CONCAT_WS(', ',IF(do.do_address='','',do.do_address),IF(do.do_city='','',do.do_city)) 				
 															AS 'Parcel Drop Off',
-								   contr.latest_dep 		AS 'Latest Dep',
 								   contr.env_deliv_notes 	AS Notes,
 								   route.description AS Description,
 								   env_dropoff_id,
@@ -113,7 +111,7 @@ function bible_region_qry($date,$island,$region,$home_phone,$mobile_phone){
 						GROUP BY env_contractor_id
 						ORDER BY island,seq_region,seq_area,seq_code";
 								   	
-		   //echo nl2br($qry);exit;
+		   echo nl2br($qry);exit;
 		   $res = query($qry);
 		   while($record = mysql_fetch_array($res)){
 		   		$result[$reg][]=$record;
@@ -209,7 +207,6 @@ function bible_dist_qry($date,$dist_id,$home_phone,$mobile_phone){
 								CONCAT(IF(Address=',','',CONCAT(Address,'\n')),'Notes: ',Notes),Address) 
 																AS 'Parcel Drop Off',
 							
-							ld AS 'Latest Dep',
 							Description
 							FROM (
 							SELECT 	  CONCAT(
@@ -223,7 +220,6 @@ function bible_dist_qry($date,$dist_id,$home_phone,$mobile_phone){
 										   CONCAT_WS(', ',IF(do_address='','',do_address),IF(do_city='','',do_city)) 				
 																	AS Address,
 											$phone
-										   (SELECT latest_dep FROM operator WHERE operator.operator_id=address.operator_id) 		AS 'ld',
 										   operator.operator_id,
 										   operator.env_deliv_notes AS Notes,
 										   env_dropoff_id,

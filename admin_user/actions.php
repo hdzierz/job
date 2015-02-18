@@ -18,7 +18,7 @@ if($action=="save"){
 			$sql = "INSERT INTO user(username,
 									 passwd,
 									 email,
-									 haul_island;
+									 haul_island,
 									 page_useradmin,
 									 page_routeadmin,
 									 page_clientadmin,

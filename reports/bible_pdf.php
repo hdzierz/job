@@ -100,14 +100,14 @@ function write_bible_dist_pdf(){
 	if ($home_phone || $mobile_phone){
 		$pdf->phoneColumn=true;
 		//column widths
-		$pdf->widths = array(40,40,30,51,20,104);
-		$pdf->columnHeadings = array("RD","Name","Phone","Parcel Dropoff","Latest Dep.","Description");
+		$pdf->widths = array(40,40,50,40,104);
+		$pdf->columnHeadings = array("RD","Name","Phone","Parcel Dropoff","Description");
 	}
 	else{
 		$pdf->phoneColumn=false;
 		//column widths
-			$pdf->widths = array(40,40,60,40,105);
-			$pdf->columnHeadings = array("RD","Name","Parcel Dropoff","Latest Dep.","Description");
+			$pdf->widths = array(40,40,60,105);
+			$pdf->columnHeadings = array("RD","Name","Parcel Dropoff","Description");
 	}
 	
 	//$pdf->AliasNbPages();	
@@ -148,10 +148,10 @@ function write_bible_dist_pdf(){
 									"Mobile: ".$pdf->currentSMobile.", ".
 									"Email: ".$pdf->currentSEmail ;
 			$pdf->AddPage();
-			//var_dump($subdist_info["records"]);
+			#var_dump($subdist_info["records"]);
 			foreach ($subdist_info["records"] as $key => $sub_dist_info){
 				//create line
-				$pdf->Row($sub_dist_info);
+    			$pdf->Row($sub_dist_info);
 			}	
 		}
 		$count++;
