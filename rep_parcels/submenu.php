@@ -78,6 +78,15 @@
 		<a class="suba" href="rep_parcels.php?report=ticket_unredeemed">Unredeemed Tickets</a>|
 <?
 	}
+    if($report=="ticket_trace"){?>
+        <a class="subaself" href="rep_parcels.php?report=ticket_trace">Ticket Trace</a>|
+<?
+    }
+    else{
+?>
+        <a class="suba" href="rep_parcels.php?report=ticket_trace">Ticket Trace</a>|
+<?
+    }
 
 	if($report=="ticket_sales"){?>
 		<a class="subaself" href="rep_parcels.php?report=ticket_sales">Ticket Sales</a>

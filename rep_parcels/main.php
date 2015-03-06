@@ -26,6 +26,38 @@ if($report=="ticket_sold"){
 		$tab->stopTable();
 	}
 }
+
+if($report=="ticket_trace"){
+    if($submit){
+
+        $qry = "SELECT parcel_job.*,
+                parcel_tickets.*, 
+                parcel_job_route.*
+            FROM parcel_tickets
+            LEFT JOIN parcel_job
+                ON parcel_job.job_id=parcel_tickets.job_id
+            LEFT JOIN parcel_job_route
+                ON parcel_job_route.ticket_no = parcel_tickets.ticket_no
+            WHERE parcel_job.order_date > '$start_date' AND parcel_job.order_date <= '$final_date'
+                ";
+        $res = query($qry);
+
+
+        $fn = "tmp/tickets_unredeemed_".date('Y_m_d_h_m_i').".csv";
+
+        $file = fopen($fn, "a");
+        while($item = mysql_fetch_array($res)){
+            fputcsv($file,$item);
+        }
+
+        fclose($file);
+        ?>
+            <a href=<?=$fn?>>Download</a>
+        <?
+    }
+}
+
+
 if($report=="ticket_unsold"){
 	//$date = date("Y-m-d");
 	//$type = "CD";

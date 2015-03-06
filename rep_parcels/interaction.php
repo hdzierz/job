@@ -72,6 +72,35 @@ if($report=="ticket_sold"){
 	</form>
 <?
 }
+
+
+if($report=="ticket_trace"){
+    if(!$start_date) $start_date=date("2008-10-01");
+    if(!$final_date) $final_date=date("Y-m-d");
+?>
+    <script type="text/javascript" src="includes/calendarDateInput.js"></script>
+    <form name="narrow" action="rep_parcels.php" method="get" >
+        <table>
+            <tr>
+                <td>Select Start Date:</td>
+                <td>
+                    <script language="javascript">DateInput("start_date", true, "YYYY-MM-DD","<?=$start_date?>")</script>
+                </td>
+                <td>Select Final Date:</td>
+                <td>
+                    <script language="javascript">DateInput("final_date", true, "YYYY-MM-DD","<?=$final_date?>")</script>
+                </td>
+                <td>
+                    <input type="submit" name="submit" value="Run" />
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" name="report" value="ticket_trace" />
+    </form>
+<?
+}
+
+
 if($report=="ticket_unredeemed"){
 	if(!$date) $date=date("Y-m-t");
 
