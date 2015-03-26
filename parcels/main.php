@@ -1551,7 +1551,7 @@ if($action=="select_xerox_scan"){
 		
 		<form name="redeem_form" action="parcels.php" method="post" >
 			<fieldset style="width:90% ">
-				<legend>Xerox Ticket Redemption</legend>
+				<legend>Canonscan Ticket Redemption</legend>
 			<table width="40%">
 				<tr>
 					<td>Month:</td>
@@ -1606,9 +1606,19 @@ if($action=="select_xerox_scan"){
 							?>
 								<input id="filec[<?php echo $counter;?>]" type="checkbox" name="filec[<?php echo $counter;?>]"  />			
 							<?php
+
 							} 
 						?>				
 					</td>
+                    <td>
+                        <?php
+                            if(false && strpos($file,'Processed')!==false){
+                        ?>
+                        <a href="/job/parcels.php?action=unredeem_xerox_scan&file=<?=$file?>">Unredeem</a>
+                        <?php
+                            }
+                        ?>
+                    </td>
 		<?	
 				$counter++;
 				}

@@ -476,7 +476,7 @@ if($action=="process_xerox_scan"){
 							$ERROR.="Could not load distibutor for route $route<br />";
 							continue;
 						}
-						$run_id = $run->writeRunWithDist($tickets["dist_id"],$tickets["contr_id"],$tickets["route_id"],$date);
+						$run_id = $run->writeRunWithDist($scan_run->batch, $tickets["dist_id"],$tickets["contr_id"],$tickets["route_id"],$date);
 						
 						if(is_array($tickets["tickets"]) && $run_id){
 							
@@ -500,7 +500,7 @@ if($action=="process_xerox_scan"){
 				$res_runs = query($qry,0);
 				while($r = mysql_fetch_object($res_runs)){
 					if($r->page==0)
-						$parcel_run_id = $run->writeRun($r->contractor_id,$r->route_id,$date);
+						$parcel_run_id = $run->writeRun($r->batch_no, $r->contractor_id,$r->route_id,$date);
 					else
 						$parcel_run_id = $r->pacel_run_id;
 						

@@ -1,7 +1,7 @@
 <?
 class run{
+    var $batch_no;
 	function __construct(){
-		
 	}
 	
 	// Creates run number. Coural might call that page number. Counts for ech distributor and rolls back to 1 every month.
@@ -17,7 +17,7 @@ class run{
 	}
 	
 	
-	function writeRun($contractor_id,$route_id,$date){
+	function writeRun($batch_no, $contractor_id,$route_id,$date){
 		global $CK_USERID;
 		
 		// Get the distributor id from the ourte affiliation
@@ -40,12 +40,13 @@ class run{
 									dist_id='$dist_id',
 									user_id='$CK_USERID',
 									actual=0,
+                                    batch_no=$batch_no,
 									exp_no_tickets = 120";
 		query($qry);
 		return  mysql_insert_id();
 	}
 	
-	function writeRunWithDist($dist_id,$contractor_id,$route_id,$date){
+	function writeRunWithDist($batch_no, $dist_id,$contractor_id,$route_id,$date){
 		global $CK_USERID;
 			
 		if (!$dist_id){
@@ -60,6 +61,7 @@ class run{
 									run='$run',
 									dist_id='$dist_id',
 									user_id='$CK_USERID',
+                                    batch_no=$batch_no,
 									actual=1,
 									exp_no_tickets = 120";
 		query($qry);
@@ -83,6 +85,8 @@ class ticket{
 	var $post = false;
 	var $pre = false;
 	var $number=false;
+    var $batch = 0;
+
 	function __construct($no){
 		$this->no = $no;
 		
@@ -398,16 +402,39 @@ class xeroxFileReader{
 	var $fileName = false;
 	var $fileDir = false;
 	var $content = array();
+    var $batch = 0;
 	
 	function __construct($dir,$fn){
 		$this->fileName = $fn;
 		$this->fileDir = $dir;
+
+        $this->batch = self::getBatchNo($fn);
 		$this->readContent();
 		
 		$this->preProcess();
 		
 		$this->markFileAsProcessed();
 	}
+
+    static function getBatchNo($fn){
+        preg_match("/^([0-9]*).*$/", $fn, $res);
+        if(isset($res[1]))
+            return $res[1];
+        preg_match("/^Processed_([0-9]*).*$/", $fn, $res);
+        if(isset($res[1]))
+            return $res[1];
+        return 0;
+    }
+
+    static function unredeem($fn){
+        $batch = self::getBatchNo($fn);
+        $qry = "DELETE FROM parcel_job_route WHERE parcel_run_id IN (SELECT parcel_run_id FROM parcel_run WHERE batch_no=$batch)";
+        query($qry);
+        $qry = "DELETE FROM parcel_run WHERE batch_no=$batch)";
+        query($qry);
+        $MESSAGE = "Batch unredeemed";
+        
+    }
 	
 	function getTickets(){
 		return $this->content;
@@ -455,7 +482,7 @@ class xeroxFileReader{
 			$this->writeToPreScanningTables($line);
 		}
 	}
-	
+
 	function writeToPreScanningTables($line){
 		global $CK_USERID;
 		
@@ -470,6 +497,7 @@ class xeroxFileReader{
 					page = '0',
 					real_date = now(),
 					user_id ='$CK_USERID',
+                    batch_no = {$this->batch},
 					is_processed = 0";
 		query($qry);
 		

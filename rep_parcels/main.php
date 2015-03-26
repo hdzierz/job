@@ -30,23 +30,67 @@ if($report=="ticket_sold"){
 if($report=="ticket_trace"){
     if($submit){
 
-        $qry = "SELECT parcel_job.*,
-                parcel_tickets.*, 
-                parcel_job_route.*
+        $qry = "SELECT  'job_no',
+                        #'purchase_no',
+                        'client',
+                        'foreign_order_no',
+                        'order_date',
+                        'rate',
+                        'qty',
+                        'type',
+                        'ticket_no',
+                        'redemption_date',
+                        'is_redeemed',
+                        'is_random',
+                        'distributor',
+                        'contractor',
+                        'route'
+                UNION
+                SELECT  job_no,
+                        #purchase_no,
+                        client.name,
+                        foreign_order_no,
+                        order_date,
+                        parcel_job_rate.rate,
+                        parcel_job_rate.qty,
+                        parcel_tickets.type,
+                        parcel_tickets.ticket_no,
+                        parcel_run.date,
+                        is_redeemed_D,
+                        parcel_job_route.is_random,
+                        dist.company,
+                        contr.company,
+                        route.code
             FROM parcel_tickets
             LEFT JOIN parcel_job
                 ON parcel_job.job_id=parcel_tickets.job_id
+            LEFT JOIN client
+                on client.client_id=parcel_job.client_id
             LEFT JOIN parcel_job_route
                 ON parcel_job_route.ticket_no = parcel_tickets.ticket_no
-            WHERE parcel_job.order_date > '$start_date' AND parcel_job.order_date <= '$final_date'
+            LEFT JOIN parcel_job_rate
+                ON parcel_job_rate.job_id=parcel_job_route.job_id
+                AND parcel_job_rate.type=parcel_job_route.type
+            LEFT JOIN parcel_run
+                ON parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
+            LEFT JOIN route
+                ON route.route_id=parcel_job_route.route_id
+            LEFT JOIN operator AS dist
+                ON dist.operator_id=parcel_job_route.dist_id
+            LEFT JOIN operator AS contr
+                ON contr.operator_id=parcel_job_route.contractor_id
+            WHERE parcel_job.order_date > '$start_date' 
+                AND parcel_job.order_date <= '$final_date'
+                AND (is_redeemed_D=1 OR is_redeemed_D IS NULL)
                 ";
+        //echo nl2br($qry);
         $res = query($qry);
 
 
         $fn = "tmp/tickets_unredeemed_".date('Y_m_d_h_m_i').".csv";
 
         $file = fopen($fn, "a");
-        while($item = mysql_fetch_array($res)){
+        while($item = mysql_fetch_assoc($res)){
             fputcsv($file,$item);
         }
 
