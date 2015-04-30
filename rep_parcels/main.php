@@ -51,7 +51,7 @@ if($report=="ticket_trace"){
                         client.name,
                         foreign_order_no,
                         order_date,
-                        parcel_job_rate.rate,
+                        ROUND(parcel_job_rate.rate/20,4),
                         parcel_job_rate.qty,
                         parcel_tickets.type,
                         parcel_tickets.ticket_no,
@@ -69,8 +69,8 @@ if($report=="ticket_trace"){
             LEFT JOIN parcel_job_route
                 ON parcel_job_route.ticket_no = parcel_tickets.ticket_no
             LEFT JOIN parcel_job_rate
-                ON parcel_job_rate.job_id=parcel_job_route.job_id
-                AND parcel_job_rate.type=parcel_job_route.type
+                ON parcel_job_rate.job_id=parcel_tickets.job_id
+                AND CONVERT(parcel_job_rate.type USING latin1)=CONVERT(parcel_tickets.type USING latin1)
             LEFT JOIN parcel_run
                 ON parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
             LEFT JOIN route
@@ -266,6 +266,210 @@ if($report=="ticket_unsold"){
 }
 
 
+if($report=="ticket_unredeemed_val" && $submit){
+    if($num_months){
+        $num_months -= 1;
+    }
+    else{
+        $num_months = 11;
+    }
+   
+    $date0 = date("Y-m-15",strtotime($date));
+    $start_date0 = date("Y-m-15",strtotime($date0." -$num_months months"));
+    $final_date0 = date("Y-m-15",strtotime($date0));
+   
+    $start_date = date("Y-m-01",strtotime($start_date0));
+    $final_date = date("Y-m-t",strtotime($final_date0));
+   
+    $month_list = array();
+    for($d = $start_date0;$d<=$final_date0;$d=date("Y-m-15",strtotime($d." +1 months"))){
+
+        $month_str = "";
+        if(strpos($d,"-01")!==false){
+            $month_str = "January";
+        }
+        else if(strpos($d,"-02")!==false){
+            $month_str = "February";
+        }
+        else if(strpos($d,"-03")!==false){
+            $month_str = "March";
+        }
+        else if(strpos($d,"-04")!==false){
+            $month_str = "April";
+        }
+        else if(strpos($d,"-05")!==false){
+            $month_str = "May";
+        }
+        else if(strpos($d,"-06")!==false){
+            $month_str = "June";
+        }
+        else if(strpos($d,"-07")!==false){
+            $month_str = "July";
+        }
+        else if(strpos($d,"-08")!==false){
+            $month_str = "August";
+        }
+        else if(strpos($d,"-09")!==false){
+            $month_str = "September";
+        }
+        else if(strpos($d,"-10")!==false){
+            $month_str = "October";
+        }
+        else if(strpos($d,"-11")!==false){
+            $month_str = "November";
+        }
+        else if(strpos($d,"-12")!==false){
+            $month_str = "December";
+        }
+        $month_list[$month_str] = date("Y-m",strtotime($d));
+    }
+
+    //print_r($month_list);
+    //die();
+    $types = array("CP"=>"Parcels","CD"=>"Documents","SR"=>"Signature","RP"=>"Pickup");
+    $result = array();
+    foreach($types as $key=>$type){
+        $qry_red = "SELECT  parcel_job_route.type,
+                            ROUND(SUM(parcel_job_rate.rate/20))  AS amount,
+                            DATE_FORMAT(parcel_job.order_date,'%Y-%m') AS month
+                    FROM parcel_job_route
+                    LEFT JOIN parcel_run
+                   ON parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
+                    LEFT JOIN parcel_job
+                    ON parcel_job.job_id=parcel_job_route.job_id
+                    LEFT JOIN parcel_job_rate
+                        ON parcel_job_rate.job_id=parcel_job.job_id
+                        AND parcel_job_rate.type='$key'
+                    WHERE parcel_job.order_date>='$start_date' AND parcel_job.order_date<='$final_date' 
+                        AND parcel_job_route.type='$key'
+                        AND parcel_job_route.is_redeemed_D='1'
+                        AND parcel_run.date<='$final_date'
+                    GROUP BY type,month
+                    HAVING month IS NOT NULL
+                    ORDER BY month";
+
+        if($key=="SR")
+            $res_red = query($qry_red,0);
+        else
+            $res_red = query($qry_red,0);
+
+
+        $qry_sold = "SELECT     parcel_job_ticket.type,
+                            #SUM(end-start+1) AS amount,
+                            ROUND(SUM((end-start+1) * parcel_job_rate.rate/20),0) AS amount,
+                            DATE_FORMAT(parcel_job.order_date,'%Y-%m') AS month
+                    FROM parcel_job_ticket
+                    LEFT JOIN parcel_job
+                    ON parcel_job.job_id=parcel_job_ticket.job_id
+                    LEFT JOIN parcel_job_rate
+                        ON parcel_job_rate.job_id=parcel_job.job_id
+                        AND parcel_job_rate.type='$key'
+                    WHERE parcel_job.order_date>='$start_date' AND parcel_job.order_date<='$final_date' 
+                        AND parcel_job_ticket.type='$key'
+                        AND (id <> -1 OR id IS NULL)
+                    GROUP BY type,month
+                    HAVING month IS NOT NULL
+                   ORDER BY month";
+        $res_sold = query($qry_sold,0);
+
+
+        $months = array();
+        while($sold = mysql_fetch_object($res_sold)){
+            $result[$key][$sold->month]["Sold"] = $sold->amount;
+            $sold_tot+=$sold->amount;
+            $months[] = $sold->month;
+        }
+
+        foreach($months as $month){
+            $result[$key][$month]["Redeemed"] = 0;
+            $result[$key][$month]["Unredeemed"] = number_format($result[$key][$month]["Sold"],0);
+            $result[$key][$sold->redeemed]["%"] = number_format(0,0);
+        }
+        while($redeemed = mysql_fetch_object($res_red)){
+            if(!$redeemed->amount) $redeemed->amount = 0;
+            $sold = $result[$key][$redeemed->month]["Sold"];
+            //if($type=="SR") {echo "Hello:".$sold."/".$redeemed->amount; die();}
+            $result[$key][$redeemed->month]["Redeemed"] = number_format($redeemed->amount,0);
+            $result[$key][$redeemed->month]["Unredeemed"] = round($sold-$redeemed->amount,0);
+
+            if($sold->amount>0)
+                $result[$key][$sold->redeemed]["%"] = number_format(($sold-$redeemed->amount)*100/$sold,0);
+            else
+                $result[$key][$sold->redeemed]["%"] = number_format(0,0);
+
+            $red_tot+=$redeemed->amount;
+            //$sold_tot+=$sold->amount;
+
+
+        }
+
+
+
+
+        $result[$key]["Total"]["Redeemed"] += $red_tot;
+        $result[$key]["Total"]["Sold"] += $sold_tot;
+        $result[$key]["Total"]["Unredeemed"] = round($sold_tot-$red_tot,0);
+        $red_tot=0;
+        $sold_tot=0;
+
+
+        if($result[$key]["Total"]["Unredeemed"]>0)
+            $result[$key]["Total"]["%"] = number_format($result[$key]["Total"]["Unredeemed"]*100/$result[$key]["Total"]["Sold"],0);
+        else
+            $result[$key]["Total"]["%"] = number_format(0,0);
+    }
+
+
+    $tab = new MySQLTable("rep_parcels.php",$qry,$nameI="report");
+
+    $tab->formatLine = true;
+    $tab->hasEditButton=false;
+    $tab->hasDeleteButton=false;
+    $tab->hasAddButton=false;
+    $tab->showRec=1;
+    $tab->startTable();
+       foreach($types as $key=>$type){
+            if(count($result[$key])>0){
+                $tab->startNewLine();
+                    $tab->addLineWithStyle($type,"sql_extra_line_text_grey",14);
+                $tab->stopNewLine();
+                $tab->startNewLine();
+                    $tab->addLineWithStyle("&nbsp;","sql_extra_line_number");
+
+                    foreach($month_list as $m_str=>$month){
+                        $tab->addLineWithStyle($m_str,"sql_extra_line_number");
+                    }
+                    $tab->addLineWithStyle("Total","sql_extra_line_number");
+                $tab->stopNewLine();
+                $tab->startNewLine();
+                    $tab->addLineWithStyle("Sold","sql_extra_line_number");
+                    foreach($month_list as $month){
+                        $tab->addLineWithStyle($result[$key][$month]["Sold"],"sql_extra_line_number");
+                    }
+                    $tab->addLineWithStyle($result[$key]["Total"]["Sold"],"sql_extra_line_number");
+                $tab->stopNewLine();
+                $tab->startNewLine();
+                    $tab->addLineWithStyle("Unredeemed","sql_extra_line_number");
+                    foreach($month_list as $month){
+                        $tab->addLineWithStyle($result[$key][$month]["Unredeemed"],"sql_extra_line_number");
+                    }
+                    $tab->addLineWithStyle($result[$key]["Total"]["Unredeemed"],"sql_extra_line_number");
+                $tab->stopNewLine();
+                $tab->startNewLine();
+                    $tab->addLineWithStyle("%","sql_extra_line_number");
+                    foreach($month_list as $month){
+                        $tab->addLineWithStyle($result[$key][$month]["%"],"sql_extra_line_number");
+                    }
+                    $tab->addLineWithStyle($result[$key]["Total"]["%"],"sql_extra_line_number");
+                $tab->stopNewLine();
+            }
+
+        }
+    $tab->stopTable();
+}
+
+
+
 if($report=="ticket_unredeemed" && $submit){
 	if($num_months){
 		$num_months -= 1;
@@ -351,14 +555,18 @@ if($report=="ticket_unredeemed" && $submit){
 			$res_red = query($qry_red,0);
 		
 
-		$qry_sold = "SELECT 	type,
+		$qry_sold = "SELECT 	parcel_job_ticket.type,
 							SUM(end-start+1) AS amount,
+                            SUM(ROUND(parcel_job_rate.rate/20,4)) AS val,
 							DATE_FORMAT(parcel_job.order_date,'%Y-%m') AS month
 					FROM parcel_job_ticket
 					LEFT JOIN parcel_job
 					ON parcel_job.job_id=parcel_job_ticket.job_id
+                    LEFT JOIN parcel_job_rate
+                        ON parcel_job_rate.job_id=parcel_job.job_id
+                        AND parcel_job_rate.type='$key'
 					WHERE parcel_job.order_date>='$start_date' AND parcel_job.order_date<='$final_date' 
-						AND type='$key'
+						AND parcel_job_ticket.type='$key'
 						AND (id <> -1 OR id IS NULL)
 					GROUP BY type,month
 					HAVING month IS NOT NULL
@@ -369,6 +577,7 @@ if($report=="ticket_unredeemed" && $submit){
 		$months = array();
 		while($sold = mysql_fetch_object($res_sold)){
 			$result[$key][$sold->month]["Sold"] = $sold->amount;
+            $result[$key][$sold->month]["SoldVal"] = $sold->val;
 			$sold_tot+=$sold->amount;
 			$months[] = $sold->month;
 		}

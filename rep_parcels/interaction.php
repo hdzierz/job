@@ -101,7 +101,7 @@ if($report=="ticket_trace"){
 }
 
 
-if($report=="ticket_unredeemed"){
+if($report=="ticket_unredeemed" || $report=="ticket_unredeemed_val"){
 	if(!$date) $date=date("Y-m-t");
 
 ?>
@@ -139,7 +139,7 @@ if($report=="ticket_unredeemed"){
 				</td>
 			</tr>
 		</table>
-		<input type="hidden" name="report" value="ticket_unredeemed" />
+		<input type="hidden" name="report" value="<?php echo $report; ?>" />
 	</form>
 <?
 }

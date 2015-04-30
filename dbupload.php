@@ -112,10 +112,10 @@ function AddressInsert($data,$start){
 				  "'".$address->sort."',".
 				  "'".$address->salutation."',".
 				  "'".mysql_escape_string(str_replace('&','and',$address->first_name))."',".
-				  "'".mysql_escape_string(str_replace('&','and',$address->name))."',".
+				  "'".mysql_escape_string(str_replace('&','and',''))."',".
 				  "'".$address->salutation2."',".
 				  "'".mysql_escape_string(str_replace('&','and',$address->first_name2))."',".
-				  "'".mysql_escape_string(str_replace('&','and',$address->name2))."',".
+				  "'".mysql_escape_string(str_replace('&','and',''))."',".
 				  "'".mysql_escape_string($address->address)."',".
 				  "'".mysql_escape_string($address->address2)."',".
 				  "'".mysql_escape_string($address->postal_addr)."',".
@@ -344,9 +344,11 @@ function RouteAffInsert($data, $start){
 	return $data;
 }
 
-$log = fopen("dbupload.log","a+");
-$message = "DB SYNC PROCESS STARTED (".date("Y-m-d").")<br />\n\r";
+$log = fopen("log/dbupload_debug.log","a+");
+$log2 = fopen("log/dbupload.log","a+");
+$message = "DB SYNC PROCESS STARTED (".date("Y-m-d H:i:s").")\n\r";
 fwrite($log,$message,strlen($message));
+fwrite($log2,$message,strlen($message));
 
 $data1 = array(
 
@@ -402,22 +404,22 @@ for($i=0;$i<20;$i++){
 	
 	$data1 = AddressInsert($data1,$start);
 	$num_add += count($data1);
-	$message = "Num1: ".count($data1)."<br />\n\r";
+	$message = "Num1: ".count($data1)."\n\r";
 	fwrite($log,$message,strlen($message));
 	
 	$data2 = OperatorInsert($data2,$start);
 	$num_ope += count($data2);
-	$message = "Num2: ".count($data2)."<br />\n\r";
+	$message = "Num2: ".count($data2)."\n\r";
 	fwrite($log,$message,strlen($message));
 	
 	$data3 = RouteInsert($data3,$start);
 	$num_rou += count($data3);
-	$message = "Num3: ".count($data3)."<br />\n\r";
+	$message = "Num3: ".count($data3)."\n\r";
 	fwrite($log,$message,strlen($message));
 	
 	$data4 = RouteAffInsert($data4,$start);
 	$num_roa += count($data4);
-	$message = "Num3: ".count($data4)."<br />\n\r";
+	$message = "Num3: ".count($data4)."\n\r";
 	fwrite($log,$message,strlen($message));
 	
 	// send a request to example.com (referer = jonasjohn.de)
@@ -427,7 +429,7 @@ for($i=0;$i<20;$i++){
 	    $data1
 	);
 	
-	$message = print_r($content,true)."<br />\n\r";
+	$message = print_r($content,true)."\n\r";
 	fwrite($log,$message,strlen($message));
 	
 	list($header, $content) = PostRequest(
@@ -436,7 +438,7 @@ for($i=0;$i<20;$i++){
 	    $data2
 	);
 	
-	$message = print_r($content,true)."<br />\n\r";
+	$message = print_r($content,true)."\n\r";
 	fwrite($log,$message,strlen($message));
 	
 	list($header, $content) = PostRequest(
@@ -446,7 +448,7 @@ for($i=0;$i<20;$i++){
 	    $data3
 	);
 	
-	$message = print_r($content,true)."<br />\n\r";
+	$message = print_r($content,true)."\n\r";
 	fwrite($log,$message,strlen($message));
 	
 	list($header, $content) = PostRequest(
@@ -460,15 +462,22 @@ for($i=0;$i<20;$i++){
 	
 
 	// print the result of the whole request:
-	$message = print_r($content,true)."<br />\n\r";
+	$message = print_r($content,true)."\n\r";
 	fwrite($log,$message,strlen($message));	
 
 }
 
-$message = print_r($header,true)."<br />\n\r";
+$message = print_r($header,true)."\n\r";
 fwrite($log,$message,strlen($message));
+
+$message = "DB SYNC PROCESS ENDED (".date("Y-m-d H:i:s").")\n\r";
+fwrite($log,$message,strlen($message));
+fwrite($log2,$message,strlen($message));
+
 // print $header; --> prints the headers
 fclose($log);
+fclose($log2);
+
 echo "Success <a href='index.php'>&lt&ltBack</a>";
 die();
 

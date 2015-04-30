@@ -22,7 +22,7 @@ $file = fopen("tickets_unredeemed.csv", "a");
 
 ini_set('max_execution_time', 3*60*60);
 
-/*$qry = "SELECT * FROM parcel_job_ticket 
+$qry = "SELECT * FROM parcel_job_ticket 
 LEFT JOIN parcel_job
 ON parcel_job.job_id = parcel_job_ticket.job_id
 WHERE start IS NOT NULL AND end IS NOT NULL AND start <= end AND order_date > '2012-01-01'";
@@ -35,7 +35,8 @@ while($item = mysql_fetch_object($res)){
 		query($qry);
 	}
 }
-*/
+
+die()
 $qry = "SELECT parcel_job.job_id,parcel_tickets.ticket_no, is_redeemed_D, order_date FROM parcel_tickets
 LEFT JOIN parcel_job
 ON parcel_job.job_id=parcel_tickets.job_id
