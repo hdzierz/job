@@ -13,16 +13,6 @@ if($action=="edit"||$action=="add"){
 			ON address.operator_id=operator.operator_id
 			WHERE address.address_id='$record'";
 	$operator = mysql_fetch_object(query($sql));	
-
-    if($operator->etext){
-        $qry = "SELECT * FROM auth_user WHERE username='{$operator->etext}'";
-        $res = query($qry);
-        $u = mysql_fetch_object($res);
-        $passwd_link = "<a target='_blank' href='http://jobs.coural.co.nz:8080/admin/auth/user/{$u->id}/password/'>Set password</a>";
-    }
-    else{
-        $passwd_link='';
-    }
 	
 	$operator_id = $operator->operator_id;
 	$address_id  = $operator->address_id;
@@ -63,7 +53,7 @@ if($action=="edit"||$action=="add"){
 	
 ?>	
 	<script type="text/javascript" src="includes/calendarDateInput.js"></script> 
-	<form name="editoperator" action="admin_address.php?action=save" method="post">
+	<form name="editoperator" action="admin_address.php?action=save" method="get">
 		<table class="address_box">
 			<tr>
 				<td>Name</td>
@@ -159,16 +149,10 @@ if($action=="edit"||$action=="add"){
 			<tr>
 				<td>Address 2</td>
 				<td><input size="40" type="text" name="address2" value="<?=$operator->address2?>" /> </td>
-				<td>Network Username</td>
-				<td><input size="40" type="text" name="etext" value="<?=$operator->etext?>" /> <?php //echo $passwd_link;   ?></td>				
+				<td>EText</td>
+				<td><input size="40" type="text" name="etext" value="<?=$operator->etext?>" /> </td>				
 				
-			</tr>				
-            <tr>
-                <td></td>
-                <td></td>
-                <td>Network Password</td>
-                <td><input size="40" type="pasword" name="password" value="" /></td>
-            </tr>	
+			</tr>					
 			<tr>
 				<td>Postal Address</td>
 				<td><input size="40" type="text" name="postal_addr" value="<?=$operator->postal_addr?>" /> </td>
@@ -223,10 +207,18 @@ if($action=="edit"||$action=="add"){
             </tr>
 			<tr>
 				<td>Drop Off Address:</td>
-				<td colspan="4">
+				<td>
 					<input type="text" name="do_address" size="40" value="<?=$operator->do_address?>" />
-				</td>				
+				</td>
+                <td rowspan='4'>
+                </td>
 			</tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
 			<tr>
 				<td>Drop Off City:</td>
 				<td colspan="4">
@@ -247,7 +239,57 @@ if($action=="edit"||$action=="add"){
 					<textarea class="show_on_screen" name="env_deliv_notes" cols="20" rows="5" ><?=$operator->env_deliv_notes?></textarea>
 					<span class="show_on_print"><?=$operator->env_deliv_notes?></span>
 				</td>														
-			</tr>					
+			</tr>
+            <tr>
+                <td colspan="9"><hr /></td>
+            </tr>	
+            <tr>
+                <td colspan="9">
+                    <table  class="address_box">
+                        <tr>
+                            <td></td>
+                            <td>Company</td>
+                            <td>Type</td>
+                            <td>Bin #</td>
+                        </tr>
+                        <tr>
+                            <td>Linehaul A</td>
+                            <td>
+                                <input type="text" name="linehaul_a" size="10" value="<?=$operator->linehaul_a?>" />
+                            </td>
+                            <td>
+                                <input type="text" name="linehaul_a_type" size="10" value="<?=$operator->linehaul_a_type?>" />
+                            </td>                            <td>
+                                <input type="text" name="linehaul_a_bin" size="10" value="<?=$operator->linehaul_a_bin?>" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Linehaul B</td>
+                            <td>
+                                <input type="text" name="linehaul_b" size="10" value="<?=$operator->linehaul_b?>" />
+                            </td>
+                            <td>
+                                <input type="text" name="linehaul_b_type" size="10" value="<?=$operator->linehaul_b_type?>" />
+                            </td>
+                            <td>
+                                <input type="text" name="linehaul_b_bin" size="10" value="<?=$operator->linehaul_b_bin?>" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PH Dest Code</td>
+                            <td>
+                                <input type="text" name="ph_desk" size="10" value="<?=$operator->ph_desk?>" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rate Code</td>
+                            <td>
+                                <input type="text" name="rate_code" size="10" value="<?=$operator->rate_code?>" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>				
 			<tr>
 				<td colspan="9"><hr /></td>
 			</tr>			

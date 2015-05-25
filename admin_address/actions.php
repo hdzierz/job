@@ -81,7 +81,8 @@ if($action=="save"){
 											mail_type,
 											alt_mail_type,
 											alt_email,
-											alt_fax)
+											alt_fax
+                                            )
 							
 					VALUES(	'$type',
 							'$card_id',
@@ -170,26 +171,14 @@ if($action=="save"){
             $qry = "SELECT * FROM auth_user WHERE username='$etext'";
             $res = query($qry);
             $u = mysql_fetch_object($res);
-
-            if($u && $etext && $password){
-                $qry = "UPDATE auth_user SET password=md5('$password'), first_name='$first_name', last_name='$name', email='$email'  WHERE username='$etext'";
-                query($qry);
+            if($u){
+                $qry = "UPDATE auth_user SET first_name='$first_name', last_name='$name', email='$email'  WHERE username='$etext'";
+                //query($qry,1);
             }
-            else if($etext && $password){
-                $qry = "INSERT INTO  auth_user SET last_login=now(), 
-                                                    username='$etext', 
-                                                    first_name='$first_name', 
-                                                    last_name='$name', 
-                                                    email='$email',
-                                                    is_staff=0,
-                                                    is_active=1,
-                                                    date_joined=now(),
-                                                    is_superuser=0,
-                                                    password=md5('$password') ";
-                query($qry);
-                $auth_user_id = mysql_insert_id();
-                $qry = "INSERT INTO auth_user_groups(user_id, group_id) VALUES($auth_user_id,1)";
-                query($qry);
+            else{
+                $qry = "INSERT INTO  auth_user SET username='$etext', first_name='$first_name', last_name='$name', email='$email' ";
+                query($qry,1);
+
             }
 
 			$action="save_operator";	
@@ -265,7 +254,15 @@ if($action=="save_operator"){
 									 subdist_seq,
 									 rate_red_fact,
 									 parcel_send_di,
-                                     send_contr_sheet)
+                                     send_contr_sheet,
+                                     linehaul_a,
+                                     linehaul_a_type,
+                                     linehaul_a_bin,
+                                     linehaul_b,
+                                     linehaul_b_type,
+                                     linehaul_b_bin,
+                                     ph_desk,
+                                     rate_code)
 				VALUES('$is_current',
 					 '$company',
 					 '$is_dist',
@@ -293,7 +290,15 @@ if($action=="save_operator"){
 					 '$subdist_seq'+0,
 					 '$rate_red_fact'+0,
 					 '$parcel_send_di',
-                     '$send_contr_sheet')";
+                     '$send_contr_sheet',
+                     '$linehaul_a',
+                     '$linehaul_a_type',
+                     '$linehaul_a_bin',
+                     '$linehaul_b',
+                     '$linehaul_b_type',
+                     '$linehaul_b_bin',
+                     '$ph_desk',
+                     '$rate_code')";
 		query($sql);
 		$operator_id=mysql_insert_id();					 
 		$qry = "UPDATE address SET operator_id=$operator_id WHERE address_id=$address_id";
@@ -329,20 +334,19 @@ if($action=="save_operator"){
 					 subdist_seq	= '$subdist_seq'+0,
 					 rate_red_fact  = '$rate_red_fact',
 					 parcel_send_di = '$parcel_send_di',
-                     send_contr_sheet = '$send_contr_sheet'
+                     send_contr_sheet = '$send_contr_sheet',
+                     linehaul_a     = '$linehaul_a',
+                     linehaul_a_type = '$linehaul_a_type',
+                     linehaul_a_bin = '$linehaul_a_bin',
+                     linehaul_b = '$linehaul_b',
+                     linehaul_b_type = '$linehaul_b_type',
+                     linehaul_b_bin = '$linehaul_b_bin',
+                     ph_desk = '$ph_desk',
+                     rate_code = '$rate_code'
 				WHERE operator_id='$operator_id'";
 			query($sql);
 	}
-    
-    if($etext){
-        $qry = "SELECT * FROM auth_user WHERE username='$etext'";
-        $res = query($qry);
-        $u = mysql_fetch_object($res);
-        if($u){
-            $qry = "UPDATE operator SET user_id={$u->id} WHERE operator_id='$operator_id'";
-            query($qry);
-        } 
-    }
+	
 
 	$qry = "UPDATE job_route SET subdist_rate_red = '$rate_red_fact' WHERE subdist_id = '$operator_id'";
 	query($qry,0);

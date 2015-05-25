@@ -344,8 +344,8 @@ function RouteAffInsert($data, $start){
 	return $data;
 }
 
-$log = fopen("log/dbupload_debug.log","a+");
-$log2 = fopen("log/dbupload.log","a+");
+$log = fopen("/home/hdzierz/log/dbupload_debug.log","a+");
+$log2 = fopen("/home/hdzierz/log/dbupload.log","a+");
 $message = "DB SYNC PROCESS STARTED (".date("Y-m-d H:i:s").")\n\r";
 fwrite($log,$message,strlen($message));
 fwrite($log2,$message,strlen($message));
