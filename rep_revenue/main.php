@@ -6,32 +6,6 @@ include_once $dir."includes/fpdf/fpdf.php";
 define('FPDF_FONTPATH',$dir.'includes/fpdf/font/');
 require_once $dir."includes/MySQLPDFTable.php";
 
-
-?>
-<script language="javascript">
-function checkAll(obj)
-{
-	// set the form to look at (your form is called form1)
-	var frm = document.table
-	// get the form elements
-	var el = frm.elements
-	// loop through the elements...
-	for(i=0;i<el.length;i++) {
-	  // and check if it is a checkbox
-	  if(el[i].type == "checkbox" ) {
-	    // if it is a checkbox and you submitted yes to the function
-	    if(obj == "yes")
-	      // tick the box
-	      el[i].checked = true;
-	    else
-	      // otherwise untick the box
-	      el[i].checked = false;
-	    }
-	  }
-}
-</script>
-<?php 
-
 	
 if($report=="job_manifest_select"){
 	$where_add="";
@@ -416,7 +390,8 @@ if($report=="rep_cirpay_by_dist_send_out"){
 			$tab->Output($dir.'/'.$fn);
 			
 			if($tot_pay_gst>0){
-				send_operator_mail("DELIVERY INSTRUCTIONS BY DATERANGE",$dir,$fn,$dist);
+				$t = new mailThread("DELIVERY INSTRUCTIONS BY DATERANGE",$dir,$fn,$dist);
+                $t->start();
 				//send_operator_mail("DELIVERY INSTRUCTIONS BY DATERANGE",$dir,$fn,$dist,"hdzierz@gmail.com");
 			}
 			
@@ -739,8 +714,10 @@ if($report=="linehaul_send_out"){
 			echo "Linehaul job summary for <strong>$haul->name</strong> created.<br />";
 			//fwrite($fp,"Linehaul job summary for <strong>$haul->name</strong> created.\n");
 			if($num_jobs>0){
-				if(!$pdf_only) send_operator_mail("LINEHAUL JOB SUMMARY",$dir,$fn,$haul->client_id);
-				
+				if(!$pdf_only){
+                     $t = new mailThread("LINEHAUL JOB SUMMARY",$dir,$fn,$haul->client_id);
+                     $t->start();
+				}
 			}
 			
 		}
@@ -840,18 +817,70 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $rec
                 $fn = addslashes('contractor_sheets_'.$do_name.'_'.$ct.'.pdf');
                 $ct++;
                 $pdf->Output($dirp.'/'.$fn,'F');
-                if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS (CONTR SHEET)",$dirp,$fn,$doff);
+                if(!$pdf_only) {
+                    $t = new mailThread("COURAL DELIVERY INSTRUCTIONS (CONTR SHEET)",$dirp,$fn,$doff, null);
+                    $t->start();
+                }
             }//if(mysql_num_rows($res_contr>0)
     }
 }
 
+class mailThread{
+    var $i = 0;
+    var $title = "";
+    var $dirp = "";
+    var $fn = "";
+    var $dropoff_id = 0;
+    var $receiver = "";
+    public function __construct($title,$dirp,$fn,$dropoff_id,$receiver){
+        $this->title = $title;
+        $this->dirp = $dirp;
+        $this->fn = $fn;
+        $this->dropoff_id = $dropoff_id;
+        $this->receiver = $receiver;
+    }
+    public function run(){
+        $val = $this->title.','.$this->dirp.','.$this->fn.','.$this->dropoff_id.','.$this->receiver;
+        $qry = "INSERT INTO schedule_mail_send_out(`config`, status) VALUES('$val', 1)";
+        query($qry);
+        #send_operator_mail($this->title,$this->dirp,$this->fn,$this->dropoff_id,$this->receiver);
+    }
+    public function start(){
+        sleep(1);
+        $this->run();
+    }
+}
+
 if($report=="weekly_send_out"){
-	
+    if($company=='All'){
+        $qry_dist = "SELECT DISTINCT operator_id,company FROM operator WHERE is_dist='Y'";
+        $res_dist = query($qry_dist);
+        $count = mysql_num_rows($res_dist);
+        $c = 1;
+        while($op = mysql_fetch_object($res_dist)){
+            echo "Num Dist: $c / $count<br />";
+            $c++;
+            $qstr =  $_SERVER['QUERY_STRING'];
+            $qstr = str_replace("All", "{$op->operator_id}", $qstr);
+            $qry = "INSERT INTO schedule_mail_send_out(config, status) VALUES('$qstr',2)";
+            query($qry);
+            $company = get('operator', 'company', "WHERE operator_id={$op->operator_id}");
+            echo "<b>Sendout for $company scheduled</b><br .>";
+        }
+    }
+    else{
+        weekly_send_out($company, $date_start, $date_final, $show_regular, $show_casual, $show_rd_details, $include_contr, $pdf_only);
+    }
+}
+
+function weekly_send_out($company, $date_start, $date_final, $show_regular, $show_casual, $show_rd_details, $include_contr, $pdf_only){
+    global $MYSQL;
+    $threads = array();	
 	//$pdf_only=true;
 	$pdffiles = array();
-	$now=date("Y_m_d_H_i_s");
+	$now=date("Y_m_d_H");
 	$dirp=$SEND_OUTPUT_DIR."temp_deliv/$now";
-	mkdir($dirp);
+	@mkdir($dirp);
 	
 	$font_size = 8;
     if($submit=="Create PDF only"){
@@ -866,7 +895,6 @@ if($report=="weekly_send_out"){
 	// Life!!!!!!!!!
 	$receiver = false;
 	$mail_receiver = 'dayna@coural.co.nz';
-	//$mail_receiver = 'hdzierz@gmail.com';
 	
 	$count_mail=0;
 	if(!$comment2)
@@ -880,13 +908,13 @@ if($report=="weekly_send_out"){
 		if($company!='All' && $company) $where_add = " AND operator_id='$company'";
 		
 	
-        sleep(60);
+        //sleep(60);
 	
 		$qry_dist = "SELECT DISTINCT operator_id,company FROM operator WHERE is_dist='Y' $where_add";
 		
 		$res_dist = query($qry_dist);
 		
-		echo "Num Dist:".mysql_num_rows($res_dist)."<br />";
+		#echo "Num Dist:".mysql_num_rows($res_dist)."<br />";
 		$jobs = array();
 		while($dist = mysql_fetch_object($res_dist)){
 			$dist_id=$dist->operator_id;
@@ -1138,7 +1166,8 @@ if($report=="weekly_send_out"){
 				//fwrite($fp,"Delivery instructions for <strong>$company</strong> created.\n");
 		
 				if(!$pdf_only) {
-					send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$dist_id,$receiver);
+                    $threads[$fn] = new mailThread("RESULT OF COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$dist_id,$receiver);
+                    $threads[$fn]->start();	
 				}
 				
 				$pdffiles[] = $dirp.'/'.$fn;
@@ -1325,13 +1354,6 @@ if($report=="weekly_send_out"){
 						$qry_reg = sprintf($qry,$sel_rd," AND is_regular='Y' AND job.job_no='$job->job_no'",$group);
 						//echo nl2br($qry_reg);die();
 						$data = $tab->LoadData($qry_reg);
-						/*$new_data = array();
-						foreach($data as $d){
-							$new_data[] = $d;
-							$new_line = array();
-							$new_line["Circular"] = $d["client"];
-							$new_data[] = $new_line;
-						}*/
 						
 						if(count($data)>0){
 							$tab->WriteTable($header,$data,$width,4,1);			
@@ -1350,26 +1372,11 @@ if($report=="weekly_send_out"){
 					
 					$first_job=false;
 
-					
-					
-					//$tab->Ln();
-					//$tab->WordWrap($comment2, $maxw-1,'\n');
 					$tab->StartLine($font_size);
 						$tab->WriteLine("* D/date as DD-MM",'L',$font_size,$maxw);
 					$tab->StopLine();
 					
 					$tab->MultiCell($maxw,2.5,$comment2,false,'L');
-					//$tab->Ln();
-					/*$tab->StartLine($font_size);
-						$tab->WriteLine($comment2,'L',$font_size,$maxw);
-					$tab->StopLine();*/
-					
-					//$tab->StartLine($font_size);
-						//$tab->WriteLine("",'R',$font_size,$maxw);
-					//$tab->StopLine();
-					
-					
-				
 					
 					$header=array('Job #','Type','Circular','Client','D/Date','RD','Version','Qty','Weight','Date Recd.');
 					$width=array('Job #'=>15,'Type'=>20,'Circular'=>45,'Client'=>40,'D/Date'=>12,'RD'=>40,'Version'=>30,'Qty'=>20,'Weight'=>12,'Date Recd.'=>20);
@@ -1394,14 +1401,6 @@ if($report=="weekly_send_out"){
 						$qry_cas = sprintf($qry,' route.code AS RD, '," AND job.job_no='$job->job_no' AND is_regular<>'Y' ","GROUP BY job.job_no,job_route.route_id,IF(job_route.dest_type='bundles',1,0)");
 						$data = $tab->LoadData($qry_cas);
 						
-						/*$new_data = array();
-						foreach($data as $d){
-							$new_data[] = $d;
-							$new_line = array();
-							$new_line["Circular"] = $d["client"];
-							$new_data[] = $new_line;
-						}*/
-						
 						if(count($data)>0){
 							$tab->WriteTable($header,$data,$width,4,false);	//exit;		
 							$tab->StartLine($font_size);
@@ -1414,17 +1413,11 @@ if($report=="weekly_send_out"){
 							$tab->StopLine();
 							$tab->StopLine();
 							$tab->collFieldVal["Qty"] = array();
-							//$tab->collFieldVal["Qty 2"] = array();
 						}
 					}
 					
-					
-					
 					$first_job=false;
 
-					//$tab->StartLine($font_size);
-						//$tab->WriteLine("",'R',$font_size,$maxw);
-					//$tab->StopLine();
 					$tab->SetFontSize(9);
 					$blurb = "THIS SHOULD BE USED FOR DELIVERY CONFIRMATIONS - 'GOLDS'. PLEASE FAX TO 06 356 6618 EACH WEEK.\n";
 					$blurb.= "Please enter date received in the box alongside the total drop (above) and note any shortages or other comments below.";
@@ -1452,10 +1445,11 @@ if($report=="weekly_send_out"){
 							
 							echo "($count) Delivery instructions for <strong>$do->company</strong> created.<br />";
 							//fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
-							if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$do->dropoff_id,$receiver);
+							if(!$pdf_only){
+                                $threads[$fn] = new mailThread("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$do->dropoff_id,$receiver);
+                                $threads[$fn]->start(); 
+                            }
 							$pdffiles[] = $dirp.'/'.$fn;
-							//pdf_merge($now,$fn);
-							
 						}
 						else{
 							$fn = clean_file_name("do_MAIL_delivery_instructions_".$do->company.".pdf");
@@ -1464,8 +1458,10 @@ if($report=="weekly_send_out"){
 							$tab->Output($dirp.'/'.$fn);
 							
 							echo "($count) Delivery instructions for <strong>$do->company (MAIL)</strong> created.<br />";
-							//fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
-							if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$do->dropoff_id,$mail_receiver);
+							if(!$pdf_only){
+                                $threads[$fn] = new mailThread("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$do->dropoff_id,$mail_receiver);
+                                $threads[$fn]->start();
+                            }
 						}
 					}
 				}//while do
@@ -1519,7 +1515,7 @@ if($report=="weekly_send_out"){
                                 ORDER BY is_regular DESC,job_no,job_no_add";
                     //echo nl2br($qry_jobs); die();
                     $res_jobs = query($qry_jobs);
-				                    $tab  = new MySQLPDFTable($MYSQL,'l');
+				    $tab  = new MySQLPDFTable($MYSQL,'l');
                     $tab->SetTopMargin(5);
                     $tab->AliasNbPages();
                     $tab->fontSize = $font_size;
@@ -1527,17 +1523,12 @@ if($report=="weekly_send_out"){
                     $tab->norepField["Circular"]=true;
                     $tab->norepField["Client"]=true;
 
-
                     $tab->SetFont('Helvetica','B',$font_size);
 
-
                     $tab->collField["Qty"]=true;
-                    //$tab->collField["Qty 2"]=true;
                     $tab->collField["Tot"]=true;
 
-
                     $tab->AddPage();
-
 
                     $title = "Distributor: $dist->company";
                     $tab->StartLine(8);
@@ -1555,7 +1546,7 @@ if($report=="weekly_send_out"){
                         $tab->WriteLine($title,'L',8,$maxw);
                     $tab->StopLine();
 
-					                    if($show_rd_details){
+                    if($show_rd_details){
                         $group = "GROUP BY job_no,job_route.route_id,IF(job_route.dest_type='bundles',1,0)";
                         $sel_rd = "route.code AS 'RD',";
                         $num_blank_cols = 5;
@@ -1645,14 +1636,6 @@ if($report=="weekly_send_out"){
                         $qry_reg = sprintf($qry,$sel_rd," AND is_regular='Y' AND job.job_no='$job->job_no'",$group);
                         //echo nl2br($qry_reg);die();
                         $data = $tab->LoadData($qry_reg);
-                        /*$new_data = array();
-                        foreach($data as $d){
-                            $new_data[] = $d;
-                            $new_line = array();
-                            $new_line["Circular"] = $d["client"];
-                            $new_data[] = $new_line;
-                        }*/
-
                         if(count($data)>0){
                             $tab->WriteTable($header,$data,$width,4,1);
                             if($show_rd_details){
@@ -1669,24 +1652,11 @@ if($report=="weekly_send_out"){
                     }
 
                     $first_job=false;
-                    //$tab->Ln();
-                    //$tab->WordWrap($comment2, $maxw-1,'\n');
                     $tab->StartLine($font_size);
                         $tab->WriteLine("* D/date as DD-MM",'L',$font_size,$maxw);
                     $tab->StopLine();
 
                     $tab->MultiCell($maxw,2.5,$comment2,false,'L');
-                    //$tab->Ln();
-                    /*$tab->StartLine($font_size);
-                        $tab->WriteLine($comment2,'L',$font_size,$maxw);
-                    $tab->StopLine();*/
-
-                    //$tab->StartLine($font_size);
-                        //$tab->WriteLine("",'R',$font_size,$maxw);
-                    //$tab->StopLine();
-
-
-
 
                     $header=array('Job #','Type','Circular','Client','D/Date','RD','Version','Qty','Weight','Date Recd.');
                     $width=array('Job #'=>15,'Type'=>20,'Circular'=>45,'Client'=>40,'D/Date'=>12,'RD'=>40,'Version'=>30,'Qty'=>20,'Weight'=>12,'Date Recd.'=>20);
@@ -1711,14 +1681,6 @@ if($report=="weekly_send_out"){
                         $qry_cas = sprintf($qry,' route.code AS RD, '," AND job.job_no='$job->job_no' AND is_regular<>'Y' ","GROUP BY job.job_no,job_route.route_id,IF(job_route.dest_type='bundles',1,0)");
                         $data = $tab->LoadData($qry_cas);
 
-                        /*$new_data = array();
-                        foreach($data as $d){
-                            $new_data[] = $d;
-                            $new_line = array();
-                            $new_line["Circular"] = $d["client"];
-                            $new_data[] = $new_line;
-                        }*/
-
                         if(count($data)>0){
                             $tab->WriteTable($header,$data,$width,4,false); //exit;
                             $tab->StartLine($font_size);
@@ -1738,10 +1700,6 @@ if($report=="weekly_send_out"){
 
 
                     $first_job=false;
-
-                    //$tab->StartLine($font_size);
-                        //$tab->WriteLine("",'R',$font_size,$maxw);
-                    //$tab->StopLine();
                     $tab->SetFontSize(9);
                     $blurb = "THIS SHOULD BE USED FOR DELIVERY CONFIRMATIONS - 'GOLDS'. PLEASE FAX TO 06 356 6618 EACH WEEK.\n";
                     $blurb.= "Please enter date received in the box alongside the total drop (above) and note any shortages or other comments below.";
@@ -1752,11 +1710,6 @@ if($report=="weekly_send_out"){
                     $tab->MultiCell($maxw,4,$blurb,1,'L');
                     $tab->SetXY($maxw-110,$y);
 
-                    //$blurb2 = "The above deliveries have been carried out in accordance with instructions.\n\n";
-                    //$blurb2.= "Signed:______________________  Date: _______________________\n\n\n";
-                    //$blurb2.="\n\n\n\n";
-
-                    //$tab->MultiCell($maxw-154,3,$blurb2,1,'L');
                     $tab->Ln();
                     $tab->SetFontSize($font_size);
 
@@ -1769,7 +1722,10 @@ if($report=="weekly_send_out"){
 
                             echo "($count) Delivery instructions for <strong>$do->company</strong> created.<br />";
                             //fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
-                            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$do->contractor_id,$receiver);
+                            if(!$pdf_only){
+                                $threads[$fn] = new mailThread("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$do->contractor_id,$receiver);
+                                $threads[$fn]->start();
+                            }
                             $pdffiles[] = $dirp.'/'.$fn;
                             //pdf_merge($now,$fn);
 
@@ -1777,12 +1733,14 @@ if($report=="weekly_send_out"){
                         else{
                             $fn = clean_file_name("contr_MAIL_delivery_instructions_".$do->company.".pdf");
 
-
                             $tab->Output($dirp.'/'.$fn);
 
                             echo "($count) Delivery instructions for <strong>$do->company (MAIL)</strong> created.<br />";
                             //fwrite($fp,"($count) Delivery instructions for <strong>$do->company</strong> created.\n");
-                            if(!$pdf_only) send_operator_mail("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$do->dropoff_id,$mail_receiver);
+                            if(!$pdf_only){
+                                $threads[$fn] = new mailThread("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$do->dropoff_id,$mail_receiver);
+                                $threads[$fn]->start();
+                            }
                         }
                     }
                 }//while contr
@@ -1814,7 +1772,7 @@ if($report=="weekly_send_out"){
 		
 		
 		
-	$qry = "INSERT INTO send_report 
+    	$qry = "INSERT INTO send_report 
 				SET comment='$comment2',
 				dist_id='$dist_id',
 				
@@ -1857,16 +1815,8 @@ if($report=="month_job"){
 								WHEN 'num_total' THEN 'Total'
 								WHEN 'num_nzfw' THEN 'F@90%%'	
 							END AS 'Farmer Type',
-					   #job.cancelled          AS 'Cancelled',
-					   #job.finished	          AS 'Closed',
-                       job.print_advices      AS 'Print Adv.',
-                       IF(job.inc_linehaul ='','N',job.inc_linehaul)       AS 'Inc. Linehaul',
-                       job.rate_bbc           AS 'Rate (extra)',
-                       job.qty_bbc            AS 'Qty (extra)',
-                       job.premium_sell       AS 'Premium Cust.',
-                       job.premium            AS 'Premium Cost.',
-                       job.folding_fee        AS 'Folding Fee',
-                       job.add_folding_to_invoice AS 'Add to Inv.', 
+					   job.cancelled          AS 'Cancelled',
+					   job.finished	          AS 'Closed',
 					   SUM(IF(job_route.dest_type <>'bundles',job_route.amount,0))  AS 'Quantity' ,
 					   SUM(IF(job_route.dest_type ='bundles',job_route.amount,0))  AS 'Bundles'
 				FROM job
@@ -1890,7 +1840,7 @@ if($report=="month_job"){
 		$tab->startTable();
 		$tab->writeTable();
 		$tab->startNewLine();
-			$tab->addLines("",12);
+			$tab->addLines("",5);
 			$tab->addLine("Total");
 			$qry = "SELECT SUM(amount) AS amt
 					FROM job_route 

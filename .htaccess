@@ -1,0 +1,10 @@
+AuthUserFile /var/www/html/job/hta/.htpasswd
+AuthName "Please Log In"
+AuthType Basic
+
+
+<Files "run_send_out.php">
+
+  require user bob
+
+</Files>

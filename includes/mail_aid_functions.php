@@ -93,6 +93,8 @@ class FreakMailer extends PHPMailer
     
     function Send(){
         $to = implode(',',$this->to);
+        #$this->ClearAddresses();
+        #$this->AddAddress("hdzierz@gmail.com", "Head office");
         log_mail($this->to, $this->Subject, $this->ErrorInfo, $this->error_count);
         return parent::Send();
     }
