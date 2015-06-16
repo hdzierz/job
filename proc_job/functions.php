@@ -1229,8 +1229,17 @@ function write_addroute_form($action,$job_id,$island,$region,$area,$code,$type,$
 				</td>
 				<td valign="top">
 					<span name="area_reg" id="area_reg">
-						<select name="area[]" size="10" style="width:15em "></select>
-						<input disabled name="sub_area" type="button" value=">>"  />
+                        <table>
+                            <tr>
+                                <td>
+						            <select name="area[]" size="10" style="width:15em "></select>
+                                </td>
+                                <td>
+						            <input disabled name="sub_area" type="button" value=">>"  /><br />
+                                    <input disabled name="sub_area_pmp" type="button" value="pmp>>"  />
+                                </td>
+                            </tr>
+                        </table>
 					</span>
 				</td>
 				<td valign="top">

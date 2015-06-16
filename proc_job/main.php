@@ -820,9 +820,6 @@ if($action=="edit_job"||$action=="new_job"){
 	if(!$premium_sell) 			$premium_sell="0.0000"; 
 	if(!$add_premium_to_invoice) 			$add_premium_to_invoice="N"; 
 	if(!$paper_source) $paper_source = "";
-
-    if(!$inc_linehaul)  $inc_linehaul  = 'Y';
-    if(!$print_advices) $print_advices = 'Y';
 	
 	$lbc_charge 	= sprintf("%.2f",$lbc_charge);
 	$lbc_charge_bbc	= sprintf("%.2f",$lbc_charge_bbc);

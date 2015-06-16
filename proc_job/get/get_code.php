@@ -8,11 +8,18 @@
 		$islands  = $_POST['island'];	
 		$areas = $_POST['area'];
 		$dest_type = $_POST['dest_type'];
+        $is_pmp = false;
+        if(isset($_POST['pmp'])) $is_pmp=true;
 		
 		if($dest_type=="num_total") $dest_type="(num_farmers+num_lifestyle)";
-		
-		$qry = "SELECT code as name, route_id as id FROM route WHERE is_hidden<>'Y'";
-		if($areas[0]!='0'){
+	
+        if($is_pmp){
+            $qry = "SELECT CONCAT(code, ':', pmp_areacode, '-', pmp_runcode) as name, route_id as id FROM route WHERE is_hidden<>'Y'";
+        }
+        else{	
+		    $qry = "SELECT code as name, route_id as id FROM route WHERE is_hidden<>'Y'";
+		}
+        if($areas[0]!='0'){
 			$start=true;
 			foreach($areas as $ar){
 				if(strpos($ar,'axx123y')){
@@ -57,10 +64,13 @@
 			}
 			$qry .= ")";						
 		}
-		$qry .= "ORDER BY island,seq_region,seq_area,seq_code ";
+        if($is_pmp)
+            $qry .= "ORDER BY pmp_areacode, pmp_runcode ";
+        else
+		    $qry .= "ORDER BY island,seq_region,seq_area,seq_code ";
 
-		$sel = new MySQLSelect("code","code","route","","narrow","code[]");
-		$sel->selectOnChange="";
+		$sel = new MySQLSelect("code","code", "route","","narrow","code[]");
+        $sel->selectOnChange="";
 		$sel->optionDefText="All";
 		$sel->multiple="multiple";
 		$sel->selectSize=10;

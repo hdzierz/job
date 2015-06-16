@@ -41,6 +41,12 @@
 		}
 		$qry .= " ORDER BY seq_region,seq_area ";
 
+
+?>
+  <table>
+     <tr>
+        <td>
+<?php
 		$sel = new MySQLSelect("area","area","route","","narrow","area[]");
 		$sel->selectOnChange="";
 		$sel->optionDefText="All";
@@ -53,9 +59,13 @@
 		$sel->writeSelectSQL($qry);
 		$sel->stopSelect();
 ?>		
-
-		<input name="submit" type="button" value=">>" onClick="javascript:message('code_reg');set_Button_on();get(this,'code_reg','proc_job/get/get_code.php?dest_type=<?=$dest_type?>');" />
-		
+        </td>
+        <td>
+		    <input name="submit" type="button" value=">>" onClick="javascript:message('code_reg');set_Button_on();get(this,'code_reg','proc_job/get/get_code.php?dest_type=<?=$dest_type?>');" /><br />
+            <input name="submit" type="button" value="pmp>>" onClick="javascript:message('code_reg');set_Button_on();get(this,'code_reg','proc_job/get/get_code.php?dest_type=<?=$dest_type?>&pmp=1');" />
+        </td>
+    </tr>
+</table>	
 <?				
 	}		
 ?>

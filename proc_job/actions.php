@@ -198,7 +198,6 @@ if($action=="do_attach_job"){
 // Create a new or change an existing job
 if($action=="save_job" || $action=="add_job"){
     if($print_advices<>'Y') $print_advices='N';
-    if($inc_linehaul<>'Y') $inc_linehaul='N';
 	$error=false;
 	// Validate submit
 	if(!$delivery_date && $is_ioa){
