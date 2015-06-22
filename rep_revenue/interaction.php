@@ -260,7 +260,7 @@ if($report=="job_delivery"){
 	$comment2 = str_replace("<br />","",$comment2);
 	$MESSAGE = "Distributor only mode";
 ?>		
-	<form name="weekly_job" action="rep_revenue.php" method="post">
+	<form name="weekly_job" action="rep_revenue.php" method="get">
 		<table>
 		
 <?

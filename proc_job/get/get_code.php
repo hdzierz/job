@@ -13,12 +13,7 @@
 		
 		if($dest_type=="num_total") $dest_type="(num_farmers+num_lifestyle)";
 	
-        if($is_pmp){
-            $qry = "SELECT CONCAT(code, ':', pmp_areacode, '-', pmp_runcode) as name, route_id as id FROM route WHERE is_hidden<>'Y'";
-        }
-        else{	
-		    $qry = "SELECT code as name, route_id as id FROM route WHERE is_hidden<>'Y'";
-		}
+		$qry = "SELECT code as name, route_id as id FROM route WHERE is_hidden<>'Y'";
         if($areas[0]!='0'){
 			$start=true;
 			foreach($areas as $ar){

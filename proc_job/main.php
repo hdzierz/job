@@ -699,7 +699,7 @@ if($action=="edit_job"||$action=="new_job"){
 		$weight 			= $job->weight;
 		$rate 				= $job->rate;
 		$inc_linehaul		= $job->inc_linehaul;
-        $print_advices       = $job->print_advices;
+        $print_advices      = $job->print_advices;
 		$rate_bbc			= $job->rate_bbc;
 		$hauler				= $job->hauler;
 		$lbc_charge 		= $job->lbc_charge;
@@ -759,7 +759,7 @@ if($action=="edit_job"||$action=="new_job"){
 		$weight 			= $job->weight;
 		$rate 				= $job->rate;
 		$inc_linehaul		= $job->inc_linehaul;
-        $print_advices       = $job->print_advices;
+        $print_advices      = $job->print_advices;
 		$rate_bbc			= $job->rate_bbc;
 		$hauler				= $job->hauler;
 		$lbc_charge 		= $job->lbc_charge;
@@ -798,6 +798,11 @@ if($action=="edit_job"||$action=="new_job"){
 			GROUP BY job_id,bundle_price";
 		$res_bundles = query($qry);
 	}
+
+    if($action == "new_job"){
+        $inc_linehaul = 'Y';
+        $print_advices = 'Y';
+    }
 	
 	if(!$delivery_date) 	$delivery_date = $today; 
 	if(!$lodge_date)		$lodge_date    = date('Y-m-d',strtotime($delivery_date." -5 days"));

@@ -240,9 +240,10 @@ function send_test_mail(){
 $MAIL_DEBUG = false;
 function send_operator_mail($target,$dir,$file,$id,$email=false){
 	global $ADMIN_EMAIL;
-    global $MAIL_DEBUG;
+    	global $MAIL_DEBUG;
 	$alt_send_required = false;
 	
+	$ok = true;
 	if($target=="JOB DROP OFF DETAILS"){
 		$company = get("client","name","WHERE client_id='$id'");
 		$email = get("client","email","WHERE client_id='$id'", 1);
@@ -297,6 +298,7 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 	
 		if(!$mailer->Send())
 		{
+			$ok = false;
 			echo "<font color='red'>Mail to $company failed (".$email.") : ".$mailer->ErrorInfo."</font><br />";
 			$mailer->Body = "WRONG EMAIL ADDRESS";
             $mailer->ClearAddresses();
@@ -346,7 +348,9 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
             $mailer->Send();
 			echo "<font color='red'>Mail to COURAL ADMIN failed (".$email.") : ".$mailer->ErrorInfo."</font><br />";
 		}
+		$ok = false;
 	}
+	return $ok;
 }
 
 function get_email_simple($id,$type="SMS"){
@@ -393,7 +397,7 @@ function get_email_simple($id,$type="SMS"){
 
 function send_operator_simple_mail($type,$id,$subject,$body,$email=false){
 	global $ADMIN_EMAIL;
-
+	$ok = true;
 	if(!$email)
 		$email = get_email_simple($id,$type);
 	//echo $email."<br />"; return;	

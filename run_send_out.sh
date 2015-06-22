@@ -18,3 +18,4 @@ $OUTFILE | sed "s/<br \/>/\\n/g" | sed -e :a -e 's/<[^>]*>//g;/</N;//ba' > $LOGF
 
 NOW=$(date +"%m_%d_%Y__%H_%M_%S")
 echo -e "SENDOUT ENDED AT " $NOW "\n" >> $LOGFILESTAT
+./run_send_out_email.sh
