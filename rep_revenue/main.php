@@ -869,11 +869,11 @@ if($report=="weekly_send_out"){
         }
     }
     else{
-        weekly_send_out($company, $date_start, $date_final, $show_regular, $show_casual, $show_rd_details, $include_contr, $pdf_only);
+        weekly_send_out($company, $date_start, $date_final, $show_regular, $show_casual, $show_rd_details, $include_contr, $pdf_only, $check);
     }
 }
 
-function weekly_send_out($company, $date_start, $date_final, $show_regular, $show_casual, $show_rd_details, $include_contr, $pdf_only){
+function weekly_send_out($company, $date_start, $date_final, $show_regular, $show_casual, $show_rd_details, $include_contr, $pdf_only, $check){
     global $MYSQL;
     $threads = array();	
 	//$pdf_only=true;
@@ -1815,8 +1815,16 @@ if($report=="month_job"){
 								WHEN 'num_total' THEN 'Total'
 								WHEN 'num_nzfw' THEN 'F@90%%'	
 							END AS 'Farmer Type',
-					   job.cancelled          AS 'Cancelled',
-					   job.finished	          AS 'Closed',
+					   #job.cancelled          AS 'Cancelled',
+					   #job.finished	          AS 'Closed',
+                        job.print_advices      AS 'Print Adv.',     
+                       IF(job.inc_linehaul ='','N',job.inc_linehaul)       AS 'Inc. Linehaul',     
+                       job.rate_bbc           AS 'Rate (extra)',       
+                       job.qty_bbc            AS 'Qty (extra)',        
+                       job.premium_sell       AS 'Premium Cust.',      
+                       job.premium            AS 'Premium Cost.',      
+                       job.folding_fee        AS 'Folding Fee',        
+                       job.add_folding_to_invoice AS 'Add to Inv.', 
 					   SUM(IF(job_route.dest_type <>'bundles',job_route.amount,0))  AS 'Quantity' ,
 					   SUM(IF(job_route.dest_type ='bundles',job_route.amount,0))  AS 'Bundles'
 				FROM job
@@ -1840,7 +1848,7 @@ if($report=="month_job"){
 		$tab->startTable();
 		$tab->writeTable();
 		$tab->startNewLine();
-			$tab->addLines("",5);
+			$tab->addLines("",12);
 			$tab->addLine("Total");
 			$qry = "SELECT SUM(amount) AS amt
 					FROM job_route 

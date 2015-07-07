@@ -178,20 +178,21 @@ if($action=="save"){
                 $qry = "UPDATE auth_user SET password=md5('$password'), first_name='$first_name', last_name='$name', email='$email'  WHERE username='$etext'";
                 query($qry);
             }
-            else{
+            else if($etext && $password){
                 $qry = "INSERT INTO  auth_user SET 
                             username='$etext', 
                              first_name='$first_name', 
-                            last_name='$name', 
-                            email='$email' is_staff=0,       
-                           is_active=1,       
-                           date_joined=now(),     
-                           is_superuser=0,        
-                           password=md5('$password') ";
+                             last_name='$name', 
+                             email='$email',
+                             is_staff=0,       
+                             is_active=1,       
+                             date_joined=now(),     
+                             is_superuser=0,        
+                             password=md5('$password') ";
                 query($qry);
                 $auth_user_id = mysql_insert_id();      
-               $qry = "INSERT INTO auth_user_groups(user_id, group_id) VALUES($auth_user_id,1)";      
-               query($qry);
+                $qry = "INSERT INTO auth_user_groups(user_id, group_id) VALUES($auth_user_id,1)";      
+                query($qry);
             }
 
 			$action="save_operator";	
