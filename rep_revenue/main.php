@@ -727,7 +727,7 @@ if($report=="linehaul_send_out"){
 
 $doff_prev = array();
 $ct=0;
-function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $receiver, $is_by_job){
+function weekly_a5($doff, $where_add, $dirp, $date_start, $date_final, $pdf_only, $receiver, $is_by_job){
     $pdffiles = array();
     GLOBAL $doff_prev;
     GLOBAL $ct;
@@ -743,11 +743,6 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $rec
     if($date_start&&$date_final){
         $date_show_start    = date("jS M Y",strtotime($date_start));
         $date_show_end      = date("jS M Y",strtotime($date_final));
-        if($company!='All' && $company) $where_add = " AND operator_id='$company'";
-
-        $where_add = "";
-        if($is_by_job)
-            $where_add = " AND job.job_id=$job\n";
 
         $jobs = array();
             $qry = "
@@ -786,7 +781,6 @@ function weekly_a5($doff, $job, $dirp, $date_start, $date_final, $pdf_only, $rec
                     WHERE
                         doff={$doff}
                         $where_add 
-                        AND delivery_date BETWEEN '$date_start' AND '$date_final'
                         AND print_advices = 'Y'
                     GROUP BY job.job_id, contractor_id, route.route_id
                     ORDER BY job.job_id, route.code
@@ -851,7 +845,11 @@ class mailThread{
     }
 }
 
+
 if($report=="weekly_send_out"){
+    if($submit=="Create PDF only"){
+        $pdf_only = true;
+    }
     if($company=='All'){
         $qry_dist = "SELECT DISTINCT operator_id,company FROM operator WHERE is_dist='Y'";
         $res_dist = query($qry_dist);
@@ -1030,8 +1028,8 @@ function weekly_send_out($company, $date_start, $date_final, $show_regular, $sho
                     if(!$do->dropoff_id) continue;
                     $send_contr_sheet = get("operator", "send_contr_sheet", "WHERE operator_id=$do->dropoff_id");
                     if($send_contr_sheet == 'Y' && $job->inc_linehaul == 'Y'){
-                        $is_by_job = false;
-                        weekly_a5($do->dropoff_id, $job->job_id, $dirp, $date_start, $date_final, $pdf_only, $receiver, $is_job_report);
+                        #$is_by_job = false;
+                        weekly_a5($do->dropoff_id, $where_add, $dirp, $date_start, $date_final, $pdf_only, $receiver, $is_job_report);
                     }
 					if(($show_rd_details && $job->is_regular=='Y') || ($job->is_regular=='N'||trim($job->is_regular=='')) ){
 						$group = "GROUP BY job_route.route_id,IF(job_route.dest_type='bundles',1,0)";
