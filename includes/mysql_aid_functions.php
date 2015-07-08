@@ -32,7 +32,7 @@ function get_sum_as($table,$field,$as,$where,$group){
 	return $obj[$as];
 }
 
-function get_max($table,$field,$where,$group){
+function get_max($table,$field,$where='',$group=''){
 	$qry = "SELECT MAX(`$field`) AS `$field` FROM $table $where $group";
 	$res = query($qry);
 	$obj = mysql_fetch_assoc($res);
