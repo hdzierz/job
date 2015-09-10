@@ -71,6 +71,16 @@
 <?
 	}
 ?>
+<? if($action=="select_mobile_scan"){?>
+        <a class="subaself" href="parcels.php?action=select_mobile_scan">Redeem Mobile Scan</a>|
+<?
+    }
+    else{
+?>
+        <a class="suba" href="parcels.php?action=select_mobile_scan">Redeem Mobile Scan</a>|
+<?
+    }
+?>
 <? if($action=="redeem"){?>
 		<a class="subaself" href="parcels.php?action=redeem">Ticket Redemption</a>|
 <? 

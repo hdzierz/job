@@ -16,7 +16,6 @@ class run{
 		}
 	}
 	
-	
 	function writeRun($batch_no, $contractor_id,$route_id,$date){
 		global $CK_USERID;
 		
@@ -252,7 +251,6 @@ class ticket{
 		$where1 = "WHERE env_contractor_id='$contractor_id' AND route_id='$route_id' AND '$date' BETWEEN app_date AND stop_date";
 		$dist_id = get("route_aff","env_dist_id",$where1,0);
 		//$dist_id = get("route_aff","env_dist_id","WHERE contractor_id='$contractor_id' AND route_id='$route_id' AND '$date' BETWEEN app_date AND stop_date",0);
-		
 		if(!$dist_id) {
 			// Print an error message when no affiliation is there.
 			$company = get("operator","company","WHERE operator_id='$contractor_id'");
@@ -328,6 +326,7 @@ class ticket{
 		$date = $year.'-'.$month."-15";
 		
 		if(!$dist_id) {
+            echo $where1;
 			// Print an error message when no affiliation is there.
 			$company = get("operator","company","WHERE operator_id='$contractor_id'");
 			$ERROR .= "Distributor not found for $company.<br />"; 
@@ -404,11 +403,14 @@ class xeroxFileReader{
 	var $content = array();
     var $batch = 0;
 	
-	function __construct($dir,$fn){
+	function __construct($dir,$fn, $is_mobile=false){
 		$this->fileName = $fn;
 		$this->fileDir = $dir;
 
-        $this->batch = self::getBatchNo($fn);
+        if($is_mobile)
+            $this->batch = self::getMobileBatchNo($fn);
+        else
+            $this->batch = self::getBatchNo($fn);
 		$this->readContent();
 		
 		$this->preProcess();
@@ -421,6 +423,16 @@ class xeroxFileReader{
         if(isset($res[1]))
             return $res[1];
         preg_match("/^Processed_([0-9]*).*$/", $fn, $res);
+        if(isset($res[1]))
+            return $res[1];
+        return 0;
+    }
+
+    static function getMobileBatchNo($fn){
+        preg_match("/^Coural_([0-9]_*).*$/", $fn, $res);
+        if(isset($res[1]))
+            return $res[1];
+        preg_match("/^Processed_Coural_([0-9]_*).*$/", $fn, $res);
         if(isset($res[1]))
             return $res[1];
         return 0;
@@ -447,6 +459,19 @@ class xeroxFileReader{
 		$result["date"] = date("Y-m-d");
 		$result["template"] = intval($header[5]);
 	}
+
+    function getDistId($contr_id, $route_id, $dtt){
+        $qry = "SELECT * FROM route_aff 
+            WHERE env_contractor_id=$contr_id,
+                AND route_id=$route_id
+                AND '$dtt' BETWEEN app_date and stop_date";
+        $res = query($qry);
+        if($res){
+            $o = mysql_fetch_object($res);
+            return $o->env_dist_id;
+        }
+        return null;
+    }
 	
 	function checkNo($no){
 		if(trim(strlen($no))>6){ return true;} else{ return false;}
@@ -472,6 +497,328 @@ class xeroxFileReader{
 			$line = explode(',',$fl);
 			
 			if(count($line)>1 && $line[0] != "DIST_ID"){
+				$this->content[] = $this->parseLine($line);
+			}
+		}//foreach($file_lines as $fln => $fl) {
+	}
+	
+	function preProcess(){
+		foreach($this->content as $line){
+			$this->writeToPreScanningTables($line);
+		}
+	}
+
+	function writeToPreScanningTables($line){
+		global $CK_USERID;
+		
+		//$fileName = str_replace('Processed_','',$this->fileName);
+		//$parcel_run_pre_id = get("parcel_run_pre","parcel_run_pre_id","WHERE file='$fileName'");
+		
+		///if(!$parcel_run_pre_id){
+		$qry = "INSERT INTO parcel_run_pre
+				SET contractor_id='".$line["contr_id"]."',
+					dist_id= '".$line["dist_id"]."',
+					route_id= '".$line["route_id"]."',
+					page = '0',
+					real_date = now(),
+					user_id ='$CK_USERID',
+                    batch_no = {$this->batch},
+					is_processed = 0";
+		query($qry);
+		
+		$parcel_run_pre_id = mysql_insert_id();
+		//}
+		foreach($line["tickets"] as $ticket){
+			$qry = "INSERT INTO parcel_job_route_pre 
+					SET parcel_run_pre_id = '$parcel_run_pre_id',
+						ticket_no = '".$ticket->getFullCode()."'";
+			query($qry);
+		}
+	}
+	
+	function markFileAsProcessed(){
+		
+		rename($this->fileDir.'/'.$this->fileName,$this->fileDir.'/Processed_'.$this->fileName);
+	}
+}
+
+
+class mobileTicket{
+	var $no = false;
+	var $post = false;
+	var $pre = false;
+	var $number=false;
+    var $batch = 0;
+    var $data = array();
+
+	function __construct($data){
+		$this->no = $data[4];
+		
+		$this->pre = strtoupper(substr($this->no,0,2));
+		$this->post = strtoupper(substr($this->no,-1));
+		
+		$this->number = substr($this->no,2,-1);
+        $this->data = $data;
+	}
+	
+	function isValid(){
+		
+		if($this->post!='D' && 	$this->post!='P') return false;
+		else if($this->pre!='CD' && $this->pre!='CP' && $this->pre!='SR' && $this->pre!='RP') return false;
+		else if(!is_numeric($this->number)) return false;
+		else return true;
+	}
+	
+	function getType(){
+		if($this->pre=="CD"){
+			return "Red";
+		}
+		else if($this->pre=="CP"){
+			return "Green";
+		}
+		else if($this->pre=="RP"){
+			return "Purple";
+		}
+		else{
+			return "Yellow";
+		}
+	}
+	
+	function getFullCode(){
+		return $this->no;
+	}
+	
+	function getTypeCode(){
+		return $this->pre;
+	}
+	
+	function getNumber(){
+		return $this->number;
+	}
+	
+	function getDP(){
+		return $this->post;
+	}
+	
+	function getNote(){
+		$qry = "SELECT note FROM parcel_ticket_note WHERE '".$this->getNumber()."' BETWEEN start AND end";
+		$res = query($qry);
+		$note = mysql_fetch_object($res);
+		
+		if($note->note){
+			return $note->note;
+		}
+		else{
+			return false;
+		}
+	}
+	
+	function isUnredeemed(){
+		
+		$dp = $this->getDP();
+		if($dp=='D'){
+			$is_redeemed_D=1;
+			$is_redeemed_P=0;
+		}
+		else{
+			$is_redeemed_D=0;
+			$is_redeemed_P=1;
+		}
+		
+		$ticket_id = false;
+		$unredeemed = true;		
+		
+		// Check for tickets but ignore random ones.
+		$ticket_id = get("parcel_job_route","ticket_id","WHERE ticket_no='".$this->getNumber()."'  AND (is_redeemed_D =$is_redeemed_D AND is_redeemed_P =$is_redeemed_P) AND is_random=0 AND type='".$this->getTypeCode()."'");	
+		
+		if($ticket_id) $unredeemed = false;
+		
+		return $unredeemed;
+    }
+	
+	function isRedeemed(){
+		return !$this->isUnredeemed();
+	}
+	
+	
+	function getRates($date=false){
+		if(!$date)
+			$now = date("Y-m-d");
+		else
+			$now = $date;
+				
+		$qry = "SELECT * FROM parcel_rates WHERE '$now' BETWEEN start_date AND end_date";
+		$res = query($qry);
+		$rates = array();
+		while($rate = mysql_fetch_object($res)){
+			$rates["red_rate_pickup"][$rate->type] = $rate->red_rate_pickup;
+			$rates["red_rate_deliv"][$rate->type] = $rate->red_rate_deliv;
+			$rates["distr_payment_deliv"][$rate->type] = $rate->distr_payment_deliv;
+			$rates["distr_payment_pickup"][$rate->type] = $rate->distr_payment_pickup;
+		}
+		
+		return $rates;
+	}
+	
+	function redeem($batch_no, $year,$month){
+		// Error message. Will come up at the top of content area
+		global $ERROR;
+       
+        $contractor_id = $this->data[0];
+        $route_id = $this->data[1];
+
+        $run = new run(); 
+        $date = $year.'-'.$month.'-15';
+        $parcel_run_id = $run->writeRun($batch_no, $contractor_id, $route_id, $date);
+	
+		// Get the distributor id from the ourte affiliation
+		$where1 = "WHERE env_contractor_id='$contractor_id' AND route_id='$route_id' AND '$date' BETWEEN app_date AND stop_date";
+		$dist_id = get("route_aff","env_dist_id",$where1,0);
+		//$dist_id = get("route_aff","env_dist_id","WHERE contractor_id='$contractor_id' AND route_id='$route_id' AND '$date' BETWEEN app_date AND stop_date",0);
+		if(!$dist_id) {
+			// Print an error message when no affiliation is there.
+			$company = get("operator","company","WHERE operator_id='$contractor_id'");
+			$ERROR .= "Distributor not found for $company.<br />"; 
+			return false;
+		}
+		
+		// Parse the ticket bar code
+		$ticket_no = $this->getNumber();
+		$ticket_type = $this->getTypeCode();
+		$ticket_DP = $this->getDP();
+		
+		// Get the current rates.
+		$rates = $this->getRates($date);
+		
+		// If the user created a random ticket affiliate it to a random job otherwise get job the ticket belongs to
+		$job_id = get("parcel_job_ticket","job_id","WHERE ('".mysql_real_escape_string($ticket_no)."' BETWEEN start AND end) AND type='$ticket_type'");
+		$is_random=0;
+		
+		if(!$this->isValid()){
+			$ERROR .= "Ticket $this->no is invalid. Check code.<br />";
+                }
+                else{
+			// Does redeem only when unredeemed. 
+			// !!!!!!!!!Do not remove that IF please even though the Xerox does not need it. The 'normal' scan does.  !!!!!!!!!!!!
+			if($this->isUnRedeemed()){
+				$qry = "INSERT INTO parcel_job_route
+						SET parcel_run_id = '$parcel_run_id',
+                            is_mobile=1,
+							is_redeemed_".$ticket_DP."='1',
+							job_id='$job_id',
+							type='$ticket_type',
+							ticket_no='$ticket_no',
+							contractor_id='$contractor_id',
+							dist_id='$dist_id',
+							route_id='$route_id',
+							is_random = '$is_random',
+							red_rate_pickup = '".$rates["red_rate_pickup"][$ticket_type]."'+0,
+							red_rate_deliv = '".$rates["red_rate_deliv"][$ticket_type]."'+0,
+							distr_payment_deliv = '".$rates["distr_payment_deliv"][$ticket_type]."'+0,
+							distr_payment_pickup = '".$rates["distr_payment_pickup"][$ticket_type]."'+0
+						";
+									
+				query($qry,0);
+				return true;
+			}
+			else{
+				$ERROR .= "Ticket $ticket_no already redeemed. <br />";
+				return false;
+			}
+		}// validate ticket
+		
+	}
+}
+
+
+class mobileFileReader{
+	var $fileName = false;
+	var $fileDir = false;
+	var $content = array();
+    var $batch = 0;
+	
+	function __construct($dir,$fn){
+		$this->fileName = $fn;
+		$this->fileDir = $dir;
+
+        $this->batch = self::getBatchNo($fn);
+		$this->readContent();
+		
+		$this->preProcess();
+		
+		$this->markFileAsProcessed();
+	}
+
+    static function getBatchNo($fn){
+        preg_match("/^Coural_([0-9]_*).*$/", $fn, $res);
+        if(isset($res[1]))
+            return $res[1];
+        preg_match("/^Processed_Coural_([0-9]_*).*$/", $fn, $res);
+        if(isset($res[1]))
+            return $res[1];
+        return 0;
+    }
+
+    static function unredeem($fn){
+        $batch = self::getBatchNo($fn);
+        $qry = "DELETE FROM parcel_job_route WHERE parcel_run_id IN (SELECT parcel_run_id FROM parcel_run WHERE batch_no=$batch)";
+        query($qry);
+        $qry = "DELETE FROM parcel_run WHERE batch_no=$batch)";
+        query($qry);
+        $MESSAGE = "Batch unredeemed";
+        
+    }
+	
+	function getTickets(){
+		return $this->content;
+	}
+
+
+    static function getDistId($contr_id, $route_id, $dtt){
+        $qry = "SELECT * FROM route_aff 
+            WHERE env_contractor_id=$contr_id,
+                AND route_id=$route_id
+                AND '$dtt' BETWEEN app_date and stop_date";
+        $res = query($qry);
+        if($res){
+            $o = mysql_fetch_object($res);
+            return $o->env_dist_id;
+        }
+        return null;
+    }
+	
+	function parseHeaderCode($header, $result){
+		$result["dist_id"] = intval($header[0]);
+		$result["contr_id"] = intval($header[0]);
+		$result["route_id"] = intval($header[1]);
+		$result["date"] = date("Y-m-d", strtotime($header[2]));
+        $result["time"] = time();
+        return $result;
+	}
+
+	function checkNo($no){
+		if(trim(strlen($no))>6){ return true;} else{ return false;}
+	}
+	
+	function parseLine($line){
+		$result = array();
+		$result = $this->parseHeaderCode($line,$result);
+		$tickets = array();
+		for($i=5;$i<count($line);$i++){
+			if($this->checkNo($line[$i]))
+				$tickets[] = new mobileTicket($line[$i]);
+		}
+		$result["tickets"] = $tickets;
+		return $result;
+	}
+	
+	function readContent(){
+		if(!$file_lines = file($this->fileDir.'/'.$this->fileName))
+			die("Could not read $this->fileName.");
+		foreach($file_lines as $fln => $fl) {
+			$line = explode(',',$fl);
+			
+			if(count($line)>1 && $line[0] != "CONTR_ID"){
 				$this->content[] = $this->parseLine($line);
 			}
 		}//foreach($file_lines as $fln => $fl) {

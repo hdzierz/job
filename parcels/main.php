@@ -1738,6 +1738,241 @@ if($action=="process_xerox_scan2"){
 	}//if submit
 }
 
+
+
+if($action=="select_mobile_scan"){
+
+?>
+	<script language='javascript'>
+		function select_all(){
+			
+			for(i=0;i<1000;i++){
+				var cb = document.getElementById("filec["+i+"]");
+				if(cb)
+					cb.checked=true;
+				else
+					return;
+			}
+		}
+
+		function select_all_unproc(){
+			select_none();
+			for(i=0;i<10;i++){
+				var cb = document.getElementById("filec["+i+"]");
+				var filen = document.getElementById("file["+i+"]");
+				if(cb && filen){
+					if(filen.value.indexOf('Processed')==-1 && cb) cb.checked=true;
+				}
+				else{
+					return;
+				}
+			}
+		}
+		function select_none(){
+			for(i=0;i<1000;i++){
+				var cb = document.getElementById("filec["+i+"]");
+				if(cb)
+					cb.checked=false;
+				else
+					return;
+			}
+		}
+	</script>
+	<?php
+		$redeem_date = get("parcel_run","MAX(date)","",0);
+		$year = date("Y",strtotime($redeem_date));
+		$month = date("m",strtotime($redeem_date));
+	
+	?>
+		
+		<form name="redeem_form" action="parcels.php" method="post" >
+			<fieldset style="width:90% ">
+				<legend>Canonscan Ticket Redemption</legend>
+			<table width="40%">
+				<tr>
+					<td>Month:</td>
+					<td>
+	<?	
+						$month_sel = new Select("month");		
+						$month_sel->setOptionIsVal($month);	
+						$month_sel->writeMonthSelect();
+	?>				
+					</td>
+					<td>Year:</td>
+					<td>
+	<?	
+						$year_sel = new Select("year");		
+						$year_sel->setOptionIsVal($year);	
+						$year_sel->writeYearSelectFT();
+	?>				
+					</td>
+					<td>
+						<input type="submit" name="submit" value="Redeem" />
+					</td>
+				</tr>
+			</table>
+			<br />
+			<br />	
+			<input type="hidden" name="action" value="process_mobile_scan" />
+			<input type="button" name="selall" value="Select all" onclick="select_all();" />
+			<input type="button" name="selallup" value="Select all unproc" onclick="select_all_unproc();" />
+			<input type="button" name="selnone" value="Select none" onclick="select_none();" />
+			<table id="scan_table">
+		<?	
+			$counter=0;
+            $dl = scandir($SCAN_OUTPUT_DIR."MobileScan");
+			foreach($dl as $file){
+				
+				if(strpos(strtolower($file),'.csv')!==false){
+		?>
+				<tr>
+					<td>
+						<? echo $file." / "; ?> Date: <?=date("d F Y H:i", filemtime($SCAN_OUTPUT_DIR."MobileScan/".$file))?><br />	
+						<input type="hidden" id="file[<?php echo $counter;?>]" name="file[<?php echo $counter;?>]" value="<?php echo $file;?>" />		
+					</td>
+					<td>
+						<?php
+						
+							if(strpos($file,'Processed')===false){
+							?>
+								<input id="filec[<?php echo $counter;?>]" type="checkbox" name="filec[<?php echo $counter;?>]" checked='true' />
+							<?php 
+							}
+							else{
+							?>
+								<input id="filec[<?php echo $counter;?>]" type="checkbox" name="filec[<?php echo $counter;?>]"  />			
+							<?php
+
+							} 
+						?>				
+					</td>
+                    <td>
+                        <?php
+                            if(false && strpos($file,'Processed')!==false){
+                        ?>
+                        <a href="/job/parcels.php?action=unredeem_xerox_scan&file=<?=$file?>">Unredeem</a>
+                        <?php
+                            }
+                        ?>
+                    </td>
+		<?	
+				$counter++;
+				}
+			}
+		?>
+			</table>
+		</form>
+	</fieldset>
+	
+<?php
+}
+
+if($action=="process_mobile_scan2"){
+	if($submit || $filter){
+		$redeem_date = get("parcel_run","MAX(date)","",0);
+		$year = date("Y",strtotime($redeem_date));
+		$month = date("m",strtotime($redeem_date));
+	
+	?>
+		
+		<form name="redeem_form" action="parcels.php" method="get" >
+			<fieldset style="width:90% ">
+				<legend>Xerox Ticket Redemption</legend>
+			<table width="40%">
+				<tr>
+					<td>Month:</td>
+					<td>
+	<?	
+						$month_sel = new Select("month");		
+						$month_sel->setOptionIsVal($month);	
+						$month_sel->writeMonthSelect();
+	?>				
+					</td>
+					<td>Year:</td>
+					<td>
+	<?	
+						$year_sel = new Select("year");		
+						$year_sel->setOptionIsVal($year);	
+						$year_sel->writeYearSelect(2,1);
+	?>				
+					</td>
+					<td>
+						<input type="submit" name="submit" value="Redeem" />
+					</td>
+				</tr>
+			</table>
+	<?
+				
+				if(!$is_processed) $is_processed = 0;
+				$now = date("Y-m-d");
+				
+				if($dist_id) 
+				{
+					$where_add_dist = " AND dist.operator_id='$dist_id'";
+					$where_add_dist .= " AND parcel_run_pre.dist_id='$dist_id'";
+				}
+				if($type) $where_add_type = " AND ticket_no LIKE '$type%'";
+				
+
+				$qry = "SELECT DISTINCT	parcel_run_pre.parcel_run_pre_id AS Record,
+								dist.company AS Distributor,
+								contr.company AS Contractor,
+								route.code AS Route,
+								parcel_run_pre.page AS Page,
+								parcel_run_pre.real_date AS Date
+								
+								
+						FROM parcel_run_pre
+						LEFT JOIN operator contr
+							ON contr.operator_id=contractor_id
+						LEFT JOIN route_aff
+							ON route_aff.env_contractor_id = parcel_run_pre.contractor_id
+								AND DATE_FORMAT(parcel_run_pre.real_date,'%Y-%m-%d') BETWEEN app_date AND stop_date
+						LEFT JOIN operator dist
+							ON dist.operator_id = route_aff.env_dist_id
+						LEFT JOIN route
+							On route.route_id=parcel_run_pre.route_id
+
+						WHERE is_processed=$is_processed
+							$where_add_dist
+							$where_add_date
+							AND real_date LIKE '$date%'
+							AND route.route_id = route_aff.route_id
+						ORDER BY Distributor,Contractor,Page;";						
+				//$qry = "CALL select_redeem_pre(0)";
+				
+				$tab = new MySQLTable("parcels.php",$qry);
+				$tab->showRec=false;
+				$tab->hasAddButton=false;
+				$tab->hasDeleteButton=false;
+				$tab->hasEditButton=true;
+				$tab->hasForm=false;
+				if(!$is_processed){
+					$tab->hasCheckBoxes=true;
+					
+					$tab->checkDefaultOn = true;
+				}
+				
+				$tab->onClickEditButtonAction = "process_xerox_scan_ticket_control";
+				$tab->onClickEditButtonAdd = "&dist_id=$dist_id&date=$date&is_processed=$is_processed";
+				
+				$tab->startTable();
+					$tab->writeTable();
+					$tab->addHiddenInput("dist_id",$dist_id);
+					$tab->addHiddenInput("date",$date);
+					$tab->addHiddenInput("type",$type);
+				$tab->stopTable();
+	?>
+			<input type="hidden" name="action" id="action" value="<?=$action?>" />
+			</fieldset>
+		</form>
+	<?
+	}//if submit
+}
+
+
+
+
 //require_once 'includes/phpqrcode/qrlib.php';
 require_once "Image/Barcode2.php";
 require_once "includes/fpdf/fpdf.php";

@@ -525,6 +525,33 @@ if($action=="process_xerox_scan"){
 	}
 }
 
+
+if($action=="process_mobile_scan"){
+	switch($submit){
+		case "Redeem":
+			$files = $_POST['file'];
+			$filecs = $_POST['filec'];
+	
+			foreach($files as $key=>$file){
+				if($filec[$key]){
+                    $batch_no = mobileFileReader::getBatchNo($fn);
+				    if (($handle = fopen("MobileScan/".$file, "r")) !== FALSE) {
+                        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE){
+                            $ticket = new mobileTicket($data);
+                            $ticket->redeem($batch_no, $year, $month);
+                        }
+                        fclose($handle);
+                    }
+                    $MESSAGE.= "File $file processed.<br />";
+                }
+            } 
+		break;
+		
+	}
+}
+
+
+
 if($action=="gst" && $gst){
 	if($gst<1){
 		$ERROR = "GST seems not to be in % ($gst).";
