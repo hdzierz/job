@@ -16,7 +16,7 @@ class run{
 		}
 	}
 	
-	function writeRun($batch_no, $contractor_id,$route_id,$date){
+	function writeRun($batch_no, $contractor_id,$route_id,$date,$real_date=null){
 		global $CK_USERID;
 		
 		// Get the distributor id from the ourte affiliation
@@ -31,8 +31,9 @@ class run{
 		
 		$run = $this->calcRun($dist_id,$date);
 		
+        $rd = ",real_date = now()";
+        if($real_date) $rd = ",real_date='$real_date'";
 		$qry = "INSERT INTO parcel_run SET 	date='$date',
-									real_date = now(),
 									contractor_id='$contractor_id',
 									route_id='$route_id',
 									run='$run',
@@ -40,10 +41,42 @@ class run{
 									user_id='$CK_USERID',
 									actual=0,
                                     batch_no=$batch_no,
-									exp_no_tickets = 120";
+									exp_no_tickets = 120
+                                    $rd";
 		query($qry);
 		return  mysql_insert_id();
 	}
+
+   function writeMobileRun($batch_no, $contractor_id,$route_id,$date,$real_date=null){
+        global $CK_USERID;
+
+        // Get the distributor id from the ourte affiliation
+        $where1 = "WHERE env_contractor_id='$contractor_id' AND route_id='$route_id' AND '$date' BETWEEN app_date AND stop_date";
+        $dist_id = get("route_aff","env_dist_id",$where1,0);
+        if(!$dist_id){
+            $route = get("route","code","WHERE route_id=$route_id");
+            $ERROR.= "Could not find distributor for route $route <br />";
+            return 0;
+        }
+        //$dist_id = get("route_aff","env_dist_id","WHERE contractor_id='$contractor_id' AND route_id='$route_id'",0);
+
+        $run = $this->calcRun($dist_id,$date);
+
+        $rd = ",real_date = now()";
+        if($real_date) $rd = ",real_date='$real_date'";
+        $qry = "INSERT INTO parcel_run SET  date='$date',
+                                    contractor_id='$contractor_id',
+                                    route_id='$route_id',
+                                    run='$run',
+                                    dist_id='$dist_id',
+                                    user_id='$CK_USERID',
+                                    actual=0,
+                                    mobile_batch=$batch_no,
+                                    exp_no_tickets = 120
+                                    $rd";
+        query($qry);
+        return  mysql_insert_id();
+    }
 	
 	function writeRunWithDist($batch_no, $dist_id,$contractor_id,$route_id,$date){
 		global $CK_USERID;
@@ -669,7 +702,12 @@ class mobileTicket{
 
         $run = new run(); 
         $date = $year.'-'.$month.'-15';
-        $parcel_run_id = $run->writeRun($batch_no, $contractor_id, $route_id, $date);
+        $real_date = $this->data[2];
+        $real_time = $this->data[3];
+        $real_date = date_create_from_format('d/m/Y H:i:s', $real_date." ".$real_time);
+        $real_date = $real_date->format('Y-m-d');
+
+        $parcel_run_id = $run->writeMobileRun($batch_no, $contractor_id, $route_id, $date, $real_date);
 	
 		// Get the distributor id from the ourte affiliation
 		$where1 = "WHERE env_contractor_id='$contractor_id' AND route_id='$route_id' AND '$date' BETWEEN app_date AND stop_date";
@@ -696,14 +734,31 @@ class mobileTicket{
 		
 		if(!$this->isValid()){
 			$ERROR .= "Ticket $this->no is invalid. Check code.<br />";
-                }
-                else{
+        }
+        else{
 			// Does redeem only when unredeemed. 
 			// !!!!!!!!!Do not remove that IF please even though the Xerox does not need it. The 'normal' scan does.  !!!!!!!!!!!!
 			if($this->isUnRedeemed()){
+                $street = $this->data[5];
+                $suburb = $this->data[6];
+                $city = $this->data[7];
+                $postcode = $this->data[8];
+                $has_sig = $this->data[9];
+                $has_photo = $this->data[10];
+                $has_atl = $this->data[11];
+                $has_ctc = $this->data[12];
+
 				$qry = "INSERT INTO parcel_job_route
 						SET parcel_run_id = '$parcel_run_id',
                             is_mobile=1,
+                            street = '$street',
+                            suburb = '$suburb',
+                            city = '$city',
+                            postcode = '$postcode',
+                            has_signature = '$has_sig',
+                            has_photo = '$has_photo',
+                            has_atl = '$has_atl',
+                            has_ctc = '$has_ctc',
 							is_redeemed_".$ticket_DP."='1',
 							job_id='$job_id',
 							type='$ticket_type',

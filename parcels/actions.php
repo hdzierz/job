@@ -534,11 +534,13 @@ if($action=="process_mobile_scan"){
 	
 			foreach($files as $key=>$file){
 				if($filec[$key]){
-                    $batch_no = mobileFileReader::getBatchNo($fn);
+                    $batch_no = mobileFileReader::getBatchNo($file);
 				    if (($handle = fopen("MobileScan/".$file, "r")) !== FALSE) {
                         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE){
-                            $ticket = new mobileTicket($data);
-                            $ticket->redeem($batch_no, $year, $month);
+                            if($data[0] != "CONTR_ID"){
+                                $ticket = new mobileTicket($data);
+                                $ticket->redeem($batch_no, $year, $month);
+                            }
                         }
                         fclose($handle);
                     }
