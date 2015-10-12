@@ -21,11 +21,11 @@ $site['from_email'] = 'cloud@coural.co.nz'; // from email address
 //$site['smtp_username'] = 'hdzierz@dzierzon.co.nz';
 //$site['smtp_password'] = "zt90undr";
 
-//$site['smtp_host'] = "mail.coural.co.nz:587";
-//$site['smtp_username'] = 'cloud@coural.co.nz';
-//$site['smtp_password'] = "Rur4lD3l1v3ry";
+$site['smtp_host'] = "mail.coural.co.nz:587";
+$site['smtp_username'] = 'cloud@coural.co.nz';
+$site['smtp_password'] = "Rur4lD3l1v3ry";
 
-$site['smtp_host'] = "localhost";
+//$site['smtp_host'] = "localhost";
 
 //$ADMIN_EMAIL = "hdzierz@gmail.com";
 
@@ -274,11 +274,11 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
         $mailer->AddReplyTo('coural@coural.co.nz', 'Coural Head Office');
         $mailer->AddAddress($email, 'Coural Head Office');
 		
-		$mailer->AddAddress('hdzierz@gmail.com', 'Coural Head Office');
-		if($alt_email)
-		{
-			$mailer->AddAddress($alt_email, 'Coural Head Office');
-		}
+		//$mailer->AddAddress('hdzierz@gmail.com', 'Coural Head Office');
+		//if($alt_email)
+		//{
+		//	$mailer->AddAddress($alt_email, 'Coural Head Office');
+		//}
 		
 		$mail_type = get("address","mail_type","WHERE operator_id='$id'");
 		

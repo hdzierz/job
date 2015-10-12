@@ -18,7 +18,7 @@ $ct = 0;
 
 while($item = mysql_fetch_object($res)){
     $config = explode(',',$item->config);
-    $company = get("operator", "company", "WHERE operator_id={$config[3]}");
+    $company = get("operator", "company", "WHERE operator_id='{$config[3]}'");
     $ok = send_operator_mail($config[0],$config[1],$config[2],$config[3]); 
     $qry = "UPDATE schedule_mail_send_out SET status=0 WHERE oid={$item->oid}";
     query($qry);

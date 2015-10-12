@@ -826,7 +826,7 @@ class mailThread{
     var $fn = "";
     var $dropoff_id = 0;
     var $receiver = "";
-    public function __construct($title,$dirp,$fn,$dropoff_id,$receiver){
+    public function __construct($title,$dirp,$fn,$dropoff_id,$receiver=null){
         $this->title = $title;
         $this->dirp = $dirp;
         $this->fn = $fn;
@@ -1164,12 +1164,11 @@ function weekly_send_out($company, $date_start, $date_final, $show_regular, $sho
 				//fwrite($fp,"Delivery instructions for <strong>$company</strong> created.\n");
 		
 				if(!$pdf_only) {
-                    $threads[$fn] = new mailThread("RESULT OF COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$dist_id,$receiver);
+                    $threads[$fn] = new mailThread("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$dist_id,$receiver);
                     $threads[$fn]->start();	
 				}
 				
 				$pdffiles[] = $dirp.'/'.$fn;
-				//pdf_merge($now,$fn);
 			}
 			
 			
