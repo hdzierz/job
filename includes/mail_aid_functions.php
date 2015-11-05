@@ -14,7 +14,7 @@ $site['from_email'] = 'cloud@coural.co.nz'; // from email address
  
 // Just in case we need to relay to a different server,
 // provide an option to use external mail server.
-//$site['smtp_mode'] = 'enabled'; // enabled or disabled
+$site['smtp_mode'] = 'enabled'; // enabled or disabled
 //$site['smtp_host'] = "mail.dzierzon.co.nz:587";
 
 //$site['smtp_port'] = intval(587);
@@ -70,7 +70,8 @@ class FreakMailer extends PHPMailer
             if($site['smtp_username'] != '')
             {
                 $this->SMTPAuth = true;
-                //$this->SMTPSecure = "tls";
+                $this->SMTPSecure = "tls";
+                $mailer->AuthType = "NTLM";
                 $this->Username = $site['smtp_username'];
                 $this->Password = $site['smtp_password'];
             }
@@ -275,10 +276,10 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
         $mailer->AddAddress($email, 'Coural Head Office');
 		
 		//$mailer->AddAddress('hdzierz@gmail.com', 'Coural Head Office');
-		//if($alt_email)
-		//{
-		//	$mailer->AddAddress($alt_email, 'Coural Head Office');
-		//}
+		if($alt_email)
+		{
+			$mailer->AddAddress($alt_email, 'Coural Head Office');
+	    }	
 		
 		$mail_type = get("address","mail_type","WHERE operator_id='$id'");
 		
