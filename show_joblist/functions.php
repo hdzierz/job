@@ -88,7 +88,7 @@ function get_joblist_query($with_ioa,$mode,$job,$client,$pub,$start_date=false,$
 				$job_where
 				$where_add_date
 			GROUP BY j.job_id
-			ORDER BY c.name,j.publication,j.job_no,j.job_no_add,j.delivery_date";
+			ORDER BY c.name,j.publication,j.job_no, j.delivery_date";
 	//echo nl2br($qry);
 	return $qry;
 }
@@ -126,7 +126,7 @@ function get_regular_joblist_query($date1,$date2){
 			WHERE (j.delivery_date BETWEEN '$date1' AND '$date2') 
 				AND j.is_regular='Y'
 			GROUP BY j.job_id
-			ORDER BY c.name,j.publication,j.delivery_date DESC,j.job_no";
+			ORDER BY c.name,j.publication,j.delivery_date,j.job_no";
 	return $qry;
 }
 
