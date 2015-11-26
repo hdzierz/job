@@ -804,6 +804,7 @@ function weekly_a5($doff, $where_add, $dirp, $date_start, $date_final, $pdf_only
                     $pdf->SetFontSize(14);
                     $pdf->Cell(0,9,"Job Number: ".$contr->job_no,0,1);
                     $pdf->Cell(0,9,"Job Name: ".$contr->publication,0,1);
+                    $pdf->Cell(0,9,"Version: ".$contr->version,0,1);
                     if($contr->show_comments == 'Y')
                         $pdf->Cell(0,9,"Special Notes: ".$contr->comments,0,1);
                 }
