@@ -1092,15 +1092,15 @@ if($action=="" || !isset($action)){
 	$area = ckeck_amp($area);
 	$code = ckeck_amp($code);
 
-	if($island)  $where.=" AND island='$island'";
-	if($region)  $where.=" AND region='$region'";
-	if($area) $where.=" AND area='$area'";
-	if($code) $where.=" AND code='$code'";
+	if($island && $submit!="Show")  $where.=" AND island='$island'";
+	if($region && $submit!="Show")  $where.=" AND region='$region'";
+	if($area && $submit!="Show") $where.=" AND area='$area'";
+	if($code && $submit!="Show") $where.=" AND code='$code'";
+    if($record) $where.=" AND route.route_id='$record'";	
 	
-	
-	if($region){
+	if($region || $record){
 		
-		$sql = "SELECT route.route_id AS Record,
+		$sql = "SELECT route.route_id AS ID,
 					island AS Island,
 					region AS Region,
 					area AS Area,
@@ -1151,7 +1151,7 @@ if($action=="" || !isset($action)){
 			if($region)  $where.=" AND region='$region'";
 			if($area) $where.=" AND area='$area'";
 			if($code) $where.=" AND code='$code'";		
-			$sql = "SELECT route.route_id AS Record,
+			$sql = "SELECT route.route_id AS ID,
 					island AS Island,
 					region AS Region,
 					area AS Area,
@@ -1192,7 +1192,7 @@ if($action=="" || !isset($action)){
 		}
 		//echo nl2br($sql);
 		$routeTab = new MySQLTable("admin_route.php",$sql);
-		$routeTab->showRec=0;	
+		$routeTab->showRec=1;	
 		$routeTab->hasExtEditButton=0;		
 		$routeTab->wrap1   = "Seq. RD";
 		$routeTab->writeList();	

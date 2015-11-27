@@ -60,7 +60,11 @@ if($action=="" || !isset($action) || $action=="backup" || $action=="maintain_seq
 	$sel_code->startSelect();
 	$sel_code->writeSelect();
 	$sel_code->stopSelect();		
-	
+?>
+    ID:
+    <input type="text" name="record" value="" />
+    <input type="submit" name="submit" value="Show" />
+<?php	
 	if($action!="maintain_sequence" && $action!="maintain_numbers"){
 /*
 ?>

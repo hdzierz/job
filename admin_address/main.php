@@ -557,7 +557,7 @@ if($action=="" || !isset($action)){
 					$where
 					ORDER BY op.company,address.name";
 	$clientTab = new MySQLTable("admin_address.php",$sql);
-	$clientTab->showRec  = 0;
+	$clientTab->showRec  = 1;
 	$clientTab->highlightField="Operator";
 	$clientTab->wrap1    = "Mail Type 2";
 	$clientTab->wrap2    = "S/Dist Rate Red. Fact. [%]";
