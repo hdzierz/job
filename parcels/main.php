@@ -1809,6 +1809,9 @@ if($action=="select_mobile_scan"){
 					<td>
 						<input type="submit" name="submit" value="Redeem" />
 					</td>
+                    <td>
+                        <input type="submit" name="submit" value="Unredeem" />
+                    </td>
 				</tr>
 			</table>
 			<br />

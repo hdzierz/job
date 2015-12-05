@@ -21,11 +21,16 @@ $site['from_email'] = 'cloud@coural.co.nz'; // from email address
 //$site['smtp_username'] = 'hdzierz@dzierzon.co.nz';
 //$site['smtp_password'] = "zt90undr";
 
-//$site['smtp_host'] = "mail.coural.co.nz:587";
-//$site['smtp_username'] = 'cloud@coural.co.nz';
-//$site['smtp_password'] = "Rur4lD3l1v3ry";
+$site['smtp_host'] = "mail.coural.co.nz:587";
+$site['smtp_username'] = 'cloud@coural.co.nz';
+$site['smtp_password'] = "Rur4lD3l1v3ry";
 
-$site['smtp_host'] = "localhost";
+//$site['smtp_host'] = "smtp-pulse.com";
+//$site['smtp_username'] = 'dochelge@gmail.com';
+//$site['smtp_password'] = "LMJmg4Y6j4o9";
+$site['smtp_mode'] = 'enabled';
+//$site['smtp_port'] = intval(2525);
+//$site['smtp_host'] = "localhost";
 
 //$ADMIN_EMAIL = "hdzierz@gmail.com";
 
@@ -70,7 +75,8 @@ class FreakMailer extends PHPMailer
             if($site['smtp_username'] != '')
             {
                 $this->SMTPAuth = true;
-                //$this->SMTPSecure = "tls";
+                $this->SMTPSecure = "tls";
+                $mailer->AuthType = "NTLM";
                 $this->Username = $site['smtp_username'];
                 $this->Password = $site['smtp_password'];
             }
@@ -93,8 +99,8 @@ class FreakMailer extends PHPMailer
     
     function Send(){
         $to = implode(',',$this->to);
-        #$this->ClearAddresses();
-        #$this->AddAddress("hdzierz@gmail.com", "Head office");
+        $this->ClearAddresses();
+        $this->AddAddress("hdzierz@gmail.com", "Head office");
         log_mail($this->to, $this->Subject, $this->ErrorInfo, $this->error_count);
         return parent::Send();
     }
@@ -222,11 +228,10 @@ function send_test_mail(){
 	//$mailer->SMTPKeepAlive = true; 
 	$mailer->Subject = 	"TEST";
 	$mailer->Body = "TEST";
-	$mailer->From = "cloud@coural.co.nz";
-	//$mailer->SMTPDebug = 2;
+	//$mailer->From = "dochelge@gmail.com";
+	$mailer->SMTPDebug = 2;
 	//$mailer->AuthType = "NTLM";
-    //$mail->SMTPSecure = "tls";  
-    $mailer->AddReplyTo('cloud@coural.co.nz', 'oreply');
+    //$mailer->SMTPSecure = "tls";  
 	$mailer->AddAddress("hdzierz@gmail.com", 'Coural Head Office');
 	if(!$mailer->Send())
 	{

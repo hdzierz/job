@@ -16,7 +16,7 @@ if(strpos($_SERVER['REQUEST_URI'],'job_test') !== false){
 	$DATABASE = 'coural_test';
 }
 else{
-	$testing=mysql_select_db('coural', $db_connect);
+	$testing=mysql_select_db('coural_test', $db_connect);
 }
 if (!$testing) die("error".mysql_error());
 ?>

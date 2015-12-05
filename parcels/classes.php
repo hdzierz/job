@@ -47,18 +47,8 @@ class run{
 		return  mysql_insert_id();
 	}
 
-   function writeMobileRun($batch_no, $contractor_id,$route_id,$date,$real_date=null){
+   function writeMobileRun($batch_no, $dist_id, $contractor_id,$route_id,$date,$real_date=null){
         global $CK_USERID;
-
-        // Get the distributor id from the ourte affiliation
-        $where1 = "WHERE env_contractor_id='$contractor_id' AND route_id='$route_id' AND '$date' BETWEEN app_date AND stop_date";
-        $dist_id = get("route_aff","env_dist_id",$where1,0);
-        if(!$dist_id){
-            $route = get("route","code","WHERE route_id=$route_id");
-            $ERROR.= "Could not find distributor for route $route <br />";
-            return 0;
-        }
-        //$dist_id = get("route_aff","env_dist_id","WHERE contractor_id='$contractor_id' AND route_id='$route_id'",0);
 
         $run = $this->calcRun($dist_id,$date);
 
@@ -71,7 +61,7 @@ class run{
                                     dist_id='$dist_id',
                                     user_id='$CK_USERID',
                                     actual=0,
-                                    mobile_batch=$batch_no,
+                                    mobile_batch='$batch_no',
                                     exp_no_tickets = 120
                                     $rd";
         query($qry);
@@ -461,15 +451,6 @@ class xeroxFileReader{
         return 0;
     }
 
-    static function getMobileBatchNo($fn){
-        preg_match("/^Coural_([0-9]_*).*$/", $fn, $res);
-        if(isset($res[1]))
-            return $res[1];
-        preg_match("/^Processed_Coural_([0-9]_*).*$/", $fn, $res);
-        if(isset($res[1]))
-            return $res[1];
-        return 0;
-    }
 
     static function unredeem($fn){
         $batch = self::getBatchNo($fn);
@@ -495,7 +476,7 @@ class xeroxFileReader{
 
     function getDistId($contr_id, $route_id, $dtt){
         $qry = "SELECT * FROM route_aff 
-            WHERE env_contractor_id=$contr_id,
+            WHERE env_contractor_id=$contr_id
                 AND route_id=$route_id
                 AND '$dtt' BETWEEN app_date and stop_date";
         $res = query($qry);
@@ -585,10 +566,10 @@ class mobileTicket{
     var $data = array();
 
 	function __construct($data){
-		$this->no = $data[4];
+		$this->no = $data[3].$data[5];
 		
 		$this->pre = strtoupper(substr($this->no,0,2));
-		$this->post = strtoupper(substr($this->no,-1));
+		$this->post = $data[5]; 
 		
 		$this->number = substr($this->no,2,-1);
         $this->data = $data;
@@ -697,29 +678,31 @@ class mobileTicket{
 		// Error message. Will come up at the top of content area
 		global $ERROR;
        
-        $contractor_id = $this->data[0];
-        $route_id = $this->data[1];
+//"Batch_ID","Cont_ID","Route_ID","Ticket_No","Date_Time","Type","Loc_Latitude","Loc_Longitude","Loc_Accuracy","IsOutForDelivery","IsDamaged","Delivery_Option","Delivery_DropLocation","Notes"
+        $batch_id = $this->data[0];
+        $contractor_id = $this->data[1];
+        $route_id = $this->data[2];
+        $dtt = $this->data[4];
+        $lat = $this->data[6];
+        $lon = $this->data[7];
+        $acc = $this->data[8];
+        $is_ofd = $this->data[9];
+        $is_dmg = $this->data[10];
+        $dev_opt = $this->data[11];
+        $dev_drl = $this->data[12];
+        $notes = $this->data[13];
 
         $run = new run(); 
         $date = $year.'-'.$month.'-15';
-        $real_date = $this->data[2];
-        $real_time = $this->data[3];
-        $real_date = date_create_from_format('d/m/Y H:i:s', $real_date." ".$real_time);
-        $real_date = $real_date->format('Y-m-d');
+        $real_date = str_replace("T"," ",$this->data[4]);
+        //$real_time = $this->data[3];
+        $real_date = date_create_from_format('Y-m-d H:i:s', $real_date);
+        $real_date = $real_date->format('Y-m-d H:i:s');
 
-        $parcel_run_id = $run->writeMobileRun($batch_no, $contractor_id, $route_id, $date, $real_date);
+        $dist_id = mobileFileReader::getDistId($contractor_id, $route_id, $date);
+
+        $parcel_run_id = $run->writeMobileRun($batch_no, $dist_id, $contractor_id, $route_id, $date, $real_date);
 	
-		// Get the distributor id from the ourte affiliation
-		$where1 = "WHERE env_contractor_id='$contractor_id' AND route_id='$route_id' AND '$date' BETWEEN app_date AND stop_date";
-		$dist_id = get("route_aff","env_dist_id",$where1,0);
-		//$dist_id = get("route_aff","env_dist_id","WHERE contractor_id='$contractor_id' AND route_id='$route_id' AND '$date' BETWEEN app_date AND stop_date",0);
-		if(!$dist_id) {
-			// Print an error message when no affiliation is there.
-			$company = get("operator","company","WHERE operator_id='$contractor_id'");
-			$ERROR .= "Distributor not found for $company.<br />"; 
-			return false;
-		}
-		
 		// Parse the ticket bar code
 		$ticket_no = $this->getNumber();
 		$ticket_type = $this->getTypeCode();
@@ -731,34 +714,27 @@ class mobileTicket{
 		// If the user created a random ticket affiliate it to a random job otherwise get job the ticket belongs to
 		$job_id = get("parcel_job_ticket","job_id","WHERE ('".mysql_real_escape_string($ticket_no)."' BETWEEN start AND end) AND type='$ticket_type'");
 		$is_random=0;
-		
+	    if(!$job_id) $job_id=0;
+	
 		if(!$this->isValid()){
 			$ERROR .= "Ticket $this->no is invalid. Check code.<br />";
         }
         else{
 			// Does redeem only when unredeemed. 
-			// !!!!!!!!!Do not remove that IF please even though the Xerox does not need it. The 'normal' scan does.  !!!!!!!!!!!!
-			if($this->isUnRedeemed()){
-                $street = $this->data[5];
-                $suburb = $this->data[6];
-                $city = $this->data[7];
-                $postcode = $this->data[8];
-                $has_sig = $this->data[9];
-                $has_photo = $this->data[10];
-                $has_atl = $this->data[11];
-                $has_ctc = $this->data[12];
+			// !!!!!!!!!Do not remove that IF please even though the Xerox does not need it. The 'normal' scan does.  !!!!!!!!!!!
 
-				$qry = "INSERT INTO parcel_job_route
-						SET parcel_run_id = '$parcel_run_id',
+            $qry = "INSERT INTO parcel_job_route
+                    SET parcel_run_id = '$parcel_run_id',
                             is_mobile=1,
-                            street = '$street',
-                            suburb = '$suburb',
-                            city = '$city',
-                            postcode = '$postcode',
-                            has_signature = '$has_sig',
-                            has_photo = '$has_photo',
-                            has_atl = '$has_atl',
-                            has_ctc = '$has_ctc',
+                            dtt='$real_date',
+                            lat='$lat',
+                            lon='$lon',
+                            acc='$acc',
+                            is_ofd='$is_ofd',
+                            is_dmg='$is_dmg',
+                            dev_opt='$dev_opt',
+                            dev_drl='$dev_drl',
+                            notes='$notes',
 							is_redeemed_".$ticket_DP."='1',
 							job_id='$job_id',
 							type='$ticket_type',
@@ -773,15 +749,9 @@ class mobileTicket{
 							distr_payment_pickup = '".$rates["distr_payment_pickup"][$ticket_type]."'+0
 						";
 									
-				query($qry,0);
-				return true;
-			}
-			else{
-				$ERROR .= "Ticket $ticket_no already redeemed. <br />";
-				return false;
-			}
+			query($qry,0);
+			return true;
 		}// validate ticket
-		
 	}
 }
 
@@ -805,10 +775,13 @@ class mobileFileReader{
 	}
 
     static function getBatchNo($fn){
-        preg_match("/^Coural_([0-9]_*).*$/", $fn, $res);
-        if(isset($res[1]))
-            return $res[1];
-        preg_match("/^Processed_Coural_([0-9]_*).*$/", $fn, $res);
+        if(strpos($fn, "Processed") === false){
+            $re = "/^Export_([0-9-_]*).*$/";
+        }
+        else{
+            $re = "/^Processed_Export_([0-9-_]*).*$/";
+        }
+        preg_match($re, $fn, $res);
         if(isset($res[1]))
             return $res[1];
         return 0;
@@ -816,9 +789,9 @@ class mobileFileReader{
 
     static function unredeem($fn){
         $batch = self::getBatchNo($fn);
-        $qry = "DELETE FROM parcel_job_route WHERE parcel_run_id IN (SELECT parcel_run_id FROM parcel_run WHERE batch_no=$batch)";
+        $qry = "DELETE FROM parcel_job_route WHERE parcel_run_id IN (SELECT parcel_run_id FROM parcel_run WHERE mobile_batch='$batch')";
         query($qry);
-        $qry = "DELETE FROM parcel_run WHERE batch_no=$batch)";
+        $qry = "DELETE FROM parcel_run WHERE mobile_batch='$batch'";
         query($qry);
         $MESSAGE = "Batch unredeemed";
         
@@ -831,7 +804,7 @@ class mobileFileReader{
 
     static function getDistId($contr_id, $route_id, $dtt){
         $qry = "SELECT * FROM route_aff 
-            WHERE env_contractor_id=$contr_id,
+            WHERE env_contractor_id=$contr_id
                 AND route_id=$route_id
                 AND '$dtt' BETWEEN app_date and stop_date";
         $res = query($qry);

@@ -528,6 +528,19 @@ if($action=="process_xerox_scan"){
 
 if($action=="process_mobile_scan"){
 	switch($submit){
+        case "Unredeem":
+            $files = $_POST['file'];
+            $filecs = $_POST['filec'];
+    
+            foreach($files as $key=>$file){
+                if($filec[$key]){
+                    mobileFileReader::unredeem($file);
+                    $nfile = str_replace("Processed_","",$file);
+                    rename("MobileScan/".$file, "MobileScan/$nfile");
+                    $MESSAGE.= "File $file unredeemed.<br />";
+                }
+            }
+            break; 
 		case "Redeem":
 			$files = $_POST['file'];
 			$filecs = $_POST['filec'];
@@ -537,13 +550,14 @@ if($action=="process_mobile_scan"){
                     $batch_no = mobileFileReader::getBatchNo($file);
 				    if (($handle = fopen("MobileScan/".$file, "r")) !== FALSE) {
                         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE){
-                            if($data[0] != "CONTR_ID"){
+                            if($data[0] != "Batch_ID"){
                                 $ticket = new mobileTicket($data);
                                 $ticket->redeem($batch_no, $year, $month);
                             }
                         }
                         fclose($handle);
                     }
+                    rename("MobileScan/".$file, "MobileScan/Processed_".$file);
                     $MESSAGE.= "File $file processed.<br />";
                 }
             } 

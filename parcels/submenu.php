@@ -62,22 +62,22 @@
 	}*/
 ?>
 <? if($action=="select_xerox_scan"){?>
-		<a class="subaself" href="parcels.php?action=select_xerox_scan">Redeem Canon Scan</a>|
+		<a class="subaself" href="parcels.php?action=select_xerox_scan">Canon Scan</a>|
 <? 
 	}
 	else{
 ?>
-		<a class="suba" href="parcels.php?action=select_xerox_scan">Redeem Canon Scan</a>|
+		<a class="suba" href="parcels.php?action=select_xerox_scan">Canon Scan</a>|
 <?
 	}
 ?>
 <? if($action=="select_mobile_scan"){?>
-        <a class="subaself" href="parcels.php?action=select_mobile_scan">Redeem Mobile Scan</a>|
+        <a class="subaself" href="parcels.php?action=select_mobile_scan">Mobile Scan</a>|
 <?
     }
     else{
 ?>
-        <a class="suba" href="parcels.php?action=select_mobile_scan">Redeem Mobile Scan</a>|
+        <a class="suba" href="parcels.php?action=select_mobile_scan">Mobile Scan</a>|
 <?
     }
 ?>

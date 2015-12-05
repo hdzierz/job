@@ -287,7 +287,7 @@ class MySQL{
 
 }
 
-$db = 'coural';
+$db = 'coural_test';
 if(strpos($_SERVER['REQUEST_URI'],'job_test') !== false){
 	$db = 'coural_test';
 }
