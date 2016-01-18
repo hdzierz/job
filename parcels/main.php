@@ -935,6 +935,14 @@ if($action=="manage_rates"){
 		$sell_rate_std[$type] = $rate->sell_rate_std;
 		$sell_rate_disc[$type] = $rate->sell_rate_disc;
 		$qty_per_book[$type] = $rate->qty_per_book;
+
+        $red_rate_pickup_mobile[$type] = $rate->red_rate_pickup_mobile;
+        $red_rate_deliv_mobile[$type] = $rate->red_rate_deliv_mobile;
+        $distr_payment_pickup_mobile[$type] = $rate->distr_payment_pickup_mobile;
+        $distr_payment_deliv_mobile[$type] = $rate->distr_payment_deliv_mobile;
+        $sell_rate_std_mobile[$type] = $rate->sell_rate_std_mobile;
+        $sell_rate_disc_mobile[$type] = $rate->sell_rate_disc_mobile;
+        $qty_per_book_mobile[$type] = $rate->qty_per_book_mobile;
 	}
 	
 	
@@ -989,44 +997,37 @@ if($action=="manage_rates"){
 				<td><input type="text" name="distr_payment_deliv_yellow" id="distr_payment_deliv_yellow" value="<?=$distr_payment_deliv["SR"]?>" /></td>
 				<td><input type="text" name="distr_payment_deliv_purple" id="distr_payment_deliv_purple" value="<?=$distr_payment_deliv["EX"]?>" /></td>
 			</tr>			
+            <tr>
+                <td>Mobile Redemption Rate - Pickup:</td>
+                <td><input type="text" name="red_rate_pickup_red_mobile" id="red_rate_pickup_red_mobile" value="<?=$red_rate_pickup_mobile["CD"]?>" /></td>
+                <td><input type="text" name="red_rate_pickup_green_mobile" id="red_rate_pickup_green_mobile" value="<?=$red_rate_pickup_mobile["CP"]?>" /></td>
+                <td><input type="text" name="red_rate_pickup_yellow_mobile" id="red_rate_pickup_yellow_mobile" value="<?=$red_rate_pickup_mobile["SR"]?>" /></td>
+                <td><input type="text" name="red_rate_pickup_purple_mobile" id="red_rate_pickup_purple_mobile" value="<?=$red_rate_pickup_mobile["EX"]?>" /></td>
+            </tr>
+            <tr>
+                <td>Mobile Redemption Rate - Delivery:</td>
+                <td><input type="text" name="red_rate_deliv_red_mobile" id="red_rate_deliv_red_mobile" value="<?=$red_rate_deliv_mobile["CD"]?>" /></td>
+                <td><input type="text" name="red_rate_deliv_green_mobile" id="red_rate_deliv_green_mobile" value="<?=$red_rate_deliv_mobile["CP"]?>" /></td>
+                <td><input type="text" name="red_rate_deliv_yellow_mobile" id="red_rate_deliv_yellow_mobile" value="<?=$red_rate_deliv_mobile["SR"]?>" /></td>
+                <td><input type="text" name="red_rate_deliv_purple_mobile" id="red_rate_deliv_purple_mobile" value="<?=$red_rate_deliv_mobile["EX"]?>" /></td>
+            </tr>
+            <tr>
+                <td>Mobile Distributor Payment - Pickup:</td>
+                <td><input type="text" name="distr_payment_pickup_red_mobile" id="distr_payment_pickup_red_mobile" value="<?=$distr_payment_pickup_mobile["CD"]?>" /></td>
+                <td><input type="text" name="distr_payment_pickup_green_mobile" id="distr_payment_pickup_green_mobile" value="<?=$distr_payment_pickup_mobile["CP"]?>" /></td>
+                <td><input type="text" name="distr_payment_pickup_yellow_mobile" id="distr_payment_pickup_yellow_mobile" value="<?=$distr_payment_pickup_mobile["SR"]?>" /></td>
+                <td><input type="text" name="distr_payment_pickup_purple_mobile" id="distr_payment_pickup_purple_mobile" value="<?=$distr_payment_pickup_mobile["EX"]?>" /></td>
+            </tr>
+            <tr>
+                <td>Mobile Distributor Payment - Delivery:</td>
+                <td><input type="text" name="distr_payment_deliv_red_mobile" id="distr_payment_deliv_red_mobile" value="<?=$distr_payment_deliv_mobile["CD"]?>" /></td>
+                <td><input type="text" name="distr_payment_deliv_green_mobile" id="distr_payment_deliv_green_mobile" value="<?=$distr_payment_deliv_mobile["CP"]?>" /></td>
+                <td><input type="text" name="distr_payment_deliv_yellow_mobile" id="distr_payment_deliv_yellow_mobile" value="<?=$distr_payment_deliv_mobile["SR"]?>" /></td>
+                <td><input type="text" name="distr_payment_deliv_purple_mobile" id="distr_payment_deliv_purple_mobile" value="<?=$distr_payment_deliv_mobile["EX"]?>" /></td>
+            </tr>
 			
 		</table>
 		</fieldset>
-	<!-- 
-		<fieldset style="width:90% "> <legend>Sell Rates per Book</legend>
-		<table>
-			<tr>
-				<td></td>
-				<td >Documents</td>
-				<td >Parcels</td>
-				<td >Signature</td>
-				<td >Excess</td>
-			</tr>
-			<tr>
-				<td>Qty per Book:</td>
-				<td><input type="text" name="qty_per_book_red" id="qty_per_book_red" value="<?=$qty_per_book["CD"]?>" /></td>
-				<td><input type="text" name="qty_per_book_green" id="qty_per_book_green" value="<?=$qty_per_book["CP"]?>" /></td>
-				<td><input type="text" name="qty_per_book_yellow" id="qty_per_book_yellow" value="<?=$qty_per_book["SR"]?>" /></td>
-				<td><input type="text" name="qty_per_book_purple" id="qty_per_book_purple" value="<?=$qty_per_book["EX"]?>" /></td>
-			</tr>
-			<tr>
-				<td>Standard:</td>
-				<td><input type="text" name="sell_rate_std_red" id="sell_rate_std_red" value="<?=$sell_rate_std["CD"]?>" /></td>
-				<td><input type="text" name="sell_rate_std_green" id="sell_rate_std_green" value="<?=$sell_rate_std["CP"]?>" /></td>
-				<td><input type="text" name="sell_rate_std_yellow" id="sell_rate_std_yellow" value="<?=$sell_rate_std["SR"]?>" /></td>
-				<td><input type="text" name="sell_rate_std_purple" id="sell_rate_std_purple" value="<?=$sell_rate_std["EX"]?>" /></td>
-			</tr>
-			<tr>
-				<td>Discount:</td>
-				<td><input type="text" name="sell_rate_disc_red" id="sell_rate_disc_red" value="<?=$sell_rate_disc["CD"]?>" /></td>
-				<td><input type="text" name="sell_rate_disc_green" id="sell_rate_disc_green" value="<?=$sell_rate_disc["CP"]?>" /></td>
-				<td><input type="text" name="sell_rate_disc_yellow" id="sell_rate_disc_yellow" value="<?=$sell_rate_disc["SR"]?>" /></td>
-				<td><input type="text" name="sell_rate_disc_purple" id="sell_rate_disc_purple" value="<?=$sell_rate_disc["EX"]?>" /></td>
-			</tr>
-			
-		</table>
-		</fieldset>
-		-->
 		<input type="submit" name="submit" value="Save" />
 		<input type="submit" name="submit" value="Close" />
 	</form>
