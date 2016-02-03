@@ -1319,14 +1319,16 @@ if($report=="invoice"){
 			$tab->stopNewLine();
 		}
 		
-		$qry = "SELECT IF(Type='CD','<strong>Documents</strong>',
+		$qry = "SELECT IF(Type='CD' AND org=3,'<strong>Documents mobile</strong>',
+                            IF(Type='CD' AND org<3,'<strong>Documents</strong>',
 								IF(Type='CP' AND org=3, '<strong>Parcels mobile</strong>',
                                     IF(Type='CP' AND org<3, '<strong>Parcels</strong>',
 									    IF(Type='RP', '<strong>Pickup</strong>',
 										'   <strong>Signature</strong>')
 								    )
 							    )
-                            )
+                              )
+                           )
 								AS 'Ticket Type',
 						   Qty_Pickup AS Quant,
 						   ROUND(distr_payment_pickup,4) AS 'Each',
@@ -1680,13 +1682,15 @@ if($report=="invoice_send"){
 			$tab->StopLine();	
 		}
 		
-		$qry = "SELECT IF(Type='CD','Documents>',
+		$qry = "SELECT IF(Type='CD' AND org=3,'Documents mobile>',
+                            IF(Type='CD' AND org<3,'Documents>',
                                 IF(Type='CP' AND org=3, 'Parcels mobile',
                                     IF(Type='CP' AND org<3, 'Parcels',
                                         IF(Type='RP', 'Pickup',
                                         'Signature')
                                     )
                                 )
+                              )
                             )
 								AS 'Ticket Type',
 						   ROUND(distr_payment_pickup,4) AS 'Each_Pickup',
