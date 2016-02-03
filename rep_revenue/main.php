@@ -804,6 +804,7 @@ function weekly_a5($doff, $where_add, $dirp, $date_start, $date_final, $pdf_only
                     $pdf->SetFontSize(14);
                     $pdf->Cell(0,9,"Job Number: ".$contr->job_no,0,1);
                     $pdf->Cell(0,9,"Job Name: ".$contr->publication,0,1);
+                    $pdf->Cell(0,9,"Version: ".$contr->version,0,1);
                     if($contr->show_comments == 'Y')
                         $pdf->Cell(0,9,"Special Notes: ".$contr->comments,0,1);
                 }
@@ -826,7 +827,7 @@ class mailThread{
     var $fn = "";
     var $dropoff_id = 0;
     var $receiver = "";
-    public function __construct($title,$dirp,$fn,$dropoff_id,$receiver){
+    public function __construct($title,$dirp,$fn,$dropoff_id,$receiver=null){
         $this->title = $title;
         $this->dirp = $dirp;
         $this->fn = $fn;
@@ -1164,12 +1165,11 @@ function weekly_send_out($company, $date_start, $date_final, $show_regular, $sho
 				//fwrite($fp,"Delivery instructions for <strong>$company</strong> created.\n");
 		
 				if(!$pdf_only) {
-                    $threads[$fn] = new mailThread("RESULT OF COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$dist_id,$receiver);
+                    $threads[$fn] = new mailThread("COURAL DELIVERY INSTRUCTIONS",$dirp,$fn,$dist_id,$receiver);
                     $threads[$fn]->start();	
 				}
 				
 				$pdffiles[] = $dirp.'/'.$fn;
-				//pdf_merge($now,$fn);
 			}
 			
 			

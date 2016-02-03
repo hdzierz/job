@@ -747,8 +747,8 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 	//@mkdir($SEND_OUTPUT_DIR.'/temp_payout2');
 	$tab  = new MySQLPDFTable($MYSQL,'p');
 	$tab->footer=false;
-	$tab->SetTopMargin(5);
-	$tab->SetAutoPageBreak(true,1);
+	$tab->SetTopMargin(17);
+	$tab->SetAutoPageBreak(true,15);
 		//$tab->AliasNbPages();
 		
 	$tab->fontSize=7;

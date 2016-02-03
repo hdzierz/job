@@ -14,7 +14,7 @@ $site['from_email'] = 'cloud@coural.co.nz'; // from email address
  
 // Just in case we need to relay to a different server,
 // provide an option to use external mail server.
-//$site['smtp_mode'] = 'enabled'; // enabled or disabled
+$site['smtp_mode'] = 'enabled'; // enabled or disabled
 //$site['smtp_host'] = "mail.dzierzon.co.nz:587";
 
 //$site['smtp_port'] = intval(587);
@@ -25,11 +25,14 @@ $site['smtp_host'] = "mail.coural.co.nz:587";
 $site['smtp_username'] = 'cloud@coural.co.nz';
 $site['smtp_password'] = "Rur4lD3l1v3ry";
 
+<<<<<<< .merge_file_SDSJWz
 //$site['smtp_host'] = "smtp-pulse.com";
 //$site['smtp_username'] = 'dochelge@gmail.com';
 //$site['smtp_password'] = "LMJmg4Y6j4o9";
 $site['smtp_mode'] = 'enabled';
 //$site['smtp_port'] = intval(2525);
+=======
+>>>>>>> .merge_file_wjifSw
 //$site['smtp_host'] = "localhost";
 
 //$ADMIN_EMAIL = "hdzierz@gmail.com";
@@ -279,11 +282,11 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
         $mailer->AddReplyTo('coural@coural.co.nz', 'Coural Head Office');
         $mailer->AddAddress($email, 'Coural Head Office');
 		
-		$mailer->AddAddress('hdzierz@gmail.com', 'Coural Head Office');
+		//$mailer->AddAddress('hdzierz@gmail.com', 'Coural Head Office');
 		if($alt_email)
 		{
 			$mailer->AddAddress($alt_email, 'Coural Head Office');
-		}
+	    }	
 		
 		$mail_type = get("address","mail_type","WHERE operator_id='$id'");
 		

@@ -344,8 +344,21 @@ function RouteAffInsert($data, $start){
 	return $data;
 }
 
-$log = fopen("/home/hdzierz/log/dbupload_debug.log","a+");
-$log2 = fopen("/home/hdzierz/log/dbupload.log","a+");
+function isCommandLineInterface()
+{
+    return (php_sapi_name() === 'cli');
+}
+
+if(isCommandLineInterface()){
+    $log = fopen("/home/hdzierz/log/dbupload_debug.log","a+");
+    $log2 = fopen("/home/hdzierz/log/dbupload.log","a+");
+}
+else{
+    $log = fopen("/var/www/html/job/log_dbupload/dbupload_debug.log","a+");
+    $log2 = fopen("/var/www/html/job/log_dbupload/dbupload.log","a+");
+}
+
+
 $message = "DB SYNC PROCESS STARTED (".date("Y-m-d H:i:s").")\n\r";
 fwrite($log,$message,strlen($message));
 fwrite($log2,$message,strlen($message));
@@ -424,7 +437,7 @@ for($i=0;$i<20;$i++){
 	
 	// send a request to example.com (referer = jonasjohn.de)
 	list($header, $content) = PostRequest(
-	    "http://coural.co.nz/modules/SP_coural/receiver.php",
+	    "http://www.coural.co.nz/modules/SP_coural/receiver.php",
 	    "http://www.coural.co.nz/",
 	    $data1
 	);
@@ -433,7 +446,7 @@ for($i=0;$i<20;$i++){
 	fwrite($log,$message,strlen($message));
 	
 	list($header, $content) = PostRequest(
-	    "http://coural.co.nz/modules/SP_coural/receiver.php",
+	    "http://www.coural.co.nz/modules/SP_coural/receiver.php",
 	    "http://www.coural.co.nz/",
 	    $data2
 	);
@@ -443,7 +456,7 @@ for($i=0;$i<20;$i++){
 	
 	list($header, $content) = PostRequest(
 	    //"http://coural.spdev.co.nz/modules/SP_coural/receiver.php",
-		"http://coural.co.nz/modules/SP_coural/receiver.php",
+		"http://www.coural.co.nz/modules/SP_coural/receiver.php",
 	    "http://www.coural.co.nz/",
 	    $data3
 	);
@@ -453,7 +466,7 @@ for($i=0;$i<20;$i++){
 	
 	list($header, $content) = PostRequest(
 	    //"http://coural.spdev.co.nz/modules/SP_coural/receiver.php",
-		"http://coural.co.nz/modules/SP_coural/receiver.php",
+		"http://www.coural.co.nz/modules/SP_coural/receiver.php",
 	    "http://www.coural.co.nz/",
 	    $data4
 	);
