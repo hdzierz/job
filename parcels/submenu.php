@@ -111,6 +111,17 @@
 <?
 	}
 ?>
+<? if($action=="double_ups" || $target=="double_ups"){?>
+        <a class="subaself" href="parcels.php?action=double_ups">Doubles</a>|
+<?
+    }
+    else{
+?>
+        <a class="suba" href="parcels.php?action=double_ups">Doubles</a>|
+<?
+    }
+?>
+
 <? if($action=="show_ticket_notes"){?>
 		<a class="subaself" href="parcels.php?action=show_ticket_notes">Ticket Notes</a>|
 <? 

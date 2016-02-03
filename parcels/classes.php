@@ -40,7 +40,7 @@ class run{
 									dist_id='$dist_id',
 									user_id='$CK_USERID',
 									actual=0,
-                                    batch_no=$batch_no,
+                                    batch_no='$batch_no',
 									exp_no_tickets = 120
                                     $rd";
 		query($qry);
@@ -62,6 +62,7 @@ class run{
                                     user_id='$CK_USERID',
                                     actual=0,
                                     mobile_batch='$batch_no',
+                                    batch_no = '$batch_no',
                                     exp_no_tickets = 120
                                     $rd";
         query($qry);
@@ -83,7 +84,7 @@ class run{
 									run='$run',
 									dist_id='$dist_id',
 									user_id='$CK_USERID',
-                                    batch_no=$batch_no,
+                                    batch_no='$batch_no',
 									actual=1,
 									exp_no_tickets = 120";
 		query($qry);
@@ -314,8 +315,14 @@ class ticket{
 			// Does redeem only when unredeemed. 
 			// !!!!!!!!!Do not remove that IF please even though the Xerox does not need it. The 'normal' scan does.  !!!!!!!!!!!!
 			if($this->isUnRedeemed()){
-				$qry = "INSERT INTO parcel_job_route
-						SET parcel_run_id = '$parcel_run_id',
+                $active = 'active = 1,';
+            }
+            else{
+                $ERROR .= "Batch containes double ups.<br />";
+                $active = 'active = 0,';
+            }
+           $qry = "INSERT INTO parcel_job_route
+                SET parcel_run_id = '$parcel_run_id',
 							is_redeemed_".$ticket_DP."='1',
 							job_id='$job_id',
 							type='$ticket_type',
@@ -327,16 +334,13 @@ class ticket{
 							red_rate_pickup = '".$rates["red_rate_pickup"][$ticket_type]."'+0,
 							red_rate_deliv = '".$rates["red_rate_deliv"][$ticket_type]."'+0,
 							distr_payment_deliv = '".$rates["distr_payment_deliv"][$ticket_type]."'+0,
-							distr_payment_pickup = '".$rates["distr_payment_pickup"][$ticket_type]."'+0
+							distr_payment_pickup = '".$rates["distr_payment_pickup"][$ticket_type]."'+0,
+                            $active
+                            org = 2 
 						";
 									
-				query($qry,0);
-				return true;
-			}
-			else{
-				$ERROR .= "Ticket $ticket_no already redeemed. <br />";
-				return false;
-			}
+			query($qry,0);
+			return true;
 		}// validate ticket
 		
 	}
@@ -388,8 +392,14 @@ class ticket{
 		else{
 			// Does redeem only when unredeemed. 
 			// !!!!!!!!!Do not remove that IF please even though the Xerox does not need it. The 'normal' scan does.  !!!!!!!!!!!!
-			if($this->isUnRedeemed()){
-				$qry = "INSERT INTO parcel_job_route
+            if($this->isUnRedeemed()){
+                $active = 'active = 1,';
+            }
+            else{
+                $ERROR .= "Batch containes double ups.";
+                $active = 'active = 0,';
+            }
+			$qry = "INSERT INTO parcel_job_route
 						SET parcel_run_id = '$parcel_run_id',
 							is_redeemed_".$ticket_DP."='1',
 							job_id='$job_id',
@@ -402,16 +412,13 @@ class ticket{
 							red_rate_pickup = '".$rates["red_rate_pickup"][$ticket_type]."'+0,
 							red_rate_deliv = '".$rates["red_rate_deliv"][$ticket_type]."'+0,
 							distr_payment_deliv = '".$rates["distr_payment_deliv"][$ticket_type]."'+0,
-							distr_payment_pickup = '".$rates["distr_payment_pickup"][$ticket_type]."'+0
+							distr_payment_pickup = '".$rates["distr_payment_pickup"][$ticket_type]."'+0,
+                            $active
+                            org = 2 
 						";
 									
-				query($qry,0);
-				return true;
-			}
-			else{
-				$ERROR .= "Ticket $ticket_no already redeemed. <br />";
-				return false;
-			}
+			query($qry,0);
+			return true;
 		}// validate ticket
 		
 	}
@@ -441,7 +448,7 @@ class xeroxFileReader{
 		$this->markFileAsProcessed();
 	}
 
-    static function getBatchNo($fn){
+    static function getBatchNo2($fn){
         preg_match("/^([0-9]*).*$/", $fn, $res);
         if(isset($res[1]))
             return $res[1];
@@ -451,12 +458,15 @@ class xeroxFileReader{
         return 0;
     }
 
+    static function getBatchNo($fn){
+        return $fn;
+    }
 
     static function unredeem($fn){
         $batch = self::getBatchNo($fn);
-        $qry = "DELETE FROM parcel_job_route WHERE parcel_run_id IN (SELECT parcel_run_id FROM parcel_run WHERE batch_no=$batch)";
+        $qry = "DELETE FROM parcel_job_route WHERE parcel_run_id IN (SELECT parcel_run_id FROM parcel_run WHERE batch_no='$batch')";
         query($qry);
-        $qry = "DELETE FROM parcel_run WHERE batch_no=$batch)";
+        $qry = "DELETE FROM parcel_run WHERE batch_no='$batch')";
         query($qry);
         $MESSAGE = "Batch unredeemed";
         
@@ -536,7 +546,7 @@ class xeroxFileReader{
 					page = '0',
 					real_date = now(),
 					user_id ='$CK_USERID',
-                    batch_no = {$this->batch},
+                    batch_no = '{$this->batch}',
 					is_processed = 0";
 		query($qry);
 		
@@ -665,10 +675,10 @@ class mobileTicket{
 		$res = query($qry);
 		$rates = array();
 		while($rate = mysql_fetch_object($res)){
-			$rates["red_rate_pickup"][$rate->type] = $rate->red_rate_pickup;
-			$rates["red_rate_deliv"][$rate->type] = $rate->red_rate_deliv;
-			$rates["distr_payment_deliv"][$rate->type] = $rate->distr_payment_deliv;
-			$rates["distr_payment_pickup"][$rate->type] = $rate->distr_payment_pickup;
+			$rates["red_rate_pickup"][$rate->type] = $rate->red_rate_pickup_mobile;
+			$rates["red_rate_deliv"][$rate->type] = $rate->red_rate_deliv_mobile;
+			$rates["distr_payment_deliv"][$rate->type] = $rate->distr_payment_deliv_mobile;
+			$rates["distr_payment_pickup"][$rate->type] = $rate->distr_payment_pickup_mobile;
 		}
 		
 		return $rates;
@@ -722,6 +732,13 @@ class mobileTicket{
         else{
 			// Does redeem only when unredeemed. 
 			// !!!!!!!!!Do not remove that IF please even though the Xerox does not need it. The 'normal' scan does.  !!!!!!!!!!!
+            if($this->isUnRedeemed()){
+                $active = 'active = 1,';
+            }
+            else{
+                $ERROR .= "Batch contains double ups.<br />";
+                $active = 'active = 0,';
+            }
 
             $qry = "INSERT INTO parcel_job_route
                     SET parcel_run_id = '$parcel_run_id',
@@ -746,7 +763,9 @@ class mobileTicket{
 							red_rate_pickup = '".$rates["red_rate_pickup"][$ticket_type]."'+0,
 							red_rate_deliv = '".$rates["red_rate_deliv"][$ticket_type]."'+0,
 							distr_payment_deliv = '".$rates["distr_payment_deliv"][$ticket_type]."'+0,
-							distr_payment_pickup = '".$rates["distr_payment_pickup"][$ticket_type]."'+0
+							distr_payment_pickup = '".$rates["distr_payment_pickup"][$ticket_type]."'+0,
+                            $active
+                            org = 3
 						";
 									
 			query($qry,0);
@@ -775,6 +794,10 @@ class mobileFileReader{
 	}
 
     static function getBatchNo($fn){
+        return $fn;
+    }
+
+    static function getBatchNo2($fn){
         if(strpos($fn, "Processed") === false){
             $re = "/^Export_([0-9-_]*).*$/";
         }
@@ -872,7 +895,7 @@ class mobileFileReader{
 					page = '0',
 					real_date = now(),
 					user_id ='$CK_USERID',
-                    batch_no = {$this->batch},
+                    batch_no = '{$this->batch}',
 					is_processed = 0";
 		query($qry);
 		

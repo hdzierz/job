@@ -161,7 +161,7 @@ if($action=="search_tickets"){
 					LEFT JOIN parcel_ticket_note
 					ON ticket_no BETWEEN start AND end
 					WHERE ticket_no BETWEEN '$start_ticket' AND '$final_ticket'
-					
+				        AND active=1	
 					UNION 
 					
 					SELECT client.name AS Courier,
@@ -205,6 +205,71 @@ if($action=="search_tickets"){
 			$tab->stopTable();
 		break;
 	}
+}
+
+
+if($target == "double_ups"){
+    switch($action){
+        case "delete":
+            $qry = "DELETE FROM parcel_job_route WHERE ticket_id=$record";
+            query($qry);
+            break;
+        case "edit";
+            $qry = "SELECT * FROM parcel_job_route WHERE ticket_id=$record";
+            $res = query($qry);
+            $ticket = mysql_fetch_object($res);
+            $qry = "UPDATE parcel_job_route SET active=0 
+                WHERE (is_redeemed_D ={$ticket->is_redeemed_D} AND is_redeemed_P = {$ticket->is_redeemed_P}) 
+                    AND ticket_no = '{$ticket->ticket_no}'";
+            query($qry);
+            $qry = "UPDATE parcel_job_route SET active=1 WHERE ticket_id=$record";
+            query($qry);
+            break;
+    }
+
+    $action = "double_ups";
+}
+
+if($action == "double_ups"){
+        $qry = "SELECT  ticket_id,
+                        batch_no,
+                        job_id,
+                        parcel_job_route.type,
+                        parcel_job_route.ticket_no,
+                        IF(parcel_job_route.is_redeemed_D=1, 'D', IF(parcel_job_route.is_redeemed_P=1,'P','U')) AS 'D/P',
+                        real_date,
+                        active,
+                        tt.ct
+                FROM parcel_job_route
+                LEFT JOIN parcel_run
+                    ON parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
+                LEFT JOIN
+                (
+                    SELECT COUNT(*) AS ct,
+                        ticket_no,
+                        is_redeemed_D,
+                        is_redeemed_P
+                    FROM parcel_job_route
+                    GROUP BY ticket_no, is_redeemed_D, is_redeemed_P
+                    HAVING COUNT(*) > 1
+                ) AS tt
+                    ON tt.ticket_no = parcel_job_route.ticket_no
+                        AND tt.is_redeemed_D = parcel_job_route.is_redeemed_D
+                        AND tt.is_redeemed_P = parcel_job_route.is_redeemed_P
+                WHERE ct>1
+                ORDER BY ticket_no, active";
+    $tab = new MySQLTable("parcels.php",$qry);
+    $tab->cssSQLTable = "sqltable_big";
+    $tab->showRec=true;
+    $tab->hasAddButton=false;
+    $tab->hasDeleteButton=true;
+    $tab->hasEditButton=true;
+    $tab->onClickEditButtonAdd = "&target=double_ups";
+    $tab->onClickDeleteButtonAdd = "&target=double_ups";
+    $tab->startTable();
+    $tab->writeTable();
+    $tab->addHiddenInput("target",$action);
+    $tab->stopTable();
 }
 
 // The user has to receive the tickets first before  the user can redeem them. It is a ticket threshhold.
