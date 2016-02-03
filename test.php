@@ -35,7 +35,10 @@ while($item = mysql_fetch_object($res)){
 		query($qry);
 	}
 }
+<<<<<<< .merge_file_8b7kAJ
 
 die()
+=======
+>>>>>>> .merge_file_SmvG2J
 ?>
 

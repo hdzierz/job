@@ -25,14 +25,11 @@ $site['smtp_host'] = "mail.coural.co.nz:587";
 $site['smtp_username'] = 'cloud@coural.co.nz';
 $site['smtp_password'] = "Rur4lD3l1v3ry";
 
-<<<<<<< .merge_file_SDSJWz
 //$site['smtp_host'] = "smtp-pulse.com";
 //$site['smtp_username'] = 'dochelge@gmail.com';
 //$site['smtp_password'] = "LMJmg4Y6j4o9";
 $site['smtp_mode'] = 'enabled';
 //$site['smtp_port'] = intval(2525);
-=======
->>>>>>> .merge_file_wjifSw
 //$site['smtp_host'] = "localhost";
 
 //$ADMIN_EMAIL = "hdzierz@gmail.com";
