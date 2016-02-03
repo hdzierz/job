@@ -1041,6 +1041,8 @@ if($report=="ticket_redeemed2"){
 		}
 }
 
+
+//svjspdvoj
 if($report=="invoice"){
 	if($date_year && $date_month){
 		$start_date = $date_year."-".$date_month."-01";
