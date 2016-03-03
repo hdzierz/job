@@ -527,9 +527,13 @@ function load_parc_dist($m_table,$op,$route_id,$month,$year){
 global $GST_CIRCULAR;
 	$qry = "	SELECT 
 					parcel_job_route.dist_id,
-					IF(type='CD','Documents',
-						IF(type='CP','Parcels',
-							IF(type='SR','Signature',type)
+					IF(type='CD' AND org=3,'Documents mobile',
+                        IF(type='CD' AND org<3,'Documents',
+                            IF(type='CP' AND org=3,'Parcels mobile',
+						        IF(type='CP' AND org<3,'Parcels',
+							        IF(type='SR','Signature',type)
+                                )
+                            )
 						)
 					) AS 'Type',
 					SUM(is_redeemed_P) As 'Quant/P',
@@ -553,7 +557,7 @@ global $GST_CIRCULAR;
 					AND month(date) = '$month'
 					AND year(date) = '$year'
 					#AND parcel_job_route.route_id=$route_id
-				GROUP BY parcel_job_route.dist_id,type
+				GROUP BY parcel_job_route.dist_id,type,parcel_job_route.org
 			";
 	return $m_table->LoadData($qry);
 }
@@ -726,6 +730,11 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 	//print_r($ops);
 	$date_show = date("F Y",mktime(0,0,0,$month,1,$year));
 	$date_file = date("Y_m",mktime(0,0,0,$month,1,$year));
+
+    $date_csv = date("Y-m-t",mktime(0,0,0,$month,15,$year));
+    $date_csv_due = date("Y-m-d",strtotime("+ 20 days", strtotime($date_csv)));
+
+
 	$dist = get("address","name","WHERE operator_id=$dist_id");
 	$dist_full = get("operator","company","WHERE operator_id=$dist_id");
 	
@@ -734,14 +743,21 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 	//$file = $SEND_OUTPUT_DIR."/temp_payout2/payout_".$dist."_".$date_file.".pdf";
 	$vfile = "/job/temp_payout2/payout_".$dist."_".$date_file.".pdf";
 	$file = "/var/www/html/job/temp_payout2/payout_".$dist."_".$date_file.".pdf";
+    $vfile_csv = "/job/temp_payout2/payout_".$dist."_".$date_file.".csv";
+    $file_csv = "/var/www/html/job/temp_payout2/payout_".$dist."_".$date_file.".csv";
+
+
 	?>
 		<div class="weekly_head">
 			<div class="weekly_logo"><img src="images/coural_logo.jpg" width="71" height="38" /></div>	
 			<h3><?=$title?></h3>
-			<a href='<?=$vfile?>'>Download</a>
+			<a href='<?=$vfile?>'>Download PDF</a><br />
+            <a href='<?=$vfile_csv?>'>Download CSV</a>
 		</div>				
 	
 	<?php
+
+    $csv = "*ContactName,EmailAddress,POAddressLine1,POAddressLine2,POAddressLine3,POAddressLine4,POCity,PORegion,POPostalCode,POCountry,*InvoiceNumber,*InvoiceDate,*DueDate,InventoryItemCode,Description,*Quantity,*UnitAmount,*AccountCode,*TaxType,TrackingName1,TrackingOption1,TrackingName2,TrackingOption2,Currency\n";
 
 	$new_page = true;
 	//@mkdir($SEND_OUTPUT_DIR.'/temp_payout2');
@@ -767,7 +783,15 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			// $oprs[$route] = $op;
 		// }
 	// }
-	
+
+    $csv_line_cont_lbm = "\"%s\",,,,,,,,,,%d,%s,%s,,Contractor LBM,1,%.2f,312,15%% GST on Expenses,,,,,\n";
+    $csv_line_cont_tic = "\"%s\",,,,,,,,,,%d,%s,%s,,Contractor Tickets,1,%.2f,313,15%% GST on Expenses,,,,,\n";
+    $csv_line_sdist_lbm = "\"%s\",,,,,,,,,,%d,%s,%s,,Sub Distributor LBM,1,%.2f,303,15%% GST on Expenses,,,,,\n";
+    $csv_line_dist_lbm = "\"%s\",,,,,,,,,,%d,%s,%s,,Distributor LBM,1,%.2f,302,15%% GST on Expenses,,,,,\n";
+    $csv_line_dist_tic = "\"%s\",,,,,,,,,,%d,%s,%s,,Distributor Tickets,1,%.2f,304,15%% GST on Expenses,,,,,\n";
+    	
+
+    $name_printed=false;
 	foreach($ops as $route=>$op){
 		//$buffer = explode('.',$op_arr);
 		//$op = $buffer[0];
@@ -882,6 +906,7 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 				$tab->WriteLine($tab->getSum("Total",2),'R',5,$width["Total"]);
 				$tab->WriteLine($tab->getSum("Total (incl. GST)",2),'R',5,$width["Total (incl. GST)"]);
 			$tab->StopLine();
+            $csv_sum = $tab->getSum("Total",2);
 			$total+=$tab->getSum("Total",2);
 			$total_gst+=$tab->getSum("Total (incl. GST)",2);
 			$tab->collFieldVal["Total"] = array();
@@ -889,8 +914,14 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->collFieldVal["Bdl Qty"] = array();
 			$tab->collFieldVal["Circ Qty"] = array();
 		}		
-			
-	
+		
+
+        if($csv_sum>0){	
+            $csv_line = sprintf($csv_line_cont_lbm, $contr, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
+            $csv .= $csv_line;
+
+            $name_printed=true;
+        }
 		// As Sub dist
 			
 		//$header2=array('Date','Job','Pub','Circ Qty','Circ Rate','Total', 'Total (incl. GST)');
@@ -917,10 +948,21 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->StopLine();
 			$total+=$tab->getSum("Total",2);
 			$total_gst+=$tab->getSum("Total (incl. GST)",2);
+            $csv_sum = $tab->getSum("Total",2);
 			$tab->collFieldVal["Total"] = array();
 			$tab->collFieldVal["Total (incl. GST)"] = array();
 			$tab->collFieldVal["Bdl Qty"] = array();
 			$tab->collFieldVal["Circ Qty"] = array();
+
+            
+            if($name_printed) $n = "";
+            else $n = $contr;
+            
+            if($csv_sum>0){
+                $csv_line = sprintf($csv_line_sdist_lbm, $n, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
+                $csv .= $csv_line;
+                $name_printed=true;
+            }
 		}
 		
 		if(count($ddata)>0){
@@ -942,10 +984,20 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->StopLine();
 			$total+=$tab->getSum("Total",2);
 			$total_gst+=$tab->getSum("Total (incl. GST)",2);
+            $csv_sum = $tab->getSum("Total",2);
 			$tab->collFieldVal["Total"] = array();
 			$tab->collFieldVal["Total (incl. GST)"] = array();
 			$tab->collFieldVal["Bdl Qty"] = array();
 			$tab->collFieldVal["Circ Qty"] = array();
+
+            if($name_printed) $n = "";
+            else $n = $contr;
+
+            if($csv_sum>0){
+                $csv_line = sprintf($csv_line_dist_lbm, $n, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
+                $csv .= $csv_line;
+                $name_printed=true;
+            }
 		}
 		//else{
 			//$tab->StartLine($font_size);
@@ -976,8 +1028,18 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->StopLine();
 			$total+=$tab->getSum("Total",2);
 			$total_gst+=$tab->getSum("Total (incl. GST)",2);
+            $csv_sum = $tab->getSum("Total",2);
 			$tab->collFieldVal["Total"] = array();
 			$tab->collFieldVal["Total (incl. GST)"] = array();
+
+            if($name_printed) $n = "";
+            else $n = $contr;
+
+            if($csv_sum>0){
+                $csv_line = sprintf($csv_line_cont_tic, $n, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
+                $csv .= $csv_line;
+                $name_printed=true;
+            }
 		}
 		
 		
@@ -999,8 +1061,18 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->StopLine();
 			$total+=$tab->getSum("Total",2);
 			$total_gst+=$tab->getSum("Total (incl. GST)",2);
+            $csv_sum = $tab->getSum("Total",2);
 			$tab->collFieldVal["Total"] = array();
 			$tab->collFieldVal["Total (incl. GST)"] = array();
+            if($name_printed) $n = "";
+            else $n = $contr;
+
+            if($csv_sum>0){
+                $csv_line = sprintf($csv_line_dist_tic, $n, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
+                $csv .= $csv_line; 
+            }   
+            $name_printed=true;
+
 		}
 		
 		//$tab->Ln(10);
@@ -1182,6 +1254,10 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->WriteLine($tot_tot_gst,'R',5,$width["Total (incl. GST)"]);
 	$tab->StopLine();
 	$tab->Output($file);
+
+    $csv_f = fopen($file_csv, "w");
+    fwrite($csv_f, $csv);
+    fclose($csv_f); 
 }
 
 function write_labels_eight($dist_id,$is_current, $is_shareholder, $op_type, $format,$margin_top,$margin_bottom,$margin_left,$cell_height,$cell_width,$num_vert,$num_hor,$space_vert,$space_hor){
