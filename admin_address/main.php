@@ -168,7 +168,7 @@ if($action=="edit"||$action=="add"){
                 <td></td>      
                 <td>Network Password</td>      
                 <td><input size="40" type="pasword" name="password" value="<?=$operator->netpass?>" /></td>       
-            </tr>  			
+            </tr>  	
 			<tr>
 				<td>Postal Address</td>
 				<td><input size="40" type="text" name="postal_addr" value="<?=$operator->postal_addr?>" /> </td>
@@ -256,6 +256,59 @@ if($action=="edit"||$action=="add"){
 					<span class="show_on_print"><?=$operator->env_deliv_notes?></span>
 				</td>														
 			</tr>
+            <tr>
+                <td colspan="9"><hr /></td>
+            </tr>
+            <tr>
+                <td colspan="9">
+                    <table  class="address_box">
+                        <tr>
+                            <th></th>
+                            <th>Coural ID</th>
+                            <th>Phone #</th>
+                        </tr>
+                        <tr>
+                            <td>Scanner #1</td>
+                            <td><input size="40" type="text" name="scanner_no1" value="<?=$operator->scanner_no1?>" /></td>           
+                            <td><input size="40" type="text" name="scanner_phone_no1" value="<?=$operator->scanner_phone_no1?>" /></td> 
+                        </tr>
+                        <tr>
+                            <td>Scanner #2</td>
+                            <td><input size="40" type="text" name="scanner_no2" value="<?=$operator->scanner_no2?>" /></td>  
+                            <td><input size="40" type="text" name="scanner_phone_no2" value="<?=$operator->scanner_phone_no2?>" /></td>
+                        </tr>
+                        <tr>
+                            <td>Scanner #3</td>
+                            <td><input size="40" type="text" name="scanner_no3" value="<?=$operator->scanner_no3?>" /></td>  
+                            <td><input size="40" type="text" name="scanner_phone_no3" value="<?=$operator->scanner_phone_no3?>" /></td>
+                        </tr>
+                        <tr>
+                            <td>Scanner #4</td>
+                            <td><input size="40" type="text" name="scanner_no4" value="<?=$operator->scanner_no4?>" /></td>  
+                            <td><input size="40" type="text" name="scanner_phone_no4" value="<?=$operator->scanner_phone_no4?>" /></td>
+                        </tr>
+                        <tr>
+                            <td>Scanner Email</td>
+                            <td colspan="2"><input size="40" type="text" name="scanner_email" value="<?=$operator->scanner_email?>" /></td>  
+                        </tr>
+                        <tr>
+                            <td>Scanner Charge</td>
+                            <td><input size="40" type="text" name="scanner_charge" value="<?=$operator->scanner_charge?>" /></td> 
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Pay</td>                            
+                            <td><input size="40" type="text" name="mobile_pay" value="<?=$operator->mobile_pay?>" /></td>  
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Depot Rent</td>
+                            <td><input size="40" type="text" name="depot_rent" value="<?=$operator->depot_rent?>" /></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
             <tr>
                 <td colspan="9"><hr /></td>
             </tr>	

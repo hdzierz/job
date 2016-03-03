@@ -62,14 +62,24 @@
 	}*/
 ?>
 <? if($action=="select_xerox_scan"){?>
-		<a class="subaself" href="parcels.php?action=select_xerox_scan">Redeem Canon Scan</a>|
+		<a class="subaself" href="parcels.php?action=select_xerox_scan">Canon Scan</a>|
 <? 
 	}
 	else{
 ?>
-		<a class="suba" href="parcels.php?action=select_xerox_scan">Redeem Canon Scan</a>|
+		<a class="suba" href="parcels.php?action=select_xerox_scan">Canon Scan</a>|
 <?
 	}
+?>
+<? if($action=="select_mobile_scan"){?>
+        <a class="subaself" href="parcels.php?action=select_mobile_scan">Mobile Scan</a>|
+<?
+    }
+    else{
+?>
+        <a class="suba" href="parcels.php?action=select_mobile_scan">Mobile Scan</a>|
+<?
+    }
 ?>
 <? if($action=="redeem"){?>
 		<a class="subaself" href="parcels.php?action=redeem">Ticket Redemption</a>|
@@ -101,6 +111,17 @@
 <?
 	}
 ?>
+<? if($action=="double_ups" || $target=="double_ups"){?>
+        <a class="subaself" href="parcels.php?action=double_ups">Doubles</a>|
+<?
+    }
+    else{
+?>
+        <a class="suba" href="parcels.php?action=double_ups">Doubles</a>|
+<?
+    }
+?>
+
 <? if($action=="show_ticket_notes"){?>
 		<a class="subaself" href="parcels.php?action=show_ticket_notes">Ticket Notes</a>|
 <? 

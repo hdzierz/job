@@ -147,6 +147,47 @@ if($action=="manage_rates"){
 	switch($submit){
 		case "Save":
 			process_dates($start_date);
+            $qry = "UPDATE parcel_rates
+                    SET red_rate_pickup_mobile = '$red_rate_pickup_red_mobile',
+                        red_rate_deliv_mobile = '$red_rate_deliv_red_mobile',
+                        distr_payment_pickup_mobile = '$distr_payment_pickup_red_mobile',
+                        distr_payment_deliv_mobile = '$distr_payment_deliv_red_mobile',
+                        sell_rate_std_mobile = '$sell_rate_std_red_mobile',
+                        sell_rate_disc_mobile = '$sell_rate_disc_red_mobile',
+                        qty_per_book_mobile = '$qty_per_book_red_mobile'
+                    WHERE type='CD' AND start_date='$start_date'";
+            query($qry);
+            $qry = "UPDATE parcel_rates
+                    SET red_rate_pickup_mobile = '$red_rate_pickup_green_mobile',
+                        red_rate_deliv_mobile = '$red_rate_deliv_green_mobile',
+                        distr_payment_pickup_mobile = '$distr_payment_pickup_green_mobile',
+                        distr_payment_deliv_mobile = '$distr_payment_deliv_green_mobile',
+                        sell_rate_std_mobile = '$sell_rate_std_green_mobile',
+                        sell_rate_disc_mobile = '$sell_rate_disc_green_mobile',
+                        qty_per_book_mobile = '$qty_per_book_green_mobile'
+                    WHERE type='CP' AND start_date='$start_date'";
+            query($qry);
+            $qry = "UPDATE parcel_rates
+                    SET red_rate_pickup_mobile = '$red_rate_pickup_yellow_mobile',
+                        red_rate_deliv_mobile = '$red_rate_deliv_yellow_mobile',
+                        distr_payment_pickup_mobile = '$distr_payment_pickup_yellow_mobile',
+                        distr_payment_deliv_mobile = '$distr_payment_deliv_yellow_mobile',
+                        sell_rate_std_mobile = '$sell_rate_std_yellow_mobile',
+                        sell_rate_disc_mobile = '$sell_rate_disc_yellow_mobile',
+                        qty_per_book_mobile = '$qty_per_book_yellow_mobile'
+                    WHERE type='SR' AND start_date='$start_date'";
+            query($qry);
+            $qry = "UPDATE parcel_rates
+                    SET red_rate_pickup_mobile = '$red_rate_pickup_purple_mobile',
+                        red_rate_deliv_mobile = '$red_rate_deliv_purple_mobile',
+                        distr_payment_pickup_mobile = '$distr_payment_pickup_purple_mobile',
+                        distr_payment_deliv_mobile = '$distr_payment_deliv_purple_mobile',
+                        sell_rate_std_mobile = '$sell_rate_std_purple_mobile',
+                        sell_rate_disc_mobile = '$sell_rate_disc_purple_mobile',
+                        qty_per_book_mobile = '$qty_per_book_purple_mobile'
+                    WHERE type='EX' AND start_date='$start_date'";
+            query($qry);
+
 			$qry = "UPDATE parcel_rates
 					SET red_rate_pickup = '$red_rate_pickup_red',
 						red_rate_deliv = '$red_rate_deliv_red',
@@ -524,6 +565,49 @@ if($action=="process_xerox_scan"){
 		
 	}
 }
+
+
+if($action=="process_mobile_scan"){
+	switch($submit){
+        case "Unredeem":
+            $files = $_POST['file'];
+            $filecs = $_POST['filec'];
+    
+            foreach($files as $key=>$file){
+                if($filec[$key]){
+                    mobileFileReader::unredeem($file);
+                    $nfile = str_replace("Processed_","",$file);
+                    rename("MobileScan/".$file, "MobileScan/$nfile");
+                    $MESSAGE.= "File $file unredeemed.<br />";
+                }
+            }
+            break; 
+		case "Redeem":
+			$files = $_POST['file'];
+			$filecs = $_POST['filec'];
+	
+			foreach($files as $key=>$file){
+				if($filec[$key]){
+                    $batch_no = mobileFileReader::getBatchNo($file);
+				    if (($handle = fopen("MobileScan/".$file, "r")) !== FALSE) {
+                        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE){
+                            if($data[0] != "Batch_ID"){
+                                $ticket = new mobileTicket($data);
+                                $ticket->redeem($batch_no, $year, $month);
+                            }
+                        }
+                        fclose($handle);
+                    }
+                    rename("MobileScan/".$file, "MobileScan/Processed_".$file);
+                    $MESSAGE.= "File $file processed.<br />";
+                }
+            } 
+		break;
+		
+	}
+}
+
+
 
 if($action=="gst" && $gst){
 	if($gst<1){
