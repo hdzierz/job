@@ -105,7 +105,7 @@ class FreakMailer extends PHPMailer
         return parent::Send();
     }
 }
-
+//FA
 function turn_fax($dir,$file){
 	$bfile = basename($file);
 	
