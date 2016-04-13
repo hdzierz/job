@@ -1,6 +1,14 @@
 <script language="javascript" src="parcels/javascrips/aid_functions.js"></script>
 <?
 
+
+if($action=="mobile_data"){
+    echo "Download:<br />";
+    echo "<a href='MobileScan/route.csv'>routes</a><br />";
+    echo "<a href='MobileScan/route_aff.csv'>route aff</a><br />";
+    echo "<a href='MobileScan/operator.csv'>operator</a>";
+}
+
 // Alan's MySQL get set function. I have not used a class in teh Coural system, so I might have used this function somewhere
 function sql_get_set($query_string, $index = false, $single_row = false)
 { 
@@ -208,21 +216,59 @@ if($action=="search_tickets"){
 }
 
 
+if($action == "search_ticket"){
+    $ticket_no = trim($ticket_no);
+
+    $qry = "
+        SELECT ticket_id,
+            date,
+            real_date,
+            batch_no,
+            mobile_batch,                
+            type,
+            ticket_no,
+            if(is_redeemed_D = 1, 'D',
+                if(is_redeemed_P = 1, 'P','')) AS red,
+            lat,
+            lon
+     
+        FROM parcel_job_route
+        LEFT JOIN parcel_run
+            ON  parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
+        WHERE ticket_no LIKE '$ticket_no'
+    ";
+
+    $tab = new MySQLTable("parcels.php",$qry);
+    $tab->cssSQLTable = "sqltable_big";
+    $tab->showRec=false;
+    $tab->hasAddButton=false;
+    $tab->hasEditButton=true;
+    $tab->hasDeleteButton=true;
+    $tab->hasActionButton=false;
+    $tab->onClickDeleteButtonAdd = "&ticket_no=$ticket_no&target=$action";
+    $tab->onClickEditButtonAdd = "&ticket_no=$ticket_no&target=$action";
+    $tab->startTable();
+    $tab->writeTable();
+    $tab->addHiddenInput("target",$action);
+    $tab->stopTable();
+
+}
+
 if($target == "double_ups"){
     switch($action){
         case "delete":
             $qry = "DELETE FROM parcel_job_route WHERE ticket_id=$record";
             query($qry);
             break;
-        case "edit";
+        case "activate";
             $qry = "SELECT * FROM parcel_job_route WHERE ticket_id=$record";
             $res = query($qry);
             $ticket = mysql_fetch_object($res);
-            $qry = "UPDATE parcel_job_route SET active=0 
+            $qry = "UPDATE parcel_job_route SET active=0, checked=1 
                 WHERE (is_redeemed_D ={$ticket->is_redeemed_D} AND is_redeemed_P = {$ticket->is_redeemed_P}) 
                     AND ticket_no = '{$ticket->ticket_no}'";
             query($qry);
-            $qry = "UPDATE parcel_job_route SET active=1 WHERE ticket_id=$record";
+            $qry = "UPDATE parcel_job_route SET active=1, checked=1 WHERE ticket_id=$record";
             query($qry);
             break;
     }
@@ -232,7 +278,7 @@ if($target == "double_ups"){
 
 if($action == "double_ups"){
         $qry = "SELECT  ticket_id,
-                        batch_no,
+                            batch_no,
                         job_id,
                         parcel_job_route.type,
                         parcel_job_route.ticket_no,
@@ -250,6 +296,10 @@ if($action == "double_ups"){
                         is_redeemed_D,
                         is_redeemed_P
                     FROM parcel_job_route
+                    LEFT JOIN parcel_run
+                        ON parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
+                    WHERE real_date > '2015-01-01'
+                        AND checked=0
                     GROUP BY ticket_no, is_redeemed_D, is_redeemed_P
                     HAVING COUNT(*) > 1
                 ) AS tt
@@ -257,14 +307,18 @@ if($action == "double_ups"){
                         AND tt.is_redeemed_D = parcel_job_route.is_redeemed_D
                         AND tt.is_redeemed_P = parcel_job_route.is_redeemed_P
                 WHERE ct>1
+                    AND real_date > '2015-01-01'
+                    AND checked=0
                 ORDER BY ticket_no, active";
     $tab = new MySQLTable("parcels.php",$qry);
     $tab->cssSQLTable = "sqltable_big";
-    $tab->showRec=true;
+    $tab->showRec=false;
     $tab->hasAddButton=false;
+    $tab->hasEditButton=false;
     $tab->hasDeleteButton=true;
-    $tab->hasEditButton=true;
-    $tab->onClickEditButtonAdd = "&target=double_ups";
+    $tab->hasActionButton=true;
+    $tab->onClickActionButtonAdd = "&target=double_ups";
+    $tab->onClickActionButtonAction = "activate";
     $tab->onClickDeleteButtonAdd = "&target=double_ups";
     $tab->startTable();
     $tab->writeTable();

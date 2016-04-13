@@ -1,4 +1,45 @@
 <?
+
+
+if($action=="mobile_data"){
+    $qry = "SELECT route_id, code FROM route";
+    dump("route", $qry);
+    $qry = "SELECT env_contractor_id AS contractor_id, route_id 
+            from route_aff where now() BETWEEN app_date and stop_date";
+    dump("route_aff", $qry);
+    $qry = "SELECT operator_id, company";
+    dump("operator");
+}
+function dump($table, $qry=false){
+    $h = fopen("MobileScan/$table.csv", "w+");
+    if(!$qry)
+        $qry ="SELECT * FROM $table";
+    $res = query($qry);
+    $start=true;
+    while($r = mysql_fetch_assoc($res)){
+        if($start){
+            fputcsv($h, array_keys($r));
+            $start=false;
+        }
+        fputcsv($h, $r);   
+    }
+    fclose($h);
+}
+
+if($target == "search_ticket"){
+    if($action=="delete"){
+        $qry = "DELETE FROM parcel_job_route WHERE ticket_id='$record'";
+        query($qry);
+        $MESSAGE = "Item Deleted.";
+    }
+
+    $action=$target;
+}
+
+
+
+
+
 // This function is an emergency function for a bug I could not fix before I left to GER. The system stores the rates onm the redemption line
 // Every now and then those rates are zero. This function will change those to the current rate. 
 // This function is invoked by a button on the parcel front screen.

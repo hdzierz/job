@@ -65,6 +65,26 @@ if($action=="search_tickets" || $action=="show_ticket_notes"){
 <?
 }
 
+
+if($action=="search_ticket"){
+?>
+    <form name="search_ticket" action="parcels.php?action=<?=$action?>" method="post">
+        <table>
+            <tr>
+                <td>Ticket No:</td>
+                <td><input type="text" name="ticket_no" value="<?=$ticket_no?> " /></td>
+                <td colspan="4" align="center">
+                    <input type="submit" name="submit" value="Search" />
+                </td>
+            </tr>
+        </table>
+    </form>
+<?
+}
+
+
+
+
 if($action=="manage_rates"){
 	if(!$start_date) $start_date = date("Y-m-d");
 ?>

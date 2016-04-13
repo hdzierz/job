@@ -812,11 +812,13 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 		$start=false;
 		//echo $op;
 		$d_address = get("address","address","WHERE operator_id=$dist_id");
+        $d_address2 = get("address","address2","WHERE operator_id=$dist_id");
 		$d_city = get("address","city","WHERE operator_id=$dist_id");
 		$d_postcode = get("address","postcode","WHERE operator_id=$dist_id");
 		$d_gst_num = get("address","gst_num","WHERE operator_id=$dist_id");
 		$contr = get("operator","company","WHERE operator_id=$op");
 		$c_address = get("address","address","WHERE operator_id=$op");
+        $c_address2 = get("address","address2","WHERE operator_id=$op");
 		$c_name = get("address","CONCAT(name,', ',first_name)","WHERE operator_id=$op");
 		$c_last_name = get("address","name","WHERE operator_id=$op");
 		$c_first_name = get("address","first_name","WHERE operator_id=$op");
@@ -852,6 +854,12 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->Cell(30,5,'',false,'L',false);
 			$tab->Cell(40,5,$d_address,false,'L',false);
 		$tab->StopLine();
+        $tab->StartLine(10,255,255,255,'');
+            $tab->WriteLine("",'L',5,10);
+            $tab->Cell(80,5,$c_address2,'LR','L',false);
+            $tab->Cell(30,5,'',false,'L',false);
+            $tab->Cell(40,5,$d_address2,false,'L',false);
+        $tab->StopLine();
 		$tab->StartLine(10,255,255,255,'');
 			$tab->WriteLine("",'L',5,10);	
 			$tab->Cell(80,5,$c_city.' '.$c_postcode,'LR','L',false);
@@ -919,7 +927,7 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
         if($csv_sum>0){	
             $csv_line = sprintf($csv_line_cont_lbm, $contr, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
             $csv .= $csv_line;
-
+            $csv_sum = 0;
             $name_printed=true;
         }
 		// As Sub dist
@@ -961,6 +969,7 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
             if($csv_sum>0){
                 $csv_line = sprintf($csv_line_sdist_lbm, $n, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
                 $csv .= $csv_line;
+                $csv_sum = 0;
                 $name_printed=true;
             }
 		}
@@ -996,6 +1005,7 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
             if($csv_sum>0){
                 $csv_line = sprintf($csv_line_dist_lbm, $n, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
                 $csv .= $csv_line;
+                $csv_sum = 0;
                 $name_printed=true;
             }
 		}
@@ -1038,6 +1048,7 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
             if($csv_sum>0){
                 $csv_line = sprintf($csv_line_cont_tic, $n, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
                 $csv .= $csv_line;
+                $csv_sum = 0;
                 $name_printed=true;
             }
 		}
@@ -1070,7 +1081,8 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
             if($csv_sum>0){
                 $csv_line = sprintf($csv_line_dist_tic, $n, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
                 $csv .= $csv_line; 
-            }   
+            }  
+            $csv_sum = 0; 
             $name_printed=true;
 
 		}

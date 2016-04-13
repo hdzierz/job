@@ -111,6 +111,17 @@
 <?
 	}
 ?>
+<? if($action=="search_ticket"){?>
+        <a class="subaself" href="parcels.php?action=search_ticket">Search Mob. Ticket</a>|
+<?
+    }
+    else{
+?>
+        <a class="suba" href="parcels.php?action=search_ticket">Search Mob. Ticket</a>|
+<?
+    }
+?>
+
 <? if($action=="double_ups" || $target=="double_ups"){?>
         <a class="subaself" href="parcels.php?action=double_ups">Doubles</a>|
 <?
@@ -153,4 +164,16 @@
 		}	
 	}
 ?>
+<?
+if($action=="mobile_data"){?>
+    |<a class="subaself" href="parcels.php?action=mobile_data">Mobile Data</a>|
+<?
+    }
+else{
+?>
+    |<a class="suba" href="parcels.php?action=mobile_data">Mobile Data</a>|
+<?
+}
+?>
+
 </span>
