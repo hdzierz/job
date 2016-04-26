@@ -243,7 +243,7 @@ function send_test_mail(){
 }
 
 $MAIL_DEBUG = false;
-function send_operator_mail($target,$dir,$file,$id,$email=false){
+function send_operator_mail($target,$dir,$file,$id,$email=false, $email_only=false){
 	global $ADMIN_EMAIL;
     	global $MAIL_DEBUG;
 	$alt_send_required = false;
@@ -287,7 +287,7 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 		
 		$mail_type = get("address","mail_type","WHERE operator_id='$id'");
 		
-		if($mail_type=='f' && $FAX_EMAIL_ADDRESS=="fax.2talk.co.nz"){
+		if(!$email_only && $mail_type=='f' && $FAX_EMAIL_ADDRESS=="fax.2talk.co.nz"){
 			$nfile = turn_fax($dir,$file);
 			if(!$nfile)
 				$file = $file;

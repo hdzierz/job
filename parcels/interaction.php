@@ -47,6 +47,35 @@ if($ERROR){
 <?
 }
 
+
+if($action == "double_ups"){
+    if(!$start_date) $start_date = date("Y-m-d", strtotime("-1 months"));
+    if(!$end_date) $end_date = date("Y-m-d");
+?>
+    <script type="text/javascript" src="includes/calendarDateInput.js"></script>
+    <form name="double_ups" action="parcels.php?action=<?=$action?>" method="post">
+        <table>
+            <tr>
+                <td>Start Date:</td>
+                <td>
+                    <script language="javascript">DateInput("start_date", true, "YYYY-MM-DD","<?=$start_date?>")</script>
+                </td>
+                <td>End Date:</td>
+                <td>
+                    <script language="javascript">DateInput("end_date", true, "YYYY-MM-DD","<?=$end_date?>")</script>
+                </td>
+                <td>
+                    Historical: <input type="checkbox" name="hist" value="hist" <? if($hist) echo "checked"  ?>/>
+                </td>
+                <td colspan="4" align="center">
+                    <input type="submit" name="submit" value="Show" />
+                </td>
+            </tr>
+        </table>
+    </form>
+<?
+}
+
 if($action=="search_tickets" || $action=="show_ticket_notes"){
 ?>
 	<form name="manage_rates" action="parcels.php?action=<?=$action?>" method="post">

@@ -795,8 +795,10 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 	foreach($ops as $route=>$op){
 		//$buffer = explode('.',$op_arr);
 		//$op = $buffer[0];
-		//$route = $buffer[1];
+		//$route = $buffer[1]
+        $name_printed=false;
 		$route  = 0;
+        
 		$ddata  = load_circ_dist($tab,$op,$route,$month,$year);
 		$sdata  = load_circ_sdist($tab,$op,$route,$month,$year);
 		$cdata  = load_circ_con($tab,$op,$route,$month,$year);
@@ -1171,101 +1173,11 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 	}
 	
 	
-	//$tab->PageBreak();
-	$tab->Ln();
-	$distpdata = load_circ_dist_contr_summary($tab,$dist_id,0,$month,$year);
-	$header=array('Contractor','Total', 'Total (incl. GST)');
-	$width=array('Contractor'=>25,'Total'=>20,'Total (incl. GST)'=>20);
-	$maxw=get_maxw($width);
-	$width_empty = $maxw-40;
-	$title = "Contractor payment summary for: Circulars - ".$date_show;
-	$tab->StartLine(10);
-		$tab->WriteLine($title,'L',8,$maxw-20);
-	$tab->StopLine();
-	//$tab->Ln();
-	if(count($distpdata)>0){
-		$tab->collFieldVal["Total"] = array();
-		$tab->collFieldVal["Total (incl. GST)"] = array();
-		$tab->WriteHeader($header,$width);
-		$tab->WriteTable($header,$distpdata,$width,4,1);	
-		$tab->StartLine($font_size);
-			$tot_tot += $tab->getSum("Total",2);
-			$tot_tot_gst += $tab->getSum("Total (incl. GST)",2);
-			$tab->WriteLine("Total:",'R',5,25);
-			$tab->WriteLine($tab->getSum("Total",2),'R',5,$width["Total"]);
-			$tab->WriteLine($tab->getSum("Total (incl. GST)",2),'R',5,$width["Total (incl. GST)"]);
-		$tab->StopLine();
-		
-	}
-	$tab->Ln();
-	
-	$distpdata = load_circ_dist_sdist_summary($tab,$dist_id,0,$month,$year);
-	$header=array('S/Dist','Total', 'Total (incl. GST)');
-	$width=array('S/Dist'=>25,'Total'=>20,'Total (incl. GST)'=>20);
-	$maxw=get_maxw($width);
-	$width_empty = $maxw-40;
-	$title = "S/Dist payment summary for: Circulars - ".$date_show;
-	$tab->StartLine(10);
-		$tab->WriteLine($title,'L',8,$maxw-20);
-	$tab->StopLine();
-	//$tab->Ln();
-	if(count($distpdata)>0){
-		$tab->collFieldVal["Total"] = array();
-		$tab->collFieldVal["Total (incl. GST)"] = array();
-		$tab->WriteHeader($header,$width);
-		$tab->WriteTable($header,$distpdata,$width,4,1);	
-		$tab->StartLine($font_size);
-			$tot_tot += $tab->getSum("Total",2);
-			$tot_tot_gst += $tab->getSum("Total (incl. GST)",2);
-			$tab->WriteLine("Total:",'R',5,25);
-			$tab->WriteLine($tab->getSum("Total",2),'R',5,$width["Total"]);
-			$tab->WriteLine($tab->getSum("Total (incl. GST)",2),'R',5,$width["Total (incl. GST)"]);
-		$tab->StopLine();
-		
-	}
-	$tab->Ln();
-	
-	$distpdata = load_circ_dist_summary($tab,$dist_id,0,$month,$year);
-	$header=array('Distributor','Total', 'Total (incl. GST)');
-	$width=array('Distributor'=>25,'Total'=>20,'Total (incl. GST)'=>20);
-	$maxw=get_maxw($width);
-	$width_empty = $maxw-40;
-	$title = "Distributor payment summary for: Circulars - ".$date_show;
-	$tab->StartLine(10);
-		$tab->WriteLine($title,'L',8,$maxw-20);
-	$tab->StopLine();
-	//$tab->Ln();
-	if(count($distpdata)>0){
-		$tab->collFieldVal["Total"] = array();
-		$tab->collFieldVal["Total (incl. GST)"] = array();
-		$tab->WriteHeader($header,$width);
-		$tab->WriteTable($header,$distpdata,$width,4,1);	
-		$tab->StartLine($font_size);
-			$tot_tot += $tab->getSum("Total",2);
-			$tot_tot_gst += $tab->getSum("Total (incl. GST)",2);
-			$tab->WriteLine("Total:",'R',5,25);
-			$tab->WriteLine($tab->getSum("Total",2),'R',5,$width["Total"]);
-			$tab->WriteLine($tab->getSum("Total (incl. GST)",2),'R',5,$width["Total (incl. GST)"]);
-		$tab->StopLine();
-		
-	}
-	$tab->Ln();
-	
-	
-	$header=array('','Total', 'Total (incl. GST)');
-	$width=array(''=>25,'Total'=>20,'Total (incl. GST)'=>20);
-	$title = "Total sums - ".$date_show;
-	$tab->StartLine(10);
-		$tab->WriteLine($title,'L',8,$maxw-20);
-	$tab->StopLine();
-	//$tab->Ln();
-	$tab->WriteHeader($header,$width);
-	$tab->StartLine($font_size);
-			$tab->WriteLine("Total:",'R',5,25);
-			$tab->WriteLine($tot_tot,'R',5,$width["Total"]);
-			$tab->WriteLine($tot_tot_gst,'R',5,$width["Total (incl. GST)"]);
-	$tab->StopLine();
 	$tab->Output($file);
+    if(!$send_email){
+        //send_operator_mail("payout2","",$file,$op,false, true)
+    }
+
 
     $csv_f = fopen($file_csv, "w");
     fwrite($csv_f, $csv);

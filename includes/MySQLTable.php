@@ -181,6 +181,7 @@ class MySQLTable{
 		$this->onClickReopenButton	 	= "window.location.href='$this->page?action=reopen&record=%d'";
 		$this->onClickFinishButton	 	= "window.location.href='$this->page?action=finish&record=%d'";
 		$this->onClickEditButton	 	= "window.location.href='$this->editPage?action=%s&record=%d'";
+        $this->onClickActionButton        = "window.location.href='$this->page?action=%s&record=%d'";
 		$this->onClickExtEditButton	 	= "window.location.href='$this->page?action=extedit&record=%d'";
 		$this->onClickAddButton	 		= "window.location.href='$this->page?action=%s&record=-1'";		
 	}

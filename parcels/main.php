@@ -277,9 +277,12 @@ if($target == "double_ups"){
 }
 
 if($action == "double_ups"){
+        if(!$hist) $hist= '0';
+        else $hist='1';
+
         $qry = "SELECT  ticket_id,
-                            batch_no,
-                        job_id,
+                        company,
+                        operator_id,
                         parcel_job_route.type,
                         parcel_job_route.ticket_no,
                         IF(parcel_job_route.is_redeemed_D=1, 'D', IF(parcel_job_route.is_redeemed_P=1,'P','U')) AS 'D/P',
@@ -287,6 +290,8 @@ if($action == "double_ups"){
                         active,
                         tt.ct
                 FROM parcel_job_route
+                LEFT JOIN operator
+                    ON operator_id=parcel_job_route.contractor_id
                 LEFT JOIN parcel_run
                     ON parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
                 LEFT JOIN
@@ -298,8 +303,8 @@ if($action == "double_ups"){
                     FROM parcel_job_route
                     LEFT JOIN parcel_run
                         ON parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
-                    WHERE real_date > '2015-01-01'
-                        AND checked=0
+                    WHERE real_date BETWEEN '$start_date' AND '$end_date'
+                        AND checked='$hist'
                     GROUP BY ticket_no, is_redeemed_D, is_redeemed_P
                     HAVING COUNT(*) > 1
                 ) AS tt
@@ -307,15 +312,15 @@ if($action == "double_ups"){
                         AND tt.is_redeemed_D = parcel_job_route.is_redeemed_D
                         AND tt.is_redeemed_P = parcel_job_route.is_redeemed_P
                 WHERE ct>1
-                    AND real_date > '2015-01-01'
-                    AND checked=0
-                ORDER BY ticket_no, active";
+                    AND real_date BETWEEN '$start_date' AND '$end_date'
+                    AND checked=$hist
+                ORDER BY ticket_no, 'D/P', real_date DESC, active";
     $tab = new MySQLTable("parcels.php",$qry);
     $tab->cssSQLTable = "sqltable_big";
     $tab->showRec=false;
     $tab->hasAddButton=false;
     $tab->hasEditButton=false;
-    $tab->hasDeleteButton=true;
+    $tab->hasDeleteButton=false;
     $tab->hasActionButton=true;
     $tab->onClickActionButtonAdd = "&target=double_ups";
     $tab->onClickActionButtonAction = "activate";
