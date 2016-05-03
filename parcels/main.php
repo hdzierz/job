@@ -1952,7 +1952,9 @@ if($action=="select_mobile_scan"){
             $dl = scandir($SCAN_OUTPUT_DIR."MobileScan");
 			foreach($dl as $file){
 				
-				if(strpos(strtolower($file),'.csv')!==false){
+				if(strpos(strtolower($file),'.csv')!==false 
+                    && strpos(strtolower($file),'operator')===false 
+                    && strpos(strtolower($file),'route')===false){
 		?>
 				<tr>
 					<td>
