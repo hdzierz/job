@@ -12,6 +12,8 @@ include $dir."includes/mail_aid_functions.php";
 $qry = "SELECT * FROM schedule_mail_send_out WHERE status=1";
 $res = query($qry);
 
+echo "Hello: ". mysql_num_rows($res);
+
 $msg = "EMAIL LOG SUMMARY DELIVERY INSTRUCTIONS\n";
 
 $ct = 0;
