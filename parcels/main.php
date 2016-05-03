@@ -230,7 +230,8 @@ if($action == "search_ticket"){
             if(is_redeemed_D = 1, 'D',
                 if(is_redeemed_P = 1, 'P','')) AS red,
             lat,
-            lon
+            lon,
+            CONCAT('<a href=\"', 'https://www.google.com/maps/place/',lat,'+',lon,'/@',lat,',',lon,'8z','\">maps</a>') AS google
      
         FROM parcel_job_route
         LEFT JOIN parcel_run
