@@ -258,54 +258,13 @@ if($action=="edit"||$action=="add"){
 			</tr>
             <tr>
                 <td colspan="9"><hr /></td>
-            </tr>	
+            </tr>
             <tr>
-                <td colspan="9">
-                    <table  class="address_box">
-                        <tr>
-                            <td></td>
-                            <td>Company</td>
-                            <td>Type</td>
-                            <td>Bin #</td>
-                        </tr>
-                        <tr>
-                            <td>Linehaul A</td>
-                            <td>
-                                <input type="text" name="linehaul_a" size="10" value="<?=$operator->linehaul_a?>" />
-                            </td>
-                            <td>
-                                <input type="text" name="linehaul_a_type" size="10" value="<?=$operator->linehaul_a_type?>" />
-                            </td>                            <td>
-                                <input type="text" name="linehaul_a_bin" size="10" value="<?=$operator->linehaul_a_bin?>" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Linehaul B</td>
-                            <td>
-                                <input type="text" name="linehaul_b" size="10" value="<?=$operator->linehaul_b?>" />
-                            </td>
-                            <td>
-                                <input type="text" name="linehaul_b_type" size="10" value="<?=$operator->linehaul_b_type?>" />
-                            </td>
-                            <td>
-                                <input type="text" name="linehaul_b_bin" size="10" value="<?=$operator->linehaul_b_bin?>" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>PH Dest Code</td>
-                            <td>
-                                <input type="text" name="ph_desk" size="10" value="<?=$operator->ph_desk?>" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Rate Code</td>
-                            <td>
-                                <input type="text" name="rate_code" size="10" value="<?=$operator->rate_code?>" />
-                            </td>
-                        </tr>
-                    </table>
+                <td>POD Notes</td>
+                <td>
+                     <textarea class="show_on_screen" name="ph_desk" cols="20" rows="5" ><?=$operator->ph_desk?></textarea>
                 </td>
-            </tr>				
+            </tr>
 			<tr>
 				<td colspan="9"><hr /></td>
 			</tr>			
@@ -476,9 +435,10 @@ if($action=="" || !isset($action)){
 	if(!$record && !$choice) $record=1;
 		
 	if($record) $where=" WHERE address_id='$record' ";
+    if($operator) $where= " WHERE address.operator_id='$operator' ";	
 	
-	
-	$sql = "SELECT  address_id  AS ID,
+	$sql = "SELECT  address_id  AS Record,
+                    address.operator_id AS ID, 
 					card_id  	AS 'Card ID',
 					op.company	AS Operator,
 					
@@ -557,7 +517,7 @@ if($action=="" || !isset($action)){
 					$where
 					ORDER BY op.company,address.name";
 	$clientTab = new MySQLTable("admin_address.php",$sql);
-	$clientTab->showRec  = 1;
+	$clientTab->showRec  = 0;
 	$clientTab->highlightField="Operator";
 	$clientTab->wrap1    = "Mail Type 2";
 	$clientTab->wrap2    = "S/Dist Rate Red. Fact. [%]";

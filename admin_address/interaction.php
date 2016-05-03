@@ -42,7 +42,7 @@ if($action=="" || !isset($action) || $cancel=="Cancel"){
 					</td>	
                     <td>
                         ID:
-                        <input type="text" name="record" value="" />
+                        <input type="text" name="operator" value="" />
                     </td>				
 					<td align="center">
 		<?
