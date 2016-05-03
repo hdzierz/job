@@ -4384,7 +4384,8 @@ if($report=="rep_rate_discr" && $month && $year){
 }
 
 if($report=="rep_payout_breakdown_by_dist2"){
+    echo $submit;
 	if($dist_id)
-		print_op2($dist_id,get_ops_for_dist_from_job($dist_id,$year,$month),$month,$year,$comment);
+		print_op2($submit, $dist_id,get_ops_for_dist_from_job($dist_id,$year,$month),$month,$year,$comment);
 }
 ?>

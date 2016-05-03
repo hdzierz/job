@@ -527,9 +527,13 @@ function load_parc_dist($m_table,$op,$route_id,$month,$year){
 global $GST_CIRCULAR;
 	$qry = "	SELECT 
 					parcel_job_route.dist_id,
-					IF(type='CD','Documents',
-						IF(type='CP','Parcels',
-							IF(type='SR','Signature',type)
+					IF(type='CD' AND org=3,'Documents mobile',
+                        IF(type='CD' AND org<3,'Documents',
+                            IF(type='CP' AND org=3,'Parcels mobile',
+						        IF(type='CP' AND org<3,'Parcels',
+							        IF(type='SR','Signature',type)
+                                )
+                            )
 						)
 					) AS 'Type',
 					SUM(is_redeemed_P) As 'Quant/P',
@@ -553,7 +557,7 @@ global $GST_CIRCULAR;
 					AND month(date) = '$month'
 					AND year(date) = '$year'
 					#AND parcel_job_route.route_id=$route_id
-				GROUP BY parcel_job_route.dist_id,type
+				GROUP BY parcel_job_route.dist_id,type,parcel_job_route.org
 			";
 	return $m_table->LoadData($qry);
 }
@@ -716,16 +720,26 @@ function get_ops_for_dist_from_job($dist_id,$year,$month){
 	return $ops;
 }
 
-function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
+function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
 	global $GST_CIRCULAR;
 	global $MYSQL;
 	
+    $send_email = false;
+    if($submit == "Send Out"){
+        $send_email=true;
+    }
+    
 	$font_size=7;
 	//$ops = array();
 	//$ops[] = 107;
 	//print_r($ops);
 	$date_show = date("F Y",mktime(0,0,0,$month,1,$year));
 	$date_file = date("Y_m",mktime(0,0,0,$month,1,$year));
+
+    $date_csv = date("Y-m-t",mktime(0,0,0,$month,15,$year));
+    $date_csv_due = date("Y-m-d",strtotime("+ 20 days", strtotime($date_csv)));
+
+
 	$dist = get("address","name","WHERE operator_id=$dist_id");
 	$dist_full = get("operator","company","WHERE operator_id=$dist_id");
 	
@@ -733,15 +747,23 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 	$title = "Payout Breakdown ".$tit." ".get("operator","company","WHERE operator_id='$dist_id'")." ($date_show)";
 	//$file = $SEND_OUTPUT_DIR."/temp_payout2/payout_".$dist."_".$date_file.".pdf";
 	$vfile = "/job/temp_payout2/payout_".$dist."_".$date_file.".pdf";
-	$file = "/var/www/html/job/temp_payout2/payout_".$dist."_".$date_file.".pdf";
+    $file_base = "/var/www/html/job/temp_payout2/payout_".$dist."_".$date_file;
+	$file = $file_base.".pdf";
+    $vfile_csv = "/job/temp_payout2/payout_".$dist."_".$date_file.".csv";
+    $file_csv = "/var/www/html/job/temp_payout2/payout_".$dist."_".$date_file.".csv";
+
+
 	?>
 		<div class="weekly_head">
 			<div class="weekly_logo"><img src="images/coural_logo.jpg" width="71" height="38" /></div>	
 			<h3><?=$title?></h3>
-			<a href='<?=$vfile?>'>Download</a>
+			<a href='<?=$vfile?>'>Download PDF</a><br />
+            <a href='<?=$vfile_csv?>'>Download CSV</a>
 		</div>				
 	
 	<?php
+
+    $csv = "*ContactName,EmailAddress,POAddressLine1,POAddressLine2,POAddressLine3,POAddressLine4,POCity,PORegion,POPostalCode,POCountry,*InvoiceNumber,*InvoiceDate,*DueDate,InventoryItemCode,Description,*Quantity,*UnitAmount,*AccountCode,*TaxType,TrackingName1,TrackingOption1,TrackingName2,TrackingOption2,Currency\n";
 
 	$new_page = true;
 	//@mkdir($SEND_OUTPUT_DIR.'/temp_payout2');
@@ -767,12 +789,25 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			// $oprs[$route] = $op;
 		// }
 	// }
-	
+
+    $csv_line_cont_lbm = "\"%s\",,,,,,,,,,%d,%s,%s,,Contractor LBM,1,%.2f,312,15%% GST on Expenses,,,,,\n";
+    $csv_line_cont_tic = "\"%s\",,,,,,,,,,%d,%s,%s,,Contractor Tickets,1,%.2f,313,15%% GST on Expenses,,,,,\n";
+    $csv_line_scanner_charge = "\"%s\",,,,,,,,,,%d,%s,%s,,Contractor Scanner Charge,1,%.2f,190,15%% GST on Expenses,,,,,\n";
+    $csv_line_mobile_pay = "\"%s\",,,,,,,,,,%d,%s,%s,,Contractor Mobile Pay,1,%.2f,190,15%% GST on Expenses,,,,,\n";
+    $csv_line_depot_rent = "\"%s\",,,,,,,,,,%d,%s,%s,,Contractor Depot Rent,1,%.2f,368,15%% GST on Expenses,,,,,\n";
+    $csv_line_sdist_lbm = "\"%s\",,,,,,,,,,%d,%s,%s,,Sub Distributor LBM,1,%.2f,303,15%% GST on Expenses,,,,,\n";
+    $csv_line_dist_lbm = "\"%s\",,,,,,,,,,%d,%s,%s,,Distributor LBM,1,%.2f,302,15%% GST on Expenses,,,,,\n";
+    $csv_line_dist_tic = "\"%s\",,,,,,,,,,%d,%s,%s,,Distributor Tickets,1,%.2f,304,15%% GST on Expenses,,,,,\n";
+    	
+
+    $name_printed=false;
 	foreach($ops as $route=>$op){
 		//$buffer = explode('.',$op_arr);
 		//$op = $buffer[0];
-		//$route = $buffer[1];
+		//$route = $buffer[1]
+        $name_printed=false;
 		$route  = 0;
+        
 		$ddata  = load_circ_dist($tab,$op,$route,$month,$year);
 		$sdata  = load_circ_sdist($tab,$op,$route,$month,$year);
 		$cdata  = load_circ_con($tab,$op,$route,$month,$year);
@@ -788,11 +823,15 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 		$start=false;
 		//echo $op;
 		$d_address = get("address","address","WHERE operator_id=$dist_id");
+        $d_address2 = get("address","address2","WHERE operator_id=$dist_id");
 		$d_city = get("address","city","WHERE operator_id=$dist_id");
 		$d_postcode = get("address","postcode","WHERE operator_id=$dist_id");
 		$d_gst_num = get("address","gst_num","WHERE operator_id=$dist_id");
+        $d_scanner_charge = get("operator", "scanner_charge", "WHERE operator_id=$dist_id");
+        $d_mobile_pay = get("operator", "mobile_pay", "WHERE operator_id=$dist_id");
 		$contr = get("operator","company","WHERE operator_id=$op");
 		$c_address = get("address","address","WHERE operator_id=$op");
+        $c_address2 = get("address","address2","WHERE operator_id=$op");
 		$c_name = get("address","CONCAT(name,', ',first_name)","WHERE operator_id=$op");
 		$c_last_name = get("address","name","WHERE operator_id=$op");
 		$c_first_name = get("address","first_name","WHERE operator_id=$op");
@@ -800,8 +839,9 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 		$c_city = get("address","city","WHERE operator_id=$op");
 		$c_postcode = get("address","postcode","WHERE operator_id=$op");
 		$c_gst_num = get("address","gst_num","WHERE operator_id=$op");
-		
-
+        $c_scanner_charge = -1 * get("operator", "scanner_charge", "WHERE operator_id=$op");
+		$c_mobile_pay = get("operator", "mobile_pay", "WHERE operator_id=$op");
+        $c_depot_rent = -1 * get("operator", "depot_rent", "WHERE operator_id=$op");
 		if(trim($c_last_name)."-".trim($c_first_name) != $c_company)
 			$contr = $c_name." / ".$c_company;
 		else
@@ -828,6 +868,12 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->Cell(30,5,'',false,'L',false);
 			$tab->Cell(40,5,$d_address,false,'L',false);
 		$tab->StopLine();
+        $tab->StartLine(10,255,255,255,'');
+            $tab->WriteLine("",'L',5,10);
+            $tab->Cell(80,5,$c_address2,'LR','L',false);
+            $tab->Cell(30,5,'',false,'L',false);
+            $tab->Cell(40,5,$d_address2,false,'L',false);
+        $tab->StopLine();
 		$tab->StartLine(10,255,255,255,'');
 			$tab->WriteLine("",'L',5,10);	
 			$tab->Cell(80,5,$c_city.' '.$c_postcode,'LR','L',false);
@@ -882,6 +928,7 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 				$tab->WriteLine($tab->getSum("Total",2),'R',5,$width["Total"]);
 				$tab->WriteLine($tab->getSum("Total (incl. GST)",2),'R',5,$width["Total (incl. GST)"]);
 			$tab->StopLine();
+            $csv_sum = $tab->getSum("Total",2);
 			$total+=$tab->getSum("Total",2);
 			$total_gst+=$tab->getSum("Total (incl. GST)",2);
 			$tab->collFieldVal["Total"] = array();
@@ -889,8 +936,14 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->collFieldVal["Bdl Qty"] = array();
 			$tab->collFieldVal["Circ Qty"] = array();
 		}		
-			
-	
+		
+
+        if($csv_sum>0){	
+            $csv_line = sprintf($csv_line_cont_lbm, $contr, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
+            $csv .= $csv_line;
+            $csv_sum = 0;
+            $name_printed=true;
+        }
 		// As Sub dist
 			
 		//$header2=array('Date','Job','Pub','Circ Qty','Circ Rate','Total', 'Total (incl. GST)');
@@ -908,7 +961,7 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->WriteTable($header2,$sdata,$width2,4,1);	
 			$tab->StartLine($font_size);
 				//$tab->WriteLine("",'R',5,110);
-				$tab->WriteLine("Total:",'R',5,60);
+				$tab->WriteLine("Total:",'R',5,75);
 				$tab->WriteLine($tab->getSum("Circ Qty",0),'R',5,$width2["Circ Qty"]);
 				$tab->WriteLine($tab->getSum("Bdl Qty",0),'R',5,$width["Bdl Qty"]);
 				$tab->WriteLine("",'R',5,30);
@@ -917,10 +970,22 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->StopLine();
 			$total+=$tab->getSum("Total",2);
 			$total_gst+=$tab->getSum("Total (incl. GST)",2);
+            $csv_sum = $tab->getSum("Total",2);
 			$tab->collFieldVal["Total"] = array();
 			$tab->collFieldVal["Total (incl. GST)"] = array();
 			$tab->collFieldVal["Bdl Qty"] = array();
 			$tab->collFieldVal["Circ Qty"] = array();
+
+            
+            if($name_printed) $n = "";
+            else $n = $contr;
+            
+            if($csv_sum>0){
+                $csv_line = sprintf($csv_line_sdist_lbm, $n, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
+                $csv .= $csv_line;
+                $csv_sum = 0;
+                $name_printed=true;
+            }
 		}
 		
 		if(count($ddata)>0){
@@ -933,7 +998,7 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->WriteTable($header2,$ddata,$width2,4,1);	
 			$tab->StartLine($font_size);
 				//$tab->WriteLine("",'R',5,10);
-				$tab->WriteLine("Total:",'R',5,60);
+				$tab->WriteLine("Total:",'R',5,75);
 				$tab->WriteLine($tab->getSum("Circ Qty",0),'R',5,$width2["Circ Qty"]);
 				$tab->WriteLine($tab->getSum("Bdl Qty",0),'R',5,$width["Bdl Qty"]);
 				$tab->WriteLine("",'R',5,30);
@@ -942,10 +1007,21 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->StopLine();
 			$total+=$tab->getSum("Total",2);
 			$total_gst+=$tab->getSum("Total (incl. GST)",2);
+            $csv_sum = $tab->getSum("Total",2);
 			$tab->collFieldVal["Total"] = array();
 			$tab->collFieldVal["Total (incl. GST)"] = array();
 			$tab->collFieldVal["Bdl Qty"] = array();
 			$tab->collFieldVal["Circ Qty"] = array();
+
+            if($name_printed) $n = "";
+            else $n = $contr;
+
+            if($csv_sum>0){
+                $csv_line = sprintf($csv_line_dist_lbm, $n, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
+                $csv .= $csv_line;
+                $csv_sum = 0;
+                $name_printed=true;
+            }
 		}
 		//else{
 			//$tab->StartLine($font_size);
@@ -956,8 +1032,8 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 				
 		// Parcel
 		
-		$header=array('Type','Quant/P','Each/P','Value/P','Quant/D','Each/D','Value/D','Total', 'Total (incl. GST)');
-		$width=array('Type'=>20,'Quant/P'=>15,'Each/P'=>15,'Value/P'=>15,'Quant/D'=>15,'Each/D'=>15,'Value/D'=>15,'Total'=>20,'Total (incl. GST)'=>20);
+		$header=array('Type','','Quant/P','Each/P','Value/P','Quant/D','Each/D','Value/D','Total', 'Total (incl. GST)');
+		$width=array('Type'=>20,''=>25,'Quant/P'=>15,'Each/P'=>15,'Value/P'=>15,'Quant/D'=>15,'Each/D'=>15,'Value/D'=>15,'Total'=>20,'Total (incl. GST)'=>20);
 		$maxw=get_maxw($width);
 		$width_empty = $maxw-40;
 		
@@ -970,17 +1046,73 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->WriteTable($header,$pdata,$width,4,1);	
 			$tab->StartLine($font_size);
 				//$tab->WriteLine("",'R',5,110);
-				$tab->WriteLine("Total:",'R',5,110);
+				$tab->WriteLine("Total:",'R',5,135);
 				$tab->WriteLine($tab->getSum("Total",2),'R',5,$width["Total"]);
 				$tab->WriteLine($tab->getSum("Total (incl. GST)",2),'R',5,$width["Total (incl. GST)"]);
 			$tab->StopLine();
 			$total+=$tab->getSum("Total",2);
 			$total_gst+=$tab->getSum("Total (incl. GST)",2);
+            $csv_sum = $tab->getSum("Total",2);
 			$tab->collFieldVal["Total"] = array();
 			$tab->collFieldVal["Total (incl. GST)"] = array();
+
+            $headerp=array('Type','','Total', 'Total (incl. GST)');
+            $widthp=array('Type'=>20,''=>115,'Total'=>20,'Total (incl. GST)'=>20);
+            $title = "Contractor other: ".$date_show;
+            $tab->StartLine(10);
+                $tab->WriteLine($title,'L',8,$maxw-20);
+            $tab->StopLine();
+            $tab->WriteHeader($headerp,$widthp);
+            $GST = 1.15;
+            $tab->StartLine($font_size);
+                $tab->WriteLine("Scanner",'L',5,135);
+                $tab->WriteLine(number_format($c_scanner_charge,2),'R',5,20);
+                $tab->WriteLine(number_format($c_scanner_charge * $GST,2),'R',5,20);
+            $tab->StopLine();
+            $tab->StartLine($font_size);
+                $tab->WriteLine("Mobile",'L',5,135);
+                $tab->WriteLine(number_format($c_mobile_pay,2),'R',5,20);
+                $tab->WriteLine(number_format($c_mobile_pay * $GST,2),'R',5,20);
+            $tab->StopLine();
+            $tab->StartLine($font_size);
+                $tab->WriteLine("Depot",'L',5,135);
+                $tab->WriteLine(number_format($c_depot_rent,2),'R',5,20);
+                $tab->WriteLine(number_format($c_depot_rent * $GST,2),'R',5,20);
+            $tab->StopLine();
+            $total += $c_scanner_charge;
+            $total += $c_mobile_pay;
+            $total += $c_depot_rent;
+            $total_gst += $c_scanner_charge * $GST;
+            $total_gst += $c_mobile_pay * $GST;
+            $total_gst += $c_depot_rent * $GST;
+            $tab->StartLine($font_size);
+                $tab->WriteLine("Total:",'R',5,135);
+                $tab->WriteLine(number_format($c_depot_rent + $c_scanner_charge + $c_mobile_pay,2),'R',5,$width["Total"]);
+                $tab->WriteLine(number_format($GST*($c_depot_rent + $c_scanner_charge + $c_mobile_pay),2),'R',5,$width["Total (incl. GST)"]);
+            $tab->StopLine();
+        
+
+            if($name_printed) $n = "";
+            else $n = $contr;
+
+            if($csv_sum>0){
+                $csv_line = sprintf($csv_line_cont_tic, $n, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
+                $csv .= $csv_line;
+                $csv_sum = 0;
+                $name_printed=true;
+            }
+
+            if($name_printed) $n = "";
+            else $n = $contr;
+
+            $csv_line = sprintf($csv_line_scanner_charge, $n, $invoice_no, $date_csv, $date_csv_due, $c_scanner_charge);
+            $csv .= $csv_line;
+            $csv_line = sprintf($csv_line_mobile_pay, $n, $invoice_no, $date_csv, $date_csv_due, $c_mobile_pay);
+            $csv .= $csv_line;
+            $csv_line = sprintf($csv_line_depot_rent, $n, $invoice_no, $date_csv, $date_csv_due, $c_depot_rent);
+            $csv .= $csv_line;
+            $name_printed=true;
 		}
-		
-		
 		
 		
 		if(count($pddata)>0){
@@ -993,23 +1125,34 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 			$tab->WriteTable($header,$pddata,$width,4,1);	
 			$tab->StartLine($font_size);
 				//$tab->WriteLine("",'R',5,110);
-				$tab->WriteLine("Total:",'R',5,110);
+				$tab->WriteLine("Total:",'R',5,135);
 				$tab->WriteLine($tab->getSum("Total",2),'R',5,$width["Total"]);
 				$tab->WriteLine($tab->getSum("Total (incl. GST)",2),'R',5,$width["Total (incl. GST)"]);
 			$tab->StopLine();
 			$total+=$tab->getSum("Total",2);
 			$total_gst+=$tab->getSum("Total (incl. GST)",2);
+            $csv_sum = $tab->getSum("Total",2);
 			$tab->collFieldVal["Total"] = array();
 			$tab->collFieldVal["Total (incl. GST)"] = array();
+            if($name_printed) $n = "";
+            else $n = $contr;
+
+            if($csv_sum>0){
+                $csv_line = sprintf($csv_line_dist_tic, $n, $invoice_no, $date_csv, $date_csv_due, $csv_sum);
+                $csv .= $csv_line; 
+            }  
+            $csv_sum = 0; 
+            $name_printed=true;
+
 		}
 		
 		//$tab->Ln(10);
 		$tab->StartLine($font_size);
 			//$tab->WriteLine("",'R',5,110);
 			if(count($pdata)>0 || count($pddata)>0)
-				$tab->WriteLine("Total Payout:",'R',5,110);
+				$tab->WriteLine("Total Payout:",'R',5,135);
 			else 
-				$tab->WriteLine("Total Payout:",'R',5,120);
+				$tab->WriteLine("Total Payout:",'R',5,135);
 			$tab->WriteLine(number_format($total,2),'R',5,$width["Total"]);
 			$tab->WriteLine(number_format($total_gst,2),'R',5,$width["Total (incl. GST)"]);
 		$tab->StopLine();
@@ -1018,7 +1161,12 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 		$tab->SetFont('Helvetica','',9);
 		$tab->MultiCell($maxw,4,$comment2,false,'L');
 		//echo "Hello";
-			
+	
+        //if($send_email){
+            //$c_file = $file_base."_".$op.".pdf";
+            //$tab->Output($c_file);
+            //send_operator_mail("payout2","",$c_file,$op,false, true);
+        //}		
 			
 	}//foreach ops	
 	
@@ -1087,101 +1235,15 @@ function print_op2($dist_id,$ops,$month,$year,$comment2="Comment"){
 	}
 	
 	
-	//$tab->PageBreak();
-	$tab->Ln();
-	$distpdata = load_circ_dist_contr_summary($tab,$dist_id,0,$month,$year);
-	$header=array('Contractor','Total', 'Total (incl. GST)');
-	$width=array('Contractor'=>25,'Total'=>20,'Total (incl. GST)'=>20);
-	$maxw=get_maxw($width);
-	$width_empty = $maxw-40;
-	$title = "Contractor payment summary for: Circulars - ".$date_show;
-	$tab->StartLine(10);
-		$tab->WriteLine($title,'L',8,$maxw-20);
-	$tab->StopLine();
-	//$tab->Ln();
-	if(count($distpdata)>0){
-		$tab->collFieldVal["Total"] = array();
-		$tab->collFieldVal["Total (incl. GST)"] = array();
-		$tab->WriteHeader($header,$width);
-		$tab->WriteTable($header,$distpdata,$width,4,1);	
-		$tab->StartLine($font_size);
-			$tot_tot += $tab->getSum("Total",2);
-			$tot_tot_gst += $tab->getSum("Total (incl. GST)",2);
-			$tab->WriteLine("Total:",'R',5,25);
-			$tab->WriteLine($tab->getSum("Total",2),'R',5,$width["Total"]);
-			$tab->WriteLine($tab->getSum("Total (incl. GST)",2),'R',5,$width["Total (incl. GST)"]);
-		$tab->StopLine();
-		
-	}
-	$tab->Ln();
-	
-	$distpdata = load_circ_dist_sdist_summary($tab,$dist_id,0,$month,$year);
-	$header=array('S/Dist','Total', 'Total (incl. GST)');
-	$width=array('S/Dist'=>25,'Total'=>20,'Total (incl. GST)'=>20);
-	$maxw=get_maxw($width);
-	$width_empty = $maxw-40;
-	$title = "S/Dist payment summary for: Circulars - ".$date_show;
-	$tab->StartLine(10);
-		$tab->WriteLine($title,'L',8,$maxw-20);
-	$tab->StopLine();
-	//$tab->Ln();
-	if(count($distpdata)>0){
-		$tab->collFieldVal["Total"] = array();
-		$tab->collFieldVal["Total (incl. GST)"] = array();
-		$tab->WriteHeader($header,$width);
-		$tab->WriteTable($header,$distpdata,$width,4,1);	
-		$tab->StartLine($font_size);
-			$tot_tot += $tab->getSum("Total",2);
-			$tot_tot_gst += $tab->getSum("Total (incl. GST)",2);
-			$tab->WriteLine("Total:",'R',5,25);
-			$tab->WriteLine($tab->getSum("Total",2),'R',5,$width["Total"]);
-			$tab->WriteLine($tab->getSum("Total (incl. GST)",2),'R',5,$width["Total (incl. GST)"]);
-		$tab->StopLine();
-		
-	}
-	$tab->Ln();
-	
-	$distpdata = load_circ_dist_summary($tab,$dist_id,0,$month,$year);
-	$header=array('Distributor','Total', 'Total (incl. GST)');
-	$width=array('Distributor'=>25,'Total'=>20,'Total (incl. GST)'=>20);
-	$maxw=get_maxw($width);
-	$width_empty = $maxw-40;
-	$title = "Distributor payment summary for: Circulars - ".$date_show;
-	$tab->StartLine(10);
-		$tab->WriteLine($title,'L',8,$maxw-20);
-	$tab->StopLine();
-	//$tab->Ln();
-	if(count($distpdata)>0){
-		$tab->collFieldVal["Total"] = array();
-		$tab->collFieldVal["Total (incl. GST)"] = array();
-		$tab->WriteHeader($header,$width);
-		$tab->WriteTable($header,$distpdata,$width,4,1);	
-		$tab->StartLine($font_size);
-			$tot_tot += $tab->getSum("Total",2);
-			$tot_tot_gst += $tab->getSum("Total (incl. GST)",2);
-			$tab->WriteLine("Total:",'R',5,25);
-			$tab->WriteLine($tab->getSum("Total",2),'R',5,$width["Total"]);
-			$tab->WriteLine($tab->getSum("Total (incl. GST)",2),'R',5,$width["Total (incl. GST)"]);
-		$tab->StopLine();
-		
-	}
-	$tab->Ln();
-	
-	
-	$header=array('','Total', 'Total (incl. GST)');
-	$width=array(''=>25,'Total'=>20,'Total (incl. GST)'=>20);
-	$title = "Total sums - ".$date_show;
-	$tab->StartLine(10);
-		$tab->WriteLine($title,'L',8,$maxw-20);
-	$tab->StopLine();
-	//$tab->Ln();
-	$tab->WriteHeader($header,$width);
-	$tab->StartLine($font_size);
-			$tab->WriteLine("Total:",'R',5,25);
-			$tab->WriteLine($tot_tot,'R',5,$width["Total"]);
-			$tab->WriteLine($tot_tot_gst,'R',5,$width["Total (incl. GST)"]);
-	$tab->StopLine();
-	$tab->Output($file);
+    if(!$send_email){
+        $tab->Output($file);
+        //send_operator_mail("payout2","",$file,$op,false, true)
+    }
+
+
+    $csv_f = fopen($file_csv, "w");
+    fwrite($csv_f, $csv);
+    fclose($csv_f); 
 }
 
 function write_labels_eight($dist_id,$is_current, $is_shareholder, $op_type, $format,$margin_top,$margin_bottom,$margin_left,$cell_height,$cell_width,$num_vert,$num_hor,$space_vert,$space_hor){

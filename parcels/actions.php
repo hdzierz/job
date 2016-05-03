@@ -1,4 +1,45 @@
 <?
+
+
+if($action=="mobile_data"){
+    $qry = "SELECT route_id, code FROM route";
+    dump("route", $qry);
+    $qry = "SELECT env_contractor_id AS contractor_id, route_id 
+            from route_aff where now() BETWEEN app_date and stop_date";
+    dump("route_aff", $qry);
+    $qry = "SELECT operator_id, company";
+    dump("operator");
+}
+function dump($table, $qry=false){
+    $h = fopen("MobileScan/$table.csv", "w+");
+    if(!$qry)
+        $qry ="SELECT * FROM $table";
+    $res = query($qry);
+    $start=true;
+    while($r = mysql_fetch_assoc($res)){
+        if($start){
+            fputcsv($h, array_keys($r));
+            $start=false;
+        }
+        fputcsv($h, $r);   
+    }
+    fclose($h);
+}
+
+if($target == "search_ticket"){
+    if($action=="delete"){
+        $qry = "DELETE FROM parcel_job_route WHERE ticket_id='$record'";
+        query($qry);
+        $MESSAGE = "Item Deleted.";
+    }
+
+    $action=$target;
+}
+
+
+
+
+
 // This function is an emergency function for a bug I could not fix before I left to GER. The system stores the rates onm the redemption line
 // Every now and then those rates are zero. This function will change those to the current rate. 
 // This function is invoked by a button on the parcel front screen.
@@ -147,6 +188,47 @@ if($action=="manage_rates"){
 	switch($submit){
 		case "Save":
 			process_dates($start_date);
+            $qry = "UPDATE parcel_rates
+                    SET red_rate_pickup_mobile = '$red_rate_pickup_red_mobile',
+                        red_rate_deliv_mobile = '$red_rate_deliv_red_mobile',
+                        distr_payment_pickup_mobile = '$distr_payment_pickup_red_mobile',
+                        distr_payment_deliv_mobile = '$distr_payment_deliv_red_mobile',
+                        sell_rate_std_mobile = '$sell_rate_std_red_mobile',
+                        sell_rate_disc_mobile = '$sell_rate_disc_red_mobile',
+                        qty_per_book_mobile = '$qty_per_book_red_mobile'
+                    WHERE type='CD' AND start_date='$start_date'";
+            query($qry);
+            $qry = "UPDATE parcel_rates
+                    SET red_rate_pickup_mobile = '$red_rate_pickup_green_mobile',
+                        red_rate_deliv_mobile = '$red_rate_deliv_green_mobile',
+                        distr_payment_pickup_mobile = '$distr_payment_pickup_green_mobile',
+                        distr_payment_deliv_mobile = '$distr_payment_deliv_green_mobile',
+                        sell_rate_std_mobile = '$sell_rate_std_green_mobile',
+                        sell_rate_disc_mobile = '$sell_rate_disc_green_mobile',
+                        qty_per_book_mobile = '$qty_per_book_green_mobile'
+                    WHERE type='CP' AND start_date='$start_date'";
+            query($qry);
+            $qry = "UPDATE parcel_rates
+                    SET red_rate_pickup_mobile = '$red_rate_pickup_yellow_mobile',
+                        red_rate_deliv_mobile = '$red_rate_deliv_yellow_mobile',
+                        distr_payment_pickup_mobile = '$distr_payment_pickup_yellow_mobile',
+                        distr_payment_deliv_mobile = '$distr_payment_deliv_yellow_mobile',
+                        sell_rate_std_mobile = '$sell_rate_std_yellow_mobile',
+                        sell_rate_disc_mobile = '$sell_rate_disc_yellow_mobile',
+                        qty_per_book_mobile = '$qty_per_book_yellow_mobile'
+                    WHERE type='SR' AND start_date='$start_date'";
+            query($qry);
+            $qry = "UPDATE parcel_rates
+                    SET red_rate_pickup_mobile = '$red_rate_pickup_purple_mobile',
+                        red_rate_deliv_mobile = '$red_rate_deliv_purple_mobile',
+                        distr_payment_pickup_mobile = '$distr_payment_pickup_purple_mobile',
+                        distr_payment_deliv_mobile = '$distr_payment_deliv_purple_mobile',
+                        sell_rate_std_mobile = '$sell_rate_std_purple_mobile',
+                        sell_rate_disc_mobile = '$sell_rate_disc_purple_mobile',
+                        qty_per_book_mobile = '$qty_per_book_purple_mobile'
+                    WHERE type='EX' AND start_date='$start_date'";
+            query($qry);
+
 			$qry = "UPDATE parcel_rates
 					SET red_rate_pickup = '$red_rate_pickup_red',
 						red_rate_deliv = '$red_rate_deliv_red',
@@ -524,6 +606,49 @@ if($action=="process_xerox_scan"){
 		
 	}
 }
+
+
+if($action=="process_mobile_scan"){
+	switch($submit){
+        case "Unredeem":
+            $files = $_POST['file'];
+            $filecs = $_POST['filec'];
+    
+            foreach($files as $key=>$file){
+                if($filec[$key]){
+                    mobileFileReader::unredeem($file);
+                    $nfile = str_replace("Processed_","",$file);
+                    rename("MobileScan/".$file, "MobileScan/$nfile");
+                    $MESSAGE.= "File $file unredeemed.<br />";
+                }
+            }
+            break; 
+		case "Redeem":
+			$files = $_POST['file'];
+			$filecs = $_POST['filec'];
+	
+			foreach($files as $key=>$file){
+				if($filec[$key]){
+                    $batch_no = mobileFileReader::getBatchNo($file);
+				    if (($handle = fopen("MobileScan/".$file, "r")) !== FALSE) {
+                        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE){
+                            if($data[0] != "Batch_ID"){
+                                $ticket = new mobileTicket($data);
+                                $ticket->redeem($batch_no, $year, $month);
+                            }
+                        }
+                        fclose($handle);
+                    }
+                    rename("MobileScan/".$file, "MobileScan/Processed_".$file);
+                    $MESSAGE.= "File $file processed.<br />";
+                }
+            } 
+		break;
+		
+	}
+}
+
+
 
 if($action=="gst" && $gst){
 	if($gst<1){

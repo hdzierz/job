@@ -1,6 +1,14 @@
 <script language="javascript" src="parcels/javascrips/aid_functions.js"></script>
 <?
 
+
+if($action=="mobile_data"){
+    echo "Download:<br />";
+    echo "<a href='MobileScan/route.csv'>routes</a><br />";
+    echo "<a href='MobileScan/route_aff.csv'>route aff</a><br />";
+    echo "<a href='MobileScan/operator.csv'>operator</a>";
+}
+
 // Alan's MySQL get set function. I have not used a class in teh Coural system, so I might have used this function somewhere
 function sql_get_set($query_string, $index = false, $single_row = false)
 { 
@@ -161,7 +169,7 @@ if($action=="search_tickets"){
 					LEFT JOIN parcel_ticket_note
 					ON ticket_no BETWEEN start AND end
 					WHERE ticket_no BETWEEN '$start_ticket' AND '$final_ticket'
-					
+				        AND active=1	
 					UNION 
 					
 					SELECT client.name AS Courier,
@@ -205,6 +213,123 @@ if($action=="search_tickets"){
 			$tab->stopTable();
 		break;
 	}
+}
+
+
+if($action == "search_ticket"){
+    $ticket_no = trim($ticket_no);
+
+    $qry = "
+        SELECT ticket_id,
+            date,
+            real_date,
+            batch_no,
+            mobile_batch,                
+            type,
+            ticket_no,
+            if(is_redeemed_D = 1, 'D',
+                if(is_redeemed_P = 1, 'P','')) AS red,
+            lat,
+            lon,
+            CONCAT('<a href=\"', 'https://www.google.com/maps/place/',lat,'+',lon,'/@',lat,',',lon,'8z','\">maps</a>') AS google
+     
+        FROM parcel_job_route
+        LEFT JOIN parcel_run
+            ON  parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
+        WHERE ticket_no LIKE '$ticket_no'
+    ";
+
+    $tab = new MySQLTable("parcels.php",$qry);
+    $tab->cssSQLTable = "sqltable_big";
+    $tab->showRec=false;
+    $tab->hasAddButton=false;
+    $tab->hasEditButton=true;
+    $tab->hasDeleteButton=true;
+    $tab->hasActionButton=false;
+    $tab->onClickDeleteButtonAdd = "&ticket_no=$ticket_no&target=$action";
+    $tab->onClickEditButtonAdd = "&ticket_no=$ticket_no&target=$action";
+    $tab->startTable();
+    $tab->writeTable();
+    $tab->addHiddenInput("target",$action);
+    $tab->stopTable();
+
+}
+
+if($target == "double_ups"){
+    switch($action){
+        case "delete":
+            $qry = "DELETE FROM parcel_job_route WHERE ticket_id=$record";
+            query($qry);
+            break;
+        case "activate";
+            $qry = "SELECT * FROM parcel_job_route WHERE ticket_id=$record";
+            $res = query($qry);
+            $ticket = mysql_fetch_object($res);
+            $qry = "UPDATE parcel_job_route SET active=0, checked=1 
+                WHERE (is_redeemed_D ={$ticket->is_redeemed_D} AND is_redeemed_P = {$ticket->is_redeemed_P}) 
+                    AND ticket_no = '{$ticket->ticket_no}'";
+            query($qry);
+            $qry = "UPDATE parcel_job_route SET active=1, checked=1 WHERE ticket_id=$record";
+            query($qry);
+            break;
+    }
+
+    $action = "double_ups";
+}
+
+if($action == "double_ups"){
+        if(!$hist) $hist= '0';
+        else $hist='1';
+
+        $qry = "SELECT  ticket_id,
+                        company,
+                        operator_id,
+                        parcel_job_route.type,
+                        parcel_job_route.ticket_no,
+                        IF(parcel_job_route.is_redeemed_D=1, 'D', IF(parcel_job_route.is_redeemed_P=1,'P','U')) AS 'D/P',
+                        real_date,
+                        active,
+                        tt.ct
+                FROM parcel_job_route
+                LEFT JOIN operator
+                    ON operator_id=parcel_job_route.contractor_id
+                LEFT JOIN parcel_run
+                    ON parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
+                LEFT JOIN
+                (
+                    SELECT COUNT(*) AS ct,
+                        ticket_no,
+                        is_redeemed_D,
+                        is_redeemed_P
+                    FROM parcel_job_route
+                    LEFT JOIN parcel_run
+                        ON parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
+                    WHERE real_date BETWEEN '$start_date' AND '$end_date'
+                        AND checked='$hist'
+                    GROUP BY ticket_no, is_redeemed_D, is_redeemed_P
+                    HAVING COUNT(*) > 1
+                ) AS tt
+                    ON tt.ticket_no = parcel_job_route.ticket_no
+                        AND tt.is_redeemed_D = parcel_job_route.is_redeemed_D
+                        AND tt.is_redeemed_P = parcel_job_route.is_redeemed_P
+                WHERE ct>1
+                    AND real_date BETWEEN '$start_date' AND '$end_date'
+                    AND checked=$hist
+                ORDER BY ticket_no, 'D/P', real_date DESC, active";
+    $tab = new MySQLTable("parcels.php",$qry);
+    $tab->cssSQLTable = "sqltable_big";
+    $tab->showRec=false;
+    $tab->hasAddButton=false;
+    $tab->hasEditButton=false;
+    $tab->hasDeleteButton=false;
+    $tab->hasActionButton=true;
+    $tab->onClickActionButtonAdd = "&target=double_ups";
+    $tab->onClickActionButtonAction = "activate";
+    $tab->onClickDeleteButtonAdd = "&target=double_ups";
+    $tab->startTable();
+    $tab->writeTable();
+    $tab->addHiddenInput("target",$action);
+    $tab->stopTable();
 }
 
 // The user has to receive the tickets first before  the user can redeem them. It is a ticket threshhold.
@@ -935,6 +1060,14 @@ if($action=="manage_rates"){
 		$sell_rate_std[$type] = $rate->sell_rate_std;
 		$sell_rate_disc[$type] = $rate->sell_rate_disc;
 		$qty_per_book[$type] = $rate->qty_per_book;
+
+        $red_rate_pickup_mobile[$type] = $rate->red_rate_pickup_mobile;
+        $red_rate_deliv_mobile[$type] = $rate->red_rate_deliv_mobile;
+        $distr_payment_pickup_mobile[$type] = $rate->distr_payment_pickup_mobile;
+        $distr_payment_deliv_mobile[$type] = $rate->distr_payment_deliv_mobile;
+        $sell_rate_std_mobile[$type] = $rate->sell_rate_std_mobile;
+        $sell_rate_disc_mobile[$type] = $rate->sell_rate_disc_mobile;
+        $qty_per_book_mobile[$type] = $rate->qty_per_book_mobile;
 	}
 	
 	
@@ -989,44 +1122,37 @@ if($action=="manage_rates"){
 				<td><input type="text" name="distr_payment_deliv_yellow" id="distr_payment_deliv_yellow" value="<?=$distr_payment_deliv["SR"]?>" /></td>
 				<td><input type="text" name="distr_payment_deliv_purple" id="distr_payment_deliv_purple" value="<?=$distr_payment_deliv["EX"]?>" /></td>
 			</tr>			
+            <tr>
+                <td>Mobile Redemption Rate - Pickup:</td>
+                <td><input type="text" name="red_rate_pickup_red_mobile" id="red_rate_pickup_red_mobile" value="<?=$red_rate_pickup_mobile["CD"]?>" /></td>
+                <td><input type="text" name="red_rate_pickup_green_mobile" id="red_rate_pickup_green_mobile" value="<?=$red_rate_pickup_mobile["CP"]?>" /></td>
+                <td><input type="text" name="red_rate_pickup_yellow_mobile" id="red_rate_pickup_yellow_mobile" value="<?=$red_rate_pickup_mobile["SR"]?>" /></td>
+                <td><input type="text" name="red_rate_pickup_purple_mobile" id="red_rate_pickup_purple_mobile" value="<?=$red_rate_pickup_mobile["EX"]?>" /></td>
+            </tr>
+            <tr>
+                <td>Mobile Redemption Rate - Delivery:</td>
+                <td><input type="text" name="red_rate_deliv_red_mobile" id="red_rate_deliv_red_mobile" value="<?=$red_rate_deliv_mobile["CD"]?>" /></td>
+                <td><input type="text" name="red_rate_deliv_green_mobile" id="red_rate_deliv_green_mobile" value="<?=$red_rate_deliv_mobile["CP"]?>" /></td>
+                <td><input type="text" name="red_rate_deliv_yellow_mobile" id="red_rate_deliv_yellow_mobile" value="<?=$red_rate_deliv_mobile["SR"]?>" /></td>
+                <td><input type="text" name="red_rate_deliv_purple_mobile" id="red_rate_deliv_purple_mobile" value="<?=$red_rate_deliv_mobile["EX"]?>" /></td>
+            </tr>
+            <tr>
+                <td>Mobile Distributor Payment - Pickup:</td>
+                <td><input type="text" name="distr_payment_pickup_red_mobile" id="distr_payment_pickup_red_mobile" value="<?=$distr_payment_pickup_mobile["CD"]?>" /></td>
+                <td><input type="text" name="distr_payment_pickup_green_mobile" id="distr_payment_pickup_green_mobile" value="<?=$distr_payment_pickup_mobile["CP"]?>" /></td>
+                <td><input type="text" name="distr_payment_pickup_yellow_mobile" id="distr_payment_pickup_yellow_mobile" value="<?=$distr_payment_pickup_mobile["SR"]?>" /></td>
+                <td><input type="text" name="distr_payment_pickup_purple_mobile" id="distr_payment_pickup_purple_mobile" value="<?=$distr_payment_pickup_mobile["EX"]?>" /></td>
+            </tr>
+            <tr>
+                <td>Mobile Distributor Payment - Delivery:</td>
+                <td><input type="text" name="distr_payment_deliv_red_mobile" id="distr_payment_deliv_red_mobile" value="<?=$distr_payment_deliv_mobile["CD"]?>" /></td>
+                <td><input type="text" name="distr_payment_deliv_green_mobile" id="distr_payment_deliv_green_mobile" value="<?=$distr_payment_deliv_mobile["CP"]?>" /></td>
+                <td><input type="text" name="distr_payment_deliv_yellow_mobile" id="distr_payment_deliv_yellow_mobile" value="<?=$distr_payment_deliv_mobile["SR"]?>" /></td>
+                <td><input type="text" name="distr_payment_deliv_purple_mobile" id="distr_payment_deliv_purple_mobile" value="<?=$distr_payment_deliv_mobile["EX"]?>" /></td>
+            </tr>
 			
 		</table>
 		</fieldset>
-	<!-- 
-		<fieldset style="width:90% "> <legend>Sell Rates per Book</legend>
-		<table>
-			<tr>
-				<td></td>
-				<td >Documents</td>
-				<td >Parcels</td>
-				<td >Signature</td>
-				<td >Excess</td>
-			</tr>
-			<tr>
-				<td>Qty per Book:</td>
-				<td><input type="text" name="qty_per_book_red" id="qty_per_book_red" value="<?=$qty_per_book["CD"]?>" /></td>
-				<td><input type="text" name="qty_per_book_green" id="qty_per_book_green" value="<?=$qty_per_book["CP"]?>" /></td>
-				<td><input type="text" name="qty_per_book_yellow" id="qty_per_book_yellow" value="<?=$qty_per_book["SR"]?>" /></td>
-				<td><input type="text" name="qty_per_book_purple" id="qty_per_book_purple" value="<?=$qty_per_book["EX"]?>" /></td>
-			</tr>
-			<tr>
-				<td>Standard:</td>
-				<td><input type="text" name="sell_rate_std_red" id="sell_rate_std_red" value="<?=$sell_rate_std["CD"]?>" /></td>
-				<td><input type="text" name="sell_rate_std_green" id="sell_rate_std_green" value="<?=$sell_rate_std["CP"]?>" /></td>
-				<td><input type="text" name="sell_rate_std_yellow" id="sell_rate_std_yellow" value="<?=$sell_rate_std["SR"]?>" /></td>
-				<td><input type="text" name="sell_rate_std_purple" id="sell_rate_std_purple" value="<?=$sell_rate_std["EX"]?>" /></td>
-			</tr>
-			<tr>
-				<td>Discount:</td>
-				<td><input type="text" name="sell_rate_disc_red" id="sell_rate_disc_red" value="<?=$sell_rate_disc["CD"]?>" /></td>
-				<td><input type="text" name="sell_rate_disc_green" id="sell_rate_disc_green" value="<?=$sell_rate_disc["CP"]?>" /></td>
-				<td><input type="text" name="sell_rate_disc_yellow" id="sell_rate_disc_yellow" value="<?=$sell_rate_disc["SR"]?>" /></td>
-				<td><input type="text" name="sell_rate_disc_purple" id="sell_rate_disc_purple" value="<?=$sell_rate_disc["EX"]?>" /></td>
-			</tr>
-			
-		</table>
-		</fieldset>
-		-->
 		<input type="submit" name="submit" value="Save" />
 		<input type="submit" name="submit" value="Close" />
 	</form>
@@ -1737,6 +1863,244 @@ if($action=="process_xerox_scan2"){
 	<?
 	}//if submit
 }
+
+
+
+if($action=="select_mobile_scan"){
+
+?>
+	<script language='javascript'>
+		function select_all(){
+			
+			for(i=0;i<1000;i++){
+				var cb = document.getElementById("filec["+i+"]");
+				if(cb)
+					cb.checked=true;
+				else
+					return;
+			}
+		}
+
+		function select_all_unproc(){
+			select_none();
+			for(i=0;i<10;i++){
+				var cb = document.getElementById("filec["+i+"]");
+				var filen = document.getElementById("file["+i+"]");
+				if(cb && filen){
+					if(filen.value.indexOf('Processed')==-1 && cb) cb.checked=true;
+				}
+				else{
+					return;
+				}
+			}
+		}
+		function select_none(){
+			for(i=0;i<1000;i++){
+				var cb = document.getElementById("filec["+i+"]");
+				if(cb)
+					cb.checked=false;
+				else
+					return;
+			}
+		}
+	</script>
+	<?php
+		$redeem_date = get("parcel_run","MAX(date)","",0);
+		$year = date("Y",strtotime($redeem_date));
+		$month = date("m",strtotime($redeem_date));
+	
+	?>
+		
+		<form name="redeem_form" action="parcels.php" method="post" >
+			<fieldset style="width:90% ">
+				<legend>Canonscan Ticket Redemption</legend>
+			<table width="40%">
+				<tr>
+					<td>Month:</td>
+					<td>
+	<?	
+						$month_sel = new Select("month");		
+						$month_sel->setOptionIsVal($month);	
+						$month_sel->writeMonthSelect();
+	?>				
+					</td>
+					<td>Year:</td>
+					<td>
+	<?	
+						$year_sel = new Select("year");		
+						$year_sel->setOptionIsVal($year);	
+						$year_sel->writeYearSelectFT();
+	?>				
+					</td>
+					<td>
+						<input type="submit" name="submit" value="Redeem" />
+					</td>
+                    <td>
+                        <input type="submit" name="submit" value="Unredeem" />
+                    </td>
+				</tr>
+			</table>
+			<br />
+			<br />	
+			<input type="hidden" name="action" value="process_mobile_scan" />
+			<input type="button" name="selall" value="Select all" onclick="select_all();" />
+			<input type="button" name="selallup" value="Select all unproc" onclick="select_all_unproc();" />
+			<input type="button" name="selnone" value="Select none" onclick="select_none();" />
+			<table id="scan_table">
+		<?	
+			$counter=0;
+            $dl = scandir($SCAN_OUTPUT_DIR."MobileScan");
+			foreach($dl as $file){
+				
+				if(strpos(strtolower($file),'.csv')!==false){
+		?>
+				<tr>
+					<td>
+						<? echo $file." / "; ?> Date: <?=date("d F Y H:i", filemtime($SCAN_OUTPUT_DIR."MobileScan/".$file))?><br />	
+						<input type="hidden" id="file[<?php echo $counter;?>]" name="file[<?php echo $counter;?>]" value="<?php echo $file;?>" />		
+					</td>
+					<td>
+						<?php
+						
+							if(strpos($file,'Processed')===false){
+							?>
+								<input id="filec[<?php echo $counter;?>]" type="checkbox" name="filec[<?php echo $counter;?>]" checked='true' />
+							<?php 
+							}
+							else{
+							?>
+								<input id="filec[<?php echo $counter;?>]" type="checkbox" name="filec[<?php echo $counter;?>]"  />			
+							<?php
+
+							} 
+						?>				
+					</td>
+                    <td>
+                        <?php
+                            if(false && strpos($file,'Processed')!==false){
+                        ?>
+                        <a href="/job/parcels.php?action=unredeem_xerox_scan&file=<?=$file?>">Unredeem</a>
+                        <?php
+                            }
+                        ?>
+                    </td>
+		<?	
+				$counter++;
+				}
+			}
+		?>
+			</table>
+		</form>
+	</fieldset>
+	
+<?php
+}
+
+if($action=="process_mobile_scan2"){
+	if($submit || $filter){
+		$redeem_date = get("parcel_run","MAX(date)","",0);
+		$year = date("Y",strtotime($redeem_date));
+		$month = date("m",strtotime($redeem_date));
+	
+	?>
+		
+		<form name="redeem_form" action="parcels.php" method="get" >
+			<fieldset style="width:90% ">
+				<legend>Xerox Ticket Redemption</legend>
+			<table width="40%">
+				<tr>
+					<td>Month:</td>
+					<td>
+	<?	
+						$month_sel = new Select("month");		
+						$month_sel->setOptionIsVal($month);	
+						$month_sel->writeMonthSelect();
+	?>				
+					</td>
+					<td>Year:</td>
+					<td>
+	<?	
+						$year_sel = new Select("year");		
+						$year_sel->setOptionIsVal($year);	
+						$year_sel->writeYearSelect(2,1);
+	?>				
+					</td>
+					<td>
+						<input type="submit" name="submit" value="Redeem" />
+					</td>
+				</tr>
+			</table>
+	<?
+				
+				if(!$is_processed) $is_processed = 0;
+				$now = date("Y-m-d");
+				
+				if($dist_id) 
+				{
+					$where_add_dist = " AND dist.operator_id='$dist_id'";
+					$where_add_dist .= " AND parcel_run_pre.dist_id='$dist_id'";
+				}
+				if($type) $where_add_type = " AND ticket_no LIKE '$type%'";
+				
+
+				$qry = "SELECT DISTINCT	parcel_run_pre.parcel_run_pre_id AS Record,
+								dist.company AS Distributor,
+								contr.company AS Contractor,
+								route.code AS Route,
+								parcel_run_pre.page AS Page,
+								parcel_run_pre.real_date AS Date
+								
+								
+						FROM parcel_run_pre
+						LEFT JOIN operator contr
+							ON contr.operator_id=contractor_id
+						LEFT JOIN route_aff
+							ON route_aff.env_contractor_id = parcel_run_pre.contractor_id
+								AND DATE_FORMAT(parcel_run_pre.real_date,'%Y-%m-%d') BETWEEN app_date AND stop_date
+						LEFT JOIN operator dist
+							ON dist.operator_id = route_aff.env_dist_id
+						LEFT JOIN route
+							On route.route_id=parcel_run_pre.route_id
+
+						WHERE is_processed=$is_processed
+							$where_add_dist
+							$where_add_date
+							AND real_date LIKE '$date%'
+							AND route.route_id = route_aff.route_id
+						ORDER BY Distributor,Contractor,Page;";						
+				//$qry = "CALL select_redeem_pre(0)";
+				
+				$tab = new MySQLTable("parcels.php",$qry);
+				$tab->showRec=false;
+				$tab->hasAddButton=false;
+				$tab->hasDeleteButton=false;
+				$tab->hasEditButton=true;
+				$tab->hasForm=false;
+				if(!$is_processed){
+					$tab->hasCheckBoxes=true;
+					
+					$tab->checkDefaultOn = true;
+				}
+				
+				$tab->onClickEditButtonAction = "process_xerox_scan_ticket_control";
+				$tab->onClickEditButtonAdd = "&dist_id=$dist_id&date=$date&is_processed=$is_processed";
+				
+				$tab->startTable();
+					$tab->writeTable();
+					$tab->addHiddenInput("dist_id",$dist_id);
+					$tab->addHiddenInput("date",$date);
+					$tab->addHiddenInput("type",$type);
+				$tab->stopTable();
+	?>
+			<input type="hidden" name="action" id="action" value="<?=$action?>" />
+			</fieldset>
+		</form>
+	<?
+	}//if submit
+}
+
+
+
 
 //require_once 'includes/phpqrcode/qrlib.php';
 require_once "Image/Barcode2.php";

@@ -25,6 +25,11 @@ $site['smtp_host'] = "mail.coural.co.nz:587";
 $site['smtp_username'] = 'cloud@coural.co.nz';
 $site['smtp_password'] = "Rur4lD3l1v3ry";
 
+//$site['smtp_host'] = "smtp-pulse.com";
+//$site['smtp_username'] = 'dochelge@gmail.com';
+//$site['smtp_password'] = "LMJmg4Y6j4o9";
+$site['smtp_mode'] = 'enabled';
+//$site['smtp_port'] = intval(2525);
 //$site['smtp_host'] = "localhost";
 
 //$ADMIN_EMAIL = "hdzierz@gmail.com";
@@ -94,8 +99,8 @@ class FreakMailer extends PHPMailer
     
     function Send(){
         $to = implode(',',$this->to);
-        #$this->ClearAddresses();
-        #$this->AddAddress("hdzierz@gmail.com", "Head office");
+        //$this->ClearAddresses();
+        //$this->AddAddress("hdzierz@gmail.com", "Head office");
         log_mail($this->to, $this->Subject, $this->ErrorInfo, $this->error_count);
         return parent::Send();
     }
@@ -223,11 +228,10 @@ function send_test_mail(){
 	//$mailer->SMTPKeepAlive = true; 
 	$mailer->Subject = 	"TEST";
 	$mailer->Body = "TEST";
-	$mailer->From = "cloud@coural.co.nz";
-	//$mailer->SMTPDebug = 2;
+	//$mailer->From = "dochelge@gmail.com";
+	$mailer->SMTPDebug = 2;
 	//$mailer->AuthType = "NTLM";
-    //$mail->SMTPSecure = "tls";  
-    $mailer->AddReplyTo('cloud@coural.co.nz', 'oreply');
+    //$mailer->SMTPSecure = "tls";  
 	$mailer->AddAddress("hdzierz@gmail.com", 'Coural Head Office');
 	if(!$mailer->Send())
 	{
@@ -239,7 +243,7 @@ function send_test_mail(){
 }
 
 $MAIL_DEBUG = false;
-function send_operator_mail($target,$dir,$file,$id,$email=false){
+function send_operator_mail($target,$dir,$file,$id,$email=false, $email_only=false){
 	global $ADMIN_EMAIL;
     	global $MAIL_DEBUG;
 	$alt_send_required = false;
@@ -283,7 +287,7 @@ function send_operator_mail($target,$dir,$file,$id,$email=false){
 		
 		$mail_type = get("address","mail_type","WHERE operator_id='$id'");
 		
-		if($mail_type=='f' && $FAX_EMAIL_ADDRESS=="fax.2talk.co.nz"){
+		if(!$email_only && $mail_type=='f' && $FAX_EMAIL_ADDRESS=="fax.2talk.co.nz"){
 			$nfile = turn_fax($dir,$file);
 			if(!$nfile)
 				$file = $file;

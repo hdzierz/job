@@ -1180,7 +1180,8 @@ if($report=='rep_payout_breakdown_by_dist2'){
 			</tr>				
 			<tr>
 				<td colspan="6" align="center">
-					<input type="submit" value="Run!" />
+                    <input type="submit" name="submit" value="Send Out" />
+                    <input type="submit" name="submit" value="Create PDF only" />
 					<input type="hidden" name="report" value="rep_payout_breakdown_by_dist2" />
 					<!--<a href="#" onClick="self.print()"><img border="0" src="images/print.gif" alt="Print"  /> </a>-->
 				</td>

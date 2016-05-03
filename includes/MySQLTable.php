@@ -78,6 +78,7 @@ class MySQLTable{
 	var $hasAddButton		=true;
 	var $hasDeleteButton	=true;
 	var $hasEditButton		=true;
+    var $hasActionButton    =false;
 	var $hasExtEditButton	=false;
 	
 	var $hasSubmitButton	=false;
@@ -109,12 +110,14 @@ class MySQLTable{
 	var $onClickEditButtonAction		="edit";
 	var $onClickAddButtonAction			="add";
 	var $onClickDeleteButtonAction		="delete";
+    var $onClickActionButtonAction      ="action";
 
 	var $onClickDeleteButtonAdd	="";
 	var $onClickCopyButtonAdd	="";
 	var $onClickEditButtonAdd	="";
 	var $onClickAddButtonAdd	="";	
-	
+    var $onClickActionButtonAdd    ="";	
+
 	var $letDieOnEmptySet = false;
 	
 	
@@ -178,6 +181,7 @@ class MySQLTable{
 		$this->onClickReopenButton	 	= "window.location.href='$this->page?action=reopen&record=%d'";
 		$this->onClickFinishButton	 	= "window.location.href='$this->page?action=finish&record=%d'";
 		$this->onClickEditButton	 	= "window.location.href='$this->editPage?action=%s&record=%d'";
+        $this->onClickActionButton        = "window.location.href='$this->page?action=%s&record=%d'";
 		$this->onClickExtEditButton	 	= "window.location.href='$this->page?action=extedit&record=%d'";
 		$this->onClickAddButton	 		= "window.location.href='$this->page?action=%s&record=-1'";		
 	}
@@ -382,6 +386,7 @@ class MySQLTable{
 	function writeListButtons($line,$res,$num_fields){
 		$cancel_field = $this->getFieldNumber("Cancelled",$res,$num_fields);
 		$onClickEditButton		= sprintf($this->onClickEditButton,$this->onClickEditButtonAction,$line[0]).$this->onClickEditButtonAdd;
+        $onClickActionButton    = sprintf($this->onClickActionButton,$this->onClickActionButtonAction,$line[0]).$this->onClickActionButtonAdd;
 		$onClickExtEditButton	= sprintf($this->onClickExtEditButton,$line[0]).$this->onClickExtEditButtonAdd;
 		$onClickDeleteButton	= sprintf($this->onClickDeleteButton,$this->onClickDeleteButtonAction,$line[0]);
 		$onClickDeleteButton.$this->onClickDeleteButtonAdd;
@@ -783,6 +788,8 @@ class MySQLTable{
 	function writeTableButtons($line,$res,$num_fields){
 		$cancel_field = $this->getFieldNumber("Cancelled",$res,$num_fields);
 		$onClickEditButton		= sprintf($this->onClickEditButton,$this->onClickEditButtonAction,$line[0]).$this->onClickEditButtonAdd;
+        $onClickActionButton    = sprintf($this->onClickActionButton,$this->onClickActionButtonAction,$line[0]).$this->onClickActionButtonAdd;
+ 
 		$onClickExtEditButton	= sprintf($this->onClickExtEditButton,$line[0]).$this->onClickExtEditButtonAdd;
 		//$onClickDeleteButton	= sprintf($this->onClickDeleteButton,$this->onClickDeleteButtonAction,$line[0],$line[0]);
 
@@ -793,11 +800,13 @@ class MySQLTable{
 		$onClickReopenButton	= sprintf($this->onClickReopenButton,$line[0]).$this->onClickReopenButtonAdd;
 		$onClickFinishButton	= sprintf($this->onClickFinishButton,$line[0]).$this->onClickFinishButtonAdd;
 		
-		if($this->hasEditButton||$this->hasExtEditButton||$this->hasCopyButton||$this->hasCancelButton||$this->hasReopenButton||$this->hasFinishButton||$this->hasDeleteButton){
+		if($this->hasActionButton || $this->hasEditButton||$this->hasExtEditButton||$this->hasCopyButton||$this->hasCancelButton||$this->hasReopenButton||$this->hasFinishButton||$this->hasDeleteButton){
 ?>
 			<td align="center">
 <?	
-							
+			    if($this->hasActionButton){
+                    $this->writeButton($this->cssSQLButton, $this->onClickActionButtonAction, ucfirst($this->onClickActionButtonAction), $onClickActionButton, $line[0]);
+                }
 				if($this->hasEditButton){	
 					$this->writeButton($this->cssSQLButton,"edit","Edit",$onClickEditButton,$line[0]);
 				}

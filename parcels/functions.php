@@ -3,7 +3,7 @@
 
 
 	function process_dates($start_date){
-		$types = array("CD","CP","SR","RP");
+		$types = array("CD","CP","SR","RP","EX");
 	
 		$qry = "SELECT * FROM parcel_rates WHERE '$start_date' BETWEEN start_date AND end_date LIMIT 1";
 		$res = query($qry);

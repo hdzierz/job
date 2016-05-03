@@ -82,6 +82,7 @@ if($report=="ticket_trace"){
             WHERE parcel_job.order_date > '$start_date' 
                 AND parcel_job.order_date <= '$final_date'
                 AND (is_redeemed_D=1 OR is_redeemed_D IS NULL)
+                AND active=1
                 ";
         //echo nl2br($qry);
         $res = query($qry);
@@ -343,6 +344,7 @@ if($report=="ticket_unredeemed_val" && $submit){
                     WHERE parcel_job.order_date>='$start_date' AND parcel_job.order_date<='$final_date' 
                         AND parcel_job_route.type='$key'
                         AND parcel_job_route.is_redeemed_D='1'
+                        AND active=1
                         AND parcel_run.date<='$final_date'
                     GROUP BY type,month
                     HAVING month IS NOT NULL
@@ -543,6 +545,7 @@ if($report=="ticket_unredeemed" && $submit){
 					ON parcel_job.job_id=parcel_job_route.job_id
 					WHERE parcel_job.order_date>='$start_date' AND parcel_job.order_date<='$final_date' 
 						AND type='$key'
+                        AND active=1
 						AND parcel_job_route.is_redeemed_D='1'
 						AND parcel_run.date<='$final_date'
 					GROUP BY type,month
@@ -730,6 +733,7 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 					LEFT JOIN parcel_run
 					ON parcel_run.parcel_run_id = parcel_job_route.parcel_run_id
 					WHERE parcel_job_route.dist_id='$dist_id'
+                    AND active=1
 					AND parcel_run.$date_field BETWEEN '$start_date' AND '$final_date'	
 					ORDER BY company";
 	$res = query($qry,0);
@@ -794,7 +798,7 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 					WHERE parcel_run.date BETWEEN '$start_date' AND '$final_date'	
 						AND parcel_job_route.contractor_id='$contr->contractor_id'
 						AND parcel_job_route.dist_id='$dist_id'
-						
+					    AND active=1	
 					GROUP BY parcel_run.parcel_run_id, parcel_job_route.type
 				) AS run
 				GROUP BY parcel_run_id,route_id
@@ -883,6 +887,7 @@ if($report=="ticket_redeemed"){
 				LEFT JOIN operator
 					ON operator.operator_id=parcel_job_route.dist_id
 				WHERE parcel_run.date BETWEEN '$start_date' AND '$final_date'
+                    AND active=1
 				%s
 			) AS rates
 			WHERE company IS NOT NULL
@@ -975,6 +980,7 @@ if($report=="ticket_redeemed2"){
 					LEFT JOIN operator
 						ON operator.operator_id=parcel_job_route.dist_id
 					WHERE YEAR(date) ='$year'
+                        AND active=1
 					GROUP BY parcel_job_route.dist_id, month
 				) AS rates
 				WHERE company IS NOT NULL
@@ -1035,6 +1041,8 @@ if($report=="ticket_redeemed2"){
 		}
 }
 
+
+//svjspdvoj
 if($report=="invoice"){
 	if($date_year && $date_month){
 		$start_date = $date_year."-".$date_month."-01";
@@ -1156,6 +1164,7 @@ if($report=="invoice"){
 				ON operator.operator_id=address.operator_id
 				WHERE parcel_job_route.dist_id='$dist_id'
 					AND  $date_field BETWEEN '$start_date' AND '$final_date'
+                    AND active=1
 				GROUP BY parcel_job_route.contractor_id 
 				ORDER BY name";
 		$res_contr = query($qry,0);
@@ -1248,7 +1257,7 @@ if($report=="invoice"){
 						  WHERE parcel_job_route.contractor_id='$contractor->contractor_id'
 								AND  parcel_job_route.dist_id='$dist_id'
 								AND  $date_field BETWEEN '$start_date' AND '$final_date'
-								
+								AND active=1
 						  GROUP BY parcel_job_route.contractor_id,parcel_job_route.route_id,parcel_job_route.type
 					) AS job";
 				//echo nl2br($qry);
@@ -1312,12 +1321,16 @@ if($report=="invoice"){
 			$tab->stopNewLine();
 		}
 		
-		$qry = "SELECT IF(Type='CD','<strong>Documents</strong>',
-								IF(Type='CP', '<strong>Parcels</strong>',
-									IF(Type='RP', '<strong>Pickup</strong>',
-										'<strong>Signature</strong>')
-								)
-							)
+		$qry = "SELECT IF(Type='CD' AND org=3,'<strong>Documents mobile</strong>',
+                            IF(Type='CD' AND org<3,'<strong>Documents</strong>',
+								IF(Type='CP' AND org=3, '<strong>Parcels mobile</strong>',
+                                    IF(Type='CP' AND org<3, '<strong>Parcels</strong>',
+									    IF(Type='RP', '<strong>Pickup</strong>',
+										'   <strong>Signature</strong>')
+								    )
+							    )
+                              )
+                           )
 								AS 'Ticket Type',
 						   Qty_Pickup AS Quant,
 						   ROUND(distr_payment_pickup,4) AS 'Each',
@@ -1335,6 +1348,7 @@ if($report=="invoice"){
 					
 						SELECT
 						  parcel_job_route.type AS type,
+                            org,
 						  	COUNT(DISTINCT `parcel_job_route`.`ticket_id`) AS Qty, 
 						  	COUNT(DISTINCT IF(is_redeemed_P=1,`parcel_job_route`.`ticket_id`,NULL)) AS Qty_Pickup, 
 						  	COUNT(DISTINCT IF(is_redeemed_D=1,`parcel_job_route`.`ticket_id`,NULL)) AS Qty_Deliv, 
@@ -1355,8 +1369,8 @@ if($report=="invoice"){
 							  ON route.route_id=parcel_job_route.route_id
 						  WHERE parcel_job_route.dist_id='$dist_id'
 							  AND  date BETWEEN '$start_date' AND '$final_date'
-							  
-						  GROUP BY parcel_job_route.dist_id,parcel_job_route.type
+						        AND active=1	  
+						  GROUP BY parcel_job_route.dist_id,parcel_job_route.type, parcel_job_route.org
 					) AS job";
 		//AND is_hidden<>'Y'
 		
@@ -1538,6 +1552,7 @@ if($report=="invoice_send"){
 				ON operator.operator_id=address.operator_id
 				WHERE parcel_run.dist_id='$dist_id'
 					AND  $date_field BETWEEN '$start_date' AND '$final_date'
+                    AND active=1
 				GROUP BY parcel_job_route.contractor_id 
 				ORDER BY name";
 		//echo nl2br($qry);
@@ -1610,7 +1625,7 @@ if($report=="invoice_send"){
 							   ON route.route_id=parcel_job_route.route_id
 						  WHERE parcel_job_route.contractor_id='$contractor->contractor_id'
 								AND  $date_field BETWEEN '$start_date' AND '$final_date'
-								
+							    AND active=1	
 						  GROUP BY parcel_job_route.contractor_id,parcel_job_route.type
 					) AS job";
 				//echo nl2br($qry);die();
@@ -1669,12 +1684,16 @@ if($report=="invoice_send"){
 			$tab->StopLine();	
 		}
 		
-		$qry = "SELECT IF(Type='CD','Documents',
-								IF(Type='CP', 'Parcels',
-									IF(Type='RP', 'Pickup',
-									'Signature')
-								)
-							)
+		$qry = "SELECT IF(Type='CD' AND org=3,'Documents mobile>',
+                            IF(Type='CD' AND org<3,'Documents>',
+                                IF(Type='CP' AND org=3, 'Parcels mobile',
+                                    IF(Type='CP' AND org<3, 'Parcels',
+                                        IF(Type='RP', 'Pickup',
+                                        'Signature')
+                                    )
+                                )
+                              )
+                            )
 								AS 'Ticket Type',
 						   ROUND(distr_payment_pickup,4) AS 'Each_Pickup',
 						   @pu := ROUND(Qty_Pickup*distr_payment_pickup,2) AS Value_Pickup,
@@ -1689,7 +1708,8 @@ if($report=="invoice_send"){
 					FROM (
 					
 						SELECT
-						  parcel_job_route.type AS type,
+						    parcel_job_route.type AS type,
+                            org,
 						  	COUNT(DISTINCT `parcel_job_route`.`ticket_id`) AS Qty, 
 						  	COUNT(DISTINCT IF(is_redeemed_P=1,`parcel_job_route`.`ticket_id`,NULL)) AS Qty_Pickup, 
 						  	COUNT(DISTINCT IF(is_redeemed_D=1,`parcel_job_route`.`ticket_id`,NULL)) AS Qty_Deliv, 
@@ -1710,8 +1730,8 @@ if($report=="invoice_send"){
 							  ON route.route_id=parcel_job_route.route_id
 						  WHERE parcel_job_route.dist_id='$dist_id'
 							  AND  date BETWEEN '$start_date' AND '$final_date'
-							  
-						  GROUP BY parcel_job_route.dist_id,parcel_job_route.type
+						      AND active=1	  
+						  GROUP BY parcel_job_route.dist_id,parcel_job_route.type,parcel_job_route.org
 					) AS job";
 		//AND is_hidden<>'Y'
 		$tab->StartLine(7,255,255,255);
@@ -1764,6 +1784,7 @@ if($report=="invoice_send"){
 		query($qry);
 
 	} // foreach dist
+    echo "Finished: <a href='rep_parcels.php?report=invoice'>&lt&ltback</a>";
 }
 
 if($report=="tickets_received"){
