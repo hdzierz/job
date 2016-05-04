@@ -219,7 +219,8 @@ if($action=="search_tickets"){
 if($action == "search_ticket"){
     $ticket_no = trim($ticket_no);
 
-    $qry = "
+    if($ticket_no){
+        $qry = "
         SELECT ticket_id,
             date,
             real_date,
@@ -229,6 +230,7 @@ if($action == "search_ticket"){
             ticket_no,
             if(is_redeemed_D = 1, 'D',
                 if(is_redeemed_P = 1, 'P','')) AS red,
+            parcel_job_route.active as active,
             lat,
             lon,
             CONCAT('<a href=\"', 'https://www.google.com/maps/place/',lat,'+',lon,'/@',lat,',',lon,'8z','\">maps</a>') AS google
@@ -236,23 +238,24 @@ if($action == "search_ticket"){
         FROM parcel_job_route
         LEFT JOIN parcel_run
             ON  parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
-        WHERE ticket_no LIKE '$ticket_no'
-    ";
+        WHERE ticket_no LIKE '$ticket_no%'
+            #AND active=1
+        ";
 
-    $tab = new MySQLTable("parcels.php",$qry);
-    $tab->cssSQLTable = "sqltable_big";
-    $tab->showRec=false;
-    $tab->hasAddButton=false;
-    $tab->hasEditButton=true;
-    $tab->hasDeleteButton=true;
-    $tab->hasActionButton=false;
-    $tab->onClickDeleteButtonAdd = "&ticket_no=$ticket_no&target=$action";
-    $tab->onClickEditButtonAdd = "&ticket_no=$ticket_no&target=$action";
-    $tab->startTable();
-    $tab->writeTable();
-    $tab->addHiddenInput("target",$action);
-    $tab->stopTable();
-
+        $tab = new MySQLTable("parcels.php",$qry);
+        $tab->cssSQLTable = "sqltable_big";
+        $tab->showRec=false;
+        $tab->hasAddButton=false;
+        $tab->hasEditButton=true;
+        $tab->hasDeleteButton=true;
+        $tab->hasActionButton=false;
+        $tab->onClickDeleteButtonAdd = "&ticket_no=$ticket_no&target=$action";
+        $tab->onClickEditButtonAdd = "&ticket_no=$ticket_no&target=$action";
+        $tab->startTable();
+        $tab->writeTable();
+        $tab->addHiddenInput("target",$action);
+        $tab->stopTable();
+    }
 }
 
 if($target == "double_ups"){

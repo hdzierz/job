@@ -530,8 +530,8 @@ if($action=="redeem"){
 				$qry = "UPDATE parcel_run SET actual=0,exp_no_tickets = '$exp_no_tickets', red_ticket_count = '$red_ticket_count'+0 WHERE parcel_run_id = '$parcel_run_id'";
 				query($qry);
 				
-				if($red_ticket_count>0) $ERROR .= "You attempted to redeem tickets which had been redeemed already.<br />";
-				$MESSAGE = "Tickets for contractor <strong>'$contractor $name'</strong> redeemed ($ticket_count tickets from $exp_no_tickets expected).<br />";
+				//if($red_ticket_count>0) $ERROR .= "You attempted to redeem tickets which had been redeemed already.<br />";
+				//$MESSAGE = "Tickets for contractor <strong>'$contractor $name'</strong> redeemed ($ticket_count tickets from $exp_no_tickets expected).<br />";
 			} // if is array
 		break;
 	}
