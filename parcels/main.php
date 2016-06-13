@@ -238,7 +238,7 @@ if($action == "search_ticket"){
         FROM parcel_job_route
         LEFT JOIN parcel_run
             ON  parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
-        WHERE ticket_no LIKE '$ticket_no%'
+        WHERE ticket_no = '$ticket_no'
             #AND active=1
         ";
 
@@ -246,8 +246,8 @@ if($action == "search_ticket"){
         $tab->cssSQLTable = "sqltable_big";
         $tab->showRec=false;
         $tab->hasAddButton=false;
-        $tab->hasEditButton=true;
-        $tab->hasDeleteButton=true;
+        $tab->hasEditButton=false;
+        $tab->hasDeleteButton=false;
         $tab->hasActionButton=false;
         $tab->onClickDeleteButtonAdd = "&ticket_no=$ticket_no&target=$action";
         $tab->onClickEditButtonAdd = "&ticket_no=$ticket_no&target=$action";
@@ -270,7 +270,7 @@ if($target == "double_ups"){
             $ticket = mysql_fetch_object($res);
             $qry = "UPDATE parcel_job_route SET active=0, checked=1 
                 WHERE (is_redeemed_D ={$ticket->is_redeemed_D} AND is_redeemed_P = {$ticket->is_redeemed_P}) 
-                    AND ticket_no = '{$ticket->ticket_no}'";
+                    AND ticket_no = '{$ticket->ticket_no}' AND ticket_type='{$ticket->ticket_type}'";
             query($qry);
             $qry = "UPDATE parcel_job_route SET active=1, checked=1 WHERE ticket_id=$record";
             query($qry);
@@ -1201,7 +1201,7 @@ if($action=="redeem" || $action=="show_redeemed"){
 		$dist_name=get("operator","company","WHERE operator_id='$dist_id'");
 		
 		if($action=="show_redeemed" && $submit=="Show"){
-			$qry = "SELECT * FROM parcel_job_route WHERE parcel_run_id='$parcel_run_id' AND (is_redeemed_P=1 OR is_redeemed_D=1) ORDER BY ticket_no;";
+			$qry = "SELECT * FROM parcel_job_route WHERE parcel_run_id='$parcel_run_id' AND (is_redeemed_P=1 OR is_redeemed_D=1) AND active=1 ORDER BY ticket_no;";
 			$res = query($qry);
 			$count=1;
 			$d_count = 0;
@@ -1461,7 +1461,7 @@ if($action=="print_docket"){
 	</div>
 <?	
 	$qry = "SELECT parcel_job_ticket.job_id AS Record,
-					qty AS 'Quantity (Books)',
+					parcel_job_rate.qty AS 'Quantity (Books)',
 					IF(parcel_job_ticket.type='CD',
 						GROUP_CONCAT(DISTINCT CONCAT('Document Ticket Numbers CD',start,' - CD',end) SEPARATOR '<BR />'),
 						IF(parcel_job_ticket.type='CP',
@@ -1477,13 +1477,13 @@ if($action=="print_docket"){
 					)
 						Description,
 					rate AS Price,
-					ROUND(rate*qty,2) AS Amount
+					ROUND(rate*parcel_job_rate.qty,2) AS Amount
 			FROM parcel_job_rate 
 			LEFT JOIN parcel_job_ticket
 			ON parcel_job_ticket.job_id=parcel_job_rate.job_id
 				AND parcel_job_ticket.type=parcel_job_rate.type
 			WHERE parcel_job_rate.job_id='$job_id'
-				AND qty>0
+				AND parcel_job_rate.qty>0
 			GROUP BY parcel_job_rate.job_id,parcel_job_rate.type";
 	$tab = new MySQLTable("parcels.php",$qry);
 	
