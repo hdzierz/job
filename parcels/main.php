@@ -148,6 +148,11 @@ if($action=="search_tickets"){
 						   parcel_run.run AS Page,
 						   contractor.company AS Contractor,
 						   code AS Route,
+                           IF(org=1,'manual',
+                            IF(org=2,'canon',
+                                IF(org=3,'mobile','unknown')
+                            )
+                           ) AS origin,
 						   note AS Note,
 						   IF(parcel_job.is_random=1,'ran',
 						   	IF(is_odd=1,'old','normal')
@@ -183,6 +188,7 @@ if($action=="search_tickets"){
 						   '' AS Page,
 						   '' AS Contractor,
 						   '' AS Route,
+                           '' AS Origin,
 						   '' AS Note,
 						   IF(parcel_job.is_random=1,'ran',
 						   	IF(is_odd=1,'old','normal')
@@ -231,6 +237,12 @@ if($action == "search_ticket"){
                 if(is_redeemed_P = 1, 'P','')) AS red,
             lat,
             lon,
+            acc,
+            is_ofd,
+            is_dmg,
+            dev_opt,
+            dev_drl,
+            notes,
             CONCAT('<a href=\"', 'https://www.google.com/maps/place/',lat,'+',lon,'/@',lat,',',lon,'8z','\">maps</a>') AS google
      
         FROM parcel_job_route
