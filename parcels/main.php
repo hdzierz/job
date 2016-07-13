@@ -1672,7 +1672,7 @@ if($action=="select_xerox_scan"){
 		}
 	</script>
 	<?php
-		$redeem_date = get("parcel_run","MAX(date)","",0);
+		$redeem_date = get("parcel_run","MAX(date)","WHERE mobile_batch IS NULL",0);
 		$year = date("Y",strtotime($redeem_date));
 		$month = date("m",strtotime($redeem_date));
 	
