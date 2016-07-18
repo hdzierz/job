@@ -99,8 +99,9 @@ class FreakMailer extends PHPMailer
     
     function Send(){
         $to = implode(',',$this->to);
-        //$this->ClearAddresses();
-        //$this->AddAddress("hdzierz@gmail.com", "Head office");
+        $this->ClearAddresses();
+        $this->AddAddress("hdzierz@gmail.com", "Head office");
+        $this->AddAddress("howard@coural.co.nz", "Head office");
         log_mail($this->to, $this->Subject, $this->ErrorInfo, $this->error_count);
         return parent::Send();
     }
@@ -229,7 +230,7 @@ function send_test_mail(){
 	$mailer->Subject = 	"TEST";
 	$mailer->Body = "TEST";
 	//$mailer->From = "dochelge@gmail.com";
-	$mailer->SMTPDebug = 2;
+	//$mailer->SMTPDebug = 2;
 	//$mailer->AuthType = "NTLM";
     //$mailer->SMTPSecure = "tls";  
 	$mailer->AddAddress("hdzierz@gmail.com", 'Coural Head Office');
@@ -269,7 +270,7 @@ function send_operator_mail($target,$dir,$file,$id,$email=false, $email_only=fal
 	}
 
 	$mailer = new FreakMailer();
-    $mailer->SMTPDebug = 2;
+    //$mailer->SMTPDebug = 2;
 	if($email){
 		
 		//$mailer->SMTPKeepAlive = true; 

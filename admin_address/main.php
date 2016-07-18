@@ -488,9 +488,10 @@ if($action=="" || !isset($action)){
 	if(!$record && !$choice) $record=1;
 		
 	if($record) $where=" WHERE address_id='$record' ";
+    if($operator) $where= " WHERE address.operator_id='$operator' ";	
 	
-	
-	$sql = "SELECT  address_id  AS ID,
+	$sql = "SELECT  address_id  AS Record,
+                    address.operator_id AS ID, 
 					card_id  	AS 'Card ID',
 					op.company	AS Operator,
 					

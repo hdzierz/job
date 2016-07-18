@@ -39,7 +39,11 @@ if($action=="" || !isset($action) || $cancel=="Cancel"){
 						<script type="text/javascript">	
 							new Ajax.Autocompleter("company","hint","includes/search_server.php");
 						</script>      
-					</td>					
+					</td>	
+                    <td>
+                        ID:
+                        <input type="text" name="operator" value="" />
+                    </td>				
 					<td align="center">
 		<?
 						$qry = "SELECT DISTINCT type FROM address WHERE type<>'' AND type IS NOT NULL";

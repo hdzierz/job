@@ -7,8 +7,8 @@ if($action=="mobile_data"){
     $qry = "SELECT env_contractor_id AS contractor_id, route_id 
             from route_aff where now() BETWEEN app_date and stop_date";
     dump("route_aff", $qry);
-    $qry = "SELECT operator_id, company";
-    dump("operator");
+    $qry = "SELECT operator_id, company FROM operator";
+    dump("operator", $qry);
 }
 function dump($table, $qry=false){
     $h = fopen("MobileScan/$table.csv", "w+");
@@ -61,16 +61,36 @@ if($action=="update_pjr"){
 	$res = query($qry);
 	$rp = mysql_fetch_object($res);
 
+    
+    if(!$cd->red_rate_pickup) $cd->red_rate_pickup = 0;
+    if(!$cd->red_rate_deliv) $cd->red_rate_deliv = 0;
+    if(!$cd->distr_payment_deliv) $cd->distr_payment_deliv = 0;
+    if(!$cd->distr_payment_pickup) $cd->distr_payment_pickup = 0;
 
 	$qry = "UPDATE parcel_job_route SET red_rate_pickup=$cd->red_rate_pickup,red_rate_deliv=$cd->red_rate_deliv,distr_payment_deliv=$cd->distr_payment_deliv,distr_payment_pickup=$cd->distr_payment_pickup WHERE type='CD' AND red_rate_pickup=0;";
 	query($qry);		
 	
+    if(!$cp->red_rate_pickup) $cp->red_rate_pickup = 0;
+    if(!$cp->red_rate_deliv) $cp->red_rate_deliv = 0;
+    if(!$cp->distr_payment_deliv) $cp->distr_payment_deliv = 0;
+    if(!$cp->distr_payment_pickup) $cp->distr_payment_pickup = 0;
+
 	$qry = "UPDATE parcel_job_route SET red_rate_pickup=$cp->red_rate_pickup,red_rate_deliv=$cp->red_rate_deliv,distr_payment_deliv=$cp->distr_payment_deliv,distr_payment_pickup=$cp->distr_payment_pickup WHERE type='CP' AND red_rate_pickup=0;";
 	query($qry);	
+
+    if(!$sr->red_rate_pickup) $sr->red_rate_pickup = 0;
+    if(!$sr->red_rate_deliv) $sr->red_rate_deliv = 0;
+    if(!$sr->distr_payment_deliv) $sr->distr_payment_deliv = 0;
+    if(!$sr->distr_payment_pickup) $sr->distr_payment_pickup = 0;
 	
 	$qry = "UPDATE parcel_job_route SET red_rate_pickup=$sr->red_rate_pickup,red_rate_deliv=$sr->red_rate_deliv,distr_payment_deliv=$sr->distr_payment_deliv,distr_payment_pickup=$sr->distr_payment_pickup WHERE type='SR' AND red_rate_pickup=0;";
 	query($qry);	
 	
+    if(!$rp->red_rate_pickup) $rp->red_rate_pickup = 0;
+    if(!$rp->red_rate_deliv) $rp->red_rate_deliv = 0;
+    if(!$rp->distr_payment_deliv) $rp->distr_payment_deliv = 0;
+    if(!$rp->distr_payment_pickup) $rp->distr_payment_pickup = 0;
+
 	$qry = "UPDATE parcel_job_route SET red_rate_pickup=$rp->red_rate_pickup,red_rate_deliv=$rp->red_rate_deliv,distr_payment_deliv=$rp->distr_payment_deliv,distr_payment_pickup=$rp->distr_payment_pickup WHERE type='EX' AND red_rate_pickup=0;";
 	query($qry);	
 	
@@ -530,8 +550,8 @@ if($action=="redeem"){
 				$qry = "UPDATE parcel_run SET actual=0,exp_no_tickets = '$exp_no_tickets', red_ticket_count = '$red_ticket_count'+0 WHERE parcel_run_id = '$parcel_run_id'";
 				query($qry);
 				
-				if($red_ticket_count>0) $ERROR .= "You attempted to redeem tickets which had been redeemed already.<br />";
-				$MESSAGE = "Tickets for contractor <strong>'$contractor $name'</strong> redeemed ($ticket_count tickets from $exp_no_tickets expected).<br />";
+				//if($red_ticket_count>0) $ERROR .= "You attempted to redeem tickets which had been redeemed already.<br />";
+				//$MESSAGE = "Tickets for contractor <strong>'$contractor $name'</strong> redeemed ($ticket_count tickets from $exp_no_tickets expected).<br />";
 			} // if is array
 		break;
 	}

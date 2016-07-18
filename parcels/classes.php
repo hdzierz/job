@@ -208,7 +208,7 @@ class ticket{
 		
 		// Check for tickets but ignore random ones.
 		if(!$this->isRandom())
-			$ticket_id = get("parcel_job_route","ticket_id","WHERE ticket_no='".$this->getNumber()."'  AND (is_redeemed_D =$is_redeemed_D AND is_redeemed_P =$is_redeemed_P) AND is_random=0 AND type='".$this->getTypeCode()."'");	
+			$ticket_id = get("parcel_job_route","ticket_id","WHERE ticket_no='".$this->getNumber()."'  AND (is_redeemed_D =$is_redeemed_D AND is_redeemed_P =$is_redeemed_P) AND is_random=0 AND active=1 AND type='".$this->getTypeCode()."'");	
 		
 		if($ticket_id) $unredeemed = false;
 		
@@ -314,12 +314,16 @@ class ticket{
 		else{
 			// Does redeem only when unredeemed. 
 			// !!!!!!!!!Do not remove that IF please even though the Xerox does not need it. The 'normal' scan does.  !!!!!!!!!!!!
-			if($this->isUnRedeemed()){
-                $active = 'active = 1,';
-            }
-            else{
-                $ERROR .= "Batch containes double ups.<br />";
-                $active = 'active = 0,';
+			if($this->isRedeemed()){
+                $qry = "UPDATE parcel_job_route 
+                    SET active=0 
+                    WHERE parcel_run_id = '$parcel_run_id' 
+                        AND is_redeemed_".$ticket_DP."='1' 
+                        AND dist_id='$dist_id'
+                        AND type='$ticket_type'
+                        AND ticket_no='$ticket_no'";
+
+                query($qry);
             }
            $qry = "INSERT INTO parcel_job_route
                 SET parcel_run_id = '$parcel_run_id',
@@ -335,7 +339,7 @@ class ticket{
 							red_rate_deliv = '".$rates["red_rate_deliv"][$ticket_type]."'+0,
 							distr_payment_deliv = '".$rates["distr_payment_deliv"][$ticket_type]."'+0,
 							distr_payment_pickup = '".$rates["distr_payment_pickup"][$ticket_type]."'+0,
-                            $active
+                            active=1,
                             org = 2 
 						";
 									

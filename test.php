@@ -25,7 +25,7 @@ ini_set('max_execution_time', 3*60*60);
 $qry = "SELECT * FROM parcel_job_ticket 
 LEFT JOIN parcel_job
 ON parcel_job.job_id = parcel_job_ticket.job_id
-WHERE start IS NOT NULL AND end IS NOT NULL AND start <= end AND order_date > '2012-01-01'";
+WHERE start IS NOT NULL AND end IS NOT NULL AND start <= end AND order_date > '2015-05-18'";
 
 $res = query($qry);
 

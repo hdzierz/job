@@ -821,26 +821,12 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
         $c_scanner_charge = -1 * get("operator", "scanner_charge", "WHERE operator_id=$op");
 		$c_mobile_pay = get("operator", "mobile_pay", "WHERE operator_id=$op");
         $c_depot_rent = -1 * get("operator", "depot_rent", "WHERE operator_id=$op");
-
-        $contr_f = $c_name;
-		if(trim($c_last_name)."-".trim($c_first_name) != $c_company)
-			$contr = $c_name." / ".$c_company;
-		else
-			$contr = $c_name;
 	
-        $tab->footer=false;
-        $tab->SetTopMargin(17);
-        $tab->SetAutoPageBreak(true,15);
-        //$tab->AliasNbPages();
-
-        $tab->fontSize=7;
-
-        //$tab->AddPage();
-        $tab->collField["Total"] = true;
-        $tab->collField["Total (incl. GST)"] = true;
-        $tab->collField["Circ Qty"] = true;
-        $tab->collField["Bdl Qty"] = true;
-	
+		//if(trim($c_last_name)."-".trim($c_first_name) != $c_company)
+		//	$contr = $c_name." / ".$c_company;
+		//else
+		$contr = $c_name;
+		
 		$tab->Image('images/coural-rural-couriers.jpg',180,5,25);
 		$tab->Ln(20);
 		
