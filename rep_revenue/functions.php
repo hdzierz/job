@@ -281,10 +281,10 @@ function load_circ_sdist($m_table,$op,$route_id,$month,$year){
 						SUM(IF(job_route.dest_type<>'bundles',amount,0)) AS Qty,
 						SUM(IF(job_route.dest_type='bundles',amount,0)) AS Qty_Bdls,
 						
-						SUM(IF(job_route.dest_type<>'bundles',(subdist_rate_red)*subdist_rate*amount,0)) AS Amt,
+						SUM(IF(job_route.dest_type<>'bundles',(1-subdist_rate_red/100)*subdist_rate*amount,0)) AS Amt,
 						SUM(IF(job_route.dest_type='bundles',bundle_price*amount,0)) AS 'Amt Bdls',
-						ROUND((subdist_rate_red)*subdist_rate,4) AS Rate,
-						ROUND((subdist_rate_red),4) AS RateRed,
+						ROUND((1-subdist_rate_red/100)*subdist_rate,4) AS Rate,
+						ROUND((1-subdist_rate_red/100),4) AS RateRed,
 						bundle_price AS 'Bdl_Price'
 				FROM job
 				LEFT JOIN job_route
@@ -391,7 +391,7 @@ function load_circ_dist_sdist_summary($m_table,$op,$route_id,$month,$year){
 						ROUND(".(1+$GST_CIRCULAR)."*SUM(Amt),2) AS 'Total (incl. GST)'
 				FROM (
 				SELECT  
-						SUM(IF(job_route.dest_type<>'bundles',(subdist_rate_red)*subdist_rate*amount,0)) AS Amt,
+						SUM(IF(job_route.dest_type<>'bundles',(1-subdist_rate_red/100)*subdist_rate*amount,0)) AS Amt,
 						company,subdist_id
 				FROM job
 				LEFT JOIN job_route
