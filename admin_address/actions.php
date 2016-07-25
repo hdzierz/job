@@ -236,7 +236,7 @@ if($action=="save_operator"){
 	$deliv_notes 		= addslashes($deliv_notes);
 	$env_deliv_notes 	= addslashes($env_deliv_notes);
 	$share_notes 		= addslashes($share_notes);
-	$rate_red_fact      = 1-$rate_red_fact/100;
+	$rate_red_fact      = 1+$rate_red_fact/100;
 	
 	
 	$operator_id = get("address","operator_id"," WHERE address_id=$address_id");

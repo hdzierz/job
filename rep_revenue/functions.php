@@ -281,14 +281,16 @@ function load_circ_sdist($m_table,$op,$route_id,$month,$year){
 						SUM(IF(job_route.dest_type<>'bundles',amount,0)) AS Qty,
 						SUM(IF(job_route.dest_type='bundles',amount,0)) AS Qty_Bdls,
 						
-						SUM(IF(job_route.dest_type<>'bundles',(1-subdist_rate_red/100)*subdist_rate*amount,0)) AS Amt,
+						SUM(IF(job_route.dest_type<>'bundles',(subdist.rate_red_fact)*subdist_rate*amount,0)) AS Amt,
 						SUM(IF(job_route.dest_type='bundles',bundle_price*amount,0)) AS 'Amt Bdls',
-						ROUND((1-subdist_rate_red/100)*subdist_rate,4) AS Rate,
-						ROUND((1-subdist_rate_red/100),4) AS RateRed,
+						ROUND((subdist.rate_red_fact)*subdist_rate,4) AS Rate,
+						ROUND((subdist.rate_red_fact),4) AS RateRed,
 						bundle_price AS 'Bdl_Price'
 				FROM job
 				LEFT JOIN job_route
 				ON job.job_id=job_route.job_id
+                LEFT JOIN operator AS subdist
+                ON job_route.subdist_id = subdist.operator_id
 				WHERE subdist_id='$op'
 					# AND subdist_id!=dist_id
 					AND month(delivery_date) = '$month'
@@ -300,6 +302,7 @@ function load_circ_sdist($m_table,$op,$route_id,$month,$year){
 				GROUP BY Job
 				# HAVING Total>0
 				ORDER BY Date,Job,Pub";
+    //echo nl2br($qry);
 	return $m_table->LoadData($qry);
 }
 
@@ -391,7 +394,7 @@ function load_circ_dist_sdist_summary($m_table,$op,$route_id,$month,$year){
 						ROUND(".(1+$GST_CIRCULAR)."*SUM(Amt),2) AS 'Total (incl. GST)'
 				FROM (
 				SELECT  
-						SUM(IF(job_route.dest_type<>'bundles',(1-subdist_rate_red/100)*subdist_rate*amount,0)) AS Amt,
+						SUM(IF(job_route.dest_type<>'bundles',(rate_red_fact)*subdist_rate*amount,0)) AS Amt,
 						company,subdist_id
 				FROM job
 				LEFT JOIN job_route
@@ -784,6 +787,20 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
     $name_printed=false;
 	foreach($ops as $route=>$op){
         $tab  = new MySQLPDFTable($MYSQL,'p');
+        $tab->footer=false;     
+        $tab->SetTopMargin(17);     
+        $tab->SetAutoPageBreak(true,15);        
+             //$tab->AliasNbPages();     
+                      
+        $tab->fontSize=7;       
+                     
+        //$tab->AddPage();        
+        $tab->collField["Total"] = true;        
+        $tab->collField["Total (incl. GST)"] = true;        
+        $tab->collField["Circ Qty"] = true;     
+        $tab->collField["Bdl Qty"] = true;      
+
+
         $name_printed=false;
 		$route  = 0;
         
@@ -1136,7 +1153,7 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
 		$tab->MultiCell($maxw,4,$comment2,false,'L');
 		//echo "Hello";
 	
-        $c_file = $file_base."_".$contr_f.".pdf";
+        $c_file = $file_base."_".$contr.".pdf";
         $tab->Output($c_file);
         if($send_email){
             send_operator_mail("payout2","",$c_file,$op,false, true);
