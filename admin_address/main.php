@@ -343,7 +343,7 @@ if($action=="edit"||$action=="add"){
 			<tr>				
 				<td>Is Contractor</td>
 				<td><input type="checkbox" value="Y" name="is_contr" <? if($operator->is_contr=="Y"){?> checked <? }?>  /></td>
-				<td>S/Dist Rate Reduction Factor [%]</td>
+				<td>S/Dist Rate Adjustment Factor [%]</td>
 				<td><input type="text" name="rate_red_fact" value="<?=$rate_red_fact?>" /></td>
 			</tr>
 			<!--<tr>				
