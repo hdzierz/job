@@ -99,9 +99,9 @@ class FreakMailer extends PHPMailer
     
     function Send(){
         $to = implode(',',$this->to);
-        $this->ClearAddresses();
-        $this->AddAddress("hdzierz@gmail.com", "Head office");
-        $this->AddAddress("howard@coural.co.nz", "Head office");
+        //$this->ClearAddresses();
+        //$this->AddAddress("hdzierz@gmail.com", "Head office");
+        //$this->AddAddress("howard@coural.co.nz", "Head office");
         log_mail($this->to, $this->Subject, $this->ErrorInfo, $this->error_count);
         return parent::Send();
     }
@@ -307,8 +307,8 @@ function send_operator_mail($target,$dir,$file,$id,$email=false, $email_only=fal
 			$ok = false;
 			echo "<font color='red'>Mail to $company failed (".$email.") : ".$mailer->ErrorInfo."</font><br />";
 			$mailer->Body = "WRONG EMAIL ADDRESS";
-            $mailer->ClearAddresses();
-			$mailer->AddAddress($ADMIN_EMAIL, 'Coural Head Office');
+            //$mailer->ClearAddresses();
+			//$mailer->AddAddress($ADMIN_EMAIL, 'Coural Head Office');
             $mailer->Send();
 			echo 'Mail forwarded  to <strong>COURAL ADMIN</strong> sent ('.$ADMIN_EMAIL.')!<br />';
 			echo "<font color='red'>Mail to COURAL ADMIN failed (".$email.") : ".$mailer->ErrorInfo."</font><br />";
@@ -331,8 +331,8 @@ function send_operator_mail($target,$dir,$file,$id,$email=false, $email_only=fal
 			{
 				echo "<font color='red'>Mail to $company failed (".$alt_email.") : ".$mailer->ErrorInfo."</font><br />";
 				$mailer->Body = "WRONG EMAIL ADDRESS";
-                $mailer->ClearAddresses();
-				$mailer->AddAddress($ADMIN_EMAIL, 'Coural Head Office');
+                //$mailer->ClearAddresses();
+				//$mailer->AddAddress($ADMIN_EMAIL, 'Coural Head Office');
                 $mailer->Send();
 				echo 'Mail forwarded  to <strong>COURAL ADMIN</strong> alternative fax not sent ('.$alt_email.')!<br />';
 				echo "<font color='red'>Mail to COURAL ADMIN failed (".$alt_email.") : ".$mailer->ErrorInfo."</font><br />";
@@ -349,8 +349,8 @@ function send_operator_mail($target,$dir,$file,$id,$email=false, $email_only=fal
 	else{
 		echo 'Mail to <strong>COURAL ADMIN</strong> sent ('.$email.') due to missing or faulty email address!<br />';
 		if(!$mailer->Send()){
-            $mailer->ClearAddresses();
-            $mailer->AddAddress($ADMIN_EMAIL, 'Coural Head Office');
+            //$mailer->ClearAddresses();
+            //$mailer->AddAddress($ADMIN_EMAIL, 'Coural Head Office');
             $mailer->Send();
 			echo "<font color='red'>Mail to COURAL ADMIN failed (".$email.") : ".$mailer->ErrorInfo."</font><br />";
 		}

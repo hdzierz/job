@@ -749,12 +749,12 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
 	
 	$title = "Payout Breakdown ".$tit." ".get("operator","company","WHERE operator_id='$dist_id'")." ($date_show)";
 	//$file = $SEND_OUTPUT_DIR."/temp_payout2/payout_".$dist."_".$date_file.".pdf";
-	$vfile = "/job_test/temp_payout2/";
-    $dir_base = "/var/www/html/job_test/temp_payout2/$date_file/";
+	$vfile = "/job/temp_payout2/";
+    $dir_base = "/var/www/html/job/temp_payout2/$date_file/";
     $file_base = $dir_base."payout_".$dist."_".$date_file;
 	$file = $file_base.".pdf";
-    $vfile_csv = "/job_test/temp_payout2/payout_".$dist."_".$date_file.".csv";
-    $file_csv = "/var/www/html/job_test/temp_payout2/payout_".$dist."_".$date_file.".csv";
+    $vfile_csv = "/job/temp_payout2/payout_".$dist."_".$date_file.".csv";
+    $file_csv = "/var/www/html/job/temp_payout2/payout_".$dist."_".$date_file.".csv";
 
     @mkdir($dir_base);
 
