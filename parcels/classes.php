@@ -744,6 +744,7 @@ class mobileTicket{
                 $active = 'active = 0,';
             }
 
+            $notes = addslashes($notes);
             $qry = "INSERT INTO parcel_job_route
                     SET parcel_run_id = '$parcel_run_id',
                             is_mobile=1,

@@ -733,9 +733,6 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
     }
     
 	$font_size=7;
-	//$ops = array();
-	//$ops[] = 107;
-	//print_r($ops);
 	$date_show = date("F Y",mktime(0,0,0,$month,1,$year));
 	$date_file = date("Y_m",mktime(0,0,0,$month,1,$year));
 
@@ -746,11 +743,13 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
 	$dist = get("address","name","WHERE operator_id=$dist_id");
 	$dist_full = get("operator","company","WHERE operator_id=$dist_id");
 	
+    $dist_name = get("operator","company","WHERE operator_id='$dist_id'");
 	
 	$title = "Payout Breakdown ".$tit." ".get("operator","company","WHERE operator_id='$dist_id'")." ($date_show)";
 	//$file = $SEND_OUTPUT_DIR."/temp_payout2/payout_".$dist."_".$date_file.".pdf";
 	$vfile = "/job/temp_payout2/";
-    $dir_base = "/var/www/html/job/temp_payout2/$date_file/";
+    $dist_dir = str_replace(" ","_",$dist_name);
+    $dir_base = "/var/www/html/job/temp_payout2/$date_file"."_".$dist_dir."/";
     $file_base = $dir_base."payout_".$dist."_".$date_file;
 	$file = $file_base.".pdf";
     $vfile_csv = "/job/temp_payout2/payout_".$dist."_".$date_file.".csv";
@@ -783,6 +782,7 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
     $csv_line_dist_lbm = "\"%s\",,,,,,,,,,%d,%s,%s,,Distributor LBM,1,%.2f,302,15%% GST on Expenses,,,,,\n";
     $csv_line_dist_tic = "\"%s\",,,,,,,,,,%d,%s,%s,,Distributor Tickets,1,%.2f,304,15%% GST on Expenses,,,,,\n";
     	
+    
 
     $name_printed=false;
 	foreach($ops as $route=>$op){
@@ -793,8 +793,8 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
              //$tab->AliasNbPages();     
                       
         $tab->fontSize=7;       
-                     
-        //$tab->AddPage();        
+        
+        $tab->AddPage();        
         $tab->collField["Total"] = true;        
         $tab->collField["Total (incl. GST)"] = true;        
         $tab->collField["Circ Qty"] = true;     
@@ -815,8 +815,6 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
 		$total=0;
 		$total_gst=0;
 		
-		if(!$start) $tab->PageBreak();
-		$start=false;
 		//echo $op;
 		$d_address = get("address","address","WHERE operator_id=$dist_id");
         $d_address2 = get("address","address2","WHERE operator_id=$dist_id");
@@ -842,7 +840,7 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
 		//if(trim($c_last_name)."-".trim($c_first_name) != $c_company)
 		//	$contr = $c_name." / ".$c_company;
 		//else
-		$contr = $c_name;
+		//$contr = $c_name;
 		
 		$tab->Image('images/coural-rural-couriers.jpg',180,5,25);
 		$tab->Ln(20);
@@ -941,10 +939,7 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
             $csv_sum = 0;
             $name_printed=true;
         }
-		// As Sub dist
-			
-		//$header2=array('Date','Job','Pub','Circ Qty','Circ Rate','Total', 'Total (incl. GST)');
-		//$width2=array('Date'=>20,'Job'=>15,'Pub'=>25,'Circ Qty'=>15,'Circ Rate'=>15,'Total'=>20,'Total (incl. GST)'=>20);
+
 		$header2=$header;
 		$width2=$width;
 	
@@ -1152,7 +1147,8 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
 		$tab->SetFont('Helvetica','',9);
 		$tab->MultiCell($maxw,4,$comment2,false,'L');
 		//echo "Hello";
-	
+        $contr = str_replace("/","_",$contr);	
+        $contr = str_replace(" ","_",$contr);
         $c_file = $file_base."_".$contr.".pdf";
         $tab->Output($c_file);
         if($send_email){
