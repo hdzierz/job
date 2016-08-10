@@ -725,6 +725,7 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 		$tab->hasDeleteButton=false;
 		$tab->hasAddButton=false;
 		$tab->showRec=1;
+        $tab->emptyMessage = "";
 
 	$qry = "SELECT DISTINCT parcel_job_route.contractor_id
 					FROM parcel_job_route
@@ -749,13 +750,24 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 	$tot_tcp = 0;
 	$tot_tt = 0;
 	$tot_sheets=0;
+    if($mobile){
+        $show_run = '';
+        $org = "AND org = 3";
+        $group_by = "Date";
+    }
+    else{
+        $show_run = "run AS 'Sheet#',";
+        $org = " AND org < 3";
+        $group_by = "parcel_run_id";
+    }
+    
 	while($contr = mysql_fetch_object($res)){
 		$qry="	SELECT 	company AS Contractor,
 						#operator_id,
 						#parcel_run_id,
 						code AS Route,
 						real_date AS Date,
-						run AS 'Sheet#',
+						$show_run
 						SUM(IF(type='CD',pickup,0)) AS DP,
 						SUM(IF(type='CD',pickup,0)) AS Pickup_CD,
 						SUM(IF(type='CD',delivery,0)) AS DD,
@@ -798,10 +810,11 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 					WHERE parcel_run.date BETWEEN '$start_date' AND '$final_date'	
 						AND parcel_job_route.contractor_id='$contr->contractor_id'
 						AND parcel_job_route.dist_id='$dist_id'
-					    AND active=1	
-					GROUP BY parcel_run.parcel_run_id, parcel_job_route.type
+					    AND active=1
+                        $org	
+					GROUP BY $group_by, parcel_job_route.type
 				) AS run
-				GROUP BY parcel_run_id,route_id
+				GROUP BY $group_by,route_id
 				ORDeR BY company,date,run";
 			//if($contr->contractor_id==21) echo nl2br($qry);
 			/*if($start){
@@ -812,7 +825,11 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 					$tab->addLineWithStyle("Totals","sql_extra_head",2);
 				$tab->stopNewLine();	
 			}*/
-			$tab->writeTableWithRes(query($qry),$start);
+            $res_2 = query($qry);
+            if($start)
+                $tab->writeTableHeader($res_2);
+            if(mysql_num_rows($res_2)>0)
+			    $tab->writeTableWithRes($res_2,false);
 			$start=false;
 			
 			$tot_sheets += $tab->getSum("tt");
@@ -825,11 +842,16 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 			$tot_dsr += $tab->getSum("Delivery_SR");
 			$tot_prp += $tab->getSum("Pickup_RP");
 			$tot_tt += $tab->getSum("Total_tot");
-			
+	
+            $gap=2;
+            if($mobile) $gap=1;	
+            if($tab->getSum("Total_tot") > 0){	
 			$tab->startNewLine();
-				$tab->addLineWithStyle("&nbsp;","sql_extra_line_number",2);
+                $tt = $tab->getSum("tt",0,1);
+                if($mobile) $tt = '';
+				$tab->addLineWithStyle("&nbsp;","sql_extra_line_number",$gap);
 				$tab->addLineWithStyle("Totals:","sql_extra_line_number");
-				$tab->addLineWithStyle($tab->getSum("tt",0,1),"sql_extra_line_number");
+				$tab->addLineWithStyle($tt,"sql_extra_line_number");
 				$tab->addLineWithStyle($tab->getSum("Pickup_CD",0,1),"sql_extra_line_number");
 				$tab->addLineWithStyle($tab->getSum("Delivery_CD",0,1),"sql_extra_line_number");
 				//$tab->addLineWithStyle($tab->getSum("Total_CD",0,1),"sql_extra_line_number");
@@ -838,19 +860,22 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 				$tab->addLineWithStyle($tab->getSum("Delivery_SR",0,1),"sql_extra_line_number");
 				$tab->addLineWithStyle($tab->getSum("Pickup_RP",0,1),"sql_extra_line_number");
 				$tab->addLineWithStyle($tab->getSum("Total_tot",0,1),"sql_extra_line_number");
-			$tab->stopNewLine();		
+			$tab->stopNewLine();	
+            }	
 	} //while contractor
 	
+    if($mobile) $tot_sheets = '';
+
 	$tab->startNewLine();
-		$tab->addLineWithStyle("&nbsp;","sql_extra_line_number",2);
+		$tab->addLineWithStyle("&nbsp;","sql_extra_line_number",$gap);
 		$tab->addLineWithStyle("Grand Totals:","sql_extra_line_number");
 		$tab->addLineWithStyle($tot_sheets,"sql_extra_line_number");
-		$tab->addLineWithStyle($tot_pcd,"sql_extra_line_number");
-		$tab->addLineWithStyle($tot_dcd,"sql_extra_line_number");
-		$tab->addLineWithStyle($tot_pcp,"sql_extra_line_number");
-		$tab->addLineWithStyle($tot_pcd,"sql_extra_line_number");
-		$tab->addLineWithStyle($tot_dsr,"sql_extra_line_number");
-		$tab->addLineWithStyle($tot_prp,"sql_extra_line_number");
+		$tab->addLineWithStyle(number_format($tot_pcd,0),"sql_extra_line_number");
+		$tab->addLineWithStyle(number_format($tot_dcd,0),"sql_extra_line_number");
+		$tab->addLineWithStyle(number_format($tot_pcp,0),"sql_extra_line_number");
+		$tab->addLineWithStyle(number_format($tot_pcd,0),"sql_extra_line_number");
+		$tab->addLineWithStyle(number_format($tot_dsr,0),"sql_extra_line_number");
+		$tab->addLineWithStyle(number_format($tot_prp,0),"sql_extra_line_number");
 		$tab->addLineWithStyle($tot_tt,"sql_extra_line_number");
 	$tab->stopNewLine();		
 	$tab->stopTable();

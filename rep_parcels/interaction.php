@@ -235,6 +235,9 @@ if($report=="ticket_redeemed_by_contractor"){
 ?>									
 				</td>
 			</tr>
+            <tr>    
+                <td>Mobile:<input type="checkbox" name="mobile" value="true" <? if($mobile){ ?> checked <? } ?>></td>
+            </tr>
 			<tr>
 				<td>
 					<input type="submit" name="submit" value="Run" />

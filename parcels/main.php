@@ -230,6 +230,10 @@ if($action == "search_ticket"){
         SELECT ticket_id,
             date,
             real_date,
+            IF(org=1, 'hand',
+                IF(org=2,'canon',
+                    IF(org=3,'mobile','unkown')))
+            as origin,
             batch_no,
             mobile_batch,                
             type,
