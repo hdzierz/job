@@ -257,6 +257,7 @@ function load_circ_con($m_table,$op,$route_id,$month,$year){
 				GROUP BY job.job_no
 				) AS sum
 				GROUP BY Job
+                HAVING Total > 0
 				ORDER BY Date,Job,Pub";
 			//echo nl2br($qry);
 	return $m_table->LoadData($qry);
@@ -300,7 +301,7 @@ function load_circ_sdist($m_table,$op,$route_id,$month,$year){
 				GROUP BY job.job_id
 				) AS sum
 				GROUP BY Job
-				# HAVING Total>0
+				HAVING Total>0
 				ORDER BY Date,Job,Pub";
     //echo nl2br($qry);
 	return $m_table->LoadData($qry);
@@ -1048,35 +1049,44 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
             $tab->StartLine(10);
                 $tab->WriteLine($title,'L',8,$maxw-20);
             $tab->StopLine();
-            $tab->WriteHeader($headerp,$widthp);
+            if(($c_depot_rent + $c_mobile_pay + $c_scanner_charge)>0){
+                $tab->WriteHeader($headerp,$widthp);
+            }
             $GST = 1.15;
-            $tab->StartLine($font_size);
-                $tab->WriteLine("Scanner",'L',5,135);
-                $tab->WriteLine(number_format($c_scanner_charge,2),'R',5,20);
-                $tab->WriteLine(number_format($c_scanner_charge * $GST,2),'R',5,20);
-            $tab->StopLine();
-            $tab->StartLine($font_size);
-                $tab->WriteLine("Mobile",'L',5,135);
-                $tab->WriteLine(number_format($c_mobile_pay,2),'R',5,20);
-                $tab->WriteLine(number_format($c_mobile_pay * $GST,2),'R',5,20);
-            $tab->StopLine();
-            $tab->StartLine($font_size);
-                $tab->WriteLine("Depot",'L',5,135);
-                $tab->WriteLine(number_format($c_depot_rent,2),'R',5,20);
-                $tab->WriteLine(number_format($c_depot_rent * $GST,2),'R',5,20);
-            $tab->StopLine();
+            if($c_scanner_charge>0){
+                $tab->StartLine($font_size);
+                    $tab->WriteLine("Scanner",'L',5,135);
+                    $tab->WriteLine(number_format($c_scanner_charge,2),'R',5,20);
+                    $tab->WriteLine(number_format($c_scanner_charge * $GST,2),'R',5,20);
+                $tab->StopLine();
+            }
+            if($c_mobile_pay > 0){
+                $tab->StartLine($font_size);
+                    $tab->WriteLine("Mobile",'L',5,135);
+                    $tab->WriteLine(number_format($c_mobile_pay,2),'R',5,20);
+                    $tab->WriteLine(number_format($c_mobile_pay * $GST,2),'R',5,20);
+                $tab->StopLine();
+            }
+            if($c_depot_rent>0){
+                $tab->StartLine($font_size);
+                    $tab->WriteLine("Depot",'L',5,135);
+                    $tab->WriteLine(number_format($c_depot_rent,2),'R',5,20);
+                    $tab->WriteLine(number_format($c_depot_rent * $GST,2),'R',5,20);
+                $tab->StopLine();
+            }
             $total += $c_scanner_charge;
             $total += $c_mobile_pay;
             $total += $c_depot_rent;
             $total_gst += $c_scanner_charge * $GST;
             $total_gst += $c_mobile_pay * $GST;
             $total_gst += $c_depot_rent * $GST;
-            $tab->StartLine($font_size);
-                $tab->WriteLine("Total:",'R',5,135);
-                $tab->WriteLine(number_format($c_depot_rent + $c_scanner_charge + $c_mobile_pay,2),'R',5,$width["Total"]);
-                $tab->WriteLine(number_format($GST*($c_depot_rent + $c_scanner_charge + $c_mobile_pay),2),'R',5,$width["Total (incl. GST)"]);
-            $tab->StopLine();
-        
+            if(($c_depot_rent + $c_mobile_pay + $c_scanner_charge)>0){
+                $tab->StartLine($font_size);
+                    $tab->WriteLine("Total:",'R',5,135);
+                    $tab->WriteLine(number_format($c_depot_rent + $c_scanner_charge + $c_mobile_pay,2),'R',5,$width["Total"]);
+                    $tab->WriteLine(number_format($GST*($c_depot_rent + $c_scanner_charge + $c_mobile_pay),2),'R',5,$width["Total (incl. GST)"]);
+                $tab->StopLine();
+            }
 
             if($name_printed) $n = "";
             else $n = $contr;
