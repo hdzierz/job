@@ -137,7 +137,6 @@ if($action=="save"){
 							name2		='$name2',
 							bank_num	= '$bank_num',
 							gst_num		= '$gst_num',
-					
 							address		='$address',
 							address2	='$address2',
 							postal_addr	='$postal_addr',
@@ -217,6 +216,7 @@ if($action=="save_operator"){
 	if($is_subdist!="Y")$is_subdist="N";
 	if($is_dropoff!="Y")$is_dropoff="N";
 	if($is_contr!="Y")$is_contr="N";
+    if($is_pallet!='Y') $is_pallet='N';
 	if($parcel_send_di!='Y') $parcel_send_di = 'N';
 	$is_hauler_ni!="Y" ? $is_hauler_ni="0" : $is_hauler_ni="1";
 	$is_hauler_si!="Y" ? $is_hauler_si="0" : $is_hauler_si="1";
@@ -226,6 +226,7 @@ if($action=="save_operator"){
 	if($latest_dep=="") $latest_dep="0:00";
 	if(!$shares||$shares=='') $shares=0;
     if(!$send_contr_sheet) $send_contr_sheet = 'N';
+    if(!$has_gst) $has_gst = 0;
 	
 	if($same_as_add=='Y'){
 		$do_address = $address;
@@ -237,8 +238,7 @@ if($action=="save_operator"){
 	$env_deliv_notes 	= addslashes($env_deliv_notes);
 	$share_notes 		= addslashes($share_notes);
 	$rate_red_fact      = 1+$rate_red_fact/100;
-	
-	
+
 	$operator_id = get("address","operator_id"," WHERE address_id=$address_id");
 	if($dest=="add"){
 		$sql = "INSERT INTO operator(is_current,
@@ -246,6 +246,7 @@ if($action=="save_operator"){
 									 is_dist,
 									 is_subdist,
 									 is_contr,
+                                     is_pallet,
 									 is_dropoff,
 									 is_alt_dropoff,
 									 is_hauler_ni,
@@ -288,12 +289,14 @@ if($action=="save_operator"){
                                      scanner_email,
                                      scanner_charge,
                                      mobile_pay,
+                                     has_gst,
                                      rate_code)
 				VALUES('$is_current',
 					 '$company',
 					 '$is_dist',
 					 '$is_subdist',
 					 '$is_contr',
+                     '$is_pallet',
 					 '$is_dropoff',
 					 '$is_alt_dropoff',
 					 '$is_hauler_ni',
@@ -336,6 +339,7 @@ if($action=="save_operator"){
                      '$scanner_email',
                      '$scanner_charge',
                      '$mobile_pay',
+                     '$has_gst',
                      '$rate_code')";
 		query($sql);
 		$operator_id=mysql_insert_id();					 
@@ -354,6 +358,7 @@ if($action=="save_operator"){
 					  is_hauler_ni		='$is_hauler_ni',	
 					   is_hauler_si		='$is_hauler_si',	
 					 is_contr		='$is_contr',
+                     is_pallet      = '$is_pallet',
 					 alias			='$alias',
 					 is_shareholder = '$is_shareholder',
 					 shares			='$shares',
@@ -392,6 +397,7 @@ if($action=="save_operator"){
                      scanner_email = '$scanner_email',
                      scanner_charge = '$scanner_charge',
                      mobile_pay = '$mobile_pay',
+                     has_gst = '$has_gst',
                      rate_code = '$rate_code'
 				WHERE operator_id='$operator_id'";
 			query($sql);

@@ -219,10 +219,14 @@ if($report=="ticket_redeemed_by_contractor"){
 				<td>Distributor:</td>
 				<td>
 <?				
-					$sql_op = "SELECT operator.operator_id AS id,operator.company AS name FROM operator
+					$sql_op = "SELECT 0 AS id, 'All' AS name
+                                UNION
+                                (
+                                SELECT operator.operator_id AS id,operator.company AS name FROM operator
 										WHERE is_dist='Y'
 										GROUP BY company
-										ORDER BY company";							
+										ORDER BY company
+                                )";							
 					$sel = new MySQLSelect("operator_id","company","operator","rep_revenue.php","rep_cirpay_by_dist","dist_id");
 					//$sel->optionDefText = "All";
 					$sel->optionDefVal = "0";

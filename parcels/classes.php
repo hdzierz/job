@@ -53,8 +53,12 @@ class run{
         $run = $this->calcRun($dist_id,$date);
 
         $rd = ",real_date = now()";
-        if($real_date) $rd = ",real_date='$real_date'";
-        $qry = "INSERT INTO parcel_run SET  date='$date',
+        $d = ", date = now()";
+        if($real_date){
+            $rd = ",real_date='$real_date'";
+            $d = ",date='$real_date'"; 
+        }
+        $qry = "INSERT INTO parcel_run SET
                                     contractor_id='$contractor_id',
                                     route_id='$route_id',
                                     run='$run',
@@ -64,7 +68,8 @@ class run{
                                     mobile_batch='$batch_no',
                                     batch_no = '$batch_no',
                                     exp_no_tickets = 120
-                                    $rd";
+                                    $rd
+                                    $d";
         query($qry);
         return  mysql_insert_id();
     }
@@ -591,7 +596,7 @@ class mobileTicket{
 	
 	function isValid(){
 		
-		if($this->post!='D' && 	$this->post!='P') return false;
+		if($this->post!='D' && 	$this->post!='P' && $this->post!='O') return false;
 		else if($this->pre!='CD' && $this->pre!='CP' && $this->pre!='SR' && $this->pre!='RP') return false;
 		else if(!is_numeric($this->number)) return false;
 		else return true;
@@ -705,9 +710,10 @@ class mobileTicket{
         $dev_opt = $this->data[11];
         $dev_drl = $this->data[12];
         $notes = $this->data[13];
+        $pic = $this->data[14];
 
         $run = new run(); 
-        $date = $year.'-'.$month.'-15';
+        $date = str_replace("T"," ",$this->data[4]);
         $real_date = str_replace("T"," ",$this->data[4]);
         //$real_time = $this->data[3];
         $real_date = date_create_from_format('Y-m-d H:i:s', $real_date);
@@ -731,23 +737,28 @@ class mobileTicket{
 	    if(!$job_id) $job_id=0;
 	
 		if(!$this->isValid()){
-			$ERROR .= "Ticket $this->no is invalid. Check code.<br />";
+			$ERROR .= "Ticket ithis->no is invalid. Check code.<br />";
         }
         else{
 			// Does redeem only when unredeemed. 
 			// !!!!!!!!!Do not remove that IF please even though the Xerox does not need it. The 'normal' scan does.  !!!!!!!!!!!
-            if($this->isUnRedeemed()){
+
+            $active = 'active = 0,';
+            if($this->isUnRedeemed() && $this->post != 'O'){
                 $active = 'active = 1,';
             }
-            else{
-                $ERROR .= "Batch contains double ups.<br />";
-                $active = 'active = 0,';
-            }
+           
+            $is_redeemed = '1';
+            if($ticket_DP == 'O'){
+                $is_redeemed = '0';
+                $ticket_DP = 'D';
+            } 
 
             $notes = addslashes($notes);
             $qry = "INSERT INTO parcel_job_route
                     SET parcel_run_id = '$parcel_run_id',
                             is_mobile=1,
+                            batch_id='$batch_id',
                             dtt='$real_date',
                             lat='$lat',
                             lon='$lon',

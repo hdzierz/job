@@ -44,7 +44,7 @@ if($action=="edit"||$action=="add"){
 	$company = stripslashes($operator->company);
 	
 	if(!$operator->rate_red_fact) $rate_red_fact = 0.0;
-	else {$rate_red_fact = 100*(1.0-$operator->rate_red_fact);}
+	else {$rate_red_fact = 100*($operator->rate_red_fact-1);}
 	
 	if($operator->is_contr=='Y'){
 		
@@ -173,7 +173,10 @@ if($action=="edit"||$action=="add"){
 				<td>Postal Address</td>
 				<td><input size="40" type="text" name="postal_addr" value="<?=$operator->postal_addr?>" /> </td>
 				<td>GST No.</td>
-				<td><input size="40" type="text" name="gst_num" value="<?=$operator->gst_num?>" /> </td>						
+				<td><input size="40" type="text" name="gst_num" value="<?=$operator->gst_num?>" /> </td>					
+                <td>
+                    Has GST: <input type="checkbox" value="1" name="has_gst" <? if($operator->has_gst){ ?> checked <? } ?> />
+                </td>	
 			</tr>					
 			<tr>
 				<td>City</td>
@@ -355,7 +358,10 @@ if($action=="edit"||$action=="add"){
 				<td>Is Hauler SI</td>
 				<td><input type="checkbox" value="Y" name="is_hauler_si" <? if($operator->is_hauler_si=="Y"){?> checked <? }?>  /></td>
 			</tr>-->
-			
+		    <tr>
+                <td>Is Pallet</td>
+                <td><input type="checkbox" value="Y" name="is_pallet" <? if($operator->is_pallet=="Y"){?> checked <? }?>  /></td>
+            </tr>	
 			<tr>
 				<td colspan="9"><hr /></td>
 			</tr>										
@@ -532,7 +538,7 @@ if($action=="" || !isset($action)){
 					email		AS 'Email',
 					alt_email		AS 'Email 2',
 					subdist_seq		AS 'S/Dist Seq.',
-					ROUND(100*(1-rate_red_fact),0)   
+					ROUND(100*(rate_red_fact-1),0)   
 									AS 'S/Dist Rate Red. Fact. [%]',
 					
 					op.is_dist		AS Dist,

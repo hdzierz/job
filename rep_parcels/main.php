@@ -674,11 +674,12 @@ if($report=="ticket_unredeemed" && $submit){
 
 if($report=="ticket_redeemed_by_contractor" && $submit){
 	$dist = get("operator","company","WHERE operator_id='$dist_id'");
-	
+
+    $date_month = sprintf("%02d", $date_month);	
 	if($date_year && $date_month){
 			$start_date = $date_year."-".$date_month."-01";
 			$last_day = date("t",strtotime($start_date));
-			$final_date = $date_year."-".$date_month."-".$last_day;
+			$final_date = $date_year."-".$date_month."-".$last_day." 23:59";
 			$date_field = "date";
 			$target = "Redemption Month";
 			$red_month = date("M Y",strtotime($start_date));
@@ -727,14 +728,22 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 		$tab->showRec=1;
         $tab->emptyMessage = "";
 
+    if($dist_id){
+        $where_dist = "AND parcel_job_route.dist_id='$dist_id'";
+    }
+    else{
+        $where_dist = "";
+    }
+
+
 	$qry = "SELECT DISTINCT parcel_job_route.contractor_id
 					FROM parcel_job_route
 					LEFT JOIN operator
 					ON operator_id=parcel_job_route.contractor_id
 					LEFT JOIN parcel_run
 					ON parcel_run.parcel_run_id = parcel_job_route.parcel_run_id
-					WHERE parcel_job_route.dist_id='$dist_id'
-                    AND active=1
+					WHERE active=1
+                    $where_dist
 					AND parcel_run.$date_field BETWEEN '$start_date' AND '$final_date'	
 					ORDER BY company";
 	$res = query($qry,0);
@@ -750,15 +759,21 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 	$tot_tcp = 0;
 	$tot_tt = 0;
 	$tot_sheets=0;
+
     if($mobile){
         $show_run = '';
         $org = "AND org = 3";
+        $group_by_sub = "real_date";
         $group_by = "Date";
+        $where_date = 'real_date';
+        $date_field = 'real_date';
     }
     else{
         $show_run = "run AS 'Sheet#',";
         $org = " AND org < 3";
+        $group_by_sub = "parcel_run_id";
         $group_by = "parcel_run_id";
+        $where_date = 'date';
     }
     
 	while($contr = mysql_fetch_object($res)){
@@ -766,7 +781,7 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 						#operator_id,
 						#parcel_run_id,
 						code AS Route,
-						real_date AS Date,
+						$date_field AS Date,
 						$show_run
 						SUM(IF(type='CD',pickup,0)) AS DP,
 						SUM(IF(type='CD',pickup,0)) AS Pickup_CD,
@@ -790,7 +805,7 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 				FROM(
 					SELECT  parcel_run.parcel_run_id,	
 							company,
-							DATE(real_date) AS real_date,
+							DATE($date_field) AS $date_field,
 							run,
 							code,
 							parcel_run.contractor_id,
@@ -807,12 +822,12 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 					ON parcel_job_route.contractor_id=operator.operator_id
 					LEFT JOIN route
 					ON parcel_job_route.route_id=route.route_id
-					WHERE parcel_run.date BETWEEN '$start_date' AND '$final_date'	
+					WHERE parcel_run.$where_date BETWEEN '$start_date' AND '$final_date'	
 						AND parcel_job_route.contractor_id='$contr->contractor_id'
-						AND parcel_job_route.dist_id='$dist_id'
+						$where_dist
 					    AND active=1
                         $org	
-					GROUP BY $group_by, parcel_job_route.type
+					GROUP BY $group_by_sub, parcel_job_route.type
 				) AS run
 				GROUP BY $group_by,route_id
 				ORDeR BY company,date,run";
@@ -825,7 +840,7 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 					$tab->addLineWithStyle("Totals","sql_extra_head",2);
 				$tab->stopNewLine();	
 			}*/
-            $res_2 = query($qry);
+            $res_2 = query($qry,0);
             if($start)
                 $tab->writeTableHeader($res_2);
             if(mysql_num_rows($res_2)>0)

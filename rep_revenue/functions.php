@@ -233,7 +233,7 @@ function load_circ_con($m_table,$op,$route_id,$month,$year){
 						Rate AS 'Circ Rate',
 						Bdl_Price AS 'Bdl Rate',
 						ROUND(Amt+`Amt Bdls`,2) AS Total,
-						ROUND(".(1+$GST_CIRCULAR)."*SUM(Amt+`Amt Bdls`),2) AS 'Total (incl. GST)'
+						ROUND((1+$GST_CIRCULAR*has_gst)*SUM(Amt+`Amt Bdls`),2) AS 'Total (incl. GST)'
 				FROM (
 				SELECT  delivery_date AS Date,
 						job.job_no AS Job,
@@ -241,7 +241,7 @@ function load_circ_con($m_table,$op,$route_id,$month,$year){
                         round(job.weight,0) AS Weight,
 						SUM(IF(job_route.dest_type<>'bundles',amount,0)) AS Qty,
 						SUM(IF(job_route.dest_type='bundles',amount,0)) AS Qty_Bdls,
-						
+					    has_gst,	
 						SUM(IF(job_route.dest_type<>'bundles',(job.folding_fee + job.premium)*amount+contr_rate*amount,0)) AS Amt,
 						SUM(IF(job_route.dest_type='bundles',bundle_price*amount,0)) AS 'Amt Bdls',
 						ROUND(job.folding_fee + job.premium+contr_rate,4) AS Rate,
@@ -249,6 +249,8 @@ function load_circ_con($m_table,$op,$route_id,$month,$year){
 				FROM job
 				LEFT JOIN job_route
 				ON job.job_id=job_route.job_id
+                LEFT JOIN operator
+                ON job_route.contractor_id = operator.operator_id
 				WHERE contractor_id='$op'
 					AND month(delivery_date) = '$month'
 					AND year(delivery_date) = '$year'
@@ -265,6 +267,7 @@ function load_circ_con($m_table,$op,$route_id,$month,$year){
 
 function load_circ_sdist($m_table,$op,$route_id,$month,$year){
 	global $GST_CIRCULAR;
+
 	$qry = "SELECT  Date,
 						Job,
 						Pub,
@@ -274,14 +277,14 @@ function load_circ_sdist($m_table,$op,$route_id,$month,$year){
 						RateRed AS 'Circ RateRed',
 						'' AS 'Bdl Rate',
 						ROUND(Amt,2) AS Total,
-						ROUND(".(1+$GST_CIRCULAR)."*SUM(Amt),2) AS 'Total (incl. GST)'
+						ROUND((1+$GST_CIRCULAR*has_gst)*SUM(Amt),2) AS 'Total (incl. GST)'
 				FROM (
 				SELECT  delivery_date AS Date,
 						job.job_no AS Job,
 						job.publication AS Pub,
 						SUM(IF(job_route.dest_type<>'bundles',amount,0)) AS Qty,
 						SUM(IF(job_route.dest_type='bundles',amount,0)) AS Qty_Bdls,
-						
+					    has_gst,	
 						SUM(IF(job_route.dest_type<>'bundles',(subdist.rate_red_fact)*subdist_rate*amount,0)) AS Amt,
 						SUM(IF(job_route.dest_type='bundles',bundle_price*amount,0)) AS 'Amt Bdls',
 						ROUND((subdist.rate_red_fact)*subdist_rate,4) AS Rate,
@@ -301,7 +304,7 @@ function load_circ_sdist($m_table,$op,$route_id,$month,$year){
 				GROUP BY job.job_id
 				) AS sum
 				GROUP BY Job
-				HAVING Total>0
+				HAVING Total != 0
 				ORDER BY Date,Job,Pub";
     //echo nl2br($qry);
 	return $m_table->LoadData($qry);
@@ -357,7 +360,7 @@ function load_circ_dist_contr_summary($m_table,$op,$route_id,$month,$year){
 						Rate AS 'Circ Rate',
 						Bdl_Price AS 'Bdl Rate',
 						ROUND(Amt+`Amt Bdls`,2) AS Total,
-						ROUND(".(1+$GST_CIRCULAR)."*SUM(Amt+`Amt Bdls`),2) AS 'Total (incl. GST)'
+						ROUND((1+$GST_CIRCULAR*has_gst)*SUM(Amt+`Amt Bdls`),2) AS 'Total (incl. GST)'
 				FROM (
 				SELECT  SUM(IF(job_route.dest_type<>'bundles',amount,0)) AS Qty,
 						SUM(IF(job_route.dest_type='bundles',amount,0)) AS Qty_Bdls,
@@ -475,6 +478,7 @@ function load_parc_dist_con_summary($m_table,$op,$route_id,$month,$year){
 				WHERE parcel_job_route.dist_id=$op
 					AND month(date) = '$month'
 					AND year(date) = '$year'
+                    AND active=1
 					#AND parcel_job_route.route_id=$route_id
 				GROUP BY parcel_job_route.dist_id,parcel_job_route.contractor_id,parcel_job_route.type
 				ORDER BY company
@@ -515,6 +519,7 @@ function load_parc_dist_summary($m_table,$op,$route_id,$month,$year){
 				WHERE parcel_job_route.dist_id=$op
 					AND month(date) = '$month'
 					AND year(date) = '$year'
+                    AND active=1
 					#AND parcel_job_route.route_id=$route_id
 				GROUP BY parcel_job_route.dist_id,type
 				ORDER BY company
@@ -560,6 +565,7 @@ global $GST_CIRCULAR;
 				WHERE parcel_job_route.dist_id=$op
 					AND month(date) = '$month'
 					AND year(date) = '$year'
+                    AND active=1
 					#AND parcel_job_route.route_id=$route_id
 				GROUP BY parcel_job_route.dist_id,type,parcel_job_route.org
 			";
@@ -583,7 +589,7 @@ function load_parc($m_table,$op,$route_id,$month,$year){
 					red_rate_deliv AS 'Each/D',
 					ROUND(red_rate_deliv * SUM(is_redeemed_D),2) AS 'Value/D',
 					ROUND(red_rate_deliv * SUM(is_redeemed_D) + red_rate_pickup * SUM(is_redeemed_P),2) AS Total,
-					ROUND((red_rate_deliv * SUM(is_redeemed_D) + red_rate_pickup * SUM(is_redeemed_P)) * (1 + $GST_CIRCULAR),2)
+					ROUND((red_rate_deliv * SUM(is_redeemed_D) + red_rate_pickup * SUM(is_redeemed_P)) * (1 + $GST_CIRCULAR * has_gst),2)
 						AS 'Total (incl. GST)'
 					
 				FROM parcel_job_route
@@ -593,9 +599,12 @@ function load_parc($m_table,$op,$route_id,$month,$year){
 						   ON `parcel_job_route`.`parcel_run_id` = `parcel_run`.`parcel_run_id` 
 				LEFT JOIN route
 							  ON route.route_id=parcel_job_route.route_id
+                LEFT JOIN operator
+                    ON parcel_job_route.contractor_id=operator_id
 				WHERE parcel_job_route.contractor_id=$op
 					AND month(date) = '$month'
 					AND year(date) = '$year'
+                    AND active=1
 					#AND parcel_job_route.route_id=$route_id
 				GROUP BY parcel_job_route.contractor_id,type
 				/*UNION
@@ -626,6 +635,7 @@ function load_parc($m_table,$op,$route_id,$month,$year){
 				WHERE parcel_job_route.dist_id=$op
 					AND month(date) = '$month'
 					AND year(date) = '$year'
+                    AND active=1
 					#AND parcel_job_route.route_id=$route_id
 				GROUP BY parcel_job_route.dist_id,type*/
 			";
@@ -701,6 +711,7 @@ function get_ops_for_dist_from_job($dist_id,$year,$month){
 				ON address.operator_id=parcel_job_route.contractor_id
 				WHERE parcel_job_route.dist_id='$dist_id'
 					# AND contractor_id!=dist_id
+                    AND active=1
 					AND month(date) = '$month'
 					AND year(date) = '$year'
 				) ops
@@ -837,6 +848,7 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
         $c_scanner_charge = -1 * get("operator", "scanner_charge", "WHERE operator_id=$op");
 		$c_mobile_pay = get("operator", "mobile_pay", "WHERE operator_id=$op");
         $c_depot_rent = -1 * get("operator", "depot_rent", "WHERE operator_id=$op");
+        $c_has_gst = get("operator", "has_gst", "WHERE operator_id=$op");
 	
 		//if(trim($c_last_name)."-".trim($c_first_name) != $c_company)
 		//	$contr = $c_name." / ".$c_company;
@@ -1049,25 +1061,25 @@ function print_op2($submit, $dist_id,$ops,$month,$year,$comment2="Comment"){
             $tab->StartLine(10);
                 $tab->WriteLine($title,'L',8,$maxw-20);
             $tab->StopLine();
-            if(($c_depot_rent + $c_mobile_pay + $c_scanner_charge)>0){
+            if(($c_depot_rent + $c_mobile_pay + $c_scanner_charge)!=0){
                 $tab->WriteHeader($headerp,$widthp);
             }
-            $GST = 1.15;
-            if($c_scanner_charge>0){
+            $GST = 1 + 0.15 * $c_has_gst;
+            if($c_scanner_charge!=0){
                 $tab->StartLine($font_size);
                     $tab->WriteLine("Scanner",'L',5,135);
                     $tab->WriteLine(number_format($c_scanner_charge,2),'R',5,20);
                     $tab->WriteLine(number_format($c_scanner_charge * $GST,2),'R',5,20);
                 $tab->StopLine();
             }
-            if($c_mobile_pay > 0){
+            if($c_mobile_pay != 0){
                 $tab->StartLine($font_size);
                     $tab->WriteLine("Mobile",'L',5,135);
                     $tab->WriteLine(number_format($c_mobile_pay,2),'R',5,20);
                     $tab->WriteLine(number_format($c_mobile_pay * $GST,2),'R',5,20);
                 $tab->StopLine();
             }
-            if($c_depot_rent>0){
+            if($c_depot_rent!=0){
                 $tab->StartLine($font_size);
                     $tab->WriteLine("Depot",'L',5,135);
                     $tab->WriteLine(number_format($c_depot_rent,2),'R',5,20);

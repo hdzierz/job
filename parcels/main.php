@@ -306,42 +306,29 @@ if($action == "double_ups"){
                         parcel_job_route.type,
                         parcel_job_route.ticket_no,
                         IF(parcel_job_route.is_redeemed_D=1, 'D', IF(parcel_job_route.is_redeemed_P=1,'P','U')) AS 'D/P',
-                        real_date,
-                        active,
-                        tt.ct
+                        GROUP_CONCAT(real_date SEPARATOR '<br />') AS real_date,
+                        GROUP_CONCAT(org SEPARATOR '<br />') AS org,
+                        GROUP_CONCAT(ts SEPARATOR '<br />') AS ts,
+                        GROUP_CONCAT(active SEPARATOR '<br />') AS active,
+                        COUNT(*) AS ct
                 FROM parcel_job_route
                 LEFT JOIN operator
                     ON operator_id=parcel_job_route.contractor_id
                 LEFT JOIN parcel_run
                     ON parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
-                LEFT JOIN
-                (
-                    SELECT COUNT(*) AS ct,
-                        ticket_no,
-                        is_redeemed_D,
-                        is_redeemed_P
-                    FROM parcel_job_route
-                    LEFT JOIN parcel_run
-                        ON parcel_run.parcel_run_id=parcel_job_route.parcel_run_id
-                    WHERE real_date BETWEEN '$start_date' AND '$end_date'
-                        AND checked='$hist'
-                    GROUP BY ticket_no, is_redeemed_D, is_redeemed_P
-                    HAVING COUNT(*) > 1
-                ) AS tt
-                    ON tt.ticket_no = parcel_job_route.ticket_no
-                        AND tt.is_redeemed_D = parcel_job_route.is_redeemed_D
-                        AND tt.is_redeemed_P = parcel_job_route.is_redeemed_P
-                WHERE ct>1
-                    AND real_date BETWEEN '$start_date' AND '$end_date'
+                WHERE real_date BETWEEN '$start_date' AND '$end_date'
                     AND checked=$hist
+                GROUP BY ticket_no, is_redeemed_D, is_redeemed_P
+                HAVING ct > 1
                 ORDER BY ticket_no, 'D/P', real_date DESC, active";
+   
     $tab = new MySQLTable("parcels.php",$qry);
     $tab->cssSQLTable = "sqltable_big";
     $tab->showRec=false;
     $tab->hasAddButton=false;
     $tab->hasEditButton=false;
     $tab->hasDeleteButton=false;
-    $tab->hasActionButton=true;
+    $tab->hasActionButton=false;
     $tab->onClickActionButtonAdd = "&target=double_ups";
     $tab->onClickActionButtonAction = "activate";
     $tab->onClickDeleteButtonAdd = "&target=double_ups";
