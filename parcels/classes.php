@@ -662,8 +662,8 @@ class mobileTicket{
 		$unredeemed = true;		
 		
 		// Check for tickets but ignore random ones.
-		$ticket_id = get("parcel_job_route","ticket_id","WHERE ticket_no='".$this->getNumber()."'  AND (is_redeemed_D =$is_redeemed_D AND is_redeemed_P =$is_redeemed_P) AND is_random=0 AND type='".$this->getTypeCode()."'");	
-		
+		$ticket_id = get("parcel_job_route","ticket_id","WHERE ticket_no='".$this->getNumber()."'  AND (is_redeemed_D =$is_redeemed_D AND is_redeemed_P =$is_redeemed_P) AND is_random=0 AND active=1 AND type='".$this->getTypeCode()."'");	
+	
 		if($ticket_id) $unredeemed = false;
 		
 		return $unredeemed;
@@ -747,7 +747,7 @@ class mobileTicket{
             if($this->isUnRedeemed() && $this->post != 'O'){
                 $active = 'active = 1,';
             }
-           
+     
             $is_redeemed = '1';
             if($ticket_DP == 'O'){
                 $is_redeemed = '0';
