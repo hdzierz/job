@@ -1205,7 +1205,7 @@ if($action=="redeem" || $action=="show_redeemed"){
 		
 		if($action=="show_redeemed" && $submit=="Show"){
 			$qry = "SELECT * FROM parcel_job_route WHERE parcel_run_id='$parcel_run_id' AND (is_redeemed_P=1 OR is_redeemed_D=1) AND active=1 ORDER BY ticket_no;";
-			$res = query($qry,1);
+			$res = query($qry);
 			$count=1;
 			$d_count = 0;
 			$p_count = 0;
