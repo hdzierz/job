@@ -1173,7 +1173,7 @@ if($action=="redeem" || $action=="show_redeemed"){
 <? 
 
 	$qry = "SELECT date FROM parcel_run ORDER BY parcel_run_id DESC LIMIT 1";
-	$res = query($qry);
+	$res = query($qry,0);
 	$d = mysql_fetch_object($res);
 	$date = $d->date;
 	
@@ -1205,7 +1205,7 @@ if($action=="redeem" || $action=="show_redeemed"){
 		
 		if($action=="show_redeemed" && $submit=="Show"){
 			$qry = "SELECT * FROM parcel_job_route WHERE parcel_run_id='$parcel_run_id' AND (is_redeemed_P=1 OR is_redeemed_D=1) AND active=1 ORDER BY ticket_no;";
-			$res = query($qry);
+			$res = query($qry,1);
 			$count=1;
 			$d_count = 0;
 			$p_count = 0;
@@ -1289,6 +1289,7 @@ if($action=="redeem" || $action=="show_redeemed"){
 						Distributor: <?=$dist_name?>
 						<strong> / Page:  <input style="width:3em; " type="text" name="run" id="run_field"  value="<?=$run?>"  /></strong>
 						<input style="width:3em; " type="hidden" name="dist_id" value="<?=$dist_id?>" />
+                        <input style="width:3em; " type="hidden" name="real_date" value="<?=$real_date?>" />
 					</td>
 				</tr>
 				<!-- 
@@ -1349,7 +1350,7 @@ if($action=="redeem" || $action=="show_redeemed"){
 						<!--<input type="button" value="SET" onClick="edit_att('tickets')"  />-->
 					</td>
 					<td valign="top">
-						<select multiple size="20" style="width:15em; " name="ticket_dump" id="ticket_dump">
+						<select multiple size="20" style="width:15em; " name="ticket_dump[]" id="ticket_dump">
 							<option value=""></option>
 						</select>
 					</td>

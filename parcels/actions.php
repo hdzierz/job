@@ -471,7 +471,6 @@ if($action=="sell_tickets"){
 
 // This is the ticket redemption. At the end a INSERT action for parcel_job_route
 if($action=="redeem"){
-	
 	switch($submit){
 		case "Redeem":
 			if(!$contractor) break;
@@ -493,12 +492,17 @@ if($action=="redeem"){
 			// Getting the route ID. 
 			$route_id = get("route","route_id","WHERE code='$route'");
 
-			
 			// This month is needed to obtain the parcel_rum_id. If not existent this is a new job
 			$this_month = date("Y-m",strtotime($date));
-			
 			$parcel_run_id = get("parcel_run","parcel_run_id","WHERE run='$run' AND dist_id='$dist_id' AND date LIKE '$this_month%'");
+
+            if($real_date){
+                $this_month = $real_date;
+                $parcel_run_id = get("parcel_run","parcel_run_id","WHERE run='$run' AND dist_id='$dist_id' AND real_date LIKE '$real_date%'");
+            }
 			
+
+
 			if(!$parcel_run_id){
 			
 				$qry = "INSERT INTO parcel_run SET 	date='$date',
@@ -516,24 +520,30 @@ if($action=="redeem"){
 			
 			// Clear the old numbers
 			//echo "WHERE user_id='$CK_USERID' AND run='$run' AND dist_id='$dist_id' AND date LIKE '$this_month%'";
-			$qry = "DELETE FROM parcel_job_route WHERE parcel_run_id = '$parcel_run_id'";
-			query($qry);
+			//$qry = "DELETE FROM parcel_job_route WHERE parcel_run_id = '$parcel_run_id'";
+			//query($qry,1);
 			
-			// Obtaining the route of teh contractor. A contractor may have more than one route, but as we do not exactly know what route
-			// the parcel was delivered on we can neglect that.
-			//$routes = get_routes_from_contr($contractor_id);
-			//$route_id = $routes[0];
-			
-				
-			
+            $qry = "SELECT * FROM parcel_job_route where parcel_run_id = '$parcel_run_id'";
+            $res = query($qry);
+            while($ticket = mysql_fetch_object($res)){
+                $qry = "UPDATE parcel_job_route SET active = 0 
+                    WHERE ticket_no={$ticket->ticket_no}
+                        AND (is_redeemed_D = {$ticket->is_redeemed_D} AND is_redeemed_P = {$ticket->is_redeemed_P}) 
+                        AND is_random=0 
+                        AND type='{$ticket->type}'";
+                query($qry);
+            }
+        
+
 			// Creating the ticket run entries
 			$ticket_count=0;
 			$red_ticket_count=0;
 			if(is_array($tickets)){
 				foreach($tickets as $t){
 					$ticket = new ticket($t);
-					
-					if($t && !$ticket->isRedeemed()){
+                    
+					if($t && $ticket->isUnRedeemed()){
+                        echo "Hello";
 						$ticket_count++;
 						$year = date("Y",strtotime($date));
 						$month = date("m",strtotime($date));
@@ -545,7 +555,6 @@ if($action=="redeem"){
 					}
 					
 				}
-				
 				$red_ticket_count--;
 				$qry = "UPDATE parcel_run SET actual=0,exp_no_tickets = '$exp_no_tickets', red_ticket_count = '$red_ticket_count'+0 WHERE parcel_run_id = '$parcel_run_id'";
 				query($qry);

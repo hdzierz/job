@@ -348,7 +348,7 @@ class ticket{
                             org = 2 
 						";
 									
-			query($qry,0);
+			query($qry);
 			return true;
 		}// validate ticket
 		
@@ -360,7 +360,7 @@ class ticket{
 		
 		// Create redemption month as PHP date. Teh actual day  is a dummy day. I took the 15th to prevent the -1 month error in strtime
 		$date = $year.'-'.$month."-15";
-		
+	
 		if(!$dist_id) {
             echo $where1;
 			// Print an error message when no affiliation is there.
