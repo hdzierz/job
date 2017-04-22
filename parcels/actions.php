@@ -26,14 +26,12 @@ function dump($table, $qry=false){
     fclose($h);
 }
 
-if($target == "search_ticket"){
-    if($action=="delete"){
-        $qry = "DELETE FROM parcel_job_route WHERE ticket_id='$record'";
+if($action == "search_ticket"){
+    if($toggle){
+        $qry = "UPDATE parcel_job_route SET active=IF(active=1,0,1) WHERE ticket_id='$toggle'";
         query($qry);
-        $MESSAGE = "Item Deleted.";
+        $MESSAGE = "Item Active Toggled.";
     }
-
-    $action=$target;
 }
 
 

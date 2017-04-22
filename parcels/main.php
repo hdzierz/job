@@ -208,7 +208,7 @@ if($action=="search_tickets"){
 			$tab->showRec=true;
 			$tab->hasAddButton=false;
 			$tab->hasDeleteButton=false;
-			$tab->hasEditButton=false;
+			$tab->hasEditButton=true;
 			//$tab->hasEditButton=false;
 			//$tab->hasSubmitButton=true;
 			//$tab->submitButtonValue="Save Notes";
@@ -249,7 +249,8 @@ if($action == "search_ticket"){
             dev_opt,
             dev_drl,
             notes,
-            CONCAT('<a href=\"', 'https://www.google.com/maps/place/',lat,'+',lon,'/@',lat,',',lon,'8z','\">maps</a>') AS google
+            CONCAT('<a href=\"', 'https://www.google.com/maps/place/',lat,'+',lon,'/@',lat,',',lon,'8z','\">maps</a>') AS google,
+            CONCAT('<a href=\"', '/job_test/parcels.php?action=search_ticket&ticket_no=$ticket_no&toggle=',ticket_id,'\">',IF(active=1,'active','inactive'),'</a>') AS toggle
      
         FROM parcel_job_route
         LEFT JOIN parcel_run
