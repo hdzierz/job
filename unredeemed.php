@@ -6,16 +6,21 @@ require_once('includes/mail_aid_functions.php');
 
 ini_set('max_execution_time', 3*60*60);
 $create=true;
-if(false){
+if(true){
     $qry = "SELECT * 
 	    FROM parcel_job_ticket
   	    LEFT JOIN parcel_job
                 ON parcel_job.job_id = parcel_job_ticket.job_id
-        WHERE start IS NOT NULL AND end IS NOT NULL AND start <= end AND order_date > '2015-01-01'";
+        WHERE start IS NOT NULL AND end IS NOT NULL AND start <= end AND order_date > '2016-01-01'";
 
 	$res = query($qry);
 
+	$ct = 0;
+	$max = mysql_num_rows($res);
+
 	while($item = mysql_fetch_object($res)){
+		echo "Processing: ".strval($item->end)."/".strval($item->start + 1)."/".strval($ct).":".strval($max)."\n";
+		$ct = $ct + 1;
 		$qty = $item->end - $item->start + 1;
         for($i=$item->start;$i<=$item->end;$i++){
                 $qry = "INSERT INTO parcel_tickets(job_id,type,ticket_no,qty) VALUES({$item->job_id}, '{$item->type}', $i, $qty);";

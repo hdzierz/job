@@ -599,7 +599,7 @@ if($action=="sell_tickets"){
 			$end[]=$lines->end;
 			
 			$qry = "SELECT * FROM parcel_ticket_th WHERE {$lines->start} BETWEEN start AND end AND '{$lines->type}' = type";
-			$res_tb = query($qry,1);
+			$res_tb = query($qry);
 			$tb_qry = mysql_fetch_object($res_tb);
 			if(!$tb_qry) $tb_qry = 20;
 			
@@ -1682,7 +1682,7 @@ if($action=="select_xerox_scan"){
 	
 	?>
 		
-		<form name="redeem_form" action="parcels.php" method="post" >
+		<form name="redeem_form" id="redeem" action="parcels.php" method="post" >
 			<fieldset style="width:90% ">
 				<legend>Canonscan Ticket Redemption</legend>
 			<table width="40%">
@@ -1704,7 +1704,7 @@ if($action=="select_xerox_scan"){
 	?>				
 					</td>
 					<td>
-						<input type="submit" name="submit" value="Redeem" />
+						<input type="submit" name="submit" value="Redeem" onclick="return confirm('Date OK?');"  />
 					</td>
 				</tr>
 			</table>
@@ -1761,6 +1761,14 @@ if($action=="select_xerox_scan"){
 		</form>
 	</fieldset>
 	
+    <script>
+        var el = document.getElementById('redeemi');
+
+        el.addEventListener('submit', function(){
+            return confirm('Are you sure you want to submit this form?');
+        }, false);
+    </script>
+
 <?php
 }
 
@@ -1798,7 +1806,7 @@ if($action=="process_xerox_scan2"){
 	?>				
 					</td>
 					<td>
-						<input type="submit" name="submit" value="Redeem" />
+						<input type="submit" name="submit" value="Redeem" onclick="return confirm('Date OK?');  />
 					</td>
 				</tr>
 			</table>
@@ -1940,7 +1948,7 @@ if($action=="select_mobile_scan"){
 	?>				
 					</td>
 					<td>
-						<input type="submit" name="submit" value="Redeem" />
+						<input type="submit" name="submit" value="Redeem" onclick="return confirm('Date OK?');" />
 					</td>
                     <td>
                         <input type="submit" name="submit" value="Unredeem" />

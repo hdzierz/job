@@ -272,7 +272,7 @@ if($report=="rep_cirpay_by_dist_send_out"){
 								)
 														AS 'Qty Bdl',											
 														
-						   round(job.dist_rate,4)   	AS 'Dist-Rate',				   
+						   round(dist_adj_lbm*job.dist_rate,4)   	AS 'Dist-Rate',				   
 						   round(job.subdist_rate,4)    AS 'S/Dist-Rate',
 						   round(job.contr_rate+job.folding_fee+job.premium,4)      AS 'Cont-Rate',
 						   round(
@@ -282,7 +282,7 @@ if($report=="rep_cirpay_by_dist_send_out"){
 										0
 									)
 								)*
-								job.dist_rate,2)     		AS 'Dist Amt' ,   
+								dist_adj_lbm*job.dist_rate,2)     		AS 'Dist Amt' ,   
 						   round(	
 								SUM(
 									IF(job_route.dest_type<>'bundles' ,
@@ -313,6 +313,8 @@ if($report=="rep_cirpay_by_dist_send_out"){
 					ON job_route.job_id = job.job_id
 					LEFT JOIN route
 					ON job_route.route_id = route.route_id
+                    LEFT JOIN operator
+                        ON job_route.dist_id = operator_id
 					WHERE 	(
 								(year(delivery_date)='$year' AND month(delivery_date)='$month')
 								OR
@@ -3465,7 +3467,7 @@ if($report=="revenue"){
 				   job.qty_bbc,
 				   round(job.rate+".get_add_rates_qry().",4) AS 'Normal',
 				   round(job.rate_bbc,4) AS 'bbc_rate',
-				   round(job.dist_rate,4) AS 'Dist',
+				   round(dist_adj_lbm*job.dist_rate,4) AS 'Dist',
 				   round(job.subdist_rate,4) AS 'SubDist',
 				   round(job.contr_rate+job.folding_fee+job.premium,4) AS 'Cont',
 				   round(job.fuel_surcharge,1) AS fuel_surcharge,
@@ -3488,6 +3490,8 @@ if($report=="revenue"){
 			FROM job
 			LEFT JOIN job_route
 			ON job.job_id=job_route.job_id
+            LEFT JOIN operator
+            ON job_route.dist_id = operator_id
 			LEFT JOIN route
 			ON job_route.route_id=route.route_id
 			LEFT JOIN client
@@ -3679,7 +3683,7 @@ if($report=="revenue2"){
 				   job.qty_bbc,
 				   round(job.rate+".get_add_rates_qry().",4) AS 'Normal',
 				   round(job.rate_bbc,4) AS 'bbc_rate',
-				   round(job.dist_rate,4) AS 'Dist',
+				   round(dist_adj_lbm*job.dist_rate,4) AS 'Dist',
 				   round(job.subdist_rate,4) AS 'SubDist',
 				   round(job.contr_rate+job.folding_fee+job.premium,4) AS 'Cont',
 				   round(job.fuel_surcharge,1) AS fuel_surcharge,
@@ -3901,7 +3905,7 @@ if($report=="rep_cirpay_by_dist" || $report=="rep_cirpay_by_dist_compare"){
 									)
 															AS 'Qty Bdl',											
 															
-							   round(job.dist_rate,4)   	AS 'Dist-Rate',				   
+							   round(dist_adj_lbm*job.dist_rate,4)   	AS 'Dist-Rate',				   
 							   round((job.subdist_rate),4)    AS 'S/Dist-Rate',
 							   round(job.contr_rate+job.folding_fee + job.premium,4)      AS 'Cont-Rate',
 							   round(job.folding_fee + job.premium,4)      AS 'Add',
@@ -3912,7 +3916,7 @@ if($report=="rep_cirpay_by_dist" || $report=="rep_cirpay_by_dist_compare"){
 											0
 										)
 									)*
-									job.dist_rate,2)     		AS 'Dist Amt' ,   
+									dist_adj_lbm*job.dist_rate,2)     		AS 'Dist Amt' ,   
 							   round(	
 									SUM(
 										IF(job_route.dest_type<>'bundles' ,
@@ -3941,6 +3945,8 @@ if($report=="rep_cirpay_by_dist" || $report=="rep_cirpay_by_dist_compare"){
 						ON job_route.job_id = job.job_id
 						LEFT JOIN route
 						ON job_route.route_id = route.route_id
+                        LEFT JOIN operator
+                        ON job_route.dist_id = operator_id
 						WHERE 	(
 									(year(delivery_date)='$year' AND month(delivery_date)='$month')
 									OR
@@ -4048,9 +4054,9 @@ if($report=="rep_cirpay_by_dist" || $report=="rep_cirpay_by_dist_compare"){
 				ROUND(SUM(IF(job_route.dest_type<>'bundles',amount*(job.dist_rate+(subdist_rate_red)*job.subdist_rate+(job.contr_rate+folding_fee+job.premium)),0)),2) AS 'Amount Circ',
 				ROUND(SUM(IF(job_route.dest_type='bundles',(amount*bundle_price),0)),2) AS 'Amount Bundles',
 				
-				ROUND(SUM(IF(job_route.dest_type<>'bundles',amount*(job.dist_rate+(subdist_rate_red)*job.subdist_rate+(job.contr_rate+folding_fee+job.premium)),0))+
+				ROUND(SUM(IF(job_route.dest_type<>'bundles',amount*(dist_adj_lbm*job.dist_rate+(subdist_rate_red)*job.subdist_rate+(job.contr_rate+folding_fee+job.premium)),0))+
 					SUM(IF(job_route.dest_type='bundles',amount*bundle_price,0)),2) AS 'Total',
-				ROUND(".(1+$GST_CIRCULAR)."*(SUM(IF(job_route.dest_type<>'bundles',amount*(job.dist_rate+(subdist_rate_red)*job.subdist_rate+(job.contr_rate+folding_fee+job.premium)),0))+
+				ROUND(".(1+$GST_CIRCULAR)."*(SUM(IF(job_route.dest_type<>'bundles',amount*(dist_adj_lbm*job.dist_rate+(subdist_rate_red)*job.subdist_rate+(job.contr_rate+folding_fee+job.premium)),0))+
 					SUM(IF(job_route.dest_type='bundles',amount*bundle_price,0))),2) AS 'Total (incl. GST)'
 				
 			FROM job

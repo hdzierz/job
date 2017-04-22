@@ -37,8 +37,6 @@
 <script language="javascript" src="javascripts/clock.js" ></script>
 <script language="javascript" src="javascripts/zxml.js">
 </script>
-<script language="javascript" src="javascripts/JSON.js">
-</script>
 <script language="javascript" src="javascripts/autosuggest.js">
 </script>
 

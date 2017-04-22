@@ -49,7 +49,7 @@ if($action=="save"){
 		$address = addslashes($address);
 		$address2 = addslashes($address2);
 		$postal_addr = addslashes($postal_addr);
-		
+        if(!$is_rural) $is_rural=0;		
 		if(!$postcode) $postcode=0;
 		
 		if(!$cancel=="Cancel"){
@@ -68,6 +68,8 @@ if($action=="save"){
 											address,
 											address2,
 											postal_addr,
+                                            suburb,
+                                            building_name,
 											city,
 											postcode,
 											country,
@@ -80,6 +82,7 @@ if($action=="save"){
 											etext,
                                             netpass,
 											mail_type,
+                                            is_rural,
 											alt_mail_type,
 											alt_email,
 											alt_fax
@@ -98,6 +101,8 @@ if($action=="save"){
 							'$address',
 							'$address2',
 							'$postal_addr',
+                            '$suburb',
+                            '$building_name',
 							'$city',
 							'$postcode',
 							'$country',
@@ -110,6 +115,7 @@ if($action=="save"){
 							'$etext',
                             '$password',
 							'$mail_type',
+                            '$is_rural',
 							'$alt_mail_type',
 							'$alt_email',
 							'$alt_fax')";
@@ -140,6 +146,8 @@ if($action=="save"){
 							address		='$address',
 							address2	='$address2',
 							postal_addr	='$postal_addr',
+                            suburb      = '$suburb',
+                            building_name = '$building_name',
 							city		='$city',
 							postcode	= $postcode,
 							country		='$country',
@@ -152,6 +160,7 @@ if($action=="save"){
 							etext		='$etext',
                             netpass     ='$password',
 							mail_type	='$mail_type',
+                            is_rural    ='$is_rural',
 							alt_mail_type = '$alt_mail_type',
 							alt_email   ='$alt_email',
 							alt_fax		='$alt_fax'
@@ -225,6 +234,8 @@ if($action=="save_operator"){
 	if($postcode=="") $postcode=0;
 	if($latest_dep=="") $latest_dep="0:00";
 	if(!$shares||$shares=='') $shares=0;
+    if(!$shares_start||$shares_start=='') $shares_start=0;
+    if(!$shares_end||$shares_end=='') $shares_end=0;
     if(!$send_contr_sheet) $send_contr_sheet = 'N';
     if(!$has_gst) $has_gst = 0;
 	
@@ -254,6 +265,8 @@ if($action=="save_operator"){
 									 alias,
 									 is_shareholder,
 									 shares,
+                                     shares_start,
+                                     shares_end,
 									 share_bought,
 									 share_sold,
 									 share_notes,
@@ -262,7 +275,10 @@ if($action=="save_operator"){
 									 contract,
 									 agency,
 									 do_address,
-									 do_city,
+                                     do_suburb,
+                                     do_building_name,
+									 do_city,   
+                                     do_postcode,
 									 deliv_notes,
 									 env_deliv_notes,
 									 latest_dep,
@@ -304,6 +320,8 @@ if($action=="save_operator"){
 					 '$alias',
 					 '$is_shareholder',
 					 '$shares',
+                     '$shares_start',
+                     '$shares_end',
 					 '$share_bought',
 					 '$share_sold',
 					 '$share_notes',
@@ -312,7 +330,10 @@ if($action=="save_operator"){
 					 '$contract',
 					 '$agency',
 					 '$do_address',
+                     '$do_suburb',
+                     '$do_building_name',
 					 '$do_city',
+                     '$do_postcode',
 					 '$deliv_notes',
 					 '$env_deliv_notes',
 					 '$latest_dep',
@@ -362,6 +383,8 @@ if($action=="save_operator"){
 					 alias			='$alias',
 					 is_shareholder = '$is_shareholder',
 					 shares			='$shares',
+                     shares_start   ='$shares_start',
+                     shares_end     ='$shares_end',
 					 share_bought	='$share_bought',
 					 share_sold		='$share_sold',
 					 share_notes	='$share_notes',
@@ -370,7 +393,10 @@ if($action=="save_operator"){
 					 contract		= '$contract',
 					 agency			= '$agency',
 					 do_address		= '$do_address',
+                     do_suburb      = '$do_suburb',
+                     do_building_name = '$do_building_name',
 					 do_city		= '$do_city',
+                     do_postcode    = '$do_postcode',
 					 deliv_notes	= '$deliv_notes',
 					 env_deliv_notes= '$env_deliv_notes',
 					 latest_dep		= '$latest_dep',

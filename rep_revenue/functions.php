@@ -329,14 +329,16 @@ function load_circ_dist($m_table,$op,$route_id,$month,$year){
 						SUM(IF(job_route.dest_type<>'bundles',amount,0)) AS Qty,
 						SUM(IF(job_route.dest_type='bundles',amount,0)) AS Qty_Bdls,
 						
-						SUM(IF(job_route.dest_type<>'bundles',dist_rate*amount,0)) AS Amt,
-						/*SUM(IF(job_route.dest_type='bundles',bundle_price*amount,0)) AS 'Amt Bdls',*/
+						SUM(IF(job_route.dest_type<>'bundles',dist_rate*dist_adj_lbm*amount,0)) AS Amt,
 						0 AS 'Amt Bdls',
-						ROUND(dist_rate,4) AS Rate,
+                        ROUND((dist_adj_lbm)*dist_rate,4) AS Rate,
+                        ROUND((dist_adj_lbm),4) AS RateRed,
 						bundle_price AS 'Bdl_Price'
 				FROM job
 				LEFT JOIN job_route
 				ON job.job_id=job_route.job_id
+                LEFT JOIN operator AS dist
+                ON job_route.dist_id = dist.operator_id
 				WHERE dist_id='$op'
 					# AND subdist_id=dist_id
 					AND month(delivery_date) = '$month'
@@ -426,7 +428,7 @@ function load_circ_dist_summary($m_table,$op,$route_id,$month,$year){
 						ROUND(".(1+$GST_CIRCULAR)."*SUM(Amt),2) AS 'Total (incl. GST)'
 				FROM (
 				SELECT  
-						SUM(IF(job_route.dest_type<>'bundles',dist_rate*amount,0)) AS Amt,
+						SUM(IF(job_route.dest_type<>'bundles',dist_rate*dist_adj_lbm*amount,0)) AS Amt,
 						company,dist_id
 				FROM job
 				LEFT JOIN job_route
@@ -503,13 +505,13 @@ function load_parc_dist_summary($m_table,$op,$route_id,$month,$year){
 					parcel_job_route.dist_id,
 					operator.company AS Distributor,
 					
-					ROUND(distr_payment_deliv * SUM(is_redeemed_D) + distr_payment_pickup * SUM(is_redeemed_P),2) AS Total,
-					ROUND((distr_payment_deliv * SUM(is_redeemed_D) + distr_payment_pickup * SUM(is_redeemed_P)) * (1 + $GST_CIRCULAR),2)
+					ROUND(dist_adj_parc*distr_payment_deliv * SUM(is_redeemed_D) + dist_adj_parc*distr_payment_pickup * SUM(is_redeemed_P),2) AS Total,
+					ROUND((dist_adj_parc*distr_payment_deliv * SUM(is_redeemed_D) + dist_adj_parc*distr_payment_pickup * SUM(is_redeemed_P)) * (1 + $GST_CIRCULAR),2)
 						AS 'Total (incl. GST)'
 					
 				FROM parcel_job_route
 				LEFT JOIN operator
-				ON dist_id=operator_id
+				    ON dist_id=operator_id
 				LEFT JOIN parcel_job
 					ON parcel_job.job_id=parcel_job_route.job_id
 				LEFT JOIN `parcel_run` 
@@ -546,13 +548,13 @@ global $GST_CIRCULAR;
 						)
 					) AS 'Type',
 					SUM(is_redeemed_P) As 'Quant/P',
-					distr_payment_pickup AS 'Each/P',
+					dist_adj_parc*distr_payment_pickup AS 'Each/P',
 					ROUND(distr_payment_pickup * SUM(is_redeemed_P),2) AS 'Value/P',
 					SUM(is_redeemed_D) As 'Quant/D',
-					distr_payment_deliv AS 'Each/D',
-					ROUND(distr_payment_deliv * SUM(is_redeemed_D),2) AS 'Value/D',
-					ROUND(distr_payment_deliv * SUM(is_redeemed_D) + distr_payment_pickup * SUM(is_redeemed_P),2) AS Total,
-					ROUND((distr_payment_deliv * SUM(is_redeemed_D) + distr_payment_pickup * SUM(is_redeemed_P)) * (1 + $GST_CIRCULAR),2)
+					dist_adj_parc*distr_payment_deliv AS 'Each/D',
+					ROUND(dist_adj_parc*distr_payment_deliv * SUM(is_redeemed_D),2) AS 'Value/D',
+					ROUND(dist_adj_parc*distr_payment_deliv * SUM(is_redeemed_D) + dist_adj_parc*distr_payment_pickup * SUM(is_redeemed_P),2) AS Total,
+					ROUND((dist_adj_parc*distr_payment_deliv * SUM(is_redeemed_D) + dist_adj_parc*distr_payment_pickup * SUM(is_redeemed_P)) * (1 + $GST_CIRCULAR),2)
 						AS 'Total (incl. GST)'
 					
 				FROM parcel_job_route
@@ -562,6 +564,8 @@ global $GST_CIRCULAR;
 						   ON `parcel_job_route`.`parcel_run_id` = `parcel_run`.`parcel_run_id` 
 				LEFT JOIN route
 							  ON route.route_id=parcel_job_route.route_id
+                LEFT JOIN operator
+                    ON operator_id = parcel_job_route.dist_id
 				WHERE parcel_job_route.dist_id=$op
 					AND month(date) = '$month'
 					AND year(date) = '$year'
@@ -616,13 +620,13 @@ function load_parc($m_table,$op,$route_id,$month,$year){
 						)
 					) AS 'Type',
 					SUM(is_redeemed_P) As 'Quant/P',
-					distr_payment_pickup AS 'Each/P',
-					ROUND(distr_payment_pickup * SUM(is_redeemed_P),2) AS 'Value/P',
+					dist_adj_parc*distr_payment_pickup AS 'Each/P',
+					ROUND(dist_adj_parc*distr_payment_pickup * SUM(is_redeemed_P),2) AS 'Value/P',
 					SUM(is_redeemed_D) As 'Quant/D',
-					distr_payment_deliv AS 'Each/D',
-					ROUND(distr_payment_deliv * SUM(is_redeemed_D),2) AS 'Value/D',
-					ROUND(distr_payment_deliv * SUM(is_redeemed_D) + distr_payment_pickup * SUM(is_redeemed_P),2) AS Total,
-					ROUND((distr_payment_deliv * SUM(is_redeemed_D) + distr_payment_pickup * SUM(is_redeemed_P)) * (1 + $GST_CIRCULAR),2)
+					dist_adj_parc*distr_payment_deliv AS 'Each/D',
+					ROUND(dist_adj_parc*distr_payment_deliv * SUM(is_redeemed_D),2) AS 'Value/D',
+					ROUND(dist_adj_parc*distr_payment_deliv * SUM(is_redeemed_D) + dist_adj_parc*distr_payment_pickup * SUM(is_redeemed_P),2) AS Total,
+					ROUND((dist_adj_parc*distr_payment_deliv * SUM(is_redeemed_D) + dist_adj_parc*distr_payment_pickup * SUM(is_redeemed_P)) * (1 + $GST_CIRCULAR),2)
 						AS 'Total (incl. GST)'
 					
 				FROM parcel_job_route
@@ -632,6 +636,8 @@ function load_parc($m_table,$op,$route_id,$month,$year){
 						   ON `parcel_job_route`.`parcel_run_id` = `parcel_run`.`parcel_run_id` 
 				LEFT JOIN route
 							  ON route.route_id=parcel_job_route.route_id
+                LEFT JOIN operator
+                    ON operator_id = parcel_job_route.dist_id
 				WHERE parcel_job_route.dist_id=$op
 					AND month(date) = '$month'
 					AND year(date) = '$year'
@@ -639,7 +645,9 @@ function load_parc($m_table,$op,$route_id,$month,$year){
 					#AND parcel_job_route.route_id=$route_id
 				GROUP BY parcel_job_route.dist_id,type*/
 			";
-	return $m_table->LoadData($qry);
+    #if($op == 1162)
+    #    echo nl2br($qry);	
+    return $m_table->LoadData($qry);
 }
 
 function getConRDs($op,$date){

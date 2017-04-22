@@ -16,6 +16,7 @@ include $dir."includes/mysql_aid_functions.php";
 require_once('includes/phpMailer/class.phpmailer.php');
 require_once("includes/Mailer.php");
 
+
 # check if user is logged in
 if (!isset($_COOKIE['coural_username'])) {
 	header("Location: login.php");

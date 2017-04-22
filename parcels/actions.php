@@ -543,7 +543,6 @@ if($action=="redeem"){
 					$ticket = new ticket($t);
                     
 					if($t && $ticket->isUnRedeemed()){
-                        echo "Hello";
 						$ticket_count++;
 						$year = date("Y",strtotime($date));
 						$month = date("m",strtotime($date));

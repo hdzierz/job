@@ -13,6 +13,7 @@ function check_passwd_for_inject($passwd){
 		return false;
 }
 
+
 function process_user_info($username,$passwd,$rememberme,$redirect=false){
 	if (isset($username) AND isset($passwd) AND $username != "" AND $passwd != "") {
 		// Checking whether user/passwd combinatino exists

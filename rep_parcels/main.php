@@ -85,7 +85,7 @@ if($report=="ticket_trace"){
                 AND active=1
                 ";
         //echo nl2br($qry);
-        $res = query($qry);
+        $res = query($qry,0);
 
 
         $fn = "tmp/tickets_unredeemed_".date('Y_m_d_h_m_i').".csv";
@@ -761,7 +761,7 @@ if($report=="ticket_redeemed_by_contractor" && $submit){
 	$tot_sheets=0;
 
     if($mobile){
-        $show_run = '';
+        $show_run = "";
         $org = "AND org = 3";
         $group_by_sub = "real_date";
         $group_by = "Date";
@@ -918,8 +918,8 @@ if($report=="ticket_redeemed"){
 						company,
 						SUM(red_rate_pickup*is_redeemed_P) AS pickup,
 						SUM(is_redeemed_D*red_rate_deliv) AS delivery,
-						SUM(is_redeemed_P* distr_payment_pickup) AS distributor_p,
-						SUM(is_redeemed_D* distr_payment_deliv) AS distributor_d
+						SUM(is_redeemed_P* dist_adj_parc*distr_payment_pickup) AS distributor_p,
+						SUM(is_redeemed_D* dist_adj_parc*distr_payment_deliv) AS distributor_d
 				
 				FROM parcel_run
 				LEFT JOIN parcel_job_route
@@ -1009,7 +1009,7 @@ if($report=="ticket_redeemed2"){
 							ROUND(
 								SUM(
 										red_rate_pickup*is_redeemed_P+is_redeemed_D*red_rate_deliv+
-										is_redeemed_D* distr_payment_deliv+is_redeemed_P*distr_payment_pickup
+										is_redeemed_D* dist_adj_parc*distr_payment_deliv+is_redeemed_P*dist_adj_parc*distr_payment_pickup
 								)
 							,2)
 										AS amount
@@ -1281,8 +1281,8 @@ if($report=="invoice"){
 						  	COUNT(DISTINCT IF(is_redeemed_D=1,`parcel_job_route`.`ticket_id`,NULL)) AS Qty_Deliv, 
 						 	parcel_job_route.red_rate_pickup  AS Pickup,
 						 	parcel_job_route.red_rate_deliv   AS Delivery,
-						 	parcel_job_route.distr_payment_pickup  AS dist_pickup,
-						 	parcel_job_route.distr_payment_deliv AS dist_delivery,
+						 	dist_adj_parc*parcel_job_route.distr_payment_pickup  AS dist_pickup,
+						 	dist_adj_parc*parcel_job_route.distr_payment_deliv AS dist_delivery,
 						  	parcel_job_route.red_rate_pickup,
 							parcel_job_route.red_rate_deliv
 						  
@@ -1294,13 +1294,16 @@ if($report=="invoice"){
 							   ON `parcel_job_route`.`job_id` = `parcel_job`.`job_id` 
 						  LEFT JOIN route
 							  ON route.route_id=parcel_job_route.route_id
+                          LEFT JOIN operator AS dist
+                              ON operator_id = parcel_job_route.dist_id
 						  WHERE parcel_job_route.contractor_id='$contractor->contractor_id'
 								AND  parcel_job_route.dist_id='$dist_id'
 								AND  $date_field BETWEEN '$start_date' AND '$final_date'
 								AND active=1
 						  GROUP BY parcel_job_route.contractor_id,parcel_job_route.route_id,parcel_job_route.type
 					) AS job";
-				//echo nl2br($qry);
+                #if($contractor->contractor_id == 1162)
+				#    echo nl2br($qry);
 			//AND route.is_hidden<>'Y'
 			$res = query($qry);
 			if($start){
@@ -1373,11 +1376,11 @@ if($report=="invoice"){
                            )
 								AS 'Ticket Type',
 						   Qty_Pickup AS Quant,
-						   ROUND(distr_payment_pickup,4) AS 'Each',
-						   @pu := ROUND(Qty_Pickup*distr_payment_pickup,2) AS Value,
+						   ROUND(dist_adj_parc*distr_payment_pickup,4) AS 'Each',
+						   @pu := ROUND(Qty_Pickup*dist_adj_parc*distr_payment_pickup,2) AS Value,
 						   Qty_Deliv AS Quant,
-						   ROUND(distr_payment_deliv,4) AS 'Each',
-						   @de := ROUND(Qty_Deliv*distr_payment_deliv,2) AS Value,
+						   ROUND(dist_adj_parc*distr_payment_deliv,4) AS 'Each',
+						   @de := ROUND(Qty_Deliv*dist_adj_parc*distr_payment_deliv,2) AS Value,
 						   ROUND(@pu+@de,2) AS Total,
 						   ROUND((@pu+@de)*".(1+$GST_PARCEL).",2) AS 'Total GST',
 						   Qty_Pickup,
@@ -1388,14 +1391,15 @@ if($report=="invoice"){
 					
 						SELECT
 						  parcel_job_route.type AS type,
+                            dist_adj_parc,
                             org,
 						  	COUNT(DISTINCT `parcel_job_route`.`ticket_id`) AS Qty, 
 						  	COUNT(DISTINCT IF(is_redeemed_P=1,`parcel_job_route`.`ticket_id`,NULL)) AS Qty_Pickup, 
 						  	COUNT(DISTINCT IF(is_redeemed_D=1,`parcel_job_route`.`ticket_id`,NULL)) AS Qty_Deliv, 
 						 	parcel_job_route.red_rate_pickup  AS Pickup,
 						 	parcel_job_route.red_rate_deliv   AS Delivery,
-						 	parcel_job_route.distr_payment_pickup  AS dist_pickup,
-						 	parcel_job_route.distr_payment_deliv AS dist_delivery,
+						 	dist_adj_parc*parcel_job_route.distr_payment_pickup  AS dist_pickup,
+						 	dist_adj_parc*parcel_job_route.distr_payment_deliv AS dist_delivery,
 						  	parcel_job_route.distr_payment_pickup,
 							parcel_job_route.distr_payment_deliv
 						  
@@ -1407,6 +1411,8 @@ if($report=="invoice"){
 							   ON `parcel_job_route`.`job_id` = `parcel_job`.`job_id` 
 						   LEFT JOIN route
 							  ON route.route_id=parcel_job_route.route_id
+                          LEFT JOIN operator
+                              ON operator_id = parcel_job_route.dist_id 
 						  WHERE parcel_job_route.dist_id='$dist_id'
 							  AND  date BETWEEN '$start_date' AND '$final_date'
 						        AND active=1	  
@@ -1650,8 +1656,8 @@ if($report=="invoice_send"){
 						  	COUNT(DISTINCT IF(is_redeemed_D=1,`parcel_job_route`.`ticket_id`,NULL)) AS Qty_Deliv, 
 						 	parcel_job_route.red_rate_pickup  AS Pickup,
 						 	parcel_job_route.red_rate_deliv   AS Delivery,
-						 	parcel_job_route.distr_payment_pickup  AS dist_pickup,
-						 	parcel_job_route.distr_payment_deliv AS dist_delivery,
+						 	dist_adj_parc*parcel_job_route.distr_payment_pickup  AS dist_pickup,
+						 	dist_adj_parc*parcel_job_route.distr_payment_deliv AS dist_delivery,
 						  	parcel_job_route.red_rate_pickup,
 							parcel_job_route.red_rate_deliv
 						  
@@ -1663,6 +1669,8 @@ if($report=="invoice_send"){
 							   ON `parcel_job_route`.`job_id` = `parcel_job`.`job_id` 
 						   LEFT JOIN route
 							   ON route.route_id=parcel_job_route.route_id
+                          LEFT JOIN operator
+                               ON operator_id = parcel_job_route.dist_id
 						  WHERE parcel_job_route.contractor_id='$contractor->contractor_id'
 								AND  $date_field BETWEEN '$start_date' AND '$final_date'
 							    AND active=1	
@@ -1735,11 +1743,11 @@ if($report=="invoice_send"){
                               )
                             )
 								AS 'Ticket Type',
-						   ROUND(distr_payment_pickup,4) AS 'Each_Pickup',
-						   @pu := ROUND(Qty_Pickup*distr_payment_pickup,2) AS Value_Pickup,
+						   ROUND(dist_adj_parc*distr_payment_pickup,4) AS 'Each_Pickup',
+						   @pu := ROUND(Qty_Pickup*dist_adj_parc*distr_payment_pickup,2) AS Value_Pickup,
 						   Qty_Pickup AS Qty_Pickup,
-						   ROUND(distr_payment_deliv,4) AS 'Each_Deliv',
-						   @de := ROUND(Qty_Deliv*distr_payment_deliv,2) AS Value_Deliv,
+						   ROUND(dist_adj_parc*distr_payment_deliv,4) AS 'Each_Deliv',
+						   @de := ROUND(Qty_Deliv*dist_adj_parc*distr_payment_deliv,2) AS Value_Deliv,
 						   Qty_Deliv AS Qty_Deliv,
 						   ROUND(@pu+@de,2) AS Total,
 						   ROUND((@pu+@de)*".(1+$GST_PARCEL).",2) AS 'Total incl. GST'
@@ -1750,13 +1758,14 @@ if($report=="invoice_send"){
 						SELECT
 						    parcel_job_route.type AS type,
                             org,
+                            dist_adj_parc,
 						  	COUNT(DISTINCT `parcel_job_route`.`ticket_id`) AS Qty, 
 						  	COUNT(DISTINCT IF(is_redeemed_P=1,`parcel_job_route`.`ticket_id`,NULL)) AS Qty_Pickup, 
 						  	COUNT(DISTINCT IF(is_redeemed_D=1,`parcel_job_route`.`ticket_id`,NULL)) AS Qty_Deliv, 
 						 	parcel_job_route.red_rate_pickup  AS Pickup,
 						 	parcel_job_route.red_rate_deliv   AS Delivery,
-						 	parcel_job_route.distr_payment_pickup  AS dist_pickup,
-						 	parcel_job_route.distr_payment_deliv AS dist_delivery,
+						 	dist_adj_parc*parcel_job_route.distr_payment_pickup  AS dist_pickup,
+						 	dist_adj_parc*parcel_job_route.distr_payment_deliv AS dist_delivery,
 						  	parcel_job_route.distr_payment_pickup,
 							parcel_job_route.distr_payment_deliv
 						  
@@ -1768,6 +1777,8 @@ if($report=="invoice_send"){
 							   ON `parcel_job_route`.`job_id` = `parcel_job`.`job_id` 
 						  LEFT JOIN route
 							  ON route.route_id=parcel_job_route.route_id
+                         LEFT JOIN operator 
+                              ON operator_id = parcel_job_route.dist_id
 						  WHERE parcel_job_route.dist_id='$dist_id'
 							  AND  date BETWEEN '$start_date' AND '$final_date'
 						      AND active=1	  

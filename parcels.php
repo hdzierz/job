@@ -11,7 +11,7 @@ include "parcels/functions.php";
 include "parcels/classes.php";
 include $dir."parcels/actions.php";
 
-
+$basename = basename(__FILE__);
 
 ?>
 <!-- PAGE CONTENT -->

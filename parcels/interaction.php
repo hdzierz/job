@@ -97,7 +97,7 @@ if($action=="search_tickets" || $action=="show_ticket_notes"){
 
 if($action=="search_ticket"){
 ?>
-    <form name="search_ticket" action="parcels.php?action=<?=$action?>" method="post">
+    <form name="search_ticket" action="<?=$basename?>?action=<?=$action?>" method="post">
         <table>
             <tr>
                 <td>Ticket No:</td>
@@ -107,6 +107,13 @@ if($action=="search_ticket"){
                 </td>
             </tr>
         </table>
+<?
+        if($key){
+?>
+            <input type="hidden" name="key" value="<?=$key?>" />
+<?
+        }
+?>
     </form>
 <?
 }
