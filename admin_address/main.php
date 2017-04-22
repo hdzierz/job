@@ -119,7 +119,11 @@ if($action=="edit"||$action=="add"){
 					$sel->AddOption("m","Mailer");
 					$sel->stop();
 ?>							
-				</td>												
+				</td>
+                <td>Is Rural</td>
+                <td>
+                    <input type="checkbox" value="1" name="is_rural" <? if($operator->is_rural){ ?> checked <? } ?> />
+                </td>												
 			</tr>
 			<tr>
 				<td>Surname</td>
@@ -177,7 +181,15 @@ if($action=="edit"||$action=="add"){
                 <td>
                     Has GST: <input type="checkbox" value="1" name="has_gst" <? if($operator->has_gst){ ?> checked <? } ?> />
                 </td>	
-			</tr>					
+			</tr>
+            <tr>
+                <td>Suburb</td>
+                <td><input size="40" type="text" name="suburb" value="<?=$operator->suburb?>" /></td>
+            </tr>
+            <tr>
+                <td>Building Name</td>
+                <td><input size="40" type="text" name="building_name" value="<?=$operator->building_name?>" /></td>
+            </tr>
 			<tr>
 				<td>City</td>
 				<td><input size="40" type="text" name="city" value="<?=$operator->city?>" /> </td>
@@ -233,17 +245,24 @@ if($action=="edit"||$action=="add"){
                 </td>
 			</tr>
             <tr>
-                <td></td>
+                <td>Drop Off Suburb</td>
+                <td><input size="40" type="text" name="do_suburb" value="<?=$operator->do_suburb?>" /></td>
             </tr>
             <tr>
-                <td></td>
+                <td>Drop Off Building Name</td>
+                <td><input size="40" type="text" name="do_building_name" value="<?=$operator->do_building_name?>" /></td>
             </tr>
+
 			<tr>
 				<td>Drop Off City:</td>
 				<td colspan="4">
 					<input type="text" name="do_city" size="40" value="<?=$operator->do_city?>" />
 				</td>					
 			</tr>
+            <tr>
+                <td>Drop Off Postcode</td>
+                <td><input size="40" type="text" name="do_postcode" value="<?=$operator->do_postcode?>" /> </td>
+            </tr>
 			<tr>
 				<td height="30">&nbsp;</td>
 			</tr>
@@ -400,10 +419,18 @@ if($action=="edit"||$action=="add"){
 				<td>Is Shareholder</td>
 				<td><input type="checkbox" name="is_shareholder" value="Y" <? if($operator->is_shareholder=="Y"){ ?> checked <? }?> /> </td>						
 			</tr>
+            <tr>
+                <td>Shares</td>
+                <td><input size="10" type="text" name="shares" value="<?=$operator->shares?>" /> </td>
+            </tr>
 			<tr>
-				<td>Shares</td>
-				<td><input size="10" type="text" name="shares" value="<?=$operator->shares?>" /> </td>								
+				<td>Shares Start of Year</td>
+				<td><input size="10" type="text" name="shares_start" value="<?=$operator->shares_start?>" /> </td>								
 			</tr>
+            <tr>
+                <td>Shares End of Year</td>
+                <td><input size="10" type="text" name="shares_end" value="<?=$operator->shares_end?>" /> </td>
+            </tr>
 			<tr>
 				<td>Share Bought</td>				
 				<td>
