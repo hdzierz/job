@@ -36,6 +36,7 @@ if($report=="ticket_trace"){
                         'foreign_order_no',
                         'order_date',
                         'rate',
+                        'redemption_value',
                         'qty',
                         'type',
                         'ticket_no',
@@ -52,6 +53,7 @@ if($report=="ticket_trace"){
                         foreign_order_no,
                         order_date,
                         ROUND(parcel_job_rate.rate/20,4),
+                        ROUND(parcel_job_rate.rate/20,4) * IF(is_redeemed_D IS NULL,0,1) as redemption_value, 
                         parcel_job_rate.qty,
                         parcel_tickets.type,
                         parcel_tickets.ticket_no,
@@ -79,12 +81,12 @@ if($report=="ticket_trace"){
                 ON dist.operator_id=parcel_job_route.dist_id
             LEFT JOIN operator AS contr
                 ON contr.operator_id=parcel_job_route.contractor_id
-            WHERE parcel_job.order_date > '$start_date' 
+            WHERE parcel_job.order_date >= '$start_date' 
                 AND parcel_job.order_date <= '$final_date'
+                AND (parcel_run.date IS NULL OR parcel_run.date <= '$cutoff_date')
                 AND (is_redeemed_D=1 OR is_redeemed_D IS NULL)
-                AND active=1
+                AND (active=1 or active IS NULL)
                 ";
-        //echo nl2br($qry);
         $res = query($qry,0);
 
 

@@ -6,6 +6,14 @@ require_once('includes/mail_aid_functions.php');
 
 echo "TEST<br />";
 
+require_once("proc_job/functions.php");
+
+echo get_max("job","job_no","","");
+
+echo create_job_no();
+
+die();
+
 send_test_mail();
 die();
 $to      = 'hdzierz@gmail.com';
@@ -35,10 +43,7 @@ while($item = mysql_fetch_object($res)){
 		query($qry);
 	}
 }
-<<<<<<< .merge_file_8b7kAJ
 
 die()
-=======
->>>>>>> .merge_file_SmvG2J
 ?>
 

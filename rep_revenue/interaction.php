@@ -558,6 +558,7 @@ if($report=="label"){
 					$sel_year = new MySQLSelect ("CONCAT(job_no,IF(job_no_add IS NOT NULL,job_no_add,''),' - (',YEAR(delivery_date),')')","job_id","job","reports.php","label","job_id");
 					$sel_year->selectOnChange="";
 					$sel_year->sortOrder = "DESC";
+                    $sel_year->orderField = "job_id";
 					$sel_year->addSQLWhereNot("finished","Y");
 					$sel_year->addSQLWhereNot("cancelled","Y");
 					//$sel_year->addSQLWhereNot("job_no_add","L");

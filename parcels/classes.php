@@ -50,7 +50,8 @@ class run{
    function writeMobileRun($batch_no, $dist_id, $contractor_id,$route_id,$date,$real_date=null){
         global $CK_USERID;
 
-        $run = $this->calcRun($dist_id,$date);
+        $run = intval(date('Ymd'));
+        //$run = $this->calcRun($dist_id,$date);
 
         $rd = ",real_date = now()";
         $d = ", date = now()";

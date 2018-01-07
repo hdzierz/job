@@ -43,7 +43,7 @@ function change_type($job_id,$type){
 // Creates a new job number. Goes from 0000 to 99999. Rols back after 99999 to 0000.
 function create_job_no(){
 	// Get the largest number. Checks for < 10000 just in case somebody has entered a large dummy number.
-	$last_job_no=get_max("job","job_no","WHERE job_no<100000","");
+	$last_job_no=get_max("job","job_no","","");
 
 	// If for some reason the selection of the last job_no fails then the last job number is the highest anyway or
 	// if that fails too the job number will be 100000. That way a failure always shows numbers >= 100000.
@@ -54,7 +54,7 @@ function create_job_no(){
 			$last_job_no=100000;
 		}
 	}
-	else if($last_job_no=="99999") {
+	else if($last_job_no=="999999") {
 		$last_job_no=1;
 	}
 	else{

@@ -420,9 +420,6 @@ if($report=="address_details"){
 		<table>
 			<tr>
 				<td colspan="3"></td>
-				<th>Include</th>
-				<th>Exclude</th>
-				<th>Both</th>
 			</tr>
 			<tr>
 				<td>Select Distributor:</td>
@@ -441,90 +438,18 @@ if($report=="address_details"){
 	
 ?>
 				</td>	
-				<td style=" font-style:italic ">Is Current: </td>
-				<td>
-					<input type="radio" name="is_current" value="Y" <? if($is_current=='Y'){ ?> checked <? }?> />
-				</td>			
-				<td>
-					<input type="radio" name="is_current" value="N" <? if($is_current=='N'){ ?> checked <? }?> />
-				</td>
-				<td>
-					<input type="radio" name="is_current" value="B" <? if($is_current=='B'){ ?> checked <? }?> />
-				</td>		
-				<td>
-					<input type="submit" name="submit" value="Run!" />
-					<input type="submit" name="submit" value="Export!" />
-					<input type="hidden" name="report" value="address_details" />
-				</td>			
-			</tr>
 			<tr>
 				<td>Select Date:</td>
 				<td>
 					<script language="javascript">DateInput("date", true, "YYYY-MM-DD","<?=$date?>")</script>					
 				</td>
-				<td style=" font-style:italic ">Distributor: </td>
-				<td>
-					<input type="radio" name="is_dist" value="Y" <? if($is_dist=='Y'){ ?> checked <? }?> />
-				</td>
-				<td>
-					<input type="radio" name="is_dist" value="N" <? if($is_dist=='N'){ ?> checked <? }?> />
-				</td>			
 			</tr>
-			<tr>
-				<td colspan="2">&nbsp;</td>
-				<td style=" font-style:italic ">S/Distributor: </td>
-				<td>
-					<input type="radio" name="is_subdist" value="Y" <? if($is_subdist=='Y'){ ?> checked <? }?> />
-				</td>	
-				<td>
-					<input type="radio" name="is_subdist" value="N" <? if($is_subdist=='N'){ ?> checked <? }?> />
-				</td>	
-			</tr>
-			<tr>
-				<td colspan="2">&nbsp;</td>
-				<td style=" font-style:italic ">Contractor: </td>
-				<td>
-					<input type="radio" name="is_contractor" value="Y" <? if($is_contractor=='Y'){ ?> checked <? }?> />
-				</td>	
-				<td>
-					<input type="radio" name="is_contractor" value="N" <? if($is_contractor=='N'){ ?> checked <? }?> />
-				</td>	
-			</tr>
-			
-			<tr>
-				<td colspan="2">&nbsp;</td>
-				<td style=" font-style:italic ">Is Shareholder: </td>
-				<td>
-					<input type="radio" name="is_shareholder" value="Y" <? if($is_shareholder=='Y'){ ?> checked <? }?> />
-				</td>
-				<td>
-					<input type="radio" name="is_shareholder" value="N" <? if($is_shareholder=='N'){ ?> checked <? }?> />
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">&nbsp;</td>
-				<td style=" font-style:italic ">Has Agency Contract: </td>
-				<td>
-					<input type="radio" name="agency" value="Y" <? if($agency=='Y'){ ?> checked <? }?> />
-				</td>			
-				<td>
-					<input type="radio" name="agency" value="N" <? if($agency=='N'){ ?> checked <? }?> />
-				</td>		
-			</tr>		
-			<tr>
-				<td colspan="2">&nbsp;</td>
-			
-				<td style=" font-style:italic ">Has Coural Contract: </td>
-				<td>
-					<input type="radio" name="contract" value="Y" <? if($contract=='Y'){ ?> checked <? }?> />
-				</td>							
-			
-				<td>
-					<input type="radio" name="contract" value="N" <? if($contract=='N'){ ?> checked <? }?> />
-				</td>		
-			</tr>
-			
+            <tr>
+                <td></td>
+                <td><input type="submit" name="submit" value="Run"  /><input type="submit" name="submit" value="Export"  /></td>
+            </tr>			
 		</table>
+        <input type="hidden" name="report" value="<?=$report?>"  />
 	</form>	
 <?	
 }

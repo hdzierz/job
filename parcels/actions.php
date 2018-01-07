@@ -578,6 +578,8 @@ if($action=="process_xerox_scan"){
 					
 					$run = new run();
 					$date = $year.'-'.$month.'-15';
+                    $qry = "UPDATE parcel_run_date SET dtt='$date' WHERE type='canon'";
+                    query($qry);
 					foreach($ticketl as $tickets){
 						if(!$tickets["dist_id"]){
 							$route = get("route","code","WHERE route_id=".$tickets["route_id"]);
@@ -652,6 +654,10 @@ if($action=="process_mobile_scan"){
 		case "Redeem":
 			$files = $_POST['file'];
 			$filecs = $_POST['filec'];
+
+            $date = $year.'-'.$month.'-15';
+            $qry = "UPDATE parcel_run_date SET dtt='$date' WHERE type='mobile'";
+            query($qry);
 	
 			foreach($files as $key=>$file){
 				if($filec[$key]){

@@ -1,5 +1,28 @@
 <?
 
+function redeem_mobile(){            
+            $files = glob("MobileScan/Export*");
+
+            $date = $year.'-'.$month.'-15';
+            $qry = "UPDATE parcel_run_date SET dtt='$date' WHERE type='mobile'";
+            query($qry);
+
+            foreach($files as $f){
+                    $file = basename($f);
+                    $batch_no = mobileFileReader::getBatchNo($file);
+                    if (($handle = fopen("MobileScan/".$file.".csv", "r")) !== FALSE) {
+                        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE){
+                            if($data[0] != "Batch_ID"){
+                                $ticket = new mobileTicket($data);
+                                $ticket->redeem($batch_no, $year, $month);
+                            }
+                        }
+                        fclose($handle);
+                    rename("MobileScan/".$file.".csv", "MobileScan/Processed_".$file."csv");
+                    echo "File $file processed.<br />";
+                }
+            }
+}
 
 
 	function process_dates($start_date){

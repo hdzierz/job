@@ -75,8 +75,9 @@ if($report=="ticket_sold"){
 
 
 if($report=="ticket_trace"){
-    if(!$start_date) $start_date=date("2008-10-01");
+    if(!$start_date) $start_date=date("2016-10-01");
     if(!$final_date) $final_date=date("Y-m-d");
+    if(!$cutoff_date) $cutoff_date=date("Y-04-30");
 ?>
     <script type="text/javascript" src="includes/calendarDateInput.js"></script>
     <form name="narrow" action="rep_parcels.php" method="get" >
@@ -89,6 +90,10 @@ if($report=="ticket_trace"){
                 <td>Select Final Date:</td>
                 <td>
                     <script language="javascript">DateInput("final_date", true, "YYYY-MM-DD","<?=$final_date?>")</script>
+                </td>
+                <td>Cut Off Date:</td>
+                <td>
+                    <script language="javascript">DateInput("cutoff_date", true, "YYYY-MM-DD","<?=$cutoff_date?>")</script>
                 </td>
                 <td>
                     <input type="submit" name="submit" value="Run" />

@@ -44,6 +44,7 @@ function get_joblist_query($with_ioa,$mode,$job,$client,$pub,$start_date=false,$
 					CONCAT(j.job_no,IF(j.job_no_add IS NOT NULL,j.job_no_add,''))         AS 'Job No.',
 					j.invoice_no     AS 'Invoice #',
 					j.purchase_no    AS 'Purchase #',
+                    j.pmp_job_no     AS 'PMP #',
 					/*j.foreign_job_no AS 'Cust. Ref.',*/
 					IF(
 						j.hauler_ni_id=j.hauler_si_id,

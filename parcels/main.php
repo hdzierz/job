@@ -240,7 +240,6 @@ if($action == "search_ticket"){
             ticket_no,
             if(is_redeemed_D = 1, 'D',
                 if(is_redeemed_P = 1, 'P','')) AS red,
-            parcel_job_route.active as active,
             lat,
             lon,
             acc,
@@ -1677,7 +1676,7 @@ if($action=="select_xerox_scan"){
 		}
 	</script>
 	<?php
-		$redeem_date = get("parcel_run","MAX(date)","WHERE mobile_batch IS NULL",0);
+		$redeem_date = get("parcel_run_date","dtt","WHERE type='canon'",0);
 		$year = date("Y",strtotime($redeem_date));
 		$month = date("m",strtotime($redeem_date));
 	
@@ -1921,7 +1920,7 @@ if($action=="select_mobile_scan"){
 		}
 	</script>
 	<?php
-		$redeem_date = get("parcel_run","MAX(date)","",0);
+		$redeem_date = get("parcel_run_date","MAX(dtt)","WHERE type='mobile'");
 		$year = date("Y",strtotime($redeem_date));
 		$month = date("m",strtotime($redeem_date));
 	
@@ -1929,7 +1928,7 @@ if($action=="select_mobile_scan"){
 		
 		<form name="redeem_form" action="parcels.php" method="post" >
 			<fieldset style="width:90% ">
-				<legend>Canonscan Ticket Redemption</legend>
+				<legend>Mobile scan Ticket Redemption</legend>
 			<table width="40%">
 				<tr>
 					<td>Month:</td>

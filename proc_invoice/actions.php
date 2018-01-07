@@ -66,8 +66,13 @@ function create_description($job){
 	if($job->inc_linehaul=='Y'){
 		$add_linehaul = "Includes Linehaul.";
 	}
+
+    $result = "";
+    if($job->pmp_job_no){
+        $result = "Job# ".$job->pmp_job_no." ";
+    }
 	
-	$result = $job->publication." - Job ".$job->job_no." - Delivery ".$delivery_date." - ".sprintf("%d",$job->weight)." grams. $add_ff $add_pr $add_dc $dest_type $add_linehaul";
+	$result .= $job->publication." - Job ".$job->job_no." - Delivery ".$delivery_date." - ".sprintf("%d",$job->weight)." grams. $add_ff $add_pr $add_dc $dest_type $add_linehaul";
 	return $result;
 }
 
@@ -363,7 +368,7 @@ if($action=="Create Invoices"){
 			if($invoiceno != $prev_invoice_no) $contact = get("client","card_id","WHERE client_id= {$job->client_id}");
 			//echo $contact.'/'.get("client","card_id","WHERE client_id= {$job->client_id}"); die();
 			$add = number_format($add,4);
-			//$contact            = get("client","card_id","WHERE client_id= {$job->client_id}");
+			$contact            = get("client","card_id","WHERE client_id= {$job->client_id}");
 			$price				= number_format(($job->rate+$add)*$discount,4,'.','')*1000;
 			$price_gst			= number_format($price*$gst,4,'.','');
 			$total 				= number_format($job->invoice_qty*$price,2,'.','');

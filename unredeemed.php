@@ -5,8 +5,11 @@ require_once('includes/mail_aid_functions.php');
 
 
 ini_set('max_execution_time', 3*60*60);
-$create=true;
+$create=false;
 if(true){
+    $qry = "DELETE FROM parcel_tickets";
+    query($qry);
+
     $qry = "SELECT * 
 	    FROM parcel_job_ticket
   	    LEFT JOIN parcel_job

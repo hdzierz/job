@@ -389,7 +389,7 @@ $num_rou=0;
 $num_roa=0;
 $num_ope=0;
 
-for($i=0;$i<20;$i++){
+for($i=0;$i<22;$i++){
 	usleep(100);
 	if($i>0){
 		$data1 = array(

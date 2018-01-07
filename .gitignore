@@ -1,4 +1,5 @@
 debug.txt
+*.err
 tmp/
 Canonscan/
 proc_invoice/temp/
